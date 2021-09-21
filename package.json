@@ -1,5 +1,5 @@
 {
-  "name": "domql-example",
+  "name": "lanina",
   "description": "",
   "private": true,
   "author": "",
@@ -7,13 +7,23 @@
   "repository": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "parcel src/index.html",
+    "start": "parcel src/index.html --port 1111",
     "build": "parcel build src/index.html"
   },
   "dependencies": {
-    "@rackai/domql": "^1.0.8"
+    "@rackai/domql": "^1.0.8",
+    "@rackai/symbols": "^0.3.3"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "@babel/core": "^7.11.5",
+    "babel-eslint": "^10.0.3",
+    "emotion": "^10.0.27",
+    "eslint": "^6.1.0",
+    "parcel-plugin-svg-sprite": "^1.4.1",
+    "standard": "^13.1.0"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
