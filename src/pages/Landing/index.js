@@ -34,7 +34,33 @@ const content = {
   proto: [Block, Flex, Shape],
   props: {
     round: 'B'
-  }
+  },
+
+  childProto: {
+    proto: Block,
+    style: {
+      border: '1px solid red',
+      flex: '.5',
+      backgroundSize: 'cover'
+    }
+  },
+  ...[
+    {
+      style: {
+        borderTopLeftRadius: '26px',
+        borderBottomLeftRadius: '26px',
+        backgroundImage: 'url(' + NEWYORK_JPEG + ')'
+      }
+    },
+    {
+      style: {
+        borderTopRightRadius: '26px',
+        borderBottomRightRadius: '26px',
+        background: 'url(' + AMSTERDAM_JPEG + ')'
+      }
+
+    }
+  ]
 }
 
 // const content = {
@@ -61,9 +87,7 @@ const content = {
 //   ...[
 //     {
 //       style: {
-//         backgroundImage: 'url(' + NEWYORK_JPEG + ')',
-//         borderTopLeftRadius: '20px',
-//         borderBottomLeftRadius: '20px'
+//         backgroundImage: 'url(' + NEWYORK_JPEG + ')'
 
 //       },
 
