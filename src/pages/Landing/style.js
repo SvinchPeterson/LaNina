@@ -13,7 +13,6 @@ export const styleContent = {
 export default {
   flex: 1,
   boxSizing: 'border-box',
-  display: 'flex',
   flexFlow: 'column'
   // alignItems: 'center',
   // justifyContent: 'center',

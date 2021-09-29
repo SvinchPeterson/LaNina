@@ -1,32 +1,40 @@
 'use strict'
-import { Block, Button, Img, Text, Flex } from '@rackai/symbols'
+import { Block, Button, Img, Text, Flex, Shape } from '@rackai/symbols'
 
 import Logo from '../../assets/logo.png'
 import NEWYORK_JPEG from '../../assets/newyork.jpeg'
 import AMSTERDAM_JPEG from '../../assets/amsterdam.jpeg'
 import style, { center, styleContent } from './style'
 
-const logo = {
-  proto: Img,
-  props: { src: Logo }
-}
+// const logo = {
+//   proto: Img,
+//   props: { src: Logo }
+// }
 
-const logo2 = {
-  proto: Img,
-  props: { src: Logo }
-}
+// const logo2 = {
+//   proto: Img,
+//   props: { src: Logo }
+// }
 
 const caption = {
   tag: 'caption',
-  proto: [Block, Text, Flex],
+  proto: [Block, Text],
   props: {
     text: '',
-    size: 'D'
+    size: 'D',
+    spacing: 'X A'
+  },
+  style: {
+    textTransform: 'capitalize'
   }
 }
 
 const content = {
-  style: styleContent
+  style: styleContent,
+  proto: [Block, Flex, Shape],
+  props: {
+    round: 'B'
+  }
 }
 
 // const content = {
@@ -161,16 +169,22 @@ const content = {
 
 export default {
   style,
+  proto: [Block, Flex],
+  props: {
+    spacing: 'A B1'
+  },
 
   cap: {
     proto: caption,
-    props: { text: 'sololaki' }
+    props: { text: 'sololaki' },
+    style: { textAlign: 'left' }
   },
 
   content,
 
   cap2: {
     proto: caption,
-    props: { text: 'rustaveli' }
+    props: { text: 'rustaveli' },
+    style: { textAlign: 'right' }
   }
 }
