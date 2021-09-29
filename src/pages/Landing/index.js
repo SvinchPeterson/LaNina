@@ -1,88 +1,176 @@
 'use strict'
-import { Block, Button, Img } from '@rackai/symbols'
+import { Block, Button, Img, Text, Flex } from '@rackai/symbols'
 
 import Logo from '../../assets/logo.png'
-import style from './style'
+import NEWYORK_JPEG from '../../assets/newyork.jpeg'
+import AMSTERDAM_JPEG from '../../assets/amsterdam.jpeg'
+import style, { center, styleContent } from './style'
 
 const logo = {
   proto: Img,
   props: { src: Logo }
 }
-const borderHorizontal = {
-  style: {
-    width: '50em',
-    height: '3em',
-    // border: '2px solid red',
-    position: 'absolute'
+
+const logo2 = {
+  proto: Img,
+  props: { src: Logo }
+}
+
+const caption = {
+  tag: 'caption',
+  proto: [Block, Text, Flex],
+  props: {
+    text: '',
+    size: 'D'
   }
 }
 
-const borderVertical = {
-  style: {
-    width: '3em',
-    height: '50em',
-    position: 'absolute'
-  }
+const content = {
+  style: styleContent
 }
 
-const container = {
-  style: {
-    width: 'calc(100% - 6em)',
-    height: 'calc(100% - 6em)',
-    border: '5px solid black',
-    position: 'absolute',
-    display: 'flex'
-  },
-  childProto: {
-    proto: Block,
-    style: {
-      width: '50%',
-      height: '100%',
-      border: '1px solid black'
-    }
-  },
-  ...[
-    {},
-    {}
-  ]
-}
+// const content = {
+//   style: {
+//     flex: 1,
+//     display: 'flex',
+//     borderRadius: '20px',
+//     // boxShadow: '-1px -2px 20px rgba(0, 0, 0, .5)',
+//     filter: 'drop-shadow(6px 6px 6px rgba(0, 0, 0, .6))'
+
+//   },
+//   childProto: {
+//     proto: Block,
+//     style: {
+//       height: '100%',
+//       position: 'relative',
+//       display: 'flex',
+//       boxSizing: 'border-box',
+//       flex: '.5',
+//       backgroundSize: 'cover',
+//       filter: 'grayscale(100%)'
+//     }
+//   },
+//   ...[
+//     {
+//       style: {
+//         backgroundImage: 'url(' + NEWYORK_JPEG + ')',
+//         borderTopLeftRadius: '20px',
+//         borderBottomLeftRadius: '20px'
+
+//       },
+
+//       doorContainer: {
+//         style: {
+//           width: '100%',
+//           height: '100%',
+//           transition: 'all .4s linear',
+//           transformOrigin: 'left',
+//           display: 'flex',
+//           position: 'absolute',
+//           borderTopLeftRadius: '20px',
+//           borderBottomLeftRadius: '20px',
+//           background: 'rgba(194, 217, 219, .3)',
+//           backdropFilter: 'blur(2px)',
+//           top: 0,
+//           left: 0,
+//           overflow: 'hidden',
+
+//           '&:hover': {
+//             transform: 'perspective(3000px) translateZ(0px) translateY(0px) rotateY(50deg)'
+//           }
+//         },
+
+//         logoContainer: {
+//           style: {
+//             alignSelf: 'center',
+//             marginLeft: 'auto',
+//             marginRight: '-60px',
+//             position: 'relative',
+//             opacity: '.6',
+//             '&::after': {
+//               content: "''",
+//               width: '50%',
+//               height: '100%',
+//               position: 'absolute',
+//               top: 0,
+//               right: 0
+//             },
+//             '> img': {
+//               height: '150px',
+//               width: '120px',
+//               display: 'block'
+//             }
+//           },
+//           logo
+//         }
+//       }
+//     },
+
+//     {
+//       style: {
+//         background: 'url(' + AMSTERDAM_JPEG + ')',
+//         borderTopRightRadius: '20px',
+//         borderBottomRightRadius: '20px'
+
+//       },
+//       doorContainer: {
+//         style: {
+//           width: '100%',
+//           height: '100%',
+//           transition: 'all .4s linear',
+//           transformOrigin: 'right',
+//           cursor: 'pointer',
+//           borderTopRightRadius: '20px',
+//           borderBottomRightRadius: '20px',
+//           display: 'flex',
+//           overflow: 'hidden',
+//           background: 'rgba(194, 217, 219, .3)',
+//           '&:hover': {
+//             transform: 'perspective(3000px) translateZ(0px) translateY(0px) rotateY(-40deg)'
+//           }
+//         },
+//         logoContainer: {
+//           style: {
+//             alignSelf: 'center',
+//             marginRight: 'auto',
+//             marginLeft: '-60px',
+//             position: 'relative',
+//             opacity: '.6',
+//             '&::before': {
+//               content: "''",
+//               width: '50%',
+//               height: '100%',
+//               background: 'white',
+//               position: 'absolute',
+//               top: 0,
+//               left: 0
+
+//             },
+//             '> img': {
+//               height: '150px',
+//               width: '120px'
+//             }
+//           },
+//           logo2
+//         }
+//       }
+
+//     }
+//   ]
+// }
+
 export default {
   style,
 
-  leftHorizontalBorder: {
-    proto: borderHorizontal,
-    style: {
-      top: 0,
-      left: 0,
-      background: '#F4E2AB'
-    }
-  },
-  leftVerticalBorder: {
-    proto: borderVertical,
-    style: {
-      top: '3em',
-      left: 0,
-      background: '#F4E2AB'
-    }
+  cap: {
+    proto: caption,
+    props: { text: 'sololaki' }
   },
 
-  rightHorizontalBorder: {
-    proto: borderHorizontal,
-    style: {
-      bottom: 0,
-      right: 0,
-      background: '#F59F77'
-    }
-  },
+  content,
 
-  rightVerticalBorder: {
-    proto: borderVertical,
-    style: {
-      bottom: '3em',
-      right: 0,
-      background: '#F59F77'
-    }
-  },
-  container,
-  logo
+  cap2: {
+    proto: caption,
+    props: { text: 'rustaveli' }
+  }
 }

@@ -8,5 +8,6 @@ export default {
   left: 0,
   boxSizing: 'border-box',
   overflow: 'hidden',
-  fontSize: '10px'
+  h4: { margin: 0 },
+  h1: { margin: 0 }
 }
