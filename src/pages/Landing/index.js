@@ -25,11 +25,12 @@ const caption = {
   }
 }
 
-
 const content = {
-  proto: [Block, Flex, Shape],
-  props: { round: 'B'},
   style: styleContent,
+  proto: [Block, Flex, Shape],
+  props: {
+    round: 'B'
+  },
 
   childProto: {
     proto: [Block, Flex],

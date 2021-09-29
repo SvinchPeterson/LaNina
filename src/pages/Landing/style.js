@@ -28,8 +28,8 @@ export const styleDoor = {
   transition: 'all .4s linear',
   backdropFilter: 'blur(1.4px)',
   boxShadow: '0px 0px 20px rgba(0, 0, 0, .2)',
-
   cursor: 'pointer',
+
   '> img': {
     width: `${120 / 16}em`,
     height: `${150 / 16}em`

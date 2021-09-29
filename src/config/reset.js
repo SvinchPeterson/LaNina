@@ -9,4 +9,3 @@ RESET.html.color = DOCUMENT.theme.color
 RESET.html.background = DOCUMENT.theme.background
 
 injectGlobal(RESET)
-
