@@ -44,19 +44,16 @@ const content = {
       style: {
         flex: 1,
         alignItems: 'center',
-        overflow: 'hidden'
-      },
-      logoContainer: {
-        style: {
+        overflow: 'hidden',
+        background: 'linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .4))',
+        transition: 'all .4s linear',
+        backdropFilter: 'blur(2px)',
+        '> img': {
           width: `${120 / 16}em`,
-          height: `${150 / 16}em`,
-          '> img': {
-            width: '100%',
-            height: '100%'
-          }
-        },
-        logo
-      }
+          height: `${150 / 16}em`
+        }
+      },
+      logo
     }
   },
   ...[
@@ -68,153 +65,35 @@ const content = {
 
       door: {
         class: [leftBorderRadius],
-        logoContainer: {
-          style: { marginLeft: 'auto', marginRight: `-${60 / 16}em` }
+        style: {
+          transformOrigin: 'left',
+          '&:hover': {
+            transform: 'perspective(3000px) translateZ(0px) translateY(0px) rotateY(50deg)'
+          },
+          '> img': { marginLeft: 'auto', marginRight: `-${60 / 16}em`}
         }
       }
     },
+
     {
       class: [rightBorderRadius],
       style: {
         background: 'url(' + AMSTERDAM_JPEG + ')'
       },
+
       door: {
         class: [rightBorderRadius],
-        logoContainer: {
-          style: {marginLeft: `-${60 / 16}em`}
+        style: {
+          transformOrigin: 'right',
+          '&:hover': {
+            transform: 'perspective(3000px) translateZ(0px) translateY(0px) rotateY(-40deg)'
+          },
+          '> img': {marginLeft: `-${60 / 16}em`}
         }
       }
     }
   ]
 }
-
-// const content = {
-//   style: {
-//     flex: 1,
-//     display: 'flex',
-//     borderRadius: '20px',
-//     // boxShadow: '-1px -2px 20px rgba(0, 0, 0, .5)',
-//     filter: 'drop-shadow(6px 6px 6px rgba(0, 0, 0, .6))'
-
-//   },
-//   childProto: {
-//     proto: Block,
-//     style: {
-//       height: '100%',
-//       position: 'relative',
-//       display: 'flex',
-//       boxSizing: 'border-box',
-//       flex: '.5',
-//       backgroundSize: 'cover',
-//       filter: 'grayscale(100%)'
-//     }
-//   },
-//   ...[
-//     {
-//       style: {
-//         backgroundImage: 'url(' + NEWYORK_JPEG + ')'
-
-//       },
-
-//       doorContainer: {
-//         style: {
-//           width: '100%',
-//           height: '100%',
-//           transition: 'all .4s linear',
-//           transformOrigin: 'left',
-//           display: 'flex',
-//           position: 'absolute',
-//           borderTopLeftRadius: '20px',
-//           borderBottomLeftRadius: '20px',
-//           background: 'rgba(194, 217, 219, .3)',
-//           backdropFilter: 'blur(2px)',
-//           top: 0,
-//           left: 0,
-//           overflow: 'hidden',
-
-//           '&:hover': {
-//             transform: 'perspective(3000px) translateZ(0px) translateY(0px) rotateY(50deg)'
-//           }
-//         },
-
-//         logoContainer: {
-//           style: {
-//             alignSelf: 'center',
-//             marginLeft: 'auto',
-//             marginRight: '-60px',
-//             position: 'relative',
-//             opacity: '.6',
-//             '&::after': {
-//               content: "''",
-//               width: '50%',
-//               height: '100%',
-//               position: 'absolute',
-//               top: 0,
-//               right: 0
-//             },
-//             '> img': {
-//               height: '150px',
-//               width: '120px',
-//               display: 'block'
-//             }
-//           },
-//           logo
-//         }
-//       }
-//     },
-
-//     {
-//       style: {
-//         background: 'url(' + AMSTERDAM_JPEG + ')',
-//         borderTopRightRadius: '20px',
-//         borderBottomRightRadius: '20px'
-
-//       },
-//       doorContainer: {
-//         style: {
-//           width: '100%',
-//           height: '100%',
-//           transition: 'all .4s linear',
-//           transformOrigin: 'right',
-//           cursor: 'pointer',
-//           borderTopRightRadius: '20px',
-//           borderBottomRightRadius: '20px',
-//           display: 'flex',
-//           overflow: 'hidden',
-//           background: 'rgba(194, 217, 219, .3)',
-//           '&:hover': {
-//             transform: 'perspective(3000px) translateZ(0px) translateY(0px) rotateY(-40deg)'
-//           }
-//         },
-//         logoContainer: {
-//           style: {
-//             alignSelf: 'center',
-//             marginRight: 'auto',
-//             marginLeft: '-60px',
-//             position: 'relative',
-//             opacity: '.6',
-//             '&::before': {
-//               content: "''",
-//               width: '50%',
-//               height: '100%',
-//               background: 'white',
-//               position: 'absolute',
-//               top: 0,
-//               left: 0
-
-//             },
-//             '> img': {
-//               height: '150px',
-//               width: '120px'
-//             }
-//           },
-//           logo2
-//         }
-//       }
-
-//     }
-//   ]
-// }
 
 export default {
   style,
