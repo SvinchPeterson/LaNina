@@ -6,7 +6,6 @@ export const center = {
 }
 
 export const styleContent = {
-  border: '2px solid red',
   flex: 1
 }
 

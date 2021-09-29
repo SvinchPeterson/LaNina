@@ -6,15 +6,10 @@ import NEWYORK_JPEG from '../../assets/newyork.jpeg'
 import AMSTERDAM_JPEG from '../../assets/amsterdam.jpeg'
 import style, { center, styleContent, rightBorderRadius, leftBorderRadius } from './style'
 
-// const logo = {
-//   proto: Img,
-//   props: { src: Logo }
-// }
-
-// const logo2 = {
-//   proto: Img,
-//   props: { src: Logo }
-// }
+const logo = {
+  proto: Img,
+  props: { src: Logo }
+}
 
 const caption = {
   tag: 'caption',
@@ -45,9 +40,22 @@ const content = {
     },
 
     door: {
-      proto: [Shape],
+      proto: [Shape, Flex],
       style: {
-        flex: 1
+        flex: 1,
+        alignItems: 'center',
+        overflow: 'hidden'
+      },
+      logoContainer: {
+        style: {
+          width: `${120 / 16}em`,
+          height: `${150 / 16}em`,
+          '> img': {
+            width: '100%',
+            height: '100%'
+          }
+        },
+        logo
       }
     }
   },
@@ -59,7 +67,10 @@ const content = {
       },
 
       door: {
-        class: [leftBorderRadius]
+        class: [leftBorderRadius],
+        logoContainer: {
+          style: { marginLeft: 'auto', marginRight: `-${60 / 16}em` }
+        }
       }
     },
     {
@@ -68,7 +79,10 @@ const content = {
         background: 'url(' + AMSTERDAM_JPEG + ')'
       },
       door: {
-        class: [rightBorderRadius]
+        class: [rightBorderRadius],
+        logoContainer: {
+          style: {marginLeft: `-${60 / 16}em`}
+        }
       }
     }
   ]
