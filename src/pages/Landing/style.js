@@ -10,6 +10,16 @@ export const styleContent = {
   flex: 1
 }
 
+export const rightBorderRadius = {
+  borderTopRightRadius: '26px',
+  borderBottomRightRadius: '26px'
+}
+
+export const leftBorderRadius = {
+  borderTopLeftRadius: '26px',
+  borderBottomLeftRadius: '26px'
+}
+
 export default {
   flex: 1,
   boxSizing: 'border-box',

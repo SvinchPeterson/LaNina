@@ -4,7 +4,7 @@ import { Block, Button, Img, Text, Flex, Shape } from '@rackai/symbols'
 import Logo from '../../assets/logo.png'
 import NEWYORK_JPEG from '../../assets/newyork.jpeg'
 import AMSTERDAM_JPEG from '../../assets/amsterdam.jpeg'
-import style, { center, styleContent } from './style'
+import style, { center, styleContent, rightBorderRadius, leftBorderRadius } from './style'
 
 // const logo = {
 //   proto: Img,
@@ -37,28 +37,39 @@ const content = {
   },
 
   childProto: {
-    proto: Block,
+    proto: [Block, Flex],
     style: {
-      border: '1px solid red',
       flex: '.5',
-      backgroundSize: 'cover'
+      backgroundSize: 'cover',
+      filter: 'grayscale(100%)'
+    },
+
+    door: {
+      proto: [Shape],
+      style: {
+        flex: 1
+      }
     }
   },
   ...[
     {
+      class: [leftBorderRadius],
       style: {
-        borderTopLeftRadius: '26px',
-        borderBottomLeftRadius: '26px',
         backgroundImage: 'url(' + NEWYORK_JPEG + ')'
+      },
+
+      door: {
+        class: [leftBorderRadius]
       }
     },
     {
+      class: [rightBorderRadius],
       style: {
-        borderTopRightRadius: '26px',
-        borderBottomRightRadius: '26px',
         background: 'url(' + AMSTERDAM_JPEG + ')'
+      },
+      door: {
+        class: [rightBorderRadius]
       }
-
     }
   ]
 }
