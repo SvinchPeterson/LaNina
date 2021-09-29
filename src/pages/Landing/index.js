@@ -4,7 +4,7 @@ import { Block, Button, Img, Text, Flex, Shape } from '@rackai/symbols'
 import Logo from '../../assets/logo.png'
 import NEWYORK_JPEG from '../../assets/newyork.jpeg'
 import AMSTERDAM_JPEG from '../../assets/amsterdam.jpeg'
-import style, { center, styleContent, rightBorderRadius, leftBorderRadius } from './style'
+import style, { center, styleContent, rightBorderRadius, leftBorderRadius, styleDoor } from './style'
 
 const logo = {
   proto: Img,
@@ -20,16 +20,16 @@ const caption = {
     spacing: 'X A'
   },
   style: {
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
+    color: 'rgba(255, 255, 255, .6)'
   }
 }
 
+
 const content = {
-  style: styleContent,
   proto: [Block, Flex, Shape],
-  props: {
-    round: 'B'
-  },
+  props: { round: 'B'},
+  style: styleContent,
 
   childProto: {
     proto: [Block, Flex],
@@ -41,18 +41,7 @@ const content = {
 
     door: {
       proto: [Shape, Flex],
-      style: {
-        flex: 1,
-        alignItems: 'center',
-        overflow: 'hidden',
-        background: 'linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .4))',
-        transition: 'all .4s linear',
-        backdropFilter: 'blur(2px)',
-        '> img': {
-          width: `${120 / 16}em`,
-          height: `${150 / 16}em`
-        }
-      },
+      style: styleDoor,
       logo
     }
   },
