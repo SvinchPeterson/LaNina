@@ -4,7 +4,7 @@ import DOM from '@rackai/domql'
 import { isObjectLike, exec } from '@rackai/domql/src/utils'
 import { classList } from '@rackai/domql/src/element/mixins'
 
-import { css } from 'emotion'
+import { css } from '@emotion/css'
 
 const style = (params, element, node) => {
   if (params) {

@@ -1,7 +1,7 @@
 'use strict'
 
 import { getFontFace, set } from '@rackai/symbols'
-import { injectGlobal } from 'emotion'
+import { injectGlobal } from '@emotion/css'
 
 import Light from '../assets/fonts/49c5f3e1-5867-4b1d-a843-2d07fa60d85d.woff2'
 import Regular from '../assets/fonts/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2'

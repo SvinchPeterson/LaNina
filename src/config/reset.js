@@ -1,6 +1,6 @@
 'use strict'
 
-import { injectGlobal } from 'emotion'
+import { injectGlobal } from '@emotion/css'
 import { RESET } from '@rackai/symbols'
 
 import DOCUMENT from './document'
