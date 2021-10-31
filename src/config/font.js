@@ -9,6 +9,8 @@ import Medium from '../assets/fonts/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2'
 import DemiBold from '../assets/fonts/6afe4676-059a-4aa8-b891-29856bbcba22.woff2'
 import Bold from '../assets/fonts/14c73713-e4df-4dba-933b-057feeac8dd1.woff2'
 import Heavy from '../assets/fonts/5c57b2e2-f641-421e-a95f-65fcb47e409a.woff2'
+import Times from '../assets/fonts/Times-Roman.woff2'
+import gilda from '../assets/fonts/GildaDisplay-Regular.woff2'
 
 const RegisterFont = set('font', {
   name: 'Avenir Next',
@@ -34,6 +36,12 @@ const RegisterFont = set('font', {
   name: 'Avenir Next',
   url: Heavy,
   fontWeight: 900
+}, {
+  name: 'Times',
+  url: Times
+}, {
+  name: 'Gilda Display',
+  url: gilda
 })
 
 const FontFace = getFontFace(RegisterFont)
