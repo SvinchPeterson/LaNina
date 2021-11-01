@@ -1,9 +1,9 @@
 'use strict'
-import { Block, Button, Img, Text, Flex, Shape, Link } from '@rackai/symbols'
+import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 
 import Logo from '../../assets/logoWhite.png'
 
-import style, { stylePages, stylePageCover, styleLaninaBanner, stylePageLink } from './style'
+import style, { styleLaninaBanner, stylePageLink } from './style'
 
 import { move, move2, filter } from '../../animations'
 
@@ -43,7 +43,7 @@ const pageLink2 = {
   style: {
     bottom: 0,
     right: '60px',
-    background: 'linear-gradient(rgba(209, 153, 115, .3), rgba(0, 0, 0, .4))',
+    background: 'linear-gradient(rgba(209, 153, 115, .3), rgba(0, 0, 0, .2))',
     animationName: move,
     animationDuration: '3s',
     animationTimingFunction: 'ease-in-out'
@@ -95,7 +95,7 @@ export default {
           flex: '2.5',
           '> div': {
             transform: 'scale(1.1)',
-            backgroundImage: 'linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(' + COVER_JPG + ')'
+            backgroundImage: 'linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url(' + COVER_JPG + ')'
           }
         },
         '> div': {

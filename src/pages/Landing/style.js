@@ -2,7 +2,6 @@
 import COVER_JPG from '../../assets/images/cover.jpg'
 import { fadeUp } from '../../animations'
 
-// backgroundImage: 'url(' + COVER_JPG + ')',
 
 export const styleLaninaBanner = {
   flexDirection: 'column',
@@ -40,11 +39,13 @@ export const stylePageLink = {
   textOrientation: 'upright',
   cursor: 'pointer',
   marginLeft: '60px',
-  background: 'linear-gradient(rgba(209, 153, 115, .4), rgba(0, 0, 0, .4))',
+  background: 'linear-gradient(rgba(209, 153, 115, .4), rgba(0, 0, 0, .2))',
   color: 'rgba(255, 255, 255, .6)',
   position: 'absolute',
-  zIndex: 20,
-  // top: '-50px'
+  zIndex: 20
+}
+
+export const styleCover = {
 }
 
 export default {
