@@ -2,8 +2,14 @@
 
 import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 
-import style, {} from './style'
+import style, { styleBannerBackground } from './style'
+
+const bannerBackground = {
+  style: styleBannerBackground,
+  banner: {}
+}
 
 export default {
-  text: 'sololaki'
+  style,
+  bannerBackground
 }

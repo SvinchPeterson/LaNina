@@ -42,10 +42,8 @@ export const stylePageLink = {
   background: 'linear-gradient(rgba(209, 153, 115, .4), rgba(0, 0, 0, .2))',
   color: 'rgba(255, 255, 255, .6)',
   position: 'absolute',
-  zIndex: 20
-}
-
-export const styleCover = {
+  zIndex: 20,
+  textDecoration: 'none'
 }
 
 export default {

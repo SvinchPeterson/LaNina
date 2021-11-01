@@ -1,18 +1,31 @@
 'use strict'
 
 import { Block, Button, Flex } from '@rackai/symbols'
+import router from '@rackai/domql/packages/router'
 import style from './style'
 
 import './config'
 import './define'
 
-import { Landing } from './pages'
+import { Landing, Sololaki } from './pages'
 
 const App = {
-  proto: Flex,
   key: 'app',
   style,
-  Landing
-}
 
+  state: {},
+  props: {},
+
+  define: { routes: param => param },
+  routes: {
+    '/': Landing,
+    '/Sololaki': Sololaki
+  },
+
+  on: {
+    render: element => {
+      router(element, window.location.pathname, {})
+    }
+  }
+}
 export default App

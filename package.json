@@ -8,7 +8,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "parcel src/index.html --port 1111",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "reinstall": "rm yarn.lock && rm -rf node_modules/@rackai && yarn"
   },
   "dependencies": {
     "@emotion/css": "^11.1.3",

@@ -23,7 +23,8 @@ const pageLink = {
   proto: [Block, Text, Link],
   props: {
     text: 'SOLOLAKI',
-    spacing: 'A'
+    spacing: 'A',
+    href: './Sololaki'
   },
   class: [stylePageLink],
   style: {

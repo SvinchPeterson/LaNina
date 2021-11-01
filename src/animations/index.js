@@ -11,6 +11,14 @@ export const fadeUp = keyframes`
     transform: scale(1);
   }
 `
+export const zoomOut = keyframes`
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+`
 
 export const move = keyframes`
   from {
