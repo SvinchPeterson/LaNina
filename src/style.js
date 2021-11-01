@@ -9,6 +9,7 @@ export default {
   left: 0,
   boxSizing: 'border-box',
   overflow: 'hidden',
+  display: 'flex',
   h4: { margin: 0 },
   h1: { margin: 0 }
 }
