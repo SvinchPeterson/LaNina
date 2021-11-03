@@ -1,12 +1,11 @@
 'use strict'
 import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 
-import Logo from '../../assets/logoWhite.png'
+import { move, move2, filter } from '../../animations'
 
 import style, { styleLaninaBanner, stylePageLink } from './style'
 
-import { move, move2, filter } from '../../animations'
-
+import Logo from '../../assets/logoWhite.png'
 import COVER_JPG from '../../assets/images/cover.jpg'
 
 const logo = {
