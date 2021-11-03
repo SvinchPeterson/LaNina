@@ -2,7 +2,7 @@
 
 import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 
-import { header } from '../../components'
+import { Header } from '../../components'
 
 import style, { styleBannerBackground } from './style'
 
@@ -14,5 +14,5 @@ const bannerBackground = {
 export default {
   style,
   bannerBackground,
-  header
+  Header
 }
