@@ -14,16 +14,24 @@ export const fadeUp = keyframes`
 export const fadeUp2 = keyframes`
   from {
     opacity: 0;
-    transform: scale(.9);
+    transform: scale(.7)
   }
   to {
     opacity: 1;
     transform: scale(1);
   }
 `
+export const spacing = keyframes`
+  from {
+    letter-spacing: 0;
+  }
+  to {
+    letter-spacing: 9px;
+  }
+`
 export const zoomOut = keyframes`
   from {
-    transform: scale(1.1);
+    transform: scale(.9);
   }
   to {
     transform: scale(1);

@@ -3,7 +3,10 @@ import { Block, Text, Flex } from '@rackai/symbols'
 
 export default {
   proto: [Block, Flex],
-  style: { flexFlow: 'column' },
+  style: {
+    flexFlow: 'column',
+    fontWeight: '400'
+  },
   h4: {
     proto: Text,
     props: {
@@ -11,7 +14,7 @@ export default {
     },
     style: {
       letterSpacing: '2px',
-      fontWeight: '600'
+      color: 'rgba(243, 231, 219, .85)'
     }
   },
   span: {
@@ -20,6 +23,9 @@ export default {
       text: 'Residence',
       size: 'C'
     },
-    style: { letterSpacing: '2px' }
+    style: {
+      letterSpacing: '9px',
+      color: 'rgba(243, 231, 219, .65)'
+    }
   }
 }

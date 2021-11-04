@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Img, Text, Flex, Link, Shape, SVG, Icon } from '@rackai/symbols'
+import { Block, Img, Text, Flex, Link, Shape, SVG } from '@rackai/symbols'
 
 import PHONE_SVG from '../../assets/phones.svg'
 import LOGO_PNG from '../../assets/logos.png'
@@ -72,7 +72,7 @@ const book = {
     alignItems: 'center',
     cursor: 'pointer',
     // background: 'radial-gradient(rgba(98, 73, 62, 1), rgba(98, 73, 62, 1) )',
-    marginTop: `${100 / 16}em`,
+    marginTop: `${120 / 16}em`,
     '> *': { opacity: '.85' },
     '&:hover > *': { opacity: 1 }
   },
@@ -105,7 +105,6 @@ export default {
   },
   style: {
     width: '100%',
-    // background: 'radial-gradient(rgba(98, 73, 62, 1), rgba(98, 73, 62, 1) )',
     position: 'fixed',
     top: 0,
     zIndex: 20,

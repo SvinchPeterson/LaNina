@@ -1,9 +1,8 @@
 'use strict'
 
-import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
+import { Block, Text } from '@rackai/symbols'
 
-import { Header, Banner } from '../../components'
-import { logo } from '../Landing'
+import { Header, Banner, Article } from '../../components'
 
 import style, { styleBannerBackground, styleBanner } from './style'
 
@@ -30,8 +29,7 @@ const banner = {
       text: 'Be inspired by old city',
       size: 'B',
       spacing: 'A 0 0 0'
-    },
-    style: { letterSpacing: '2px' }
+    }
   }
 }
 
@@ -41,14 +39,18 @@ const bannerBackground = {
   banner
 }
 
+const articles = {
+  childProto: {
+    proto: Article
+  },
+  ...[
+    {}
+  ]
+}
+
 export default {
   style,
   bannerBackground,
   Header,
-  bs: {
-    style: {
-      width: '100%',
-      height: '600px'
-    }
-  }
+  articles
 }
