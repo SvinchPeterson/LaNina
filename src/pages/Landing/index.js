@@ -117,7 +117,6 @@ export default {
       {
         pageLink2,
         image: { style: { backgroundPosition: 'center right' } }
-
       }
     ]
   }

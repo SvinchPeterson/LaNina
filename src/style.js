@@ -10,6 +10,7 @@ export default {
   boxSizing: 'border-box',
   overflow: 'hidden',
   display: 'flex',
+  color: 'white',
   h4: { margin: 0 },
   h1: { margin: 0 }
 }

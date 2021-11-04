@@ -14,5 +14,6 @@ const bannerBackground = {
 export default {
   style,
   bannerBackground,
-  Header
+  Header,
+  backgr: { style: { width: '100%', height: '1500px' } }
 }

@@ -1,22 +1,25 @@
 'use strict'
-import { Block, Img, Text, Flex, Link, Shape } from '@rackai/symbols'
+import { Block, Img, Text, Flex, Link, Shape, SVG, Icon } from '@rackai/symbols'
+
+import PHONE_SVG from '../../assets/phones.svg'
+import LOGO_PNG from '../../assets/logos.png'
 
 const menuIcon = {
   proto: [Block, Flex],
-  props: { gap: 'Y' },
+  props: { gap: 'X1' },
 
   style: {
     flexFlow: 'column',
-    marginLeft: '20px',
-    '> div:nth-child(2)': { marginLeft: '2px' },
-    '> div:nth-child(3)': { marginLeft: '2px' }
+    cursor: 'pointer'
   },
   childProto: {
     proto: [Block, Shape],
-    props: { round: 'A' },
+    props: {
+      round: 'A'
+    },
     style: {
-      background: 'rgba(255, 255, 255, .8)',
-      height: '2px'
+      background: '#F3E7DB',
+      height: `${2 / 16}em`
     }
   },
   ...[
@@ -28,38 +31,107 @@ const menuIcon = {
 
 const langLinks = {
   tag: 'nav',
+  proto: [Block, Flex],
+  style: {
+    flexFlow: 'column'
+  },
   childProto: {
-    proto: Link
+    proto: [Link, Text],
+    props: { size: 'A2' },
+    style: {
+      color: 'F3E7DB',
+      cursor: 'pointer',
+      opacity: '.85',
+      '&:hover': { opacity: 1 }
+    }
   },
   ...[
     { text: 'EN' },
-    { text: 'RUS' },
-    { text: 'GEO' }
+    { text: 'RUS', style: { display: 'none' } },
+    { text: 'GEO', style: { display: 'none' } }
   ]
 
 }
 
+const call = {
+  proto: [SVG, Block],
+  src: PHONE_SVG,
+  props: { width: 'A2', height: 'A2' },
+  style: {
+    cursor: 'pointer',
+    opacity: '.85',
+    '&:hover': { opacity: 1 }
+  }
+}
+
+const book = {
+  proto: [Flex, Block, Link],
+  props: { gap: 'Z', spacing: 'Z' },
+  style: {
+    flexFlow: 'column',
+    alignItems: 'center',
+    cursor: 'pointer',
+    // background: 'black',
+    marginTop: `${100 / 16}em`,
+    '> *': { opacity: '.85' },
+    '&:hover > *': { opacity: 1 }
+  },
+  logo: {
+    proto: [Img, Block],
+    props: {
+      src: LOGO_PNG,
+      width: 'B2',
+      height: 'C'
+    }
+  },
+  span: {
+    proto: Text,
+    props: { text: 'BOOK' },
+    style: {
+      display: 'block',
+      textOrientation: 'upright',
+      writingMode: 'vertical-rl',
+      letterSpacing: '4px'
+    }
+  }
+}
+
 export default {
-  text: 'header',
+  tag: 'header',
+  proto: [Block, Flex],
+  props: {
+    height: 'D2',
+    spacing: '0 C'
+  },
   style: {
     width: '100%',
-    height: '100px',
-    background: 'black',
-    position: 'absolute',
+    // background: '#3B2B27',
+    background: 'transparent',
+    position: 'fixed',
     top: 0,
-    zIndex: 20
+    zIndex: 20,
+    alignItems: 'center',
+    fontFamily: 'Avenir Next',
+    boxSizing: 'border-box'
   },
   menuIcon,
   nav: {
-    childProto: {
-      proto: Link
-    }
-  },
-  ...[
-    {
-      proto: langLinks
+    tag: 'nav',
+    proto: [Flex, Block],
+    props: { gap: 'B2' },
+    style: {
+      flex: 1,
+      justifyContent: 'flex-end',
+      alignItems: 'center'
     },
-    {},
-    {}
-  ]
+    childProto: {
+      proto: Block
+    },
+    ...[
+      { proto: langLinks },
+      { proto: call },
+      { proto: book }
+
+    ]
+  }
 }
