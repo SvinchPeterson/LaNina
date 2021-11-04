@@ -11,6 +11,16 @@ export const fadeUp = keyframes`
     transform: scale(1);
   }
 `
+export const fadeUp2 = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`
 export const zoomOut = keyframes`
   from {
     transform: scale(1.1);

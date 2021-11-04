@@ -9,7 +9,7 @@ import style, { styleLaninaBanner, stylePageLink } from './style'
 import Logo from '../../assets/logoCream.png'
 import COVER_JPG from '../../assets/images/cover.jpg'
 
-const logo = {
+export const logo = {
   proto: Img,
   props: { src: Logo },
   style: {
