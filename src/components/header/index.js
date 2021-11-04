@@ -71,7 +71,7 @@ const book = {
     flexFlow: 'column',
     alignItems: 'center',
     cursor: 'pointer',
-    // background: 'black',
+    // background: 'radial-gradient(rgba(98, 73, 62, 1), rgba(98, 73, 62, 1) )',
     marginTop: `${100 / 16}em`,
     '> *': { opacity: '.85' },
     '&:hover > *': { opacity: 1 }
@@ -105,8 +105,7 @@ export default {
   },
   style: {
     width: '100%',
-    // background: '#3B2B27',
-    background: 'transparent',
+    // background: 'radial-gradient(rgba(98, 73, 62, 1), rgba(98, 73, 62, 1) )',
     position: 'fixed',
     top: 0,
     zIndex: 20,

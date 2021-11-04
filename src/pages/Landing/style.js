@@ -23,12 +23,12 @@ export const styleLaninaBanner = {
     lineHeight: `${40 / 16}em`,
     opacity: '.65',
     animationName: fadeUp,
-    animationDuration: '5s'
+    animationDuration: '5s',
+    color: 'rgba(243, 231, 219, 1)'
   },
 
   h4: {
     fontSize: `${48 / 16}em`
-
   }
 }
 
@@ -38,11 +38,16 @@ export const stylePageLink = {
   textOrientation: 'upright',
   cursor: 'pointer',
   marginLeft: '60px',
-  background: 'linear-gradient(rgba(209, 153, 115, .4), rgba(0, 0, 0, .2))',
-  color: 'rgba(255, 255, 255, .65)',
+  // background: 'linear-gradient(rgba(209, 153, 115, 1), rgba(0, 0, 0, .2))',
+  fontWeight: 'bold',
+  // background: '#5D473B',
+  background: 'linear-gradient(rgba(98, 73, 62, .4), rgba(98, 73, 62, .8), rgba(0, 0, 0, .4))',
+  color: 'rgba(243, 231, 219, .85)',
+  '&:hover': { color: 'rgba(243, 231, 219, 1)' },
   position: 'absolute',
   zIndex: 20,
-  textDecoration: 'none'
+  textDecoration: 'none',
+  letterSpacing: '4px'
 }
 
 export default {

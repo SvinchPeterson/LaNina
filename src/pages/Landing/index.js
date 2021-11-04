@@ -5,7 +5,7 @@ import { move, move2, filter } from '../../animations'
 
 import style, { styleLaninaBanner, stylePageLink } from './style'
 
-import Logo from '../../assets/logoWhite.png'
+import Logo from '../../assets/logoCream.png'
 import COVER_JPG from '../../assets/images/cover.jpg'
 
 const logo = {
@@ -23,7 +23,8 @@ const pageLink = {
   props: {
     text: 'SOLOLAKI',
     spacing: 'A',
-    href: './Sololaki'
+    href: './Sololaki',
+    size: 'Z'
   },
   class: [stylePageLink],
   style: {
@@ -34,16 +35,11 @@ const pageLink = {
 }
 
 const pageLink2 = {
-  proto: [Block, Text, Link],
-  props: {
-    text: 'RUSTAVELI',
-    spacing: 'A'
-  },
-  class: [stylePageLink],
+  proto: pageLink,
+  props: { text: 'RUSTAVELI' },
   style: {
     bottom: 0,
     right: '60px',
-    background: 'linear-gradient(rgba(209, 153, 115, .3), rgba(0, 0, 0, .2))',
     animationName: move,
     animationDuration: '3s',
     animationTimingFunction: 'ease-in-out'
@@ -53,7 +49,7 @@ const pageLink2 = {
 const laninaBanner = {
   proto: [Block, Flex],
   class: [styleLaninaBanner],
-  props: { gap: 'B' },
+  props: { gap: 'B2' },
   logo,
   heading: {
     h4: {
