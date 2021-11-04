@@ -1,7 +1,9 @@
 'use strict'
 
-import Header from './header'
+import Header from './Header'
+import Banner from './Banner'
 
 export {
-  Header
+  Header,
+  Banner
 }

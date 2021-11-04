@@ -3,6 +3,7 @@ import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 
 import { move, move2, filter } from '../../animations'
 
+import { Banner } from '../../components'
 import style, { styleLaninaBanner, stylePageLink } from './style'
 
 import Logo from '../../assets/logoCream.png'
@@ -52,19 +53,7 @@ const laninaBanner = {
   props: { gap: 'B2' },
   logo,
   heading: {
-    h4: {
-      proto: Text,
-      props: {
-        text: 'La Nina'
-      }
-    },
-    span: {
-      proto: Text,
-      props: {
-        text: 'Residence',
-        size: 'C'
-      }
-    }
+    proto: Banner
   }
 }
 
