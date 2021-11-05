@@ -1,22 +1,19 @@
 'use strict'
 
+import { paragraph } from '../../animations'
 export const styleStoryImage = {
-  width: '80%',
-  backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
-  filter: 'brightness(70%) grayscale(70%)',
-  boxShadow: 'inset -5px 2px 10px 1px rgba(0, 0, 0, .6)'
+  filter: 'brightness(50%) grayscale(70%)',
+  boxShadow: 'inset 2px 2px 10px 2px rgba(0, 0, 0, .8)'
 
 }
 
 export const styleParagraph = {
   flexFlow: 'column',
-  width: `${400 / 16}em`,
+  width: `${500 / 16}em`,
   background: 'rgba(206, 197, 177, 1)',
-  position: 'absolute',
   h6: {
     // color: 'rgba(152, 141, 87, 1)',
-    textAlign: 'center',
     color: '#BDB171',
     letterSpacing: '2px'
   },

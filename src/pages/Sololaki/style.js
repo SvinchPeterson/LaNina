@@ -15,8 +15,9 @@ export const styleBannerBackground = {
   '> div:first-child': {
     width: '100%',
     height: '100%',
-    backgroundImage: 'linear-gradient(rgba(65, 62, 58, .6), rgba(86 , 80, 67, .8), rgba(132, 130, 115, .8), rgba(0, 0, 0, .8)), url(' + COVER_JPG + ')',
-    filter: 'brightness(25%)',
+    // backgroundImage: 'linear-gradient(rgba(65, 62, 58, .6), rgba(86 , 80, 67, .8), rgba(132, 130, 115, .8), rgba(0, 0, 0, .8)), url(' + COVER_JPG + ')',
+    backgroundImage: 'linear-gradient(rgba(98, 73, 62, .9), rgba(0, 0, 0, .4), rgba(98, 73, 62, .9)), url(' + COVER_JPG + ')',
+    filter: 'brightness(30%) grayscale(70%)',
     backgroundSize: 'cover',
     animationName: zoomOut,
     animationDuration: '2s',
@@ -41,7 +42,7 @@ export const styleBanner = {
     AnimationTimingFunction: 'ease-in-out'
   },
   '> span': {
-    marginTop: '-5px',
+    // marginTop: '-5px',
     textTransform: 'uppercase',
     animationName: spacing,
     animationDuration: '2s'

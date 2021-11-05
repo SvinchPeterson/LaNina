@@ -87,6 +87,7 @@ export default {
           flex: 1,
           backgroundImage: 'linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .95)), url(' + COVER_JPG + ')',
           backgroundSize: 'cover',
+          backgroundAttachment: 'fixed',
           transition: 'all 1s ease-out',
           transitionDelay: '.05s'
         }

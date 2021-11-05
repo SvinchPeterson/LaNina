@@ -29,6 +29,16 @@ export const spacing = keyframes`
     letter-spacing: 9px;
   }
 `
+export const paragraph = keyframes`
+  from {
+    opacity: 0;
+    margin-top: 100px
+  }
+  to {
+    opacity: 1;
+    margin-top: 0
+  }
+`
 export const zoomOut = keyframes`
   from {
     transform: scale(.9);
