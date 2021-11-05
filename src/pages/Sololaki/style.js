@@ -20,8 +20,8 @@ export const styleBannerBackground = {
     backgroundSize: 'cover',
     animationName: zoomOut,
     animationDuration: '2s',
-    AnimationTimingFunction: 'ease-in-out',
-    backgroundAttachment: 'fixed'
+    AnimationTimingFunction: 'ease-in-out'
+    // backgroundAttachment: 'fixed'
   }
 }
 

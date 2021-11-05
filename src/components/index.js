@@ -2,10 +2,10 @@
 
 import Header from './Header'
 import Banner from './Banner'
-import Article from './Article'
+import Story from './Story'
 
 export {
   Header,
   Banner,
-  Article
+  Story
 }

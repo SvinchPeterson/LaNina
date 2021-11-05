@@ -2,7 +2,7 @@
 
 import { Block, Text } from '@rackai/symbols'
 
-import { Header, Banner, Article } from '../../components'
+import { Header, Banner, Story } from '../../components'
 
 import style, { styleBannerBackground, styleBanner } from './style'
 
@@ -39,18 +39,9 @@ const bannerBackground = {
   banner
 }
 
-const articles = {
-  childProto: {
-    proto: Article
-  },
-  ...[
-    {}
-  ]
-}
-
 export default {
   style,
   bannerBackground,
   Header,
-  articles
+  Story
 }
