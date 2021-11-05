@@ -6,7 +6,7 @@ import WINE_JPG from '../../assets/images/wine.jpg'
 
 import { paragraph } from '../../animations'
 
-import style, { styleStoryImage, styleParagraph } from './style'
+import style, { styleStoryImage, styleParagraph, styleCityParagraph } from './style'
 
 export default {
   tag: 'article',
@@ -51,27 +51,15 @@ export default {
     ...[
       {
         image: {
-          props: { height: 'h3' },
+          props: { height: 'H2' },
           style: {
             backgroundImage: 'url(' + OLDTBILISI_JEPG + ')',
             backgroundSize: 'cover',
-            width: '100%'
+            width: '80%'
           }
         },
         paragraph: {
-          style: {
-            position: 'absolute',
-            height: '100%',
-            top: 0,
-            right: `${100 / 16}em`,
-            paddingTop: `${100 / 16}em`,
-            '> h6': { textAlign: 'center' },
-            '> p': {
-              margin: '0 auto',
-              // border: '1px solid red',
-              paddingLeft: '30px'
-            }
-          },
+          style: styleCityParagraph,
 
           h6: {
             props: { text: 'Old Tbilisi' }
@@ -87,20 +75,14 @@ export default {
       },
 
       {
+        style: {
+        },
         paragraph: {
           style: {
-            width: '50%',
-            paddingTop: `${200 / 16}em`,
-            '> h6': {
-              margin: '0 auto',
-              paddingLeft: `${60 / 16}em`
-
-            },
-            '> p': {
-              maxWidth: `${400 / 16}em`,
-              margin: '0 auto',
-              paddingLeft: `${100 / 16}em`
-            }
+            flex: 1,
+            alignItems: 'center',
+            boxSizing: 'border-box',
+            paddingTop: `${100 / 16}em`
           },
           h6: {
             props: { text: 'Wine' }
@@ -113,20 +95,19 @@ export default {
             }
           }
         },
+
         image: {
           style: {
-            width: '50%',
             backgroundImage: 'url(' + WINE_JPG + ')',
-            height: '0',
-            paddingTop: '66.64%',
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'right',
-            marginLeft: 'auto',
-            boxShadow: 'none'
+            height: `${800 / 16}em`,
+            backgroundPositionX: '89%',
+            width: '37%',
+            marginRight: `${100 / 16}em`
           }
-
         }
+
       }
     ]
   }
