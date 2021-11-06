@@ -42,7 +42,7 @@ const bannerBackground = {
 export default {
   style,
   bannerBackground,
-  Header,
+  // Header,
   Story,
   Apartment
 }
