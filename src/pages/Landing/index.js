@@ -27,12 +27,12 @@ const pageLink = {
     href: './Sololaki',
     size: 'Z'
   },
-  class: [stylePageLink]
-  // style: {
-  //   animationName: move2,
-  //   animationDuration: '3s',
-  //   animationTimingFunction: 'ease-in-out'
-  // }
+  class: [stylePageLink],
+  style: {
+    animationName: move2,
+    animationDuration: '3s',
+    animationTimingFunction: 'ease-in-out'
+  }
 }
 
 const pageLink2 = {
@@ -40,10 +40,10 @@ const pageLink2 = {
   props: { text: 'RUSTAVELI' },
   style: {
     bottom: 0,
-    right: '60px'
-    // animationName: move,
-    // animationDuration: '3s',
-    // animationTimingFunction: 'ease-in-out'
+    right: '60px',
+    animationName: move,
+    animationDuration: '3s',
+    animationTimingFunction: 'ease-in-out'
   }
 }
 
@@ -73,9 +73,9 @@ export default {
         position: 'relative',
         flex: '.5',
         overflow: 'hidden',
-        // transition: 'all 1s ease-in-out',
-        // animationName: filter,
-        // animationDuration: '6s',
+        transition: 'all 1s ease-in-out',
+        animationName: filter,
+        animationDuration: '6s',
         '&:hover': {
           flex: '2.5',
           '> div': {
@@ -87,9 +87,9 @@ export default {
           flex: 1,
           backgroundImage: 'linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .95)), url(' + COVER_JPG + ')',
           backgroundSize: 'cover',
-          backgroundAttachment: 'fixed'
-          // transition: 'all 1s ease-out',
-          // transitionDelay: '.05s'
+          backgroundAttachment: 'fixed',
+          transition: 'all 1s ease-out',
+          transitionDelay: '.05s'
         }
       }
     },

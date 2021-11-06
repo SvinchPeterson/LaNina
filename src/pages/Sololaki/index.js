@@ -2,7 +2,7 @@
 
 import { Block, Text } from '@rackai/symbols'
 
-import { Header, Banner, Story, Apartment } from '../../components'
+import { Header, Banner, Story, Apartment, Services, Contact } from '../../components'
 
 import style, { styleBannerBackground, styleBanner } from './style'
 
@@ -42,7 +42,9 @@ const bannerBackground = {
 export default {
   style,
   bannerBackground,
-  // Header,
+  Header,
   Story,
-  Apartment
+  Apartment,
+  Services,
+  Contact
 }

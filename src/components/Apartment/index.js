@@ -5,8 +5,26 @@ import BALLERINA_JPG from '../../assets/images/ballerina.jpg'
 import RED_BRICK_JPG from '../../assets/images/redBrick.jpg'
 import YELLOW_COACH_JPG from '../../assets/images/yellowCoach.jpg'
 import MEAMA_JPG from '../../assets/images/meama.jpg'
+import BALLERINA_ICON from '../../assets/ballerina.png'
+import BRICK_ICON from '../../assets/bricks.png'
+import COUCH_ICON from '../../assets/couch.png'
 
 import style from './style'
+
+const roomIcon = {
+  proto: Img,
+  style: {
+    width: '30px',
+    height: '30px',
+    padding: '14px',
+    background: 'rgba(189, 177, 113, .6)',
+    // background: 'rgba(255, 255, 255, .2)',
+    // border: '2px solid rgba(189, 177, 113, .6)',
+    position: 'absolute',
+    opacity: 0,
+    transition: 'all .3s ease-in-out'
+  }
+}
 
 const description = {
   proto: [Block, Flex],
@@ -24,7 +42,7 @@ const description = {
     props: {
       text: 'Ballerina'
     },
-    style: { color: '#BDB171' }
+    style: { color: '#BDB171', letterSpacing: '2px' }
   },
   p: {
     proto: Text,
@@ -69,7 +87,69 @@ const gallery = {
     }
   }
 }
+const rooms = {
+  proto: [Block, Flex],
+  props: {
+    gap: 'D',
+    spacing: '0 0 0 C'
+  },
+  style: {
+    // justifyContent: 'flex-start'
+    justifyContent: 'center'
+  },
 
+  childProto: {
+    proto: Block,
+    style: {
+      width: `${260 / 16}em`,
+      height: `${320 / 16}em`,
+      backgroundSize: 'cover',
+      cursor: 'pointer',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      position: 'relative',
+      transition: 'all .3s ease-in-out',
+      '&:hover': {
+        boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
+        '> img:last-child': { opacity: 1 },
+        '> img:first-child': {
+          transform: 'scale(.92)',
+          boxShadow: 'none',
+          filter: 'grayscale(100%) brightness(30%)'
+        }
+      }
+    },
+    img: {
+      proto: Img,
+      style: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        filter: 'grayscale(100%) brightness(50%)',
+        transition: 'all .3s ease-in-out',
+        boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, .4)'
+      }
+    },
+    icon: { proto: roomIcon }
+  },
+  ...[
+    {
+      img: { props: { src: BALLERINA_JPG } },
+      icon: { props: { src: BALLERINA_ICON } }
+
+    },
+    {
+      img: { props: { src: RED_BRICK_JPG } },
+      icon: { props: { src: BRICK_ICON } }
+    },
+    {
+      img: { props: { src: YELLOW_COACH_JPG } },
+      icon: { props: { src: COUCH_ICON } }
+    }
+  ]
+
+}
 export default {
   tag: 'section',
   style,
@@ -77,7 +157,7 @@ export default {
     proto: [Block, Text],
     props: {
       text: 'Apartments',
-      spacing: 'E 0 B 0'
+      spacing: 'E 0 C 0'
     }
   },
 
@@ -102,35 +182,7 @@ export default {
 
       description,
       gallery
-
     },
-    rooms: {
-      proto: [Block, Flex],
-      props: {
-        gap: 'D',
-        spacing: '0 0 0 C'
-      },
-      style: {
-        justifyContent: 'flex-start'
-      },
-
-      childProto: {
-        proto: Block,
-        style: {
-          width: `${260 / 16}em`,
-          height: `${320 / 16}em`,
-          backgroundSize: 'cover',
-          filter: 'brightness(50%) grayscale(100%)',
-          cursor: 'pointer',
-          boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, .4)'
-          // backgroundAttachment: 'fixed'
-        }
-      },
-      ...[
-        { style: { backgroundImage: 'url(' + BALLERINA_JPG + ')' } },
-        { style: { backgroundImage: 'url(' + RED_BRICK_JPG + ')' } },
-        { style: { backgroundImage: 'url(' + YELLOW_COACH_JPG + ')' } }
-      ]
-    }
+    rooms
   }
 }
