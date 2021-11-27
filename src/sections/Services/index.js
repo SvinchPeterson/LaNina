@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
+import { Block, Img, Text, Flex } from '@rackai/symbols'
 
 import LAUNDRY_PNG from '../../assets/laundry.png'
 import CLEAN_PNG from '../../assets/clean.png'

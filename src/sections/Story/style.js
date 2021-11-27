@@ -2,7 +2,7 @@
 
 export const styleStoryImage = {
   backgroundAttachment: 'fixed',
-  filter: 'brightness(60%) grayscale(60%)',
+  filter: 'brightness(60%) grayscale(50%)',
   boxShadow: 'inset 2px 2px 15px 4px rgba(0, 0, 0, .8)'
 }
 
@@ -19,8 +19,7 @@ export const styleParagraph = {
   p: {
     color: 'rgba(0, 0, 0, .6)',
     fontSize: `${18 / 16}em`,
-    lineHeight: `${30 / 18}em`,
-    maxWidth: `${400 / 18}em`
+    lineHeight: `${30 / 18}em`
   }
 }
 

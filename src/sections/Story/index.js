@@ -4,8 +4,6 @@ import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 import OLDTBILISI_JEPG from '../../assets/images/cover.jpg'
 import WINE_JPG from '../../assets/images/wine.jpg'
 
-import { paragraph } from '../../animations'
-
 import style, { styleStoryImage, styleParagraph, styleCityParagraph } from './style'
 
 export default {
@@ -65,18 +63,21 @@ export default {
             props: { text: 'Old Tbilisi' }
           },
           p: {
+            style: {
+              maxWidth: `${400 / 18}em`
+            },
             props: {
-              text: `In the city of Tbilisi, a forgotten classical building has been transformed into a brand new 5-star hotel.
-                    In the interior, the traditional designs have been replaced by a minimalist aesthetic, projecting the power of
-                    imagination during the process of architectural transformation.`
+              text: `Sololaki is one of the oldest districts in Tbilisi located on
+              the south-eastern edge of the city on the right bank of the river “Mtkvari”. During the Arab
+              rule an irrigation canal (Arabic: Sulu-lah) was rebuilt to irrigate the “Fortress Garden”. “Su” is not
+              Arabic but a Turkish word for water. Later the mountain slope on which this district is cultivated was
+              called “Sululah”. While the toponym Sololaki appeared in the XIX century.`
             }
           }
         }
       },
 
       {
-        style: {
-        },
         paragraph: {
           style: {
             flex: 1,
@@ -89,9 +90,14 @@ export default {
           },
           p: {
             props: {
-              text: `In the city of Tbilisi, a forgotten classical building has been transformed into a brand new 5-star hotel.
-                    In the interior, the traditional designs have been replaced by a minimalist aesthetic, projecting the power of
-                    imagination during the process of architectural transformation.`
+              text: `Georgians are very proud of their rich and historic winemaking culture,
+              and as traditional methods enjoy a renaissance, the Qvevri (an earthenware
+              vessel used to store and age wine for thousands of years). Georgia is generally
+              considered the ‘cradle of wine’, as archaeologists have traced the world’s first known wine creation back to
+              the people of the South Caucasus in 6,000BC. These early Georgians discovered grape juice could be turned into
+              wine by burying it underground for the winter. Some of the qvevri’s were buried in could remain underground for up to 50 years.
+              Wine continued to be important to the Georgians, who incorporated it into art and sculpture, with grape designs and evidence
+              of wine-drinking paraphernalia found at ruins and burial sites..`
             }
           }
         },

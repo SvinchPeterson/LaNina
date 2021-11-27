@@ -1,9 +1,9 @@
 'use strict'
 import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 
-import BALLERINA_JPG from '../../assets/images/ballerina.jpg'
-import RED_BRICK_JPG from '../../assets/images/redBrick.jpg'
-import YELLOW_COACH_JPG from '../../assets/images/yellowCoach.jpg'
+import BALLERINA_JPG from '../../assets/images/ballerina/ballerinaCover.jpg'
+import RED_BRICK_JPG from '../../assets/images/redBrick/redBrickCover.jpg'
+import YELLOW_COACH_JPG from '../../assets/images/yellowCouch/yellowCouchCover.jpg'
 import MEAMA_JPG from '../../assets/images/meama.jpg'
 import BALLERINA_ICON from '../../assets/ballerina.png'
 import BRICK_ICON from '../../assets/bricks.png'
@@ -101,8 +101,8 @@ const rooms = {
   childProto: {
     proto: Block,
     style: {
-      width: `${260 / 16}em`,
-      height: `${320 / 16}em`,
+      width: `${360 / 16}em`,
+      height: `${500 / 16}em`,
       backgroundSize: 'cover',
       cursor: 'pointer',
       display: 'flex',
@@ -162,27 +162,31 @@ export default {
   },
 
   content: {
-    proto: [Block, Flex],
-    props: { gap: 'D1' },
-    style: {
-      height: `${1000 / 16}em`,
-      background: 'rgba(98, 73, 62, 1)',
-      flexFlow: 'column'
-    },
-    apartment: {
-      proto: [Block, Flex],
-      props: {
-        padding: 'C 0 0 0',
-        gap: 'C'
-      },
-      style: {
-        justifyContent: 'space-between',
-        paddingTop: `${80 / 16}em`
-      },
-
-      description,
-      gallery
-    },
     rooms
   }
+
+  // content: {
+  //   proto: [Block, Flex],
+  //   props: { gap: 'D1' },
+  //   style: {
+  //     height: `${1000 / 16}em`,
+  //     background: 'rgba(98, 73, 62, 1)',
+  //     flexFlow: 'column'
+  //   },
+  //   apartment: {
+  //     proto: [Block, Flex],
+  //     props: {
+  //       padding: 'C 0 0 0',
+  //       gap: 'C'
+  //     },
+  //     style: {
+  //       justifyContent: 'space-between',
+  //       paddingTop: `${80 / 16}em`
+  //     },
+
+  //     description,
+  //     gallery
+  //   },
+  //   rooms
+  // }
 }
