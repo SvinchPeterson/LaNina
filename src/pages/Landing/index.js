@@ -3,7 +3,7 @@ import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 
 import { movingDown, movingUp, filter } from '../../animations'
 
-import { Banner } from '../../sections'
+import { LaninaHeading } from '../../components'
 import style, { styleLaninaBanner, styleLocationHeading } from './style'
 
 import Logo from '../../assets/logoCream.png'
@@ -29,21 +29,7 @@ const locationHeading = {
   },
 
   class: [styleLocationHeading]
-  // style: {
-  // }
 }
-
-// const heading2 = {
-//   // proto: heading,
-//   props: { text: 'RUSTAVELI' },
-//   style: {
-//     bottom: 0,
-//     right: '60px'
-//     // animationName: move,
-//     // animationDuration: '3s',
-//     // animationTimingFunction: 'ease-in-out'
-//   }
-// }
 
 const laninaBanner = {
   proto: [Block, Flex],
@@ -51,7 +37,7 @@ const laninaBanner = {
   props: { gap: 'B2' },
   logo,
   heading: {
-    proto: Banner
+    proto: LaninaHeading
   }
 }
 
@@ -79,16 +65,16 @@ export default {
         position: 'relative',
         flex: '.5',
         overflow: 'hidden',
-        // transition: 'all 1s ease-in-out',
-        // animationName: filter,
-        // animationDuration: '6s',
-        // '&:hover': {
-        //   flex: '2.5',
-        //   '> div': {
-        //     transform: 'scale(1.1)',
-        //     backgroundImage: 'linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url(' + COVER_JPG + ')'
-        //   }
-        // },
+        transition: 'all 1s ease-in-out',
+        animationName: filter,
+        animationDuration: '6s',
+        '&:hover': {
+          flex: '2.5',
+          '> div': {
+            transform: 'scale(1.1)',
+            backgroundImage: 'linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url(' + COVER_JPG + ')'
+          }
+        },
         '> div': {
           flex: 1,
           backgroundImage: 'linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .95)), url(' + COVER_JPG + ')',

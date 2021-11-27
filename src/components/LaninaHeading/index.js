@@ -24,8 +24,10 @@ export default {
       size: 'C'
     },
     style: {
-      letterSpacing: '9px',
-      color: 'rgba(243, 231, 219, .65)'
+      letterSpacing: '10px',
+      color: 'rgba(243, 231, 219, .65)',
+      textAlign: 'center',
+      paddingLeft: '9px'
     }
   }
 }
