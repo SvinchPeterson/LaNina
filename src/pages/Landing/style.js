@@ -30,19 +30,6 @@ export const styleLaninaBanner = {
     fontSize: `${48 / 16}em`
   }
 }
-
-export const styleLocationHeading = {
-  writingMode: 'vertical-rl',
-  textOrientation: 'upright',
-  fontWeight: '600',
-  background: 'linear-gradient(rgba(98, 73, 62, .4), rgba(98, 73, 62, .8), rgba(0, 0, 0, .4))',
-  color: 'rgba(243, 231, 219, .85)',
-  position: 'absolute',
-  zIndex: 20,
-  textDecoration: 'none',
-  letterSpacing: '4px'
-}
-
 export default {
   width: '100%',
   height: '100%',

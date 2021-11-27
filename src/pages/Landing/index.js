@@ -3,7 +3,7 @@ import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 
 import { movingDown, movingUp, filter } from '../../animations'
 
-import { LaninaHeading } from '../../components'
+import { LaninaHeading, LocationHeading } from '../../components'
 import style, { styleLaninaBanner, styleLocationHeading } from './style'
 
 import Logo from '../../assets/logoCream.png'
@@ -17,18 +17,6 @@ export const logo = {
     height: '150px',
     opacity: '.65'
   }
-}
-
-const locationHeading = {
-  tag: 'h6',
-  proto: [Block, Text],
-  props: {
-    text: 'SOLOLAKI',
-    padding: 'A',
-    size: 'Z'
-  },
-
-  class: [styleLocationHeading]
 }
 
 const laninaBanner = {
@@ -93,7 +81,7 @@ export default {
         },
         style: { cursor: 'pointer' },
         heading: {
-          proto: locationHeading,
+          proto: LocationHeading,
           style: {
             top: 0,
             left: `${60 / 14}em`,
@@ -118,7 +106,7 @@ export default {
       {
         style: { cursor: 'pointer' },
         heading: {
-          proto: locationHeading,
+          proto: LocationHeading,
           props: {
             text: 'RUSTAVELI'
           },
