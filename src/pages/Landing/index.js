@@ -1,10 +1,10 @@
 'use strict'
-import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
+import { Block, Img, Flex, Link } from '@rackai/symbols'
 
-import { movingDown, movingUp, filter } from '../../animations'
+import { movingDown, movingUp, filter, fadeUp } from '../../animations'
 
-import { LaninaHeading, LocationHeading } from '../../components'
-import style, { styleLaninaBanner, styleLocationHeading } from './style'
+import { LocationHeading, LaninaBanner } from '../../components'
+import style from './style'
 
 import Logo from '../../assets/logoCream.png'
 import COVER_JPG from '../../assets/images/cover.jpg'
@@ -19,20 +19,22 @@ export const logo = {
   }
 }
 
-const laninaBanner = {
-  proto: [Block, Flex],
-  class: [styleLaninaBanner],
-  props: { gap: 'B2' },
-  logo,
-  heading: {
-    proto: LaninaHeading
-  }
-}
-
 export default {
   proto: Flex,
   style,
-  laninaBanner,
+  banner: {
+    proto: LaninaBanner,
+    style: {
+      '> img': {
+        animationName: fadeUp,
+        animationDuration: '2s'
+      },
+      '> div': {
+        animationName: fadeUp,
+        animationDuration: '3s'
+      }
+    }
+  },
 
   // state: {
   //   activeGallery: 0
