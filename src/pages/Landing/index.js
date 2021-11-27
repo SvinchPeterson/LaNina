@@ -1,7 +1,7 @@
 'use strict'
 import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
 
-import { move, move2, filter } from '../../animations'
+import { movingDown, movingUp, filter } from '../../animations'
 
 import { Banner } from '../../sections'
 import style, { styleLaninaBanner, styleLocationHeading } from './style'
@@ -25,16 +25,11 @@ const locationHeading = {
   props: {
     text: 'SOLOLAKI',
     padding: 'A',
-    href: './Sololaki',
     size: 'Z'
   },
-  style: styleLocationHeading
 
-  // class: [styleLocationHeading]
+  class: [styleLocationHeading]
   // style: {
-  //   // animationName: move2,
-  //   // animationDuration: '3s',
-  //   // animationTimingFunction: 'ease-in-out'
   // }
 }
 
@@ -79,7 +74,7 @@ export default {
       flex: 1
     },
     childProto: {
-      proto: [Block, Flex],
+      proto: [Block, Flex, Link],
       style: {
         position: 'relative',
         flex: '.5',
@@ -106,11 +101,19 @@ export default {
     },
     ...[
       {
+        props: {
+          href: './Sololaki',
+          color: 'white'
+        },
+        style: { cursor: 'pointer' },
         heading: {
           proto: locationHeading,
           style: {
             top: 0,
-            left: `${60 / 14}em`
+            left: `${60 / 14}em`,
+            animationName: movingDown,
+            animationDuration: '2s',
+            animationTimingFunction: 'ease-in-out'
           }
         },
         image: {
@@ -127,6 +130,7 @@ export default {
         // }
       },
       {
+        style: { cursor: 'pointer' },
         heading: {
           proto: locationHeading,
           props: {
@@ -134,7 +138,11 @@ export default {
           },
           style: {
             bottom: 0,
-            right: `${60 / 14}em`
+            right: `${60 / 14}em`,
+            animationName: movingUp,
+            animationDuration: '2s',
+            animationTimingFunction: 'ease-in-out'
+
           }
         },
         image: { style: { backgroundPosition: 'center right' } }

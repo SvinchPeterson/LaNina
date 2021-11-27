@@ -48,7 +48,7 @@ export const zoomOut = keyframes`
   }
 `
 
-export const move = keyframes`
+export const movingUp = keyframes`
   from {
     bottom: -100%;
   }
@@ -57,7 +57,7 @@ export const move = keyframes`
   }
 `
 
-export const move2 = keyframes`
+export const movingDown = keyframes`
   from {
     top: -100%;
   }
