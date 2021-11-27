@@ -2,7 +2,7 @@
 
 import { Block, Text } from '@rackai/symbols'
 
-import { Header, Banner, Story, Apartment, Services, Contact } from '../../components'
+import { Header, Banner, Story, Apartment, Services, Contact } from '../../sections'
 
 import style, { styleBannerBackground, styleBanner } from './style'
 

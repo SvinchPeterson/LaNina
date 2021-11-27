@@ -13,7 +13,9 @@ const App = {
   key: 'app',
   style,
 
-  state: {},
+  state: {
+    isLoaded: false
+  },
   props: {},
 
   define: { routes: param => param },
@@ -28,4 +30,9 @@ const App = {
     }
   }
 }
+
+window.addEventListener('load', event => {
+  App.state.update({ isLoaded: true })
+})
+
 export default App
