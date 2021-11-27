@@ -65,6 +65,7 @@ export const movingDown = keyframes`
     top: 0;
   }
 `
+
 export const filter = keyframes`
   from {
     filter: brightness(0%);

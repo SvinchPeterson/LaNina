@@ -2,8 +2,8 @@
 
 import { Block, Text } from '@rackai/symbols'
 
-import { Header, Story, Apartment, Services, Contact } from '../../sections'
-import { LaninaHeading } from '../../components'
+import { Story, Apartment, Services, Contact } from '../../sections'
+import { LaninaHeading, Header } from '../../components'
 
 import style, { styleBannerBackground, styleBanner } from './style'
 
@@ -29,7 +29,7 @@ const banner = {
     props: {
       text: 'Be inspired by old city',
       size: 'B',
-      spacing: 'A 0 0 0'
+      padding: 'A 0 0 0'
     }
   }
 }
@@ -37,7 +37,7 @@ const banner = {
 const bannerBackground = {
   style: styleBannerBackground,
   bannerImg: {},
-  LaninaHeading
+  banner
 }
 
 export default {

@@ -49,7 +49,7 @@ export default {
     proto: [Text, Block],
     props: {
       text: 'Services',
-      spacing: 'E 0 C 0'
+      padding: 'E 0 C 0'
     },
     style: {
       textAlign: 'center',
@@ -63,7 +63,7 @@ export default {
     proto: [Flex, Block],
     props: {
       gap: 'F',
-      spacing: '0 D1'
+      padding: '0 D1'
     },
     style: {
       flexWrap: 'wrap',

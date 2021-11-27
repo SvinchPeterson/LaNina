@@ -29,7 +29,7 @@ const roomIcon = {
 const description = {
   proto: [Block, Flex],
   props: {
-    spacing: '0 0 0 C',
+    padding: '0 0 0 C',
     gap: 'B'
   },
   style: {
@@ -91,7 +91,7 @@ const rooms = {
   proto: [Block, Flex],
   props: {
     gap: 'D',
-    spacing: '0 0 0 C'
+    padding: '0 0 0 C'
   },
   style: {
     // justifyContent: 'flex-start'
@@ -157,7 +157,7 @@ export default {
     proto: [Block, Text],
     props: {
       text: 'Apartments',
-      spacing: 'E 0 C 0'
+      padding: 'E 0 C 0'
     }
   },
 
@@ -172,7 +172,7 @@ export default {
     apartment: {
       proto: [Block, Flex],
       props: {
-        spacing: 'C 0 0 0',
+        padding: 'C 0 0 0',
         gap: 'C'
       },
       style: {

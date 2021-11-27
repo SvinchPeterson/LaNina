@@ -66,7 +66,7 @@ const call = {
 
 const book = {
   proto: [Flex, Block, Link],
-  props: { gap: 'Z', spacing: 'Z' },
+  props: { gap: 'Z', padding: 'Z' },
   style: {
     flexFlow: 'column',
     alignItems: 'center',
@@ -101,7 +101,7 @@ export default {
   proto: [Block, Flex],
   props: {
     height: 'D2',
-    spacing: '0 C'
+    padding: '0 C'
   },
   style: {
     width: '100%',

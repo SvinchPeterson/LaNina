@@ -106,7 +106,6 @@ export default {
         // }
       },
       {
-        style: { cursor: 'pointer' },
         heading: {
           proto: LocationHeading,
           props: {
@@ -118,7 +117,6 @@ export default {
             animationName: movingUp,
             animationDuration: '2s',
             animationTimingFunction: 'ease-in-out'
-
           }
         },
         image: { style: { backgroundPosition: 'center right' } }

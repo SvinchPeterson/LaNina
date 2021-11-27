@@ -15,7 +15,7 @@ export default {
     proto: [Block, Text],
     props: {
       text: 'Story',
-      spacing: 'E 0 C 0'
+      padding: 'E 0 C 0'
     }
   },
   content: {
@@ -36,7 +36,7 @@ export default {
       paragraph: {
         proto: [Block, Flex],
         props: {
-          spacing: 'C',
+          padding: 'C',
           gap: 'A'
         },
         class: [styleParagraph],
