@@ -1,7 +1,8 @@
 'use strict'
-import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
+import { Block, Img, Text, Flex, Link, Icon } from '@rackai/symbols'
 
 import BALLERINA_JPG from '../../assets/images/ballerina/ballerinaCover.jpg'
+import BALLERINA_GALLERY_JPG from '../../assets/images/ballerina/ballerina.jpg'
 import RED_BRICK_JPG from '../../assets/images/redBrick/redBrickCover.jpg'
 import YELLOW_COACH_JPG from '../../assets/images/yellowCouch/yellowCouchCover.jpg'
 import MEAMA_JPG from '../../assets/images/meama.jpg'
@@ -9,7 +10,23 @@ import BALLERINA_ICON from '../../assets/ballerina.png'
 import BRICK_ICON from '../../assets/bricks.png'
 import COUCH_ICON from '../../assets/couch.png'
 
+import CHECK_SVG from '../../assets/tick.png'
+
 import style from './style'
+
+const amenityItem = {
+  proto: Block,
+  props: { flexAlign: 'center flex-start' },
+  icon: {
+    proto: Img,
+    src: CHECK_SVG
+
+  },
+  span: {
+    proto: Text,
+    props: { text: 'Air condition' }
+  }
+}
 
 const roomIcon = {
   proto: Img,
@@ -47,23 +64,43 @@ const description = {
   p: {
     proto: Text,
     props: {
-      text: `In the city of Tbilisi, a forgotten classical building has been transformed into a brand new 5-star hotel.
-      In the interior, the traditional designs have been replaced by a minimalist aesthetic, projecting
-      the power of imagination during the process of architectural transformation. In the city of Tbilisi, a forgotten classical building has been transformed into a brand new 5-star hotel. In the interior, the traditional designs have been replaced by a minimalist aesthetic, projecting the power of imagination during the process of architectural transformation.`
+      text: `"Ballerina" is a cozy and quite two-bedroom apartment  of 72m2 on high first floor with open terrace,  composed of living room with comfortable sofa bed for 1 person and 2 bedrooms  with King size bed and 2 single beds, private bathroom with shower,  kitchen with a dining area, making the apartment comfortable for 5 people
+      Equipped with air-conditioning, smart TV, gas stove, refrigerator, microwave oven, ironing facilities, coffee and tea maker, washing machine, bathroom with shower and toiletries.
+      Parking space available in inner yard.`
     },
     style: {
-      maxWidth: `${600 / 15}em`,
+      maxWidth: `${500 / 15}em`,
       marginRight: '-100px',
       color: 'rgba(243, 231, 219, .85)',
       fontFamily: 'Avenir Next'
+    }
+  },
+  amenities: {
+    caption: {
+      proto: [Block, Text],
+      props: {
+        text: 'Amenities',
+        size: 'D'
+      }
+    },
+    content: {
+      childProto: {
+        proto: amenityItem
+      },
+      ...[
+        {},
+        {}
+
+      ]
+
     }
   }
 }
 
 const gallery = {
   style: {
-    flex: 1,
-    height: `${400 / 16}em`,
+    flex: 1.5,
+    height: `${700 / 16}em`,
     // border: '3px solid lightgreen',
     display: 'flex',
     justifyContent: 'flex-end'
@@ -79,7 +116,7 @@ const gallery = {
       // maxHeight: '100%',
       width: '100%',
       height: '100%',
-      backgroundImage: 'url(' + BALLERINA_JPG + ')',
+      backgroundImage: 'url(' + BALLERINA_GALLERY_JPG + ')',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       boxShadow: 'inset 2px 2px 5px 2px rgba(0, 0, 0, .6)',
@@ -90,19 +127,17 @@ const gallery = {
 const rooms = {
   proto: [Block, Flex],
   props: {
-    gap: 'D',
-    padding: '0 0 0 C'
+    gap: 'D'
   },
   style: {
-    // justifyContent: 'flex-start'
     justifyContent: 'center'
   },
 
   childProto: {
     proto: Block,
     style: {
-      width: `${360 / 16}em`,
-      height: `${500 / 16}em`,
+      width: `${320 / 16}em`,
+      height: `${400 / 16}em`,
       backgroundSize: 'cover',
       cursor: 'pointer',
       display: 'flex',
@@ -162,7 +197,27 @@ export default {
   },
 
   content: {
-    rooms
+    proto: Block,
+    props: {
+      padding: 'D 0',
+      flexFlow: 'column',
+      gap: 'E'
+
+    },
+    // style: { background: 'radial-gradient(rgba(98, 73, 62, .8), rgba(98, 73, 62, 1) )' },
+    style: {
+      background: 'radial-gradient(rgba(136, 108, 107, .8), rgba(97, 77, 76, 1))'
+    },
+    rooms,
+    apartment: {
+      proto: Block,
+      props: {
+        flexAlign: 'flex-start flex-start',
+        gap: 'D'
+      },
+      description,
+      gallery
+    }
   }
 
   // content: {
@@ -170,7 +225,7 @@ export default {
   //   props: { gap: 'D1' },
   //   style: {
   //     height: `${1000 / 16}em`,
-  //     background: 'rgba(98, 73, 62, 1)',
+  // background: 'rgba(98, 73, 62, 1)',
   //     flexFlow: 'column'
   //   },
   //   apartment: {

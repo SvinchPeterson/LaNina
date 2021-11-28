@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block, Text } from '@rackai/symbols'
+import { Block, Text, SVG } from '@rackai/symbols'
 
 import { Story, Apartment, Services, Contact } from '../../sections'
 import { LaninaHeading, Header } from '../../components'
