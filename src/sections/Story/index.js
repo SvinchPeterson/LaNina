@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
+import { Block, Text, Flex } from '@rackai/symbols'
 
 import OLDTBILISI_JEPG from '../../assets/images/cover.jpg'
 import WINE_JPG from '../../assets/images/wine.jpg'
