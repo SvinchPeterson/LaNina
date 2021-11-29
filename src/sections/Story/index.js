@@ -89,6 +89,9 @@ export default {
             props: { text: 'Wine' }
           },
           p: {
+            style: {
+              maxWidth: `${600 / 18}em`
+            },
             props: {
               text: `Georgians are very proud of their rich and historic winemaking culture,
               and as traditional methods enjoy a renaissance, the Qvevri (an earthenware
