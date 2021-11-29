@@ -55,7 +55,7 @@ export default {
     ...[
       {
         props: {
-          href: './Sololaki',
+          href: '/Sololaki',
           color: 'white'
         },
         style: { cursor: 'pointer' },

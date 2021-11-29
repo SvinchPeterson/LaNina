@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text } from '@rackai/symbols'
+// import { Block, Text } from '@rackai/symbols'
 
 import BALLERINA_GALLERY_JPG from '../../assets/images/ballerina/ballerina.jpg'
 
@@ -7,7 +7,6 @@ export default {
   style: {
     flex: 1.5,
     height: `${500 / 16}em`,
-    // border: '3px solid lightgreen',
     display: 'flex',
     justifyContent: 'flex-end'
   },

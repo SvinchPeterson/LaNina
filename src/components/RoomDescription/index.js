@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Img, Text, Flex, Link, Icon, SVG } from '@rackai/symbols'
+import { Block, Text, Flex } from '@rackai/symbols'
 import Amenities from '../Amenities'
 
 export default {

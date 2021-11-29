@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block, Img, Text, Flex, Link, Icon, SVG } from '@rackai/symbols'
+import { Block, Img, Flex } from '@rackai/symbols'
 
 import BALLERINA_JPG from '../../assets/images/ballerina/ballerinaCover.jpg'
 import RED_BRICK_JPG from '../../assets/images/redBrick/redBrickCover.jpg'
@@ -22,6 +22,43 @@ const roomIcon = {
     opacity: 0,
     transition: 'all .3s ease-in-out'
   }
+}
+
+export const room = {
+  proto: Block,
+  style: {
+    width: `${320 / 16}em`,
+    height: `${400 / 16}em`,
+    backgroundSize: 'cover',
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    transition: 'all .3s ease-in-out',
+    '&:hover': {
+      boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
+      '> img:last-child': { opacity: 1 },
+      '> img:first-child': {
+        transform: 'scale(.92)',
+        boxShadow: 'none',
+        filter: 'grayscale(100%) brightness(30%)'
+      }
+    }
+  },
+  img: {
+    proto: Img,
+    style: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      filter: 'grayscale(100%) brightness(50%)',
+      transition: 'all .3s ease-in-out',
+      boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, .4)'
+    }
+  },
+  icon: { proto: roomIcon }
+
 }
 
 export default {

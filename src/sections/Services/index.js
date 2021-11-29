@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Img, Text, Flex } from '@rackai/symbols'
+import { Block, Img, Text, Flex, Grid } from '@rackai/symbols'
 
 import LAUNDRY_PNG from '../../assets/laundry.png'
 import CLEAN_PNG from '../../assets/clean.png'
@@ -14,15 +14,15 @@ const serviceItem = {
   icon: {
     proto: Img,
     style: {
-      width: `${160 / 16}em`,
-      height: `${160 / 16}em`,
+      width: `${100 / 16}em`,
+      height: `${100 / 16}em`,
       opacity: '.65'
     }
 
   },
   service: {
     proto: [Block, Flex],
-    props: { gap: 'Z' },
+    props: { gap: 'Y' },
     style: { flexFlow: 'column' },
     h5: {
       proto: Text,
@@ -44,7 +44,9 @@ const serviceItem = {
 }
 
 export default {
-  style: { paddingBottom: '100px' },
+  style: {
+    paddingBottom: `${100 / 16}em`
+  },
   h4: {
     proto: [Text, Block],
     props: {
@@ -60,26 +62,20 @@ export default {
   },
 
   services: {
-    proto: [Flex, Block],
+    proto: [Grid],
     props: {
-      gap: 'F',
-      padding: '0 D1'
+      columns: 'repeat(2, 1fr)',
+      gap: 'E'
     },
     style: {
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-      alignItems: 'center',
-      position: 'relative'
-      // flexFlow: 'column'
+      width: 'fit-content',
+      margin: '0 auto'
     },
     childProto: {
       proto: serviceItem
     },
     ...[
       {
-        style: {
-          // alignSelf: 'flex-start'
-        },
         icon: { props: { src: TRANSFER_PNG } },
         service: {
           h5: { props: { text: 'Transfer' } },
@@ -87,9 +83,6 @@ export default {
         }
       },
       {
-        style: {
-          // alignSelf: 'center'
-        },
         icon: { props: { src: CLEAN_PNG } },
         service: {
           h5: { props: { text: 'Cleaning' } },
@@ -98,9 +91,10 @@ export default {
       },
       {
         style: {
-          flex: 1,
-          paddingLeft: '350px',
-          marginTop: '-50px'
+          gridColumnStart: 1,
+          gridColumnEnd: 'span 2',
+          // display: 'flex',
+          justifyContent: 'center'
         },
         icon: { props: { src: LAUNDRY_PNG } },
         service: {
