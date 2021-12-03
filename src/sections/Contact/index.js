@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Flex, Img, Link } from '@rackai/symbols'
+import { Block, Text, Img, Link } from '@rackai/symbols'
 
 import FACEBOOK_PNG from '../../assets/facebook.png'
 import INSTAGRAM_PNG from '../../assets/instagram.png'

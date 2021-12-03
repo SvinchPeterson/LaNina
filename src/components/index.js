@@ -7,6 +7,7 @@ import Amenities from './Amenities'
 import Rooms from './Rooms'
 import RoomDescription from './RoomDescription'
 import Gallery from './Gallery'
+import SideMenu from './SideMenu'
 
 export {
   LaninaHeading,
@@ -16,5 +17,6 @@ export {
   Amenities,
   Rooms,
   RoomDescription,
-  Gallery
+  Gallery,
+  SideMenu
 }

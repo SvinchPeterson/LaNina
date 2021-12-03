@@ -1,6 +1,8 @@
 'use strict'
 import { Block, Img, Text, Flex, Link, Shape, SVG } from '@rackai/symbols'
 
+import SideMenu from '../SideMenu'
+
 import PHONE_SVG from '../../assets/phones.svg'
 import LOGO_PNG from '../../assets/logos.png'
 
@@ -110,9 +112,54 @@ export default {
     zIndex: 20,
     alignItems: 'center',
     fontFamily: 'Avenir Next',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    'input ~ label': {
+      // background: 'red'
+    },
+    // '#toggle:not(:checked) ~ aside': {
+    //   background: 'red'
+    // },
+    '#toggle:checked ~ aside': {
+      left: 0
+    },
+    '#toggle:checked ~ label > div:last-child': {
+      transition: 'all .4s ease-in-out',
+      transitionDelay: '.2s',
+      width: '36px'
+    },
+    '#toggle:not(:checked) ~ label > div:last-child': {
+      transition: 'all .4s ease-in-out',
+      transitionDelay: '.2s',
+      width: '20px'
+    },
+    '#toggle:checked ~ label > div:first-child': {
+      transition: 'all .4s ease-in-out',
+      transitionDelay: '.2s',
+      width: '20px'
+    },
+    '#toggle:not(:checked) ~ label > div:first-child': {
+      transition: 'all .4s ease-in-out',
+      transitionDelay: '.2s',
+      width: '36px'
+    }
   },
-  menuIcon,
+  input: {
+    attr: {
+      type: 'checkbox',
+      id: 'toggle'
+    },
+    style: { display: 'none' }
+  },
+  hmburgerMenuIcon: {
+    tag: 'label',
+    attr: { for: 'toggle' },
+    proto: menuIcon,
+    style: { zIndex: '30' }
+  },
+  menu: {
+    tag: 'aside',
+    proto: SideMenu
+  },
   nav: {
     tag: 'nav',
     proto: [Flex, Block],
