@@ -11,6 +11,7 @@ import Bold from '../assets/fonts/14c73713-e4df-4dba-933b-057feeac8dd1.woff2'
 import Heavy from '../assets/fonts/5c57b2e2-f641-421e-a95f-65fcb47e409a.woff2'
 import Times from '../assets/fonts/Times-Roman.woff2'
 import gilda from '../assets/fonts/GildaDisplay-Regular.woff2'
+import Alice from '../assets/fonts/Alice-Regular.woff2'
 
 const RegisterFont = set('font', {
   name: 'Avenir Next',
@@ -42,6 +43,9 @@ const RegisterFont = set('font', {
 }, {
   name: 'Gilda Display',
   url: gilda
+}, {
+  name: 'Alice',
+  url: Alice
 })
 
 const FontFace = getFontFace(RegisterFont)

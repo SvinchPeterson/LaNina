@@ -8,6 +8,7 @@ import './config'
 import './define'
 
 import { Landing, Sololaki } from './pages'
+import { Story } from './sections'
 
 const App = {
   key: 'app',
@@ -21,7 +22,8 @@ const App = {
   define: { routes: param => param },
   routes: {
     '/': Landing,
-    '/Sololaki': Sololaki
+    '/Sololaki': Sololaki,
+    '/story': Story
   },
 
   on: {

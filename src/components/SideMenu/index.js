@@ -1,10 +1,15 @@
 'use strict'
-import { Block, Text, Img, Link } from '@rackai/symbols'
+import { Block, Text, Img, Link, SVG } from '@rackai/symbols'
+
+import FACEBOOK_SVG from '../../assets/facebook2.svg'
+import INSTAGRAM_SVG from '../../assets/instagram2.svg'
+import LINKEDIN_SVG from '../../assets/linkedin2.svg'
 
 export default {
   tag: 'aside',
   proto: Block,
   props: {
+    flexFlow: 'column',
     flexAlign: 'center center'
   },
   style: {
@@ -36,7 +41,7 @@ export default {
         fontFamily: 'Gilda Display',
         letterSpacing: '6px',
         textDecoration: 'none',
-        color: 'F3E7DB',
+        color: '#F3E7DB',
         cursor: 'pointer',
         opacity: '.7',
         '&:hover': {
@@ -51,7 +56,10 @@ export default {
         props: { text: 'story' }
       },
       {
-        props: { text: 'apartment' }
+        props: {
+          text: 'apartment',
+          href: '#story'
+        }
       },
       {
         props: { text: 'services' }
@@ -65,8 +73,41 @@ export default {
     ]
   },
   nav2: {
+    proto: Block,
+    props: {
+      flexAlign: 'center flex-start',
+      gap: 'C'
+    },
+    style: {
+      position: 'absolute',
+      top: '90%',
+      left: '45%',
+      transform: 'translate(-50%, -50%)'
+
+    },
     childProto: {
-      proto: Link
-    }
+      proto: [Link, Block],
+      props: {
+
+      },
+      icon: {
+        proto: [SVG, Block],
+        props: {
+          boxSize: 'B B'
+        },
+        style: {
+          opacity: '.65'
+          // border: '1px solid red',
+          // width: '24px',
+          // height: '24px'
+        }
+      }
+    },
+    ...[
+      { icon: { src: FACEBOOK_SVG } },
+      { icon: { src: LINKEDIN_SVG } },
+      { icon: { src: INSTAGRAM_SVG } }
+    ]
+
   }
 }

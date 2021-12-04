@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Flex } from '@rackai/symbols'
+import { Block, Text, Flex, Link } from '@rackai/symbols'
 
 import OLDTBILISI_JEPG from '../../assets/images/cover.jpg'
 import WINE_JPG from '../../assets/images/wine.jpg'
@@ -8,13 +8,15 @@ import style, { styleStoryImage, styleParagraph, styleCityParagraph } from './st
 
 export default {
   tag: 'article',
+  proto: Block,
   style,
-  h4: {
-    proto: [Block, Text],
+  heading: {
+    proto: [Block, Text, Link],
     props: {
       text: 'Story',
       padding: 'E 0 C 0'
-    }
+    },
+    attr: { id: 'story' }
   },
   content: {
     proto: [Block, Flex],
@@ -42,7 +44,11 @@ export default {
           proto: Text
         },
         p: {
-          proto: Text
+          proto: Text,
+          style: {
+            fontFamily: 'Alice'
+            // color: 'rgba(0, 0, 0, .2)'
+          }
         }
       }
     },

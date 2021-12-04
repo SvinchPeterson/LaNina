@@ -1,9 +1,9 @@
 'use strict'
-import { Block, Text, Img, Link } from '@rackai/symbols'
+import { Block, Text, Img, Link, SVG } from '@rackai/symbols'
 
-import FACEBOOK_PNG from '../../assets/facebook.png'
-import INSTAGRAM_PNG from '../../assets/instagram.png'
-import LINKEDIN_PNG from '../../assets/linkedin.png'
+import FACEBOOK_SVG from '../../assets/facebook.svg'
+import INSTAGRAM_SVG from '../../assets/instagram.svg'
+import LINKEDIN_SVG from '../../assets/linkedin.svg'
 
 export default {
   style: {
@@ -61,29 +61,32 @@ export default {
       proto: Block,
       props: {
         flexAlign: 'center flex-start',
-        gap: 'A'
+        gap: 'B'
       },
       childProto: {
-        proto: [Link],
+        proto: [Link, Block],
+        // style: { border: '1px solid red' },
         icon: {
-          proto: [Img, Block],
-          props: { boxSize: 'B1 B1' }
-        },
-        props: {
-          boxSize: 'B1 B1'
+          proto: [SVG, Block],
+          props: { boxSize: 'B1 B1' },
+          style: {
+            opacity: '.75'
+          }
         }
       },
       ...[
         {
           props: { href: `https://www.facebook.com/laninaresidence` },
-          icon: { props: { src: FACEBOOK_PNG } }
+          icon: { src: FACEBOOK_SVG }
         },
         {
-          icon: { props: { src: LINKEDIN_PNG } }
+          icon: { src: LINKEDIN_SVG }
         },
         {
           props: { href: 'https://www.instagram.com/laninaresidence/' },
-          icon: { props: { src: INSTAGRAM_PNG } }
+          icon: {
+            src: INSTAGRAM_SVG
+          }
         }
       ]
     }

@@ -27,7 +27,7 @@ const serviceItem = {
     h5: {
       proto: Text,
       style: {
-        color: '#BDB171',
+        color: 'rgba(165, 125, 2, .5)',
         letterSpacing: '2px'
       }
     },

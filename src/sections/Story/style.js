@@ -12,12 +12,15 @@ export const styleParagraph = {
   background: 'rgba(206, 197, 177, 1)',
   height: '100%',
   h6: {
-    color: '#BDB171',
+    // color: '#BDB171',
+    // color: 'rgba(213, 176, 56, 1)',
+    // color: 'rgba(205, 153, 0, 1)',
+    color: 'rgba(165, 125, 2, .5)',
     letterSpacing: `${2 / 16}em`,
     fontSize: `${22 / 16}em`
   },
   p: {
-    color: 'rgba(0, 0, 0, .6)',
+    color: 'rgba(0, 0, 0, .4)',
     fontSize: `${18 / 16}em`,
     lineHeight: `${30 / 18}em`
   }
@@ -59,11 +62,12 @@ export const styleCityParagraph = {
 
 }
 export default {
-  h4: {
+  '> a': {
     textAlign: 'center',
     color: 'rgba(0, 0, 0, .55)',
     letterSpacing: '10px',
-    fontWeight: '500'
+    fontWeight: '500',
+    display: 'block',
+    fontSize: `${28 / 16}em`
   }
-
 }
