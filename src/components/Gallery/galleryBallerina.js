@@ -2,12 +2,12 @@
 
 import Gallery from './gallery'
 
-import LIVING_ROOM_JPG from '../../assets/images/ballerina/livingroom.jpg'
-import LIVING_ROOM2_JPG from '../../assets/images/ballerina/livingroom2.jpg'
-import BED_ROOM_JPG from '../../assets/images/ballerina/bedroom.jpg'
+import LIVINGROOM_JPG from '../../assets/images/ballerina/livingroom.jpg'
+import LIVINGROOM2_JPG from '../../assets/images/ballerina/livingroom2.jpg'
+import BEDROOM_JPG from '../../assets/images/ballerina/bedroom.jpg'
 import MEAMA_JPG from '../../assets/images/ballerina/meama.jpg'
 import HALL_JPG from '../../assets/images/ballerina/hall.jpg'
-import BATH_ROOM_JPG from '../../assets/images/ballerina/bathroom.jpg'
+import BATHROOM_JPG from '../../assets/images/ballerina/bathroom.jpg'
 
 const images = [
   { text: 'ballerina1', style: { } },
