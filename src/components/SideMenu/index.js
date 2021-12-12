@@ -18,8 +18,9 @@ export default {
     left: '-500px',
     background: 'rgba(0, 0, 0, .95)',
     transition: 'all .5s ease-in-out',
-    width: '500px',
+    width: '300px',
     height: '600px'
+    // zIndex: '50'
 
   },
   nav: {
@@ -28,14 +29,14 @@ export default {
       flexFlow: 'column',
       gap: 'B'
     },
-    style: {
-
-    },
     childProto: {
       proto: [Link, Text],
       props: {
         size: 'B'
       },
+      // attr: {
+      //   tabIndex: '1'
+      // },
       style: {
         textTransform: 'uppercase',
         fontFamily: 'Gilda Display',
@@ -43,29 +44,40 @@ export default {
         textDecoration: 'none',
         color: '#F3E7DB',
         cursor: 'pointer',
-        opacity: '.7',
+        opacity: '1',
+        // '&[tabindex]:focus': { color: 'red' },
         '&:hover': {
           opacity: 1
         },
-        '&:focus': { opacity: 1 }
+        '&:active': { color: 'red' }
+        // '&:focus': { color: 'red' }
 
       }
     },
     ...[
       {
-        props: { text: 'story' }
-      },
-      {
         props: {
-          text: 'apartment',
+          text: 'story',
           href: '#story'
         }
       },
       {
-        props: { text: 'services' }
+        props: {
+          text: 'apartment',
+          href: '#apartments'
+        }
       },
       {
-        props: { text: 'contact' }
+        props: {
+          text: 'services',
+          href: '#services'
+        }
+      },
+      {
+        props: {
+          text: 'contact',
+          href: '#contact'
+        }
       },
       {
         props: { text: 'We are' }
@@ -104,9 +116,21 @@ export default {
       }
     },
     ...[
-      { icon: { src: FACEBOOK_SVG } },
+      {
+        icon: { src: FACEBOOK_SVG },
+        props: {
+          href: `https://www.facebook.com/laninaresidence`,
+          target: '_blank'
+        }
+      },
       { icon: { src: LINKEDIN_SVG } },
-      { icon: { src: INSTAGRAM_SVG } }
+      {
+        icon: { src: INSTAGRAM_SVG },
+        props: {
+          href: 'https://www.instagram.com/laninaresidence/',
+          target: '_blank'
+        }
+      }
     ]
 
   }

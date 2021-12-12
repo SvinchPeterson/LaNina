@@ -11,6 +11,11 @@ export const fadeUp = keyframes`
     transform: scale(1);
   }
 `
+// export const opacity = keyframes`
+// from {
+//   opacity: 0
+// },
+// `
 export const fadeUp2 = keyframes`
   from {
     opacity: 0;
@@ -64,6 +69,14 @@ export const movingDown = keyframes`
   to {
     top: 0;
   }
+`
+export const movingLeft = keyframes`
+from {
+  left: 0;
+},
+to {
+  left: 100%;
+}
 `
 
 export const filter = keyframes`

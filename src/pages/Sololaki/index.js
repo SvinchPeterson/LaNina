@@ -47,31 +47,31 @@ export default {
   Story,
   Apartment,
   Services,
-  Contact,
+  Contact
 
-  gela: {
-    proto: Text,
-    state: {
-      text: 'gocha',
-      color: 'red',
-      style: {
-        color: 'red',
-        fontSize: '50px',
-        cursor: 'pointer',
-        textAlign: 'center'
-      }
-    },
-    text: (el, s) => s.text,
-    style: (el, s) => s.style,
-    on: {
-      click: (ev, el, s) => {
-        s.update({ text: 'gela', style: { color: 'blue' } })
-      }
-    }
-    // style: {
-    //   fontSize: '50px',
-    //   textAlign: 'center',
-    //   cursor: 'pointer'
-    // }
-  }
+  // gela: {
+  //   proto: Text,
+  //   state: {
+  //     text: 'gocha',
+  //     color: 'red',
+  //     style: {
+  //       color: 'red',
+  //       fontSize: '50px',
+  //       cursor: 'pointer',
+  //       textAlign: 'center'
+  //     }
+  //   },
+  //   text: (el, s) => s.text,
+  //   style: (el, s) => s.style,
+  //   on: {
+  //     click: (ev, el, s) => {
+  //       s.update({ text: 'gela', style: { color: 'blue' } })
+  //     }
+  //   }
+  //   // style: {
+  //   //   fontSize: '50px',
+  //   //   textAlign: 'center',
+  //   //   cursor: 'pointer'
+  //   // }
+  // }
 }

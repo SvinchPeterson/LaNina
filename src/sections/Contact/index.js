@@ -21,7 +21,14 @@ export default {
       text: 'Contact',
       padding: '0 0 C 0'
     },
-    style: { letterSpacing: '6px', fontWeight: '500' }
+    attr: {
+      id: 'contact'
+    },
+    style: {
+      letterSpacing: '6px',
+      fontWeight: '500',
+      display: 'block'
+    }
   },
   contact: {
     proto: Block,

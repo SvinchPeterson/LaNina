@@ -10,8 +10,8 @@ export default {
   tag: 'article',
   proto: Block,
   style,
-  heading: {
-    proto: [Block, Text, Link],
+  h4: {
+    proto: [Block, Text],
     props: {
       text: 'Story',
       padding: 'E 0 C 0'
@@ -46,7 +46,7 @@ export default {
         p: {
           proto: Text,
           style: {
-            fontFamily: 'Alice'
+            fontFamily: 'Bellefair'
             // color: 'rgba(0, 0, 0, .2)'
           }
         }

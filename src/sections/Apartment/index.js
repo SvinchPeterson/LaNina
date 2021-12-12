@@ -1,8 +1,25 @@
 'use strict'
-import { Block, Text, Link, Button, Flex } from '@rackai/symbols'
+import { Block, Text, Link, Button, Flex, Img } from '@rackai/symbols'
 
-import { Rooms } from '../../components'
+import { roomTabBallerina, roomTabRedBrick, roomTabYellowCouch } from '../../components/RoomTabs'
+import Room from './room'
+
 import style from './style'
+
+const roomIcon = {
+  proto: Img,
+  style: {
+    width: '30px',
+    height: '30px',
+    padding: '14px',
+    background: 'rgba(189, 177, 113, .6)',
+    // background: 'rgba(255, 255, 255, .2)',
+    // border: '2px solid rgba(189, 177, 113, .6)',
+    position: 'absolute',
+    opacity: 0,
+    transition: 'all .3s ease-in-out'
+  }
+}
 
 export default {
   tag: 'section',
@@ -12,100 +29,69 @@ export default {
     props: {
       text: 'Apartments',
       padding: 'E 0 C 0'
+    },
+    attr: { id: 'apartments' },
+    style: {
+      display: 'block'
     }
   },
   content: {
-    Rooms
+    tag: 'section',
 
+    input: {
+      attr: {
+        type: 'radio',
+        value: 'tab-ballerina',
+        id: 'tab-ballerina',
+        name: 'action'
+      }
+    },
+    label: {
+      proto: roomTabBallerina,
+      attr: { for: 'tab-ballerina' }
+    },
+    article: {
+      proto: Room
+      // style: { background: 'yellow' }
+    },
+
+    input2: {
+      tag: 'input',
+      attr: {
+        type: 'radio',
+        value: 'tab-redBrick',
+        id: 'tab-redBrick',
+        name: 'action'
+      }
+    },
+    label2: {
+      proto: roomTabRedBrick,
+      attr: { for: 'tab-redBrick' }
+    },
+    article2: {
+      tag: 'article',
+      style: { background: 'blue' }
+    },
+
+    input3: {
+      tag: 'input',
+      attr: {
+        type: 'radio',
+        value: 'tab-yellowCouch',
+        id: 'tab-yellowCouch',
+        name: 'action'
+      }
+    },
+    label3: {
+      proto: roomTabYellowCouch,
+      attr: { for: 'tab-yellowCouch' }
+    },
+    article3: {
+      tag: 'article',
+      attr: {
+        id: 'tab-yellowCouch'
+      },
+      style: { background: 'red' }
+    }
   }
-
-  // content: {
-  //   tag: 'form',
-  //   proto: Block,
-  //   props: {
-  //     padding: 'D 0',
-  //     flexFlow: 'column',
-  //     gap: 'E'
-
-  //   },
-  //   style: {
-  //     background: 'radial-gradient(rgba(98, 73, 62, .8), rgba(98, 73, 62, 1) )',
-  //     '#ballerina:checked ~ article': { display: 'flex' },
-  //     '#redBrick:checked ~ article': { display: 'flex' }
-  //     // 'input[value="ballerina"] ~ #ballerina:checked ~ article': { display: 'flex' }
-  //     // 'input[value="ballerina"]:checked ~ #ballerina ~ article': { display: 'flex' }
-  //   },
-  //   rooms: {
-  //     style: {
-  //       display: 'flex',
-  //       position: 'relative'
-  //     },
-  //     roomOne: {
-  //       radio: {
-  //         tag: 'input',
-  //         attr: {
-  //           type: 'radio',
-  //           name: 'action',
-  //           id: 'ballerina'
-  //         }
-  //       },
-  //       room1,
-  //       apartment: {
-  //         tag: 'article',
-  //         style: {
-  //           display: 'none',
-  //           position: 'absolute',
-  //           width: '100%'
-  //         },
-  //         proto: ballerina,
-  //         props: {
-  //           flexAlign: 'flex-start flex-start',
-  //           gap: 'D'
-  //         }
-  //       }
-  //     },
-  //     roomTwo: {
-  //       radio: {
-  //         tag: 'input',
-  //         attr: {
-  //           type: 'radio',
-  //           name: 'action',
-  //           id: 'redBrick'
-  //         }
-  //       },
-  //       room2,
-  //       apartment: {
-  //         tag: 'article',
-  //         style: { display: 'none' },
-  //         proto: ballerina,
-  //         props: {
-  //           flexAlign: 'flex-start flex-start',
-  //           gap: 'D'
-  //         }
-  //       }
-  //     },
-  //     roomThree: {
-  //       radio: {
-  //         tag: 'input',
-  //         attr: {
-  //           type: 'radio',
-  //           name: 'action',
-  //           id: 'yellowCouch'
-  //         }
-  //       },
-  //       room3,
-  //       apartment: {
-  //         tag: 'article',
-  //         style: { display: 'none' },
-  //         proto: Block,
-  //         props: {
-  //           flexAlign: 'flex-start flex-start',
-  //           gap: 'D'
-  //         },
-  //         RoomDescription,
-  //         Gallery
-  //       }
-  //     }
-  //   }
-  // }
 }

@@ -12,6 +12,10 @@ import Heavy from '../assets/fonts/5c57b2e2-f641-421e-a95f-65fcb47e409a.woff2'
 import Times from '../assets/fonts/Times-Roman.woff2'
 import gilda from '../assets/fonts/GildaDisplay-Regular.woff2'
 import Alice from '../assets/fonts/Alice-Regular.woff2'
+import HinaMincho from '../assets/fonts/HinaMincho-Regular.woff'
+import CormorantGaramond from '../assets/fonts/CormorantGaramond-Regular.woff'
+import Marcellus from '../assets/fonts/Marcellus-Regular.ttf'
+import Bellefair from '../assets/fonts/Bellefair-Regular.woff2'
 
 const RegisterFont = set('font', {
   name: 'Avenir Next',
@@ -46,6 +50,18 @@ const RegisterFont = set('font', {
 }, {
   name: 'Alice',
   url: Alice
+}, {
+  name: 'Hina Mincho',
+  url: HinaMincho
+}, {
+  name: 'Cormorant Garamond',
+  url: CormorantGaramond
+}, {
+  name: 'Marcellus',
+  url: Marcellus
+}, {
+  name: 'Bellefair',
+  url: Bellefair
 })
 
 const FontFace = getFontFace(RegisterFont)

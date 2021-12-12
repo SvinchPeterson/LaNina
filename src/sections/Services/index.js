@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Img, Text, Flex, Grid } from '@rackai/symbols'
+import { Block, Img, Text, Flex, Grid, Link } from '@rackai/symbols'
 
 import LAUNDRY_PNG from '../../assets/laundry.png'
 import CLEAN_PNG from '../../assets/clean.png'
@@ -44,6 +44,7 @@ const serviceItem = {
 }
 
 export default {
+  proto: Block,
   style: {
     paddingBottom: `${100 / 16}em`
   },
@@ -53,6 +54,7 @@ export default {
       text: 'Services',
       padding: 'E 0 C 0'
     },
+    attr: { id: 'services' },
     style: {
       textAlign: 'center',
       color: 'rgba(0, 0, 0, .55)',

@@ -21,8 +21,8 @@ export const styleParagraph = {
   },
   p: {
     color: 'rgba(0, 0, 0, .4)',
-    fontSize: `${18 / 16}em`,
-    lineHeight: `${30 / 18}em`
+    fontSize: `${20 / 16}em`,
+    lineHeight: `${30 / 20}em`
   }
 }
 
@@ -62,12 +62,10 @@ export const styleCityParagraph = {
 
 }
 export default {
-  '> a': {
+  h4: {
     textAlign: 'center',
     color: 'rgba(0, 0, 0, .55)',
     letterSpacing: '10px',
-    fontWeight: '500',
-    display: 'block',
-    fontSize: `${28 / 16}em`
+    fontWeight: '500'
   }
 }

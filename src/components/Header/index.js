@@ -113,6 +113,7 @@ export default {
     alignItems: 'center',
     fontFamily: 'Avenir Next',
     boxSizing: 'border-box',
+    mixBlendMode: 'difference',
     'input ~ label': {
       // background: 'red'
     },
@@ -170,7 +171,10 @@ export default {
       alignItems: 'center'
     },
     childProto: {
-      proto: Block
+      proto: Block,
+      style: {
+        mixBlendMode: 'difference !important'
+      }
     },
     ...[
       { proto: langLinks },
