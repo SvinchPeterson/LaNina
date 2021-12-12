@@ -1,7 +1,12 @@
 'use strict'
 
 import { galleryBallerina } from './galleryBallerina'
+import { galleryRedBrick } from './galleryRedBrick'
+import { galleryYellowCouch } from './galleryYellowCouch'
 
 export {
-  galleryBallerina
+  galleryBallerina,
+  galleryRedBrick,
+  galleryYellowCouch
+
 }

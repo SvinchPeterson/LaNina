@@ -1,9 +1,8 @@
 'use strict'
-
 import Gallery from './gallery'
 
 const images = [
-  { text: 'ballerina1', style: { } },
+  { text: 'yellowCouch1', style: { } },
   { text: 'two', style: { } },
   { text: 'three', style: { } },
   { text: 'four', style: { } },
@@ -15,7 +14,7 @@ const images = [
   { text: 'ten', style: { } }
 ]
 
-export const galleryBallerina = {
+export const galleryYellowCouch = {
   proto: Gallery,
   state: {},
   images: {

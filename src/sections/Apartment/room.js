@@ -2,7 +2,7 @@
 import { Block, Text, Link, Button, Flex, Img } from '@rackai/symbols'
 import BALLERINA_JPG from '../../assets/images/ballerina.jpg'
 
-import { RoomDescription, galleryBallerina } from '../../components'
+import { RoomDescription, galleryBallerina, galleryRedBrick, galleryYellowCouch } from '../../components'
 
 const Room = {
   tag: 'article',
@@ -41,12 +41,27 @@ const Room = {
   //     cursor: 'pointer'
   //   }
   // },
-  gallery: {
-    proto: galleryBallerina
-  }
+  gallery: {}
 
 }
 
 export const roomLanina = {
-  proto: Room
+  proto: Room,
+  gallery: {
+    proto: galleryBallerina
+  }
+}
+
+export const roomRedBrick = {
+  proto: Room,
+  gallery: {
+    proto: galleryRedBrick
+  }
+}
+
+export const roomYellowCouch = {
+  proto: Room,
+  gallery: {
+    proto: galleryYellowCouch
+  }
 }
