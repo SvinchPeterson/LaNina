@@ -1,6 +1,5 @@
 'use strict'
 import { Block, Text, Link, Button, Flex, Img } from '@rackai/symbols'
-import BALLERINA_JPG from '../../assets/images/ballerina.jpg'
 
 import { RoomDescription, galleryBallerina, galleryRedBrick, galleryYellowCouch } from '../../components'
 

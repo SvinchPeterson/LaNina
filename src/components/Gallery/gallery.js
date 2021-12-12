@@ -2,8 +2,6 @@
 
 import { Block } from '@rackai/symbols'
 
-import BALLERINA_GALLERY_JPG from '../../assets/images/ballerina/ballerina.jpg'
-
 const images = [
   { text: 'one', style: { } },
   { text: 'two', style: { } },
