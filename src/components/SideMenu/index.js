@@ -18,7 +18,7 @@ export default {
     left: '-500px',
     background: 'rgba(0, 0, 0, .95)',
     transition: 'all .5s ease-in-out',
-    width: '300px',
+    width: 'fit-content',
     height: '600px'
     // zIndex: '50'
 
@@ -44,12 +44,12 @@ export default {
         textDecoration: 'none',
         color: '#F3E7DB',
         cursor: 'pointer',
-        opacity: '1',
+        opacity: '.85',
         // '&[tabindex]:focus': { color: 'red' },
         '&:hover': {
-          opacity: 1
-        },
-        '&:active': { color: 'red' }
+          opacity: 1,
+          fontWeight: '600'
+        }
         // '&:focus': { color: 'red' }
 
       }

@@ -2,9 +2,9 @@
 import { Block, Text, Link, Button, Flex, Img } from '@rackai/symbols'
 import BALLERINA_JPG from '../../assets/images/ballerina.jpg'
 
-import { RoomDescription, Gallery } from '../../components'
+import { RoomDescription, galleryBallerina } from '../../components'
 
-export default {
+const Room = {
   tag: 'article',
   proto: [Block, Flex],
   props: {
@@ -42,6 +42,11 @@ export default {
   //   }
   // },
   gallery: {
-    proto: Gallery
+    proto: galleryBallerina
   }
+
+}
+
+export const roomLanina = {
+  proto: Room
 }

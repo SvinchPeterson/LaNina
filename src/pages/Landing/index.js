@@ -1,7 +1,7 @@
 'use strict'
 import { Block, Img, Flex, Link, Text } from '@rackai/symbols'
 
-import { movingDown, movingUp, filter, fadeUp } from '../../animations'
+import { movingDown, movingUp, fadeUp } from '../../animations'
 
 import { LocationHeading, LaninaBanner } from '../../components'
 import style, { stylePageLink } from './style'

@@ -5,8 +5,8 @@ import LaninaBanner from './LaninaBanner'
 import Header from './Header'
 import Rooms from './RoomTabs'
 import RoomDescription from './RoomDescription'
-import Gallery from './Gallery'
 import SideMenu from './SideMenu'
+import { galleryBallerina } from './Gallery'
 
 export {
   LaninaHeading,
@@ -15,6 +15,7 @@ export {
   Header,
   Rooms,
   RoomDescription,
-  Gallery,
-  SideMenu
+  SideMenu,
+  galleryBallerina
+
 }

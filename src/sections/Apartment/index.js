@@ -2,7 +2,7 @@
 import { Block, Text, Link, Button, Flex, Img } from '@rackai/symbols'
 
 import { roomTabBallerina, roomTabRedBrick, roomTabYellowCouch } from '../../components/RoomTabs'
-import Room from './room'
+import { roomLanina } from './room'
 
 import style from './style'
 
@@ -51,8 +51,7 @@ export default {
       attr: { for: 'tab-ballerina' }
     },
     article: {
-      proto: Room
-      // style: { background: 'yellow' }
+      proto: roomLanina
     },
 
     input2: {

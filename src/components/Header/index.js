@@ -121,7 +121,7 @@ export default {
     //   background: 'red'
     // },
     '#toggle:checked ~ aside': {
-      left: 0
+      left: '100px'
     },
     '#toggle:checked ~ label > div:last-child': {
       transition: 'all .4s ease-in-out',
