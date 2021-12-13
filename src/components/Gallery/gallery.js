@@ -21,8 +21,8 @@ export const images = [
 
 export default {
   style: {
-    position: 'relative',
-    background: 'radial-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9))'
+    position: 'relative'
+    // background: 'radial-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9))'
   },
   state: {
     activeImage: 0
@@ -41,7 +41,7 @@ export default {
   rightArrow: {
     tag: 'button',
     style: {
-      right: '0px'
+      right: '30px'
     },
     icon: {
       proto: Img,
@@ -62,7 +62,7 @@ export default {
   leftArrow: {
     tag: 'button',
     style: {
-      left: '0px'
+      left: '30px'
     },
     icon: {
       proto: Img,

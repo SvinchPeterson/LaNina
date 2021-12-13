@@ -8,6 +8,8 @@ import YELLOW_COACH_JPG from '../../assets/images/yellowCouch/yellowCouchCover.j
 import BALLERINA_ICON from '../../assets/ballerina.png'
 import BRICK_ICON from '../../assets/bricks.png'
 import COUCH_ICON from '../../assets/couch.png'
+import LIVINGROOM_JPG from '../../assets/images/yellowCouch/livingroom.jpg'
+import REDBRICK_JPG from '../../assets/images/redBrick/livingroom.jpg'
 
 const roomIcon = {
   proto: Img,
@@ -38,6 +40,9 @@ export const roomTab = {
     position: 'relative',
     transition: 'all .3s ease-in-out',
     '&:hover': {
+      '> div': {
+        filter: 'grayscale(100%) brightness(70%)'
+      }
       // boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
       // '> img:last-child': { opacity: 1 },
       // '> img:first-child': {
@@ -47,19 +52,20 @@ export const roomTab = {
       // }
     }
   },
-  img: {
-    proto: Img,
+  roomImage: {
+    // proto: Img,
     style: {
       width: '100%',
       height: '100%',
-      objectFit: 'cover',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
       filter: 'grayscale(100%) brightness(50%)',
       transition: 'all .3s ease-in-out',
       boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, .4)'
     }
   },
   icon: { proto: roomIcon }
-
 }
 
 export const roomTabBallerina = {
@@ -67,21 +73,27 @@ export const roomTabBallerina = {
   attr: { for: 'tab-ballerina' },
   style: { justifySelf: 'end' },
 
-  img: { props: { src: BALLERINA_JPG } },
+  roomImage: {
+    style: { backgroundImage: 'url(' + BALLERINA_JPG + ')' }
+  },
   icon: { props: { src: BALLERINA_ICON } }
 }
 
 export const roomTabRedBrick = {
   proto: roomTab,
   style: { justifySelf: 'center' },
-  img: { props: { src: RED_BRICK_JPG } },
+  roomImage: {
+    style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' }
+  },
   icon: { props: { src: BRICK_ICON } }
 }
 
 export const roomTabYellowCouch = {
   proto: roomTab,
   style: { justifySelf: 'start' },
-  img: { props: { src: YELLOW_COACH_JPG } },
+  roomImage: {
+    style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' }
+  },
   icon: { props: { src: COUCH_ICON } }
 }
 

@@ -2,7 +2,7 @@
 import { displays } from '../../animations'
 
 export default {
-  border: '15px solid red',
+  // border: '15px solid red',
   h4: {
     textAlign: 'center',
     color: 'rgba(0, 0, 0, .55)',
@@ -14,12 +14,12 @@ export default {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
     position: 'relative',
-    border: '12px solid green',
+    // border: '12px solid green',
 
     input: {
       position: 'absolute',
       transform: 'translate(-50%, -50%)',
-      top: '900px',
+      top: '650px',
       opacity: 0
     },
 
@@ -28,17 +28,30 @@ export default {
       gridRowStart: 2,
       gridColumnEnd: 'span 3',
       marginTop: '100px',
-      display: 'none',
-      border: '10px solid yellow'
+      display: 'none'
+      // border: '10px solid yellow'
     },
 
     '> div > nav': {
-      border: '8px solid orange',
-      height: '100%',
       flex: 1,
+      display: 'flex',
+      justifyContent: 'center',
+      background: 'radial-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9))',
+      // boxShadow: 'inset 5px 10px 14px 12px rgba(0, 0, 0, .6)',
+      // border: '8px solid orange',
       overflow: 'hidden',
-      margin: '0 auto',
-      position: 'relative'
+      position: 'relative',
+      '&::before': {
+        content: '""',
+        width: '100%',
+        height: `${5 / 16}em`,
+        background: 'red',
+        position: 'absolute',
+        zIndex: '20',
+        top: 0,
+        left: 0,
+        boxShadow: 'inset 5px 10px 14px 12px rgba(0, 0, 0, .6)'
+      }
     },
     '> div > nav > button': {
       position: 'absolute',
@@ -52,36 +65,42 @@ export default {
     },
 
     '> div > nav > div': {
-      border: '6px solid blue',
-      height: '100%'
+      flex: '.9',
+      display: 'flex',
+      position: 'relative'
+      // boxShadow: 'inset 5px 10px 14px 12px red'
+      // border: '6px solid blue'
     },
 
     '> div > nav > div > span': {
+      // position: 'absolute',
+      // top: 0,
+      // left: 0,
+      minHeight: '100%',
+      flex: 1,
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
       backgroundPosition: 'center',
-      filter: 'grayscale(50%)',
-      boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .6)',
-      width: '100%',
-      height: '100%',
-      position: 'absolute',
-      top: 0,
-      left: 0
+      filter: 'grayscale(50%)'
+      // boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .6)'
     },
 
     'input:checked + label': {
       boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
-      '> img:last-child': { opacity: 1 },
-      '> img:first-child': {
-        transform: 'scale(.92)',
+      '> img': { opacity: 1 },
+      '> div': {
+        transform: 'scale(.9)',
         boxShadow: 'none',
-        filter: 'grayscale(100%) brightness(30%)'
+        filter: 'grayscale(100%) brightness(30%)',
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'contain'
+        // backgroundPosition: 'top'
       }
     },
 
     'input:checked + label + div': {
-      display: 'block'
+      display: 'flex'
     },
 
     'div > section': {
@@ -90,8 +109,8 @@ export default {
     },
     'input:checked + label + div > nav': {
       animationName: displays,
-      animationDuration: '2s',
-      transition: 'all 2s ease-in-out'
+      animationDuration: '1s',
+      transition: 'all 3s ease-in-out'
     }
 
   }

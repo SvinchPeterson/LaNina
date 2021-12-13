@@ -42,7 +42,11 @@ export default {
         id: 'tab-ballerina',
         name: 'action'
       },
-      style: { left: 0 }
+      style: {
+        '&:checked + label > div': {
+          backgroundPosition: '-350px'
+        }
+      }
     },
     label: {
       proto: roomTabBallerina,
@@ -60,7 +64,11 @@ export default {
         id: 'tab-redBrick',
         name: 'action'
       },
-      style: { left: '100px' }
+      style: {
+        '&:checked + label > div': {
+          backgroundPosition: '-50px'
+        }
+      }
     },
     label2: {
       proto: roomTabRedBrick,
@@ -77,7 +85,11 @@ export default {
         id: 'tab-yellowCouch',
         name: 'action'
       },
-      style: { left: '200px' }
+      style: {
+        '&:checked + label > div': {
+          backgroundPosition: '350px'
+        }
+      }
     },
     label3: {
       proto: roomTabYellowCouch,

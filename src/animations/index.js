@@ -13,11 +13,11 @@ export const fadeUp = keyframes`
 `
 export const displays = keyframes`
 from {
-  opacity: 0;
+  // opacity: 0;
   height: 0;
 }
 to {
-  opacity: 1;
+  // opacity: 1;
   height: 100%;
 }
 `

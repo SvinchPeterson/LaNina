@@ -9,7 +9,6 @@ import KITCHEN_JPG from '../../assets/images/redBrick/kitchen.jpg'
 import LIVINGROOM_JPG from '../../assets/images/redBrick/livingroom.jpg'
 import TORSHER_JPG from '../../assets/images/redBrick/torsher.jpg'
 import WINE_GLASS_JPG from '../../assets/images/redBrick/wine-glass.jpg'
-
 const images = [
   { style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' } },
   { style: { backgroundImage: 'url(' + APARTMENT_JPG + ')' } },
