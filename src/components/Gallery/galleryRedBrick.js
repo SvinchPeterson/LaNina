@@ -1,4 +1,5 @@
 'use strict'
+import { Img } from '@rackai/symbols'
 
 import Gallery from './gallery'
 
@@ -10,22 +11,52 @@ import TORSHER_JPG from '../../assets/images/redBrick/torsher.jpg'
 import WINE_GLASS_JPG from '../../assets/images/redBrick/wine-glass.jpg'
 
 const images = [
-  { text: 'redBrick1', style: { } },
-  { text: 'two', style: { } },
-  { text: 'three', style: { } },
-  { text: 'four', style: { } },
-  { text: 'five', style: { } },
-  { text: 'six', style: { } },
-  { text: 'seven', style: { } },
-  { text: 'eight', style: { } },
-  { text: 'nine', style: { } },
-  { text: 'ten', style: { } }
+  { style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + APARTMENT_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + BEDROOM_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + KITCHEN_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + TORSHER_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + WINE_GLASS_JPG + ')' } }
 ]
+// const images = [
+//   { proto: Img, props: { src: APARTMENT_JPG } },
+//   { proto: Img, props: { src: BEDROOM_JPG } },
+//   { proto: Img, props: { src: KITCHEN_JPG } },
+//   { proto: Img, props: { src: LIVINGROOM_JPG } },
+//   { proto: Img, props: { src: TORSHER_JPG } },
+//   { proto: Img, props: { src: WINE_GLASS_JPG } }
+// ]
 
 export const galleryRedBrick = {
   proto: Gallery,
   state: {},
   images: {
     ...images
+  },
+  rightArrow: {
+    on: {
+      click: (event, element, state) => {
+        console.log(event)
+        console.log(element)
+        console.log(state)
+        const { activeImage } = state
+        state.update({
+          activeImage: activeImage > (images.length - 2) ? 0 : activeImage + 1
+        })
+      }
+    }
+  },
+  leftArrow: {
+    on: {
+      click: (event, element, state) => {
+        console.log(event)
+        console.log(element)
+        console.log(state)
+        const { activeImage } = state
+        state.update({
+          activeImage: activeImage < 1 ? (images.length - 1) : activeImage - 1
+        })
+      }
+    }
   }
 }

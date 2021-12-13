@@ -168,7 +168,8 @@ export default {
     style: {
       flex: 1,
       justifyContent: 'flex-end',
-      alignItems: 'center'
+      alignItems: 'center',
+      height: 0
     },
     childProto: {
       proto: Block,

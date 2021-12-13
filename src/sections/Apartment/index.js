@@ -44,7 +44,8 @@ export default {
         value: 'tab-ballerina',
         id: 'tab-ballerina',
         name: 'action'
-      }
+      },
+      style: { left: 0 }
     },
     label: {
       proto: roomTabBallerina,
@@ -58,10 +59,11 @@ export default {
       tag: 'input',
       attr: {
         type: 'radio',
-        value: 'tab-redBrick',
+        // value: 'tab-redBrick',
         id: 'tab-redBrick',
         name: 'action'
-      }
+      },
+      style: { left: '100px' }
     },
     label2: {
       proto: roomTabRedBrick,
@@ -76,10 +78,11 @@ export default {
       tag: 'input',
       attr: {
         type: 'radio',
-        value: 'tab-yellowCouch',
+        // value: 'tab-yellowCouch',
         id: 'tab-yellowCouch',
         name: 'action'
-      }
+      },
+      style: { left: '200px' }
     },
     label3: {
       proto: roomTabYellowCouch,

@@ -11,15 +11,28 @@ export const fadeUp = keyframes`
     transform: scale(1);
   }
 `
-// export const opacity = keyframes`
-// from {
-//   opacity: 0
-// },
-// `
+export const displays = keyframes`
+from {
+  opacity: 0;
+  height: 0;
+}
+to {
+  opacity: 1;
+  height: 100%;
+}
+`
+export const positions = keyframes`
+from {
+  top: 0;
+}
+to {
+  top: 800px;
+}
+`
 export const fadeUp2 = keyframes`
   from {
     opacity: 0;
-    transform: scale(.7)
+    transform: scale(.7);
   }
   to {
     opacity: 1;

@@ -1,6 +1,6 @@
 'use strict'
 
-import Gallery from './gallery'
+import Gallery, {} from './gallery'
 
 import LIVINGROOM_JPG from '../../assets/images/ballerina/livingroom.jpg'
 import LIVINGROOM2_JPG from '../../assets/images/ballerina/livingroom2.jpg'
@@ -10,16 +10,12 @@ import HALL_JPG from '../../assets/images/ballerina/hall.jpg'
 import BATHROOM_JPG from '../../assets/images/ballerina/bathroom.jpg'
 
 const images = [
-  { text: 'ballerina1', style: { } },
-  { text: 'two', style: { } },
-  { text: 'three', style: { } },
-  { text: 'four', style: { } },
-  { text: 'five', style: { } },
-  { text: 'six', style: { } },
-  { text: 'seven', style: { } },
-  { text: 'eight', style: { } },
-  { text: 'nine', style: { } },
-  { text: 'ten', style: { } }
+  { style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + BEDROOM_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + MEAMA_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + HALL_JPG + ')' } },
+  { style: { backgroundImage: 'url(' + BATHROOM_JPG + ')' } }
 ]
 
 export const galleryBallerina = {
@@ -27,5 +23,31 @@ export const galleryBallerina = {
   state: {},
   images: {
     ...images
+  },
+  rightArrow: {
+    on: {
+      click: (event, element, state) => {
+        console.log(event)
+        console.log(element)
+        console.log(state)
+        const { activeImage } = state
+        state.update({
+          activeImage: activeImage > (images.length - 2) ? 0 : activeImage + 1
+        })
+      }
+    }
+  },
+  leftArrow: {
+    on: {
+      click: (event, element, state) => {
+        console.log(event)
+        console.log(element)
+        console.log(state)
+        const { activeImage } = state
+        state.update({
+          activeImage: activeImage < 1 ? (images.length - 1) : activeImage - 1
+        })
+      }
+    }
   }
 }

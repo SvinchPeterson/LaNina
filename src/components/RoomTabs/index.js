@@ -37,7 +37,6 @@ export const roomTab = {
     justifyContent: 'center',
     position: 'relative',
     transition: 'all .3s ease-in-out',
-    justifySelf: 'center',
     '&:hover': {
       // boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
       // '> img:last-child': { opacity: 1 },
@@ -66,18 +65,22 @@ export const roomTab = {
 export const roomTabBallerina = {
   proto: roomTab,
   attr: { for: 'tab-ballerina' },
+  style: { justifySelf: 'end' },
+
   img: { props: { src: BALLERINA_JPG } },
   icon: { props: { src: BALLERINA_ICON } }
 }
 
 export const roomTabRedBrick = {
   proto: roomTab,
+  style: { justifySelf: 'center' },
   img: { props: { src: RED_BRICK_JPG } },
   icon: { props: { src: BRICK_ICON } }
 }
 
 export const roomTabYellowCouch = {
   proto: roomTab,
+  style: { justifySelf: 'start' },
   img: { props: { src: YELLOW_COACH_JPG } },
   icon: { props: { src: COUCH_ICON } }
 }
@@ -176,6 +179,7 @@ export default {
   },
   ...[
     {
+      style: { justifySelf: 'end' },
       img: { props: { src: BALLERINA_JPG } },
       icon: { props: { src: BALLERINA_ICON } }
 

@@ -1,7 +1,8 @@
 'use strict'
+import { displays, positions } from '../../animations'
 
 export default {
-  position: 'relative',
+  // position: 'relative',
   h4: {
     textAlign: 'center',
     color: 'rgba(0, 0, 0, .55)',
@@ -13,20 +14,14 @@ export default {
     margin: '25px 0',
     justifyContent: 'center',
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 320px)',
+    gridTemplateColumns: 'repeat(3, 1fr)',
     flexWrap: 'wrap',
-    gap: '50px',
     position: 'relative',
-
     input: {
       position: 'absolute',
-      // bottom: '-200px',
-      display: 'none',
-      transform: 'translate(-50%, -50%)'
-      // top: '70%',
-      // left: '50%'
-
-      // left: 0
+      transform: 'translate(-50%, -50%)',
+      top: '850px',
+      opacity: 0
     },
 
     'input:checked + label': {
@@ -38,15 +33,27 @@ export default {
         filter: 'grayscale(100%) brightness(30%)'
       }
     },
+
     'input:checked + label + article': {
-      display: 'flex'
+      display: 'block'
     },
     article: {
-      height: '800px',
+      height: '750px',
       width: '100%',
       gridRowStart: 2,
       gridColumnEnd: 'span 3',
+      marginTop: '100px',
       display: 'none'
+    },
+    'article > section': {
+      transition: 'all 2s ease-in-out',
+      position: 'relative'
+      // opacity: 0
+    },
+    'input:checked + label + article > section': {
+      animationName: displays,
+      animationDuration: '2s',
+      transition: 'all 2s ease-in-out'
     }
 
   }
