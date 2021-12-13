@@ -85,112 +85,112 @@ export const roomTabYellowCouch = {
   icon: { props: { src: COUCH_ICON } }
 }
 
-export default {
-  proto: [Block, Flex],
-  props: {
-    gap: 'D'
-  },
-  style: {
-    justifyContent: 'center'
-  },
+// export default {
+//   proto: [Block, Flex],
+//   props: {
+//     gap: 'D'
+//   },
+//   style: {
+//     justifyContent: 'center'
+//   },
 
-  childProto: {
-    tag: 'label'
-    // proto: tab
-    // state: {
-    //   style: {
-    //     width: `${320 / 16}em`,
-    //     height: `${400 / 16}em`,
-    //     backgroundSize: 'cover',
-    //     cursor: 'pointer',
-    //     display: 'flex',
-    //     alignItems: 'center',
-    //     justifyContent: 'center',
-    //     position: 'relative',
-    //     transition: 'all .3s ease-in-out'
-    //     // '&:hover': {
-    //     //   boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
-    //     //   '> img:last-child': { opacity: 1 },
-    //     //   '> img:first-child': {
-    //     //     transform: 'scale(.92)',
-    //     //     boxShadow: 'none',
-    //     //     filter: 'grayscale(100%) brightness(30%)'
-    //     //   }
-    //     // }
-    //   }
-    // },
-    // style: (el, s) => s.style,
-    // // on: {
-    // //   click: (ev, el, s) => {
-    // //     s.update({
-    // //       // text: 'gela',
-    // //       style: {
-    // //         boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
-    // //         '> img:last-child': { opacity: 1 },
-    // //         '> img:first-child': {
-    // //           transform: 'scale(.92)',
-    // //           boxShadow: 'none',
-    // //           filter: 'grayscale(100%) brightness(30%)'
-    // //         }
-    // //       }
-    // //     })
-    // //   }
-    // // },
-    // // style: {
-    // //   width: `${320 / 16}em`,
-    // //   height: `${400 / 16}em`,
-    // //   backgroundSize: 'cover',
-    // //   cursor: 'pointer',
-    // //   display: 'flex',
-    // //   alignItems: 'center',
-    // //   justifyContent: 'center',
-    // //   position: 'relative',
-    // //   transition: 'all .3s ease-in-out'
-    // // '&:hover': {
-    // //   boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
-    // //   '> img:last-child': { opacity: 1 },
-    // //   '> img:first-child': {
-    // //     transform: 'scale(.92)',
-    // //     boxShadow: 'none',
-    // //     filter: 'grayscale(100%) brightness(30%)'
-    // //   }
-    // // }
-    // // },
-    // img: {
-    //   proto: Img,
-    //   style: {
-    //     width: '100%',
-    //     height: '100%',
-    //     objectFit: 'cover',
-    //     filter: 'grayscale(100%) brightness(50%)',
-    //     transition: 'all .3s ease-in-out',
-    //     boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, .4)'
-    //   }
-    // },
-    // icon: { proto: roomIcon },
-    // radio: {
-    //   tag: 'input',
-    //   attr: {
-    //     type: 'radio',
-    //     name: 'action',
-    //     value: 'ballerina'
-    //   }
-    // }
-  },
-  ...[
-    {
-      style: { justifySelf: 'end' },
-      img: { props: { src: BALLERINA_JPG } },
-      icon: { props: { src: BALLERINA_ICON } }
+//   childProto: {
+//     tag: 'label'
+//     // proto: tab
+//     // state: {
+//     //   style: {
+//     //     width: `${320 / 16}em`,
+//     //     height: `${400 / 16}em`,
+//     //     backgroundSize: 'cover',
+//     //     cursor: 'pointer',
+//     //     display: 'flex',
+//     //     alignItems: 'center',
+//     //     justifyContent: 'center',
+//     //     position: 'relative',
+//     //     transition: 'all .3s ease-in-out'
+//     //     // '&:hover': {
+//     //     //   boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
+//     //     //   '> img:last-child': { opacity: 1 },
+//     //     //   '> img:first-child': {
+//     //     //     transform: 'scale(.92)',
+//     //     //     boxShadow: 'none',
+//     //     //     filter: 'grayscale(100%) brightness(30%)'
+//     //     //   }
+//     //     // }
+//     //   }
+//     // },
+//     // style: (el, s) => s.style,
+//     // // on: {
+//     // //   click: (ev, el, s) => {
+//     // //     s.update({
+//     // //       // text: 'gela',
+//     // //       style: {
+//     // //         boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
+//     // //         '> img:last-child': { opacity: 1 },
+//     // //         '> img:first-child': {
+//     // //           transform: 'scale(.92)',
+//     // //           boxShadow: 'none',
+//     // //           filter: 'grayscale(100%) brightness(30%)'
+//     // //         }
+//     // //       }
+//     // //     })
+//     // //   }
+//     // // },
+//     // // style: {
+//     // //   width: `${320 / 16}em`,
+//     // //   height: `${400 / 16}em`,
+//     // //   backgroundSize: 'cover',
+//     // //   cursor: 'pointer',
+//     // //   display: 'flex',
+//     // //   alignItems: 'center',
+//     // //   justifyContent: 'center',
+//     // //   position: 'relative',
+//     // //   transition: 'all .3s ease-in-out'
+//     // // '&:hover': {
+//     // //   boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
+//     // //   '> img:last-child': { opacity: 1 },
+//     // //   '> img:first-child': {
+//     // //     transform: 'scale(.92)',
+//     // //     boxShadow: 'none',
+//     // //     filter: 'grayscale(100%) brightness(30%)'
+//     // //   }
+//     // // }
+//     // // },
+//     // img: {
+//     //   proto: Img,
+//     //   style: {
+//     //     width: '100%',
+//     //     height: '100%',
+//     //     objectFit: 'cover',
+//     //     filter: 'grayscale(100%) brightness(50%)',
+//     //     transition: 'all .3s ease-in-out',
+//     //     boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, .4)'
+//     //   }
+//     // },
+//     // icon: { proto: roomIcon },
+//     // radio: {
+//     //   tag: 'input',
+//     //   attr: {
+//     //     type: 'radio',
+//     //     name: 'action',
+//     //     value: 'ballerina'
+//     //   }
+//     // }
+//   },
+//   ...[
+//     {
+//       style: { justifySelf: 'end' },
+//       img: { props: { src: BALLERINA_JPG } },
+//       icon: { props: { src: BALLERINA_ICON } }
 
-    },
-    {
-      img: { props: { src: RED_BRICK_JPG } },
-      icon: { props: { src: BRICK_ICON } }
-    },
-    {
-      img: { props: { src: YELLOW_COACH_JPG } },
-      icon: { props: { src: COUCH_ICON } }
-    }
-  ]
-}
+//     },
+//     {
+//       img: { props: { src: RED_BRICK_JPG } },
+//       icon: { props: { src: BRICK_ICON } }
+//     },
+//     {
+//       img: { props: { src: YELLOW_COACH_JPG } },
+//       icon: { props: { src: COUCH_ICON } }
+//     }
+//   ]
+// }

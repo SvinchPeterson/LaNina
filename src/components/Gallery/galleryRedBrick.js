@@ -18,14 +18,6 @@ const images = [
   { style: { backgroundImage: 'url(' + TORSHER_JPG + ')' } },
   { style: { backgroundImage: 'url(' + WINE_GLASS_JPG + ')' } }
 ]
-// const images = [
-//   { proto: Img, props: { src: APARTMENT_JPG } },
-//   { proto: Img, props: { src: BEDROOM_JPG } },
-//   { proto: Img, props: { src: KITCHEN_JPG } },
-//   { proto: Img, props: { src: LIVINGROOM_JPG } },
-//   { proto: Img, props: { src: TORSHER_JPG } },
-//   { proto: Img, props: { src: WINE_GLASS_JPG } }
-// ]
 
 export const galleryRedBrick = {
   proto: Gallery,

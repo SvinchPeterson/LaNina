@@ -22,7 +22,7 @@ const roomIcon = {
 }
 
 export default {
-  tag: 'section',
+  tag: 'article',
   style,
   h4: {
     proto: [Block, Text],
@@ -30,10 +30,7 @@ export default {
       text: 'Apartments',
       padding: 'E 0 C 0'
     },
-    attr: { id: 'apartments' },
-    style: {
-      display: 'block'
-    }
+    attr: { id: 'apartments' }
   },
   content: {
     tag: 'section',
@@ -51,7 +48,7 @@ export default {
       proto: roomTabBallerina,
       attr: { for: 'tab-ballerina' }
     },
-    article: {
+    room: {
       proto: roomLanina
     },
 
@@ -69,8 +66,7 @@ export default {
       proto: roomTabRedBrick,
       attr: { for: 'tab-redBrick' }
     },
-    article2: {
-      tag: 'article',
+    room2: {
       proto: roomRedBrick
     },
 
@@ -78,7 +74,6 @@ export default {
       tag: 'input',
       attr: {
         type: 'radio',
-        // value: 'tab-yellowCouch',
         id: 'tab-yellowCouch',
         name: 'action'
       },
@@ -88,8 +83,7 @@ export default {
       proto: roomTabYellowCouch,
       attr: { for: 'tab-yellowCouch' }
     },
-    article3: {
-      tag: 'article',
+    room3: {
       proto: roomYellowCouch
     }
   }

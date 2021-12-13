@@ -4,13 +4,14 @@ import { Block, Text, Link, Button, Flex, Img } from '@rackai/symbols'
 import { RoomDescription, galleryBallerina, galleryRedBrick, galleryYellowCouch } from '../../components'
 
 const Room = {
-  tag: 'article',
   proto: [Block, Flex],
-  props: {
-    flexAlign: 'center space-between'
-  },
+  // props: {
+  //   flexAlign: 'center space-between'
+  // },
   style: {
-    position: 'relative'
+    // position: 'relative',
+    // display: 'flex'
+    // border: '10px solid yellow'
     // background: 'rgba(206, 197, 177, 1)',
     // background: 'rgba(0, 0, 0, 1)',
     // border: '2px solid red'
@@ -40,7 +41,9 @@ const Room = {
   //     cursor: 'pointer'
   //   }
   // },
-  gallery: {}
+  gallery: {
+    tag: 'nav'
+  }
 
 }
 
