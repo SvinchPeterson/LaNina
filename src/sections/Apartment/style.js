@@ -44,16 +44,16 @@ export default {
       transition: 'all .8s ease-in-out'
     },
     'label::after': {
-      content: '"Ballerina"',
-      color: 'black',
-      fontSize: '16px',
-      position: 'absolute',
-      bottom: '-60px',
-      fontFamily: 'Avenir Next',
-      letterSpacing: '4px',
-      opacity: 0,
-      transitionDelay: '.5s',
-      transition: 'all 1s ease-in-out'
+      // content: '"Ballerina"',
+      // color: 'black',
+      // fontSize: '16px',
+      // position: 'absolute',
+      // bottom: '-60px',
+      // fontFamily: 'Avenir Next',
+      // letterSpacing: '4px',
+      // opacity: 0,
+      // transitionDelay: '.5s',
+      // transition: 'all 1s ease-in-out'
     },
 
     '> div': {
@@ -113,6 +113,9 @@ export default {
 
     'input:checked + label': {
       boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)'
+    },
+    'input:checked + label ~ div': {
+      display: 'flex'
     }
 
   }

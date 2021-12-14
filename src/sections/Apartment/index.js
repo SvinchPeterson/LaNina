@@ -45,7 +45,21 @@ export default {
     },
     label: {
       proto: roomTabBallerina,
-      attr: { for: 'tab-ballerina' }
+      attr: { for: 'tab-ballerina' },
+      style: {
+        '&::after': {
+          content: '"Ballerina"',
+          color: 'black',
+          fontSize: '16px',
+          position: 'absolute',
+          bottom: '-60px',
+          fontFamily: 'Avenir Next',
+          letterSpacing: '4px',
+          opacity: 0,
+          transitionDelay: '.5s',
+          transition: 'all 1s ease-in-out'
+        }
+      }
     },
     room: {
       proto: roomLanina
@@ -61,7 +75,21 @@ export default {
     },
     label2: {
       proto: roomTabRedBrick,
-      attr: { for: 'tab-redBrick' }
+      attr: { for: 'tab-redBrick' },
+      style: {
+        '&::after': {
+          content: '"Red Brick"',
+          color: 'black',
+          fontSize: '16px',
+          position: 'absolute',
+          bottom: '-60px',
+          fontFamily: 'Avenir Next',
+          letterSpacing: '4px',
+          opacity: 0,
+          transitionDelay: '.5s',
+          transition: 'all 1s ease-in-out'
+        }
+      }
     },
     room2: {
       proto: roomRedBrick
@@ -77,7 +105,22 @@ export default {
     },
     label3: {
       proto: roomTabYellowCouch,
-      attr: { for: 'tab-yellowCouch' }
+      attr: { for: 'tab-yellowCouch' },
+      style: {
+        '&::after': {
+          content: '"Yellow Couch"',
+          color: 'black',
+          fontSize: '16px',
+          position: 'absolute',
+          bottom: '-60px',
+          fontFamily: 'Avenir Next',
+          letterSpacing: '4px',
+          opacity: 0,
+          transitionDelay: '.5s',
+          transition: 'all 1s ease-in-out'
+        }
+
+      }
     },
     room3: {
       proto: roomYellowCouch
