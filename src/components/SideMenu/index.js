@@ -20,7 +20,7 @@ export default {
     transition: 'all .5s ease-in-out',
     width: 'fit-content',
     height: '600px'
-    // zIndex: '50'
+    // zIndex: '70'
 
   },
   nav: {

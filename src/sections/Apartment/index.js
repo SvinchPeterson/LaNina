@@ -41,11 +41,6 @@ export default {
         value: 'tab-ballerina',
         id: 'tab-ballerina',
         name: 'action'
-      },
-      style: {
-        '&:checked + label > div': {
-          backgroundPosition: '-350px'
-        }
       }
     },
     label: {
@@ -60,14 +55,8 @@ export default {
       tag: 'input',
       attr: {
         type: 'radio',
-        // value: 'tab-redBrick',
         id: 'tab-redBrick',
         name: 'action'
-      },
-      style: {
-        '&:checked + label > div': {
-          backgroundPosition: '-50px'
-        }
       }
     },
     label2: {
@@ -84,11 +73,6 @@ export default {
         type: 'radio',
         id: 'tab-yellowCouch',
         name: 'action'
-      },
-      style: {
-        '&:checked + label > div': {
-          backgroundPosition: '350px'
-        }
       }
     },
     label3: {

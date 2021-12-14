@@ -11,6 +11,26 @@ export const fadeUp = keyframes`
     transform: scale(1);
   }
 `
+
+export const clickEffect = keyframes`{
+  from {
+    transform: scale(1);
+
+  }
+  to: {
+    transform: scale(.9);
+  }
+
+}`
+
+export const movingPhotos = keyframes`
+from {
+ backgroundPosition: 'center';
+}
+to {
+  backgroundPosition: '20px 20px';
+}
+`
 export const displays = keyframes`
 from {
   // opacity: 0;

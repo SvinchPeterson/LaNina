@@ -1,5 +1,5 @@
 'use strict'
-import { displays } from '../../animations'
+import { displays, movingPhotos, clickEffect } from '../../animations'
 
 export default {
   // border: '15px solid red',
@@ -19,8 +19,41 @@ export default {
     input: {
       position: 'absolute',
       transform: 'translate(-50%, -50%)',
-      top: '650px',
       opacity: 0
+    },
+    'input:checked + label > div': {
+      transform: 'scale(.9)',
+      boxShadow: '0px 0px 0px 0px red',
+      filter: 'grayscale(100%) brightness(30%)',
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'center right -100px'
+    },
+    'input:checked + label > img': { opacity: 1, transform: 'scale(.9)' },
+    'input:checked + label::after': {
+      opacity: 0
+    },
+    'label:hover > div': {
+      backgroundPosition: 'bottom left',
+      transform: 'scale(1.05)'
+    },
+    'label:hover::after': {
+      opacity: 1,
+      transform: 'scale(1.2)'
+    },
+    'label > div': {
+      transition: 'all .8s ease-in-out'
+    },
+    'label::after': {
+      content: '"Ballerina"',
+      color: 'black',
+      fontSize: '16px',
+      position: 'absolute',
+      bottom: '-60px',
+      fontFamily: 'Avenir Next',
+      letterSpacing: '4px',
+      opacity: 0,
+      transitionDelay: '.5s',
+      transition: 'all 1s ease-in-out'
     },
 
     '> div': {
@@ -29,7 +62,6 @@ export default {
       gridColumnEnd: 'span 3',
       marginTop: '100px',
       display: 'none'
-      // border: '10px solid yellow'
     },
 
     '> div > nav': {
@@ -37,8 +69,6 @@ export default {
       display: 'flex',
       justifyContent: 'center',
       background: 'radial-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9))',
-      // boxShadow: 'inset 5px 10px 14px 12px rgba(0, 0, 0, .6)',
-      // border: '8px solid orange',
       overflow: 'hidden',
       position: 'relative',
       '&::before': {
@@ -65,52 +95,24 @@ export default {
     },
 
     '> div > nav > div': {
-      flex: '.9',
+      flex: '1',
       display: 'flex',
       position: 'relative'
-      // boxShadow: 'inset 5px 10px 14px 12px red'
-      // border: '6px solid blue'
     },
 
     '> div > nav > div > span': {
-      // position: 'absolute',
-      // top: 0,
-      // left: 0,
       minHeight: '100%',
       flex: 1,
-      backgroundSize: 'contain',
+      backgorundOrigin: 'border-box',
+      backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
       backgroundPosition: 'center',
       filter: 'grayscale(50%)'
-      // boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .6)'
     },
 
     'input:checked + label': {
-      boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
-      '> img': { opacity: 1 },
-      '> div': {
-        transform: 'scale(.9)',
-        boxShadow: 'none',
-        filter: 'grayscale(100%) brightness(30%)',
-        backgroundAttachment: 'fixed',
-        backgroundSize: 'contain'
-        // backgroundPosition: 'top'
-      }
-    },
-
-    'input:checked + label + div': {
-      display: 'flex'
-    },
-
-    'div > section': {
-      transition: 'all 2s ease-in-out',
-      position: 'relative'
-    },
-    'input:checked + label + div > nav': {
-      animationName: displays,
-      animationDuration: '1s',
-      transition: 'all 3s ease-in-out'
+      boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)'
     }
 
   }

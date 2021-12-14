@@ -53,28 +53,29 @@ const amenities = {
   }
 }
 export default {
+  tag: 'aside',
   proto: [Block, Flex],
   props: {
     flexFlow: 'column',
     flexAlign: 'flex-start flex-start'
   },
   style: {
-    minWidth: '500px',
     position: 'absolute',
     // background: 'rgba(206, 197, 177, .9)',
-    background: 'rgba(0, 0, 0, .5)',
-    // height: '700px',
-    top: 0,
-    left: '0',
-    height: 'fit-content',
-    padding: '50px',
-    zIndex: '20'
+    background: 'rgba(0, 0, 0, .6)',
+    height: '685px',
+    bottom: 0,
+    left: '120px',
+
+    padding: '30px',
+    zIndex: '30'
   },
   h3: {
     proto: [Text, Block],
     props: {
       text: 'Ballerina',
-      padding: '0 0 Y 0'
+      padding: '0 0 Y 0',
+      size: 'D'
     },
     style: {
       color: 'rgba(213, 176, 56, .5)'
@@ -92,7 +93,7 @@ export default {
       fontFamily: 'Bellefair',
       maxWidth: '500px',
       margin: 0,
-      fontSize: '20px',
+      fontSize: '18px',
       color: '#F3E7DB'
     }
   },

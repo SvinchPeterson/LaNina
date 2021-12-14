@@ -10,6 +10,7 @@ import BRICK_ICON from '../../assets/bricks.png'
 import COUCH_ICON from '../../assets/couch.png'
 import LIVINGROOM_JPG from '../../assets/images/yellowCouch/livingroom.jpg'
 import REDBRICK_JPG from '../../assets/images/redBrick/livingroom.jpg'
+import { movingPhotos } from '../../animations'
 
 const roomIcon = {
   proto: Img,
@@ -38,7 +39,6 @@ export const roomTab = {
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
-    transition: 'all .3s ease-in-out',
     '&:hover': {
       '> div': {
         filter: 'grayscale(100%) brightness(70%)'
@@ -58,7 +58,9 @@ export const roomTab = {
       width: '100%',
       height: '100%',
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundPosition: 'top right',
+      backgroundOrigin: 'padding-box',
+      // backgroundPosition: 'bottom 0px right 50%',
       backgroundRepeat: 'no-repeat',
       filter: 'grayscale(100%) brightness(50%)',
       transition: 'all .3s ease-in-out',
