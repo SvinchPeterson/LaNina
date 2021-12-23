@@ -43,20 +43,21 @@ export default {
         name: 'action'
       }
     },
+
     label: {
       proto: roomTabBallerina,
       attr: { for: 'tab-ballerina' },
       style: {
         '&::after': {
           content: '"Ballerina"',
-          color: 'black',
+          color: 'rgba(0, 0, 0, .65)',
           fontSize: '16px',
           position: 'absolute',
           bottom: '-60px',
           fontFamily: 'Avenir Next',
           letterSpacing: '4px',
           opacity: 0,
-          transitionDelay: '.5s',
+          transitionDelay: '.4',
           transition: 'all 1s ease-in-out'
         }
       }
@@ -79,14 +80,14 @@ export default {
       style: {
         '&::after': {
           content: '"Red Brick"',
-          color: 'black',
+          color: 'rgba(0, 0, 0, .65)',
           fontSize: '16px',
           position: 'absolute',
           bottom: '-60px',
           fontFamily: 'Avenir Next',
           letterSpacing: '4px',
           opacity: 0,
-          transitionDelay: '.5s',
+          transitionDelay: '.4s',
           transition: 'all 1s ease-in-out'
         }
       }
@@ -109,17 +110,16 @@ export default {
       style: {
         '&::after': {
           content: '"Yellow Couch"',
-          color: 'black',
+          color: 'rgba(0, 0, 0, .65)',
           fontSize: '16px',
           position: 'absolute',
           bottom: '-60px',
           fontFamily: 'Avenir Next',
           letterSpacing: '4px',
           opacity: 0,
-          transitionDelay: '.5s',
+          transitionDelay: '.4s',
           transition: 'all 1s ease-in-out'
         }
-
       }
     },
     room3: {

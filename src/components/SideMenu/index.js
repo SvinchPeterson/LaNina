@@ -17,10 +17,9 @@ export default {
     top: 0,
     left: '-500px',
     background: 'rgba(0, 0, 0, .95)',
-    transition: 'all .5s ease-in-out',
+    transition: 'all .7s ease-in-out',
     width: 'fit-content',
     height: '600px'
-    // zIndex: '70'
 
   },
   nav: {

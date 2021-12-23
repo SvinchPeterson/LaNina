@@ -63,7 +63,7 @@ export default {
     position: 'absolute',
     // background: 'rgba(206, 197, 177, .9)',
     background: 'rgba(0, 0, 0, .6)',
-    height: '685px',
+    height: '690px',
     bottom: 0,
     left: '120px',
 

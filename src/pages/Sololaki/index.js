@@ -3,12 +3,11 @@
 import { Block, Text } from '@rackai/symbols'
 
 import { Story, Apartment, Services, Contact } from '../../sections'
-import { LaninaHeading, Header } from '../../components'
+import { Header } from '../../components'
 
 import style, { styleBannerBackground, styleBanner } from './style'
 
 const banner = {
-  proto: LaninaHeading,
   class: [styleBanner],
   h4: {
     props: {

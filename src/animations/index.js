@@ -1,26 +1,59 @@
 'use strict'
 import { keyframes } from '@emotion/css'
 
-export const fadeUp = keyframes`
+export const opacity = keyframes`
   from {
     opacity: 0;
-    transform: scale(.9);
   }
   to {
-    opacity: .65;
-    transform: scale(1);
+    opacity: 1;
+  )
+`
+export const backgroundPosition = keyframes`
+  from {
+    background-position: center right;
   }
+  to {
+    background-position: bottom right;
+  )
 `
 
-export const clickEffect = keyframes`{
+export const scale = keyframes`
   from {
+    transform: scale(1.05);
+  }
+  to {
     transform: scale(1);
+  )
+`
 
+export const brightness = keyframes`
+  from {
+    filter: brightness(0%);
+    transform: scale(1.05);
+
+  }
+  to {
+    filter: brightness(100%);
+    transform: scale(1);
+  )
+`
+export const scaleUp = keyframes`
+  from {
+    transform: scale(.8);
+  }
+  to {
+    transform: scale(1);
+  )
+`
+
+export const dropDown = keyframes`{
+  from {
+    opacity: 0;
   }
   to: {
-    transform: scale(.9);
+   opacity: 1;
   }
-
 }`
 
 export const movingPhotos = keyframes`
@@ -59,12 +92,12 @@ export const fadeUp2 = keyframes`
     transform: scale(1);
   }
 `
-export const spacing = keyframes`
+export const letterSpacing = keyframes`
   from {
     letter-spacing: 0;
   }
   to {
-    letter-spacing: 9px;
+    letter-spacing: 10px;
   }
 `
 export const paragraph = keyframes`
@@ -87,20 +120,30 @@ export const zoomOut = keyframes`
 `
 
 export const movingUp = keyframes`
-  from {
-    bottom: -100%;
-  }
-  to {
-    bottom: 0;
-  }
+from {
+  bottom: -100%;
+  opacity: 0;
+}
+70% {
+  opacity: 0
+}
+to {
+  bottom: 100px;
+  opacity: 1
+}
 `
 
 export const movingDown = keyframes`
   from {
     top: -100%;
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
   }
   to {
-    top: 0;
+    top: 100px;
+    opacity: 1;
   }
 `
 export const movingLeft = keyframes`

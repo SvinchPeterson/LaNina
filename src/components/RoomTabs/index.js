@@ -63,7 +63,7 @@ export const roomTab = {
       // backgroundPosition: 'bottom 0px right 50%',
       backgroundRepeat: 'no-repeat',
       filter: 'grayscale(100%) brightness(50%)',
-      transition: 'all .3s ease-in-out',
+      transition: 'all 3s ease-in-out',
       boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, .4)'
     }
   },

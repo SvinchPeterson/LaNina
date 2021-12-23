@@ -31,6 +31,9 @@ export default {
     childProto: {
       tag: 'span',
       proto: Block,
+      style: {
+        transition: 'all 1s ease-in-out'
+      },
       class: {
         show: (element, state) => state.activeImage === parseInt(element.key) ? { display: 'block' } : { display: 'none' }
       }

@@ -1,5 +1,4 @@
 'use strict'
-import LaninaHeading from './LaninaHeading'
 import LocationHeading from './LocationHeading'
 import LaninaBanner from './LaninaBanner'
 import Header from './Header'
@@ -9,7 +8,7 @@ import SideMenu from './SideMenu'
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch } from './Gallery'
 
 export {
-  LaninaHeading,
+
   LocationHeading,
   LaninaBanner,
   Header,

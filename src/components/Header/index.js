@@ -35,7 +35,9 @@ const langLinks = {
   tag: 'nav',
   proto: [Block, Flex],
   style: {
-    flexFlow: 'column'
+    flexFlow: 'column',
+    paddingTop: '20px',
+    '&:hover > a': { visibility: 'visible' }
   },
   childProto: {
     proto: [Link, Text],
@@ -43,14 +45,19 @@ const langLinks = {
     style: {
       color: 'F3E7DB',
       cursor: 'pointer',
-      opacity: '.85',
-      '&:hover': { opacity: 1 }
+      opacity: '.65',
+      transition: 'all .6s ease-in-out'
     }
   },
   ...[
-    { text: 'EN' },
-    { text: 'RUS', style: { display: 'none' } },
-    { text: 'GEO', style: { display: 'none' } }
+    { text: 'EN', style: { '&:hover': { opacity: 1 } } },
+    {
+      text: 'RUS',
+      style: {
+        visibility: 'hidden',
+        '&:hover': { opacity: 1 }
+      }
+    }
   ]
 
 }
@@ -121,7 +128,8 @@ export default {
     //   background: 'red'
     // },
     '#toggle:checked ~ aside': {
-      left: '100px'
+      left: '100px',
+      opacity: 1
     },
     '#toggle:checked ~ label > div:last-child': {
       transition: 'all .4s ease-in-out',
