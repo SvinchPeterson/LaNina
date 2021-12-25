@@ -5,43 +5,98 @@ import { Block, Text } from '@rackai/symbols'
 import { Story, Apartment, Services, Contact } from '../../sections'
 import { Header } from '../../components'
 
-import style, { styleBannerBackground, styleBanner } from './style'
+import { laninaResidence } from '../../texts'
+
+import style, { styleBannerBackground } from './style'
+
+// const banner = {
+//   proto: Block,
+//   props: {
+//     flexFlow: 'column'
+//   },
+//   // class: [styleBanner],
+//   lanina: {
+//     proto: laninaResidence,
+//     h4: {
+//       props: {
+//         text: 'La Nina Residence',
+//         size: 'G'
+//       }
+//     },
+//     span: { props: { text: 'SOLOLAKI' } }
+//   },
+
+//   p: {
+//     proto: [Text, Block],
+//     props: {
+//       text: 'Be inspired by old city',
+//       size: 'B',
+//       padding: 'A 0 0 0'
+//     }
+//   }
+// }
 
 const banner = {
-  class: [styleBanner],
-  h4: {
+  style: styleBannerBackground,
+  lanina: {
+    proto: laninaResidence,
     props: {
-      size: 'G',
-      text: 'La Nina Residence'
-    }
-  },
+      flexFlow: 'column',
+      flexAlign: 'center flex-start'
+    },
+    style: {
+      position: 'absolute',
+      top: '40%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      color: 'rgba(243, 231, 219, 1)'
+    },
 
-  span: {
-    props: {
-      text: 'sololaki',
-      size: 'B'
+    h4: {
+      props: {
+        text: 'La Nina Residence',
+        size: 'G'
+      },
+      style: {
+        letterSpacing: '2px',
+        fontWeight: '600',
+        opacity: '.85'
+      }
+    },
+    span: {
+      props: {
+        text: 'SOLOLAKI',
+        size: 'C'
+      },
+      style: {
+        letterSpacing: '10px',
+        opacity: '.65'
+      }
     }
   },
 
   p: {
-    proto: [Text, Block],
+    proto: Text,
     props: {
       text: 'Be inspired by old city',
-      size: 'B',
-      padding: 'A 0 0 0'
+      size: 'B'
+    },
+    style: {
+      position: 'absolute',
+      top: '55%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      fontFamily: 'Avenir Next',
+      letterSpacing: '2px',
+      opacity: '.65'
     }
   }
 }
 
-const bannerBackground = {
-  style: styleBannerBackground,
-  bannerImg: {},
-  banner
-}
-
 export default {
   style,
-  bannerBackground,
+
+  banner,
   Header,
   Story,
   Apartment,

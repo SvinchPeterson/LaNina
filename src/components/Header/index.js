@@ -3,6 +3,8 @@ import { Block, Img, Text, Flex, Link, Shape, SVG } from '@rackai/symbols'
 
 import SideMenu from '../SideMenu'
 
+import style from './style'
+
 import PHONE_SVG from '../../assets/phones.svg'
 import LOGO_PNG from '../../assets/logos.png'
 
@@ -20,7 +22,7 @@ const menuIcon = {
       round: 'A'
     },
     style: {
-      background: '#F3E7DB',
+      background: 'rgba(243, 231, 219, .85)',
       height: `${2 / 16}em`
     }
   },
@@ -43,7 +45,7 @@ const langLinks = {
     proto: [Link, Text],
     props: { size: 'A2' },
     style: {
-      color: 'F3E7DB',
+      color: 'rgba(243, 231, 219, 1)',
       cursor: 'pointer',
       opacity: '.65',
       transition: 'all .6s ease-in-out'
@@ -80,7 +82,6 @@ const book = {
     flexFlow: 'column',
     alignItems: 'center',
     cursor: 'pointer',
-    // background: 'radial-gradient(rgba(98, 73, 62, 1), rgba(98, 73, 62, 1) )',
     marginTop: `${120 / 16}em`,
     '> *': { opacity: '.85' },
     '&:hover > *': { opacity: 1 }
@@ -100,7 +101,8 @@ const book = {
       display: 'block',
       textOrientation: 'upright',
       writingMode: 'vertical-rl',
-      letterSpacing: '4px'
+      letterSpacing: '4px',
+      color: 'rgba(243, 231, 219, .85)'
     }
   }
 }
@@ -112,46 +114,7 @@ export default {
     height: 'D2',
     padding: '0 C'
   },
-  style: {
-    width: '100%',
-    position: 'fixed',
-    top: 0,
-    zIndex: 20,
-    alignItems: 'center',
-    fontFamily: 'Avenir Next',
-    boxSizing: 'border-box',
-    mixBlendMode: 'difference',
-    'input ~ label': {
-      // background: 'red'
-    },
-    // '#toggle:not(:checked) ~ aside': {
-    //   background: 'red'
-    // },
-    '#toggle:checked ~ aside': {
-      left: '100px',
-      opacity: 1
-    },
-    '#toggle:checked ~ label > div:last-child': {
-      transition: 'all .4s ease-in-out',
-      transitionDelay: '.2s',
-      width: '36px'
-    },
-    '#toggle:not(:checked) ~ label > div:last-child': {
-      transition: 'all .4s ease-in-out',
-      transitionDelay: '.2s',
-      width: '20px'
-    },
-    '#toggle:checked ~ label > div:first-child': {
-      transition: 'all .4s ease-in-out',
-      transitionDelay: '.2s',
-      width: '20px'
-    },
-    '#toggle:not(:checked) ~ label > div:first-child': {
-      transition: 'all .4s ease-in-out',
-      transitionDelay: '.2s',
-      width: '36px'
-    }
-  },
+  style,
   input: {
     attr: {
       type: 'checkbox',
@@ -180,10 +143,7 @@ export default {
       height: 0
     },
     childProto: {
-      proto: Block,
-      style: {
-        mixBlendMode: 'difference !important'
-      }
+      proto: Block
     },
     ...[
       { proto: langLinks },

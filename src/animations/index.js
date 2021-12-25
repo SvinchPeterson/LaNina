@@ -14,7 +14,8 @@ export const backgroundPosition = keyframes`
     background-position: center right;
   }
   to {
-    background-position: bottom right;
+    backgroundPosition: 'top left'
+
   )
 `
 
@@ -30,12 +31,10 @@ export const scale = keyframes`
 export const brightness = keyframes`
   from {
     filter: brightness(0%);
-    transform: scale(1.05);
 
   }
   to {
     filter: brightness(100%);
-    transform: scale(1);
   )
 `
 export const scaleUp = keyframes`
@@ -100,6 +99,16 @@ export const letterSpacing = keyframes`
     letter-spacing: 10px;
   }
 `
+
+export const letterSpacing2 = keyframes`
+  from {
+    letter-spacing: 10;
+  }
+  to {
+    letter-spacing: 6px;
+  }
+`
+
 export const paragraph = keyframes`
   from {
     opacity: 0;
@@ -121,7 +130,7 @@ export const zoomOut = keyframes`
 
 export const movingUp = keyframes`
 from {
-  bottom: -100%;
+  bottom: -100px;
   opacity: 0;
 }
 70% {
@@ -135,7 +144,7 @@ to {
 
 export const movingDown = keyframes`
   from {
-    top: -100%;
+    top: 0;
     opacity: 0;
   }
   70% {

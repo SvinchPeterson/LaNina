@@ -13,13 +13,22 @@ export default {
     flexAlign: 'center center'
   },
   style: {
-    position: 'absolute',
+    position: 'fixed',
     top: 0,
-    left: '-500px',
-    background: 'rgba(0, 0, 0, .95)',
+    left: '0',
+    opacity: 0,
+    // pointerEvents: 'fill',
+    // zIndex: '100',
+    // background: 'rgba(0, 0, 0, .75)',
     transition: 'all .7s ease-in-out',
-    width: 'fit-content',
-    height: '600px'
+    width: '0px',
+    height: '100%',
+    // border: '3px solid red',
+    // background: '#0C0C0C',
+    // background: 'red',
+    '> nav': {
+      opacity: 0
+    }
 
   },
   nav: {
@@ -27,6 +36,9 @@ export default {
     props: {
       flexFlow: 'column',
       gap: 'B'
+    },
+    style: {
+      // background: 'brown'
     },
     childProto: {
       proto: [Link, Text],
@@ -84,6 +96,7 @@ export default {
     ]
   },
   nav2: {
+    tag: 'nav',
     proto: Block,
     props: {
       flexAlign: 'center flex-start',
