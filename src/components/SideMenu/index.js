@@ -16,15 +16,13 @@ export default {
   },
 
   style: {
-    background: 'linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3), rgba(0, 0, 0, .3))',
-    // mixBlendMode: 'difference',
+    background: 'linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .4))',
     backdropFilter: 'blur(3px)',
     position: 'fixed',
     top: 0,
     left: 0,
     transition: 'all .5s ease-in-out',
     zIndex: 100
-    // '> nav > *': { transition: 'opacity .8s, filter 3s ease-in-out' }
   },
   nav: {
     proto: Block,
@@ -32,7 +30,7 @@ export default {
       flexFlow: 'column',
       gap: 'E'
     },
-    style: { transition: 'all .8s ease-in-out' },
+    style: { transition: 'all .7s ease-in-out' },
 
     sectionLinks: {
       proto: Block,

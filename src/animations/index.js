@@ -14,14 +14,14 @@ export const backgroundPosition = keyframes`
     background-position: center right;
   }
   to {
-    backgroundPosition: 'top left'
+    backgroundPosition: top left;
 
   )
 `
 
-export const scale = keyframes`
+export const scaleDown = keyframes`
   from {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   to {
     transform: scale(1);
@@ -39,7 +39,7 @@ export const brightness = keyframes`
 `
 export const scaleUp = keyframes`
   from {
-    transform: scale(.8);
+    transform: scale(.9);
   }
   to {
     transform: scale(1);
@@ -84,7 +84,7 @@ to {
 export const fadeUp2 = keyframes`
   from {
     opacity: 0;
-    transform: scale(.7);
+    transform: scale(.8);
   }
   to {
     opacity: 1;

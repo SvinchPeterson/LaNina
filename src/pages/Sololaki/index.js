@@ -7,38 +7,17 @@ import { Header, SideMenu } from '../../components'
 
 import { laninaResidence } from '../../texts'
 
-import style, { styleBannerBackground } from './style'
+import style, { styleBanner } from './style'
 import { update } from '@rackai/domql/src/element'
 
-// const banner = {
-//   proto: Block,
-//   props: {
-//     flexFlow: 'column'
-//   },
-//   // class: [styleBanner],
-//   lanina: {
-//     proto: laninaResidence,
-//     h4: {
-//       props: {
-//         text: 'La Nina Residence',
-//         size: 'G'
-//       }
-//     },
-//     span: { props: { text: 'SOLOLAKI' } }
-//   },
-
-//   p: {
-//     proto: [Text, Block],
-//     props: {
-//       text: 'Be inspired by old city',
-//       size: 'B',
-//       padding: 'A 0 0 0'
-//     }
-//   }
-// }
-
 const banner = {
-  style: styleBannerBackground,
+  proto: Block,
+  props: {
+    flexFlow: 'column',
+    flexAlign: 'center center',
+    gap: 'D'
+  },
+  style: styleBanner,
   lanina: {
     proto: laninaResidence,
     props: {
@@ -46,10 +25,6 @@ const banner = {
       flexAlign: 'center flex-start'
     },
     style: {
-      position: 'absolute',
-      top: '40%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
       color: 'rgba(243, 231, 219, 1)'
     },
 
@@ -68,7 +43,7 @@ const banner = {
     span: {
       props: {
         text: 'SOLOLAKI',
-        size: 'C'
+        size: 'B'
       },
       style: {
         letterSpacing: '10px',
@@ -84,10 +59,11 @@ const banner = {
       size: 'B'
     },
     style: {
-      position: 'absolute',
-      top: '55%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
+      textAlign: 'center',
+      // position: 'absolute',
+      // top: '55%',
+      // left: '50%',
+      // transform: 'translate(-50%, -50%)',
       fontFamily: 'Avenir Next',
       letterSpacing: '2px',
       color: 'rgba(243, 231, 219, .45)'
@@ -105,7 +81,7 @@ export default {
     proto: SideMenu,
     class: {
       show: (element, state) => state.active ? { opacity: 0, height: 0 } : { height: '100%', opacity: 1 },
-      show2: (element, state) => state.active ? { nav: { filter: 'blur(3px)' } } : { nav: { filter: 'blur(0px)' } }
+      show2: (element, state) => state.active ? { nav: { filter: 'blur(2px)', pointerEvents: 'none' } } : { nav: { filter: 'blur(0px)' } }
       // show3: (element, state) => state.active ? { 'nav svg': { opacity: 0, filter: 'blur(3px)' } } : { 'nav svg': { opacity: 0.65, filter: 'blur(0px)' } }
 
     }
