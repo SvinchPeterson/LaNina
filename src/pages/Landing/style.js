@@ -26,14 +26,12 @@ export const stylePageLink = {
   '&:hover + h6': {
     color: 'rgba(243, 231, 219, .85)',
     transform: 'scale(1.1)',
-    letterSpacing: '6.5px',
-    fontWeight: 'bold'
+    letterSpacing: '6.2px',
+    fontWeight: '500'
   },
 
   '& > div': {
     flex: 1,
-    // maxWidth: '100%',
-    // maxHeight: '100%',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'bottom left',
     backgroundSize: 'cover',
@@ -41,7 +39,7 @@ export const stylePageLink = {
     animationDuration: '1.5s',
     filter: 'grayscale(65%)',
     transition: 'all .8s ease-in-out',
-    transform: 'scale(1.05)'
+    transform: 'scale(1.03)'
   }
 }
 
@@ -77,18 +75,20 @@ const styleBanner = {
 }
 
 const styleHeading = {
-  position: 'fixed',
+  position: 'absolute',
   zIndex: 60,
-  color: 'rgba(243, 231, 219, .55)',
+  color: 'rgba(243, 231, 219, .65)',
   pointerEvents: 'none',
   writingMode: 'vertical-rl',
   textOrientation: 'upright',
   textTransform: 'uppercase',
-  fontSize: `${12 / 16}em`,
+  fontSize: `${14 / 16}em`,
   letterSpacing: '6px',
   transition: 'all .5s ease-in-out',
   animationName: letterSpacing2,
-  animationDuration: '1.5s'
+  animationDuration: '1.5s',
+  fontFamily: 'Bellefair',
+  fontWeight: '400'
 }
 
 export default {

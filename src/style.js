@@ -7,8 +7,9 @@ export default {
   fontFamily: 'Gilda Display',
   top: 0,
   left: 0,
-  boxSizing: 'border-box',
+  // boxSizing: 'border-box',
   overflow: 'hidden',
+
   display: 'flex',
   // color: 'white',
   h4: { margin: 0 },

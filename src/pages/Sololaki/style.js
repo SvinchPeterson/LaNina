@@ -56,8 +56,7 @@ export const styleBannerBackground = {
 // }
 
 export default {
-  width: '100%',
-  height: '100%',
+  flex: 1,
   background: 'rgba(206, 197, 177, 1)',
   oveflowX: 'hidden',
   overflowY: 'auto'

@@ -30,11 +30,11 @@ export const scale = keyframes`
 
 export const brightness = keyframes`
   from {
-    filter: brightness(0%);
+    filter: brightness(0%) blur(5px);
 
   }
   to {
-    filter: brightness(100%);
+    filter: brightness(100%) blur(0);
   )
 `
 export const scaleUp = keyframes`

@@ -63,11 +63,6 @@ export default {
   },
   sololaki: {
     proto: [Block, Flex, Link],
-    // state: {
-    //   style: {
-    //     filter: 'blur(0%)'
-    //   }
-    // },
     image: {
       style: {
         backgroundImage: 'linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)), url(' + COVER_JPG + ')',

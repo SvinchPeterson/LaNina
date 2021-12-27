@@ -14,7 +14,8 @@ const menuIcon = {
 
   style: {
     flexFlow: 'column',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    background: 'black'
   },
   childProto: {
     proto: [Block, Shape],
@@ -45,7 +46,7 @@ const langLinks = {
     proto: [Link, Text],
     props: { size: 'A2' },
     style: {
-      color: 'rgba(243, 231, 219, 1)',
+      color: 'rgba(243, 231, 219, .85)',
       cursor: 'pointer',
       opacity: '.65',
       transition: 'all .6s ease-in-out'
@@ -128,10 +129,10 @@ export default {
     proto: menuIcon,
     style: { zIndex: '30' }
   },
-  menu: {
-    tag: 'aside',
-    proto: SideMenu
-  },
+  // menu: {
+  //   tag: 'aside',
+  //   proto: SideMenu
+  // },
   nav: {
     tag: 'nav',
     proto: [Flex, Block],

@@ -3,11 +3,12 @@
 import { Block, Text } from '@rackai/symbols'
 
 import { Story, Apartment, Services, Contact } from '../../sections'
-import { Header } from '../../components'
+import { Header, SideMenu } from '../../components'
 
 import { laninaResidence } from '../../texts'
 
 import style, { styleBannerBackground } from './style'
+import { update } from '@rackai/domql/src/element'
 
 // const banner = {
 //   proto: Block,
@@ -61,6 +62,7 @@ const banner = {
         letterSpacing: '2px',
         fontWeight: '600',
         opacity: '.85'
+        // fontFamily: 'Bellefair'
       }
     },
     span: {
@@ -88,16 +90,38 @@ const banner = {
       transform: 'translate(-50%, -50%)',
       fontFamily: 'Avenir Next',
       letterSpacing: '2px',
-      opacity: '.65'
+      color: 'rgba(243, 231, 219, .45)'
     }
   }
 }
 
 export default {
   style,
-
   banner,
-  Header,
+  state: {
+    active: true
+  },
+  aside: {
+    proto: SideMenu,
+    class: {
+      show: (element, state) => state.active ? { opacity: 0, height: 0 } : { height: '100%', opacity: 1 },
+      show2: (element, state) => state.active ? { nav: { filter: 'blur(3px)' } } : { nav: { filter: 'blur(0px)' } }
+      // show3: (element, state) => state.active ? { 'nav svg': { opacity: 0, filter: 'blur(3px)' } } : { 'nav svg': { opacity: 0.65, filter: 'blur(0px)' } }
+
+    }
+  },
+  header: {
+    proto: Header,
+    input: {
+    },
+    hmburgerMenuIcon: {
+      on: {
+        click: (event, element, state) => {
+          state.active ? state.update({ active: false }) : state.update({ active: true })
+        }
+      }
+    }
+  },
   Story,
   Apartment,
   Services,

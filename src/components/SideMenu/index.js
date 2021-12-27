@@ -10,140 +10,135 @@ export default {
   proto: Block,
   props: {
     flexFlow: 'column',
-    flexAlign: 'center center'
+    gap: 'D',
+    padding: 'F E 0 E',
+    flexAlign: 'center flex-start'
   },
+
   style: {
+    background: 'linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3), rgba(0, 0, 0, .3))',
+    // mixBlendMode: 'difference',
+    backdropFilter: 'blur(3px)',
     position: 'fixed',
     top: 0,
-    left: '0',
-    opacity: 0,
-    // pointerEvents: 'fill',
-    // zIndex: '100',
-    // background: 'rgba(0, 0, 0, .75)',
-    transition: 'all .7s ease-in-out',
-    width: '0px',
-    height: '100%',
-    // border: '3px solid red',
-    // background: '#0C0C0C',
-    // background: 'red',
-    '> nav': {
-      opacity: 0
-    }
-
+    left: 0,
+    transition: 'all .5s ease-in-out',
+    zIndex: 100
+    // '> nav > *': { transition: 'opacity .8s, filter 3s ease-in-out' }
   },
   nav: {
     proto: Block,
     props: {
       flexFlow: 'column',
-      gap: 'B'
+      gap: 'E'
     },
-    style: {
-      // background: 'brown'
-    },
-    childProto: {
-      proto: [Link, Text],
+    style: { transition: 'all .8s ease-in-out' },
+
+    sectionLinks: {
+      proto: Block,
       props: {
-        size: 'B'
+        flexFlow: 'column',
+        gap: 'B'
       },
-      // attr: {
-      //   tabIndex: '1'
-      // },
-      style: {
-        textTransform: 'uppercase',
-        fontFamily: 'Gilda Display',
-        letterSpacing: '6px',
-        textDecoration: 'none',
-        color: '#F3E7DB',
-        cursor: 'pointer',
-        opacity: '.85',
-        // '&[tabindex]:focus': { color: 'red' },
-        '&:hover': {
-          opacity: 1,
-          fontWeight: '600'
-        }
-        // '&:focus': { color: 'red' }
-
-      }
-    },
-    ...[
-      {
+      childProto: {
+        proto: [Link, Text],
         props: {
-          text: 'story',
-          href: '#story'
-        }
-      },
-      {
-        props: {
-          text: 'apartment',
-          href: '#apartments'
-        }
-      },
-      {
-        props: {
-          text: 'services',
-          href: '#services'
-        }
-      },
-      {
-        props: {
-          text: 'contact',
-          href: '#contact'
-        }
-      },
-      {
-        props: { text: 'We are' }
-      }
-    ]
-  },
-  nav2: {
-    tag: 'nav',
-    proto: Block,
-    props: {
-      flexAlign: 'center flex-start',
-      gap: 'C'
-    },
-    style: {
-      position: 'absolute',
-      top: '90%',
-      left: '45%',
-      transform: 'translate(-50%, -50%)'
-
-    },
-    childProto: {
-      proto: [Link, Block],
-      props: {
-
-      },
-      icon: {
-        proto: [SVG, Block],
-        props: {
-          boxSize: 'B B'
+          size: 'A'
         },
         style: {
-          opacity: '.65'
-          // border: '1px solid red',
-          // width: '24px',
-          // height: '24px'
-        }
-      }
-    },
-    ...[
-      {
-        icon: { src: FACEBOOK_SVG },
-        props: {
-          href: `https://www.facebook.com/laninaresidence`,
-          target: '_blank'
+          fontFamily: 'Bellefair',
+          textTransform: 'uppercase',
+          letterSpacing: '6px',
+          textDecoration: 'none',
+          color: '#F3E7DB',
+          cursor: 'pointer',
+          opacity: '.65',
+          fontWeight: '400',
+          transform: 'scale(.95)',
+          '&:hover': {
+            opacity: '.85',
+            fontWeight: '500',
+            transform: 'scale(1)',
+            transition: 'all .3s ease-in-out'
+          },
+          '&:not(:hover)': {
+            transition: 'all .3s ease-in-out'
+
+          }
+          // '&:focus': { color: 'red' }
+
         }
       },
-      { icon: { src: LINKEDIN_SVG } },
-      {
-        icon: { src: INSTAGRAM_SVG },
-        props: {
-          href: 'https://www.instagram.com/laninaresidence/',
-          target: '_blank'
+      ...[
+        {
+          props: {
+            text: 'story',
+            href: '#story'
+          }
+        },
+        {
+          props: {
+            text: 'apartment',
+            href: '#apartments'
+          }
+        },
+        {
+          props: {
+            text: 'services',
+            href: '#services'
+          }
+        },
+        {
+          props: {
+            text: 'contact',
+            href: '#contact'
+          }
+        },
+        {
+          props: { text: 'We are' }
         }
-      }
-    ]
+      ]
+    },
 
+    socialMedia: {
+      proto: Block,
+      style: { marginLeft: '-10px' },
+      props: {
+        flexAlign: 'center flex-start',
+        gap: 'B2'
+      },
+      childProto: {
+        proto: [Link, Block],
+        icon: {
+          proto: [SVG, Block],
+          props: {
+            boxSize: 'A2 A2'
+          },
+          style: {
+            opacity: '.45',
+            '&:hover': { opacity: '.85' }
+          }
+        }
+      },
+      ...[
+        {
+          icon: { src: FACEBOOK_SVG },
+          props: {
+            href: `https://www.facebook.com/laninaresidence`,
+            target: '_blank'
+          }
+        },
+        { icon: { src: LINKEDIN_SVG } },
+        {
+          icon: { src: INSTAGRAM_SVG },
+          props: {
+            href: 'https://www.instagram.com/laninaresidence/',
+            target: '_blank'
+          }
+        }
+      ]
+
+    }
   }
+
 }
