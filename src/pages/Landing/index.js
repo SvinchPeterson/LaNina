@@ -68,7 +68,7 @@ export default {
         backgroundImage: 'linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)), url(' + COVER_JPG + ')',
         '&:hover': {
           backgroundImage: 'linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url(' + COVER_JPG + ')',
-          boxShadow: 'inset -3px 0px 5px 2px rgba(0, 0, 0, .5)'
+          boxShadow: 'inset -75px 0px 75px 0px rgba(0, 0, 0, .4)'
         }
       }
     },
@@ -89,6 +89,7 @@ export default {
       top: `100px`
     }
   },
+
   rustaveli: {
     proto: [Block, Link],
     style: {
@@ -110,7 +111,7 @@ export default {
         '&:hover': {
           backgroundImage: 'linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url(' + BALCONY_JPEG + ')',
           // borderLeft: '5px solid rgba(0, 0, 0, .5)',
-          boxShadow: 'inset 3px 0px 5px 2px rgba(0, 0, 0, .5)'
+          boxShadow: 'inset 75px 0px 75px 0px rgba(0, 0, 0, .4)'
         }
       }
     }

@@ -11,6 +11,7 @@ export const stylePageLink = {
   overflow: 'hidden',
   textDecoration: 'none',
   filter: 'blur(1px)',
+  border: '0px solid rgba(0, 0, 0, 0)',
 
   '&:hover': {
     flex: 7.5,
@@ -28,6 +29,9 @@ export const stylePageLink = {
     transform: 'scale(1.1)',
     letterSpacing: '6.2px',
     fontWeight: '500'
+  },
+  '&:hover > div': {
+
   },
 
   '& > div': {
@@ -96,7 +100,7 @@ export default {
   flex: 1,
   justifyContent: 'space-between',
   display: 'flex',
-  border: '1px solid black',
+  // border: '1px solid black',
   animationName: brightness,
   animationDuration: '2.2s',
   position: 'relative',
