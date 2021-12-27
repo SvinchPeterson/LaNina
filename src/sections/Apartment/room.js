@@ -4,7 +4,7 @@ import { Block, Text, Link, Button, Flex, Img } from '@rackai/symbols'
 import { RoomDescription, galleryBallerina, galleryRedBrick, galleryYellowCouch } from '../../components'
 
 const Room = {
-  proto: [Block, Flex],
+  proto: Block,
   // description: {
   //   proto: RoomDescription
   // },
@@ -30,38 +30,36 @@ const Room = {
   gallery: {
     tag: 'nav'
   }
-
 }
 
-export const roomLanina = {
+export const roomBallerina = {
   proto: Room,
   gallery: {
-    proto: galleryBallerina,
-    description: {
-      proto: RoomDescription
-    }
-
+    proto: galleryBallerina
+    // description: {
+    //   proto: RoomDescription
+    // }
   }
 }
 
 export const roomRedBrick = {
   proto: Room,
   gallery: {
-    proto: galleryRedBrick,
-    description: {
-      proto: RoomDescription,
-      h3: { props: { text: 'Red Brick' } }
-    }
+    proto: galleryRedBrick
+    // description: {
+    //   proto: RoomDescription,
+    //   h3: { props: { text: 'Red Brick' } }
+    // }
   }
 }
 
 export const roomYellowCouch = {
   proto: Room,
   gallery: {
-    proto: galleryYellowCouch,
-    description: {
-      proto: RoomDescription,
-      h3: { props: { text: 'Yellow Couch' } }
-    }
+    proto: galleryYellowCouch
+    // description: {
+    //   proto: RoomDescription,
+    //   h3: { props: { text: 'Yellow Couch' } }
+    // }
   }
 }

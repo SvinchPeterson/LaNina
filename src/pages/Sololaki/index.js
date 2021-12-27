@@ -37,7 +37,6 @@ const banner = {
         letterSpacing: '2px',
         fontWeight: '600',
         opacity: '.85'
-        // fontFamily: 'Bellefair'
       }
     },
     span: {
@@ -60,10 +59,6 @@ const banner = {
     },
     style: {
       textAlign: 'center',
-      // position: 'absolute',
-      // top: '55%',
-      // left: '50%',
-      // transform: 'translate(-50%, -50%)',
       fontFamily: 'Avenir Next',
       letterSpacing: '2px',
       color: 'rgba(243, 231, 219, .45)'

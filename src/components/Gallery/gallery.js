@@ -39,48 +39,48 @@ export default {
       }
     },
     ...images
-  },
-
-  rightArrow: {
-    tag: 'button',
-    style: {
-      right: '30px'
-    },
-    icon: {
-      proto: Img,
-      props: { src: RIGHT_ARROW }
-    },
-    on: {
-      click: (event, element, state) => {
-        console.log(event)
-        console.log(element)
-        console.log(state)
-        const { activeImage } = state
-        state.update({
-          activeImage: activeImage > (images.length - 2) ? 0 : activeImage + 1
-        })
-      }
-    }
-  },
-  leftArrow: {
-    tag: 'button',
-    style: {
-      left: '30px'
-    },
-    icon: {
-      proto: Img,
-      props: { src: LEFT_ARROW }
-    },
-    on: {
-      click: (event, element, state) => {
-        console.log(event)
-        console.log(element)
-        console.log(state)
-        const { activeImage } = state
-        state.update({
-          activeImage: activeImage < 1 ? (images.length - 1) : activeImage - 1
-        })
-      }
-    }
   }
+
+  // rightArrow: {
+  //   tag: 'button',
+  //   style: {
+  //     right: '30px'
+  //   },
+  //   icon: {
+  //     proto: Img,
+  //     props: { src: RIGHT_ARROW }
+  //   },
+  //   on: {
+  //     click: (event, element, state) => {
+  //       console.log(event)
+  //       console.log(element)
+  //       console.log(state)
+  //       const { activeImage } = state
+  //       state.update({
+  //         activeImage: activeImage > (images.length - 2) ? 0 : activeImage + 1
+  //       })
+  //     }
+  //   }
+  // },
+  // leftArrow: {
+  //   tag: 'button',
+  //   style: {
+  //     left: '30px'
+  //   },
+  //   icon: {
+  //     proto: Img,
+  //     props: { src: LEFT_ARROW }
+  //   },
+  //   on: {
+  //     click: (event, element, state) => {
+  //       console.log(event)
+  //       console.log(element)
+  //       console.log(state)
+  //       const { activeImage } = state
+  //       state.update({
+  //         activeImage: activeImage < 1 ? (images.length - 1) : activeImage - 1
+  //       })
+  //     }
+  //   }
+  // }
 }

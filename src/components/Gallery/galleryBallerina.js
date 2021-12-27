@@ -23,31 +23,31 @@ export const galleryBallerina = {
   state: {},
   images: {
     ...images
-  },
-  rightArrow: {
-    on: {
-      click: (event, element, state) => {
-        console.log(event)
-        console.log(element)
-        console.log(state)
-        const { activeImage } = state
-        state.update({
-          activeImage: activeImage > (images.length - 2) ? 0 : activeImage + 1
-        })
-      }
-    }
-  },
-  leftArrow: {
-    on: {
-      click: (event, element, state) => {
-        console.log(event)
-        console.log(element)
-        console.log(state)
-        const { activeImage } = state
-        state.update({
-          activeImage: activeImage < 1 ? (images.length - 1) : activeImage - 1
-        })
-      }
-    }
   }
+  // rightArrow: {
+  //   on: {
+  //     click: (event, element, state) => {
+  //       console.log(event)
+  //       console.log(element)
+  //       console.log(state)
+  //       const { activeImage } = state
+  //       state.update({
+  //         activeImage: activeImage > (images.length - 2) ? 0 : activeImage + 1
+  //       })
+  //     }
+  //   }
+  // },
+  // leftArrow: {
+  //   on: {
+  //     click: (event, element, state) => {
+  //       console.log(event)
+  //       console.log(element)
+  //       console.log(state)
+  //       const { activeImage } = state
+  //       state.update({
+  //         activeImage: activeImage < 1 ? (images.length - 1) : activeImage - 1
+  //       })
+  //     }
+  //   }
+  // }
 }
