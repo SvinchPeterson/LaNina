@@ -6,7 +6,7 @@ export const stylePageLink = {
   flex: '1',
   minHeight: '100%',
   maxHeight: '100%',
-  transition: 'all .55s ease-in-out',
+  transition: 'all .73s ease-in-out',
   display: 'flex',
   overflow: 'hidden',
   textDecoration: 'none',
@@ -65,15 +65,10 @@ const styleBanner = {
   transform: 'translate(-50%, -50%)',
   animationName: opacity,
   animationDuration: '4s',
-  // AnimationTimingFunction: 'ease-in-out',
-  // transition: 'all .6s ease-in-out',
-  // transitionDelay: '0s',
-
   '> div': {
     span: {
       animationName: scaleUp,
       animationDuration: '1.2s'
-      // animationDelay: '.2s'
     }
   }
 }
@@ -100,7 +95,6 @@ export default {
   flex: 1,
   justifyContent: 'space-between',
   display: 'flex',
-  // border: '1px solid black',
   animationName: brightness,
   animationDuration: '2.2s',
   position: 'relative',
