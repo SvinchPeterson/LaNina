@@ -8,7 +8,6 @@ import { Header, SideMenu } from '../../components'
 import { laninaResidence } from '../../texts'
 
 import style, { styleBanner } from './style'
-import { update } from '@rackai/domql/src/element'
 
 const banner = {
   proto: Block,

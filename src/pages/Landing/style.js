@@ -1,6 +1,6 @@
 'use strict'
 
-import { opacity, scaleUp, letterSpacing, brightness, backgroundPosition, letterSpacing2 } from '../../animations'
+import { opacity, scaleUp, landingLoading, backgroundPosition, letterSpacing2 } from '../../animations'
 
 export const stylePageLink = {
   flex: '1',
@@ -64,7 +64,7 @@ const styleBanner = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   animationName: opacity,
-  animationDuration: '4s',
+  animationDuration: '.6s',
   '> div': {
     span: {
       animationName: scaleUp,
@@ -95,10 +95,11 @@ export default {
   flex: 1,
   justifyContent: 'space-between',
   display: 'flex',
-  animationName: brightness,
+  animationName: landingLoading,
   animationDuration: '2.2s',
   position: 'relative',
   minHeight: '100%',
+  border: '1px solid black',
   '> a': stylePageLink,
 
   '> div': styleBanner,

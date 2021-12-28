@@ -1,6 +1,15 @@
 'use strict'
 import { keyframes } from '@emotion/css'
 
+export const brightness = keyframes`
+  from {
+    filter: brightness(0%) grayscale(60%);
+  }
+  to {
+    filter: brightness(85%) grayscale(30%);
+  )
+`
+
 export const opacity = keyframes`
   from {
     opacity: 0;
@@ -28,7 +37,7 @@ export const scaleDown = keyframes`
   )
 `
 
-export const brightness = keyframes`
+export const landingLoading = keyframes`
   from {
     filter: brightness(0%) blur(5px);
 
@@ -84,16 +93,18 @@ to {
 export const fadeUp2 = keyframes`
   from {
     opacity: 0;
-    transform: scale(.8);
+    transform: scale(.9);
+    filter: blur(5px);
   }
   to {
     opacity: 1;
     transform: scale(1);
+    filter: blur(0px);
   }
 `
 export const letterSpacing = keyframes`
   from {
-    letter-spacing: 0;
+    letter-spacing: 2px;
   }
   to {
     letter-spacing: 10px;
