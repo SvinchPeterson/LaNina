@@ -1,6 +1,6 @@
 'use strict'
 
-import { scaleDown, scaleUp, fadeUp2, filter, letterSpacing, brightness } from '../../animations'
+import { scaleDown, scaleUp, fadeUp2, filter, letterSpacing, brightnessScale } from '../../animations'
 
 import COVER_JPG from '../../assets/images/cover.jpg'
 
@@ -11,9 +11,11 @@ export const styleBanner = {
   filter: 'brightness(85%) grayscale(30%)',
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
-  animationName: brightness,
+  animationName: brightnessScale,
   animationDuration: '1.5s',
   animationTimingFunction: 'ease-in-out',
+  backgroundPosition: 'bottom right',
+  transform: 'scale(1)',
   '> div': {
     animationName: fadeUp2,
     animationDuration: '.6s',

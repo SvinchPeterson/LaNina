@@ -1,12 +1,14 @@
 'use strict'
 import { keyframes } from '@emotion/css'
 
-export const brightness = keyframes`
+export const brightnessScale = keyframes`
   from {
     filter: brightness(0%) grayscale(60%);
+    transform: scale(1.1);
   }
   to {
     filter: brightness(85%) grayscale(30%);
+    transform: scale(1);
   )
 `
 

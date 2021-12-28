@@ -44,7 +44,7 @@ export default {
       childProto: {
         proto: [Link, Text],
         props: {
-          size: 'D'
+          size: 'C'
         },
         style: {
           fontFamily: 'Bellefair',
@@ -116,7 +116,7 @@ export default {
             boxSize: 'B1 B1'
           },
           style: {
-            opacity: '.45',
+            opacity: '.35',
             '&:hover': { opacity: '.65' }
           }
         }
