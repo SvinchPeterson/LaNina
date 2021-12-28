@@ -1,25 +1,10 @@
 'use strict'
-import { Block, Text, Link, Button, Flex, Img } from '@rackai/symbols'
+import { Block, Text } from '@rackai/symbols'
 
 import { roomTabBallerina, roomTabRedBrick, roomTabYellowCouch } from '../../components/RoomTabs'
 import { roomBallerina, roomRedBrick, roomYellowCouch } from './room'
 
 import style from './style'
-
-const roomIcon = {
-  proto: Img,
-  style: {
-    width: '30px',
-    height: '30px',
-    padding: '14px',
-    background: 'rgba(189, 177, 113, .6)',
-    // background: 'rgba(255, 255, 255, .2)',
-    // border: '2px solid rgba(189, 177, 113, .6)',
-    position: 'absolute',
-    opacity: 0,
-    transition: 'all .3s ease-in-out'
-  }
-}
 
 export default {
   tag: 'article',
@@ -65,6 +50,7 @@ export default {
       ...[
         {
           proto: roomTabBallerina
+
         },
         {
           proto: roomTabRedBrick
@@ -77,27 +63,28 @@ export default {
 
     rooms: {
       proto: Block,
-      // props: {
-      //   flexAlign: 'center center'
-      // },
+      props: {
+        padding: 'D 0 0 0'
+      },
       style: {
-        border: '10px solid green',
         display: 'flex'
       },
       childProto: {
         proto: Block,
         props: {
-          flexAlign: 'center center'
+          // flexAlign: 'flex-start flex-start',
+          // flexFlow: 'column'
         },
         style: {
-          flex: 0,
-          border: '10px solid orange',
+          transition: 'all 1.2s ease-in-out',
+          background: 'black',
           '> nav': {
             flex: 1,
             display: 'flex',
             position: 'relative',
-            border: '10px solid blue',
-            minHeight: '100%'
+            minHeight: '100%',
+            flexFlow: 'column',
+            flexAlign: 'flex-start flex-start'
           },
           '> nav > div': {
             flex: 1,
@@ -105,29 +92,55 @@ export default {
           },
           '> nav > button': {
             height: 'fit-content',
-            position: 'absolute'
+            position: 'absolute',
+            background: 'transparent',
+            top: '45%',
+            border: 'none',
+            transitionDelay: '1.4s',
+            cursor: 'pointer'
           },
           '> nav > button > img': {
-            background: 'red',
-            width: '100px',
-            height: '150px'
+            width: '60px',
+            height: '100px'
 
           },
           '> nav > div > span': {
-            flex: 1,
-            backgroundSize: 'cover'
+            // flex: 0,
+            // minWidth: 0,
+            backgroundSize: 'cover',
+            '&:first-child:hover': {
+              backgroundPosition: 'bottom right',
+              transition: 'all 1.2s ease-in-out'
+            }
           }
         },
         class: {
-          show: (element, state) => state.active === element.key ? { flex: 1, minHeight: '750px' } : { minHeight: 0, flex: 0 }
+          show: (element, state) => state.active === element.key ? { minHeight: '800px', minWidth: '100%', opacity: 1, filter: 'brightness(70%) grayscale(50%)' } : { minHeight: 0, opacity: '.3', filter: 'brightness(0%)' }
+        },
+
+        gallery: {
+          rightArrow: {
+            class: {
+              show: (element, state) => state.active === element.parent.parent.key ? { opacity: 1 } : { opacity: 0 }
+            }
+          },
+
+          leftArrow: {
+            class: {
+              show: (element, state) => state.active === element.parent.parent.key ? { opacity: 1 } : { opacity: 0 }
+            }
+          }
         }
+
       },
       ...[
         {
-          proto: roomBallerina
+          proto: roomBallerina,
+          attr: { id: 'ballerina' }
+
         },
-        { proto: roomRedBrick },
-        { proto: roomYellowCouch }
+        { proto: roomRedBrick, attr: { id: 'redBrick' } },
+        { proto: roomYellowCouch, attr: { id: 'yellowCouch' } }
       ]
     }
   }

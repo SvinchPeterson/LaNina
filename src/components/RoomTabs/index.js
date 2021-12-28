@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block, Img, Flex } from '@rackai/symbols'
+import { Block, Img, Flex, Link } from '@rackai/symbols'
 
 import BALLERINA_JPG from '../../assets/images/ballerina/ballerinaCover.jpg'
 import RED_BRICK_JPG from '../../assets/images/redBrick/redBrickCover.jpg'
@@ -28,8 +28,7 @@ const roomIcon = {
 }
 
 export const roomTab = {
-  tag: 'label',
-  proto: Block,
+  proto: [Block, Link],
   style: {
     width: `${320 / 16}em`,
     height: `${400 / 16}em`,
@@ -72,7 +71,7 @@ export const roomTab = {
 
 export const roomTabBallerina = {
   proto: roomTab,
-  attr: { for: 'tab-ballerina' },
+  props: { href: '#ballerina' },
   style: { justifySelf: 'end' },
 
   roomImage: {
@@ -83,6 +82,7 @@ export const roomTabBallerina = {
 
 export const roomTabRedBrick = {
   proto: roomTab,
+  props: { href: '#redBrick' },
   style: { justifySelf: 'center' },
   roomImage: {
     style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' }
@@ -92,6 +92,7 @@ export const roomTabRedBrick = {
 
 export const roomTabYellowCouch = {
   proto: roomTab,
+  props: { href: '#yellowCouch' },
   style: { justifySelf: 'start' },
   roomImage: {
     style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' }

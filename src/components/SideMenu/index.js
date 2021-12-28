@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Img, Link, SVG } from '@rackai/symbols'
+import { Block, Text, Link, SVG } from '@rackai/symbols'
 
 import FACEBOOK_SVG from '../../assets/facebook2.svg'
 import INSTAGRAM_SVG from '../../assets/instagram2.svg'

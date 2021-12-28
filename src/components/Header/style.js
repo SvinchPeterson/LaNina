@@ -3,7 +3,8 @@
 export default {
   width: '100%',
   position: 'fixed',
-  top: 0,
+  height: 0,
+  top: '50px',
   zIndex: 100,
   alignItems: 'center',
   fontFamily: 'Avenir Next',

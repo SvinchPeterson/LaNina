@@ -2,16 +2,12 @@
 import { displays, movingPhotos, dropDown } from '../../animations'
 
 export default {
-  border: '15px solid red',
+  overflow: 'hidden',
   h4: {
     textAlign: 'center',
     color: 'rgba(0, 0, 0, .55)',
     letterSpacing: '10px',
-    fontWeight: '500',
-    border: '2px solid red'
-  },
-  '> section': {
-
+    fontWeight: '500'
   }
   // '> section': {
 
