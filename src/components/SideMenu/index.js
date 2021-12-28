@@ -12,13 +12,14 @@ export default {
     flexFlow: 'column',
     gap: 'D',
     padding: 'F E 0 E',
-    flexAlign: 'center flex-start'
+    flexAlign: 'flex-start flex-start'
   },
 
   style: {
-    background: 'linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .4))',
+    background: 'radial-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7))',
     backdropFilter: 'blur(3px)',
     position: 'fixed',
+    minWidth: '100%',
     top: 0,
     left: 0,
     transition: 'all .5s ease-in-out',
@@ -28,20 +29,22 @@ export default {
     proto: Block,
     props: {
       flexFlow: 'column',
-      gap: 'E'
+      gap: 'G'
     },
-    style: { transition: 'all .7s ease-in-out' },
+    style: {
+      transition: 'all .7s ease-in-out'
+    },
 
     sectionLinks: {
       proto: Block,
       props: {
         flexFlow: 'column',
-        gap: 'B'
+        gap: 'B1'
       },
       childProto: {
         proto: [Link, Text],
         props: {
-          size: 'A'
+          size: 'D'
         },
         style: {
           fontFamily: 'Bellefair',
@@ -50,17 +53,17 @@ export default {
           textDecoration: 'none',
           color: '#F3E7DB',
           cursor: 'pointer',
-          opacity: '.65',
+          opacity: '.4',
           fontWeight: '400',
-          transform: 'scale(.95)',
           '&:hover': {
-            opacity: '.85',
+            opacity: '.65',
             fontWeight: '500',
-            transform: 'scale(1)',
-            transition: 'all .3s ease-in-out'
+            transform: 'scale(.95)',
+            transition: 'all .5s ease-in-out',
+            letterSpacing: '6.5px'
           },
           '&:not(:hover)': {
-            transition: 'all .3s ease-in-out'
+            transition: 'all .5s ease-in-out'
 
           }
           // '&:focus': { color: 'red' }
@@ -100,21 +103,21 @@ export default {
 
     socialMedia: {
       proto: Block,
-      style: { marginLeft: '-10px' },
+      // style: { marginLeft: '-10px' },
       props: {
         flexAlign: 'center flex-start',
-        gap: 'B2'
+        gap: 'D'
       },
       childProto: {
         proto: [Link, Block],
         icon: {
           proto: [SVG, Block],
           props: {
-            boxSize: 'A2 A2'
+            boxSize: 'B1 B1'
           },
           style: {
             opacity: '.45',
-            '&:hover': { opacity: '.85' }
+            '&:hover': { opacity: '.65' }
           }
         }
       },
@@ -135,7 +138,6 @@ export default {
           }
         }
       ]
-
     }
   }
 

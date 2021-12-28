@@ -41,7 +41,7 @@ const banner = {
     span: {
       props: {
         text: 'SOLOLAKI',
-        size: 'B'
+        size: 'C'
       },
       style: {
         letterSpacing: '10px',

@@ -37,5 +37,6 @@ export default {
   flex: 1,
   background: 'rgba(206, 197, 177, 1)',
   oveflowX: 'hidden',
-  overflowY: 'auto'
+  overflowY: 'auto',
+  position: 'relative'
 }
