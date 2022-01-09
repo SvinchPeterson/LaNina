@@ -83,7 +83,7 @@ const styleHeading = {
   textTransform: 'uppercase',
   fontSize: `${14 / 16}em`,
   letterSpacing: '6px',
-  transition: 'all .5s ease-in-out',
+  transition: 'all 1s ease-in-out',
   animationName: letterSpacing2,
   animationDuration: '1.5s',
   fontFamily: 'Bellefair',
