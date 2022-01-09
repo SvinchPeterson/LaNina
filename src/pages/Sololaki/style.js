@@ -12,7 +12,7 @@ export const styleBanner = {
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
   animationName: brightnessScale,
-  animationDuration: '1.5s',
+  animationDuration: '2s',
   animationTimingFunction: 'ease-in-out',
   backgroundPosition: 'bottom right',
   transform: 'scale(1)',

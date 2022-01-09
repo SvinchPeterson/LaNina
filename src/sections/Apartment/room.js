@@ -5,30 +5,22 @@ import { RoomDescription, galleryBallerina, galleryRedBrick, galleryYellowCouch 
 
 const Room = {
   proto: Block,
-  // description: {
-  //   proto: RoomDescription
-  // },
-  // input: {
-  //   attr: {
-  //     type: 'checkbox',
-  //     id: 'click'
-  //   }
-  // },
-  // label: {
-  //   attr: {
-  //     for: 'click'
-  //   },
-  //   style: {
-  //     background: 'red',
-  //     position: 'absolute',
-  //     right: 0,
-  //     top: 0,
-  //     zIndex: '30',
-  //     cursor: 'pointer'
-  //   }
-  // },
   gallery: {
-    tag: 'nav'
+    tag: 'nav',
+    style: {
+      position: 'relative',
+      overflow: 'hidden'
+    },
+    description: {
+      proto: RoomDescription,
+      style: {
+        transition: 'all 2s ease-in-out',
+        transitionDelay: '1s'
+      },
+      class: {
+        show: (element, state) => state.active === element.parent.parent.key ? { height: '100%', opacity: 1, left: 0 } : { height: 0, opacity: 0, left: '-100%' }
+      }
+    }
   }
 }
 

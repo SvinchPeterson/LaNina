@@ -78,6 +78,7 @@ export default {
         style: {
           transition: 'all 1.2s ease-in-out',
           background: 'black',
+
           '> nav': {
             flex: 1,
             display: 'flex',
@@ -105,8 +106,6 @@ export default {
 
           },
           '> nav > div > span': {
-            // flex: 0,
-            // minWidth: 0,
             backgroundSize: 'cover',
             '&:first-child:hover': {
               backgroundPosition: 'bottom right',
@@ -144,120 +143,4 @@ export default {
       ]
     }
   }
-  // roomsContainer: {
-  //   style: {
-  //     border: '5px solid blue',
-  //     display: 'flex',
-  //     flexFlow: 'column'
-  //   },
-  //   class: {
-  //     show: (element, state) => state.active ? { opacity: 0, height: 0 } : { height: '750px', opacity: 1 }
-  //   },
-  //   childProto: {
-  //     proto: Block,
-  //     style: { border: '5px solid brown', flex: 1 }
-  //   },
-  //   ...[
-  //     {
-  //       proto: roomLanina
-  //     },
-  //     {
-  //       proto: roomRedBrick
-  //     },
-  //     {
-  //       proto: roomYellowCouch
-  //     }
-  //   ]
-  // }
-
-  // input: {
-  //   attr: {
-  //     type: 'radio',
-  //     value: 'tab-ballerina',
-  //     id: 'tab-ballerina',
-  //     name: 'action'
-  //   }
-  // }
-
-  //   label: {
-  //     proto: roomTabBallerina,
-  //     attr: { for: 'tab-ballerina' },
-  //     style: {
-  //       '&::after': {
-  //         content: '"Ballerina"',
-  //         color: 'rgba(0, 0, 0, .65)',
-  //         fontSize: '16px',
-  //         position: 'absolute',
-  //         bottom: '-60px',
-  //         fontFamily: 'Avenir Next',
-  //         letterSpacing: '4px',
-  //         opacity: 0,
-  //         transitionDelay: '.4',
-  //         transition: 'all 1s ease-in-out'
-  //       }
-  //     }
-  //   },
-  //   room: {
-  //     proto: roomLanina
-  //   },
-
-  //   input2: {
-  //     tag: 'input',
-  //     attr: {
-  //       type: 'radio',
-  //       id: 'tab-redBrick',
-  //       name: 'action'
-  //     }
-  //   },
-  //   label2: {
-  //     proto: roomTabRedBrick,
-  //     attr: { for: 'tab-redBrick' },
-  //     style: {
-  //       '&::after': {
-  //         content: '"Red Brick"',
-  //         color: 'rgba(0, 0, 0, .65)',
-  //         fontSize: '16px',
-  //         position: 'absolute',
-  //         bottom: '-60px',
-  //         fontFamily: 'Avenir Next',
-  //         letterSpacing: '4px',
-  //         opacity: 0,
-  //         transitionDelay: '.4s',
-  //         transition: 'all 1s ease-in-out'
-  //       }
-  //     }
-  //   },
-  //   room2: {
-  //     proto: roomRedBrick
-  //   },
-
-  //   input3: {
-  //     tag: 'input',
-  //     attr: {
-  //       type: 'radio',
-  //       id: 'tab-yellowCouch',
-  //       name: 'action'
-  //     }
-  //   },
-  //   label3: {
-  //     proto: roomTabYellowCouch,
-  //     attr: { for: 'tab-yellowCouch' },
-  //     style: {
-  //       '&::after': {
-  //         content: '"Yellow Couch"',
-  //         color: 'rgba(0, 0, 0, .65)',
-  //         fontSize: '16px',
-  //         position: 'absolute',
-  //         bottom: '-60px',
-  //         fontFamily: 'Avenir Next',
-  //         letterSpacing: '4px',
-  //         opacity: 0,
-  //         transitionDelay: '.4s',
-  //         transition: 'all 1s ease-in-out'
-  //       }
-  //     }
-  //   },
-  //   room3: {
-  //     proto: roomYellowCouch
-  // }
 }

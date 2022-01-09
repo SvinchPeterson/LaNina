@@ -11,3 +11,40 @@ export const laninaResidence = {
     props: { text: 'Residence' }
   }
 }
+
+export const origin = {
+  proto: Text,
+  props: {
+    text: `“La Nina Residence” is a company started by two brothers Giorgi and David,
+    the idea started from our grandparents who started investing in real estate in the district of Sololaki and we collectively decided to
+    give this so called old “Italian Yard” a new life by renovating them for personal reasons and in this process we realized that this
+    location has a bigger and brighter future thus we started developing a apart hotel type of accommodation
+    that would be the place to be for tourists with lot of new upcoming projects within this yard.`
+  }
+}
+
+export const mission = {
+  proto: Text,
+  props: {
+    text: `Providing remarkable lodging facilities and services to our guests.
+    Emphasizing on customer service and creating an unforgettable in-home experience.`
+  }
+}
+
+export const vision = {
+  proto: Text,
+  props: {
+    text: `“Constantly implementing new strategies to help the local community and applying new environmental technologies.
+    We strive to be the place to stay in Tbilisi for guests who want to feel at home away from home.”`
+  }
+}
+
+export const laninaSololaki = {
+  proto: Text,
+  props: {
+    text: `“La Nina Residence Sololaki” is located in the heart of Tbilisi in the district of Sololaki,
+    Amaghleba street 8/41. The building was originally built in 1898, and represents traditional Georgian housing structure called a so called
+    “Italian yard” which in reality is “Tbilisian yard” - A socio-cultural space that characterizes the city of Tbilisi and gives you an insight of the unique architectural appearance of the city.
+    Walking distance to liberty square, Mtatsminda park and other points of interest.`
+  }
+}
