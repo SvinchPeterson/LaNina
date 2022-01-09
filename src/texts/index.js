@@ -48,3 +48,16 @@ export const laninaSololaki = {
     Walking distance to liberty square, Mtatsminda park and other points of interest.`
   }
 }
+
+export const wine = {
+  proto: Text,
+  props: {
+    text: `Georgians are very proud of their rich and historic winemaking culture, and as traditional methods enjoy a renaissance,
+    the Qvevri (an earthenware vessel used to store and age wine for thousands of years). Georgia is generally considered the ‘cradle of wine’,
+    as archaeologists have traced the world’s first known wine creation back to the people of the South Caucasus in 6,000BC.
+    These early Georgians discovered grape juice could be turned into wine by burying it underground for the winter.
+    Some of the qvevri’s were buried in could remain underground for up to 50 years. Wine continued to be important to the Georgians,
+    who incorporated it into art and sculpture,
+    with grape designs and evidence of wine-drinking paraphernalia found at ruins and burial sites..`
+  }
+}
