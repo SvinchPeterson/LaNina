@@ -13,23 +13,9 @@ export default {
     padding: 'G 0 0 0'
   },
   style,
-  // h4: {
-  //   proto: [Block, Text],
-  //   props: {
-  //     text: 'Story',
-  //     padding: '0 0 C 0'
-  //   },
-  //   attr: { id: 'story' }
-  // },
-  // content: {
-  //   proto: Block,
-  //   props: {
-  //     gap: 'G',
-  //     flexFlow: 'column'
-  //   }
-  // }
   childProto: {
     proto: Block,
+    tag: 'section',
     props: {
       flexFlow: 'row'
     },
@@ -37,6 +23,7 @@ export default {
       position: 'relative'
     },
     image: {
+      tag: 'img',
       proto: Block,
       class: [styleStoryImage]
     },

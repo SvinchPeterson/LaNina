@@ -1,18 +1,20 @@
 'use strict'
 
-const styleStory = {
-  border: '5px solid red'
-}
-
 export default {
-  h4: {
-    textAlign: 'center',
-    color: 'rgba(0, 0, 0, .55)',
-    letterSpacing: '10px',
-    fontWeight: '500'
-  },
-  '> div': {
-    border: '5px solid green'
-  },
-  '> div > div': styleStory
+  border: '10px solid red',
+  '> section': {
+    border: '10px solid green',
+    '> img': {
+      border: '10px solid yellow'
+    },
+    '> div': {
+      border: '10px solid blue',
+      '> h6': {
+        border: '5px solid purple'
+      },
+      '> p': {
+        border: '5px solid orangered'
+      }
+    }
+  }
 }
