@@ -96,10 +96,11 @@ export default {
   justifyContent: 'space-between',
   display: 'flex',
   animationName: landingLoading,
-  animationDuration: '2.2s',
+  filter: 'brightness(100%) blur(0) contrast(100%)',
+  animationDuration: '3s',
   position: 'relative',
   minHeight: '100%',
-  border: '1px solid black',
+  // border: '1px solid black',
   '> a': stylePageLink,
 
   '> div': styleBanner,

@@ -1,19 +1,19 @@
 'use strict'
 
 export default {
-  border: '10px solid red',
+  // border: '10px solid red',
   '> section': {
-    border: '10px solid green',
+    // border: '10px solid green',
     '> img': {
-      border: '10px solid yellow'
+      // border: '10px solid yellow'
     },
     '> div': {
-      border: '10px solid blue',
+      // border: '10px solid blue',
       '> h6': {
-        border: '5px solid purple'
+        // border: '5px solid purple'
       },
       '> p': {
-        border: '5px solid orangered'
+        // border: '5px solid orangered'
       }
     }
   }

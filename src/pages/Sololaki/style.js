@@ -37,7 +37,10 @@ export const styleBanner = {
 
 export default {
   flex: 1,
-  background: 'rgba(206, 197, 177, 1)',
+  // background: 'linear-gradient(rgba(246, 239, 225, 1),rgba(222, 219, 214, 1), rgba(255, 249, 235, 1))',
+  // background: 'rgba(246, 239, 225, 1)',
+  // background: 'rgba(206, 197, 177, 1)',
+  background: 'linear-gradient(rgba(255, 249, 235, 1), rgba(255, 249, 235, 1))',
   oveflowX: 'hidden',
   overflowY: 'auto',
   position: 'relative'

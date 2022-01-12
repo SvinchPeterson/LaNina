@@ -1,122 +1,105 @@
 'use strict'
-import { Block, Text, Flex, Link } from '@rackai/symbols'
+import { Block, Text, Flex, Link, Img } from '@rackai/symbols'
 
 import OLDTBILISI_JEPG from '../../assets/images/cover.jpg'
 import WINE_JPG from '../../assets/images/wine.jpg'
 
-import style, { styleStoryImage, styleParagraph, styleCityParagraph } from './style'
+import { laninaSololaki, wine } from '../../texts'
+
+import style, {} from './style'
+
+const storySection = {
+  tag: 'section',
+  proto: Block,
+  props: {
+    flexFlow: 'row',
+    padding: '0 D'
+  },
+  image: {
+    tag: 'span',
+    proto: [Block],
+    style: {
+      display: 'block',
+      backgroundAttachment: 'fixed',
+      minHeight: `${700 / 16}em`,
+      backgroundRepeat: 'no-repeat',
+      filter: 'grayscale(40%)'
+    }
+    // class: [styleStoryImage]
+  },
+  tale: {
+    proto: Block,
+    props: {
+      flexFlow: 'column',
+      flexAlign: 'center center'
+    },
+    h6: {
+      proto: Text
+    },
+    p: {}
+  }
+}
 
 export default {
   tag: 'article',
   proto: Block,
   props: {
-    padding: 'G 0 0 0'
+    flexFlow: 'column',
+    padding: 'G 0 0 0',
+    gap: 'F'
   },
   style,
   childProto: {
-    proto: Block,
-    tag: 'section',
-    props: {
-      flexFlow: 'row'
-    },
-    style: {
-      position: 'relative'
-    },
-    image: {
-      tag: 'img',
-      proto: Block,
-      class: [styleStoryImage]
-    },
-    paragraph: {
-      proto: [Block, Flex],
-      props: {
-        padding: 'C',
-        gap: 'A'
-      },
-      class: [styleParagraph],
-      h6: {
-        proto: Text
-      },
-      p: {
-        proto: Text,
-        style: {
-          fontFamily: 'Bellefair'
-          // color: 'rgba(0, 0, 0, .2)'
-        }
-      }
-    }
+    proto: storySection,
+    style: { flex: 1 }
   },
   ...[
     {
       image: {
-        // props: { height: 'H2' },
         style: {
+          flex: 2,
           backgroundImage: 'url(' + OLDTBILISI_JEPG + ')',
           backgroundSize: 'cover',
-          width: '80%'
+          boxShadow: 'inset -75px 0px 75px 0px rgba(0, 0, 0, .55)'
         }
       },
-      paragraph: {
-        style: styleCityParagraph,
-
-        h6: {
-          props: { text: 'Old Tbilisi' }
+      tale: {
+        props: {
+          padding: '0 0 0 D'
         },
+        style: {
+          flex: 1
+        },
+        h6: { text: 'hotel' },
         p: {
-          style: {
-            maxWidth: `${400 / 18}em`
-          },
-          props: {
-            text: `Sololaki is one of the oldest districts in Tbilisi located on
-            the south-eastern edge of the city on the right bank of the river “Mtkvari”. During the Arab
-            rule an irrigation canal (Arabic: Sulu-lah) was rebuilt to irrigate the “Fortress Garden”. “Su” is not
-            Arabic but a Turkish word for water. Later the mountain slope on which this district is cultivated was
-            called “Sululah”. While the toponym Sololaki appeared in the XIX century.`
-          }
+          proto: laninaSololaki
         }
       }
     },
 
     {
-      paragraph: {
-        style: {
-          flex: 1,
-          alignItems: 'center',
-          boxSizing: 'border-box',
-          paddingTop: `${100 / 16}em`
+      tale: {
+        props: {
+          padding: '0 D 0 0'
         },
-        h6: {
-          props: { text: 'Wine' }
-        },
+        style: { flex: 2 },
+        h6: { text: 'wine' },
         p: {
-          style: {
-            maxWidth: `${600 / 18}em`
-          },
-          props: {
-            text: `Georgians are very proud of their rich and historic winemaking culture,
-            and as traditional methods enjoy a renaissance, the Qvevri (an earthenware
-            vessel used to store and age wine for thousands of years). Georgia is generally
-            considered the ‘cradle of wine’, as archaeologists have traced the world’s first known wine creation back to
-            the people of the South Caucasus in 6,000BC. These early Georgians discovered grape juice could be turned into
-            wine by burying it underground for the winter. Some of the qvevri’s were buried in could remain underground for up to 50 years.
-            Wine continued to be important to the Georgians, who incorporated it into art and sculpture, with grape designs and evidence
-            of wine-drinking paraphernalia found at ruins and burial sites..`
-          }
+          proto: wine
         }
       },
-
+      // props: { flexFlow: 'row-reverse' },
       image: {
         style: {
+          flex: 1,
           backgroundImage: 'url(' + WINE_JPG + ')',
           backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          // height: `${800 / 16}em`,
-          backgroundPositionX: '89%',
-          width: '37%',
-          marginRight: `${100 / 16}em`
+          backgroundPosition: 'right center',
+          boxShadow: 'inset 75px 0px 75px 0px rgba(0, 0, 0, .55)'
+          // boxShadow: 'inset 10px 0em 70px rgba(0, 0, 0, 2)'
+          // boxShadow: 'inset 0px -2px 70px 0px rgba(0, 0, 0, .65)'
         }
       }
-
     }
   ]
 }
