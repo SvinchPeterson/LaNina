@@ -10,7 +10,8 @@ export default {
   tag: 'article',
   proto: Block,
   props: {
-    flexFlow: 'column'
+    flexFlow: 'column',
+    padding: 'G 0 0 0'
   },
   style,
   state: {

@@ -1,9 +1,8 @@
 'use strict'
 
 export default {
-  // border: '10px solid red',
+  // overflowX: 'hidden',
   '> section': {
-    // border: '10px solid green',
     '> img': {
       // border: '10px solid yellow'
     },

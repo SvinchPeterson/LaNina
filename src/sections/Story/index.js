@@ -1,5 +1,6 @@
 'use strict'
 import { Block, Text, Flex, Link, Img } from '@rackai/symbols'
+import { opacity } from '../../animations'
 
 import OLDTBILISI_JEPG from '../../assets/images/cover.jpg'
 import WINE_JPG from '../../assets/images/wine.jpg'
@@ -12,8 +13,25 @@ const storySection = {
   tag: 'section',
   proto: Block,
   props: {
-    flexFlow: 'row',
-    padding: '0 D'
+    flexFlow: 'row'
+    // padding: '0 D'
+  },
+  style: {
+    position: 'relative',
+    zIndex: 100,
+    '&:hover > div > p': {
+      opacity: 1
+
+    },
+    '&:hover > span': {
+      // backgroundPosition: 'bottom left',
+      transform: 'scale(1.7)'
+    },
+    '&:hover > div': {
+      width: '50%',
+      // transition: 'all 3s ease-in-out',
+      opacity: 1
+    }
   },
   image: {
     tag: 'span',
@@ -23,20 +41,43 @@ const storySection = {
       backgroundAttachment: 'fixed',
       minHeight: `${700 / 16}em`,
       backgroundRepeat: 'no-repeat',
-      filter: 'grayscale(40%)'
+      filter: 'grayscale(50%) brightness(30%)',
+      backgroundSize: 'contain',
+      transition: 'all 2s ease-in-out',
+      '&:hover ~ div > p': {
+        opacity: 1
+
+      }
     }
-    // class: [styleStoryImage]
   },
   tale: {
     proto: Block,
+    style: {
+      position: 'absolute',
+      right: 0,
+      background: 'linear-gradient(rgba(255, 249, 235, 1), rgba(255, 249, 235, 1))',
+      height: '100%',
+      width: 0,
+      opacity: 0,
+      transition: 'all .8s ease-in-out'
+      // border: '4px solid red'
+    },
+
     props: {
-      flexFlow: 'column',
       flexAlign: 'center center'
+
     },
-    h6: {
-      proto: Text
-    },
-    p: {}
+    p: {
+      style: {
+        // fontFamily: 'Avenir Next',
+        fontFamily: 'Avenir Next',
+        lineHeight: '30px',
+        opacity: 0,
+        transition: 'all .3s ease-in-out',
+        transitionDelay: '.8s'
+        // background: 'red'
+      }
+    }
   }
 }
 
@@ -45,8 +86,8 @@ export default {
   proto: Block,
   props: {
     flexFlow: 'column',
-    padding: 'G 0 0 0',
-    gap: 'F'
+    // padding: 'J 0 J 0',
+    gap: 'C'
   },
   style,
   childProto: {
@@ -55,49 +96,50 @@ export default {
   },
   ...[
     {
+      // style: {
+      //   paddingRight: '100px'
+      // },
       image: {
         style: {
-          flex: 2,
           backgroundImage: 'url(' + OLDTBILISI_JEPG + ')',
-          backgroundSize: 'cover',
-          boxShadow: 'inset -75px 0px 75px 0px rgba(0, 0, 0, .55)'
+          flex: 1,
+          transform: 'scale(1.5)'
         }
       },
       tale: {
         props: {
-          padding: '0 0 0 D'
+          flexAlign: 'center flex-end',
+          padding: '0 E'
         },
         style: {
-          flex: 1
+          flex: 1,
+          boxSizing: 'border-box'
         },
-        h6: { text: 'hotel' },
         p: {
-          proto: laninaSololaki
+          proto: laninaSololaki,
+          style: {
+            // maxWidth: `${500 / 16}em`
+          }
         }
       }
     },
-
     {
-      tale: {
-        props: {
-          padding: '0 D 0 0'
-        },
-        style: { flex: 2 },
-        h6: { text: 'wine' },
-        p: {
-          proto: wine
-        }
-      },
-      // props: { flexFlow: 'row-reverse' },
       image: {
         style: {
-          flex: 1,
           backgroundImage: 'url(' + WINE_JPG + ')',
-          backgroundSize: 'contain',
-          backgroundPosition: 'right center',
-          boxShadow: 'inset 75px 0px 75px 0px rgba(0, 0, 0, .55)'
-          // boxShadow: 'inset 10px 0em 70px rgba(0, 0, 0, 2)'
-          // boxShadow: 'inset 0px -2px 70px 0px rgba(0, 0, 0, .65)'
+          backgroundPosition: 'center center',
+          flex: 2,
+          transform: 'scale(1.5)'
+        }
+      },
+      tale: {
+        style: { flex: 1.5 },
+        props: {
+          flexAlign: 'center flex-start',
+          padding: '0 E'
+        },
+        p: {
+          proto: wine
         }
       }
     }

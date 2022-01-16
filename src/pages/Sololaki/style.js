@@ -41,7 +41,7 @@ export default {
   // background: 'rgba(246, 239, 225, 1)',
   // background: 'rgba(206, 197, 177, 1)',
   background: 'linear-gradient(rgba(255, 249, 235, 1), rgba(255, 249, 235, 1))',
-  oveflowX: 'hidden',
+  overflowX: 'hidden',
   overflowY: 'auto',
   position: 'relative'
 }
