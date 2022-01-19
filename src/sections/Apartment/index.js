@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text } from '@rackai/symbols'
+import { Block, Text, Grid } from '@rackai/symbols'
 
 import { roomTabBallerina, roomTabRedBrick, roomTabYellowCouch } from '../../components/RoomTabs'
 import { roomBallerina, roomRedBrick, roomYellowCouch } from './room'
@@ -17,26 +17,45 @@ export default {
   state: {
     active: 0
   },
-  h4: {
-    proto: [Block, Text],
-    props: {
-      text: 'Apartments',
-      padding: 'E 0 C 0'
-    },
-    attr: { id: 'apartments' }
-  },
+  // h4: {
+  //   proto: [Block, Text],
+  //   props: {
+  //     text: 'Apartments',
+  //     padding: 'E 0 C 0'
+  //   },
+  //   attr: { id: 'apartments' }
+  // },
   content: {
     tag: 'section',
     proto: Block,
     props: {
-      flexFlow: 'column'
+      flexFlow: 'column',
+      gap: 'D'
     },
     roomTabs: {
       tag: 'header',
-      proto: Block,
+      proto: [Block],
       props: {
-        flexAlign: 'center center',
+        flexFlow: 'row',
         gap: 'D'
+      },
+      style: {
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        // border: '2px solid red',
+        height: '500px',
+        paddingTop: '150px',
+        '> a:hover': {
+          flex: 3,
+          transition: 'all 1.5s ease-in-out'
+        },
+        '> a:hover > div': {
+          backgroundPosition: 'left center'
+          // transform: 'scale(1.02)'
+        },
+        '> a': {
+          flex: 1,
+          transition: 'all .3s ease-in-out'
+        }
       },
 
       childProto: {
@@ -45,6 +64,7 @@ export default {
         on: {
           click: (event, element, state) => {
             state.update({ active: element.key })
+            element.style.update({ flex: 3 })
           }
         }
       },
@@ -77,7 +97,8 @@ export default {
           // flexFlow: 'column'
         },
         style: {
-          transition: 'all 1.2s ease-in-out',
+
+          transition: 'all 1.5s ease-in-out',
           background: 'black',
 
           '> nav': {
@@ -98,7 +119,7 @@ export default {
             background: 'transparent',
             top: '45%',
             border: 'none',
-            transitionDelay: '1.4s',
+            transitionDelay: '0s',
             cursor: 'pointer'
           },
           '> nav > button > img': {

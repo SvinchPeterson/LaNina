@@ -14,23 +14,16 @@ const storySection = {
   proto: Block,
   props: {
     flexFlow: 'row'
-    // padding: '0 D'
   },
   style: {
     position: 'relative',
-    zIndex: 100,
     '&:hover > div > p': {
-      opacity: 1
+      opacity: 1,
+      transform: 'scale(1)'
 
     },
     '&:hover > span': {
-      // backgroundPosition: 'bottom left',
-      transform: 'scale(1.7)'
-    },
-    '&:hover > div': {
-      width: '50%',
-      // transition: 'all 3s ease-in-out',
-      opacity: 1
+      transform: 'scale(1.6)'
     }
   },
   image: {
@@ -41,41 +34,35 @@ const storySection = {
       backgroundAttachment: 'fixed',
       minHeight: `${700 / 16}em`,
       backgroundRepeat: 'no-repeat',
-      filter: 'grayscale(50%) brightness(30%)',
+      filter: 'grayscale(50%) brightness(40%)',
       backgroundSize: 'contain',
-      transition: 'all 2s ease-in-out',
-      '&:hover ~ div > p': {
-        opacity: 1
-
-      }
+      transition: 'all 2s ease-in-out'
     }
   },
   tale: {
     proto: Block,
+
     style: {
       position: 'absolute',
-      right: 0,
-      background: 'linear-gradient(rgba(255, 249, 235, 1), rgba(255, 249, 235, 1))',
+      top: 0,
+      background: 'transparent',
       height: '100%',
-      width: 0,
-      opacity: 0,
-      transition: 'all .8s ease-in-out'
-      // border: '4px solid red'
+      boxSizing: 'border-box',
+      width: '100%'
     },
 
-    props: {
-      flexAlign: 'center center'
-
-    },
     p: {
+      proto: Block,
+      props: { size: 'A' },
       style: {
-        // fontFamily: 'Avenir Next',
         fontFamily: 'Avenir Next',
+        // fontFamily: 'Bellefair',
         lineHeight: '30px',
-        opacity: 0,
-        transition: 'all .3s ease-in-out',
-        transitionDelay: '.8s'
-        // background: 'red'
+        transition: 'all 1s ease-in-out',
+        color: 'rgba(255, 249, 235, .85)',
+        mixBlendMode: 'difference',
+        // opacity: 0,
+        transform: 'scale(.95)'
       }
     }
   }
@@ -86,7 +73,6 @@ export default {
   proto: Block,
   props: {
     flexFlow: 'column',
-    // padding: 'J 0 J 0',
     gap: 'C'
   },
   style,
@@ -96,29 +82,22 @@ export default {
   },
   ...[
     {
-      // style: {
-      //   paddingRight: '100px'
-      // },
       image: {
         style: {
           backgroundImage: 'url(' + OLDTBILISI_JEPG + ')',
           flex: 1,
-          transform: 'scale(1.5)'
+          transform: 'scale(1.45)'
         }
       },
       tale: {
         props: {
-          flexAlign: 'center flex-end',
-          padding: '0 E'
-        },
-        style: {
-          flex: 1,
-          boxSizing: 'border-box'
+          flexAlign: 'center center'
         },
         p: {
           proto: laninaSololaki,
           style: {
-            // maxWidth: `${500 / 16}em`
+            maxWidth: `${1000 / 16}em`
+            // textAlign: 'center'
           }
         }
       }
@@ -133,13 +112,15 @@ export default {
         }
       },
       tale: {
-        style: { flex: 1.5 },
         props: {
-          flexAlign: 'center flex-start',
-          padding: '0 E'
+          flexAlign: 'center flex-end'
+        },
+        style: {
+          paddingRight: `${100 / 16}em`
         },
         p: {
-          proto: wine
+          proto: wine,
+          style: { maxWidth: `${600 / 16}em` }
         }
       }
     }

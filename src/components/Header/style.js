@@ -5,7 +5,7 @@ export default {
   position: 'fixed',
   height: 0,
   top: '50px',
-  zIndex: 100,
+  zIndex: 200,
   alignItems: 'center',
   fontFamily: 'Avenir Next',
   boxSizing: 'border-box',

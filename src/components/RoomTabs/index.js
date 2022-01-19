@@ -30,8 +30,10 @@ const roomIcon = {
 export const roomTab = {
   proto: [Block, Link],
   style: {
-    width: `${320 / 16}em`,
-    height: `${400 / 16}em`,
+    width: '100%',
+    height: '100%',
+    // width: `${320 / 16}em`,
+    // height: `${400 / 16}em`,
     backgroundSize: 'cover',
     cursor: 'pointer',
     display: 'flex',
