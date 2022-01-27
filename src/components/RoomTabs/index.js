@@ -51,8 +51,12 @@ export const roomTab = {
       //   boxShadow: 'none',
       //   filter: 'grayscale(100%) brightness(30%)'
       // }
+    },
+    '> input:checked &': {
+      border: '4px solid red'
     }
   },
+
   roomImage: {
     // proto: Img,
     style: {
@@ -61,11 +65,11 @@ export const roomTab = {
       backgroundSize: 'cover',
       backgroundPosition: 'top right',
       backgroundOrigin: 'padding-box',
-      // backgroundPosition: 'bottom 0px right 50%',
       backgroundRepeat: 'no-repeat',
       filter: 'grayscale(100%) brightness(50%)',
-      transition: 'all 3s ease-in-out',
-      boxShadow: '2px 2px 5px 2px rgba(0, 0, 0, .4)'
+      transition: 'all 1s ease-in-out'
+      // boxShadow: '0px 0px 5px 1px rgba(0, 0, 0, .65)'
+      // backgroundAttachment: 'fixed'
     }
   },
   icon: { proto: roomIcon }

@@ -40,16 +40,16 @@ export const scaleDown = keyframes`
 `
 
 export const landingLoading = keyframes`
-  from {
-    filter: brightness(0%) blur(5px) contrast(95%);
+  // from {
+  //   filter: brightness(0%) blur(5px) contrast(95%);
 
-  }
-  50% {
-    filter: brightness(100%) blur(0) contrast(98%);
-  }
-  to {
-    filter: brightness(100%) blur(0) contrast(100%);
-  )
+  // }
+  // 50% {
+  //   filter: brightness(100%) blur(0) contrast(98%);
+  // }
+  // to {
+  //   filter: brightness(100%) blur(0) contrast(100%);
+  // )
 `
 export const scaleUp = keyframes`
   from {

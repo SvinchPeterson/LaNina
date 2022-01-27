@@ -6,19 +6,25 @@ export const stylePageLink = {
   flex: '1',
   minHeight: '100%',
   maxHeight: '100%',
-  transition: 'all .73s ease-in-out',
+  transition: 'all 1s ease-in-out',
   display: 'flex',
   overflow: 'hidden',
   textDecoration: 'none',
   filter: 'blur(1px)',
-  border: '0px solid rgba(0, 0, 0, 0)',
+  borderLeft: '0px solid rgba(0, 0, 0, 0) ',
+  borderRight: '0px solid rgba(0, 0, 0, 0)',
+  // transform: 'scale(1.01)',
+  // border: '1px solid rgba(0, 0, 0, 1)',
 
   '&:hover': {
     flex: 7.5,
     filter: 'blur(0px)',
+    // borderLeft: '60px solid black',
+    // border: '60px solid black',
+    // borderRight: '60px solid black',
     '& > div': {
-      filter: 'grayscale(40%)',
-      transform: 'scale(1)'
+      filter: 'grayscale(40%) brightness(50%)',
+      transform: 'scale(1.1)'
     }
   },
   '&:hover ~ a': {
@@ -31,19 +37,19 @@ export const stylePageLink = {
     fontWeight: '500'
   },
   '&:hover > div': {
-
   },
 
   '& > div': {
     flex: 1,
     backgroundAttachment: 'fixed',
-    backgroundPosition: 'bottom left',
+    // backgroundPosition: 'bottom left',
     backgroundSize: 'cover',
-    animationName: backgroundPosition,
-    animationDuration: '1.5s',
+    backgroundRepeat: 'no-repeat',
+    // animationName: backgroundPosition,
+    // animationDuration: '1.5s',
     filter: 'grayscale(65%)',
     transition: 'all .8s ease-in-out',
-    transform: 'scale(1.03)'
+    transform: 'scale(1)'
   }
 }
 
@@ -54,7 +60,7 @@ const styleUnderConstruction = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   letterSpacing: '4px',
-  color: 'rgba(165, 125, 2, .6)'
+  color: 'rgba(165, 125, 2, .85)'
 }
 
 const styleBanner = {
@@ -100,6 +106,7 @@ export default {
   animationDuration: '3s',
   position: 'relative',
   minHeight: '100%',
+  background: 'black',
   // border: '1px solid black',
   '> a': stylePageLink,
 

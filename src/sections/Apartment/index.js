@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Grid } from '@rackai/symbols'
+import { Block } from '@rackai/symbols'
 
 import { roomTabBallerina, roomTabRedBrick, roomTabYellowCouch } from '../../components/RoomTabs'
 import { roomBallerina, roomRedBrick, roomYellowCouch } from './room'
@@ -16,6 +16,9 @@ export default {
   style,
   state: {
     active: 0
+    // class: {
+    //   flex: 1
+    // }
   },
   // h4: {
   //   proto: [Block, Text],
@@ -40,32 +43,41 @@ export default {
         gap: 'D'
       },
       style: {
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        // border: '2px solid red',
-        height: '500px',
-        paddingTop: '150px',
-        '> a:hover': {
-          flex: 3,
-          transition: 'all 1.5s ease-in-out'
+        height: `${600 / 16}em`,
+        paddingTop: `${300 / 16}em`,
+        '&:hover > a': {
+          flex: 3
+
         },
-        '> a:hover > div': {
-          backgroundPosition: 'left center'
-          // transform: 'scale(1.02)'
-        },
-        '> a': {
-          flex: 1,
-          transition: 'all .3s ease-in-out'
+        '&:hover > a > div': {
+          width: '100%'
         }
       },
 
       childProto: {
         proto: Block,
+        roomImage: {
+          // style: { backgroundAttachment: 'fixed' }
+
+        },
 
         on: {
           click: (event, element, state) => {
             state.update({ active: element.key })
-            element.style.update({ flex: 3 })
           }
+        },
+        class: {
+          show: (element, state) => state.active === element.key ? { flex: 3, '> span': { backgroundAttachment: 'fixed' } } : { flex: 1 }
+        },
+
+        style: {
+          transition: 'all .4s ease-in-out',
+          '&:active': { flex: 3 },
+          '> div': {
+            width: 0
+          },
+          // '> div:hover': { flex: 3 }
+
         }
       },
       ...[
@@ -92,10 +104,6 @@ export default {
       },
       childProto: {
         proto: Block,
-        props: {
-          // flexAlign: 'flex-start flex-start',
-          // flexFlow: 'column'
-        },
         style: {
 
           transition: 'all 1.5s ease-in-out',
