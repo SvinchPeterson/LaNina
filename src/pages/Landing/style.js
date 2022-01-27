@@ -11,30 +11,17 @@ export const stylePageLink = {
   overflow: 'hidden',
   textDecoration: 'none',
   filter: 'blur(1px)',
-  borderLeft: '0px solid rgba(0, 0, 0, 0) ',
-  borderRight: '0px solid rgba(0, 0, 0, 0)',
-  // transform: 'scale(1.01)',
-  // border: '1px solid rgba(0, 0, 0, 1)',
+  '& + h6': { },
 
   '&:hover': {
     flex: 7.5,
     filter: 'blur(0px)',
-    // borderLeft: '60px solid black',
-    // border: '60px solid black',
-    // borderRight: '60px solid black',
     '& > div': {
-      filter: 'grayscale(40%) brightness(50%)',
       transform: 'scale(1.1)'
     }
   },
   '&:hover ~ a': {
     filter: 'blur(1.2px)'
-  },
-  '&:hover + h6': {
-    color: 'rgba(243, 231, 219, .85)',
-    transform: 'scale(1.1)',
-    letterSpacing: '6.2px',
-    fontWeight: '500'
   },
   '&:hover > div': {
   },
@@ -42,11 +29,8 @@ export const stylePageLink = {
   '& > div': {
     flex: 1,
     backgroundAttachment: 'fixed',
-    // backgroundPosition: 'bottom left',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    // animationName: backgroundPosition,
-    // animationDuration: '1.5s',
     filter: 'grayscale(65%)',
     transition: 'all .8s ease-in-out',
     transform: 'scale(1)'
@@ -82,7 +66,8 @@ const styleBanner = {
 const styleHeading = {
   position: 'absolute',
   zIndex: 60,
-  color: 'rgba(243, 231, 219, .65)',
+  left: 0,
+  color: 'rgba(243, 231, 219, 1)',
   pointerEvents: 'none',
   writingMode: 'vertical-rl',
   textOrientation: 'upright',
@@ -107,7 +92,6 @@ export default {
   position: 'relative',
   minHeight: '100%',
   background: 'black',
-  // border: '1px solid black',
   '> a': stylePageLink,
 
   '> div': styleBanner,

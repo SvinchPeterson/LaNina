@@ -42,15 +42,18 @@ export default {
   class: [style],
   sololaki: {
     proto: [Block, Flex, Link],
+    style: {
+      borderRight: '0px solid rgba(0, 0, 0, 1)',
+      '&:hover': {
+        borderRight: '100px solid rgba(0, 0, 0, 1)',
+        transition: 'all 1s ease-in-out'
+      },
+      '&:hover ~ span': { opacity: 1 }
+    },
     image: {
       style: {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(' + SOLOLAKI_JPG + ')',
-        // backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
-        // background: 'linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(' + SOLOLAKI_JPG + ')'
-        // backgroundColor: 'linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75))'
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url(' + SOLOLAKI_JPG + ')',
         '&:hover': {
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url(' + SOLOLAKI_JPG + ')',
-          boxShadow: 'inset -75px 0px 75px 0px rgba(0, 0, 0, .55)'
         }
       }
     },
@@ -60,45 +63,24 @@ export default {
     }
   },
 
-  // headingSololaki: {
-  //   proto: heading,
-  //   props: {
-  //     text: 'sololaki'
-  //   },
-  //   style: {
-  //     left: `${100 / 16}em`,
-  //     top: `${50 / 16}em`
-  //   }
-  // },
-
   rustaveli: {
     proto: [Block, Link],
     style: {
-      // borderRight: '1px solid rgba(0, 0, 0, 1)',
-      '&:hover': { borderRight: '3px solid rgba(0, 0, 0, 1)' },
+      borderLeft: '0px solid rgba(0, 0, 0, 1)',
+      '&:hover': {
+        borderLeft: '100px solid rgba(0, 0, 0, 1)',
+        transition: 'all 1s ease-in-out'
+      },
       '&:hover ~ span': { opacity: 1 }
     },
     image: {
       style: {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .9)), url(' + RUSTAVELI_JPG + ')'
-        // backgroundImage: 'linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .9)), url(' + RUSTAVELI_JPG + ')'
-        // '&:hover': {
-        //   backgroundImage: 'linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url(' + RUSTAVELI_JPG + ')',
-        //   // borderLeft: '5px solid rgba(0, 0, 0, .5)',
-        //   boxShadow: 'inset 75px 0px 75px 0px rgba(0, 0, 0, .55)'
-        // }
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url(' + RUSTAVELI_JPG + ')',
+        '&:hover': {
+        }
       }
     }
   }
-  // headingRustaveli: {
-  //   tag: 'h6',
-  //   proto: heading,
-  //   props: { text: 'rustaveli' },
-  //   style: {
-  //     right: `${100 / 16}em`,
-  //     bottom: `${200 / 16}em`
-  //   }
-  // },
 
   // laninaBanner: {
   //   proto: LaninaBanner
