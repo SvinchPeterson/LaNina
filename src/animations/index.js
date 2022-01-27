@@ -1,9 +1,11 @@
 'use strict'
 import { keyframes } from '@emotion/css'
+import RUSTAVELI_JPG from '../assets/images/rustaveli.jpg'
+import SOLOLAKI_JPG from '../assets/images/sololaki.jpg'
 
 export const brightnessScale = keyframes`
   from {
-    filter: brightness(0%) grayscale(60%);
+    backgroundImage: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(' + SOLOLAKI_JPG + '),
     transform: scale(1.1);
   }
   to {
@@ -20,13 +22,37 @@ export const opacity = keyframes`
     opacity: 1;
   )
 `
+// export const zoomInOut = keyframes`
+//   from {
+//    transform: scale(1.15);
+//   }
+//   50% {
+//     transform: scale(1.2);
+
+//   }
+//   to {
+//     transform: scale(1.3);
+//   )
+// `
 export const backgroundPosition = keyframes`
   from {
-    background-position: center right;
+    transform: scale(1.1);
+    background-position: top right;
   }
   to {
-    backgroundPosition: top left;
+    transform: scale(1);
+    backgroundPosition: bottom left;
 
+  )
+`
+export const backgroundGradient = keyframes`
+  from {
+   width: 0;
+   letterSpacing: 6px;
+  }
+  to {
+    width: 100px;
+    letterSpacing: 14px
   )
 `
 
@@ -40,16 +66,16 @@ export const scaleDown = keyframes`
 `
 
 export const landingLoading = keyframes`
-  // from {
-  //   filter: brightness(0%) blur(5px) contrast(95%);
+  from {
+    filter: brightness(0%) blur(5px) contrast(95%);
 
-  // }
-  // 50% {
-  //   filter: brightness(100%) blur(0) contrast(98%);
-  // }
-  // to {
-  //   filter: brightness(100%) blur(0) contrast(100%);
-  // )
+  }
+  50% {
+    filter: brightness(50%) blur(0) contrast(98%);
+  }
+  to {
+    filter: brightness(100%) blur(0) contrast(100%);
+  )
 `
 export const scaleUp = keyframes`
   from {
@@ -57,6 +83,16 @@ export const scaleUp = keyframes`
   }
   to {
     transform: scale(1);
+  )
+`
+export const landingBanner = keyframes`
+  from {
+    opacity: 0;
+    left: 30%
+  }
+  to {
+    opacity: 1;
+    left: 30%
   )
 `
 
