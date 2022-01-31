@@ -5,11 +5,10 @@ import SOLOLAKI_JPG from '../assets/images/sololaki.jpg'
 
 export const brightnessScale = keyframes`
   from {
-    backgroundImage: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(' + SOLOLAKI_JPG + '),
-    transform: scale(1.1);
+    // backgroundImage: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(' + SOLOLAKI_JPG + '),
+    transform: scale(1.2);
   }
   to {
-    filter: brightness(85%) grayscale(30%);
     transform: scale(1);
   )
 `
@@ -17,9 +16,11 @@ export const brightnessScale = keyframes`
 export const opacity = keyframes`
   from {
     opacity: 0;
+    transform: translate(-50%, -50%) scale(.9);
   }
   to {
     opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   )
 `
 // export const zoomInOut = keyframes`
@@ -37,11 +38,11 @@ export const opacity = keyframes`
 export const backgroundPosition = keyframes`
   from {
     transform: scale(1.1);
-    background-position: top right;
+    // background-position: top right;
   }
   to {
     transform: scale(1);
-    backgroundPosition: bottom left;
+    // backgroundPosition: bottom left;
 
   )
 `
@@ -67,14 +68,14 @@ export const scaleDown = keyframes`
 
 export const landingLoading = keyframes`
   from {
-    filter: brightness(0%) blur(5px) contrast(95%);
+    transform: scale(1.2);
+    opacity: 0;
 
   }
-  50% {
-    filter: brightness(50%) blur(0) contrast(98%);
-  }
   to {
-    filter: brightness(100%) blur(0) contrast(100%);
+    transform: scale(1);
+    // filter: blur(1) contrast(100%);
+    opacity: 1;
   )
 `
 export const scaleUp = keyframes`
@@ -145,7 +146,7 @@ export const fadeUp2 = keyframes`
 `
 export const letterSpacing = keyframes`
   from {
-    letter-spacing: 2px;
+    letter-spacing: 6px;
   }
   to {
     letter-spacing: 10px;

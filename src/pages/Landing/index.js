@@ -50,14 +50,12 @@ export default {
         right: 0
       },
       '&:hover': {
-        '& > div': {
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(' + SOLOLAKI_JPG + ')',
-          backgroundPosition: 'top right',
-          transition: 'all 1.2s ease-in-out'
+        // marginRight: '30px',
+        // borderRight: '5px solid brown',
+        '& > div > div': {
+          backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
+          // backgroundPosition: 'top right'
         },
-        // '&:hover ~ div': {
-        //   left: '43%'
-        // },
         '& > span': { opacity: 1 }
         // '&:hover > h6': {
         //   width: '160px'
@@ -65,11 +63,13 @@ export default {
       }
 
     },
-    image: {
-      style: {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .8), rgba(0, 0, 0, 1)), url(' + SOLOLAKI_JPG + ')',
-        transition: 'all 3s ease-in-out'
+    imageContainer: {
+      image: {
+        style: {
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(' + SOLOLAKI_JPG + ')'
+        }
       }
+
     },
     heading: {
       tag: 'h6',
@@ -85,25 +85,25 @@ export default {
     proto: [Block, Link],
     style: {
       '&:hover': {
-        '& > div': {
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(' + RUSTAVELI_JPG + ')',
-          backgroundPosition: 'top left'
+        // marginLeft: '30px',
+        '> div > div': {
+          backgroundImage: 'url(' + RUSTAVELI_JPG + ')'
+          // backgroundPosition: 'top left'
         },
-        '& ~ span': {
+        '&:hover ~ span': {
           opacity: 1
+
         }
-        // '&:hover ~ div': {
-        //   left: '57%'
-        // }
         // '&:hover > h6': {
         //   width: '160px'
         // }
       }
     },
-    image: {
-      style: {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .8), rgba(0, 0, 0, 1)), url(' + RUSTAVELI_JPG + ')',
-        '&:hover': {
+    imageContainer: {
+      image: {
+        style: {
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(' + RUSTAVELI_JPG + ')'
+
         }
       }
     },
@@ -117,7 +117,6 @@ export default {
 
   laninaBanner: {
     proto: LaninaBanner
-
   },
   span: {
     proto: underConstruction,

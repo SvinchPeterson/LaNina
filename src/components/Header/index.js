@@ -83,8 +83,9 @@ const book = {
     flexFlow: 'column',
     alignItems: 'center',
     cursor: 'pointer',
+    background: 'black',
     marginTop: `${120 / 16}em`,
-    '> *': { opacity: '.85' },
+    '> *': { opacity: '1' },
     '&:hover > *': { opacity: 1 }
   },
   logo: {
@@ -102,8 +103,9 @@ const book = {
       display: 'block',
       textOrientation: 'upright',
       writingMode: 'vertical-rl',
-      letterSpacing: '4px',
-      color: 'rgba(243, 231, 219, .85)'
+      letterSpacing: '3px',
+      color: 'rgba(243, 231, 219, .85)',
+      fontSize: '20px'
     }
   }
 }

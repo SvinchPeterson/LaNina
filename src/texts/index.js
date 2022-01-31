@@ -44,9 +44,10 @@ export const laninaSololaki = {
   props: {
     text: `“La Nina Residence Sololaki” is located in the heart of Tbilisi in the district of Sololaki,
     Amaghleba street 8/41. The building was originally built in 1898, and represents traditional Georgian housing structure called a so called
-    “Italian yard” which in reality is “Tbilisian yard” - A socio-cultural space that characterizes the city of Tbilisi and gives you an insight of the unique architectural appearance of the city.
-    Walking distance to liberty square, Mtatsminda park and other points of interest.`
+    “Italian yard” which in reality is “Tbilisian yard”`
   }
+  // text: `- A socio-cultural space that characterizes the city of Tbilisi and gives you an insight of the unique architectural appearance of the city.
+  // Walking distance to liberty square, Mtatsminda park and other points of interest.`
 }
 
 export const wine = {

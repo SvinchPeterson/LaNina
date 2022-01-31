@@ -9,7 +9,7 @@ export default {
   left: 0,
   // boxSizing: 'border-box',
   overflow: 'hidden',
-
+  boxSizing: 'border-box',
   display: 'flex',
   // color: 'white',
   h4: { margin: 0 },

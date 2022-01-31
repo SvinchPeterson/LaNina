@@ -1,64 +1,65 @@
 'use strict'
 
-import { opacity, scaleUp, landingLoading, backgroundPosition, letterSpacing2, widthShrink, zoomInOut } from '../../animations'
+import { opacity, scaleUp, landingLoading, backgroundPosition, letterSpacing, widthShrink } from '../../animations'
 
 export const stylePageLink = {
-  flex: '1',
-  minHeight: '100%',
+  height: '100%',
   maxHeight: '100%',
   transition: 'all 1s ease-in-out',
   display: 'flex',
+  flex: 1,
   overflow: 'hidden',
   textDecoration: 'none',
-  filter: 'blur(1px) grayscale(40%)',
+  filter: 'blur(.5px) grayscale(20%)',
+  zIndex: '10',
+  // borderRight: '30px solid rgba(0, 0, 0, 0)',
+  '> div': {
+    flex: 1,
+    display: 'flex',
+    maxHeight: '100%',
+    transition: 'all 1s ease-in-out',
+    filter: 'brightness(30%)',
+    overflow: 'hidden'
+    // background: 'rgba(243, 231, 219, 1)'
+  },
 
+  '& > div > div': {
+    animationName: landingLoading,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out',
+    flex: 1,
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    transition: 'all 1s ease-in-out',
+    backgroundPosition: 'center center'
+  },
+
+  '&:hover': {
+    flex: 6,
+    filter: 'blur(0px) grayscale(5%)'
+    // borderTop: '100px solid black'
+    // borderBottom: '100px solid black'
+    // zIndex: '300'
+  },
   '&:hover > h6': {
-    // animationName: widthShrink,
-    // animationDuration: '1s',
-    // AnimationTimingFunction: 'ease-in-out',
-    width: '160px',
-    // transform: 'scale(.5)',
-    // border: '3px solid black',
+    width: '60px',
     '> span': {
       opacity: 1
     }
   },
   '&:not(:hover) > h6': {
     width: 0
-    // background: 'transparent'
-
   },
 
-  '&:hover': {
-    flex: 7.5,
-    filter: 'blur(0px) grayscale(20%)',
-    boxShadow: 'inset 5px 5px 5px 5p red',
-    '& > div': {
-      animationName: zoomInOut,
-      animationDuration: '4s',
-      AnimationTimingFunction: 'ease-in-out'
-      // transform: 'scale(1.1)'
-
-    }
-  },
-  '&:hover ~ a': {
-    filter: 'blur(1.2px)'
-  },
   '&:hover > div': {
-    transform: 'scale(1.15)'
+    filter: 'brightness(50%)',
+    // transform: ''
+    transform: 'scale(1.1)'
+    // backgroundPosition: 'bottom right',
   },
-
-  '& > div': {
-    flex: 1,
-    backgroundAttachment: 'fixed',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    transition: 'all .8s ease-in-out',
-    transform: 'scale(1)',
-    backgroundPosition: 'left center',
-    animationName: backgroundPosition,
-    animationDuration: '3s',
-    AnimationTimingFunction: 'ease-in-out'
+  '&:hover > div > div': {
+    backgroundPosition: 'bottom right'
   }
 }
 
@@ -70,7 +71,8 @@ const styleUnderConstruction = {
   transform: 'translate(-50%, -50%)',
   letterSpacing: '4px',
   color: 'rgba(165, 125, 2, .65)',
-  zIndex: '200'
+  zIndex: '200',
+  opacity: 0
 }
 
 const styleBanner = {
@@ -78,43 +80,48 @@ const styleBanner = {
   position: 'absolute',
   top: '50%',
   left: '50%',
-  transform: 'translate(-50%, -50%)',
+  transform: 'translate(-50%, -50%) scale(1)',
+  minWidth: '250px',
   animationName: opacity,
-  animationDuration: '.6s',
-  transition: 'all 1s ease-in-out',
+  animationDuration: '2s',
+  animationTimingFunction: 'ease-in-out',
+  zIndex: 20,
   '> div': {
+    minWidth: '100%',
+    h4: {
+      animationName: landingLoading,
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out'
+    },
     span: {
-      animationName: scaleUp,
-      animationDuration: '1.2s'
+      animationName: letterSpacing,
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out',
+      textTransform: 'uppercase'
     }
   }
 }
 
 const styleHeading = {
-  fontFamily: 'Avenir Next',
-  // fontFamily: 'Bellefair',
+  // fontFamily: 'Avenir Next',
+  fontFamily: 'Bellefair',
   writingMode: 'vertical-rl',
   textOrientation: 'upright',
   textTransform: 'uppercase',
-  color: 'rgba(243, 231, 219, .85)',
+  background: 'rgba(0, 0, 0, .95)',
+  // background: 'rgba(243, 231, 219, .95)',
+  // color: 'rgba(0, 0, 0, .95)',
+  // background: 'rgba(243, 231, 219, .95)',
+  color: 'rgba(243, 231, 219, 1) ',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   position: 'absolute',
   height: '100%',
   width: '0',
-  fontWeight: '400',
+  fontWeight: '500',
   transform: 'scale(1)',
-  // background: 'rgba(0, 0, 0, .8)',
-  background: 'linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .8), rgba(0, 0, 0, 1))',
-  // filter: 'blur(2px)',
-
-  // transition: 'all .5s ease-in-out',
-  // fontSize: '35px',
-  fontSize: '16px',
-  // fontWeight: '600',
-  // background: 'rgba(0, 0, 0, .5)',
-  // color: 'rgba(165, 125, 2, .8)',
+  fontSize: '14px',
   letterSpacing: '6px',
   transition: 'all 1s ease-in-out',
   span: {
@@ -129,12 +136,14 @@ export default {
   flex: 1,
   justifyContent: 'space-between',
   display: 'flex',
-  animationName: landingLoading,
-  filter: 'brightness(100%) blur(0) contrast(100%)',
-  animationDuration: '1s',
+
+  // minWidth: '100%',
+  // minHeight: '100%',
+  // filter: 'brightness(100%) blur(0) contrast(100%)',
   position: 'relative',
-  minHeight: '100%',
-  background: 'black',
+  // background: 'radial-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .7), rgba(0, 0, 0, .9))',
+  // animationName: landingLoading,
+  // animationDuration: '5s',
   '> a': stylePageLink,
   '> a > h6': styleHeading,
 

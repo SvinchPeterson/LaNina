@@ -1,6 +1,8 @@
 'use strict'
 
 export default {
+  paddingTop: '300px',
+  // background: 'black',
   // overflowX: 'hidden',
   '> section': {
     '> img': {

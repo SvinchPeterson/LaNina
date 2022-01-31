@@ -24,17 +24,18 @@ const heading = {
   },
   span: {
     props: {
-      size: 'C'
+      // size: 'B',
+      // padding: 'B 0 0 0'
     },
     style: {
+      fontSize: '18px',
       letterSpacing: '10px',
-      width: 'fit-content',
+      width: '100%',
       boxSizing: 'border-box',
       paddingLeft: '10px',
-      color: 'rgba(243, 231, 219, .5)'
-
+      paddingTop: '100px',
+      color: 'rgba(243, 231, 219, .65)'
     }
-
   }
 }
 
