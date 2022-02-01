@@ -46,7 +46,7 @@ const langLinks = {
     proto: [Link, Text],
     props: { size: 'A2' },
     style: {
-      color: 'rgba(243, 231, 219, .85)',
+      color: 'rgba(243, 231, 219, 1)',
       cursor: 'pointer',
       opacity: '.65',
       transition: 'all .6s ease-in-out'

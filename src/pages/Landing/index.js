@@ -66,7 +66,7 @@ export default {
     imageContainer: {
       image: {
         style: {
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(' + SOLOLAKI_JPG + ')'
+          backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
         }
       }
 

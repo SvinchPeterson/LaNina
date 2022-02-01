@@ -1,20 +1,34 @@
 'use strict'
 
 export default {
-  paddingTop: '300px',
+  boxSizing: 'border-box',
+  // paddingTop: '300px',
+  border: '10px solid red',
   // background: 'black',
   // overflowX: 'hidden',
   '> section': {
-    '> img': {
-      // border: '10px solid yellow'
+    border: '10px solid blue',
+    minHeight: `${700 / 16}em`,
+    flex: 1,
+    '> span': {
+      border: '10px solid yellow',
+      flex: 1,
+      backgroundSize: 'contain',
+      backgroundPosition: 'center center',
+      backgroundRepeat: 'no-repeat'
     },
-    '> div': {
-      // border: '10px solid blue',
-      '> h6': {
-        // border: '5px solid purple'
-      },
-      '> p': {
-        // border: '5px solid orangered'
+    '> p': {
+      border: '10px solid green',
+      position: 'relative',
+      flex: 1,
+      '> span': {
+        background: 'white',
+        border: '10px solid purple',
+        position: 'absolute',
+        top: '50%',
+        left: '-200px',
+        transform: 'translate(-10%, -50%)'
+
       }
     }
   }
