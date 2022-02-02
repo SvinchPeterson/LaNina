@@ -17,7 +17,21 @@ export const RoomTab = {
   style: {
     flex: 1,
     cursor: 'pointer',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    position: 'relative',
+    '&::after': {
+      content: '"balerina"',
+      position: 'absolute',
+      color: 'rgba(243, 231, 219, 1)',
+      fontSize: `${16 / 16}em`,
+      top: `${60 / 16}em`,
+      right: `${30 / 16}em`,
+      // writingMode: 'vertical-rl',
+      // textOrientation: 'upright',
+      textTransform: 'Uppercase',
+      fontFamily: 'Bellefair',
+      letterSpacing: '6px'
+    }
   },
   image: {
     style: {

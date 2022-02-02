@@ -31,16 +31,25 @@ export default {
     ...[
       {
         style: {
+          '&::after': {
+            content: '"ballerina"'
+          },
           '> div': { backgroundImage: 'url(' + BALLERINA_COVER_IMG + ')' }
         }
       },
       {
         style: {
+          '&::after': {
+            content: '"Red Brick"'
+          },
           '> div': { backgroundImage: 'url(' + REDBRICK_COVER_IMG + ')' }
         }
       },
       {
         style: {
+          '&::after': {
+            content: '"Yellow Couch"'
+          },
           '> div': { backgroundImage: 'url(' + YELLOWCOUCH_COVER_IMG + ')' }
         }
       }
