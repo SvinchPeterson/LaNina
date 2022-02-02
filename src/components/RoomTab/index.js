@@ -15,7 +15,17 @@ import { movingPhotos } from '../../animations'
 export const RoomTab = {
   proto: [Link, Block],
   style: {
-    flex: 1
+    flex: 1,
+    cursor: 'pointer',
+    overflow: 'hidden'
+  },
+  image: {
+    style: {
+      width: '100%',
+      height: '100%',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center'
+    }
   }
 }
 

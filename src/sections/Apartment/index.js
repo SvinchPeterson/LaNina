@@ -4,6 +4,10 @@ import { Block, Link } from '@rackai/symbols'
 import { RoomTab } from '../../components/RoomTab'
 import { roomBallerina, roomRedBrick, roomYellowCouch } from './room'
 
+import BALLERINA_COVER_IMG from '../../assets/images/ballerinaCover.jpg'
+import REDBRICK_COVER_IMG from '../../assets/images/redBrickCover.jpg'
+import YELLOWCOUCH_COVER_IMG from '../../assets/images/yellowCouchCover.jpg'
+
 import style from './style'
 
 export default {
@@ -11,21 +15,35 @@ export default {
   style,
   proto: Block,
   props: {
-    flexFlow: 'column'
+    flexFlow: 'column',
+    padding: 'F 0 E 0'
   },
   tabs: {
     tag: 'header',
     proto: Block,
     props: {
-      flexFlow: 'row'
+      flexFlow: 'row',
+      gap: 'C'
     },
     childProto: {
       proto: RoomTab
     },
     ...[
-      {},
-      {},
-      {}
+      {
+        style: {
+          '> div': { backgroundImage: 'url(' + BALLERINA_COVER_IMG + ')' }
+        }
+      },
+      {
+        style: {
+          '> div': { backgroundImage: 'url(' + REDBRICK_COVER_IMG + ')' }
+        }
+      },
+      {
+        style: {
+          '> div': { backgroundImage: 'url(' + YELLOWCOUCH_COVER_IMG + ')' }
+        }
+      }
     ]
   },
 

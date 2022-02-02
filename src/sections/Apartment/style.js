@@ -3,16 +3,20 @@ import { displays, movingPhotos, dropDown } from '../../animations'
 
 export default {
   overflow: 'hidden',
-  border: '10px solid red',
+  // border: '10px solid red',
   '> header': {
-    border: '8px solid blue',
+    // border: '8px solid blue',
     minHeight: `${600 / 16}em`,
     '> a': {
-      border: '5px solid orangered'
+      // border: '5px solid orangered'
+    },
+
+    '> a > div': {
+      filter: 'brightness(40%) grayscale(80%)'
     }
   },
   '> section': {
-    border: '8px solid green'
+    // border: '8px solid green'
   }
   // '> section': {
 
