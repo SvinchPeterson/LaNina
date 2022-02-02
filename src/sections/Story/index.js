@@ -1,7 +1,5 @@
 'use strict'
-import { Block, Text } from '@rackai/symbols'
-
-import OLDTBILISI_JEPG from '../../assets/images/cover.jpg'
+import { Block } from '@rackai/symbols'
 import WINE_JPG from '../../assets/images/wine.jpg'
 import GREEN_LANINA_JPG from '../../assets/images/greenLanina.jpg'
 
@@ -14,7 +12,7 @@ const storySection = {
   proto: Block,
   props: {
     flexFlow: 'row',
-    padding: 'G 0 F 0'
+    padding: 'F 0 G 0'
   },
   image: {
     tag: 'span',
@@ -45,13 +43,50 @@ export default {
           backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
           backgroundSize: 'contain',
           backgroundPosition: 'left bottom',
-          transform: 'scale(1)'
+          transform: 'scale(.95)'
         }
       },
       p: {
+        style: {
+          position: 'relative'
+        },
         span: {
-          proto: laninaSololaki
+          proto: laninaSololaki,
+          style: {
+            position: 'absolute',
+            top: 0,
+            left: '-400px',
+            padding: '100px'
+          }
+        }
+      }
+    },
 
+    {
+      image: {
+        style: {
+          backgroundImage: 'url(' + WINE_JPG + ')',
+          backgroundPosition: 'center center',
+          transform: 'scale(1.4)'
+        }
+      },
+      p: {
+        style: {
+          position: 'absolute',
+          width: '100%',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          padding: '100px',
+          boxShadow: '0px 0px 100px 20px rgba(243, 231, 219, .2)'
+        },
+        span: {
+          proto: wine,
+          style: {
+            display: 'block',
+            maxWidth: '650px',
+            margin: '0 auto'
+          }
         }
       }
     }

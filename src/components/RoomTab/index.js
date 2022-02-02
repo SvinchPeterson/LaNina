@@ -12,99 +12,104 @@ import LIVINGROOM_JPG from '../../assets/images/yellowCouch/livingroom.jpg'
 import REDBRICK_JPG from '../../assets/images/redBrick/livingroom.jpg'
 import { movingPhotos } from '../../animations'
 
-const roomIcon = {
-  proto: Img,
+export const RoomTab = {
+  proto: [Link, Block],
   style: {
-    width: '30px',
-    height: '30px',
-    padding: '14px',
-    background: 'rgba(213, 176, 56, .4)',
-    // background: 'rgba(255, 255, 255, .2)',
-    // border: '2px solid rgba(189, 177, 113, .6)',
-    position: 'absolute',
-    opacity: 0,
-    transition: 'all .3s ease-in-out'
+    flex: 1
   }
 }
 
-export const roomTab = {
-  proto: [Block, Link],
-  style: {
-    width: '100%',
-    height: '100%',
-    // width: `${320 / 16}em`,
-    // height: `${400 / 16}em`,
-    backgroundSize: 'cover',
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-    '&:hover': {
-      '> div': {
-        filter: 'grayscale(100%) brightness(70%)'
-      }
-      // boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
-      // '> img:last-child': { opacity: 1 },
-      // '> img:first-child': {
-      //   transform: 'scale(.92)',
-      //   boxShadow: 'none',
-      //   filter: 'grayscale(100%) brightness(30%)'
-      // }
-    },
-    '> input:checked &': {
-      border: '4px solid red'
-    }
-  },
+// const roomIcon = {
+//   proto: Img,
+//   style: {
+//     width: '30px',
+//     height: '30px',
+//     padding: '14px',
+//     background: 'rgba(213, 176, 56, .4)',
+//     // background: 'rgba(255, 255, 255, .2)',
+//     // border: '2px solid rgba(189, 177, 113, .6)',
+//     position: 'absolute',
+//     opacity: 0,
+//     transition: 'all .3s ease-in-out'
+//   }
+// }
 
-  roomImage: {
-    // proto: Img,
-    style: {
-      width: '100%',
-      height: '100%',
-      backgroundSize: 'cover',
-      backgroundPosition: 'top right',
-      backgroundOrigin: 'padding-box',
-      backgroundRepeat: 'no-repeat',
-      filter: 'grayscale(100%) brightness(50%)',
-      transition: 'all 1s ease-in-out'
-      // boxShadow: '0px 0px 5px 1px rgba(0, 0, 0, .65)'
-      // backgroundAttachment: 'fixed'
-    }
-  },
-  icon: { proto: roomIcon }
-}
+// export const roomTab = {
+//   proto: [Block, Link],
+//   style: {
+//     width: '100%',
+//     height: '100%',
+//     backgroundSize: 'cover',
+//     cursor: 'pointer',
+//     display: 'flex',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     position: 'relative',
+//     '&:hover': {
+//       '> div': {
+//         filter: 'grayscale(100%) brightness(70%)'
+//       }
+//       // boxShadow: 'inset 1px 1px 5px 1px rgba(0, 0, 0, .4)',
+//       // '> img:last-child': { opacity: 1 },
+//       // '> img:first-child': {
+//       //   transform: 'scale(.92)',
+//       //   boxShadow: 'none',
+//       //   filter: 'grayscale(100%) brightness(30%)'
+//       // }
+//     },
+//     '> input:checked &': {
+//       border: '4px solid red'
+//     }
+//   },
 
-export const roomTabBallerina = {
-  proto: roomTab,
-  props: { href: '#ballerina' },
-  style: { justifySelf: 'end' },
+//   roomImage: {
+//     // proto: Img,
+//     style: {
+//       width: '100%',
+//       height: '100%',
+//       backgroundSize: 'cover',
+//       backgroundPosition: 'top right',
+//       backgroundOrigin: 'padding-box',
+//       backgroundRepeat: 'no-repeat',
+//       filter: 'grayscale(100%) brightness(50%)',
+//       transition: 'all 1s ease-in-out'
+//       // boxShadow: '0px 0px 5px 1px rgba(0, 0, 0, .65)'
+//       // backgroundAttachment: 'fixed'
+//     }
+//   },
+//   icon: { proto: roomIcon }
+// }
 
-  roomImage: {
-    style: { backgroundImage: 'url(' + BALLERINA_JPG + ')' }
-  },
-  icon: { props: { src: BALLERINA_ICON } }
-}
+// export const roomTabBallerina = {
+//   proto: roomTab,
+//   props: { href: '#ballerina' },
+//   style: { justifySelf: 'end' },
 
-export const roomTabRedBrick = {
-  proto: roomTab,
-  props: { href: '#redBrick' },
-  style: { justifySelf: 'center' },
-  roomImage: {
-    style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' }
-  },
-  icon: { props: { src: BRICK_ICON } }
-}
+//   roomImage: {
+//     style: { backgroundImage: 'url(' + BALLERINA_JPG + ')' }
+//   },
+//   icon: { props: { src: BALLERINA_ICON } }
+// }
 
-export const roomTabYellowCouch = {
-  proto: roomTab,
-  props: { href: '#yellowCouch' },
-  style: { justifySelf: 'start' },
-  roomImage: {
-    style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' }
-  },
-  icon: { props: { src: COUCH_ICON } }
-}
+// export const roomTabRedBrick = {
+//   proto: roomTab,
+//   props: { href: '#redBrick' },
+//   style: { justifySelf: 'center' },
+//   roomImage: {
+//     style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' }
+//   },
+//   icon: { props: { src: BRICK_ICON } }
+// }
+
+// export const roomTabYellowCouch = {
+//   proto: roomTab,
+//   props: { href: '#yellowCouch' },
+//   style: { justifySelf: 'start' },
+//   roomImage: {
+//     style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' }
+//   },
+//   icon: { props: { src: COUCH_ICON } }
+// }
 
 // export default {
 //   proto: [Block, Flex],

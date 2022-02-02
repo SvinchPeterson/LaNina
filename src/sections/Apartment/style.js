@@ -3,11 +3,16 @@ import { displays, movingPhotos, dropDown } from '../../animations'
 
 export default {
   overflow: 'hidden',
-  h4: {
-    textAlign: 'center',
-    color: 'rgba(0, 0, 0, .55)',
-    letterSpacing: '10px',
-    fontWeight: '500'
+  border: '10px solid red',
+  '> header': {
+    border: '8px solid blue',
+    minHeight: `${600 / 16}em`,
+    '> a': {
+      border: '5px solid orangered'
+    }
+  },
+  '> section': {
+    border: '8px solid green'
   }
   // '> section': {
 

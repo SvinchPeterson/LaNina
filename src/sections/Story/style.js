@@ -18,16 +18,13 @@ export default {
 
     '> p': {
       flex: 1,
-      position: 'relative',
+      background: 'rgba(243, 231, 219, 1)',
+      boxSizing: 'border-box',
       '> span': {
         fontFamily: 'Avenir Next',
-        position: 'absolute',
-        top: 0,
-        left: '-400px',
-        padding: '100px',
         background: 'rgba(243, 231, 219, 1)',
         boxShadow: '-50px 50px 100px 20px rgba(243, 231, 219, .2)',
-        lineHeight: '35px',
+        lineHeight: '32px',
         color: 'rgba(0,0, 0, .4)'
       }
     }
