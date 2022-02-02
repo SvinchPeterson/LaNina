@@ -19,10 +19,11 @@ export const RoomTab = {
     cursor: 'pointer',
     overflow: 'hidden',
     position: 'relative',
+    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, .5)',
     '&::after': {
       content: '"balerina"',
       position: 'absolute',
-      color: 'rgba(243, 231, 219, 1)',
+      color: 'rgba(243, 231, 219, .85)',
       fontSize: `${16 / 16}em`,
       top: `${60 / 16}em`,
       right: `${30 / 16}em`,

@@ -12,7 +12,7 @@ export default {
     },
 
     '> a > div': {
-      filter: 'brightness(40%) grayscale(80%)'
+      filter: 'brightness(30%) grayscale(80%)'
     }
   },
   '> section': {
