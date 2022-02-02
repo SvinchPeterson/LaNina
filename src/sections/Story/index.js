@@ -1,5 +1,5 @@
 'use strict'
-import { Block } from '@rackai/symbols'
+import { Block, Text } from '@rackai/symbols'
 
 import OLDTBILISI_JEPG from '../../assets/images/cover.jpg'
 import WINE_JPG from '../../assets/images/wine.jpg'
@@ -13,7 +13,8 @@ const storySection = {
   tag: 'section',
   proto: Block,
   props: {
-    flexFlow: 'row'
+    flexFlow: 'row',
+    padding: 'G 0 F 0'
   },
   image: {
     tag: 'span',
@@ -21,7 +22,8 @@ const storySection = {
   },
 
   p: {
-    proto: Block
+    proto: Block,
+    span: {}
   }
 }
 
@@ -30,7 +32,7 @@ export default {
   proto: Block,
   props: {
     flexFlow: 'column',
-    gap: 'C'
+    gap: '0'
   },
   style,
   childProto: {
@@ -38,19 +40,19 @@ export default {
   },
   ...[
     {
-      props: {
-        padding: 'B'
-      },
       image: {
         style: {
-          backgroundImage: 'url(' + GREEN_LANINA_JPG + ')'
+          backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
+          backgroundSize: 'contain',
+          backgroundPosition: 'left bottom',
+          transform: 'scale(1)'
         }
       },
       p: {
         span: {
           proto: laninaSololaki
-        }
 
+        }
       }
     }
   ]
