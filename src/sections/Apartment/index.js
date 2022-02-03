@@ -1,8 +1,9 @@
 'use strict'
 import { Block, Link } from '@rackai/symbols'
 
-import { RoomTab } from '../../components/RoomTab'
-import { roomBallerina, roomRedBrick, roomYellowCouch } from './room'
+import { RoomTab } from '../../components'
+
+import { roomBallerina } from './rooms'
 
 import BALLERINA_COVER_IMG from '../../assets/images/ballerinaCover.jpg'
 import REDBRICK_COVER_IMG from '../../assets/images/redBrickCover.jpg'
@@ -18,6 +19,7 @@ export default {
     flexFlow: 'column',
     padding: 'F 0 E 0'
   },
+
   tabs: {
     tag: 'header',
     proto: Block,
@@ -57,7 +59,12 @@ export default {
   },
 
   rooms: {
-    tag: 'section'
+    tag: 'section',
+    proto: Block,
+    props: {
+      padding: 'D'
+    },
+    roomBallerina
   }
 }
 

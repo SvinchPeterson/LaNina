@@ -12,7 +12,7 @@ import LIVINGROOM_JPG from '../../assets/images/yellowCouch/livingroom.jpg'
 import REDBRICK_JPG from '../../assets/images/redBrick/livingroom.jpg'
 import { movingPhotos } from '../../animations'
 
-export const RoomTab = {
+export default {
   proto: [Link, Block],
   style: {
     flex: 1,
@@ -24,14 +24,15 @@ export const RoomTab = {
       content: '"balerina"',
       position: 'absolute',
       color: 'rgba(243, 231, 219, .85)',
-      fontSize: `${16 / 16}em`,
-      top: `${60 / 16}em`,
-      right: `${30 / 16}em`,
-      // writingMode: 'vertical-rl',
-      // textOrientation: 'upright',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      whiteSpace: 'nowrap',
+      // top: `${60 / 16}em`,
+      // right: `${30 / 16}em`,
       textTransform: 'Uppercase',
       fontFamily: 'Bellefair',
-      letterSpacing: '6px'
+      letterSpacing: '3px'
     }
   },
   image: {

@@ -10,7 +10,7 @@ export const stylePageLink = {
   flex: 1,
   overflow: 'hidden',
   textDecoration: 'none',
-  filter: 'blur(1px) grayscale(20%)',
+  filter: 'blur(.8px) grayscale(70%)',
   zIndex: '10',
   // borderRight: '30px solid rgba(0, 0, 0, 0)',
   '> div': {
@@ -37,7 +37,7 @@ export const stylePageLink = {
 
   '&:hover': {
     flex: 6,
-    filter: 'blur(0px) grayscale(5%)'
+    filter: 'blur(0px) grayscale(30%)'
     // borderTop: '100px solid black'
     // borderBottom: '100px solid black'
     // zIndex: '300'
@@ -53,7 +53,7 @@ export const stylePageLink = {
   },
 
   '&:hover > div': {
-    filter: 'brightness(50%)',
+    filter: 'brightness(35%)',
     // transform: ''
     transform: 'scale(1.1)'
     // backgroundPosition: 'bottom right',
