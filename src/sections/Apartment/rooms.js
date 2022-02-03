@@ -3,17 +3,27 @@ import { Block, Text, Link, Button, Flex, Img } from '@rackai/symbols'
 
 import { galleryBallerina } from '../../components'
 
+import DOWN_ARROW from '../../assets/down-arrow.png'
+import UP_ARROW from '../../assets/up-arrow.png'
+
+// proto: Img,
+// //       props: { src: RIGHT_ARROW }
+
 const room = {
   style: {
     // border: '5px solid red',
     flex: 1,
     display: 'flex',
-    position: 'relative'
+    position: 'relative',
+    '> img': {
+      position: 'absolute',
+      width: '50px',
+      height: '30px'
+    }
   },
   proto: Block,
   gallery: {
     style: {
-      // border: '5px solid blue',
       flex: 1,
       position: 'relative',
       '> span': {
@@ -27,8 +37,23 @@ const room = {
     }
   },
   roomDescription: {},
-  upArrow: {},
-  downArrow: {}
+  upArrow: {
+    proto: Img,
+    props: { src: UP_ARROW },
+    style: {
+      top: '50%',
+      right: '0'
+    }
+  },
+
+  downArrow: {
+    proto: Img,
+    props: { src: DOWN_ARROW },
+    style: {
+      top: '50%',
+      left: '50%'
+    }
+  }
 }
 
 export const roomBallerina = {
