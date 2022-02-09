@@ -1,37 +1,25 @@
 'use strict'
-import { displays, movingPhotos, dropDown } from '../../animations'
+import { heightGallery } from '../../animations'
 
 export default {
-  overflow: 'hidden',
-  // border: '10px solid red',
   '> header': {
-    // border: '8px solid blue',
     minHeight: `${600 / 16}em`,
-    '> a': {
-      transition: 'all 1s ease-in-out'
-    },
-    // '> a:hover': {
-    //   flex: 3,
-    //   boxShadow: 'inset 0px 0px 5px 0px rgba(0, 0, 0, .5)'
-    // },
-    // '> a:hover > div': {
-    //   filter: 'brightness(50%) grayscale(50%)',
-    //   transform: 'scale(1.2)',
-    //   backgroundAttachment: 'fixed'
-    // },
 
-    '> a > div': {
-      filter: 'brightness(30%) grayscale(80%)',
-      transition: 'all 2s ease-in-out'
-    }
+    '> a': { flex: 1 }
   },
-  '> section': {
-    // border: '8px solid green',
-    minHeight: `${800 / 16}em`,
-    display: 'flex',
-    boxSizing: 'border-box'
-  }
 
+  '> section': {
+    position: 'relative',
+    // boxSizing: 'border-box',
+    // padding: '100px',
+    '> div': {
+      position: 'absolute',
+      width: '100%',
+      top: 0,
+      left: 0
+    }
+
+  }
 }
 
 // export default {

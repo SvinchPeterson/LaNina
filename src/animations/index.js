@@ -3,6 +3,36 @@ import { keyframes } from '@emotion/css'
 import RUSTAVELI_JPG from '../assets/images/rustaveli.jpg'
 import SOLOLAKI_JPG from '../assets/images/sololaki.jpg'
 
+export const flex = keyframes`
+  from {
+    flex: 0;
+    min-height: 0;
+  }
+  to {
+    flex: 1;
+    min-height: 100%;
+  }
+`
+
+export const heightGallery = keyframes`
+  from {
+    height: 0px;
+  }
+  to {
+    height: 100%;
+  }
+`
+
+export const widthGallery = keyframes`
+  from {
+    min-width: 0px;
+  }
+  to {
+    min-width: 100%;
+
+  }
+`
+
 export const brightnessScale = keyframes`
   from {
     // backgroundImage: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(' + SOLOLAKI_JPG + '),
@@ -21,6 +51,15 @@ export const opacity = keyframes`
   to {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+  )
+`
+
+export const opacity2 = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   )
 `
 // export const zoomInOut = keyframes`

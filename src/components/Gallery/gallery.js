@@ -20,12 +20,19 @@ import RIGHT_ARROW from '../../assets/right.png'
 // ]
 
 export default {
+  state: {
+    activeImage: 0
+  },
   childProto: {
     tag: 'span',
     proto: Block,
     style: {
       backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'no-repeat',
+      transition: 'all 1s ease-in-out'
+    },
+    class: {
+      show: (element, state) => state.activeImage === parseInt(element.key) ? { zIndex: '30', opacity: 1, backgroundPosition: 'center right' } : { zIndex: 0, opacity: 0 }
     }
   },
   ...[]

@@ -50,5 +50,6 @@ export default {
   overflowX: 'hidden',
   overflowY: 'auto',
   position: 'relative',
-  background: 'rgba(243, 231, 219, 1)'
+  background: 'rgba(243, 231, 219, 1)',
+  scrollBehavior: 'smooth'
 }

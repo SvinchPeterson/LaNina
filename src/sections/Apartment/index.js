@@ -1,23 +1,23 @@
 'use strict'
 import { Block, Link } from '@rackai/symbols'
 
-import { RoomTab } from '../../components'
+import { tabBallerina, tabRedBrick, tabYellowCouch, roomBallerina, roomRedBrick, roomYellowCouch } from '../../components'
 
-import { roomBallerina } from './rooms'
-
-import BALLERINA_COVER_IMG from '../../assets/images/ballerinaCover.jpg'
-import REDBRICK_COVER_IMG from '../../assets/images/redBrickCover.jpg'
-import YELLOWCOUCH_COVER_IMG from '../../assets/images/yellowCouchCover.jpg'
+// import { roomBallerina, roomRedBrick, roomYellowCouch } from './rooms'
 
 import style from './style'
 
 export default {
   tag: 'article',
-  style,
   proto: Block,
+  style,
   props: {
     flexFlow: 'column',
     padding: 'F 0 E 0'
+  },
+
+  state: {
+    active: 0
   },
 
   tabs: {
@@ -27,34 +27,10 @@ export default {
       flexFlow: 'row',
       gap: 'C'
     },
-    childProto: {
-      proto: RoomTab
-    },
     ...[
-      {
-        style: {
-          '&::after': {
-            content: '"ballerina"'
-          },
-          '> div': { backgroundImage: 'url(' + BALLERINA_COVER_IMG + ')' }
-        }
-      },
-      {
-        style: {
-          '&::after': {
-            content: '"Red Brick"'
-          },
-          '> div': { backgroundImage: 'url(' + REDBRICK_COVER_IMG + ')' }
-        }
-      },
-      {
-        style: {
-          '&::after': {
-            content: '"Yellow Couch"'
-          },
-          '> div': { backgroundImage: 'url(' + YELLOWCOUCH_COVER_IMG + ')' }
-        }
-      }
+      tabBallerina,
+      tabRedBrick,
+      tabYellowCouch
     ]
   },
 
@@ -62,9 +38,14 @@ export default {
     tag: 'section',
     proto: Block,
     props: {
-      padding: 'D'
+      flexFlow: 'row',
+      padding: 'E'
     },
-    roomBallerina
+    ...[
+      roomBallerina,
+      roomRedBrick,
+      roomYellowCouch
+    ]
   }
 }
 
@@ -189,9 +170,9 @@ export default {
 //             }
 //           }
 //         },
-//         class: {
-//           show: (element, state) => state.active === element.key ? { minHeight: '800px', minWidth: '100%', opacity: 1, filter: 'brightness(70%) grayscale(50%)' } : { minHeight: 0, opacity: '.3', filter: 'brightness(0%)' }
-//         },
+// class: {
+//   show: (element, state) => state.active === element.key ? { minHeight: '800px', minWidth: '100%', opacity: 1, filter: 'brightness(70%) grayscale(50%)' } : { minHeight: 0, opacity: '.3', filter: 'brightness(0%)' }
+// },
 
 //         gallery: {
 //           rightArrow: {
