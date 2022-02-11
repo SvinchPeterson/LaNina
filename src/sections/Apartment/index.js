@@ -38,7 +38,7 @@ export default {
     tag: 'section',
     proto: Block,
     props: {
-      flexFlow: 'row',
+      // flexFlow: 'row',
       padding: 'E'
     },
     ...[

@@ -4,39 +4,25 @@ import { Block, Link } from '@rackai/symbols'
 
 import { heightGallery } from '../../animations'
 
+import style from './style'
+
 import BALLERINA_COVER_IMG from '../../assets/images/ballerina/ballerinaCovers.jpg'
 import REDBRICK_COVER_IMG from '../../assets/images/redBrick/redBrickCovers.jpg'
 import YELLOWCOUCH_COVER_IMG from '../../assets/images/yellowCouch/yellowCouchCovers.jpg'
 
 const roomTab = {
   proto: [Link, Block],
-  state: {
-    activeImage: 0
-  },
-  style: {
-    flex: 1,
-    cursor: 'pointer',
-    overflow: 'hidden',
-    position: 'relative',
-    '&::after': {
-      content: '""',
-      fontSize: `${20 / 16}em`,
-      position: 'absolute',
-      color: 'rgba(243, 231, 219, 1)',
-      top: `${50 / 20}em`,
-      right: `${50 / 20}em`,
-      whiteSpace: 'nowrap',
-      textTransform: 'Uppercase',
-      fontFamily: 'Bellefair',
-      letterSpacing: '3px'
-    }
-  },
+  style,
+  // state: {
+  //   activeImage: 0
+  // },
+
   on: {
     click: (event, element, state) => {
       state.update({ active: element.key })
       element.parent.parent.rooms.update({
         style: {
-          minHeight: '800px'
+          minHeight: '700px'
           // animationName: heightGallery,
           // animationDuration: '4s',
           // animationDelay: '1s'
@@ -45,13 +31,12 @@ const roomTab = {
     }
   },
 
+  class: {
+    show: (element, state) => state.active === element.key ? {
+      flex: '3 !important', transform: 'scale(1.2)', '> div': { backgroundAttachment: 'fixed !important', filter: 'brightness(20%) grayscale(50%)' } } : { flex: 1 }
+  },
   image: {
     style: {
-      width: '100%',
-      height: '100%',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-      filter: 'brightness(60%) grayscale(50%)'
     }
   }
 }
@@ -80,7 +65,7 @@ export const tabRedBrick = {
   },
   style: {
     '&::after': {
-      content: '"redBrick"'
+      content: '"Red Brick"'
     }
   },
 

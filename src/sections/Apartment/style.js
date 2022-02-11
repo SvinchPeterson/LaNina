@@ -3,16 +3,18 @@ import { heightGallery } from '../../animations'
 
 export default {
   '> header': {
-    minHeight: `${600 / 16}em`,
+    minHeight: `${550 / 16}em`,
 
     '> a': { flex: 1 }
   },
 
   '> section': {
     position: 'relative',
-    // boxSizing: 'border-box',
-    // padding: '100px',
+    boxSizing: 'border-box',
+    marginTop: '100px',
     '> div': {
+      boxSizing: 'border-box',
+      padding: '0px 50px',
       position: 'absolute',
       width: '100%',
       top: 0,

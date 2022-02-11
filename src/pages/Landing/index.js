@@ -102,7 +102,7 @@ export default {
     imageContainer: {
       image: {
         style: {
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(' + RUSTAVELI_JPG + ')'
+          backgroundImage: 'url(' + RUSTAVELI_JPG + ')'
 
         }
       }

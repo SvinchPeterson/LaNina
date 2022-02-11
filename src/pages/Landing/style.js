@@ -10,7 +10,7 @@ export const stylePageLink = {
   flex: 1,
   overflow: 'hidden',
   textDecoration: 'none',
-  filter: 'blur(.8px) grayscale(70%)',
+  filter: 'blur(.8px) grayscale(50%)',
   zIndex: '10',
   // borderRight: '30px solid rgba(0, 0, 0, 0)',
   '> div': {
@@ -43,7 +43,7 @@ export const stylePageLink = {
     // zIndex: '300'
   },
   '&:hover > h6': {
-    width: '100px',
+    width: '60px',
     '> span': {
       opacity: 1
     }
@@ -109,7 +109,7 @@ const styleHeading = {
   textOrientation: 'upright',
   textTransform: 'uppercase',
   // background: 'linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, .82), rgba(0, 0, 0, 1))',
-  // background: 'rgba(243, 231, 219, .95)',
+  background: 'rgba(243, 231, 219, .4)',
   // color: 'rgba(0, 0, 0, .95)',
   // background: 'rgba(243, 231, 219, .95)',
   // boxShadow: '20px 20px 20px red',

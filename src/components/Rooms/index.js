@@ -10,35 +10,33 @@ import DOWN_ARROW from '../../assets/down-arrow.png'
 import UP_ARROW from '../../assets/up-arrow.png'
 
 const room = {
-  state: {
-    activeImage: 0
-  },
+  // state: {
+  //   activeImage: 0
+  // },
   proto: [Block, Flex],
 
-  style: {
-    // flex: 0,
-    // minHeight: 0,
-    // minWidth: 0,
-    boxSizing: 'border-box',
-    padding: '120px 80px'
-    // border: '5px solid red'
-  },
   class: {
     show: (element, state) => state.active === element.key ? {
       height: '100%',
-      animationName: heightGallery,
-      animationDuration: '3s',
+      // animationName: heightGallery,
       opacity: 1,
+      transition: 'all 2s ease-in-out',
       '> div': {
-        opacity: 1
-        // animationName: opacity2,
-        // animationDuration: '3s'
+        opacity: 1,
+        animationName: opacity2,
+        animationDuration: '1.5s'
       },
       '> aside': {
+        background: 'rgba(243, 231, 219, 1)',
+        height: '300px'
+        // transform: 'scale(1)',
+        // minHeight: '400px'
+      },
+      '> aside > div': {
         opacity: 1
       }
     }
-      : { height: 0, opacity: 0 }
+      : { height: 0, opacity: 0, animationTimingFunction: '3s' }
   },
 
   gallery: {
@@ -51,7 +49,8 @@ const room = {
         position: 'absolute',
         top: 0,
         left: 0,
-        filter: 'grayscale(50%) brightness(80%)'
+        filter: 'grayscale(50%) brightness(80%)',
+        backgroundAttachment: 'fixed'
       }
     }
   },
