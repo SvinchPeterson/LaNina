@@ -2,7 +2,7 @@
 
 import { Block, Link } from '@rackai/symbols'
 
-import { heightGallery } from '../../animations'
+import { ballerina } from '../../texts'
 
 import style from './style'
 
@@ -33,11 +33,24 @@ const roomTab = {
 
   class: {
     show: (element, state) => state.active === element.key ? {
-      flex: '3 !important', transform: 'scale(1.2)', '> div': { backgroundAttachment: 'fixed !important', filter: 'brightness(20%) grayscale(50%)' } } : { flex: 1 }
+      flex: '3 !important',
+      transform: 'scale(1.2)',
+      '> div': {
+        backgroundAttachment: 'fixed !important',
+        filter: 'brightness(20%) grayscale(50%)'
+      },
+      '> p': {
+        opacity: 1
+      }
+    }
+      : { flex: 1 }
   },
   image: {
     style: {
     }
+  },
+  p: {
+    proto: ballerina
   }
 }
 
