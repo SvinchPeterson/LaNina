@@ -1,46 +1,39 @@
 'use strict'
 
 export const styleBook = {
-  gap: '12px',
-  fontSize: '22px',
   letterSpacing: '5px',
   fontFamily: 'Bellefair',
-  // fontFamily: 'Avenir Next',
   textDecoration: 'none',
-  color: 'white',
-  display: 'flex',
+  color: 'rgba(243, 231, 219, .75)',
   position: 'absolute',
   top: '80%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  alignItems: 'center',
-  border: '1px solid white',
-  padding: '10px 20px',
+  background: 'radial-gradient(rgba(243, 231, 219, .2), rgba(243, 231, 219, 0))',
+  border: '.5px solid rgba(243, 231, 219, .45)',
+  opacity: 0,
+  transition: 'opacity .7s ease-in-out',
+  transitionDelay: '.5s',
   '> img': {
-    // width: '30px',
-    // height: '30px',
-    // transform: 'scale(.1)',
-    // width: '30px',
-    // height: '30px',
-    display: 'block'
-    // border: '1px solid white',
-    // paddingRight: '5px'
-    // border: '1px solid white',
-    // padding: '10px'
+    display: 'block',
+    opacity: '.75'
+  },
+  '&:hover': {
+    background: 'radial-gradient(rgba(243, 231, 219, .3), rgba(243, 231, 219, 0))',
+    transitionDelay: '0s'
   }
 }
 
 export const styleParagraph = {
-  color: 'rgba(243, 231, 219, 1)',
+  color: 'rgba(243, 231, 219, .75)',
   fontFamily: 'Avenir Next',
-  fontSize: '16px',
   opacity: 0,
-  minWidth: '400px',
-  maxWidth: '600px',
+  minWidth: `${400 / 16}em`,
+  maxWidth: `${600 / 16}em`,
   fontWeight: '400',
   transition: 'all .7s ease-in-out',
   transitionDelay: '.5s',
-  lineHeight: '28px',
+  lineHeight: `${28 / 16}em`,
   boxSizing: 'border-box'
 
 }
@@ -65,22 +58,20 @@ export default {
   transition: 'all .7s ease-in-out',
   zIndex: 50,
   boxSizing: 'border-box',
-  // border: '5px solid red',
   textDecoration: 'none',
-  padding: '50px',
   transform: 'scale(.995)',
   '&::after': {
     content: '""',
     fontSize: `${18 / 16}em`,
     position: 'absolute',
-    color: 'rgba(243, 231, 219, 1)',
+    color: 'rgba(243, 231, 219, .85)',
     top: '25%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     whiteSpace: 'nowrap',
     textTransform: 'Uppercase',
     fontFamily: 'Bellefair',
-    letterSpacing: '3px'
+    letterSpacing: `${3 / 16}em`
   },
   '&:hover': {
     flex: 3,
@@ -91,10 +82,16 @@ export default {
     },
     '> p': {
       opacity: 1
+    },
+    '> a': {
+      opacity: '.85'
     }
   },
 
   '&:not(:hover) > p': {
+    transitionDelay: '-1s'
+  },
+  '&:not(:hover) > a': {
     transitionDelay: '-1s'
   }
 }

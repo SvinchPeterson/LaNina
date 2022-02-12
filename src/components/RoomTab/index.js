@@ -15,22 +15,27 @@ import BRICKS_ICON from '../../assets/bricks.png'
 import COUCH_ICON from '../../assets/couch.png'
 
 const book = {
-  proto: [Link, Text],
+  proto: [Link, Text, Block],
   style: styleBook,
+  props: {
+    flexAlign: 'center center',
+    size: 'C',
+    text: 'BOOK',
+    gap: 'Z',
+    padding: 'Y Z'
+  },
+
   icon: {
     proto: Img
-  },
-  props: {
-    text: 'BOOK'
   }
-
 }
 
 const roomTab = {
   proto: [Link, Block],
   style,
   props: {
-    flexAlign: 'center center'
+    flexAlign: 'center center',
+    padding: 'C'
   },
   // state: {
   //   activeImage: 0
@@ -58,10 +63,10 @@ const roomTab = {
       '> div': {
         backgroundAttachment: 'fixed !important',
         filter: 'brightness(20%) grayscale(50%)'
+        // transform: 'scale(1)'
       },
-      '> p': {
-        opacity: 1
-      }
+      '> p': { opacity: 1 },
+      '> a': { opacity: '.85' }
     }
       : {
         flex: 1
@@ -83,6 +88,7 @@ export const tabBallerina = {
   proto: roomTab,
   props: {
     href: '#ballerina'
+
   },
 
   style: {

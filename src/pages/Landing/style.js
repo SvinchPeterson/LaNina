@@ -109,7 +109,7 @@ const styleHeading = {
   textOrientation: 'upright',
   textTransform: 'uppercase',
   // background: 'linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, .82), rgba(0, 0, 0, 1))',
-  background: 'rgba(243, 231, 219, .4)',
+  // background: 'rgba(243, 231, 219, .4)',
   // color: 'rgba(0, 0, 0, .95)',
   // background: 'rgba(243, 231, 219, .95)',
   // boxShadow: '20px 20px 20px red',
