@@ -25,7 +25,7 @@ export default {
     proto: Block,
     props: {
       flexFlow: 'row',
-      gap: 'C'
+      gap: 'B1'
     },
     ...[
       tabBallerina,
@@ -38,7 +38,6 @@ export default {
     tag: 'section',
     proto: Block,
     props: {
-      // flexFlow: 'row',
       padding: 'E'
     },
     ...[

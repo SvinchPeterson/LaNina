@@ -1,18 +1,37 @@
 'use strict'
 
-import { Block, Link } from '@rackai/symbols'
+import { Block, Link, Img, Text } from '@rackai/symbols'
 
 import { ballerina } from '../../texts'
 
-import style from './style'
+import style, { styleBook, styleParagraph, styleImage } from './style'
 
 import BALLERINA_COVER_IMG from '../../assets/images/ballerina/ballerinaCovers.jpg'
 import REDBRICK_COVER_IMG from '../../assets/images/redBrick/redBrickCovers.jpg'
 import YELLOWCOUCH_COVER_IMG from '../../assets/images/yellowCouch/yellowCouchCovers.jpg'
 
+import BALLERINA_ICON from '../../assets/dress.png'
+import BRICKS_ICON from '../../assets/bricks.png'
+import COUCH_ICON from '../../assets/couch.png'
+
+const book = {
+  proto: [Link, Text],
+  style: styleBook,
+  icon: {
+    proto: Img
+  },
+  props: {
+    text: 'BOOK'
+  }
+
+}
+
 const roomTab = {
   proto: [Link, Block],
   style,
+  props: {
+    flexAlign: 'center center'
+  },
   // state: {
   //   activeImage: 0
   // },
@@ -34,7 +53,8 @@ const roomTab = {
   class: {
     show: (element, state) => state.active === element.key ? {
       flex: '3 !important',
-      transform: 'scale(1.2)',
+      // transform: 'scale(1.2)',
+      zIndex: 60,
       '> div': {
         backgroundAttachment: 'fixed !important',
         filter: 'brightness(20%) grayscale(50%)'
@@ -43,14 +63,19 @@ const roomTab = {
         opacity: 1
       }
     }
-      : { flex: 1 }
+      : {
+        flex: 1
+      }
   },
   image: {
-    style: {
-    }
+    style: styleImage
   },
   p: {
-    proto: ballerina
+    proto: ballerina,
+    style: styleParagraph
+  },
+  book: {
+    proto: book
   }
 }
 
@@ -68,6 +93,18 @@ export const tabBallerina = {
 
   image: {
     style: { backgroundImage: 'url(' + BALLERINA_COVER_IMG + ')' }
+  },
+  p: {},
+  book: {
+    icon: {
+      style: {
+        width: '20px',
+        height: '20px'
+      },
+      props: {
+        src: BALLERINA_ICON
+      }
+    }
   }
 }
 
@@ -84,6 +121,18 @@ export const tabRedBrick = {
 
   image: {
     style: { backgroundImage: 'url(' + REDBRICK_COVER_IMG + ')' }
+  },
+  p: {},
+  book: {
+    icon: {
+      style: {
+        width: '25px',
+        height: '20px'
+      },
+      props: {
+        src: BRICKS_ICON
+      }
+    }
   }
 }
 
@@ -101,5 +150,17 @@ export const tabYellowCouch = {
 
   image: {
     style: { backgroundImage: 'url(' + YELLOWCOUCH_COVER_IMG + ')' }
+  },
+  p: {},
+  book: {
+    icon: {
+      style: {
+        width: '25px',
+        height: '20px'
+      },
+      props: {
+        src: COUCH_ICON
+      }
+    }
   }
 }
