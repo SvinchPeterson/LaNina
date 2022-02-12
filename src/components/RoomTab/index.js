@@ -45,12 +45,9 @@ const roomTab = {
     click: (event, element, state) => {
       state.update({ active: element.key })
       element.parent.parent.rooms.update({
-        style: {
-          minHeight: '700px'
-          // animationName: heightGallery,
-          // animationDuration: '4s',
-          // animationDelay: '1s'
-        }
+        // style: {
+        //   minHeight: '700px'
+        // }
       })
     }
   },
@@ -58,12 +55,10 @@ const roomTab = {
   class: {
     show: (element, state) => state.active === element.key ? {
       flex: '3 !important',
-      // transform: 'scale(1.2)',
       zIndex: 60,
       '> div': {
         backgroundAttachment: 'fixed !important',
         filter: 'brightness(20%) grayscale(50%)'
-        // transform: 'scale(1)'
       },
       '> p': { opacity: 1 },
       '> a': { opacity: '.85' }

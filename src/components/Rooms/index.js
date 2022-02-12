@@ -4,39 +4,34 @@ import { Block, Button, Img, Flex } from '@rackai/symbols'
 
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, RoomDescription } from '..'
 
-import { heightGallery, opacity2 } from '../../animations'
+import { opacity2 } from '../../animations'
 
 import DOWN_ARROW from '../../assets/down-arrow.png'
 import UP_ARROW from '../../assets/up-arrow.png'
 
 const room = {
-  // state: {
-  //   activeImage: 0
-  // },
   proto: [Block, Flex],
+  style: { height: '100%', opacity: 1 },
 
   class: {
     show: (element, state) => state.active === element.key ? {
       height: '100%',
-      // animationName: heightGallery,
       opacity: 1,
       transition: 'all 2s ease-in-out',
       '> div': {
-        opacity: 1,
-        animationName: opacity2,
-        animationDuration: '1.5s'
+        opacity: 1
+        // animationName: opacity2,
+        // animationDuration: '1.5s'
       },
       '> aside': {
-        background: 'rgba(243, 231, 219, 1)',
-        height: '300px'
-        // transform: 'scale(1)',
-        // minHeight: '400px'
+        background: 'rgba(243, 231, 219, 1)'
+        // height: '300px'
       },
       '> aside > div': {
-        opacity: 1
+        // opacity: 1
       }
     }
-      : { height: 0, opacity: 0, animationTimingFunction: '3s' }
+      : { height: 0, opacity: 0 }
   },
 
   gallery: {
@@ -73,7 +68,7 @@ const room = {
       // background: 'rgba(0, 0, 0, .8)',
       background: 'rgba(243, 231, 219, .3)',
       display: 'flex',
-      opacity: 0,
+      opacity: 1,
       top: '45%',
       transition: 'all 1s ease-in-out',
       transitionDelay: '1s',
