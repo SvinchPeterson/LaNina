@@ -5,10 +5,12 @@ import SOLOLAKI_JPG from '../assets/images/sololaki.jpg'
 
 export const positionLoadingLanding = keyframes`
   from {
-    background-position: bottom left;
+    // background-position: bottom left;
+    transform: scale(1);
   }
   to {
-    background-position: center center;
+    // background-position: center center;
+    transform: scale(1.05);
   }
 `
 export const scaleBanner = keyframes`

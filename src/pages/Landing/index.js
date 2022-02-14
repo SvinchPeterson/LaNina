@@ -1,40 +1,68 @@
 'use strict'
-import { Block, Img, Flex, Link, Text } from '@rackai/symbols'
-
-import { positionLanding } from '../../animations'
+import { Block, Flex, Link, Text } from '@rackai/symbols'
 
 import { LaninaBanner } from '../../components'
-import style from './style'
 
 import RUSTAVELI_JPG from '../../assets/images/rustaveli.jpg'
 import SOLOLAKI_JPG from '../../assets/images/sololaki.jpg'
 
-import Logo from '../../assets/logoCream.png'
+import style from './style'
 
 const link = {
-  proto: Link
+  proto: [Link, Flex],
+  style: {
+  },
+  image: {}
+}
+
+const heading = {
+  tag: 'h3',
+  proto: [Block, Text],
+  props: {
+    size: 'A',
+    flexAlign: 'center center'
+  }
 }
 
 const sololaki = {
   proto: link,
-  style: {
-    backgroundImage: 'radial-gradient(rgba(243, 231, 219, .4), rgba(243, 231, 219, .3)), url(' + SOLOLAKI_JPG + ')',
-    transformOrigin: 'right',
-    cursor: 'pointer'
+  props: { href: '/Sololaki' },
+
+  image: {
+    style: {
+      backgroundImage: 'radial-gradient(rgba(243, 231, 219, .4), rgba(243, 231, 219, .3)), url(' + SOLOLAKI_JPG + ')',
+      cursor: 'pointer'
+    }
+  },
+
+  heading: {
+    proto: heading,
+    props: { text: 'sololaki' },
+    style: {
+      right: 0
+    }
   }
 }
 
 const rustaveli = {
   proto: link,
   style: {
-    backgroundImage: 'radial-gradient(rgba(243, 231, 219, .4), rgba(243, 231, 219, .3)),url(' + RUSTAVELI_JPG + ')',
-    transformOrigin: 'left',
-    '&:hover ~ span': {
-      opacity: 1
-    },
-    '&:not(:hover) ~ span': {
-      transition: 'opacity .2s ease-in-out'
+    '&:hover ~ span': { opacity: 1 },
+    '&:not(:hover) ~ span': { transition: 'opacity .2s ease-in-out' }
+  },
 
+  image: {
+    style: {
+      backgroundImage: 'radial-gradient(rgba(243, 231, 219, .4), rgba(243, 231, 219, .3)),url(' + RUSTAVELI_JPG + ')',
+      transformOrigin: 'left'
+    }
+  },
+
+  heading: {
+    proto: heading,
+    props: { text: 'rustaveli' },
+    style: {
+      left: 0
     }
   }
 }
@@ -50,6 +78,7 @@ const underConstruction = {
     text: 'under construction'
   }
 }
+
 export default {
   proto: [Block, Flex],
   style,
@@ -58,122 +87,4 @@ export default {
   rustaveli,
   banner,
   underConstruction
-
 }
-
-// const link = {
-//   proto: [Link, Block]
-// }
-
-// export const logo = {
-//   proto: Img,
-//   props: { src: Logo },
-//   style: {
-//     width: '120px',
-//     height: '150px',
-//     opacity: '.65'
-//   }
-// }
-// const heading = {
-//   tag: 'h6',
-//   proto: Text
-// }
-
-// const underConstruction = {
-//   tag: 'span',
-//   proto: Text,
-//   props: {
-//     text: 'under construction',
-//     size: 'B'
-//   }
-// }
-
-// export default {
-//   proto: Block
-//   // props: {
-//   //   flexAlign: 'center space-betwenn'
-//   // },
-//   // class: [style],
-
-//   // sololaki: {
-//   //   proto: [Block, Flex, Link],
-//   //   style: {
-//   //     '& > h6': {
-//   //       right: 0
-//   //     },
-//   //     '&:hover': {
-//   //       // marginRight: '30px',
-//   //       // borderRight: '5px solid brown',
-//   //       '& > div > div': {
-//   //         backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
-//   //         // backgroundPosition: 'top right'
-//   //       },
-//   //       '& > span': { opacity: 1 }
-//   //       // '&:hover > h6': {
-//   //       //   width: '160px'
-//   //       // }
-//   //     }
-
-//   //   },
-//   //   imageContainer: {
-//   //     image: {
-//   //       style: {
-//   //         backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
-//   //       }
-//   //     }
-//   //   },
-//   //   heading: {
-//   //     tag: 'h6',
-//   //     span: { text: 'SOLOLAKI' }
-//   //   },
-//   //   props: {
-//   //     href: '/Sololaki',
-//   //     color: 'white'
-//   //   }
-//   // },
-
-//   // rustaveli: {
-//   //   proto: [Block, Link],
-//   //   style: {
-//   //     '&:hover': {
-//   //       // marginLeft: '30px',
-//   //       '> div > div': {
-//   //         backgroundImage: 'url(' + RUSTAVELI_JPG + ')'
-//   //         // backgroundPosition: 'top left'
-//   //       },
-//   //       '&:hover ~ span': {
-//   //         opacity: 1
-
-//   //       }
-//   //       // '&:hover > h6': {
-//   //       //   width: '160px'
-//   //       // }
-//   //     }
-//   //   },
-//   //   imageContainer: {
-//   //     image: {
-//   //       style: {
-//   //         backgroundImage: 'url(' + RUSTAVELI_JPG + ')'
-
-//   //       }
-//   //     }
-//   //   },
-//   //   heading: {
-//   //     tag: 'h6',
-//   //     span: {
-//   //       text: 'RUSTAVELI'
-//   //     }
-//   //   }
-//   // },
-
-//   // laninaBanner: {
-//   //   proto: LaninaBanner
-//   // },
-//   // span: {
-//   //   proto: underConstruction,
-//   //   style: {
-//   //     opacity: 0,
-//   //     transition: 'opacity .5s ease-in-out'
-//   //   }
-//   // }
-// }
