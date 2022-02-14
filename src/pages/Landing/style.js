@@ -1,6 +1,77 @@
 'use strict'
 
-import { opacity, scaleUp, landingLoading, backgroundPosition, letterSpacing, widthShrink } from '../../animations'
+import { positionLoadingLanding, brightnessLanding, scaleBanner, letterSpacingBanner } from '../../animations'
+
+const styleLink = {
+  flex: 1,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center center',
+  backgroundAttachment: 'fixed',
+  filter: 'brightness(15%) blur(.5px) grayscale(30%)',
+  zIndex: 10,
+  transition: 'all 1s ease-in-out',
+  animationName: positionLoadingLanding,
+  animationDuration: '1.2s',
+  animationTimingFunction: 'ease-in-out',
+  '&:hover': {
+    flex: 8,
+    transform: 'scale(1.1)',
+    filter: 'brightness(35%) blur(0px) grayscale(10%)',
+    transition: 'all 1s ease-in-out'
+  },
+  '&::before': {
+  }
+}
+
+const styleBanner = {
+  zIndex: 100,
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  animationName: scaleBanner,
+  animationDuration: '1s',
+  animationTimingFunction: 'ease-in-out',
+
+  span: {
+    fontSize: '24px',
+    animationName: letterSpacingBanner,
+    animationDuration: '1.5s',
+    display: 'inline-block',
+    transform: 'scale(.95)'
+  }
+
+}
+
+const styleUnderConstruction = {
+  position: 'absolute',
+  top: '70%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  color: 'rgba(243, 231, 219, .8)',
+  zIndex: '100',
+  fontFamily: 'Avenir Next',
+  textTransform: 'uppercase',
+  letterSpacing: '3px',
+  wordSpacing: '10px',
+  opacity: 0,
+  transition: 'opacity 1s ease-in-out',
+  fontWeight: '500'
+
+}
+
+export default {
+  flex: 1,
+  position: 'relative',
+  overflow: 'hidden',
+  background: 'black',
+  animationName: brightnessLanding,
+  animationDuration: '2s',
+
+  '> a': styleLink,
+  '> div': styleBanner,
+  '> span': styleUnderConstruction
+}
 
 // export const stylePageLink = {
 //   height: '100%',

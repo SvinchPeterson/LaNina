@@ -28,12 +28,13 @@ const heading = {
       // padding: 'B 0 0 0'
     },
     style: {
+      display: 'block',
       fontSize: '18px',
       letterSpacing: '10px',
-      width: '100%',
+      width: '500px',
       boxSizing: 'border-box',
       paddingLeft: '10px',
-      paddingTop: '100px',
+      // paddingTop: '100px',
       color: 'rgba(243, 231, 219, .65)'
     }
   }
