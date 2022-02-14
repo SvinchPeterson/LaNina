@@ -17,6 +17,6 @@ export default {
   h3: { margin: 0 },
   h5: { margin: 0 },
   p: { margin: 0 },
-  h6: { margin: 0 },
-  background: 'black'
+  h6: { margin: 0 }
+  // background: 'black'
 }

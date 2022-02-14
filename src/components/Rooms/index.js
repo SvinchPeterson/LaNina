@@ -6,8 +6,8 @@ import { galleryBallerina, galleryRedBrick, galleryYellowCouch, RoomDescription 
 
 import { opacity2 } from '../../animations'
 
-import DOWN_ARROW from '../../assets/down-arrow.png'
-import UP_ARROW from '../../assets/up-arrow.png'
+import DOWN_ARROW from '../../assets/down-arrowBlack.png'
+import UP_ARROW from '../../assets/up-arrowBlack.png'
 
 const room = {
   proto: [Block, Flex],
@@ -65,8 +65,9 @@ const room = {
       position: 'absolute',
       zIndex: '50',
       right: '120px',
-      // background: 'rgba(0, 0, 0, .8)',
-      background: 'rgba(243, 231, 219, .3)',
+      // background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .05))',
+      background: 'radial-gradient(rgba(243, 231, 219, .2), rgba(243, 231, 219, .1))',
+      // background: 'rgba(243, 231, 219, .3)',
       display: 'flex',
       opacity: 1,
       top: '45%',
@@ -80,7 +81,8 @@ const room = {
       },
       '> button > img': {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        opacity: '.2'
       }
     },
     upArrow: {
