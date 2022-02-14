@@ -60,7 +60,6 @@ const styleHeading = {
   width: '60px',
   height: '100%',
   zIndex: '100',
-  background: 'rgba(243, 231, 219, .0)',
   color: 'rgba(243, 231, 219, .65)',
   fontFamily: 'Bellefair',
   fontWeight: '500',
