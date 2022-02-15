@@ -14,6 +14,10 @@ export default {
     padding: 'F E 0 E',
     flexAlign: 'flex-start flex-start'
   },
+  class: {
+    show: (element, state) => state.active ? { opacity: 0, height: 0 } : { height: '100%', opacity: 1 },
+    show2: (element, state) => state.active ? { nav: { filter: 'blur(2px)', pointerEvents: 'none' } } : { nav: { filter: 'blur(0px)' } }
+  },
 
   style: {
     background: 'radial-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7))',

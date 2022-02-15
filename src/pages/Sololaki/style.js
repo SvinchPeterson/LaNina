@@ -1,10 +1,8 @@
 'use strict'
 
-import { scaleDown, scaleUp, fadeUp2, filter, letterSpacing, brightnessScale } from '../../animations'
+import { scaleSololakiBanner, scaleOpacitySololakiBannerHeading, opacitySololakiBannerParagraph, letterSpacingSololakiBanner } from '../../animations'
 
 import COVER_JPG from '../../assets/images/balcony.jpg'
-
-import GREEN_LANINA_JPG from '../../assets/images/greenLanina.jpg'
 
 export const styleBanner = {
   width: `100%`,
@@ -15,12 +13,16 @@ export const styleBanner = {
   '> span': {
     minWidth: '100%',
     flex: 1,
-    backgroundImage: 'radial-gradient(rgba(243, 231, 219, .2), rgba(243, 231, 219, .2)), url(' + COVER_JPG + ')',
-    filter: 'brightness(15%) grayscale(50%)',
+    backgroundImage: 'radial-gradient(rgba(243, 231, 219, .6), rgba(243, 231, 219, .2)), url(' + COVER_JPG + ')',
+    filter: 'brightness(15%) grayscale(30%)',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
+    transform: 'scale(1)',
+    animationName: scaleSololakiBanner,
+    animationDuration: '5s',
+    animationTimingFunction: 'linear'
   },
   '> div': {
     position: 'absolute',
@@ -34,17 +36,27 @@ export const styleBanner = {
     '> h2': {
       margin: 0,
       letterSpacing: '3px',
-      opacity: 0.75
+      transform: 'scale(1.1)',
+      opacity: 0.75,
+      animationName: scaleOpacitySololakiBannerHeading,
+      animationDuration: '1s',
+      animationTimingFunction: 'ease-in-out'
     },
     '> span': {
       textTransform: 'uppercase',
       opacity: '.55',
-      letterSpacing: '10px'
+      letterSpacing: '10px',
+      animationName: letterSpacingSololakiBanner,
+      animationDuration: '1s',
+      animationTimingFunction: 'ease-in-out'
     },
     '> p': {
       fontFamily: 'Avenir Next',
       opacity: '.45',
-      letterSpacing: '2px'
+      letterSpacing: '2px',
+      animationName: opacitySololakiBannerParagraph,
+      animationDuration: '5s',
+      animationTimingFunction: 'ease-in-outr'
     }
   }
 }

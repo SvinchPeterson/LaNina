@@ -1,51 +1,42 @@
 'use strict'
+const styleCheck = {
+  display: 'none',
+  '&:checked ~ label > div:first-child': {
+    width: `${20 / 16}em`
+  },
+  '&:checked ~ label > div:last-child': {
+    width: `${36 / 16}em`
+  }
+}
+
+const styleMenuIcon = {
+  flexFlow: 'column',
+  cursor: 'pointer',
+  background: 'black',
+  '> div': {
+    background: 'rgba(243, 231, 219, .85)',
+    height: `${2 / 16}em`,
+    transition: 'width .5s ease-in-out'
+  }
+}
 
 export default {
   width: '100%',
   position: 'fixed',
-  height: 0,
-  top: '50px',
-  zIndex: 200,
+  height: 'fit-content',
+  border: '3px solid red',
+  top: '0px',
+  zIndex: 300,
   alignItems: 'center',
   fontFamily: 'Avenir Next',
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
-  '> nav': { mixBlendMode: 'difference' },
-  '#toggle:checked ~ aside': {
-    width: '500px',
-    left: '0px',
-    opacity: 1
-  },
-  // '#toggle:checked ~ aside > nav': {
-  //   display: 'flex',
-  //   opacity: 1,
-  //   transition: 'all 2s ease-in-out',
-  //   transitionDelay: '0s'
-  // },
-  // '#toggle:not(:checked) ~ aside > nav': {
-  //   transition: 'all .1s easein-out',
-  //   transitioonDelay: '0s'
 
-  // },
-  '#toggle:checked ~ label > div:last-child': {
-    transition: 'all .4s ease-in-out',
-    transitionDelay: '0s',
-    width: '36px'
-  },
-  '#toggle:not(:checked) ~ label > div:last-child': {
-    transition: 'all .4s ease-in-out',
-    transitionDelay: '0s',
-    width: '20px'
-  },
-  '#toggle:checked ~ label > div:first-child': {
-    transition: 'all .4s ease-in-out',
-    transitionDelay: '0s',
-    width: '20px'
-  },
-  '#toggle:not(:checked) ~ label > div:first-child': {
-    transition: 'all .4s ease-in-out',
-    transitionDelay: '0s',
-    width: '36px'
-  }
+  '> input': styleCheck,
+  '> label': styleMenuIcon
+  // '> nav': { mixBlendMode: 'difference' },
+  // '#toggle:checked ~ label': {
+  //   border: '3px solid red'
+  // }
 
 }
