@@ -29,7 +29,7 @@ export const letterSpacingLandingBanner = keyframes`
 
   }
   to {
-    letter-spacing: 10px;
+    letter-spacing: 8.5px;
     transform: scale(.95);
   }
 `

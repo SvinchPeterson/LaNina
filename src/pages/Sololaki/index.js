@@ -48,7 +48,10 @@ const banner = {
 
 export default {
   style,
-  state: { active: true },
+  state: {
+    active: true,
+    actives: 0
+  },
 
   banner,
   Header,

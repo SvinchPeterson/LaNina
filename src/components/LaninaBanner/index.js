@@ -20,17 +20,21 @@ const heading = {
     style: {
       letterSpacing: '2px',
       color: 'rgba(243, 231, 219, 1)'
+      // fontFamily: 'Bellefair',
+      // fontWeight: '500'
     }
   },
   span: {
     props: {
-      // size: 'B',
+      size: 'A'
       // padding: 'B 0 0 0'
     },
     style: {
+      fontFamily: 'Bellefair',
+      textTransform: 'uppercase',
       display: 'block',
-      fontSize: '18px',
-      letterSpacing: '10px',
+      // fontSize: '18px',
+      letterSpacing: '13px',
       width: '500px',
       boxSizing: 'border-box',
       paddingLeft: '10px',

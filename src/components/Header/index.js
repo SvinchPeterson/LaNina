@@ -3,7 +3,7 @@ import { Block, Img, Text, Flex, Link, Shape, SVG } from '@rackai/symbols'
 
 import style from './style'
 
-import PHONE_SVG from '../../assets/phones.svg'
+import PHONE_PNG from '../../assets/phone1.png'
 import LOGO_PNG from '../../assets/logos.png'
 
 const check = {
@@ -13,11 +13,12 @@ const check = {
     id: 'toggle'
   }
 }
+
 const menuIcon = {
   tag: 'label',
   attr: { for: 'toggle' },
   proto: [Block, Flex],
-  props: { gap: 'X1' },
+  props: { gap: 'Y' },
   on: {
     click: (event, element, state) => {
       state.active ? state.update({ active: false }) : state.update({ active: true })
@@ -37,13 +38,92 @@ const menuIcon = {
   ]
 }
 
+const langs = {
+  proto: Block,
+  props: {
+    flexAlign: 'flex-start center',
+    gap: 'Z'
+  },
+
+  childProto: {
+    proto: [Text, Block],
+    props: {
+      padding: '0 Z 0 0'
+    }
+    // class: {
+    //   show: (element, state) => state.actives === parseInt(element.key) ? { opacity: 1, display: 'block' } : { opacity: 0, display: 'none' }
+    // },
+    // on: {
+    //   click: (event, element, state) => {
+    //     state.update(state.actives = parseInt(element.key))
+
+    //     // element.parent.update({ props: { flexFlow: 'column-reverse' } })
+    //   }
+    // }
+  },
+  ...[
+    {
+      // on: {
+      //   click: (event, element, state) => {
+      //     element.parent.update({ props: { flexFlow: 'column' } })
+      //   }
+      // },
+      props: { text: 'eng' }
+    },
+
+    {
+      props: { text: 'rus' }
+      // on: {
+      //   click: (event, element, state) => {
+      //     element.parent.update({ props: { flexFlow: 'column-reverse' } })
+      //   }
+      // }
+    }
+  ]
+}
+
+const book = {
+  img: {
+    proto: [Img, Block],
+    props: {
+      src: LOGO_PNG,
+      boxSize: ''
+    }
+  }
+}
+
+const call = {
+  style: {
+    // border: '2px solid red',
+    height: 'fit-content',
+    transform: 'scale(.97)'
+  },
+  img: {
+    proto: [Img, Block],
+    style: { display: 'block' },
+    props: {
+      boxSize: 'B B',
+      src: PHONE_PNG
+    }
+  }
+}
+
 export default {
   tag: 'header',
-  proto: [Block, Flex],
   style,
+  proto: [Block, Flex],
+  props: {
+    flexAlign: 'flex-start center',
+    gap: 'D1',
+    padding: 'D 0 0 0'
+  },
 
   check,
-  menuIcon
+
+  menuIcon,
+  call,
+  langs
+  // book
 }
 
 // const langLinks = {

@@ -1,6 +1,6 @@
 'use strict'
 
-import { positionLoadingLanding, brightnessLanding, opacityLandingBanner, letterSpacingLandingBanner } from '../../animations'
+import { positionLoadingLanding, brightnessLanding, opacityLandingBanner, letterSpacingBanner } from '../../animations'
 
 const styleLink = {
   flex: 1,
@@ -47,8 +47,8 @@ const styleBanner = {
   animationTimingFunction: 'ease-in-out',
 
   span: {
-    fontSize: '24px',
-    animationName: letterSpacingLandingBanner,
+    // fontSize: '20px',
+    animationName: letterSpacingBanner,
     animationDuration: '1.5s',
     display: 'inline-block',
     transform: 'scale(.95)'

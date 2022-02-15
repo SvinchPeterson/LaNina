@@ -69,6 +69,7 @@ const rustaveli = {
 
 const banner = {
   proto: LaninaBanner
+
 }
 
 const underConstruction = {
