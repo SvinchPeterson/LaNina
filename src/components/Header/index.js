@@ -3,7 +3,7 @@ import { Block, Img, Text, Flex, Link, Shape, SVG } from '@rackai/symbols'
 
 import style from './style'
 
-import PHONE_PNG from '../../assets/phone1.png'
+import PHONE_SVG from '../../assets/phoneRight.svg'
 import LOGO_PNG from '../../assets/logos.png'
 
 const check = {
@@ -17,12 +17,20 @@ const check = {
 const menuIcon = {
   tag: 'label',
   attr: { for: 'toggle' },
-  proto: [Block, Flex],
-  props: { gap: 'Y' },
+  proto: Block,
+  props: {
+    flexFlow: 'column',
+    gap: 'Y',
+    padding: 'Z1'
+  },
   on: {
     click: (event, element, state) => {
       state.active ? state.update({ active: false }) : state.update({ active: true })
+      // class. (element, state) => state.actives ? { opacity: 1, display: 'block' } : { opacity: 0, display: 'none' }
+      // element.style.update({ background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))', padding: '30px 20px' })
+      // element.update({ style: { border: '3px solid red' } })
     }
+
   },
 
   childProto: {
@@ -32,23 +40,24 @@ const menuIcon = {
     }
   },
   ...[
-    { props: { width: 'B2' } },
-    { props: { width: 'A1' } },
-    { props: { width: 'A1' } }
+    { props: { width: 'A2' } },
+    { props: { width: 'A2' } },
+    { props: { width: 'A2' } }
   ]
 }
 
 const langs = {
   proto: Block,
   props: {
+    flexFlow: 'column',
     flexAlign: 'flex-start center',
-    gap: 'Z'
+    gap: 'A'
   },
 
   childProto: {
     proto: [Text, Block],
     props: {
-      padding: '0 Z 0 0'
+      padding: '0 0 A 0'
     }
     // class: {
     //   show: (element, state) => state.actives === parseInt(element.key) ? { opacity: 1, display: 'block' } : { opacity: 0, display: 'none' }
@@ -68,11 +77,11 @@ const langs = {
       //     element.parent.update({ props: { flexFlow: 'column' } })
       //   }
       // },
-      props: { text: 'eng' }
+      props: { text: 'en' }
     },
 
     {
-      props: { text: 'rus' }
+      props: { text: 'ru' }
       // on: {
       //   click: (event, element, state) => {
       //     element.parent.update({ props: { flexFlow: 'column-reverse' } })
@@ -83,28 +92,66 @@ const langs = {
 }
 
 const book = {
+  tag: 'button',
+  proto: Block,
+  props: {
+    flexFlow: 'column',
+    flexAlign: 'center flex-start',
+    gap: 'A'
+  },
   img: {
     proto: [Img, Block],
     props: {
       src: LOGO_PNG,
       boxSize: ''
     }
+  },
+  h5: {
+    proto: Text,
+    props: {
+      text: 'book',
+      size: 'E'
+    }
   }
 }
 
 const call = {
-  style: {
-    // border: '2px solid red',
-    height: 'fit-content',
-    transform: 'scale(.97)'
+  proto: [SVG, Block],
+  src: PHONE_SVG,
+  props: {
+    boxSize: 'A2 A2'
   },
-  img: {
-    proto: [Img, Block],
-    style: { display: 'block' },
-    props: {
-      boxSize: 'B B',
-      src: PHONE_PNG
+  on: {
+    click: (event, element, state) => {
+      // state.active ? state.update({ active: false }) : state.update({ active: true })
+      element.update({ style: { padding: '20px', borderRadius: '100%', background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))' } })
     }
+
+  },
+  style: {
+    opacity: '.7',
+    cursor: 'pointer',
+    display: 'block',
+    padding: '20px',
+    borderRadius: '100%',
+    background: 'transparent',
+    border: '1px solid rgba(243, 231, 219, 0)',
+    // background: 'radial-gradient(rgba(243, 231, 219, .12), rgba(243, 231, 219, .0))',
+    '&:hover': {
+      opacity: '1',
+      border: '1px solid rgba(243, 231, 219, .1)',
+      background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))'
+    }
+  }
+}
+
+const book2 = {
+  tag: 'button',
+  proto: [Block, Text],
+  props: {
+    text: 'book',
+    size: 'B'
+    // padding: 'Z A Z A'
   }
 }
 
@@ -113,16 +160,19 @@ export default {
   style,
   proto: [Block, Flex],
   props: {
-    flexAlign: 'flex-start center',
-    gap: 'D1',
+    flexAlign: 'center center',
+    gap: 'F',
     padding: 'D 0 0 0'
   },
 
   check,
 
   menuIcon,
+  book2,
+  // langs,
   call,
   langs
+  // book
   // book
 }
 

@@ -26,15 +26,15 @@ const heading = {
   },
   span: {
     props: {
-      size: 'A'
+      // size: 'A'
       // padding: 'B 0 0 0'
     },
     style: {
       fontFamily: 'Bellefair',
       textTransform: 'uppercase',
       display: 'block',
-      // fontSize: '18px',
-      letterSpacing: '13px',
+      fontSize: '18px',
+      letterSpacing: '12px',
       width: '500px',
       boxSizing: 'border-box',
       paddingLeft: '10px',
