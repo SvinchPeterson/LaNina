@@ -41,7 +41,7 @@ const styleLangs = {
   height: 'fit-content',
   position: 'absolute',
   right: '30px',
-  top: '300%',
+  top: '220%',
 
   '> div:hover': { color: 'rgba(243, 231, 219, 1)' },
   '> div:first-child': { borderBottom: '1px solid rgba(243, 231, 219, .65)' }
