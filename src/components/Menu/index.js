@@ -23,10 +23,12 @@ const sectionLinks = {
     }
   },
   ...[
-    { props: { text: 'hotel' } },
-    { props: { text: 'wine' } },
-    { props: { text: 'apartments' } },
-    { props: { text: 'service' } }
+    {
+      props: { text: 'hotel', href: '#hotel' }
+    },
+    { props: { text: 'wine', href: '#wine' } },
+    { props: { text: 'apartments', href: '#apartments' } },
+    { props: { text: 'service', href: '#services' } }
   ]
 }
 

@@ -38,6 +38,7 @@ export default {
   },
   ...[
     {
+      attr: { id: 'hotel' },
       image: {
         style: {
           backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
@@ -63,6 +64,7 @@ export default {
     },
 
     {
+      attr: { id: 'wine' },
       image: {
         style: {
           backgroundImage: 'url(' + WINE_JPG + ')',

@@ -19,6 +19,7 @@ export default {
   state: {
     active: 0
   },
+  attr: { id: 'apartments' },
 
   tabs: {
     tag: 'header',

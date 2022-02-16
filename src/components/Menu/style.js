@@ -13,6 +13,7 @@ const styleSectionLinks = {
     transformOrigin: 'left',
     transition: 'all .3s linear',
     fontWeight: 500,
+    textDecoration: 'none',
     '&:hover': {
       color: 'rgba(243, 231, 219, .85)',
       letterSpacing: '4px'
