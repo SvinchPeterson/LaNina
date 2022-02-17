@@ -12,15 +12,16 @@ export default {
   '> section': {
     position: 'relative',
     boxSizing: 'border-box',
-    marginTop: '100px',
-    minHeight: '700px',
+    // marginTop: '100px',
+    // minHeight: '700px',
+    border: '10px solid red',
     '> div': {
-      boxSizing: 'border-box',
-      padding: '0px 50px',
-      position: 'absolute',
-      width: '100%',
-      top: 0,
-      left: 0
+      // boxSizing: 'border-box',
+      // padding: '0px 50px',
+      // position: 'absolute',
+      // width: '100%',
+      // top: 0,
+      // left: 0
     }
   }
 }

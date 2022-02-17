@@ -51,14 +51,15 @@ export default {
   style,
   state: {
     active: true,
-    actives: 0
+    activeLink: 0,
+    activeImage: 0
   },
 
-  banner,
-  Header,
-  Menu,
-  Story,
-  Apartment,
-  Services,
-  Contact
+  // banner,
+  // Header,
+  // Menu,
+  // Story,
+  Apartment
+  // Services,
+  // Contact
 }

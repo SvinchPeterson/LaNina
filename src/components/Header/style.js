@@ -92,7 +92,6 @@ export default {
   fontFamily: 'Avenir Next',
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
-  // border: '4px solid red',
 
   '> input': styleCheck,
   '> label': styleMenuIcon,

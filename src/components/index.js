@@ -2,7 +2,7 @@
 import LaninaBanner from './LaninaBanner'
 import Header from './Header'
 import { tabBallerina, tabRedBrick, tabYellowCouch } from './RoomTab'
-import RoomDescription from './RoomDescription'
+import RoomOffers from './RoomOffers'
 import Menu from './Menu'
 
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch } from './Gallery'
@@ -12,7 +12,7 @@ import { roomBallerina, roomRedBrick, roomYellowCouch } from './Rooms'
 export {
   LaninaBanner,
   Header,
-  RoomDescription,
+  RoomOffers,
   Menu,
   tabBallerina,
   tabRedBrick,

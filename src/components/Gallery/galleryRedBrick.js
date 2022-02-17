@@ -1,5 +1,4 @@
 'use strict'
-import { Img } from '@rackai/symbols'
 
 import Gallery from './gallery'
 
@@ -21,46 +20,3 @@ export const galleryRedBrick = {
     { style: { backgroundImage: 'url(' + WINE_GLASS_JPG + ')' } }
   ]
 }
-
-// const images = [
-//   { style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' } },
-//   { style: { backgroundImage: 'url(' + APARTMENT_JPG + ')' } },
-//   { style: { backgroundImage: 'url(' + BEDROOM_JPG + ')' } },
-//   { style: { backgroundImage: 'url(' + KITCHEN_JPG + ')' } },
-//   { style: { backgroundImage: 'url(' + TORSHER_JPG + ')' } },
-//   { style: { backgroundImage: 'url(' + WINE_GLASS_JPG + ')' } }
-// ]
-
-// export const galleryRedBrick = {
-//   proto: Gallery,
-//   state: {},
-//   images: {
-//     ...images
-//   },
-//   rightArrow: {
-//     on: {
-//       click: (event, element, state) => {
-//         console.log(event)
-//         console.log(element)
-//         console.log(state)
-//         const { activeImage } = state
-//         state.update({
-//           activeImage: activeImage > (images.length - 2) ? 0 : activeImage + 1
-//         })
-//       }
-//     }
-//   },
-//   leftArrow: {
-//     on: {
-//       click: (event, element, state) => {
-//         console.log(event)
-//         console.log(element)
-//         console.log(state)
-//         const { activeImage } = state
-//         state.update({
-//           activeImage: activeImage < 1 ? (images.length - 1) : activeImage - 1
-//         })
-//       }
-//     }
-//   }
-// }

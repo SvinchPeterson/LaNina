@@ -1,11 +1,9 @@
 'use strict'
-import { Block, Img, Text, Flex, Link, Shape, SVG } from '@rackai/symbols'
+import { Block, Text, Flex, Shape, SVG } from '@rackai/symbols'
 
 import style from './style'
 
-// import PHONE_PNG from '../../assets/phone1.png'
 import PHONE_PNG from '../../assets/phoneRight.svg'
-import LOGO_PNG from '../../assets/logos.png'
 
 const check = {
   tag: 'input',

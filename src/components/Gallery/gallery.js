@@ -1,9 +1,8 @@
 'use strict'
 
-import { Block, Img } from '@rackai/symbols'
+import { Block } from '@rackai/symbols'
 
-import LEFT_ARROW from '../../assets/left.png'
-import RIGHT_ARROW from '../../assets/right.png'
+import style from './style'
 
 // export const images = [
 
@@ -20,20 +19,13 @@ import RIGHT_ARROW from '../../assets/right.png'
 // ]
 
 export default {
-  state: {
-    activeImage: 0
-  },
+  style,
   childProto: {
     tag: 'span',
-    proto: Block,
-    style: {
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      transition: 'all 1s ease-in-out'
-    },
-    class: {
-      show: (element, state) => state.activeImage === parseInt(element.key) ? { zIndex: '30', opacity: 1, backgroundPosition: 'center right' } : { zIndex: 0, opacity: 0 }
-    }
+    proto: Block
+    // class: {
+    //   show: (element, state) => state.activeImage === parseInt(element.key) ? { zIndex: '30', opacity: 1, backgroundPosition: 'center right' } : { zIndex: 0, opacity: 0 }
+    // }
   },
   ...[]
 }

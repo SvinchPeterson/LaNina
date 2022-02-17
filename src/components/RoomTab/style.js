@@ -2,15 +2,16 @@
 
 export const styleBook = {
   letterSpacing: '5px',
-  fontFamily: 'Bellefair',
+  fontFamily: 'Avenir Next',
   textDecoration: 'none',
   color: 'rgba(243, 231, 219, .75)',
   position: 'absolute',
   top: '80%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  background: 'radial-gradient(rgba(243, 231, 219, .2), rgba(243, 231, 219, 0))',
+  background: 'radial-gradient(rgba(243, 231, 219, .15), rgba(243, 231, 219, 0))',
   border: '.5px solid rgba(243, 231, 219, .45)',
+  borderRadius: '25px',
   opacity: 0,
   transition: 'opacity .7s ease-in-out',
   transitionDelay: '.5s',
@@ -19,7 +20,7 @@ export const styleBook = {
     opacity: '.75'
   },
   '&:hover': {
-    background: 'radial-gradient(rgba(243, 231, 219, .3), rgba(243, 231, 219, 0))',
+    background: 'radial-gradient(rgba(243, 231, 219, .25), rgba(243, 231, 219, 0))',
     transitionDelay: '0s'
   }
 }
@@ -87,11 +88,14 @@ export default {
       opacity: '.85'
     }
   },
-
   '&:not(:hover) > p': {
     transitionDelay: '-1s'
   },
   '&:not(:hover) > a': {
     transitionDelay: '-1s'
-  }
+  },
+
+  '> div': styleImage,
+  '> p': styleParagraph,
+  '> a': styleBook
 }

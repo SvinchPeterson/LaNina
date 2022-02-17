@@ -19,10 +19,10 @@ const book = {
   style: styleBook,
   props: {
     flexAlign: 'center center',
-    size: 'C',
+    size: 'B',
     text: 'BOOK',
-    gap: 'Z',
-    padding: 'Y Z'
+    gap: 'Z1',
+    padding: 'Y2 A'
   },
 
   icon: {
@@ -37,23 +37,21 @@ const roomTab = {
     flexAlign: 'center center',
     padding: 'C'
   },
-  // state: {
-  //   activeImage: 0
-  // },
 
   on: {
     click: (event, element, state) => {
-      state.update({ active: element.key })
+      state.update({ activeLink: element.key })
       element.parent.parent.rooms.update({
-        // style: {
-        //   minHeight: '700px'
-        // }
+        style: {
+          minHeight: `${800 / 16}em`
+        }
       })
+      console.log(state.activeImage)
     }
   },
 
   class: {
-    show: (element, state) => state.active === element.key ? {
+    show: (element, state) => state.activeLink === element.key ? {
       flex: '3 !important',
       zIndex: 60,
       '> div': {
@@ -67,24 +65,15 @@ const roomTab = {
         flex: 1
       }
   },
-  image: {
-    style: styleImage
-  },
-  p: {
-    proto: ballerina,
-    style: styleParagraph
-  },
-  book: {
-    proto: book
-  }
+
+  image: {},
+  p: { proto: ballerina },
+  book: { proto: book }
 }
 
 export const tabBallerina = {
   proto: roomTab,
-  props: {
-    href: '#ballerina'
-
-  },
+  props: { href: '#ballerina' },
 
   style: {
     '&::after': {
@@ -111,9 +100,7 @@ export const tabBallerina = {
 
 export const tabRedBrick = {
   proto: roomTab,
-  props: {
-    href: '#redBrick'
-  },
+  props: { href: '#redBrick' },
   style: {
     '&::after': {
       content: '"Red Brick"'
@@ -139,9 +126,7 @@ export const tabRedBrick = {
 
 export const tabYellowCouch = {
   proto: roomTab,
-  props: {
-    href: '#yellowCouch'
-  },
+  props: { href: '#yellowCouch' },
   style: {
     flex: 1,
     '&::after': {

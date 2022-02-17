@@ -15,11 +15,7 @@ export default {
     flexFlow: 'column',
     padding: 'F 0 E 0'
   },
-
-  state: {
-    active: 0
-  },
-  attr: { id: 'apartments' },
+  // attr: { id: 'apartments' },
 
   tabs: {
     tag: 'header',
@@ -39,7 +35,7 @@ export default {
     tag: 'section',
     proto: Block,
     props: {
-      padding: 'E'
+      // padding: 'E'
     },
     ...[
       roomBallerina,
