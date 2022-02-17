@@ -41,7 +41,7 @@ const styleLangs = {
   cursor: 'pointer',
   height: 'fit-content',
   position: 'absolute',
-  right: '60px',
+  left: '30px',
   top: '230%',
 
   '> div:hover': { color: 'rgba(243, 231, 219, 1)' },

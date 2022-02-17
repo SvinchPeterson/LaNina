@@ -1,27 +1,33 @@
 'use strict'
 import { Block, Text, Button } from '@rackai/symbols'
 
+import { roomOffers, roomOffers2 } from '../../animations'
+
 import style from './style'
 
 export default {
   tag: 'aside',
   proto: Block,
   style,
-  props: { padding: 'B1 B' },
+  props: {
+    // padding: 'B B',
+    flexFlow: 'column'
+    // gap: 'B'
+  },
 
   header: {
     proto: Block,
     props: {
       flexAlign: 'center center',
       gap: 'G',
-      padding: '0 0 C 0'
+      padding: 'C B C A'
     },
 
     h5: {
       proto: Text,
       props: {
         text: 'place offers',
-        size: 'C'
+        size: 'B'
       }
     },
 
@@ -33,6 +39,12 @@ export default {
         props: {
           boxSize: 'B1 W'
         }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          state.offers ? state.update({ offers: false }) : state.update({ offers: true })
+        }
       }
     }
   },
@@ -40,13 +52,32 @@ export default {
   offer: {
     proto: Block,
     props: {
-      padding: '0 0 B 0'
+      padding: '0 D D B'
     },
+    class: {
+      show: (element, state) => state.offers ? {
+        height: '300px',
+        animationName: roomOffers2,
+        animationDuration: '.5s',
+        animationTimingFunction: 'ease-in-out',
+
+        '> span': { opacity: '1' }
+      } : {
+        animationName: roomOffers,
+        animationDuration: '.5s',
+        animationTimingFunction: 'ease-in-out',
+        paddingTop: 0,
+        paddingBottom: 0,
+        height: 0,
+        '> span': { opacity: '0' }
+      }
+    },
+
     childProto: {
       tag: 'span',
       proto: [Block, Text],
       props: {
-        size: 'A'
+        // size: 'A'
       }
     },
     ...[

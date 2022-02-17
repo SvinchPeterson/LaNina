@@ -84,3 +84,22 @@ export const opacitySololakiBannerParagraph = keyframes`
     opacity: .45;
   }
 `
+
+export const roomOffers = keyframes`
+  from {
+    height: 300px;
+
+  }
+  to {
+    height: 0;
+  }
+`
+export const roomOffers2 = keyframes`
+  from {
+    height: 0px;
+
+  }
+  to {
+    height: 300;
+  }
+`

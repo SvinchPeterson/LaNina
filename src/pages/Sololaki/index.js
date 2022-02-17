@@ -52,12 +52,13 @@ export default {
   state: {
     active: true,
     activeLink: 0,
-    activeImage: 0
+    activeImage: 0,
+    offers: true
   },
 
   // banner,
-  // Header,
-  // Menu,
+  Header,
+  Menu,
   // Story,
   Apartment
   // Services,
