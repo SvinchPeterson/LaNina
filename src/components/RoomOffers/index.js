@@ -1,7 +1,5 @@
 'use strict'
-import { Block, Text, Img } from '@rackai/symbols'
-
-import ARROW_PNG from '../../assets/down-arrowBlack.png'
+import { Block, Text, Button } from '@rackai/symbols'
 
 import style from './style'
 
@@ -18,13 +16,17 @@ export default {
       gap: 'G',
       padding: '0 0 C 0'
     },
+
     h5: {
       proto: Text,
-      props: { text: 'place offers' }
+      props: {
+        text: 'place offers',
+        size: 'C'
+      }
     },
+
     minimize: {
-      tag: 'button',
-      proto: Block,
+      proto: [Block, Button],
       props: { padding: 'Z' },
       span: {
         proto: Block,

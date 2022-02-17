@@ -11,6 +11,24 @@ import UP_ARROW from '../../assets/up-arrowBlack.png'
 
 import style from './style'
 
+const navButtons = {
+  tag: 'span',
+  proto: Block,
+  props: {
+    flexFlow: 'column',
+    gap: 'C'
+  },
+
+  childProto: {
+    proto: Button,
+    arrow: { proto: Img }
+  },
+  ...[
+    { arrow: { props: { src: UP_ARROW } } },
+    { arrow: { props: { src: DOWN_ARROW } } }
+  ]
+}
+
 const room = {
   proto: [Block, Flex],
   style,
@@ -27,7 +45,8 @@ const room = {
   },
 
   gallery: {},
-  offer: { proto: RoomOffers }
+  offer: { proto: RoomOffers },
+  navButtons
 }
 
 // const room = {

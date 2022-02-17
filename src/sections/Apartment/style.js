@@ -14,7 +14,6 @@ export default {
     boxSizing: 'border-box',
     // marginTop: '100px',
     // minHeight: '700px',
-    border: '10px solid red',
     '> div': {
       // boxSizing: 'border-box',
       // padding: '0px 50px',
