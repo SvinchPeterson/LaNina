@@ -43,6 +43,7 @@ export const styleBanner = {
       animationTimingFunction: 'ease-in-out'
     },
     '> span': {
+      fontFamily: 'Bellefair',
       textTransform: 'uppercase',
       opacity: '.55',
       letterSpacing: '10px',

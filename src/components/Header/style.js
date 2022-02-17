@@ -3,11 +3,12 @@ const styleCheck = {
   display: 'none',
 
   '&:checked ~ label': {
-    padding: `${30 / 16}em ${20 / 16}em`,
-    background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))'
+    padding: `${28 / 16}em ${20 / 16}em`,
+    background: 'radial-gradient(rgba(243, 231, 219, .07), rgba(243, 231, 219, .0))',
+    border: '.5px solid rgba(243, 231, 219, .07)'
   },
   '&:checked ~ label > div:first-child': { width: `${20 / 16}em` },
-  '&:checked ~ label > div:last-child': { width: `${36 / 16}em` }
+  '&:checked ~ label > div:last-child': { width: `${30 / 16}em` }
 }
 
 const styleMenuIcon = {
@@ -19,7 +20,7 @@ const styleMenuIcon = {
   border: '1px solid rgba(243, 231, 219, 0)',
   '&:hover': {
     border: '1px solid rgba(243, 231, 219, .1)',
-    background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))',
+    background: 'radial-gradient(rgba(243, 231, 219, .08), rgba(243, 231, 219, .0))',
     '> div': {
       opacity: 1
     }
@@ -40,8 +41,8 @@ const styleLangs = {
   cursor: 'pointer',
   height: 'fit-content',
   position: 'absolute',
-  right: '30px',
-  top: '220%',
+  right: '60px',
+  top: '230%',
 
   '> div:hover': { color: 'rgba(243, 231, 219, 1)' },
   '> div:first-child': { borderBottom: '1px solid rgba(243, 231, 219, .65)' }
@@ -59,7 +60,7 @@ const styleCall = {
   '&:hover': {
     opacity: '1',
     border: '1px solid rgba(243, 231, 219, .1)',
-    background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))'
+    background: 'radial-gradient(rgba(243, 231, 219, .08), rgba(243, 231, 219, .0))'
   }
 }
 
@@ -78,7 +79,7 @@ const styleBook = {
   '&:hover': {
     border: '1px solid rgba(243, 231, 219, .12)',
     color: 'rgba(243, 231, 219, .85)',
-    background: ' radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))'
+    background: 'radial-gradient(rgba(243, 231, 219, .08), rgba(243, 231, 219, .0))'
   }
 }
 
@@ -91,10 +92,11 @@ export default {
   fontFamily: 'Avenir Next',
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
+  // border: '4px solid red',
 
   '> input': styleCheck,
   '> label': styleMenuIcon,
   '> div': styleLangs,
   '> button': styleBook,
-  '> svg': styleCall
+  '> span': styleCall
 }

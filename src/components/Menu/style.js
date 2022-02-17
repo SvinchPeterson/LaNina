@@ -1,10 +1,15 @@
 'use strict'
 
 const styleSectionLinks = {
-  // border: '2px solid red',
+  transition: 'all .7s linear',
+  boxSizing: 'border-box',
+  textAlign: 'left',
+  zIndex: 0,
+  marginLeft: '100px',
+  paddingTop: '100px',
+  flex: 12,
 
   '> a': {
-    // fontFamily: 'Avenir Next',
     fontFamily: 'Bellefair',
     color: 'rgba(243, 231, 219, .55)',
     textTransform: 'uppercase',
@@ -12,11 +17,32 @@ const styleSectionLinks = {
     cursor: 'pointer',
     transformOrigin: 'left',
     transition: 'all .3s linear',
-    fontWeight: 500,
     textDecoration: 'none',
+
     '&:hover': {
       color: 'rgba(243, 231, 219, .85)',
       letterSpacing: '4px'
+    }
+  }
+}
+
+const styleSocialMedia = {
+  transition: 'all .5s linear',
+  transitionDelay: '.4s',
+  flex: 1,
+  minWidth: '100%',
+  paddingBottom: '40px',
+
+  '> a': {
+    cursor: 'pointer',
+    opacity: '.65',
+    border: '1px solid rgba(243, 231, 219, 0)',
+    borderRadius: '100%',
+    transition: 'all .3s linear',
+    '&:hover': {
+      background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, 0))',
+      border: '1px solid rgba(243, 231, 219, .1)',
+      opacity: '.85'
     }
   }
 }
@@ -26,13 +52,14 @@ export default {
   backdropFilter: 'blur(3px)',
   position: 'fixed',
   minWidth: '100%',
+  minHeight: '100%',
+  padding: '0 45px',
   top: 0,
   left: 0,
-  transition: 'all .5s ease-in-out',
-  zIndex: 100,
-  height: '100%',
-  // border: '5px solid red',
+  transition: 'all .5s linear',
+  zIndex: 200,
   boxSizing: 'border-box',
 
-  '> nav': styleSectionLinks
+  '> nav': styleSectionLinks,
+  '> div': styleSocialMedia
 }

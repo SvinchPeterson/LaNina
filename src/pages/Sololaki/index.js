@@ -42,8 +42,9 @@ const bannerHeading = {
 const banner = {
   proto: [Block, Flex],
 
-  image: { tag: 'span' }
-  // bannerHeading
+  image: { tag: 'span' },
+  bannerHeading
+
 }
 
 export default {

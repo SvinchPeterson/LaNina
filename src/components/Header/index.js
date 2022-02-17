@@ -3,7 +3,8 @@ import { Block, Img, Text, Flex, Link, Shape, SVG } from '@rackai/symbols'
 
 import style from './style'
 
-import PHONE_SVG from '../../assets/phoneRight.svg'
+// import PHONE_PNG from '../../assets/phone1.png'
+import PHONE_PNG from '../../assets/phoneRight.svg'
 import LOGO_PNG from '../../assets/logos.png'
 
 const check = {
@@ -21,7 +22,7 @@ const menuIcon = {
   props: {
     flexFlow: 'column',
     gap: 'Y',
-    padding: 'B A2'
+    padding: 'A1 A'
   },
 
   on: {
@@ -67,10 +68,17 @@ const langs = {
 }
 
 const call = {
-  proto: [SVG, Block],
-  src: PHONE_SVG,
+  tag: 'span',
+  proto: Block,
   props: {
-    boxSize: 'A2 A2'
+    boxSize: 'A2 A2',
+    padding: '20px'
+  },
+
+  svg: {
+    proto: [SVG, Block],
+    src: PHONE_PNG,
+    props: { boxSize: 'A1 A1' }
   }
 }
 
