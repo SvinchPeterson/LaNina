@@ -5,7 +5,8 @@ const styleSectionLinks = {
   boxSizing: 'border-box',
   textAlign: 'left',
   zIndex: 0,
-  marginLeft: '100px',
+  minWidth: '200px',
+  marginLeft: '130px',
   paddingTop: '100px',
   flex: 12,
 
@@ -41,15 +42,15 @@ const styleSocialMedia = {
     transition: 'all .3s linear',
     '&:hover': {
       background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, 0))',
-      border: '1px solid rgba(243, 231, 219, .1)',
-      opacity: '.85'
+      // border: '1px solid rgba(243, 231, 219, .1)',
+      opacity: '.9'
     }
   }
 }
 
 export default {
   background: 'radial-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7))',
-  backdropFilter: 'blur(3px)',
+  backdropFilter: 'blur(5px)',
   position: 'fixed',
   minWidth: '100%',
   minHeight: '100%',

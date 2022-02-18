@@ -13,7 +13,7 @@ const sectionLinks = {
   proto: Block,
   props: {
     flexFlow: 'column',
-    gap: 'B1',
+    gap: 'B',
     flexAlign: 'flex-start center'
   },
 
@@ -79,11 +79,7 @@ const socialMedia = {
       style: {
         height: 'fit-content',
         width: 'fit-content',
-        marginLeft: 'auto',
-        '&:hover': {
-          background: 'none',
-          border: 'none'
-        }
+        marginLeft: 'auto'
       },
       icon: {
         proto: [Img, Block],
