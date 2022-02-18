@@ -6,6 +6,8 @@ import { ballerina } from '../../texts'
 
 import style, { styleBook, styleParagraph, styleImage } from './style'
 
+import { roomsContainer } from '../../animations'
+
 import BALLERINA_COVER_IMG from '../../assets/images/ballerina/ballerinaCovers.jpg'
 import REDBRICK_COVER_IMG from '../../assets/images/redBrick/redBrickCovers.jpg'
 import YELLOWCOUCH_COVER_IMG from '../../assets/images/yellowCouch/yellowCouchCovers.jpg'
@@ -40,9 +42,13 @@ const roomTab = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeLink: element.key })
+      state.update({ activeLink: element.key, offers: true })
       element.parent.parent.rooms.update({
         style: {
+          // transitionDelay: '5s',
+          // animationName: roomsContainer,
+          // animationDuration: '3s',
+          // animationTimingFunction: 'ease-in-out',
           minHeight: `${800 / 16}em`
         }
       })

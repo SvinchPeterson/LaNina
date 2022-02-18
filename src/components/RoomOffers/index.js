@@ -58,13 +58,13 @@ export default {
       show: (element, state) => state.offers ? {
         height: '300px',
         animationName: roomOffers2,
-        animationDuration: '.5s',
+        animationDuration: '.55s',
         animationTimingFunction: 'ease-in-out',
 
         '> span': { opacity: '1' }
       } : {
         animationName: roomOffers,
-        animationDuration: '.5s',
+        animationDuration: '.55s',
         animationTimingFunction: 'ease-in-out',
         paddingTop: 0,
         paddingBottom: 0,

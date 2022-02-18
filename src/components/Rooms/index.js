@@ -4,7 +4,7 @@ import { Block, Button, Img, Flex } from '@rackai/symbols'
 
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, RoomOffers } from '..'
 
-import { opacity2 } from '../../animations'
+import { roomsContainer } from '../../animations'
 
 import DOWN_ARROW from '../../assets/down-arrowBlack.png'
 import UP_ARROW from '../../assets/up-arrowBlack.png'
@@ -24,8 +24,33 @@ const navButtons = {
     arrow: { proto: Img }
   },
   ...[
-    { arrow: { props: { src: UP_ARROW } } },
-    { arrow: { props: { src: DOWN_ARROW } } }
+    {
+      arrow: { props: { src: UP_ARROW } },
+      on: {
+        click: (event, element, state) => {
+          const { activeImage } = state
+          state.update({
+            activeImage: activeImage > (element.parent.parent.gallery.length - 2) ? 0 : activeImage + 1
+          })
+        }
+      }
+    },
+
+    {
+      arrow: { props: { src: DOWN_ARROW } },
+
+      on: {
+        click: (event, element, state) => {
+          console.log(event)
+          console.log(element)
+          console.log(state)
+          const { activeImage } = state
+          state.update({
+            activeImage: activeImage < (element.parent.parent.gallery.length - 2) ? 0 : activeImage - 1
+          })
+        }
+      }
+    }
   ]
 }
 
@@ -34,6 +59,9 @@ const room = {
   style,
   class: {
     show: (element, state) => state.activeLink === element.key ? {
+      animationName: roomsContainer,
+      animationDuration: '1.5s',
+      animationTimingFunction: 'ease-in-out',
       height: '100%',
       opacity: 1,
       '> aside': { display: 'grid' }

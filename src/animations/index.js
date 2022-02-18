@@ -24,12 +24,12 @@ export const opacityLandingBanner = keyframes`
 `
 export const letterSpacingLandingBanner = keyframes`
   from {
-    transform: scale(1.2);
-    letter-spacing: 12px;
+    transform: scale(.9);
+    letter-spacing: 8.5px;
 
   }
   to {
-    letter-spacing: 8.5px;
+    letter-spacing: 12px;
     transform: scale(.95);
   }
 `
@@ -82,6 +82,17 @@ export const opacitySololakiBannerParagraph = keyframes`
   }
   to {
     opacity: .45;
+  }
+`
+export const roomsContainer = keyframes`
+  from {
+    opacity: 0;
+    height: 0;
+
+  }
+  to {
+    opacity: 1;
+    height: 100%;
   }
 `
 

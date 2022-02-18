@@ -56,11 +56,11 @@ export default {
     offers: true
   },
 
-  // banner,
+  banner,
   Header,
   Menu,
-  // Story,
-  Apartment
-  // Services,
-  // Contact
+  Story,
+  Apartment,
+  Services,
+  Contact
 }
