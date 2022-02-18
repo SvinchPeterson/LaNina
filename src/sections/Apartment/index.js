@@ -15,7 +15,7 @@ export default {
     flexFlow: 'column',
     padding: 'F 0 E 0'
   },
-  // attr: { id: 'apartments' },
+  attr: { id: 'apartments' },
 
   tabs: {
     tag: 'header',

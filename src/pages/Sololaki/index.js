@@ -61,6 +61,5 @@ export default {
   Menu,
   Story,
   Apartment,
-  Services,
-  Contact
+  Services
 }

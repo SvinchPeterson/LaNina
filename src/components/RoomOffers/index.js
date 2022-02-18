@@ -26,7 +26,7 @@ export default {
     h5: {
       proto: Text,
       props: {
-        text: 'place offers',
+        text: 'room offers',
         size: 'B'
       }
     },

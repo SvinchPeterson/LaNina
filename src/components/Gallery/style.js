@@ -10,14 +10,13 @@ const styleImage = {
   backgroundRepeat: 'no-repeat',
   transition: 'all 1s ease-in-out',
   backgroundAttachment: 'fixed',
-  filter: 'brightness(80%) grayscale(20%)'
+  filter: 'brightness(65%) grayscale(50%)'
 }
 
 export default {
   flex: 1,
   position: 'relative',
   boxSizing: 'border-box',
-  // padding: '100px',
 
   '> span': styleImage
 }

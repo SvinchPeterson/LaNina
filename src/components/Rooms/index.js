@@ -16,7 +16,8 @@ const navButtons = {
   proto: Block,
   props: {
     flexFlow: 'column',
-    gap: 'C'
+    gap: 'C',
+    padding: 'A W'
   },
 
   childProto: {

@@ -3,15 +3,22 @@
 const styleNavButtons = {
   position: 'absolute',
   right: '20px',
-  top: '45%',
+  top: '42%',
+  // border: '2px solid red',
+  background: 'rgba(0, 0, 0, .05)',
+  borderRadius: '30px',
+  border: '1px solid rgba(0, 0, 0, .05)',
+  '&:hover': {
+    background: 'rgba(0, 0, 0, .03)'
+  },
   button: {
     background: 'transparent'
   },
   '> button > img': {
     display: 'block',
-    width: '30px',
+    width: '25px',
     height: '15px',
-    opacity: '.8'
+    opacity: '.3'
   }
 
 }
