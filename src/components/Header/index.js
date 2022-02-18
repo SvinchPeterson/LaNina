@@ -96,7 +96,7 @@ export default {
   props: {
     flexAlign: 'center center',
     gap: 'F',
-    padding: 'D 0 0 0'
+    padding: 'B 0'
   },
 
   check,

@@ -14,9 +14,10 @@ const styleCheck = {
 const styleMenuIcon = {
   cursor: 'pointer',
   borderRadius: '100%',
-  transition: 'all .4s linear',
+  transition: 'all .2s linear',
   width: 'fit-content',
   height: 'fit-content',
+  background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
   border: '1px solid rgba(243, 231, 219, 0)',
   '&:hover': {
     border: '1px solid rgba(243, 231, 219, .1)',
@@ -54,8 +55,9 @@ const styleCall = {
   display: 'block',
   // padding: '20px',
   borderRadius: '100%',
-  background: 'transparent',
+  background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
   border: '1px solid rgba(243, 231, 219, 0)',
+  transition: 'all .2s ease-in-out',
 
   '&:hover': {
     opacity: '1',
@@ -69,12 +71,12 @@ const styleBook = {
   textTransform: 'uppercase',
   color: 'rgba(243, 231, 219, .7)',
   cursor: 'pointer',
-  transition: 'all .3s linear',
+  transition: 'all .2s linear',
   borderRadius: '30px',
   padding: '15px 30px',
   border: '1px solid rgba(243, 231, 219, 0)',
   display: 'block',
-  background: 'transparent',
+  background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
 
   '&:hover': {
     border: '1px solid rgba(243, 231, 219, .12)',
@@ -92,7 +94,7 @@ export default {
   fontFamily: 'Avenir Next',
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
-  backdropFilter: 'blur(10x)',
+  backdropFilter: 'blur(2px) brightness(98%)',
 
   '> input': styleCheck,
   '> label': styleMenuIcon,
