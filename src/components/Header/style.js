@@ -3,22 +3,20 @@ const styleCheck = {
   display: 'none',
 
   '&:checked ~ label': {
-    padding: `${28 / 16}em ${20 / 16}em`,
-    background: 'radial-gradient(rgba(243, 231, 219, .07), rgba(243, 231, 219, .0))',
+    padding: `25px`,
+    background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))',
     border: '.5px solid rgba(243, 231, 219, .07)'
   },
-  '&:checked ~ label > div:first-child': { width: `${20 / 16}em` },
-  '&:checked ~ label > div:last-child': { width: `${30 / 16}em` }
+  '&:checked ~ label > div:first-child': { width: `${25 / 16}em` },
+  '&:checked ~ label > div:last-child': { width: `${40 / 16}em` }
 }
 
 const styleMenuIcon = {
   cursor: 'pointer',
-  borderRadius: '100%',
   transition: 'all .2s linear',
-  width: 'fit-content',
-  height: 'fit-content',
   background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
   border: '1px solid rgba(243, 231, 219, 0)',
+  borderRadius: '100%',
   '&:hover': {
     border: '1px solid rgba(243, 231, 219, .1)',
     background: 'radial-gradient(rgba(243, 231, 219, .15), rgba(243, 231, 219, .0))',
@@ -28,6 +26,7 @@ const styleMenuIcon = {
   },
   '> div': {
     background: 'linear-gradient(rgba(243, 231, 219, 1), rgba(243, 231, 219, 1))',
+    width: '100%',
     height: `${1 / 16}em`,
     transition: 'width .5s ease-in-out',
     borderRadius: '30%',
@@ -42,9 +41,9 @@ const styleLangs = {
   cursor: 'pointer',
   height: 'fit-content',
   position: 'absolute',
-  left: '30px',
-  top: '230%',
-
+  right: '30px',
+  top: '20px',
+  fontWeight: 500,
   '> div:hover': { color: 'rgba(243, 231, 219, 1)' },
   '> div:first-child': { borderBottom: '1px solid rgba(243, 231, 219, .65)' }
 }
@@ -53,7 +52,6 @@ const styleCall = {
   opacity: '.7',
   cursor: 'pointer',
   display: 'block',
-  // padding: '20px',
   borderRadius: '100%',
   background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
   border: '1px solid rgba(243, 231, 219, 0)',
@@ -73,13 +71,12 @@ const styleBook = {
   cursor: 'pointer',
   transition: 'all .2s linear',
   borderRadius: '30px',
-  padding: '15px 30px',
   border: '1px solid rgba(243, 231, 219, 0)',
   display: 'block',
   background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
 
   '&:hover': {
-    border: '1px solid rgba(243, 231, 219, .12)',
+    border: '1px solid rgba(243, 231, 219, .1)',
     color: 'rgba(243, 231, 219, .85)',
     background: 'radial-gradient(rgba(243, 231, 219, .15), rgba(243, 231, 219, .0))'
   }
@@ -94,7 +91,7 @@ export default {
   fontFamily: 'Avenir Next',
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
-  backdropFilter: 'blur(2px) brightness(98%)',
+  backdropFilter: 'blur(2px)',
 
   '> input': styleCheck,
   '> label': styleMenuIcon,

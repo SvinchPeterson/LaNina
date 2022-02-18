@@ -19,8 +19,9 @@ const menuIcon = {
   proto: Block,
   props: {
     flexFlow: 'column',
-    gap: 'Y',
-    padding: 'A1 A'
+    gap: 'Y2',
+    boxSize: 'A2 A2',
+    padding: 'A'
   },
 
   on: {
@@ -36,26 +37,19 @@ const menuIcon = {
     }
   },
 
-  ...[
-    { props: { width: 'A2' } },
-    { props: { width: 'A2' } },
-    { props: { width: 'A2' } }
-  ]
+  ...[{}, {}, {}]
 }
 
 const langs = {
   proto: Block,
   props: {
     flexFlow: 'column',
-    flexAlign: 'flex-start center',
-    gap: 'A'
+    flexAlign: 'flex-start center'
   },
 
   childProto: {
     proto: [Text, Block],
-    props: {
-      padding: '0 0 A 0'
-    }
+    props: { padding: 'Y 0' }
   },
 
   ...[
@@ -70,7 +64,7 @@ const call = {
   proto: Block,
   props: {
     boxSize: 'A2 A2',
-    padding: '20px'
+    padding: 'A'
   },
 
   svg: {
@@ -85,7 +79,8 @@ const book = {
   proto: [Block, Text],
   props: {
     text: 'book',
-    size: 'B'
+    size: 'B',
+    padding: 'Z A2'
   }
 }
 
@@ -96,7 +91,7 @@ export default {
   props: {
     flexAlign: 'center center',
     gap: 'F',
-    padding: 'B 0'
+    padding: 'C 0 A 0'
   },
 
   check,
