@@ -3,13 +3,11 @@
 const styleSectionLinks = {
   transition: 'all .7s linear',
   boxSizing: 'border-box',
-  textAlign: 'left',
   zIndex: 0,
   minWidth: '200px',
-  marginLeft: '130px',
+  marginLeft: '125px',
   paddingTop: '100px',
   flex: 12,
-
   '> a': {
     fontFamily: 'Bellefair',
     color: 'rgba(243, 231, 219, .55)',

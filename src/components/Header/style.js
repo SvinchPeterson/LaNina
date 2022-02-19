@@ -3,12 +3,12 @@ const styleCheck = {
   display: 'none',
 
   '&:checked ~ label': {
-    padding: `25px`,
-    background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))',
+    padding: `20px`,
+    background: 'radial-gradient(rgba(243, 231, 219, .08), rgba(243, 231, 219, .0))',
     border: '.5px solid rgba(243, 231, 219, .07)'
   },
-  '&:checked ~ label > div:first-child': { width: `${25 / 16}em` },
-  '&:checked ~ label > div:last-child': { width: `${40 / 16}em` }
+  '&:checked ~ label > div:first-child': { width: `${10 / 16}em` },
+  '&:checked ~ label > div:last-child': { width: `${30 / 16}em` }
 }
 
 const styleMenuIcon = {

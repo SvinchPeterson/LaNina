@@ -2,7 +2,7 @@
 
 import { Block, Text, Flex } from '@rackai/symbols'
 
-import { Story, Apartment, Services, Contact } from '../../sections'
+import { Story, Apartment, Services } from '../../sections'
 
 import { Header, Menu } from '../../components'
 
@@ -56,10 +56,10 @@ export default {
     offers: true
   },
 
-  banner,
-  Header,
-  Menu,
-  Story,
-  Apartment,
+  // banner,
+  // Header,
+  // Menu,
+  // Story,
+  // Apartment,
   Services
 }

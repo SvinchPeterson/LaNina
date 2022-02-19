@@ -45,6 +45,7 @@ const styleBanner = {
   animationName: opacityLandingBanner,
   animationDuration: '1s',
   animationTimingFunction: 'ease-in-out',
+  pointerEvents: 'none',
 
   span: {
     animationName: letterSpacingLandingBanner,
