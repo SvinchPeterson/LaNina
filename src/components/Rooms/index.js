@@ -72,6 +72,9 @@ const room = {
         opacity: 0
       }
   },
+  props: {
+    padding: 'D'
+  },
 
   gallery: {},
   offer: { proto: RoomOffers },

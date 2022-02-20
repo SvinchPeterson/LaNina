@@ -11,7 +11,7 @@ export const styleBook = {
   transform: 'translate(-50%, -50%)',
   background: 'radial-gradient(rgba(243, 231, 219, .15), rgba(243, 231, 219, 0))',
   border: '.5px solid rgba(243, 231, 219, .45)',
-  borderRadius: '25px',
+  borderRadius: '50px',
   opacity: 0,
   transition: 'opacity .7s ease-in-out',
   transitionDelay: '.5s',
@@ -36,6 +36,7 @@ export const styleParagraph = {
   transitionDelay: '.5s',
   lineHeight: `${28 / 16}em`,
   boxSizing: 'border-box'
+  // textAlign: 'center'
 
 }
 
@@ -60,7 +61,7 @@ export default {
   zIndex: 50,
   boxSizing: 'border-box',
   textDecoration: 'none',
-  transform: 'scale(.995)',
+  transform: 'scale(1)',
   '&::after': {
     content: '""',
     fontSize: `${18 / 16}em`,
@@ -71,8 +72,10 @@ export default {
     transform: 'translate(-50%, -50%)',
     whiteSpace: 'nowrap',
     textTransform: 'Uppercase',
-    fontFamily: 'Bellefair',
-    letterSpacing: `${3 / 16}em`
+    // fontFamily: 'Bellefair',
+    letterSpacing: `${3 / 16}em`,
+    fontFamily: 'Avenir Next',
+    fontWeight: '500'
   },
   '&:hover': {
     flex: 3,

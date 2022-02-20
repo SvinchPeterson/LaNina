@@ -67,8 +67,10 @@ export default {
   overflowX: 'hidden',
   overflowY: 'auto',
   position: 'relative',
-  background: 'rgba(243, 231, 219, 1)',
+  background: 'linear-gradient(rgba(243, 231, 219, 1), rgba(243, 231, 219, 1))',
+  // backgroundColor: 'linear-gradient(0deg, rgba(248, 229, 223, 1) 35%, rgba(243, 231, 219, 1) 65%, rgba(235, 233, 219, 1) 100%); }',
   scrollBehavior: 'smooth',
+  // background: 'linear-gradient(0deg, rgba(245, 245, 245, 1) 35%, rgba(243, 231, 219, 1) 65%',
 
   '> div': styleBanner
 }

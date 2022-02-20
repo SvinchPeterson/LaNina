@@ -2,7 +2,7 @@
 
 export default {
   boxSizing: 'border-box',
-  padding: '0 100px',
+  padding: '200px 100px',
   '> section': {
     minHeight: `${700 / 16}em`,
     flex: 1,
@@ -18,13 +18,13 @@ export default {
 
     '> p': {
       flex: 1,
-      background: 'rgba(243, 231, 219, 1)',
-      boxSizing: 'border-box',
       '> span': {
         fontFamily: 'Avenir Next',
-        background: 'rgba(243, 231, 219, 1)',
+        background: 'linear-gradient(rgba(243, 231, 219, 1), rgba(243, 231, 219, 1))',
+        // background: 'linear-gradient(0deg, rgba(248, 229, 223, 1) 35%, rgba(243, 231, 219, 1) 65%, rgba(235, 233, 219, 1) 100%)',
+
         boxShadow: '-50px 50px 100px 20px rgba(243, 231, 219, .2)',
-        lineHeight: '32px',
+        lineHeight: '35px',
         color: 'rgba(0,0, 0, .4)'
       }
     }

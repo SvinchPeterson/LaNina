@@ -12,8 +12,8 @@ export default {
   proto: Block,
   style,
   props: {
-    flexFlow: 'column',
-    padding: 'F 0 E 0'
+    flexFlow: 'column'
+    // padding: 'F 0 E 0'
   },
   attr: { id: 'apartments' },
 
@@ -22,7 +22,8 @@ export default {
     proto: Block,
     props: {
       flexFlow: 'row',
-      gap: 'B1'
+      gap: 'B1',
+      padding: '0'
     },
     ...[
       tabBallerina,

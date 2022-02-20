@@ -28,7 +28,7 @@ export default {
   left: 0,
   width: '100%',
   boxSizing: 'border-box',
-  padding: '50px 80px',
+  // padding: '50px 80px',
   '> aside': {
     display: 'none'
   },

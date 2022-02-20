@@ -80,7 +80,8 @@ export default {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           padding: '100px',
-          boxShadow: '0px 0px 100px 20px rgba(243, 231, 219, .2)'
+          boxShadow: '0px 0px 100px 20px rgba(243, 231, 219, .2)',
+          background: 'linear-gradient(rgba(243, 231, 219, 1), rgba(243, 231, 219, 1))'
         },
         span: {
           proto: wine,

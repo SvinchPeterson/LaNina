@@ -21,10 +21,10 @@ const book = {
   style: styleBook,
   props: {
     flexAlign: 'center center',
-    size: 'B',
+    size: 'A',
     text: 'BOOK',
-    gap: 'Z1',
-    padding: 'Y2 A'
+    gap: 'A',
+    padding: 'Z2 B1'
   },
 
   icon: {
@@ -37,7 +37,7 @@ const roomTab = {
   style,
   props: {
     flexAlign: 'center center',
-    padding: 'C'
+    padding: 'D'
   },
 
   on: {
@@ -73,7 +73,9 @@ const roomTab = {
   },
 
   image: {},
-  p: { proto: ballerina },
+  p: {
+    proto: ballerina
+  },
   book: { proto: book }
 }
 
