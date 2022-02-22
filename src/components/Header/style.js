@@ -27,7 +27,7 @@ const styleMenuIcon = {
   '> div': {
     background: 'linear-gradient(rgba(243, 231, 219, 1), rgba(243, 231, 219, 1))',
     width: '100%',
-    height: `${1 / 16}em`,
+    height: `${2.5 / 16}em`,
     transition: 'width .5s ease-in-out',
     borderRadius: '30%',
     opacity: '.8'
@@ -35,7 +35,7 @@ const styleMenuIcon = {
 }
 
 const styleLangs = {
-  color: 'rgba(243, 231, 219, .5)',
+  color: 'rgba(243, 231, 219, .6)',
   textTransform: 'uppercase',
   transition: 'all .3s ease-in-out',
   cursor: 'pointer',
@@ -43,7 +43,7 @@ const styleLangs = {
   position: 'absolute',
   right: '30px',
   top: '20px',
-  fontWeight: 500,
+  fontWeight: 600,
   '> div:hover': { color: 'rgba(243, 231, 219, 1)' },
   '> div:first-child': { borderBottom: '1px solid rgba(243, 231, 219, .65)' }
 }
@@ -74,6 +74,7 @@ const styleBook = {
   border: '1px solid rgba(243, 231, 219, 0)',
   display: 'block',
   background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
+  fontWeight: '600',
 
   '&:hover': {
     border: '1px solid rgba(243, 231, 219, .1)',

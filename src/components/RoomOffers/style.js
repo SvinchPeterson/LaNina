@@ -1,22 +1,33 @@
 'use strict'
 
 const styleHeader = {
+  // border: '2px solid green',
   h5: {
-    fontWeight: 500,
+    fontWeight: 700,
     textTransform: 'uppercase',
-    letterSpacing: '2px',
-    wordSpacing: '6px',
-    color: 'rgba(0, 0, 0, .3)'
+    letterSpacing: '1.7px',
+    wordSpacing: '6.2px',
+    color: 'rgba(0, 0, 0, .4)'
+
   },
 
   button: {
     background: 'transparent',
-    border: 'none',
+    // border: '1.5px solid rgba(0, 0, 0, .1)',
     cursor: 'pointer',
-    span: {
+    borderRadius: '30px',
+    '&:hover > img': {
+      background: 'rgba(0, 0, 0, .5)'
+    },
+    // background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .0))',
+
+    img: {
       display: 'block',
-      borderRadius: '20px',
-      background: 'rgba(0, 0, 0, .3)'
+      borderRadius: '30px',
+      width: '30px',
+      height: '3px',
+      background: 'radial-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4))'
+
     }
   }
 }
@@ -24,25 +35,30 @@ const styleHeader = {
 const styleOffers = {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
-  rowGap: '12px',
-  columnGap: '50px',
+  rowGap: '0px',
+  columnGap: '45px',
   transition: 'all .3s linear',
+  // border: '2px solid blue',
 
   '> span': {
-    color: 'rgba(0, 0, 0, .3)',
+    color: 'rgba(0, 0, 0, .25)',
     transition: 'all .3s ease-in-out',
-    fontSize: '15px'
+    fontSize: '14.5px',
+    letterSpacing: '.8',
+    fontWeight: 500
   }
 }
 
 export default {
   fontFamily: 'Avenir Next',
   position: 'absolute',
-  bottom: '30px',
+  bottom: '-12px',
   zIndex: 50,
-  background: 'rgba(243, 231, 219, 1)',
+  // background: 'rgba(243, 231, 219, 1)',
+  background: 'rgba(247, 239, 230, 1)',
   overflow: 'hidden',
   boxSizing: 'border-box',
+  // border: '2px solid red',
 
   '> header': styleHeader,
   '> div': styleOffers

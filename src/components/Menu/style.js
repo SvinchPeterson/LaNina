@@ -9,7 +9,8 @@ const styleSectionLinks = {
   paddingTop: '100px',
   flex: 12,
   '> a': {
-    fontFamily: 'Bellefair',
+    // fontFamily: 'Bellefair',
+    fontFamily: 'Avenir Next',
     color: 'rgba(243, 231, 219, .55)',
     textTransform: 'uppercase',
     letterSpacing: '3.8px',
@@ -17,6 +18,7 @@ const styleSectionLinks = {
     transformOrigin: 'left',
     transition: 'all .3s linear',
     textDecoration: 'none',
+    fontWeight: '600',
 
     '&:hover': {
       color: 'rgba(243, 231, 219, .85)',

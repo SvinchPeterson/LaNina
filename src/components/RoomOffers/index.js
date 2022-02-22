@@ -1,7 +1,8 @@
 'use strict'
-import { Block, Text, Button } from '@rackai/symbols'
+import { Block, Text, Button, Img } from '@rackai/symbols'
 
 import { roomOffers, roomOffers2 } from '../../animations'
+import MINUS_ICON from '../../assets/minus.png'
 
 import style from './style'
 
@@ -10,7 +11,7 @@ export default {
   proto: Block,
   style,
   props: {
-    // padding: 'B B',
+    padding: 'Y B 0 B',
     flexFlow: 'column'
     // gap: 'B'
   },
@@ -20,25 +21,23 @@ export default {
     props: {
       flexAlign: 'center center',
       gap: 'G',
-      padding: 'C B C A'
+      padding: 'B B2 A B'
     },
 
     h5: {
       proto: Text,
       props: {
         text: 'room offers',
-        size: 'B'
+        size: 'A'
       }
     },
 
     minimize: {
       proto: [Block, Button],
       props: { padding: 'Z' },
-      span: {
-        proto: Block,
-        props: {
-          boxSize: 'B1 W'
-        }
+      minus: {
+        proto: Img,
+        props: { src: MINUS_ICON }
       },
 
       on: {
@@ -52,7 +51,8 @@ export default {
   offer: {
     proto: Block,
     props: {
-      padding: '0 D D B'
+      padding: 'Z D D C',
+      flexAlign: 'center center'
     },
     class: {
       show: (element, state) => state.offers ? {

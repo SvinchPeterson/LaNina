@@ -13,7 +13,7 @@ export default {
     position: 'relative',
     boxSizing: 'border-box',
     // marginTop: '100px',
-    // minHeight: '700px',
+    // minHeight: '850px',
     '> div': {
       // boxSizing: 'border-box',
       // padding: '0px 50px',

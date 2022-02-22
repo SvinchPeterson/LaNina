@@ -61,16 +61,16 @@ const styleHeading = {
   height: '100%',
   zIndex: '100',
   color: 'rgba(243, 231, 219, .65)',
-  fontFamily: 'Bellefair',
-  // fontFamily: 'Avenir Next',
-  fontWeight: '400',
+  // fontFamily: 'Bellefair',
+  fontFamily: 'Avenir Next',
+  fontWeight: '500',
   writingMode: 'vertical-rl',
   textOrientation: 'upright',
   textTransform: 'uppercase',
   letterSpacing: '5px',
   opacity: 0,
   transition: 'opacity 1s ease-in-out',
-  backdropFilter: 'blur(5px)'
+  backdropFilter: 'blur(2px)'
 }
 
 const styleUnderConstruction = {

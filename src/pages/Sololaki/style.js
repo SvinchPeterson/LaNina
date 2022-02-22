@@ -58,6 +58,7 @@ export const styleBanner = {
       animationName: opacitySololakiBannerParagraph,
       animationDuration: '5s',
       animationTimingFunction: 'ease-in-outr'
+
     }
   }
 }
@@ -67,7 +68,12 @@ export default {
   overflowX: 'hidden',
   overflowY: 'auto',
   position: 'relative',
-  background: 'linear-gradient(rgba(243, 231, 219, 1), rgba(243, 231, 219, 1))',
+  // background: 'rgba(252, 247, 242, 1)',
+  background: 'rgba(247, 239, 230, 1)',
+  // background: 'rgba(243, 231, 219, 1)',
+  // background: 'radial-gradient(rgba(245, 245, 245, 1), rgba(243, 231, 219, .7))',
+  // background: 'radial-gradient(rgba(243, 231, 219, .5), rgba(243, 231, 219, 1))',
+  // background: 'blue',
   // backgroundColor: 'linear-gradient(0deg, rgba(248, 229, 223, 1) 35%, rgba(243, 231, 219, 1) 65%, rgba(235, 233, 219, 1) 100%); }',
   scrollBehavior: 'smooth',
   // background: 'linear-gradient(0deg, rgba(245, 245, 245, 1) 35%, rgba(243, 231, 219, 1) 65%',

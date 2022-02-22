@@ -37,7 +37,7 @@ const roomTab = {
   style,
   props: {
     flexAlign: 'center center',
-    padding: 'D'
+    padding: 'C'
   },
 
   on: {

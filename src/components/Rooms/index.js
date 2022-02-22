@@ -6,18 +6,17 @@ import { galleryBallerina, galleryRedBrick, galleryYellowCouch, RoomOffers } fro
 
 import { roomsContainer } from '../../animations'
 
-import DOWN_ARROW from '../../assets/down-arrowBlack.png'
-import UP_ARROW from '../../assets/up-arrowBlack.png'
-
+import LEFT_ARROW from '../../assets/left.png'
+import RIGHT_ARROW from '../../assets/right.png'
 import style from './style'
 
 const navButtons = {
   tag: 'span',
   proto: Block,
   props: {
-    flexFlow: 'column',
-    gap: 'C',
-    padding: 'A W'
+    flexAlign: 'center center',
+    gap: '0'
+    // padding: 'A W'
   },
 
   childProto: {
@@ -26,7 +25,7 @@ const navButtons = {
   },
   ...[
     {
-      arrow: { props: { src: UP_ARROW } },
+      arrow: { props: { src: LEFT_ARROW } },
       on: {
         click: (event, element, state) => {
           const { activeImage } = state
@@ -38,7 +37,7 @@ const navButtons = {
     },
 
     {
-      arrow: { props: { src: DOWN_ARROW } },
+      arrow: { props: { src: RIGHT_ARROW } },
 
       on: {
         click: (event, element, state) => {
@@ -73,7 +72,7 @@ const room = {
       }
   },
   props: {
-    padding: 'D'
+    // padding: 'E 0 0 0'
   },
 
   gallery: {},
