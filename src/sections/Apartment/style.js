@@ -2,6 +2,7 @@
 import { heightGallery } from '../../animations'
 
 export default {
+  // border: '5px solid red',
   '> header': {
     minHeight: `${550 / 16}em`,
     overflow: 'hidden',

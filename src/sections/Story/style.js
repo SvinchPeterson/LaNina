@@ -2,11 +2,13 @@
 
 export default {
   boxSizing: 'border-box',
-  padding: '200px 100px',
+  padding: '0px 100px',
+  // border: '5px solid red',
   '> section': {
-    minHeight: `${700 / 16}em`,
+    minHeight: `${600 / 16}em`,
     flex: 1,
     position: 'relative',
+    // border: '5px solid red',
 
     '> span': {
       flex: 1,

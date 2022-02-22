@@ -12,8 +12,8 @@ export default {
   proto: Block,
   style,
   props: {
-    flexFlow: 'column'
-    // padding: 'F 0 E 0'
+    flexFlow: 'column',
+    padding: 'F 0 E 0'
   },
   attr: { id: 'apartments' },
 

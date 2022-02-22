@@ -9,17 +9,19 @@ import style from './style'
 
 const service = {
   proto: Block,
+  attr: { id: 'services' },
   paragraph: {
     proto: Block,
     props: {
       flexFlow: 'column',
-      gap: 'A'
+      gap: 'Z'
+
     },
     h4: {
       proto: Text,
       props: {
         text: 'cleaning',
-        size: 'B'
+        size: 'A'
       }
     },
     p: {
@@ -57,7 +59,7 @@ export default {
   props: {
     flexAlign: 'center center',
     gap: 'D',
-    padding: 'G E'
+    padding: 'E F F F'
   },
   // attr: { id: 'services' },
   style,

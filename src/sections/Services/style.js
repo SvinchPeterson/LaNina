@@ -5,7 +5,7 @@ const styleService = {
   // border: '2px solid red',
   h4: {
     textTransform: 'uppercase',
-    fontWeight: 600,
+    fontWeight: 700,
     letterSpacing: '2px',
     opacity: '.55'
     // border: '2px solid blue'
@@ -15,7 +15,9 @@ const styleService = {
     maxWidth: '400px',
     fontWeight: 500,
     opacity: '.35',
-    letterSpacing: '.25px'
+    letterSpacing: '.25px',
+    fontSize: '14px'
+
   }
 
 }

@@ -69,7 +69,7 @@ export default {
         style: {
           backgroundImage: 'url(' + WINE_JPG + ')',
           backgroundPosition: 'center center',
-          transform: 'scale(1.4)'
+          transform: 'scale(1.5)'
         }
       },
       p: {
