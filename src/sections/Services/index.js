@@ -1,9 +1,5 @@
 'use strict'
-import { Block, Img, Text, Flex, Grid, Link } from '@rackai/symbols'
-
-import LAUNDRY_PNG from '../../assets/laundry.png'
-import CLEAN_PNG from '../../assets/cleaning.png'
-import TRANSFER_PNG from '../../assets/transfer.png'
+import { Block, Text } from '@rackai/symbols'
 
 import style from './style'
 

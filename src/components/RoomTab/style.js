@@ -15,7 +15,7 @@ export const styleBook = {
   opacity: 0,
   transition: 'opacity .7s ease-in-out',
   transitionDelay: '.5s',
-  fontWeight: '600',
+  fontWeight: 600,
   '> img': {
     display: 'block',
     opacity: '.75'
@@ -66,7 +66,7 @@ export default {
   transform: 'scale(1)',
   '&::after': {
     content: '""',
-    fontSize: `${16 / 16}em`,
+    fontSize: `${17 / 16}em`,
     position: 'absolute',
     color: 'rgba(243, 231, 219, .85)',
     top: '25%',
@@ -77,7 +77,7 @@ export default {
     // fontFamily: 'Bellefair',
     letterSpacing: `${3 / 16}em`,
     fontFamily: 'Avenir Next',
-    fontWeight: '600'
+    fontWeight: 600
   },
   '&:hover': {
     flex: 3,

@@ -1,6 +1,6 @@
 'use strict'
 
-import { positionLoadingLanding, brightnessLanding, opacityLandingBanner, letterSpacingLandingBanner } from '../../animations'
+import { brightnessLanding, zoomInLanding } from '../../animations'
 
 const styleLink = {
   flex: 1,
@@ -12,6 +12,10 @@ const styleLink = {
   },
   '&:hover > h3': {
     opacity: 1
+  },
+  '&:hover > div': {
+    backgroundPosition: 'top center',
+    filter: 'brightness(35%) blur(0px) grayscale(10%)'
   }
 }
 
@@ -24,14 +28,12 @@ const styleImage = {
   filter: 'brightness(15%) blur(.5px) grayscale(30%)',
   zIndex: 10,
   transition: 'all 1s ease-in-out',
-  transform: 'scale(1.05)',
-  animationName: positionLoadingLanding,
-  animationDuration: '1.5s',
+  transform: 'scale(1.1)',
+  animationName: zoomInLanding,
+  animationDuration: '2s',
   animationTimingFunction: 'ease-in-out',
 
   '&:hover': {
-    backgroundPosition: 'top center',
-    filter: 'brightness(35%) blur(0px) grayscale(10%)',
     transition: 'all 1s ease-in-out'
   }
 }
@@ -39,20 +41,9 @@ const styleImage = {
 const styleBanner = {
   zIndex: 100,
   position: 'absolute',
-  top: '50%',
+  top: '45%',
   left: '50%',
-  transform: 'translate(-50%, -50%)',
-  animationName: opacityLandingBanner,
-  animationDuration: '1s',
-  animationTimingFunction: 'ease-in-out',
-  pointerEvents: 'none',
-
-  span: {
-    animationName: letterSpacingLandingBanner,
-    animationDuration: '1.5s',
-    display: 'inline-block',
-    transform: 'scale(.95)'
-  }
+  transform: 'translate(-50%, -50%)'
 }
 
 const styleHeading = {
@@ -61,9 +52,8 @@ const styleHeading = {
   height: '100%',
   zIndex: '100',
   color: 'rgba(243, 231, 219, .65)',
-  // fontFamily: 'Bellefair',
   fontFamily: 'Avenir Next',
-  fontWeight: '500',
+  fontWeight: 600,
   writingMode: 'vertical-rl',
   textOrientation: 'upright',
   textTransform: 'uppercase',
@@ -78,10 +68,11 @@ const styleUnderConstruction = {
   top: '70%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  color: 'rgba(243, 231, 219, .8)',
+  color: 'rgba(243, 231, 219, .65)',
   zIndex: '100',
   fontFamily: 'Avenir Next',
-  textTransform: 'uppercase',
+  fontSize: '20px',
+  // textTransform: 'capitalize',
   letterSpacing: '3px',
   wordSpacing: '10px',
   opacity: 0,

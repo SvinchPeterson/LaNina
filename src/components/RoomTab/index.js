@@ -24,7 +24,8 @@ const book = {
     size: 'A',
     text: 'BOOK',
     gap: 'A',
-    padding: 'Z2 B1'
+    padding: 'Z2 B1',
+    target: '_blank'
   },
 
   icon: {
@@ -94,6 +95,8 @@ export const tabBallerina = {
   },
   p: {},
   book: {
+    props: { href: `https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1645550353_mMXc6HH3zziZ95lR` },
+    style: { background: 'red' },
     icon: {
       style: {
         width: '20px',
@@ -120,6 +123,7 @@ export const tabRedBrick = {
   },
   p: {},
   book: {
+    props: { href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1645550412_uPtKLs8OU5g3l%2Fjw' },
     icon: {
       style: {
         width: '25px',
@@ -147,6 +151,7 @@ export const tabYellowCouch = {
   },
   p: {},
   book: {
+    props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1645550425_4DUFFaIG0wB3DIEA' },
     icon: {
       style: {
         width: '25px',

@@ -10,6 +10,7 @@ export const styleBanner = {
   overflow: 'hidden',
   boxSizing: 'border-box',
   position: 'relative',
+  fontFamily: 'Avenir Next',
   '> span': {
     minWidth: '100%',
     flex: 1,
@@ -26,7 +27,7 @@ export const styleBanner = {
   },
   '> div': {
     position: 'absolute',
-    top: '50%',
+    top: '40%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     zIndex: 30,
@@ -40,16 +41,19 @@ export const styleBanner = {
       opacity: 0.75,
       animationName: scaleOpacitySololakiBannerHeading,
       animationDuration: '1s',
-      animationTimingFunction: 'ease-in-out'
+      animationTimingFunction: 'ease-in-out',
+      // textTransform: 'uppercase',
+      color: 'rgba(243, 231, 219, .75)'
     },
     '> span': {
-      fontFamily: 'Bellefair',
+      // fontFamily: 'Avenir Next',
       textTransform: 'uppercase',
-      opacity: '.55',
       letterSpacing: '10px',
       animationName: letterSpacingSololakiBanner,
       animationDuration: '1s',
-      animationTimingFunction: 'ease-in-out'
+      animationTimingFunction: 'ease-in-out',
+      fontWeight: 500,
+      opacity: '.4'
     },
     '> p': {
       fontFamily: 'Avenir Next',

@@ -1,7 +1,7 @@
 'use strict'
 import { Block, Flex, Link, Text } from '@rackai/symbols'
 
-import { LaninaBanner } from '../../components'
+import { BBbanner } from '../../components'
 
 import RUSTAVELI_JPG from '../../assets/images/rustaveli.jpg'
 import SOLOLAKI_JPG from '../../assets/images/sololaki.jpg'
@@ -68,7 +68,7 @@ const rustaveli = {
 }
 
 const banner = {
-  proto: LaninaBanner
+  proto: BBbanner
 
 }
 

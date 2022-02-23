@@ -27,8 +27,7 @@ export default {
     h5: {
       proto: Text,
       props: {
-        text: 'room offers',
-        size: 'A'
+        text: 'apartment offers'
       }
     },
 
@@ -51,7 +50,7 @@ export default {
   offer: {
     proto: Block,
     props: {
-      padding: 'Z D D C',
+      padding: 'A D D C',
       flexAlign: 'center center'
     },
     class: {

@@ -1,36 +1,51 @@
 'use strict'
 import { keyframes } from '@emotion/css'
-import RUSTAVELI_JPG from '../assets/images/rustaveli.jpg'
-import SOLOLAKI_JPG from '../assets/images/sololaki.jpg'
 
-// Landing page animations
-
-export const positionLoadingLanding = keyframes`
+export const zoomInLanding = keyframes`
   from {
     transform: scale(1);
   }
   to {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 `
-export const opacityLandingBanner = keyframes`
+
+export const zoomInB = keyframes`
+  from {
+    transform: scale(.8);
+  }
+  to {
+    transform: scale(1);
+  }
+`
+export const zoomOutB = keyframes`
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+`
+export const opacityBanner = keyframes`
   from {
     opacity: 0;
+    // filter: brightness(0%);
 
   }
   to {
     opacity: 1;
+    // filter: brightness(100%);
   }
 `
-export const letterSpacingLandingBanner = keyframes`
+export const letterSpacingBanner = keyframes`
   from {
-    transform: scale(.9);
-    letter-spacing: 8.5px;
+    // transform: scale(.9);
+    letter-spacing: 12px;
 
   }
   to {
-    letter-spacing: 12px;
-    transform: scale(.95);
+    letter-spacing: 6.5px;
+    // transform: scale(1);
   }
 `
 

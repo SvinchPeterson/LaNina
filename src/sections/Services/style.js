@@ -6,7 +6,7 @@ const styleService = {
   h4: {
     textTransform: 'uppercase',
     fontWeight: 700,
-    letterSpacing: '2px',
+    letterSpacing: '1.4px',
     opacity: '.55'
     // border: '2px solid blue'
   },
@@ -14,9 +14,9 @@ const styleService = {
     // border: '5px solid green',
     maxWidth: '400px',
     fontWeight: 500,
-    opacity: '.35',
+    opacity: '.25',
     letterSpacing: '.25px',
-    fontSize: '14px'
+    fontSize: '15px'
 
   }
 

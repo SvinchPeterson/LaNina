@@ -1,5 +1,5 @@
 'use strict'
-import LaninaBanner from './LaninaBanner'
+import BBbanner from './BBbanner'
 import Header from './Header'
 import { tabBallerina, tabRedBrick, tabYellowCouch } from './RoomTab'
 import RoomOffers from './RoomOffers'
@@ -10,7 +10,7 @@ import { galleryBallerina, galleryRedBrick, galleryYellowCouch } from './Gallery
 import { roomBallerina, roomRedBrick, roomYellowCouch } from './Rooms'
 
 export {
-  LaninaBanner,
+  BBbanner,
   Header,
   RoomOffers,
   Menu,

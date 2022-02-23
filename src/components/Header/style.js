@@ -27,9 +27,9 @@ const styleMenuIcon = {
   '> div': {
     background: 'linear-gradient(rgba(243, 231, 219, 1), rgba(243, 231, 219, 1))',
     width: '100%',
-    height: `${2.5 / 16}em`,
+    height: `${10 / 16}em`,
     transition: 'width .5s ease-in-out',
-    borderRadius: '30%',
+    borderRadius: '30px',
     opacity: '.8'
   }
 }
@@ -42,10 +42,10 @@ const styleLangs = {
   height: 'fit-content',
   position: 'absolute',
   right: '30px',
-  top: '40px',
+  top: '35px',
   fontWeight: 600,
   '> div:hover': { color: 'rgba(243, 231, 219, 1)' },
-  '> div:first-child': { borderBottom: '1px solid rgba(243, 231, 219, .65)' }
+  '> div:first-child': { borderBottom: '1.5px solid rgba(243, 231, 219, .65)' }
 }
 
 const styleCall = {
@@ -74,8 +74,8 @@ const styleBook = {
   border: '1px solid rgba(243, 231, 219, 0)',
   display: 'block',
   background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
-  fontWeight: '600',
-
+  fontWeight: 600,
+  textDecoration: 'none',
   '&:hover': {
     border: '1px solid rgba(243, 231, 219, .1)',
     color: 'rgba(243, 231, 219, .85)',
@@ -97,6 +97,6 @@ export default {
   '> input': styleCheck,
   '> label': styleMenuIcon,
   '> div': styleLangs,
-  '> button': styleBook,
+  '> a': styleBook,
   '> span': styleCall
 }

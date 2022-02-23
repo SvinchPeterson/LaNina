@@ -27,7 +27,7 @@ const styleNavButtons = {
     width: '35px',
     // height: '20px',
 
-    opacity: '.4'
+    opacity: '.5'
   }
 }
 export default {

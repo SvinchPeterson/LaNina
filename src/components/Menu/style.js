@@ -5,7 +5,7 @@ const styleSectionLinks = {
   boxSizing: 'border-box',
   zIndex: 0,
   minWidth: '200px',
-  marginLeft: '125px',
+  marginLeft: '120px',
   paddingTop: '100px',
   flex: 12,
   '> a': {
@@ -18,7 +18,7 @@ const styleSectionLinks = {
     transformOrigin: 'left',
     transition: 'all .3s linear',
     textDecoration: 'none',
-    fontWeight: '600',
+    fontWeight: 600,
 
     '&:hover': {
       color: 'rgba(243, 231, 219, .85)',

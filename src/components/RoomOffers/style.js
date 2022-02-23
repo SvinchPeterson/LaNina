@@ -5,9 +5,10 @@ const styleHeader = {
   h5: {
     fontWeight: 700,
     textTransform: 'uppercase',
-    letterSpacing: '1.7px',
+    letterSpacing: '1.3px',
     wordSpacing: '6.2px',
-    color: 'rgba(0, 0, 0, .4)'
+    color: 'rgba(0, 0, 0, .45)',
+    fontSize: `${15 / 16}em`
 
   },
 
@@ -26,7 +27,7 @@ const styleHeader = {
       borderRadius: '30px',
       width: '30px',
       height: '3px',
-      background: 'radial-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4))'
+      background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5))'
 
     }
   }
@@ -36,16 +37,18 @@ const styleOffers = {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   rowGap: '0px',
-  columnGap: '45px',
+  columnGap: '0px',
   transition: 'all .3s linear',
   // border: '2px solid blue',
 
   '> span': {
-    color: 'rgba(0, 0, 0, .25)',
+    color: 'rgba(0, 0, 0, .3)',
     transition: 'all .3s ease-in-out',
     fontSize: '14.5px',
     letterSpacing: '.8',
-    fontWeight: 500
+    fontWeight: 500,
+    height: 'fit-content'
+    // border: '1px solid red'
   }
 }
 

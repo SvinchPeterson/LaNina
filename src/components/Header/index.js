@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Flex, Shape, SVG } from '@rackai/symbols'
+import { Block, Text, Flex, Shape, SVG, Link } from '@rackai/symbols'
 
 import style from './style'
 
@@ -75,12 +75,14 @@ const call = {
 }
 
 const book = {
-  tag: 'button',
-  proto: [Block, Text],
+  // tag: 'button',
+  proto: [Link, Text, Block],
   props: {
     text: 'book',
     size: 'B',
-    padding: 'Z A2'
+    padding: 'Z A2',
+    href: `https://www.airbnb.com/users/404104381/listings?fbclid=IwAR3RqnCcBkIXwGaJauHmAlgdNYGa9ASOcUMk7ph2i1XBqDG0DqvOMx7XnrM`,
+    target: '_blank'
   }
 }
 
