@@ -1,6 +1,6 @@
 'use strict'
 
-import { scaleSololakiBanner, scaleOpacitySololakiBannerHeading, opacitySololakiBannerParagraph, letterSpacingSololakiBanner } from '../../animations'
+import { scaleSololakiBanner, opacityBanner } from '../../animations'
 
 import COVER_JPG from '../../assets/images/balcony.jpg'
 
@@ -27,41 +27,20 @@ export const styleBanner = {
   },
   '> div': {
     position: 'absolute',
-    top: '40%',
+    top: '43%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
+  },
+  '> p': {
+    position: 'absolute',
+    top: '60%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    zIndex: 30,
-    '> *': {
-      color: 'rgba(243, 231, 219, 1)'
-    },
-    '> h2': {
-      margin: 0,
-      letterSpacing: '3px',
-      transform: 'scale(1.1)',
-      opacity: 0.75,
-      animationName: scaleOpacitySololakiBannerHeading,
-      animationDuration: '1s',
-      animationTimingFunction: 'ease-in-out',
-      color: 'rgba(243, 231, 219, .75)'
-    },
-    '> span': {
-      textTransform: 'uppercase',
-      letterSpacing: '10px',
-      animationName: letterSpacingSololakiBanner,
-      animationDuration: '1s',
-      animationTimingFunction: 'ease-in-out',
-      fontWeight: 500,
-      opacity: '.4'
-    },
-    '> p': {
-      fontFamily: 'Avenir Next',
-      opacity: '.45',
-      letterSpacing: '2px',
-      animationName: opacitySololakiBannerParagraph,
-      animationDuration: '5s',
-      animationTimingFunction: 'ease-in-outr'
-
-    }
+    color: 'rgba(243, 231, 219, .45)',
+    letterSpacing: '2px',
+    animationName: opacityBanner,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out'
   }
 }
 

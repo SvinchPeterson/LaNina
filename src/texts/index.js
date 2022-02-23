@@ -27,6 +27,18 @@ export const vision = {
   }
 }
 
+export const bbSololaki = {
+  proto: Text,
+  props: {
+    text: `"BB Residence Sololaki"- group of serviced apartments, located in one of
+    the most picturesque districts of Old Tbilisi, in walking distance from Liberty square
+    and other popular points of interest. We offer fully renovated and well-equipped accommodations,
+    with friendly staff available 24/7. You will be charmed by a unique atmosphere, feeling yourself
+     at the crossroads of cultures. *Welcomed
+    with the special compliment: Georgian wine "Saperavi", bottled water, coffee and tea.`
+  }
+}
+
 export const laninaSololaki = {
   proto: Text,
   props: {
@@ -60,5 +72,49 @@ export const ballerina = {
           Parking space available in inner yard.`
 
     // Equipped with air-conditioning, smart TV, gas stove, refrigerator, microwave oven, ironing facilities, coffee and tea maker, washing machine, bathroom with shower and toiletries.
+  }
+}
+
+export const redBrick = {
+  proto: Text,
+  props: {
+    text: `"Red Brick" is a cozy and quite one bedroom apartment of 55m2 , combining Georgian old style and modern interior elements
+    is located on the ground floor, just few steps downstairs, is composed of living area with comfortable sofa bed for 1 person and sleeping
+    area with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.
+    Equipped with smart TV, gas stove, refrigerator, microwave oven, ironing facilities, coffee and tea maker, washing machine, bathroom with shower and toiletries.
+    Parking space available in inner yard.`
+  }
+}
+
+export const yellowCouch = {
+  proto: Text,
+  props: {
+    text: `"Yellow Couch " is a cozy and quite one bedroom apartment of 50 m2 with open terrace, located on high first floor and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.
+    Equipped with air-conditioning, smart TV, gas stove, refrigerator, microwave oven, ironing facilities, coffee and tea maker, washing machine, bathroom with shower and toiletries.
+    Parking space available in inner yard.`
+  }
+}
+
+export const distance = {
+  proto: Text,
+  props: {
+    text: `Distance to Tbilisi International airport is 20 km.
+    Central railway station is 11 km away.`
+  }
+}
+
+export const location = {
+  proto: Text,
+  props: {
+    text: 'Thanks to our location and proximity to the metro station and bus stops you can easily get to any place in the city.'
+  }
+}
+
+export const transfer = {
+  proto: Text,
+  props: {
+    text: `Airport transfer can be arranged upon request.
+    From/To Tbilisi international airport - 20$ per trip
+    From/To Kutaisi Airport - 100$ per trip`
   }
 }

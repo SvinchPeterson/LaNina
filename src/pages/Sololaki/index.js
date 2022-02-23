@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block, Flex } from '@rackai/symbols'
+import { Block, Flex, Text } from '@rackai/symbols'
 
 import { Story, Apartment, Services } from '../../sections'
 
@@ -21,8 +21,14 @@ const banner = {
         size: 'C'
       }
     }
+  },
+  p: {
+    proto: Text,
+    props: {
+      text: 'where ordinary becomes extraordinary',
+      size: 'B'
+    }
   }
-
 }
 
 export default {

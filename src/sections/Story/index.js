@@ -3,7 +3,7 @@ import { Block } from '@rackai/symbols'
 import WINE_JPG from '../../assets/images/wine.jpg'
 import GREEN_LANINA_JPG from '../../assets/images/greenLanina.jpg'
 
-import { laninaSololaki, wine } from '../../texts'
+import { laninaSololaki, wine, bbSololaki } from '../../texts'
 
 import style, {} from './style'
 
@@ -52,7 +52,7 @@ export default {
           position: 'relative'
         },
         span: {
-          proto: laninaSololaki,
+          proto: bbSololaki,
           style: {
             position: 'absolute',
             top: 0,
