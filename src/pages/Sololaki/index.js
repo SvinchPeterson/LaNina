@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block, Text, Flex } from '@rackai/symbols'
+import { Block, Flex } from '@rackai/symbols'
 
 import { Story, Apartment, Services } from '../../sections'
 
@@ -16,7 +16,10 @@ const banner = {
     proto: BBbanner,
     caption: {},
     h5: {
-      props: { text: 'sololaki' }
+      props: {
+        text: 'sololaki',
+        size: 'C'
+      }
     }
   }
 

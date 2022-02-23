@@ -15,7 +15,7 @@ export const styleBook = {
   opacity: 0,
   transition: 'opacity .7s ease-in-out',
   transitionDelay: '.5s',
-  fontWeight: 600,
+  fontWeight: 700,
   '> img': {
     display: 'block',
     opacity: '.75'

@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Flex, Text } from '@rackai/symbols'
+import { Block, Text } from '@rackai/symbols'
 
 import { zoomInB, zoomOutB, opacityBanner, letterSpacingBanner } from '../../animations'
 
@@ -49,7 +49,10 @@ export default {
 
   caption: {
     proto: Block,
-    props: { flexAlign: 'center center' },
+    props: {
+      flexAlign: 'center center',
+      gap: 'W2'
+    },
     childProto: {
       tag: 'span',
       proto: [Block, Text],
