@@ -3,31 +3,20 @@
 const styleNavButtons = {
   position: 'absolute',
   right: '100px',
-  bottom: '-5px',
+  bottom: '0px',
   // background: 'rgba(0, 0, 0, .05)',
   borderRadius: '30px',
   button: {
-    // background: 'transparent',
-    // padding: '10px',
-    borderRadius: '100%',
-    border: '1.7px solid rgba(0, 0, 0, 0)',
-    background: 'radial-gradient(rgba(0, 0, 0, 0), rgba(247, 239, 230, 0))',
+    background: 'transparent',
     transition: 'all .4s ease-in-out',
     '&:hover': {
-      // border: '1.7px solid rgba(0, 0, 0, .1)',
-      // background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(247, 239, 230, 0))',
-      '> img': {
-        opacity: '.7'
-      }
-
+      '> img': { opacity: '.5' }
     }
   },
   '> button > img': {
     display: 'block',
     width: '35px',
-    // height: '20px',
-
-    opacity: '.5'
+    opacity: '.3'
   }
 }
 export default {

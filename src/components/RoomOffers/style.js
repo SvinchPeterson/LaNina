@@ -27,7 +27,7 @@ const styleHeader = {
       borderRadius: '30px',
       width: '30px',
       height: '3px',
-      background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5))'
+      background: 'rgba(0, 0, 0, .3)'
 
     }
   }
