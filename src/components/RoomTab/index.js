@@ -2,7 +2,7 @@
 
 import { Block, Link, Img, Text } from '@rackai/symbols'
 
-import { ballerina } from '../../texts'
+import { ballerina, redBrick, yellowCouch } from '../../texts'
 
 import style, { styleBook, styleParagraph, styleImage } from './style'
 
@@ -74,9 +74,7 @@ const roomTab = {
   },
 
   image: {},
-  p: {
-    proto: ballerina
-  },
+  p: {},
   book: { proto: book }
 }
 
@@ -93,7 +91,9 @@ export const tabBallerina = {
   image: {
     style: { backgroundImage: 'url(' + BALLERINA_COVER_IMG + ')' }
   },
-  p: {},
+  p: {
+    proto: ballerina
+  },
   book: {
     props: { href: `https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1645550353_mMXc6HH3zziZ95lR` },
     style: { background: 'red' },
@@ -121,7 +121,7 @@ export const tabRedBrick = {
   image: {
     style: { backgroundImage: 'url(' + REDBRICK_COVER_IMG + ')' }
   },
-  p: {},
+  p: { proto: redBrick },
   book: {
     props: { href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1645550412_uPtKLs8OU5g3l%2Fjw' },
     icon: {
@@ -149,7 +149,9 @@ export const tabYellowCouch = {
   image: {
     style: { backgroundImage: 'url(' + YELLOWCOUCH_COVER_IMG + ')' }
   },
-  p: {},
+  p: {
+    proto: yellowCouch
+  },
   book: {
     props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1645550425_4DUFFaIG0wB3DIEA' },
     icon: {
