@@ -1,11 +1,13 @@
 'use strict'
-import { Block } from '@rackai/symbols'
-import WINE_JPG from '../../assets/images/wine.jpg'
-import GREEN_LANINA_JPG from '../../assets/images/greenLanina.jpg'
+import { Block, Text, Img } from '@rackai/symbols'
+import WINE_JPG from '../../assets/images/sololaki/wine.jpg'
+import GREEN_LANINA_JPG from '../../assets/images/sololaki/greenLanina.jpg'
+import BALCONY_JPG from '../../assets/images/sololaki/balcony.jpg'
+import LUGGAGE_PNG from '../../assets/luggage.PNG'
 
-import { laninaSololaki, wine, bbSololaki } from '../../texts'
+import { wine, bbSololaki, luggage } from '../../texts'
 
-import style, {} from './style'
+import style, { styleEntranceItem } from './style'
 
 const storySection = {
   tag: 'section',
@@ -22,6 +24,25 @@ const storySection = {
   p: {
     proto: Block,
     span: {}
+  }
+}
+
+const entrenceItem = {
+  proto: Block,
+  props: {
+    flexAlign: 'center flex-start',
+    padding: 'Y',
+    gap: 'Z'
+  },
+  style: styleEntranceItem,
+  circle: {
+    proto: Block,
+    props: {
+      boxSize: 'W2 W2'
+    }
+  },
+  span: {
+    proto: Text
   }
 }
 
@@ -60,6 +81,73 @@ export default {
             padding: '100px'
           }
         }
+      }
+    },
+    {
+      image: {
+        style: {
+          backgroundImage: 'url(' + BALCONY_JPG + ')',
+          backgroundPosition: 'center center',
+          transform: 'scale(1.2)'
+        }
+      },
+      p: {
+        props: {
+          padding: 'D D'
+        },
+        style: {
+          position: 'absolute',
+          right: '-100px',
+          bottom: '200px'
+        },
+        span: null,
+        childProto: entrenceItem,
+        ...[
+          {
+            circle: {},
+            span: {
+              props: { text: 'Private entrance' }
+            }
+          },
+
+          {
+            circle: {},
+            span: {
+              props: { text: 'Separate street or building entrance' }
+            }
+          },
+
+          {
+            circle: {},
+            span: {
+              props: { text: 'Free parking on premises' }
+            }
+          },
+          {
+            props: {
+              flexAlign: 'flex-start flex-start',
+              padding: 'C Y Y Y',
+              gap: 'A'
+            },
+            circle: {
+              proto: Img,
+              props: { src: LUGGAGE_PNG },
+              style: {
+                width: '30px',
+                height: '20px',
+                display: 'block',
+                opacity: '.65',
+                marginTop: '5px'
+              }
+            },
+            span: {
+              proto: luggage,
+              style: { maxWidth: '370px' }
+            }
+          }
+
+        ]
+
       }
     },
 

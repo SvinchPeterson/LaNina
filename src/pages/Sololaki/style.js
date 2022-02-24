@@ -2,7 +2,7 @@
 
 import { scaleSololakiBanner, opacityBanner } from '../../animations'
 
-import COVER_JPG from '../../assets/images/balcony.jpg'
+import COVER_JPG from '../../assets/images/sololaki/sololaki.jpg'
 
 export const styleBanner = {
   width: `100%`,
@@ -11,11 +11,14 @@ export const styleBanner = {
   boxSizing: 'border-box',
   position: 'relative',
   fontFamily: 'Avenir Next',
+  '&:hover > span': {
+    backgroundPosition: 'bottom right'
+  },
   '> span': {
     minWidth: '100%',
     flex: 1,
     backgroundImage: 'radial-gradient(rgba(243, 231, 219, .6), rgba(243, 231, 219, .2)), url(' + COVER_JPG + ')',
-    filter: 'brightness(15%) grayscale(30%)',
+    filter: 'brightness(20%) grayscale(30%)',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center center',
@@ -23,7 +26,8 @@ export const styleBanner = {
     transform: 'scale(1)',
     animationName: scaleSololakiBanner,
     animationDuration: '5s',
-    animationTimingFunction: 'linear'
+    animationTimingFunction: 'linear',
+    transition: 'all 1.5s ease-in-out'
   },
   '> div': {
     position: 'absolute',
