@@ -55,7 +55,7 @@ export default {
   proto: Block,
   props: {
     flexFlow: 'column',
-    gap: 'B',
+    gap: '0',
     padding: 'F 0 0 0'
   },
   style,

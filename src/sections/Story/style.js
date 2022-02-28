@@ -11,7 +11,7 @@ const styleImage = {
 const styleParagraph = {
   flex: 1,
   background: 'rgba(247, 239, 230, 1)',
-  fontSize: '15.5px',
+  fontSize: `${15.5 / 16}em`,
   '> span': {
     fontFamily: 'Avenir Next',
     background: 'rgba(247, 239, 230, 1)',

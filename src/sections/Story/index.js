@@ -133,10 +133,10 @@ const entrenceParking = {
       style: {
         fontFamily: 'Avenir Next',
         color: 'rgba(0, 0, 0, .25)',
-        // fontWeight: ,
         maxWidth: `${450 / 16}em`,
         lineHeight: '22px'
       },
+
       icon: {
         proto: Img,
         props: { src: LUGGAGE_PNG },

@@ -56,11 +56,32 @@ const styleCall = {
   background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
   border: '1px solid rgba(243, 231, 219, 0)',
   transition: 'all .2s ease-in-out',
+  position: 'relative',
 
   '&:hover': {
     opacity: '1',
     border: '1px solid rgba(243, 231, 219, .1)',
     background: 'radial-gradient(rgba(243, 231, 219, .15), rgba(243, 231, 219, .0))'
+  },
+  '&:hover::after': {
+    opacity: 1
+  },
+
+  '&::after': {
+    content: '"571 017 170"',
+    disply: 'block',
+    // border: '2px solid red',
+    position: 'absolute',
+    top: '50px',
+    left: '-50%',
+    width: '120px',
+    color: 'rgba(247, 239, 230, .5)',
+    padding: '15px 20px',
+    fontSize: `${18 / 16}em`,
+    fontWeight: 500,
+    opacity: 0,
+    transition: 'all .3s ease-in-out'
+
   }
 }
 
@@ -70,7 +91,7 @@ const styleBook = {
   color: 'rgba(243, 231, 219, .7)',
   cursor: 'pointer',
   transition: 'all .2s linear',
-  borderRadius: '30px',
+  borderRadius: '50px',
   border: '1px solid rgba(243, 231, 219, 0)',
   display: 'block',
   background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',

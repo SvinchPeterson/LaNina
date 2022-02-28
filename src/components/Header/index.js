@@ -66,11 +66,17 @@ const call = {
     boxSize: 'A2 A2',
     padding: 'A'
   },
-
-  svg: {
-    proto: [SVG, Block],
-    src: PHONE_PNG,
-    props: { boxSize: 'A1 A1' }
+  numb: {
+    proto: Link,
+    props: {
+      href: 'https://api.whatsapp.com/send?phone=+995571017170',
+      target: '_blank'
+    },
+    svg: {
+      proto: [SVG, Block],
+      src: PHONE_PNG,
+      props: { boxSize: 'A1 A1' }
+    }
   }
 }
 
@@ -80,7 +86,7 @@ const book = {
   props: {
     text: 'book',
     size: 'B',
-    padding: 'Z A2',
+    padding: 'Y2 B',
     href: `https://www.airbnb.com/users/404104381/listings?fbclid=IwAR3RqnCcBkIXwGaJauHmAlgdNYGa9ASOcUMk7ph2i1XBqDG0DqvOMx7XnrM`,
     target: '_blank'
   }
