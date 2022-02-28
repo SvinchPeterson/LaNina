@@ -4,10 +4,10 @@ const styleSectionLinks = {
   transition: 'all .7s linear',
   boxSizing: 'border-box',
   zIndex: 0,
-  minWidth: '200px',
-  marginLeft: '120px',
-  paddingTop: '100px',
-  flex: 12,
+  minWidth: '100%',
+  flex: 20,
+  // paddingTop: '100px',
+  // flex: 12,
   '> a': {
     // fontFamily: 'Bellefair',
     fontFamily: 'Avenir Next',
@@ -19,6 +19,7 @@ const styleSectionLinks = {
     transition: 'all .3s linear',
     textDecoration: 'none',
     fontWeight: 600,
+    textAlign: 'left',
 
     '&:hover': {
       color: 'rgba(243, 231, 219, .85)',
@@ -30,9 +31,10 @@ const styleSectionLinks = {
 const styleSocialMedia = {
   transition: 'all .5s linear',
   transitionDelay: '.4s',
-  flex: 1,
+  flex: 20,
   minWidth: '100%',
-  paddingBottom: '40px',
+  paddingBottom: '0px',
+  // border: '5px solid red',
 
   '> a': {
     cursor: 'pointer',
@@ -41,9 +43,12 @@ const styleSocialMedia = {
     borderRadius: '100%',
     transition: 'all .3s linear',
     '&:hover': {
-      background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, 0))',
-      // border: '1px solid rgba(243, 231, 219, .1)',
+      // background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, 0))',
+      border: '1.5px solid rgba(243, 231, 219, .25)',
       opacity: '.9'
+    },
+    '> img': {
+      width: '25px'
     }
   }
 }
@@ -60,6 +65,8 @@ export default {
   transition: 'all .5s linear',
   zIndex: 200,
   boxSizing: 'border-box',
+  flexFlow: 'column',
+  gap: '400px',
 
   '> nav': styleSectionLinks,
   '> div': styleSocialMedia
