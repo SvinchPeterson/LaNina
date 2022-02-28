@@ -5,27 +5,9 @@ import GREEN_LANINA_JPG from '../../assets/images/sololaki/greenLanina.jpg'
 import BALCONY_JPG from '../../assets/images/sololaki/balcony.jpg'
 import LUGGAGE_PNG from '../../assets/luggage.PNG'
 
-import { wine, bbSololaki, luggage } from '../../texts'
+import { wineText, bbSololaki, luggageText, stayText } from '../../texts'
 
 import style, { styleEntranceItem } from './style'
-
-const storySection = {
-  tag: 'section',
-  proto: Block,
-  props: {
-    flexFlow: 'row',
-    padding: 'F 0 G 0'
-  },
-  image: {
-    tag: 'span',
-    proto: [Block]
-  },
-
-  p: {
-    proto: Block,
-    span: {}
-  }
-}
 
 const entrenceItem = {
   proto: Block,
@@ -46,6 +28,176 @@ const entrenceItem = {
   }
 }
 
+const storySection = {
+  tag: 'section',
+  proto: Block,
+  props: {
+    flexFlow: 'row',
+    padding: 'F 0 G 0'
+  },
+  image: {
+    tag: 'span',
+    proto: [Block]
+  },
+
+  p: {
+    proto: Block,
+    span: {}
+  }
+}
+
+const hotel = {
+  proto: storySection,
+  attr: { id: 'hotel' },
+  image: {
+    style: {
+      backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
+      backgroundSize: 'contain',
+      backgroundPosition: 'left bottom',
+      transform: 'scale(.95)'
+    }
+  },
+  p: {
+    style: {
+      position: 'relative'
+    },
+    span: {
+      proto: bbSololaki,
+      style: {
+        position: 'absolute',
+        top: 0,
+        left: '-400px',
+        padding: '100px'
+      }
+    }
+  }
+}
+
+const entrenceParking = {
+  proto: storySection,
+
+  image: {
+    style: {
+      backgroundImage: 'url(' + BALCONY_JPG + ')',
+      backgroundPosition: 'center center',
+      transform: 'scale(1.2)'
+    }
+  },
+
+  p: {
+    proto: Block,
+    props: {
+      flexFlow: 'column',
+      gap: 'C',
+      padding: 'D D'
+    },
+    style: {
+      position: 'absolute',
+      right: '-100px',
+      bottom: '200px',
+      lineHeight: '25px'
+      // border: '5px solid red'
+    },
+    span: null,
+    entrence: {
+      childProto: entrenceItem,
+      ...[
+        {
+          circle: {},
+          span: {
+            props: { text: 'Private entrance' }
+          }
+        },
+
+        {
+          circle: {},
+          span: {
+            props: { text: 'Separate street or building entrance' }
+          }
+        },
+
+        {
+          circle: {},
+          span: {
+            props: { text: 'Free parking on premises' }
+          }
+        }
+      ]
+    },
+    luggage: {
+      proto: Block,
+      props: {
+        flexAlign: 'flex-start center',
+        gap: 'A'
+      },
+      style: {
+        fontFamily: 'Avenir Next',
+        color: 'rgba(0, 0, 0, .25)',
+        // fontWeight: ,
+        maxWidth: `${450 / 16}em`,
+        lineHeight: '22px'
+      },
+      icon: {
+        proto: Img,
+        props: { src: LUGGAGE_PNG },
+        style: {
+          width: `${25 / 16}em`,
+          opacity: '.5',
+          marginTop: '4px'
+        }
+      },
+      p: {
+        proto: Block,
+        props: {
+          flexFlow: 'column',
+          gap: 'Z'
+        },
+        style: {
+          letterSpacing: '.5px'
+        },
+        span: {
+          proto: luggageText
+        },
+        span2: {
+          proto: stayText,
+          style: { fontSize: `${15 / 16}em` }
+        }
+      }
+
+    }
+  }
+}
+
+const wine = {
+  proto: storySection,
+  attr: { id: 'wine' },
+  image: {
+    style: {
+      backgroundImage: 'url(' + WINE_JPG + ')',
+      backgroundPosition: 'center center',
+      transform: 'scale(1.5)'
+    }
+  },
+  p: {
+    style: {
+      position: 'absolute',
+      width: '100%',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      padding: '100px'
+    },
+    span: {
+      proto: wineText,
+      style: {
+        display: 'block',
+        maxWidth: '650px',
+        margin: '0 auto'
+      }
+    }
+  }
+}
+
 export default {
   tag: 'article',
   proto: Block,
@@ -54,134 +206,10 @@ export default {
     gap: '0'
   },
   style,
-  childProto: {
-    proto: storySection
-  },
-  ...[
-    {
-      attr: { id: 'hotel' },
-      image: {
-        style: {
-          backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
-          backgroundSize: 'contain',
-          backgroundPosition: 'left bottom',
-          transform: 'scale(.95)'
-        }
-      },
-      p: {
-        style: {
-          position: 'relative'
-        },
-        span: {
-          proto: bbSololaki,
-          style: {
-            position: 'absolute',
-            top: 0,
-            left: '-400px',
-            padding: '100px'
-          }
-        }
-      }
-    },
-    {
-      image: {
-        style: {
-          backgroundImage: 'url(' + BALCONY_JPG + ')',
-          backgroundPosition: 'center center',
-          transform: 'scale(1.2)'
-        }
-      },
-      p: {
-        props: {
-          padding: 'D E'
-        },
-        style: {
-          position: 'absolute',
-          right: '-100px',
-          bottom: '200px',
-          lineHeight: '25px'
-        },
-        span: null,
-        childProto: entrenceItem,
-        ...[
-          {
-            circle: {},
-            span: {
-              props: { text: 'Private entrance' }
-            }
-          },
 
-          {
-            circle: {},
-            span: {
-              props: { text: 'Separate street or building entrance' }
-            }
-          },
+  childProto: storySection,
+  hotel,
+  entrenceParking,
+  wine
 
-          {
-            circle: {},
-            span: {
-              props: { text: 'Free parking on premises' }
-            }
-          },
-          {
-            props: {
-              flexAlign: 'flex-start flex-start',
-              padding: 'C C C 0',
-              gap: 'A'
-            },
-            // style: { border: '4px solid red' },
-            circle: {
-              proto: Img,
-              props: { src: LUGGAGE_PNG },
-              style: {
-                width: '25px',
-                height: '20px',
-                display: 'block',
-                opacity: '.65',
-                marginTop: '5px'
-              }
-            },
-            span: {
-              proto: luggage,
-              style: { maxWidth: '370px' }
-            }
-          }
-
-        ]
-
-      }
-    },
-
-    {
-      attr: { id: 'wine' },
-      image: {
-        style: {
-          backgroundImage: 'url(' + WINE_JPG + ')',
-          backgroundPosition: 'center center',
-          transform: 'scale(1.5)'
-        }
-      },
-      p: {
-        style: {
-          position: 'absolute',
-          width: '100%',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          padding: '100px'
-          // boxShadow: '0px 0px 100px 20px rgba(243, 231, 219, .2)',
-          // background: 'linear-gradient(rgba(243, 231, 219, 1), rgba(243, 231, 219, 1))'
-        },
-        span: {
-          proto: wine,
-          style: {
-            display: 'block',
-            maxWidth: '650px',
-            margin: '0 auto'
-          }
-        }
-      }
-    }
-  ]
 }

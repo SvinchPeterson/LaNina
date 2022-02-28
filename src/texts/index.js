@@ -51,7 +51,7 @@ export const laninaSololaki = {
   // Walking distance to liberty square, Mtatsminda park and other points of interest.`
 }
 
-export const wine = {
+export const wineText = {
   proto: Text,
   props: {
     text: `Georgians are very proud of their rich and historic winemaking culture, and as traditional methods enjoy a renaissance,
@@ -130,10 +130,18 @@ export const locationFeatured = {
   }
 }
 
-export const luggage = {
+export const luggageText = {
   proto: Text,
   props: {
     text: `Luggage dropoff allowed
     for guests' convenience when they have early arrival or late departure`
   }
+}
+
+export const stayText = {
+  proto: Text,
+  props: {
+    text: `Long term stays allow for 28 days or more`
+  }
+
 }

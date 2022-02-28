@@ -29,7 +29,7 @@ const styleAirPort = {
     fontSize: `${15 / 16}em`,
     maxWidth: `${400 / 15}em`,
     // fontWeight: 500,
-    color: 'rgba(0, 0, 0, .2)',
+    color: 'rgba(0, 0, 0, .225)',
     letterSpacing: '.4px'
   },
   '> p > caption': {

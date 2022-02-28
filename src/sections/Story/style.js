@@ -29,7 +29,9 @@ export const styleEntranceItem = {
   '> div': {
     background: 'rgba(0, 0, 0, .35)',
     display: 'block',
-    borderRadius: '100%'
+    borderRadius: '100%',
+    width: '3px',
+    height: '3px'
   },
   '> span': {
     fontWeight: 500,
