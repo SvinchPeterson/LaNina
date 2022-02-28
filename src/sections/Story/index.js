@@ -93,12 +93,13 @@ export default {
       },
       p: {
         props: {
-          padding: 'D D'
+          padding: 'D E'
         },
         style: {
           position: 'absolute',
           right: '-100px',
-          bottom: '200px'
+          bottom: '200px',
+          lineHeight: '25px'
         },
         span: null,
         childProto: entrenceItem,
@@ -126,14 +127,15 @@ export default {
           {
             props: {
               flexAlign: 'flex-start flex-start',
-              padding: 'C Y Y Y',
+              padding: 'C C C 0',
               gap: 'A'
             },
+            // style: { border: '4px solid red' },
             circle: {
               proto: Img,
               props: { src: LUGGAGE_PNG },
               style: {
-                width: '30px',
+                width: '25px',
                 height: '20px',
                 display: 'block',
                 opacity: '.65',

@@ -5,6 +5,7 @@ export default {
   height: '100%',
   position: 'absolute',
   fontFamily: 'Gilda Display',
+  // border: '20px solid red',
   top: 0,
   left: 0,
   // boxSizing: 'border-box',

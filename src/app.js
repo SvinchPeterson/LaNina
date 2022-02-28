@@ -12,12 +12,15 @@ import { Story } from './sections'
 
 const App = {
   key: 'app',
+  proto: Block,
   style,
 
   state: {
     isLoaded: false
   },
-  props: {},
+  props: {
+    // flexAlign: 'flex-start center'
+  },
 
   define: { routes: param => param },
   routes: {

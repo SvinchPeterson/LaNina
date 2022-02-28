@@ -87,6 +87,8 @@ export default {
   background: 'black',
   animationName: brightnessLanding,
   animationDuration: '2s',
+  maxWidth: `${2560 / 16}em`,
+  margin: '0 auto',
 
   '> a': styleLink,
   '> a > div': styleImage,

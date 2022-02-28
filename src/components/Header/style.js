@@ -93,6 +93,8 @@ export default {
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
   backdropFilter: 'blur(2px)',
+  // border: '20px solid yellow',
+  maxWidth: `${2560 / 16}em`,
 
   '> input': styleCheck,
   '> label': styleMenuIcon,

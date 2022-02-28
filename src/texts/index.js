@@ -95,7 +95,7 @@ export const yellowCouch = {
   }
 }
 
-export const distance = {
+export const distanceText = {
   proto: Text,
   props: {
     text: `Distance to Tbilisi International airport is 20 km.
@@ -103,14 +103,14 @@ export const distance = {
   }
 }
 
-export const location = {
+export const locationText = {
   proto: Text,
   props: {
     text: 'Thanks to our location and proximity to the metro station and bus stops you can easily get to any place in the city.'
   }
 }
 
-export const transfer = {
+export const transferText = {
   proto: Text,
   props: {
     text: `Airport transfer can be arranged upon request.

@@ -55,6 +55,9 @@ export default {
   position: 'relative',
   background: 'rgba(247, 239, 230, 1)',
   scrollBehavior: 'smooth',
+  // border: '20px solid green',
+  maxWidth: `${2560 / 16}em`,
+  margin: '0 auto',
 
   '> div': styleBanner
 }
