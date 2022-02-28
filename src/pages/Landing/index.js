@@ -31,7 +31,11 @@ const sololaki = {
   image: {
     style: {
       backgroundImage: 'radial-gradient(rgba(243, 231, 219, .4), rgba(243, 231, 219, .3)), url(' + SOLOLAKI_JPG + ')',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      '@media only screen and (max-width: 768px)': {
+
+        backgroundPosition: 'bottom bottom'
+      }
     }
   },
 
@@ -54,7 +58,12 @@ const rustaveli = {
   image: {
     style: {
       backgroundImage: 'radial-gradient(rgba(243, 231, 219, .4), rgba(243, 231, 219, .3)),url(' + RUSTAVELI_JPG + ')',
-      transformOrigin: 'left'
+      transformOrigin: 'left',
+      '@media only screen and (max-width: 768px)': {
+        '&:hover': {
+          backgroundPosition: 'bottom left'
+        }
+      }
     }
   },
 

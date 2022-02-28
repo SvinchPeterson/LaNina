@@ -23,7 +23,7 @@ const styleImage = {
   position: 'relative',
   flex: 1,
   backgroundSize: 'cover',
-  backgroundPosition: 'center center',
+  // backgroundPosition: 'center center',
   backgroundAttachment: 'fixed',
   filter: 'brightness(15%) blur(.5px) grayscale(30%)',
   zIndex: 10,
@@ -77,10 +77,17 @@ const styleUnderConstruction = {
   wordSpacing: '10px',
   opacity: 0,
   transition: 'opacity 1s ease-in-out',
-  fontWeight: '500'
+  fontWeight: '500',
+  whiteSpace: 'nowrap'
 }
 
 export default {
+  '> a > h3': styleHeading,
+  '> a': styleLink,
+  '> a > div': styleImage,
+  '> div': styleBanner,
+  '> span': styleUnderConstruction,
+
   flex: 1,
   position: 'relative',
   overflow: 'hidden',
@@ -90,11 +97,45 @@ export default {
   maxWidth: `${2560 / 16}em`,
   margin: '0 auto',
 
-  '> a': styleLink,
-  '> a > div': styleImage,
-  '> a > h3': styleHeading,
+  '@media only screen and (max-width: 768px)': {
+    flexFlow: 'column',
+    // border: '10px solid red',
+    '> a > h3': {
+      flex: '1',
+      width: '100%',
+      height: '60px',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      display: 'flex',
+      alignItem: 'center',
+      opacity: 1,
+      paddingTop: '150px',
+      writingMode: 'horizontal-tb'
+    },
+    '> a': {
+      // border: '10px solid yellow',
+      tranform: 'scale(1.5)'
+    },
+    '> div': {
+      top: '50%',
+      '> h5': {
+        fontSize: '18px'
+      }
 
-  '> div': styleBanner,
+    },
+    '> a:hover': {
+      flex: 1
+    },
 
-  '> span': styleUnderConstruction
+    '> span': {
+      top: '90%'
+    },
+
+    '> a > div': {
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'local'
+    }
+  }
 }

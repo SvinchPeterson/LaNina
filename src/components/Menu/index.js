@@ -12,7 +12,7 @@ const sectionLinks = {
   tag: 'nav',
   proto: Block,
   props: {
-    padding: 'G 0 0 0',
+    padding: 'G1 0 0 0',
     // flexFlow: 'column',
     gap: 'D',
     flexAlign: 'flex-start center'
