@@ -9,17 +9,14 @@ const styleLocation = {
   textAlign: 'center',
   margin: '0 auto',
   lineHeight: '25px'
-  // border: '10px solid red'
 }
-
-// rgba(243, 231, 219, .4)
 
 const styleMap = {
   display: 'block',
   maxWidth: `${900 / 16}em`,
   minHeight: '600px',
   transform: 'scale(.9)',
-  filter: 'brightness(50%)',
+  filter: 'brightness(70%) grayscale(70%)',
   flex: 1,
   backgroundImage: 'url(' + MAP_PNG + ')',
   backgroundSize: 'contain',
@@ -29,7 +26,17 @@ const styleMap = {
 
 const styleAirPort = {
   '> p': {
-    maxWidth: `${400 / 16}em`
+    fontSize: `${15 / 16}em`,
+    maxWidth: `${400 / 15}em`,
+    // fontWeight: 500,
+    color: 'rgba(0, 0, 0, .2)',
+    letterSpacing: '.4px'
+  },
+  '> p > caption': {
+    textTransform: 'uppercase',
+    letterSpacing: '1px',
+    color: 'rgba(0, 0, 0, .5)',
+    fontWeight: 700
   }
 
 }

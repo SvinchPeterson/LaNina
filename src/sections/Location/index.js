@@ -30,9 +30,22 @@ const airPort = {
     proto: [Block, Text]
   },
   ...[
-    { distanceText },
+    { proto: distanceText },
+
     {
-      transferText
+      proto: transferText,
+      props: {
+        flexFlow: 'column',
+        flexAlign: 'flex-start flex-start',
+        gap: 'W2'
+      },
+
+      caption: {
+        proto: Text,
+        props: {
+          text: 'transfer'
+        }
+      }
     }
   ]
 }
@@ -42,7 +55,7 @@ export default {
   proto: Block,
   props: {
     flexFlow: 'column',
-    gap: 'D',
+    gap: 'B',
     padding: 'F 0 0 0'
   },
   style,
