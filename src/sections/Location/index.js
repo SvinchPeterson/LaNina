@@ -58,6 +58,9 @@ export default {
     gap: '0',
     padding: 'F 0 0 0'
   },
+  attr: {
+    id: 'location'
+  },
   style,
 
   paragraph,

@@ -29,7 +29,7 @@ const sectionLinks = {
     },
     { props: { text: 'wine', href: '#wine' } },
     { props: { text: 'apartments', href: '#apartments' } },
-    { props: { text: 'service', href: '#services' } }
+    { props: { text: 'location', href: '#location' } }
   ]
 }
 
