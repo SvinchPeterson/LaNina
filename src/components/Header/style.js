@@ -68,13 +68,13 @@ const styleCall = {
   },
 
   '&::after': {
-    content: '"571 017 170"',
+    content: '"+995 571 017 170"',
     disply: 'block',
     // border: '2px solid red',
     position: 'absolute',
-    top: '50px',
-    left: '-50%',
-    width: '120px',
+    top: '0px',
+    left: '50px',
+    width: '160px',
     color: 'rgba(247, 239, 230, .5)',
     padding: '15px 20px',
     fontSize: `${18 / 16}em`,
