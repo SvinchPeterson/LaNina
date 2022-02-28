@@ -38,15 +38,14 @@ const socialMedia = {
   proto: Block,
   props: {
     flexAlign: 'center center',
-    gap: 'C1'
+    gap: 'D'
   },
   style: { marginBottom: `${200 / 16}em` },
 
   childProto: {
     proto: [Link, Block],
     props: {
-      target: '_blank',
-      padding: 'A'
+      target: '_blank'
     },
     icon: {
       proto: [SVG, Block],
@@ -92,7 +91,7 @@ export default {
   style,
   props: {
     flexAlign: 'flex-end flex-end',
-    gap: '0'
+    gap: 'B'
     // flexAlign: 'center space-between'
   },
 

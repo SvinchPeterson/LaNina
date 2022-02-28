@@ -34,17 +34,19 @@ const styleSocialMedia = {
   flex: 20,
   minWidth: '100%',
   paddingBottom: '0px',
-  // border: '5px solid red',
+  alignSelf: 'flex-end',
+  // border: '10px solid yellow',
 
   '> a': {
     cursor: 'pointer',
     opacity: '.65',
     border: '1px solid rgba(243, 231, 219, 0)',
+    padding: '15px',
     borderRadius: '100%',
     transition: 'all .3s linear',
     '&:hover': {
       // background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, 0))',
-      border: '1.5px solid rgba(243, 231, 219, .25)',
+      border: '1.7px solid rgba(243, 231, 219, .25)',
       opacity: '.9'
     },
     '> img': {
@@ -66,7 +68,7 @@ export default {
   zIndex: 200,
   boxSizing: 'border-box',
   flexFlow: 'column',
-  gap: '400px',
+  gap: '320px',
 
   '> nav': styleSectionLinks,
   '> div': styleSocialMedia

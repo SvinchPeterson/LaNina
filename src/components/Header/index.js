@@ -98,7 +98,7 @@ export default {
   proto: [Block, Flex],
   props: {
     flexAlign: 'center center',
-    gap: 'F',
+    gap: 'E',
     padding: 'C 0 A 0'
   },
 
