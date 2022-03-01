@@ -8,6 +8,7 @@ import LUGGAGE_PNG from '../../assets/luggage.PNG'
 import { wineText, bbSololaki, luggageText, stayText } from '../../texts'
 
 import style, { styleEntranceItem } from './style'
+import { scaleSololakiBanner } from '../../animations'
 
 const entrenceItem = {
   proto: Block,
@@ -52,7 +53,11 @@ const hotel = {
   style: {
     '@media only screen and (max-width: 980px)': {
       padding: '200px 0',
-      transform: 'scale(1.15)'
+      transform: 'scale(1.3)'
+    },
+    '@media only screen and (max-width: 480px)': {
+      transform: 'scale(1.4)'
+
     }
   },
 
@@ -94,29 +99,42 @@ const hotel = {
           minWidth: '60%',
           maxWidth: '100%',
           fontWeight: 600,
+          transform: 'scale(.95)',
           // background: 'rgba(247, 239, 230, 1)',
           top: '150px',
           padding: '30px 70px',
           left: 0,
           // fontSize: '13px',
           background: 'transparent',
-          color: 'rgba(247, 239, 230, .75)',
+          color: 'rgba(247, 239, 230, .65)',
           boxShadow: '-50px 50px 100px 20px rgba(243, 231, 219, 0)',
           // border: '20px solid red',
           lineHeight: '28px'
         },
 
-        '@media only screen and (max-width: 600px)': {
-          padding: '30px 30px',
-          fontSize: '14px',
-          lineHeight: '22px'
-        },
-
-        '@media only screen and (max-width: 320px)': {
-          top: '50px',
-          fontWeight: 500
+        '@media only screen and (max-width: 480px)': {
+          padding: '0',
+          // fontSize: '14px',
+          lineHeight: '22px',
+          width: '400px',
+          // border: '20px solid red',
+          boxSizing: 'border-box',
+          transform: 'scale(.8)',
+          fontSize: '17px'
 
         }
+
+        // '@media only screen and (max-width: 480px)': {
+        //   top: '50px',
+        //   fontWeight: 500,
+        //   fontSize: '12px',
+        //   transform: 'scale(.95)'
+        // }
+        // '@media only screen and (max-width: 400px)': {
+        //   transform: 'scale(.95)',
+        //   lineHeight: '20px',
+        //   padding: '50px 10px'
+        // }
       }
     },
 

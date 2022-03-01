@@ -4,7 +4,6 @@ import { Block, Text, Link, SVG, Img, Flex } from '@rackai/symbols'
 import FACEBOOK_SVG from '../../assets/facebook2.svg'
 import INSTAGRAM_SVG from '../../assets/instagram2.svg'
 import LINKEDIN_SVG from '../../assets/linkedin2.svg'
-import MAIL_PNG from '../../assets/mail.png'
 
 import style from './style'
 
