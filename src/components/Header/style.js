@@ -45,7 +45,11 @@ const styleLangs = {
   top: '35px',
   fontWeight: 600,
   '> div:hover': { color: 'rgba(243, 231, 219, 1)' },
-  '> div:first-child': { borderBottom: '1.5px solid rgba(243, 231, 219, .65)' }
+  '> div:first-child': { borderBottom: '1.5px solid rgba(243, 231, 219, .65)' },
+  '@media only screen and (max-width: 768px)': {
+    top: '200px'
+    // position: 'relative'
+  }
 }
 
 const styleCall = {
@@ -57,7 +61,6 @@ const styleCall = {
   border: '1px solid rgba(243, 231, 219, 0)',
   transition: 'all .2s ease-in-out',
   position: 'relative',
-
   '&:hover': {
     opacity: '1',
     border: '1px solid rgba(243, 231, 219, .1)',
@@ -74,14 +77,17 @@ const styleCall = {
     position: 'absolute',
     top: '0px',
     left: '50px',
-    width: '160px',
+    width: '180px',
     color: 'rgba(247, 239, 230, .5)',
     padding: '15px 20px',
     fontSize: `${18 / 16}em`,
-    fontWeight: 500,
+    fontWeight: 700,
     opacity: 0,
-    transition: 'all .3s ease-in-out'
-
+    transition: 'all .3s ease-in-out',
+    '@media only screen and (max-width: 1000px)': {
+      top: '50px',
+      left: '-150px'
+    }
   }
 }
 
@@ -97,10 +103,14 @@ const styleBook = {
   background: 'radial-gradient(rgba(243, 231, 219, 0), rgba(243, 231, 219, .0))',
   fontWeight: 600,
   textDecoration: 'none',
+  '@media only screen and (max-width: 768px)': {
+    background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, .0))',
+    border: '2px solid rgba(243, 231, 219, .1)'
+  },
   '&:hover': {
     border: '1px solid rgba(243, 231, 219, .1)',
     color: 'rgba(243, 231, 219, .85)',
-    background: 'radial-gradient(rgba(243, 231, 219, .15), rgba(243, 231, 219, .0))'
+    background: 'radial-gradient(rgba(243, 231, 219, .085), rgba(243, 231, 219, .0))'
   }
 }
 
@@ -116,6 +126,16 @@ export default {
   backdropFilter: 'blur(2px)',
   // border: '20px solid yellow',
   maxWidth: `${2560 / 16}em`,
+
+  '@media only screen and (max-width: 768px)': {
+    gap: '0px',
+    justifyContent: 'space-between',
+    padding: '60px 60px'
+  },
+  '@media only screen and (max-width: 480px)': {
+    padding: '60px 10px'
+
+  },
 
   '> input': styleCheck,
   '> label': styleMenuIcon,

@@ -3,6 +3,7 @@
 import { scaleSololakiBanner, opacityBanner } from '../../animations'
 
 import COVER_JPG from '../../assets/images/sololaki/sololaki.jpg'
+import COVER2_JPG from '../../assets/images/sololaki/coverMobile.jpg'
 
 export const styleBanner = {
   width: `100%`,
@@ -11,9 +12,11 @@ export const styleBanner = {
   boxSizing: 'border-box',
   position: 'relative',
   fontFamily: 'Avenir Next',
-  '&:hover > span': {
-    backgroundPosition: 'bottom right'
-  },
+  // '@media only screen and (max-width: 480px)': {
+  // },
+  // '&:hover > span': {
+  //   backgroundPosition: 'bottom right'
+  // },
   '> span': {
     minWidth: '100%',
     flex: 1,
@@ -27,7 +30,21 @@ export const styleBanner = {
     animationName: scaleSololakiBanner,
     animationDuration: '5s',
     animationTimingFunction: 'linear',
-    transition: 'all 1.5s ease-in-out'
+    transition: 'all 1.5s ease-in-out',
+    '@media only screen and (max-width: 900px)': {
+      pointerEvents: 'none'
+    },
+    '@media only screen and (max-width: 600px)': {
+      backgroundImage: 'radial-gradient(rgba(243, 231, 219, .6), rgba(243, 231, 219, .2)), url(' + COVER2_JPG + ')',
+      backgroundPosition: 'right center'
+    },
+
+    '@media only screen and (max-width: 420px)': {
+      backgroundPosition: 'right right'
+    },
+    '@media only screen and (max-width: 330px)': {
+      backgroundPosition: 'left  right'
+    }
   },
   '> div': {
     position: 'absolute',
@@ -44,7 +61,16 @@ export const styleBanner = {
     letterSpacing: '2px',
     animationName: opacityBanner,
     animationDuration: '2s',
-    animationTimingFunction: 'ease-in-out'
+    animationTimingFunction: 'ease-in-out',
+    whiteSpace: 'nowrap',
+
+    '@media only screen and (max-width: 500px)': {
+      whiteSpace: 'normal',
+      width: '400px',
+      padding: '0 50px',
+      textAlign: 'center'
+
+    }
   }
 }
 
@@ -58,6 +84,7 @@ export default {
   // border: '20px solid green',
   maxWidth: `${2560 / 16}em`,
   margin: '0 auto',
+  boxSizing: 'border-box',
 
   '> div': styleBanner
 }

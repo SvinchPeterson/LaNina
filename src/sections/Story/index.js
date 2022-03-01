@@ -65,7 +65,6 @@ const hotel = {
 
       '@media only screen and (max-width: 980px)': {
         backgroundSize: 'cover',
-        backgroundAttachment: 'scroll',
         minWidth: '100%',
         left: 0
       },

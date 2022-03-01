@@ -6,6 +6,18 @@ const styleSectionLinks = {
   zIndex: 0,
   minWidth: '100%',
   flex: 20,
+  '@media only screen and (max-width: 768px)': {
+    flexFlow: 'column',
+    justifyContent: 'flex-start',
+    minheight: 'fit-content',
+    alignItems: 'flex-start',
+    padding: '250px 200px 0px 50px',
+    textAlign: 'left'
+  },
+  '@media only screen and (max-width: 480px)': {
+    padding: '250px 200px 100px 10px'
+
+  },
   // paddingTop: '100px',
   // flex: 12,
   '> a': {
@@ -35,6 +47,14 @@ const styleSocialMedia = {
   minWidth: '100%',
   paddingBottom: '0px',
   alignSelf: 'flex-end',
+  '@media only screen and (max-width: 768px)': {
+    padding: 0
+  },
+  '@media only screen and (max-width: 480px)': {
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    gap: '20px'
+  },
   // border: '10px solid yellow',
 
   '> a': {
@@ -69,6 +89,13 @@ export default {
   boxSizing: 'border-box',
   flexFlow: 'column',
   gap: '320px',
+
+  '@media only screen and (max-width: 768px)': {
+    gap: '100px'
+  },
+  '@media only screen and (max-width: 480px)': {
+    gap: 0
+  },
 
   '> nav': styleSectionLinks,
   '> div': styleSocialMedia
