@@ -5,6 +5,8 @@ import FACEBOOK_SVG from '../../assets/facebook.svg'
 import INSTAGRAM_SVG from '../../assets/instagram.svg'
 import LINKEDIN_SVG from '../../assets/linkedin.svg'
 
+import style2 from '../../style'
+
 export default {
   style: {
     color: 'rgba(0, 0, 0, .55)'
@@ -15,6 +17,7 @@ export default {
     flexAlign: 'center center',
     padding: 'B 0 C 0'
   },
+  // class: [style2],
   h5: {
     proto: [Text, Block],
     props: {

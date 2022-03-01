@@ -49,25 +49,93 @@ const storySection = {
 const hotel = {
   proto: storySection,
   attr: { id: 'hotel' },
+  style: {
+    '@media only screen and (max-width: 980px)': {
+      padding: '200px 0',
+      transform: 'scale(1.15)'
+    }
+  },
+
   image: {
     style: {
       backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
       backgroundSize: 'contain',
       backgroundPosition: 'left bottom',
-      transform: 'scale(.95)'
+      transform: 'scale(.95)',
+
+      '@media only screen and (max-width: 980px)': {
+        backgroundSize: 'cover',
+        backgroundAttachment: 'scroll',
+        minWidth: '100%',
+        left: 0
+      },
+      '@media only screen and (max-width: 540px)': {
+        backgroundSize: 'contain'
+
+      }
     }
   },
+
   p: {
-    style: {
-      position: 'relative'
-    },
     span: {
       proto: bbSololaki,
       style: {
         position: 'absolute',
         top: 0,
         left: '-400px',
-        padding: '100px'
+        padding: '100px',
+        background: 'rgba(247, 239, 230, 1)',
+        boxShadow: '-50px 50px 100px 20px rgba(243, 231, 219, .2)',
+        lineHeight: '32px',
+
+        '@media only screen and (max-width: 980px)': {
+          // border: '30px solid red',
+          margin: '0 auto',
+          fontSize: '16px',
+          minWidth: '60%',
+          maxWidth: '100%',
+          fontWeight: 600,
+          // background: 'rgba(247, 239, 230, 1)',
+          top: '150px',
+          padding: '30px 70px',
+          left: 0,
+          // fontSize: '13px',
+          background: 'transparent',
+          color: 'rgba(247, 239, 230, .75)',
+          boxShadow: '-50px 50px 100px 20px rgba(243, 231, 219, 0)',
+          // border: '20px solid red',
+          lineHeight: '28px'
+        },
+
+        '@media only screen and (max-width: 600px)': {
+          padding: '30px 30px',
+          fontSize: '14px',
+          lineHeight: '22px'
+        },
+
+        '@media only screen and (max-width: 320px)': {
+          top: '50px',
+          fontWeight: 500
+
+        }
+      }
+    },
+
+    style: {
+      position: 'relative',
+      background: 'rgba(247, 239, 230, 1)',
+      color: 'rgba(0,0, 0, .35)',
+      '@media only screen and (max-width: 980px)': {
+        position: 'absolute',
+        // background: 'rgba(247, 239, 230, 1)',
+        // background: 'red',
+        // border: '20px solid yellow',
+        width: '100%',
+        minHeight: '100%',
+        letterSpacing: '0',
+        background: 'transparent',
+        color: 'rgba(247, 239, 230, 1)',
+        boxShadow: 'none'
       }
     }
   }
@@ -95,7 +163,8 @@ const entrenceParking = {
       position: 'absolute',
       right: '-100px',
       bottom: '200px',
-      lineHeight: '25px'
+      lineHeight: '25px',
+      background: 'rgba(247, 239, 230, 1)'
       // border: '5px solid red'
     },
     span: null,
@@ -185,14 +254,17 @@ const wine = {
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
-      padding: '100px'
+      padding: '100px',
+      background: 'rgba(247, 239, 230, 1)',
+      lineHeight: '32px'
     },
     span: {
       proto: wineText,
       style: {
         display: 'block',
         maxWidth: '650px',
-        margin: '0 auto'
+        margin: '0 auto',
+        color: 'rgba(0, 0, 0, .25)'
       }
     }
   }
