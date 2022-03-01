@@ -165,7 +165,15 @@ const entrenceParking = {
     style: {
       backgroundImage: 'url(' + BALCONY_JPG + ')',
       backgroundPosition: 'center center',
-      transform: 'scale(1.2)'
+      transform: 'scale(1.2)',
+      '@media only screen and (max-width: 1100px)': {
+        backgroundPosition: 'left top'
+        // backgroundSize: 'contain',
+        // transform: 'scale(1.4)'
+      },
+      '@media only screen and (max-width: 500px)': {
+        backgroundPosition: 'left -100px top'
+      }
     }
   },
 
@@ -181,8 +189,23 @@ const entrenceParking = {
       right: '-100px',
       bottom: '200px',
       lineHeight: '25px',
-      background: 'rgba(247, 239, 230, 1)'
-      // border: '5px solid red'
+      background: 'rgba(247, 239, 230, 1)',
+      '@media only screen and (max-width: 1100px)': {
+        right: '-30px'
+      },
+      '@media only screen and (max-width: 700px)': {
+        padding: '30px 50px',
+        '> div': { fontSize: '15px' }
+      },
+      '@media only screen and (max-width: 480px)': {
+        left: '-50px'
+      },
+
+      '@media only screen and (max-width: 400px)': {
+        left: '-30px',
+        img: { display: 'none' }
+
+      }
     },
     span: null,
     entrence: {
@@ -257,11 +280,21 @@ const entrenceParking = {
 const wine = {
   proto: storySection,
   attr: { id: 'wine' },
+  style: {
+    // border: '10px solid red'
+  },
   image: {
     style: {
       backgroundImage: 'url(' + WINE_JPG + ')',
       backgroundPosition: 'center center',
-      transform: 'scale(1.5)'
+      transform: 'scale(1.5)',
+      '@media only screen and (max-width: 900px)': {
+        transform: 'scale(1.2)'
+      },
+      '@media only screen and (max-width: 480px)': {
+        transform: 'scale(1.17)',
+        backgroundSize: 'contain'
+      }
     }
   },
   p: {
@@ -270,8 +303,8 @@ const wine = {
       width: '100%',
       top: '50%',
       left: '50%',
-      transform: 'translate(-50%, -50%)',
-      padding: '100px',
+      transform: 'translate(-50%, -50%) scale(1.2)',
+      padding: '50px 0',
       background: 'rgba(247, 239, 230, 1)',
       lineHeight: '32px'
     },
@@ -279,9 +312,28 @@ const wine = {
       proto: wineText,
       style: {
         display: 'block',
-        maxWidth: '650px',
         margin: '0 auto',
-        color: 'rgba(0, 0, 0, .25)'
+        color: 'rgba(0, 0, 0, .25)',
+        background: 'rgba(247, 239, 230, 1)',
+        height: '100%',
+        padding: '50px 100px',
+        transform: 'scale(.95)',
+        '@media only screen and (max-width: 900px)': {
+          transform: 'scale(.9)',
+          padding: '0 100px'
+        },
+        '@media only screen and (max-width: 768px)': {
+          lineHeight: '25px',
+          pontSize: '14px',
+          fontWeight: 500,
+          opacity: '.8',
+          padding: '0 50px'
+        },
+        '@media only screen and (max-width: 480px)': {
+          fontSie: '10px',
+          padding: '0 10px'
+
+        }
       }
     }
   }
