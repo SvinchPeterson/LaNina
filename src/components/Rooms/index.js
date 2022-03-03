@@ -15,7 +15,7 @@ const navButtons = {
   proto: Block,
   props: {
     flexAlign: 'center center',
-    gap: 'A2'
+    gap: 'C'
     // padding: 'A W'
   },
 

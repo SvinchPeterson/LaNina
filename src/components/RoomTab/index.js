@@ -43,8 +43,8 @@ const roomTab = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeLink: element.key, offers: true })
-      element.parent.parent.rooms.update({
+      state.update({ activeLink: element.key })
+      element.parent.parent.parent.rooms.update({
         style: {
           // transitionDelay: '5s',
           // animationName: roomsContainer,
@@ -72,7 +72,6 @@ const roomTab = {
         flex: 1
       }
   },
-
   image: {},
   p: {},
   book: { proto: book }
@@ -96,7 +95,6 @@ export const tabBallerina = {
   },
   book: {
     props: { href: `https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1645550353_mMXc6HH3zziZ95lR` },
-    style: { background: 'red' },
     icon: {
       style: {
         width: '20px',
@@ -112,6 +110,7 @@ export const tabBallerina = {
 export const tabRedBrick = {
   proto: roomTab,
   props: { href: '#redBrick' },
+
   style: {
     '&::after': {
       content: '"Red Brick"'

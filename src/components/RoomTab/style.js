@@ -79,6 +79,29 @@ export default {
     fontFamily: 'Avenir Next',
     fontWeight: 600
   },
+  '@media only screen and (max-width: 1225px)': {
+    minWidth: '80%',
+    '&:hover': {
+      minWidth: '80%'
+    }
+  },
+
+  '@media only screen and (max-width: 600px)': {
+    minWidth: '90%',
+    '> p': { fontSize: '14px' }
+  },
+
+  '@media only screen and (max-width: 480px)': {
+    minWidth: '100%',
+    '&:hover': {
+      minWidth: '100%'
+    }
+  },
+
+  '@media only screen and (max-width: 372px)': {
+    '> p': { fontSize: '13px', fontWeight: '600', paddingLeft: '15px', paddingRight: '15px' }
+
+  },
   '&:hover': {
     flex: 3,
     zIndex: 70,

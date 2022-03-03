@@ -6,8 +6,28 @@ export default {
   '> header': {
     minHeight: `${550 / 16}em`,
     overflow: 'hidden',
+    position: 'relative',
+    overflowY: 'auto'
+  },
+  '> header > div': {
+    minHeight: `${550 / 16}em`,
+    maxWidth: '100%',
+    overflowY: 'auto',
+    // '@media only screen and (max-width: 1225px)': {
+    //   position: 'absolute',
+    //   right: '300px'
 
-    '> a': { flex: 1 }
+    // },
+    // left: '-200px',
+    // '@media only screen and (max-width: 1225px)': {
+    //   // padding: '0 200px',
+    //   width: '100%',
+    //   '> a': { minWidth: '600px' }
+    // },
+
+    '> a': {
+      flex: 1
+    }
   },
 
   '> section': {
@@ -16,12 +36,7 @@ export default {
     // marginTop: '100px',
     // minHeight: '850px',
     '> div': {
-      // boxSizing: 'border-box',
-      // padding: '0px 50px',
-      // position: 'absolute',
-      // width: '100%',
-      // top: 0,
-      // left: 0
+      width: '100%'
     }
   }
 }

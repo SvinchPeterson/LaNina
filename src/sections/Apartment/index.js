@@ -22,16 +22,35 @@ export default {
   tabs: {
     tag: 'header',
     proto: Block,
-    props: {
-      flexFlow: 'row',
-      gap: 'B1',
-      padding: '0'
-    },
-    ...[
-      tabBallerina,
-      tabRedBrick,
-      tabYellowCouch
-    ]
+    // props: {
+    //   flexFlow: 'row',
+    //   gap: 'B1',
+    //   padding: '0'
+    // },
+    container: {
+      proto: Block,
+      props: {
+        flexFlow: 'row',
+        gap: 'B1',
+        padding: '0'
+      },
+      childProto: {
+        proto: Block
+      },
+      ...[
+        { proto: tabBallerina },
+        { proto: tabRedBrick },
+        { proto: tabYellowCouch }
+      ]
+      // ballerina: { proto: tabBallerina },
+      // redBrick: { proto: tabRedBrick },
+      // yellowCouch: { proto: tabYellowCouch }
+      // ...[
+      //   tabBallerina,
+      //   tabRedBrick,
+      //   tabYellowCouch
+      // ]
+    }
   },
 
   rooms: {

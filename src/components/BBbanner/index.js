@@ -1,41 +1,35 @@
 'use strict'
-import { Block, Text } from '@rackai/symbols'
+import { Block, Text, Img } from '@rackai/symbols'
 
 import { zoomInB, zoomOutB, opacityBanner, letterSpacingBanner } from '../../animations'
+import LOGO_PNG from '../../assets/logoBB.png'
 
 const style = {
   style: {
     fontFamily: 'Avenir Next',
     minWidth: `${200 / 16}em`,
-    color: 'rgba(243, 231, 219, 1)',
     pointerEvents: 'none',
     animationName: opacityBanner,
     animationDuration: '.9s',
     animationTimingFunction: 'ease-in-out',
 
-    '> caption': {
-      fontWeight: 'bold',
-      opacity: '.75',
-      '> span': {
-        animationDuration: '1s',
-        animationTimingFunction: 'ease-in-out'
-      },
-      '> span:first-child': {
-        animationName: zoomOutB
-      },
-      '> span:last-child': {
-        animationName: zoomInB
-      }
+    '> img': {
+      // width: `${70 / 16}em`,
+      width: `${80 / 16}em`,
+      opacity: '.4',
+      animationName: zoomOutB,
+      animationDuration: '1.4s',
+      animationTimingFunction: 'ease-in-out'
     },
 
     '> h5': {
       textTransform: 'uppercase',
-      letterSpacing: '6.5px',
-      opacity: '.45',
-      fontWeight: 500,
+      letterSpacing: '5px',
+      fontWeight: 700,
       animationName: letterSpacingBanner,
-      animationDuration: '1s',
-      animationTimingFunction: 'ease-in-out'
+      animationDuration: '1.3s',
+      animationTimingFunction: 'ease-in-out',
+      color: 'rgba(244, 233, 217, .4)'
     }
   }
 }
@@ -44,33 +38,18 @@ export default {
   proto: [Block, style],
   props: {
     flexFlow: 'column',
-    flexAlign: 'center center'
+    flexAlign: 'center center',
+    gap: 'A'
   },
-
-  caption: {
-    proto: Block,
-    props: {
-      flexAlign: 'center center',
-      gap: 'W2'
-    },
-    childProto: {
-      tag: 'span',
-      proto: [Block, Text],
-      props: {
-        size: 'H'
-      }
-    },
-    ...[
-      { props: { text: 'B' } },
-      { props: { text: 'B' } }
-    ]
+  logo: {
+    proto: Img,
+    props: { src: LOGO_PNG }
   },
-
   h5: {
     proto: Text,
     props: {
       text: 'residence',
-      size: 'B'
+      size: 'C'
     }
   }
 }

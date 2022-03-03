@@ -316,7 +316,7 @@ const wine = {
         color: 'rgba(0, 0, 0, .25)',
         background: 'rgba(247, 239, 230, 1)',
         height: '100%',
-        padding: '50px 100px',
+        padding: '50px 200px',
         transform: 'scale(.95)',
         '@media only screen and (max-width: 900px)': {
           transform: 'scale(.9)',

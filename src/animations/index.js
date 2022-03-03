@@ -20,7 +20,7 @@ export const zoomInB = keyframes`
 `
 export const zoomOutB = keyframes`
   from {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   to {
     transform: scale(1);
@@ -40,11 +40,11 @@ export const opacityBanner = keyframes`
 export const letterSpacingBanner = keyframes`
   from {
     // transform: scale(.9);
-    letter-spacing: 12px;
+    letter-spacing: 7px;
 
   }
   to {
-    letter-spacing: 6.5px;
+    letter-spacing: 5px;
     // transform: scale(1);
   }
 `

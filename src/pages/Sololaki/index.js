@@ -37,7 +37,10 @@ export default {
     active: true,
     activeLink: 0,
     activeImage: 0,
-    offers: true
+    offers: true,
+    activeBallerina: true,
+    activeRedBrick: true,
+    activeYellowCouch: true
   },
 
   banner,
