@@ -23,7 +23,7 @@ const styleSectionLinks = {
   '> a': {
     // fontFamily: 'Bellefair',
     fontFamily: 'Avenir Next',
-    color: 'rgba(243, 231, 219, .55)',
+    color: 'rgba(244, 233, 217, .55)',
     textTransform: 'uppercase',
     letterSpacing: '3.8px',
     cursor: 'pointer',
@@ -34,7 +34,7 @@ const styleSectionLinks = {
     textAlign: 'left',
 
     '&:hover': {
-      color: 'rgba(243, 231, 219, .85)',
+      color: 'rgba(244, 233, 217, .85)',
       letterSpacing: '4px'
     }
   }
@@ -59,14 +59,14 @@ const styleSocialMedia = {
 
   '> a': {
     cursor: 'pointer',
-    opacity: '.65',
-    border: '1px solid rgba(243, 231, 219, 0)',
+    opacity: '.5',
+    border: '1.7px solid rgba(244, 233, 217, 0)',
     padding: '15px',
     borderRadius: '100%',
     transition: 'all .3s linear',
     '&:hover': {
       // background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, 0))',
-      border: '1.7px solid rgba(243, 231, 219, .25)',
+      border: '1.7px solid rgba(244, 233, 217, .25)',
       opacity: '.9'
     },
     '> img': {
