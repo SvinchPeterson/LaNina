@@ -29,7 +29,7 @@ const styleImage = {
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   backgroundAttachment: 'fixed',
-  filter: 'brightness(35%) blur(1px) grayscale(30%)',
+  filter: 'brightness(35%) blur(.7px) grayscale(30%)',
   backgroundColor: 'rgba(0, 0, 0, 1)',
   zIndex: 10,
   transition: 'all 1s ease-in-out',
