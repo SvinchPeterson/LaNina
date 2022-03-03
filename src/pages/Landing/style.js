@@ -11,7 +11,11 @@ const styleLink = {
     flex: 8
   },
   '&:hover > h3': {
-    opacity: 1
+    opacity: 1,
+    letterSpacing: '-1.5px',
+    '@media only screen and (max-width: 768px)': {
+      letterSpacing: '2.5px'
+    }
   },
   '&:hover > div': {
     backgroundPosition: 'top center',
@@ -23,9 +27,9 @@ const styleImage = {
   position: 'relative',
   flex: 1,
   backgroundSize: 'cover',
-  // backgroundPosition: 'center center',
+  backgroundPosition: 'center center',
   backgroundAttachment: 'fixed',
-  filter: 'brightness(35%) blur(.5px) grayscale(30%)',
+  filter: 'brightness(35%) blur(1px) grayscale(30%)',
   backgroundColor: 'rgba(0, 0, 0, 1)',
   zIndex: 10,
   transition: 'all 1s ease-in-out',
@@ -58,11 +62,15 @@ const styleHeading = {
   writingMode: 'vertical-rl',
   textOrientation: 'upright',
   textTransform: 'uppercase',
-  letterSpacing: '3.5px',
+  letterSpacing: '-10px',
   opacity: 0,
-  transition: 'opacity 1s ease-in-out',
+  transition: 'all 1s ease-in-out',
   backdropFilter: 'blur(2px)',
-  fontSize: '15px'
+  '@media only screen and (max-width: 768px)': {
+    fontSize: '20px',
+    backdropFilter: 'blur(0px)',
+    letterSpacing: '2.5px'
+  }
 }
 
 const styleUnderConstruction = {
@@ -75,7 +83,6 @@ const styleUnderConstruction = {
   fontFamily: 'Avenir Next',
   fontSize: '20px',
   fontWeight: 600,
-  // textTransform: 'uppercase',
   letterSpacing: '3px',
   wordSpacing: '10px',
   opacity: 0,
@@ -101,7 +108,14 @@ export default {
 
   '@media only screen and (max-width: 768px)': {
     flexFlow: 'column',
-    // border: '10px solid red',
+
+    '> a': { tranform: 'scale(1.5)' },
+    '> a:hover': { flex: 1 },
+    '> a > div': {
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'local'
+    },
     '> a > h3': {
       flex: '1',
       width: '100%',
@@ -115,29 +129,12 @@ export default {
       paddingTop: '150px',
       writingMode: 'horizontal-tb'
     },
-    '> a': {
-      // border: '10px solid yellow',
-      tranform: 'scale(1.5)'
-    },
+
     '> div': {
       top: '50%',
-      '> h5': {
-        fontSize: '18px'
-      }
-
-    },
-    '> a:hover': {
-      flex: 1
+      '> h5': { display: 'none' }
     },
 
-    '> span': {
-      top: '90%'
-    },
-
-    '> a > div': {
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'local'
-    }
+    '> span': { top: '90%' }
   }
 }
