@@ -15,7 +15,7 @@ const style = {
     animationTimingFunction: 'ease-in-out',
 
     '> img': {
-      width: `${100 / 16}em`,
+      width: `${90 / 16}em`,
       opacity: '.75',
 
       animationName: zoomOutB,
@@ -25,7 +25,8 @@ const style = {
 
     '> h5': {
       textTransform: 'uppercase',
-      letterSpacing: '2px',
+      // letterSpacing: '2px',
+      letterSpacing: '4px',
       fontWeight: 700,
       color: 'rgba(244, 233, 217, .5)',
 
@@ -42,7 +43,7 @@ export default {
     size: 'A',
     flexFlow: 'column',
     flexAlign: 'center center',
-    gap: 'Y'
+    gap: 'Z'
   },
 
   logo: {

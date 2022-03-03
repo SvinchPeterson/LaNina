@@ -14,7 +14,7 @@ const styleLink = {
     opacity: 1,
     letterSpacing: '-1.5px',
     '@media only screen and (max-width: 768px)': {
-      letterSpacing: '2.5px'
+      letterSpacing: '3.5px'
     }
   },
   '&:hover > div': {
@@ -46,7 +46,7 @@ const styleImage = {
 const styleBanner = {
   zIndex: 100,
   position: 'absolute',
-  top: '45%',
+  top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)'
 }
@@ -82,7 +82,7 @@ const styleUnderConstruction = {
   zIndex: '100',
   fontFamily: 'Avenir Next',
   fontSize: '20px',
-  fontWeight: 600,
+  fontWeight: 500,
   letterSpacing: '3px',
   wordSpacing: '10px',
   opacity: 0,

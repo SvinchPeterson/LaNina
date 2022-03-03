@@ -40,11 +40,11 @@ export const opacityBanner = keyframes`
 export const letterSpacingBanner = keyframes`
   from {
     // transform: scale(.9);
-    letter-spacing: 4px;
+    letter-spacing: 6px;
 
   }
   to {
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     // transform: scale(1);
   }
 `

@@ -20,8 +20,8 @@ export const styleBanner = {
   '> span': {
     minWidth: '100%',
     flex: 1,
-    backgroundImage: 'radial-gradient(rgba(243, 231, 219, .6), rgba(243, 231, 219, .2)), url(' + COVER_JPG + ')',
-    filter: 'brightness(20%) grayscale(30%)',
+    backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .65), rgba(0, 0, 0, .65)), url(' + COVER_JPG + ')',
+    filter: 'brightness(40%) grayscale(30%)',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center center',
@@ -35,7 +35,7 @@ export const styleBanner = {
       pointerEvents: 'none'
     },
     '@media only screen and (max-width: 600px)': {
-      backgroundImage: 'radial-gradient(rgba(243, 231, 219, .6), rgba(243, 231, 219, .2)), url(' + COVER2_JPG + ')',
+      backgroundImage: 'radial-gradient(rgba(243, 231, 219, .25), rgba(243, 231, 219, .2)), url(' + COVER2_JPG + ')',
       backgroundPosition: 'right center'
     },
 
@@ -57,12 +57,13 @@ export const styleBanner = {
     top: '60%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    color: 'rgba(243, 231, 219, .45)',
+    color: 'rgba(244, 233, 217, .45)',
     letterSpacing: '2px',
     animationName: opacityBanner,
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out',
     whiteSpace: 'nowrap',
+    fontWeight: '600',
 
     '@media only screen and (max-width: 500px)': {
       whiteSpace: 'normal',

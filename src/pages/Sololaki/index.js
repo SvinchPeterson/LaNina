@@ -14,7 +14,7 @@ const banner = {
   image: { tag: 'span' },
   bbBanner: {
     proto: BBbanner,
-    caption: {},
+    logo: {},
     h5: {
       props: {
         text: 'sololaki',
