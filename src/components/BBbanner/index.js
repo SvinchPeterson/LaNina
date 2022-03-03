@@ -14,9 +14,8 @@ const style = {
     animationTimingFunction: 'ease-in-out',
 
     '> img': {
-      // width: `${70 / 16}em`,
-      width: `${80 / 16}em`,
-      opacity: '.4',
+      width: `${100 / 16}em`,
+      opacity: '.75',
       animationName: zoomOutB,
       animationDuration: '1.4s',
       animationTimingFunction: 'ease-in-out'
@@ -24,23 +23,25 @@ const style = {
 
     '> h5': {
       textTransform: 'uppercase',
-      letterSpacing: '5px',
+      letterSpacing: '2px',
       fontWeight: 700,
       animationName: letterSpacingBanner,
       animationDuration: '1.3s',
       animationTimingFunction: 'ease-in-out',
-      color: 'rgba(244, 233, 217, .4)'
+      color: 'rgba(244, 233, 217, .5)'
     }
   }
 }
 
 export default {
-  proto: [Block, style],
+  proto: [Block, style, Text],
   props: {
+    size: 'A',
     flexFlow: 'column',
     flexAlign: 'center center',
-    gap: 'A'
+    gap: 'Y'
   },
+
   logo: {
     proto: Img,
     props: { src: LOGO_PNG }

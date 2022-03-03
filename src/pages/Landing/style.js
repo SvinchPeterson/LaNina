@@ -15,7 +15,7 @@ const styleLink = {
   },
   '&:hover > div': {
     backgroundPosition: 'top center',
-    filter: 'brightness(35%) blur(0px) grayscale(10%)'
+    filter: 'brightness(45%) blur(0px) grayscale(10%)'
   }
 }
 
@@ -25,7 +25,8 @@ const styleImage = {
   backgroundSize: 'cover',
   // backgroundPosition: 'center center',
   backgroundAttachment: 'fixed',
-  filter: 'brightness(15%) blur(.5px) grayscale(30%)',
+  filter: 'brightness(35%) blur(.5px) grayscale(30%)',
+  backgroundColor: 'rgba(0, 0, 0, 1)',
   zIndex: 10,
   transition: 'all 1s ease-in-out',
   transform: 'scale(1.1)',
@@ -51,16 +52,17 @@ const styleHeading = {
   width: '60px',
   height: '100%',
   zIndex: '100',
-  color: 'rgba(244, 233, 217, 1)',
+  color: 'rgba(244, 233, 217, .65)',
   fontFamily: 'Avenir Next',
-  fontWeight: 600,
+  fontWeight: 700,
   writingMode: 'vertical-rl',
   textOrientation: 'upright',
   textTransform: 'uppercase',
-  letterSpacing: '5px',
+  letterSpacing: '3.5px',
   opacity: 0,
   transition: 'opacity 1s ease-in-out',
-  backdropFilter: 'blur(2px)'
+  backdropFilter: 'blur(2px)',
+  fontSize: '15px'
 }
 
 const styleUnderConstruction = {
@@ -68,16 +70,16 @@ const styleUnderConstruction = {
   top: '70%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  color: 'rgba(244, 233, 217, 1)',
+  color: 'rgba(168, 98, 63, .7)',
   zIndex: '100',
   fontFamily: 'Avenir Next',
   fontSize: '20px',
-  // textTransform: 'capitalize',
+  fontWeight: 600,
+  // textTransform: 'uppercase',
   letterSpacing: '3px',
   wordSpacing: '10px',
   opacity: 0,
   transition: 'opacity 1s ease-in-out',
-  fontWeight: '500',
   whiteSpace: 'nowrap'
 }
 
