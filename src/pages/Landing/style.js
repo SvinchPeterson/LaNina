@@ -7,19 +7,23 @@ const styleLink = {
   transition: 'all 1s ease-in-out',
   overflow: 'hidden',
   position: 'relative',
+  transform: 'scale(1.01)',
+  '@media only screen and (max-width: 768px)': {
+    transform: 'scale(1)'
+  },
   '&:hover': {
     flex: 8
   },
   '&:hover > h3': {
     opacity: 1,
-    letterSpacing: '-1.5px',
+    letterSpacing: '3px',
     '@media only screen and (max-width: 768px)': {
       letterSpacing: '3.5px'
     }
   },
   '&:hover > div': {
     backgroundPosition: 'top center',
-    filter: 'brightness(45%) blur(0px) grayscale(10%)'
+    filter: 'brightness(65%) blur(0px) grayscale(10%)'
   }
 }
 
@@ -29,7 +33,7 @@ const styleImage = {
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   backgroundAttachment: 'fixed',
-  filter: 'brightness(35%) blur(.7px) grayscale(30%)',
+  filter: 'brightness(45%) blur(.5px) grayscale(30%)',
   backgroundColor: 'rgba(0, 0, 0, 1)',
   zIndex: 10,
   transition: 'all 1s ease-in-out',
@@ -53,11 +57,13 @@ const styleBanner = {
 
 const styleHeading = {
   position: 'absolute',
-  width: '60px',
+  // width: '100px',
+  // border: '3px solid red',
   height: '100%',
   zIndex: '100',
   color: 'rgba(244, 233, 217, .65)',
   fontFamily: 'Avenir Next',
+  fontSize: '15px',
   fontWeight: 700,
   writingMode: 'vertical-rl',
   textOrientation: 'upright',
@@ -78,12 +84,12 @@ const styleUnderConstruction = {
   top: '70%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  color: 'rgba(168, 98, 63, .7)',
+  color: 'rgba(168, 98, 63, 1)',
   zIndex: '100',
   fontFamily: 'Avenir Next',
   fontSize: '20px',
-  fontWeight: 500,
-  letterSpacing: '3px',
+  fontWeight: 600,
+  letterSpacing: '2.7px',
   wordSpacing: '10px',
   opacity: 0,
   transition: 'opacity 1s ease-in-out',

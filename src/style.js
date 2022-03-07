@@ -4,7 +4,7 @@ export default {
   width: '100%',
   height: '100%',
   position: 'absolute',
-  fontFamily: 'Gilda Display',
+  // fontFamily: 'Gilda Display',
   // border: '20px solid red',
   top: 0,
   left: 0,

@@ -35,7 +35,7 @@ export const styleBanner = {
       pointerEvents: 'none'
     },
     '@media only screen and (max-width: 600px)': {
-      backgroundImage: 'radial-gradient(rgba(243, 231, 219, .25), rgba(243, 231, 219, .2)), url(' + COVER2_JPG + ')',
+      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .65), rgba(0, 0, 0, .65)), url(' + COVER2_JPG + ')',
       backgroundPosition: 'right center'
     },
 
