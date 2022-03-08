@@ -2,6 +2,8 @@
 
 import { brightnessLanding, zoomInLanding } from '../../animations'
 
+import { cream, orange, green, black } from '../../colors'
+
 const styleLink = {
   flex: 1,
   transition: 'all 1s ease-in-out',
@@ -57,11 +59,9 @@ const styleBanner = {
 
 const styleHeading = {
   position: 'absolute',
-  // width: '100px',
-  // border: '3px solid red',
   height: '100%',
   zIndex: '100',
-  color: 'rgba(244, 233, 217, .65)',
+  color: cream,
   fontFamily: 'Avenir Next',
   fontSize: '15px',
   fontWeight: 700,

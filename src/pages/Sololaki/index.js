@@ -2,7 +2,7 @@
 
 import { Block, Flex, Text } from '@rackai/symbols'
 
-import { Story, Apartment, Services, Location } from '../../sections'
+import { Story, Apartment, Location } from '../../sections'
 
 import { Header, Menu, BBbanner } from '../../components'
 

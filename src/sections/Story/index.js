@@ -88,7 +88,7 @@ const hotel = {
         top: 0,
         left: '-400px',
         padding: '100px',
-        background: 'rgba(247, 239, 230, 1)',
+        background: 'rgba(244, 233, 217, .75)',
         boxShadow: '-50px 50px 100px 20px rgba(243, 231, 219, .2)',
         lineHeight: '32px',
 
@@ -151,7 +151,7 @@ const hotel = {
         minHeight: '100%',
         letterSpacing: '0',
         background: 'transparent',
-        color: 'rgba(247, 239, 230, 1)',
+        color: 'rgba(244, 233, 217, .75)',
         boxShadow: 'none'
       }
     }
@@ -305,7 +305,7 @@ const wine = {
       left: '50%',
       transform: 'translate(-50%, -50%) scale(1.2)',
       padding: '50px 0',
-      background: 'rgba(247, 239, 230, 1)',
+      background: 'rgba(244, 233, 217, .75)',
       lineHeight: '32px'
     },
     span: {
@@ -314,7 +314,7 @@ const wine = {
         display: 'block',
         margin: '0 auto',
         color: 'rgba(0, 0, 0, .25)',
-        background: 'rgba(247, 239, 230, 1)',
+        background: 'rgba(244, 233, 217, .75)',
         height: '100%',
         padding: '50px 200px',
         transform: 'scale(.95)',

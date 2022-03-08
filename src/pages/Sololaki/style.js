@@ -80,9 +80,9 @@ export default {
   overflowX: 'hidden',
   overflowY: 'auto',
   position: 'relative',
-  background: 'rgba(247, 239, 230, 1)',
+  background: 'rgba(244, 233, 217, 1)',
+
   scrollBehavior: 'smooth',
-  // border: '20px solid green',
   maxWidth: `${2560 / 16}em`,
   margin: '0 auto',
   boxSizing: 'border-box',
