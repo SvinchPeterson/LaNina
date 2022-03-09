@@ -1,4 +1,6 @@
 'use strict'
+import { cream } from '../../colors'
+
 const styleCheck = {
   display: 'none',
 
@@ -23,9 +25,9 @@ const styleMenuIcon = {
     }
   },
   '> div': {
-    background: 'linear-gradient(rgba(243, 231, 219, 1), rgba(243, 231, 219, 1))',
+    background: cream,
     width: '100%',
-    height: `${15 / 16}em`,
+    height: `${5 / 16}em`,
     transition: 'width .5s ease-in-out',
     borderRadius: '30px',
     opacity: '.8'
@@ -34,6 +36,7 @@ const styleMenuIcon = {
 
 const styleLangs = {
   color: 'rgba(244, 233, 217, .65)',
+  // opacity: 0.85,
   textTransform: 'uppercase',
   transition: 'all .3s ease-in-out',
   cursor: 'pointer',
@@ -42,7 +45,7 @@ const styleLangs = {
   right: '30px',
   top: '35px',
   fontWeight: 600,
-  '> div:hover': { color: 'rgba(244, 233, 217, .85)' },
+  '> div:hover': { color: 'rgba(244, 233, 217, 1)' },
   '> div:first-child': { borderBottom: '1.8px solid rgba(244, 233, 217, .65)' },
   '@media only screen and (max-width: 768px)': {
     top: '200px'
@@ -58,13 +61,14 @@ const styleCall = {
   border: '1.5px solid rgba(244, 233, 217, 0)',
   transition: 'all .2s ease-in-out',
   position: 'relative',
+
   '&:hover': {
-    opacity: '1',
+    opacity: 1,
     border: '1.5px solid rgba(244, 233, 217, .1)',
     background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))'
   },
   '&:hover::after': {
-    opacity: 1
+    opacity: 0.75
   },
 
   '&::after': {
@@ -74,7 +78,8 @@ const styleCall = {
     top: '0px',
     left: '50px',
     width: '180px',
-    color: 'rgba(244, 233, 217, .75)',
+    pointerEvents: 'none',
+    color: cream,
     padding: '15px 20px',
     fontSize: `${18 / 16}em`,
     fontWeight: 600,

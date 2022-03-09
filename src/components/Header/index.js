@@ -19,7 +19,7 @@ const menuIcon = {
   proto: Block,
   props: {
     flexFlow: 'column',
-    gap: 'Y2',
+    gap: 'Y',
     boxSize: 'A2 A2',
     padding: 'A'
   },

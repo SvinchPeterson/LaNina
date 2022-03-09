@@ -2,7 +2,7 @@
 
 import { brightnessLanding, zoomInLanding } from '../../animations'
 
-import { cream, orange, green, black, goldGradient } from '../../colors'
+import { cream, orange } from '../../colors'
 
 const styleLink = {
   flex: 1,
