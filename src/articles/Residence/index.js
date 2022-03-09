@@ -11,7 +11,7 @@ const paragraph = {
   proto: [Block, bbSololaki],
   props: {
     size: 'B',
-    padding: 'B C'
+    padding: 'D'
   }
 }
 

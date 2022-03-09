@@ -8,8 +8,8 @@ import COVER2_JPG from '../../assets/images/sololaki/coverMobile.jpg'
 import { cream } from '../../colors'
 
 export const styleBanner = {
-  width: `100%`,
-  height: `100%`,
+  minWidth: `100%`,
+  minHeight: `100%`,
   overflow: 'hidden',
   boxSizing: 'border-box',
   position: 'relative',
