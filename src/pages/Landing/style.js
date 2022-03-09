@@ -109,7 +109,7 @@ export default {
   background: 'black',
   animationName: brightnessLanding,
   animationDuration: '2s',
-  maxWidth: `${2560 / 16}em`,
+  maxWidth: `${1440 / 16}em`,
   margin: '0 auto',
 
   '@media only screen and (max-width: 768px)': {

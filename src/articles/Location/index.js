@@ -3,6 +3,7 @@ import { Block, Flex, Text, Img } from '@rackai/symbols'
 import MAP_PNG from '../../assets/images/sololaki/map.png'
 
 import { locationText, distanceText, transferText } from '../../texts'
+import commonStyle from '../style'
 
 import style from './style'
 
@@ -62,6 +63,7 @@ export default {
     id: 'location'
   },
   style,
+  class: [commonStyle],
 
   paragraph,
 

@@ -125,7 +125,7 @@ export default {
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
   backdropFilter: 'blur(2px)',
-  maxWidth: `${2560 / 16}em`,
+  // maxWidth: `${1440 / 16}em`,
 
   '@media only screen and (max-width: 768px)': {
     gap: '0px',

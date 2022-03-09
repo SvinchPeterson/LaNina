@@ -1,4 +1,5 @@
 'use strict'
+import { cream } from '../../colors'
 
 const styleImage = {
   flex: 1,
@@ -9,13 +10,15 @@ const styleImage = {
 
 const styleParagraph = {
   flex: 1,
+  background: cream,
   // fontSize: `${15.5 / 16}em`,
   boxSizing: 'border-box',
   '> span': {
     fontFamily: 'Avenir Next',
     // fontWeight: 400,
     letterSpacing: '.22',
-    transition: 'all 1s ease-in-out'
+    transition: 'all 1s ease-in-out',
+    background: cream
     // '@media only screen and (max-width: 1024px)': {
     //   lineHeight: '28px',
     //   // fontSize: '15px',

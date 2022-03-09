@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Link, SVG, Img, Flex } from '@rackai/symbols'
+import { Block, Text, Link, SVG, Flex } from '@rackai/symbols'
 
 import FACEBOOK_SVG from '../../assets/facebook2.svg'
 import INSTAGRAM_SVG from '../../assets/instagram2.svg'
@@ -24,11 +24,9 @@ const sectionLinks = {
     }
   },
   ...[
-    {
-      props: { text: 'hotel', href: '#hotel' }
-    },
-    { props: { text: 'wine', href: '#wine' } },
+    { props: { text: 'residence', href: '#hotel' } },
     { props: { text: 'apartments', href: '#apartments' } },
+    { props: { text: 'wine', href: '#wine' } },
     { props: { text: 'location', href: '#location' } }
   ]
 }

@@ -1,5 +1,4 @@
 'use strict'
-import { heightGallery } from '../../animations'
 
 export default {
   // border: '5px solid red',

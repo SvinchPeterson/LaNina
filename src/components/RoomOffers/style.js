@@ -1,5 +1,5 @@
 'use strict'
-
+import { cream } from '../../colors'
 const styleHeader = {
   // border: '2px solid green',
   h5: {
@@ -58,7 +58,7 @@ export default {
   bottom: '-12px',
   zIndex: 50,
   // background: 'rgba(243, 231, 219, 1)',
-  background: 'rgba(247, 239, 230, 1)',
+  background: cream,
   overflow: 'hidden',
   boxSizing: 'border-box',
   // border: '2px solid red',

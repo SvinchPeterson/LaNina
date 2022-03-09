@@ -5,6 +5,8 @@ import { scaleSololakiBanner, opacityBanner } from '../../animations'
 import COVER_JPG from '../../assets/images/sololaki/sololaki.jpg'
 import COVER2_JPG from '../../assets/images/sololaki/coverMobile.jpg'
 
+import { cream } from '../../colors'
+
 export const styleBanner = {
   width: `100%`,
   height: `100%`,
@@ -80,10 +82,9 @@ export default {
   overflowX: 'hidden',
   overflowY: 'auto',
   position: 'relative',
-  background: 'rgba(244, 233, 217, 1)',
+  background: cream,
 
   scrollBehavior: 'smooth',
-  maxWidth: `${2560 / 16}em`,
   margin: '0 auto',
   boxSizing: 'border-box',
 
