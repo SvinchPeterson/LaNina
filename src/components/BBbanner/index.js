@@ -4,6 +4,8 @@ import { Block, Text, Img } from '@rackai/symbols'
 import { zoomOutB, opacityBanner, letterSpacingBanner } from '../../animations'
 import LOGO_PNG from '../../assets/logoBB.png'
 
+import { cream } from '../../colors'
+
 const style = {
   style: {
     fontFamily: 'Avenir Next',
@@ -16,7 +18,7 @@ const style = {
 
     '> img': {
       width: `${90 / 16}em`,
-      opacity: '.75',
+      opacity: 0.85,
 
       animationName: zoomOutB,
       animationDuration: '1.4s',
@@ -28,7 +30,8 @@ const style = {
       // letterSpacing: '2px',
       letterSpacing: '4px',
       fontWeight: 700,
-      color: 'rgba(244, 233, 217, .5)',
+      color: cream,
+      opacity: 0.65,
 
       animationName: letterSpacingBanner,
       animationDuration: '1.3s',

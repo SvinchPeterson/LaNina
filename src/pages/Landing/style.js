@@ -2,7 +2,7 @@
 
 import { brightnessLanding, zoomInLanding } from '../../animations'
 
-import { cream, orange, green, black } from '../../colors'
+import { cream, orange, green, black, goldGradient } from '../../colors'
 
 const styleLink = {
   flex: 1,
@@ -17,7 +17,7 @@ const styleLink = {
     flex: 8
   },
   '&:hover > h3': {
-    opacity: 1,
+    opacity: 0.75,
     letterSpacing: '3px',
     '@media only screen and (max-width: 768px)': {
       letterSpacing: '3.5px'
@@ -84,7 +84,7 @@ const styleUnderConstruction = {
   top: '70%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  color: 'rgba(168, 98, 63, 1)',
+  color: orange,
   zIndex: '100',
   fontFamily: 'Avenir Next',
   fontSize: '20px',

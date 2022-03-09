@@ -8,9 +8,12 @@ const green = 'rgba(42, 81, 61, 1)'
 
 const black = 'rgba(0, 0, 0, 1)'
 
+const goldGradient = 'linear-gradient(rgba(147, 119, 79, 1), rgba(242, 205, 128, 1))'
+
 export {
   cream,
   orange,
   green,
-  black
+  black,
+  goldGradient
 }
