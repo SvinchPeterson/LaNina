@@ -2,6 +2,7 @@
 
 import { cream } from '../../colors'
 import GREEN_LANINA_JPG from '../../assets/images/sololaki/greenLanina2.jpg'
+import BALCONY_JPG from '../../assets/images/sololaki/balcony3.jpg'
 
 export const styleBBresidence = {
   width: '100%',
@@ -13,15 +14,56 @@ export const styleBBresidence = {
   backgroundAttachment: 'fixed',
 
   p: {
-    maxWidth: `${1000 / 16}em`,
-    boxSizing: 'border-box',
+    maxWidth: `${800 / 16}em`,
+    // boxSizing: 'border-box',
     boxShadow: '-50px 50px 100px 20px rgba(243, 231, 219, .2)',
     lineHeight: `${30 / 16}em`,
     color: 'rgba(0, 0, 0, .35)',
     letterSpacing: '.7px'
+    // border: '4px solid red'
+  }
+}
+
+export const styleEntrence = {
+  backgroundImage: 'url(' + BALCONY_JPG + ')',
+  backgroundSize: 'cover',
+  backgroundAttachment: 'fixed',
+  transform: 'scale(1.05)',
+
+  p: {
+    fontSize: `${15 / 16}em`,
+    letterSpacing: '.7px',
+    '> ul': {
+      padding: 0,
+      listStyleType: 'none'
+    },
+    '> ul > li': {
+      // fontWeight: 500,
+      color: 'rgba(0, 0, 0, .25)',
+      fontWeight: 500
+    },
+    '> ul > li > span': {
+      display: 'block',
+      background: 'rgba(0, 0, 0, .35)',
+      borderRadius: '100%'
+    },
+
+    '> div': {
+      maxWidth: `${500 / 15}em`,
+      color: 'rgba(0, 0, 0, .35)',
+      lineHeight: '20px'
+    },
+    '> div > img': {
+      width: `${20 / 15}em`,
+      marginTop: '4px',
+      opacity: 0.65
+    }
   }
 }
 
 export default {
+  section: {
+    minHeight: `${700 / 16}em`
+  },
   p: { background: cream }
 }

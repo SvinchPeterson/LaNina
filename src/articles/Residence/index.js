@@ -1,10 +1,11 @@
 'use strict'
-import { Block } from '@rackai/symbols'
+import { Block, Img } from '@rackai/symbols'
 
-import { bbSololaki } from '../../texts'
+import { bbSololaki, luggageText } from '../../texts'
 
-import commonStyle from '../style'
-import style, { styleBBresidence } from './style'
+import LUGGAGE_PNG from '../../assets/luggage.PNG'
+
+import style, { styleBBresidence, styleEntrence } from './style'
 
 const bbResidence = {
   tag: 'section',
@@ -20,15 +21,82 @@ const bbResidence = {
   }
 }
 
+const entrence = {
+  tag: 'section',
+  proto: Block,
+  props: {
+    flexAlign: 'flex-end flex-end'
+  },
+  style: styleEntrence,
+
+  p: {
+    proto: Block,
+    props: {
+      padding: 'D E',
+      flexFlow: 'column',
+      gap: 'A'
+    },
+    entrences: {
+      tag: 'ul',
+      proto: Block,
+
+      childProto: {
+        tag: 'li',
+        proto: Block,
+        props: {
+          flexAlign: 'center flex-start',
+          gap: 'Y2'
+        },
+        dot: {
+          tag: 'span',
+          proto: Block,
+          props: { boxSize: 'X X' }
+        }
+      },
+      ...[
+        {
+          dot: {},
+          text: 'Private entrance'
+        },
+        {
+          dot: {},
+          text: 'Separate street or building entrance'
+        },
+        {
+          dot: {},
+          text: 'Free parking on premises'
+        }
+      ]
+    },
+
+    luggage: {
+      proto: [Block],
+      props: {
+        flexAlign: 'flex-start center',
+        gap: 'Y2'
+      },
+      icon: {
+        proto: Img,
+        props: { src: LUGGAGE_PNG }
+      },
+      text: 'Luggage dropoff allowed for guests convenience when they have early arrival or late departure'
+
+    }
+
+  }
+}
+
 export default {
   tag: 'article',
   proto: Block,
   attr: { id: 'residence' },
   style,
-  class: [commonStyle],
   props: {
-    padding: 'F 0 0 E'
+    padding: 'F 0 0 0',
+    flexFlow: 'column',
+    gap: 'G'
   },
 
-  bbResidence
+  bbResidence,
+  entrence
 }

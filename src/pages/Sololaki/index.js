@@ -33,10 +33,6 @@ const banner = {
 
 export default {
   proto: Block,
-  props: {
-    // flexFlow: 'column',
-    // gap: 'F'
-  },
   style,
   state: {
     active: true,

@@ -5,7 +5,6 @@ import { tabBallerina, tabRedBrick, tabYellowCouch, roomBallerina, roomRedBrick,
 
 // import { roomBallerina, roomRedBrick, roomYellowCouch } from './rooms'
 
-import commonStyle from '../style'
 import style from './style'
 // import style2 from '../style'
 
@@ -13,7 +12,6 @@ export default {
   tag: 'article',
   proto: Block,
   style,
-  class: [commonStyle],
   props: {
     flexFlow: 'column',
     padding: 'F 0 E 0'
