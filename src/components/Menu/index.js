@@ -24,7 +24,7 @@ const sectionLinks = {
     }
   },
   ...[
-    { props: { text: 'residence', href: '#hotel' } },
+    { props: { text: 'residence', href: '#residence' } },
     { props: { text: 'apartments', href: '#apartments' } },
     { props: { text: 'wine', href: '#wine' } },
     { props: { text: 'location', href: '#location' } }
