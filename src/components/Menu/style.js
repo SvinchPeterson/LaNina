@@ -21,8 +21,6 @@ const styleSectionLinks = {
   // paddingTop: '100px',
   // flex: 12,
   '> a': {
-    // fontFamily: 'Bellefair',
-    fontFamily: 'Avenir Next',
     color: 'rgba(244, 233, 217, .55)',
     textTransform: 'uppercase',
     letterSpacing: '3.8px',

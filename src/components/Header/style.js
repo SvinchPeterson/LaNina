@@ -18,8 +18,8 @@ const styleMenuIcon = {
   border: '1.5px solid rgba(244, 233, 217, 0)',
   borderRadius: '100%',
   '&:hover': {
-    border: '1.5px solid rgba(244, 233, 217, .1)',
-    background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))',
+    // border: '1.5px solid rgba(244, 233, 217, .1)',
+    // background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))',
     '> div': {
       opacity: 1
     }
@@ -30,7 +30,7 @@ const styleMenuIcon = {
     height: `${5 / 16}em`,
     transition: 'width .5s ease-in-out',
     borderRadius: '30px',
-    opacity: '.8'
+    opacity: 0.85
   }
 }
 
@@ -63,12 +63,12 @@ const styleCall = {
   position: 'relative',
 
   '&:hover': {
-    opacity: 1,
-    border: '1.5px solid rgba(244, 233, 217, .1)',
-    background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))'
+    opacity: 1
+    // border: '1.5px solid rgba(244, 233, 217, .1)',
+    // background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))'
   },
   '&:hover::after': {
-    opacity: 0.75
+    opacity: 0.85
   },
 
   '&::after': {
@@ -105,9 +105,9 @@ const styleBook = {
   fontWeight: 700,
   textDecoration: 'none',
   '&:hover': {
-    border: '1.5px solid rgba(244, 233, 217, .1)',
-    background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))',
-    color: 'rgba(244, 233, 217, .85)'
+    // border: '1.5px solid rgba(244, 233, 217, .1)',
+    // background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))',
+    color: 'rgba(244, 233, 217, 1)'
   },
 
   '@media only screen and (max-width: 768px)': {
@@ -121,7 +121,6 @@ export default {
   height: 'fit-content',
   top: '0px',
   zIndex: 1000,
-  fontFamily: 'Avenir Next',
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
   backdropFilter: 'blur(2px)',

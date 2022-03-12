@@ -42,7 +42,6 @@ const styleAirPort = {
 }
 
 export default {
-  fontFamily: 'Avenir Next',
 
   '> p': styleLocation,
 

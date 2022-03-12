@@ -2,7 +2,6 @@
 
 export const styleBook = {
   letterSpacing: '5px',
-  fontFamily: 'Avenir Next',
   textDecoration: 'none',
   color: 'rgba(243, 231, 219, .75)',
   position: 'absolute',
@@ -28,7 +27,6 @@ export const styleBook = {
 
 export const styleParagraph = {
   color: 'rgba(243, 231, 219, .75)',
-  fontFamily: 'Avenir Next',
   opacity: 0,
   letterSpacing: '.4px',
   minWidth: `${400 / 16}em`,
@@ -75,9 +73,7 @@ export default {
     transform: 'translate(-50%, -50%)',
     whiteSpace: 'nowrap',
     textTransform: 'Uppercase',
-    // fontFamily: 'Bellefair',
     letterSpacing: `${3 / 16}em`,
-    fontFamily: 'Avenir Next',
     fontWeight: 600
   },
   '&:hover': {

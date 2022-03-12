@@ -53,7 +53,6 @@ const styleOffers = {
 }
 
 export default {
-  fontFamily: 'Avenir Next',
   position: 'absolute',
   bottom: '-12px',
   zIndex: 50,

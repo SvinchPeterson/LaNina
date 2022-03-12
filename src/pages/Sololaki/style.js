@@ -13,17 +13,12 @@ export const styleBanner = {
   overflow: 'hidden',
   boxSizing: 'border-box',
   position: 'relative',
-  fontFamily: 'Avenir Next',
-  // '@media only screen and (max-width: 480px)': {
-  // },
-  // '&:hover > span': {
-  //   backgroundPosition: 'bottom right'
-  // },
+
   '> span': {
     minWidth: '100%',
     flex: 1,
-    backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .65), rgba(0, 0, 0, .65)), url(' + COVER_JPG + ')',
-    filter: 'brightness(40%) grayscale(30%)',
+    backgroundImage: 'linear-gradient(rgba(244, 233, 217, .4), rgba(42, 81, 61, .9)), url(' + COVER_JPG + ')',
+    filter: 'brightness(60%) grayscale(30%)',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center center',
