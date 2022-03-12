@@ -15,12 +15,10 @@ export const styleBBresidence = {
 
   p: {
     maxWidth: `${800 / 16}em`,
-    // boxSizing: 'border-box',
     boxShadow: '-50px 50px 100px 20px rgba(243, 231, 219, .2)',
     lineHeight: `${30 / 16}em`,
     color: 'rgba(0, 0, 0, .35)',
     letterSpacing: '.7px'
-    // border: '4px solid red'
   }
 }
 
@@ -29,16 +27,17 @@ export const styleEntrence = {
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
   transform: 'scale(1.05)',
+  marginBottom: '150px',
 
   p: {
     fontSize: `${15 / 16}em`,
     letterSpacing: '.7px',
+
     '> ul': {
       padding: 0,
       listStyleType: 'none'
     },
     '> ul > li': {
-      // fontWeight: 500,
       color: 'rgba(0, 0, 0, .25)',
       fontWeight: 500
     },

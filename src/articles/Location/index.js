@@ -1,6 +1,5 @@
 'use strict'
-import { Block, Flex, Text, Img } from '@rackai/symbols'
-import MAP_PNG from '../../assets/images/sololaki/map.png'
+import { Block, Text } from '@rackai/symbols'
 
 import { locationText, distanceText, transferText } from '../../texts'
 

@@ -2,11 +2,14 @@
 
 export default {
   // border: '5px solid red',
+  background: 'rgba(42, 81, 61, .8)',
   '> header': {
     minHeight: `${550 / 16}em`,
     overflow: 'hidden',
     position: 'relative',
-    overflowY: 'auto'
+    overflowY: 'auto',
+    // background: 'rgba(42, 81, 61, .8)',
+    backgroundAttachment: 'fixed'
   },
   '> header > div': {
     minHeight: `${550 / 16}em`,

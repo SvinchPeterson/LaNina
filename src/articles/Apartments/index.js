@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Link } from '@rackai/symbols'
+import { Block } from '@rackai/symbols'
 
 import { tabBallerina, tabRedBrick, tabYellowCouch, roomBallerina, roomRedBrick, roomYellowCouch } from '../../components'
 
@@ -14,13 +14,16 @@ export default {
   style,
   props: {
     flexFlow: 'column',
-    padding: 'F 0 E 0'
+    padding: 'B 0 E 0'
   },
   attr: { id: 'apartments' },
 
   tabs: {
     tag: 'header',
     proto: Block,
+    props: {
+      padding: 'E 0'
+    },
     // props: {
     //   flexFlow: 'row',
     //   gap: 'B1',

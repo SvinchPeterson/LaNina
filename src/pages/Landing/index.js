@@ -30,8 +30,7 @@ const sololaki = {
 
   image: {
     style: {
-      // backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .75), rgba(42, 81, 61, 1)), url(' + SOLOLAKI_JPG + ')',
-      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .75), rgba(0, 0, 0, .8)), url(' + SOLOLAKI_JPG + ')',
+      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .3)),url(' + SOLOLAKI_JPG + ')',
       cursor: 'pointer',
       '@media only screen and (max-width: 768px)': {
 
@@ -43,24 +42,20 @@ const sololaki = {
   heading: {
     proto: heading,
     props: { text: 'sololaki' },
-    style: {
-      right: 0,
-      width: '95px'
-    }
+    style: { right: 0 }
   }
 }
 
 const rustaveli = {
   proto: link,
   style: {
-    '&:hover ~ span': { opacity: 1 },
+    '&:hover ~ span': { opacity: 0.75 },
     '&:not(:hover) ~ span': { transition: 'opacity .2s ease-in-out' }
   },
 
   image: {
     style: {
-      // backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .75), rgba(42, 81, 61, 1)),url(' + RUSTAVELI_JPG + ')',
-      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .75),rgba(0, 0, 0, .8)),url(' + RUSTAVELI_JPG + ')',
+      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .3)),url(' + RUSTAVELI_JPG + ')',
       transformOrigin: 'left',
       '@media only screen and (max-width: 768px)': {
         '&:hover': {
@@ -72,11 +67,7 @@ const rustaveli = {
 
   heading: {
     proto: heading,
-    props: { text: 'rustaveli' },
-    style: {
-      left: 0,
-      width: '80px'
-    }
+    props: { text: 'rustaveli' }
   }
 }
 

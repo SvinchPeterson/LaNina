@@ -1,7 +1,7 @@
 'use strict'
 import { Block, Img } from '@rackai/symbols'
 
-import { bbSololaki, luggageText } from '../../texts'
+import { bbSololaki } from '../../texts'
 
 import LUGGAGE_PNG from '../../assets/luggage.PNG'
 
@@ -16,7 +16,7 @@ const bbResidence = {
   p: {
     proto: [Block, bbSololaki],
     props: {
-      padding: 'E'
+      padding: 'E 0 E E'
     }
   }
 }
@@ -92,7 +92,7 @@ export default {
   attr: { id: 'residence' },
   style,
   props: {
-    padding: 'F 0 0 0',
+    padding: 'F 0 F 0',
     flexFlow: 'column',
     gap: 'G'
   },

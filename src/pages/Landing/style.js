@@ -2,14 +2,14 @@
 
 import { brightnessLanding, zoomInLanding } from '../../animations'
 
-import { cream, orange } from '../../colors'
+import { cream } from '../../colors'
 
 const styleLink = {
   flex: 1,
   transition: 'all 1s ease-in-out',
   overflow: 'hidden',
   position: 'relative',
-  transform: 'scale(1.01)',
+  transform: 'scale(1.001)',
   '@media only screen and (max-width: 768px)': {
     transform: 'scale(1)'
   },
@@ -17,15 +17,16 @@ const styleLink = {
     flex: 8
   },
   '&:hover > h3': {
-    opacity: 0.75,
+    opacity: 0.85,
     letterSpacing: '3px',
+    width: '60px',
     '@media only screen and (max-width: 768px)': {
       letterSpacing: '3.5px'
     }
   },
   '&:hover > div': {
     backgroundPosition: 'top center',
-    filter: 'brightness(65%) blur(0px) grayscale(10%)'
+    filter: 'grayscale(30%) brightness(65%) blur(0px)'
   }
 }
 
@@ -35,7 +36,7 @@ const styleImage = {
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   backgroundAttachment: 'fixed',
-  filter: 'brightness(45%) blur(.5px) grayscale(30%)',
+  filter: 'grayscale(100%) brightness(55%) blur(0px)',
   backgroundColor: 'rgba(0, 0, 0, 1)',
   zIndex: 10,
   transition: 'all 1s ease-in-out',
@@ -70,8 +71,9 @@ const styleHeading = {
   textTransform: 'uppercase',
   letterSpacing: '-10px',
   opacity: 0,
+  width: 0,
   transition: 'all 1s ease-in-out',
-  backdropFilter: 'blur(2px)',
+  background: 'rgba(42, 81, 61, 1)',
   '@media only screen and (max-width: 768px)': {
     fontSize: '20px',
     backdropFilter: 'blur(0px)',
@@ -84,7 +86,7 @@ const styleUnderConstruction = {
   top: '70%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  color: orange,
+  color: '#F57638',
   zIndex: '100',
   fontFamily: 'Avenir Next',
   fontSize: '20px',

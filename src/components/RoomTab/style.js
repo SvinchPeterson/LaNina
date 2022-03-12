@@ -64,6 +64,7 @@ export default {
   boxSizing: 'border-box',
   textDecoration: 'none',
   transform: 'scale(1)',
+  boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .5)',
   '&::after': {
     content: '""',
     fontSize: `${17 / 16}em`,
@@ -78,6 +79,26 @@ export default {
     letterSpacing: `${3 / 16}em`,
     fontFamily: 'Avenir Next',
     fontWeight: 600
+  },
+  '&:hover': {
+    flex: 3,
+    zIndex: 70,
+    '> div': {
+      filter: 'brightness(20%) grayscale(50%)',
+      transform: 'scale(1)'
+    },
+    '> p': {
+      opacity: 1
+    },
+    '> a': {
+      opacity: '.85'
+    }
+  },
+  '&:not(:hover) > p': {
+    transitionDelay: '-1s'
+  },
+  '&:not(:hover) > a': {
+    transitionDelay: '-1s'
   },
   '@media only screen and (max-width: 1225px)': {
     minWidth: '80%',
@@ -100,27 +121,6 @@ export default {
 
   '@media only screen and (max-width: 372px)': {
     '> p': { fontSize: '13px', fontWeight: '600', paddingLeft: '15px', paddingRight: '15px' }
-
-  },
-  '&:hover': {
-    flex: 3,
-    zIndex: 70,
-    '> div': {
-      filter: 'brightness(20%) grayscale(50%)',
-      transform: 'scale(1)'
-    },
-    '> p': {
-      opacity: 1
-    },
-    '> a': {
-      opacity: '.85'
-    }
-  },
-  '&:not(:hover) > p': {
-    transitionDelay: '-1s'
-  },
-  '&:not(:hover) > a': {
-    transitionDelay: '-1s'
   },
 
   '> div': styleImage,
