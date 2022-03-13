@@ -2,9 +2,25 @@
 
 import { getFontFace, set } from '@rackai/symbols'
 import { injectGlobal } from '@emotion/css'
+
+import extraLightDejaVuSans from '../assets/fonts/DejaVuSans-ExtraLight.ttf'
+import regularDejaVuSans from '../assets/fonts/DejaVuSans.ttf'
+import boldDejaVuSans from '../assets/fonts/DejaVuSansBold.ttf'
 const RegisterFont = set('font',
   {
-
+    fontFamily: 'DejaVu Sans',
+    url: extraLightDejaVuSans,
+    fontWeight: 300
+  },
+  {
+    fontFamily: 'DejaVu Sans',
+    url: regularDejaVuSans,
+    fontWeight: 500
+  },
+  {
+    fontFamily: 'DejaVu Sans',
+    url: boldDejaVuSans,
+    fontWeight: 700
   }
 )
 

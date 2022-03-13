@@ -28,6 +28,7 @@ const style = {
       textTransform: 'uppercase',
       // letterSpacing: '2px',
       letterSpacing: '4px',
+      fontWeight: 700,
       // fontWeight: 700,
       color: cream,
       opacity: 0.65,
