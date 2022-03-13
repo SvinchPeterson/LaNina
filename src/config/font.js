@@ -3,25 +3,34 @@
 import { getFontFace, set } from '@rackai/symbols'
 import { injectGlobal } from '@emotion/css'
 
-import extraLightDejaVuSans from '../assets/fonts/DejaVuSans-ExtraLight.ttf'
-import regularDejaVuSans from '../assets/fonts/DejaVuSans.ttf'
-import boldDejaVuSans from '../assets/fonts/DejaVuSansBold.ttf'
+import DejaVuSansExtraLight from '../assets/fonts/DejaVuSans-ExtraLight.ttf'
+import DejaVuSansRegular from '../assets/fonts/DejaVuSans.ttf'
+import DejaVuSansBold from '../assets/fonts/DejaVuSansBold.ttf'
+
+import HelveticaBold from '../assets/fonts/HelveticaGeo-Bold.ttf'
+
 const RegisterFont = set('font',
   {
     fontFamily: 'DejaVu Sans',
-    url: extraLightDejaVuSans,
+    url: DejaVuSansExtraLight,
     fontWeight: 300
   },
   {
     fontFamily: 'DejaVu Sans',
-    url: regularDejaVuSans,
+    url: DejaVuSansRegular,
     fontWeight: 500
   },
   {
     fontFamily: 'DejaVu Sans',
-    url: boldDejaVuSans,
+    url: DejaVuSansBold,
     fontWeight: 700
+  },
+
+  {
+    fontFamily: 'Helvetica Neue LT GEO 75 Bold Caps',
+    url: HelveticaBold
   }
+
 )
 
 // const RegisterFont = set('font', {

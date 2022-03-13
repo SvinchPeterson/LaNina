@@ -29,6 +29,7 @@ const style = {
       // letterSpacing: '2px',
       letterSpacing: '4px',
       fontWeight: 700,
+      // fontFamily: 'Helvetica Neue LT GEO 75 Bold Caps',
       // fontWeight: 700,
       color: cream,
       opacity: 0.65,
