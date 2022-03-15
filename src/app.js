@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block, Button, Flex } from '@rackai/symbols'
+import { Block } from '@rackai/symbols'
 import router from '@rackai/domql/packages/router'
 import style from './style'
 

@@ -44,7 +44,7 @@ export const letterSpacingBanner = keyframes`
 
   }
   to {
-    letter-spacing: 4px;
+    letter-spacing: 1.5px;
     // transform: scale(1);
   }
 `
