@@ -1,12 +1,33 @@
 'use strict'
 import { keyframes } from '@emotion/css'
 
-export const zoomInLanding = keyframes`
+export const zoomOutLanding = keyframes`
   from {
-    transform: scale(1);
+    transform: scale(1.1);
+    // background-position: center center;
   }
   to {
-    transform: scale(1.1);
+    transform: scale(1);
+    // background-position: center center;
+  }
+`
+
+export const border = keyframes`
+  from {
+    border: 40px solid black;
+
+  }
+  to {
+    border: 40px solid black;
+  }
+`
+
+export const imagePosition = keyframes`
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: center center;
   }
 `
 
@@ -26,15 +47,18 @@ export const zoomOutB = keyframes`
     transform: scale(1);
   }
 `
-export const opacityBanner = keyframes`
+export const coverLogoAnimation = keyframes`
   from {
     opacity: 0;
-    // filter: brightness(0%);
+    filter: brightness(0%);
+    transform: translate(-50%, -50%) scale(1.3);
+
 
   }
   to {
     opacity: 1;
-    // filter: brightness(100%);
+    filter: brightness(100%);
+    transform: translate(-50%, -50%) scale(1.2);
   }
 `
 export const letterSpacingBanner = keyframes`

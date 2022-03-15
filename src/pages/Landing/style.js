@@ -1,81 +1,47 @@
 'use strict'
 
-import { brightnessLanding, zoomInLanding } from '../../animations'
+import { brightnessLanding, zoomOutLanding, imagePosition, border } from '../../animations'
 
 import { cream } from '../../colors'
 
 const styleLink = {
   flex: 1,
-  transition: 'all 1s ease-in-out',
   overflow: 'hidden',
   position: 'relative',
-  transform: 'scale(1)',
   backgroundSize: 'cover',
-  backgroundPosition: 'center center',
-
+  transition: 'all 1s ease-in-out',
+  animationName: brightnessLanding,
+  animationDuration: '2s',
+  animationTimingFunction: 'ease-in-out',
+  border: '0px solid black',
+  // border: '10px solid red',
   '&:hover': {
-    flex: 8,
-    '> h3': {
-      opacity: 1,
-      width: '120px'
-    },
-    '> h3 > span': {
-      opacity: 1
+    flex: 10,
+    '> div': {
+
+      backgroundPosition: 'bottom left'
+      // borderBottom: '40px solid black'
     }
-  },
-  '&:hover > div': {
-    backgroundPosition: 'top center',
-    filter: 'grayscale(30%) brightness(65%) blur(0px)'
-  },
-  '&:not(:hover) > h3 > span': {
-    transitionDelay: 0,
-    transition: 'all 0s ease-in-out'
-
-  },
-
-  '@media only screen and (max-width: 1000px)': {
-    '> h3': {
-      transform: 'scale(1)',
-      width: '210px',
-      height: '210px',
-      opacity: 1,
-      fontSize: '16px'
-    },
-    '&:hover': {
-      border: 'none',
-      '> h3': { height: ' 210px', width: '210px' }
-    }
-
   }
-
+  // '&:hover > div': { backgroundPosition: 'bottom right' }
 }
 
 const styleImage = {
-  position: 'relative',
-  flex: 1,
+  minWidth: '100%',
+  minHeight: '100%',
+  maxWidth: '100%',
+  maxHeight: '100%',
+  // flex: 1,
   backgroundSize: 'cover',
-  backgroundPosition: 'center center',
   backgroundAttachment: 'fixed',
-  filter: 'grayscale(100%) brightness(50%) blur(0px)',
-  backgroundColor: 'rgba(0, 0, 0, 1)',
-  zIndex: 10,
+  filter: 'grayscale(100%) brightness(50%) blur(.5px)',
   transition: 'all 1s ease-in-out',
-  transform: 'scale(1.1)',
-  animationName: zoomInLanding,
+
+  backgroundPosition: 'center center',
+
+  animationName: imagePosition,
   animationDuration: '2s',
-  animationTimingFunction: 'ease-in-out',
-
-  '&:hover': {
-    transition: 'all 1s ease-in-out'
-  }
-}
-
-const styleBanner = {
-  zIndex: 100,
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)'
+  animationTimingFunction: 'ease-in-out'
 }
 
 const styleHeading = {
@@ -98,12 +64,6 @@ const styleHeading = {
     opacity: 0,
     transition: 'all 1s ease-in-out',
     transitionDelay: '.3s'
-  },
-
-  '@media only screen and (max-width: 1000px)': {
-    transform: 'scale(1.1)',
-    marginTop: 0,
-    '> span': { opacity: 1 }
   }
 }
 
@@ -124,11 +84,10 @@ const styleUnderConstruction = {
 }
 
 export default {
-  '> a > h3': styleHeading,
   '> a': styleLink,
+  '> a > h3': styleHeading,
   '> a > div': styleImage,
-  '> div': styleBanner,
-  '> span': styleUnderConstruction,
+  span: styleUnderConstruction,
 
   flex: 1,
   position: 'relative',
@@ -136,24 +95,6 @@ export default {
   background: 'black',
   animationName: brightnessLanding,
   animationDuration: '2s',
-  margin: '0 auto',
-
-  '@media only screen and (max-width: 1000px)': {
-    flexFlow: 'column',
-
-    '> a': { tranform: 'scale(1.5)' },
-    '> a:hover': { flex: 1 },
-    '> a > div': {
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'local'
-    },
-
-    '> div': {
-      top: '50%',
-      '> h5': { display: 'none' }
-    },
-
-    '> span': { top: '90%' }
-  }
+  animationTimingFunction: 'ease-in-out',
+  margin: '0 auto'
 }

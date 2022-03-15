@@ -1,7 +1,7 @@
 'use strict'
 import { SVG } from '@rackai/symbols'
 
-import { zoomOutB, opacityBanner, letterSpacingBanner } from '../../animations'
+import { coverLogoAnimation } from '../../animations'
 import LOGO_SVG from '../../assets/icons/logo.svg'
 
 export default {
@@ -12,8 +12,12 @@ export default {
     position: 'absolute',
     top: '50%',
     left: '50%',
-    transform: 'translate(-50%, -50%)',
-    zIndex: 1,
-    pointerEvents: 'none'
+    transform: 'translate(-50%, -50%) scale(1.2)',
+    zIndex: 50,
+    pointerEvents: 'none',
+    animationName: coverLogoAnimation,
+    animationDuration: '1.5s',
+    animationTimingFunction: 'ease-in-out',
+    opacity: 1
   }
 }
