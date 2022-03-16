@@ -10,9 +10,9 @@ export default {
 
   style: {
     position: 'absolute',
-    top: '50%',
+    top: '45%',
     left: '50%',
-    transform: 'translate(-50%, -50%) scale(1.2)',
+    transform: 'translate(-50%, -50%) scale(1)',
     zIndex: 50,
     pointerEvents: 'none',
     animationName: coverLogoAnimation,
