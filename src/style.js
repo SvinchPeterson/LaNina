@@ -16,5 +16,5 @@ export default {
   p: { margin: 0 },
   h6: { margin: 0 },
   fontFamily: 'DejaVu Sans'
-  // background: 'black'
+  // background: 'rgba(42, 81, 61, 1)'
 }

@@ -51,14 +51,14 @@ export const coverLogoAnimation = keyframes`
   from {
     opacity: 0;
     filter: brightness(0%);
-    transform: translate(-50%, -50%) scale(1.3);
+    transform: translate(-50%, -50%) scale(1.8);
 
 
   }
   to {
     opacity: 1;
     filter: brightness(100%);
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1.5);
   }
 `
 export const letterSpacingBanner = keyframes`
