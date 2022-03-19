@@ -34,7 +34,7 @@ export default {
     transform: 'translate(-50%, -50%) scale(1.5)',
     zIndex: 400,
     pointerEvents: 'none',
-    opacity: 0,
+    opacity: 0.85,
     '@media only screen and (min-width: 1024px)': {
       animationName: coverLogoAnimation,
       animationDuration: '1.5s',
@@ -42,7 +42,8 @@ export default {
       opacity: 0.8
     },
     '@media only screen and (max-width: 1024px)': {
-      transform: 'translate(-50%, -50%) scale(1.5)'
+      transform: 'translate(-50%, -50%) scale(1.5)',
+      opacity: 0
     }
   }
 }

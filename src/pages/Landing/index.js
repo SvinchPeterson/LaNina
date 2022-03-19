@@ -16,19 +16,55 @@ const link = {
 
 const heading = {
   tag: 'h3',
-  proto: Block,
-  props: { flexAlign: 'center center' },
+  proto: [Block, Flex],
+
+  style: {
+    background: 'rgba(0, 0, 0, 0)',
+
+    alignItems: 'center',
+    opacity: 1,
+    transition: 'all 1s ease-in-out',
+    fontFamily: 'Helvetica',
+    position: 'absolute',
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      opacity: 0.65,
+      zIndex: 400,
+      color: 'rgba(244, 233, 217, 1)',
+      fontSize: '16px',
+      letterSpacing: '2px',
+      textTransform: 'uppercase',
+      transition: 'all 1s ease-in-out'
+    },
+    '@media only screen and (min-width: 1024px)': {
+      width: '200px',
+      height: '220px',
+      top: '60%'
+      // position: 'absolute'
+
+    },
+
+    '@media only screen and (max-width: 1024px)': {
+      border: '10px solid red',
+      width: '200px',
+      height: '80%'
+
+    }
+  },
+
   span: {
     proto: Block,
     style: {
-      width: '100px',
-      height: '40px',
-      background: 'red'
+      width: '50px',
+      height: '80px',
+      background: 'radial-gradient(rgba(42, 81, 61, 1), rgba(42, 81, 61, 1))',
+      opacity: 0,
+      display: 'block',
+      transition: 'all 1s ease-in-out'
     }
   }
-
 }
-
 const sololaki = {
   proto: link,
   props: { href: '/Sololaki' },
@@ -36,19 +72,16 @@ const sololaki = {
     '@media only screen and (min-width: 1024px)': {
       '> div': { borderRight: '0px solid rgba(0, 0, 0, 0)' },
       '&:hover': {
-        '> div': { borderRight: '15px solid black' },
-        '> h3': {
-          // borderTopLeftRadius: '250px',
-          // borderBottomLeftRadius: '250px'
+        '> div': { borderRight: '0px solid black' },
+        '> h3::before': {
+          right: '25px'
         }
-        // borderTop: '45px solid black'
       }
-
     }
   },
   image: {
     style: {
-      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .35)),url(' + SOLOLAKI_JPG + ')',
+      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .65)),url(' + SOLOLAKI_JPG + ')',
 
       '@media only screen and (max-width: 1024px)': {
         backgroundPosition: 'top left'
@@ -56,26 +89,33 @@ const sololaki = {
       }
     }
   },
-
   heading: {
     proto: heading,
     style: {
-      '@media only screen and (min-width: 1024px)': {
-        right: '0',
-        borderTopLeftRadius: '200px',
-        borderBottomLeftRadius: '200px',
-        border: '100px solid rgba(0, 0, 0, 0)',
-        borderRight: 'none'
+      right: '0',
+      borderTopLeftRadius: '250px',
+      borderBottomLeftRadius: '250px',
+      '&::before': {
+        content: '"sololaki"',
+        right: '15px'
       },
+      '> span': {
+        marginLeft: 'auto',
+        borderTopLeftRadius: '100px',
+        borderBottomLeftRadius: '100px'
+      },
+
       '@media only screen and (max-width: 1024px)': {
-        bottom: 0,
-        left: '7%'
+        borderBottomLeftRadius: '0px',
+        borderTopLeftRadius: '150px',
+        borderToprightRadius: '150px',
+        width: '400px'
+
       }
     }
   }
 }
 const underConstruction = {
-  tag: 'span',
   proto: Text,
   props: {
     text: 'under construction'
@@ -86,37 +126,34 @@ const rustaveli = {
   proto: link,
   style: {
     '> div': { borderLeft: '0px solid rgba(0, 0, 0, 1)' },
-    '> h3': {
-      borderTopRightRadius: '250px',
-      borderBottomRightRadius: '250px'
-    },
     '&:hover': {
       '@media only screen and (min-width: 1024px)': {
-        '> div': { borderLeft: '15px solid rgba(0, 0, 0, 1)' },
+        '> div': { borderLeft: '0px solid rgba(0, 0, 0, 1)' },
+        '> h3::before': {
+          left: '25px'
+        },
         '~ span': { opacity: 1 }
-
       }
     }
   },
 
-  image: { style: { backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .35)),url(' + RUSTAVELI_JPG + ')' } },
+  image: { style: { backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .65)),url(' + RUSTAVELI_JPG + ')' } },
   heading: {
     proto: heading,
     style: {
-      '@media only screen and (min-width: 1024px)': {
-        borderTopRightRadius: '200px',
-        borderBottomRightRadius: '200px',
-        border: '100px solid rgba(0, 0, 0, 0)',
-        borderLeft: 'none'
+      borderTopRightRadius: '500px',
+      borderBottomRightRadius: '500px',
+      '&::before': {
+        content: '"rustaveli"',
+        left: '15px'
       },
-
-      '@media only screen and (max-width: 1024px)': {
-        top: '9px',
-        right: '7%'
-
+      '> span': {
+        marginRight: 'auto',
+        borderTopRightRadius: '300px',
+        borderBottomRightRadius: '300px'
       }
-    }
-
+    },
+    underConstruction
   }
 }
 
@@ -127,6 +164,5 @@ export default {
   Logo,
   logoB,
   sololaki,
-  rustaveli,
-  underConstruction
+  rustaveli
 }

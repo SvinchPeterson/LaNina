@@ -49,14 +49,14 @@ export const zoomOutB = keyframes`
 `
 export const coverLogoAnimation = keyframes`
   from {
-    opacity: 0;
+    opacity: 1;
     filter: brightness(0%);
     transform: translate(-50%, -50%) scale(1.8);
 
 
   }
   to {
-    opacity: 1;
+    opacity: .85;
     filter: brightness(100%);
     transform: translate(-50%, -50%) scale(1.5);
   }
