@@ -9,9 +9,12 @@ export const styleBBresidence = {
   backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
   backgroundSize: 'contain',
   backgroundPosition: 'left 100px bottom',
-  transform: 'scale(.95)',
   backgroundRepeat: 'no-repeat',
   backgroundAttachment: 'fixed',
+  transition: 'all 1s ease-in-out',
+  '&:hover': {
+    // transform: 'scale(1.1)'
+  },
 
   p: {
     maxWidth: `${800 / 16}em`,
@@ -26,7 +29,7 @@ export const styleEntrence = {
   backgroundImage: 'url(' + BALCONY_JPG + ')',
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
-  transform: 'scale(1.05)',
+  // transform: 'scale(1.05)',
   marginBottom: '150px',
 
   p: {

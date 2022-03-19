@@ -6,10 +6,11 @@ import { Residence, Apartments, Location } from '../../articles'
 
 import { Header, Menu, BBbanner } from '../../components'
 
-import style from './style'
+import style, { styleBanner } from './style'
 
 const banner = {
   proto: [Block, Flex],
+  style: styleBanner,
 
   image: { tag: 'span' },
   bbBanner: {
@@ -21,14 +22,14 @@ const banner = {
         size: 'C'
       }
     }
-  },
-  p: {
-    proto: Text,
-    props: {
-      text: 'where ordinary becomes extraordinary',
-      size: 'B'
-    }
   }
+  // p: {
+  //   proto: Text,
+  //   props: {
+  //     text: 'where ordinary becomes extraordinary',
+  //     size: 'B'
+  //   }
+  // }
 }
 
 export default {
@@ -45,10 +46,10 @@ export default {
   },
 
   banner,
-  Header,
-  Menu,
+  // Header,
+  // Menu,
 
-  Residence,
-  Apartments,
-  Location
+  Residence
+  // Apartments,
+  // Location
 }

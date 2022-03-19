@@ -8,67 +8,17 @@ import COVER2_JPG from '../../assets/images/sololaki/coverMobile.jpg'
 import { cream } from '../../colors'
 
 export const styleBanner = {
-  minWidth: `100%`,
-  minHeight: `100%`,
-  overflow: 'hidden',
-  boxSizing: 'border-box',
-  position: 'relative',
-
+  height: '100%',
+  filter: 'grayscale(50%) brightness(50%)',
   '> span': {
-    minWidth: '100%',
-    flex: 1,
-    backgroundImage: 'linear-gradient(rgba(244, 233, 217, .4), rgba(42, 81, 61, .9)), url(' + COVER_JPG + ')',
-    filter: 'brightness(60%) grayscale(30%)',
+    backgroundImage: 'linear-gradient(rgba(244, 233, 217, .4), rgba(42, 81, 61, .3)), url(' + COVER_JPG + ')',
     backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
-    backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
-    transform: 'scale(1)',
-    animationName: scaleSololakiBanner,
-    animationDuration: '5s',
-    animationTimingFunction: 'linear',
-    transition: 'all 1.5s ease-in-out',
-    '@media only screen and (max-width: 900px)': {
-      pointerEvents: 'none'
-    },
-    '@media only screen and (max-width: 600px)': {
-      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .65), rgba(0, 0, 0, .65)), url(' + COVER2_JPG + ')',
-      backgroundPosition: 'right center'
-    },
+    // backgroundPosition: 'center center',
+    width: '100%',
+    height: '100%',
+    backgroundAttachment: 'fixed'
 
-    '@media only screen and (max-width: 420px)': {
-      backgroundPosition: 'right right'
-    },
-    '@media only screen and (max-width: 330px)': {
-      backgroundPosition: 'left  right'
-    }
-  },
-  '> div': {
-    position: 'absolute',
-    top: '43%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)'
-  },
-  '> p': {
-    position: 'absolute',
-    top: '60%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    color: 'rgba(244, 233, 217, .45)',
-    letterSpacing: '2px',
-    animationName: opacityBanner,
-    animationDuration: '2s',
-    animationTimingFunction: 'ease-in-out',
-    whiteSpace: 'nowrap',
-    fontWeight: '600',
-
-    '@media only screen and (max-width: 500px)': {
-      whiteSpace: 'normal',
-      width: '400px',
-      padding: '0 50px',
-      textAlign: 'center'
-
-    }
   }
 }
 
@@ -81,7 +31,5 @@ export default {
 
   scrollBehavior: 'smooth',
   margin: '0 auto',
-  boxSizing: 'border-box',
-
-  '> div': styleBanner
+  boxSizing: 'border-box'
 }

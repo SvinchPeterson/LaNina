@@ -74,6 +74,7 @@ const heading = {
     }
   }
 }
+
 const sololaki = {
   proto: link,
   props: { href: '/Sololaki' },
@@ -88,6 +89,7 @@ const sololaki = {
       }
     }
   },
+
   image: {
     style: {
       backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .55)),url(' + SOLOLAKI_JPG + ')',
@@ -97,6 +99,7 @@ const sololaki = {
       }
     }
   },
+
   heading: {
     proto: heading,
     style: {
@@ -122,6 +125,7 @@ const sololaki = {
       }
     }
   }
+
 }
 const underConstruction = {
   proto: Text,
@@ -145,16 +149,11 @@ const rustaveli = {
           opacity: 1
         }
       }
-    },
-    '@media only screen and (max-width: 1225px)': {
-      '> h3 > span': {
-        background: 'red'
-      }
-
     }
   },
 
   image: { style: { backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .55)),url(' + RUSTAVELI_JPG + ')' } },
+
   heading: {
     proto: heading,
     style: {

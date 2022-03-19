@@ -48,11 +48,6 @@ const styleLink = {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top 50px right',
       transform: 'scale(1)'
-    },
-    '> h3': {
-      // top: '0%',
-      // left: '50%',
-      // transform: 'translate(-50%, -50%)'
     }
 
   }
@@ -100,7 +95,7 @@ const styleUnderConstruction = {
     top: '70%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    fontSize: '22px'
+    fontSize: '20px'
   }
 }
 
