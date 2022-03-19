@@ -20,12 +20,28 @@ const heading = {
 
   style: {
     background: 'rgba(0, 0, 0, 0)',
-
     alignItems: 'center',
     opacity: 1,
     transition: 'all 1s ease-in-out',
     fontFamily: 'Helvetica',
     position: 'absolute',
+    '@media only screen and (min-width: 1225px)': {
+      width: '200px',
+      height: '220px',
+      top: '65%'
+      // position: 'absolute'
+    },
+    '@media only screen and (max-width: 1225px)': {
+      width: '50%',
+      height: '85%',
+      background: 'radial-gradient(rgba(42, 81, 61, .6), rgba(42, 81, 61, 1))'
+    },
+    '@media only screen and (max-width: 768px)': {
+      width: '75%'
+    },
+    '@media only screen and (max-width: 480px)': {
+      width: '90%'
+    },
     '&::before': {
       content: '""',
       position: 'absolute',
@@ -35,33 +51,26 @@ const heading = {
       fontSize: '16px',
       letterSpacing: '2px',
       textTransform: 'uppercase',
-      transition: 'all 1s ease-in-out'
-    },
-    '@media only screen and (min-width: 1024px)': {
-      width: '200px',
-      height: '220px',
-      top: '60%'
-      // position: 'absolute'
-
-    },
-
-    '@media only screen and (max-width: 1024px)': {
-      border: '10px solid red',
-      width: '200px',
-      height: '80%'
-
+      transition: 'all 1s ease-in-out',
+      '@media only screen and (max-width: 1225px)': {
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        fontSize: '40px',
+        letterSpacing: '.5px'
+      }
     }
   },
 
   span: {
     proto: Block,
     style: {
-      width: '50px',
+      width: '0px',
       height: '80px',
-      background: 'radial-gradient(rgba(42, 81, 61, 1), rgba(42, 81, 61, 1))',
+      background: 'radial-gradient(rgba(42, 81, 61, .6), rgba(42, 81, 61, 1))',
       opacity: 0,
       display: 'block',
-      transition: 'all 1s ease-in-out'
+      transition: 'all .8s ease-in-out'
     }
   }
 }
@@ -69,7 +78,7 @@ const sololaki = {
   proto: link,
   props: { href: '/Sololaki' },
   style: {
-    '@media only screen and (min-width: 1024px)': {
+    '@media only screen and (min-width: 1225px)': {
       '> div': { borderRight: '0px solid rgba(0, 0, 0, 0)' },
       '&:hover': {
         '> div': { borderRight: '0px solid black' },
@@ -81,36 +90,35 @@ const sololaki = {
   },
   image: {
     style: {
-      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .65)),url(' + SOLOLAKI_JPG + ')',
+      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .55)),url(' + SOLOLAKI_JPG + ')',
 
-      '@media only screen and (max-width: 1024px)': {
+      '@media only screen and (max-width: 1225px)': {
         backgroundPosition: 'top left'
-
       }
     }
   },
   heading: {
     proto: heading,
     style: {
-      right: '0',
-      borderTopLeftRadius: '250px',
-      borderBottomLeftRadius: '250px',
+      '@media only screen and (min-width: 1225px)': {
+        right: '0'
+      },
+      '@media only screen and (max-width: 1225px)': {
+        borderTopLeftRadius: '400px',
+        borderTopRightRadius: '400px',
+        bottom: 0
+
+      },
       '&::before': {
         content: '"sololaki"',
-        right: '15px'
+        '@media only screen and (min-width: 1225px)': {
+          right: '15px'
+        }
       },
       '> span': {
         marginLeft: 'auto',
         borderTopLeftRadius: '100px',
         borderBottomLeftRadius: '100px'
-      },
-
-      '@media only screen and (max-width: 1024px)': {
-        borderBottomLeftRadius: '0px',
-        borderTopLeftRadius: '150px',
-        borderToprightRadius: '150px',
-        width: '400px'
-
       }
     }
   }
@@ -126,31 +134,52 @@ const rustaveli = {
   proto: link,
   style: {
     '> div': { borderLeft: '0px solid rgba(0, 0, 0, 1)' },
-    '&:hover': {
-      '@media only screen and (min-width: 1024px)': {
-        '> div': { borderLeft: '0px solid rgba(0, 0, 0, 1)' },
+    '@media only screen and (min-width: 1225px)': {
+      '&:hover': {
         '> h3::before': {
-          left: '25px'
+          '@media only screen and (min-width: 1225px)': {
+            left: '25px'
+          }
         },
-        '~ span': { opacity: 1 }
+        '~ span': {
+          opacity: 1
+        }
       }
+    },
+    '@media only screen and (max-width: 1225px)': {
+      '> h3 > span': {
+        background: 'red'
+      }
+
     }
   },
 
-  image: { style: { backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .65)),url(' + RUSTAVELI_JPG + ')' } },
+  image: { style: { backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .55)),url(' + RUSTAVELI_JPG + ')' } },
   heading: {
     proto: heading,
     style: {
-      borderTopRightRadius: '500px',
-      borderBottomRightRadius: '500px',
+      '@media only screen and (min-width: 1225px)': {
+        borderTopRightRadius: '500px',
+        borderBottomRightRadius: '500px',
+        opacity: 1
+      },
+      '@media only screen and (max-width: 1225px)': {
+        borderBottomLeftRadius: '400px',
+        borderBottomRightRadius: '400px',
+        top: 0
+      },
       '&::before': {
         content: '"rustaveli"',
-        left: '15px'
+        '@media only screen and (min-width: 1225px)': {
+          left: '15px'
+        }
       },
       '> span': {
-        marginRight: 'auto',
-        borderTopRightRadius: '300px',
-        borderBottomRightRadius: '300px'
+        '@media only screen and (min-width: 1225px)': {
+          borderTopRightRadius: '300px',
+          borderBottomRightRadius: '300px',
+          marginRight: 'auto'
+        }
       }
     },
     underConstruction

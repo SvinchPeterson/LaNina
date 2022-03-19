@@ -17,7 +17,7 @@ export const logoB = {
     left: '50%',
     transform: 'translate(-50%, -50%) scale(1)',
     opacity: 0,
-    '@media only screen and (max-width: 1024px)': {
+    '@media only screen and (max-width: 1225px)': {
       opacity: 1
     }
   }
@@ -31,17 +31,17 @@ export default {
     position: 'absolute',
     top: '45%',
     left: '50%',
-    transform: 'translate(-50%, -50%) scale(1.5)',
+    transform: 'translate(-50%, -50%) scale(1.4)',
     zIndex: 400,
     pointerEvents: 'none',
     opacity: 0.85,
-    '@media only screen and (min-width: 1024px)': {
+    '@media only screen and (min-width: 1225px)': {
       animationName: coverLogoAnimation,
       animationDuration: '1.5s',
       animationTimingFunction: 'ease-in-out',
       opacity: 0.8
     },
-    '@media only screen and (max-width: 1024px)': {
+    '@media only screen and (max-width: 1225px)': {
       transform: 'translate(-50%, -50%) scale(1.5)',
       opacity: 0
     }

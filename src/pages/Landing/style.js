@@ -15,7 +15,7 @@ const styleLink = {
   borderTop: '0px solid black',
   borderBottom: '0px solid black',
 
-  '@media only screen and (min-width: 1024px)': {
+  '@media only screen and (min-width: 1225px)': {
     '&:hover': {
       flex: 8,
       borderBottom: 'none',
@@ -26,8 +26,8 @@ const styleLink = {
       },
       '> h3': {
         background: 'rgba(0, 0,0, 0)',
-        transform: 'scale(1.05)',
-        '> span': { opacity: 1 },
+        // transform: 'scale(1)',
+        '> span': { opacity: 1, width: '60px' },
         '> div': { opacity: 1 }
         // '&::before': {transform: 'scale(1.1)'}
       },
@@ -40,18 +40,19 @@ const styleLink = {
 
   },
 
-  '@media only screen and (max-width: 1024px)': {
-    transform: 'scale(1.05)',
+  '@media only screen and (max-width: 1225px)': {
+    justifyContent: 'center',
+
     '> div': {
-      backgroundSize: 'contain',
+      backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top 50px right',
-      transform: 'scale(.95)'
+      transform: 'scale(1)'
     },
     '> h3': {
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)'
+      // top: '0%',
+      // left: '50%',
+      // transform: 'translate(-50%, -50%)'
     }
 
   }
@@ -61,7 +62,12 @@ const styleImage = {
   flex: 1,
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
-  filter: 'grayscale(100%) brightness(50%) blur(.5px)',
+  '@media only screen and (min-width: 1225px)': {
+    filter: 'grayscale(100%) brightness(50%) blur(0px)'
+  },
+  '@media only screen and (max-width: 1225px)': {
+    filter: 'grayscale(100%) brightness(50%) blur(0px)'
+  },
   transition: 'all 1s ease-in-out',
 
   backgroundPosition: 'center center',
@@ -72,26 +78,30 @@ const styleImage = {
 }
 
 const styleUnderConstruction = {
-  // position: 'absolute',
-  // top: '66%',
-  // left: '0',
-  // border: '3px solid red',
-
-  // transform: 'translate(-50%, -50%)',
-  // color: 'rgba(244, 233, 217, .75)',
-  color: 'rgba(168, 98, 63, .75)',
+  '@media only screen and (min-width: 1225px)': {
+    marginTop: '40px'
+  },
+  color: '#E6763F',
   position: 'absolute',
   zIndex: '200',
-  fontSize: '15px',
-  fontWeight: 700,
+  fontSize: '14px',
+  fontWeight: 500,
   fontFamily: 'Helvetica',
   letterSpacing: '1.1px',
-  // wordSpacing: '10px',
   opacity: 0,
   transition: 'opacity 1s ease-in-out',
   whiteSpace: 'nowrap',
-  marginTop: '36px',
-  marginLeft: '16.5px'
+  marginLeft: '16.5px',
+  '@media only screen and (max-width: 1225px)': {
+    opacity: 1,
+    width: 'fit-content',
+    margin: 'auto',
+    position: 'absolute',
+    top: '70%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    fontSize: '22px'
+  }
 }
 
 export default {
@@ -107,7 +117,7 @@ export default {
   animationDuration: '2s',
   animationTimingFunction: 'ease-in-out',
   margin: '0 auto',
-  '@media only screen and (max-width: 1024px)': {
+  '@media only screen and (max-width: 1225px)': {
     flexFlow: 'column'
   }
 }
