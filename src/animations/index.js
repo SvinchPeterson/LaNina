@@ -61,6 +61,20 @@ export const coverLogoAnimation = keyframes`
     transform: translate(-50%, -50%) scale(1.4);
   }
 `
+export const coverLogoAnimation2 = keyframes`
+  from {
+    opacity: 1;
+    filter: brightness(0%);
+    transform: translate(-50%, -50%) scale(1.3);
+
+
+  }
+  to {
+    opacity: .85;
+    filter: brightness(100%);
+    transform: translate(-50%, -50%) scale(1);
+  }
+`
 export const letterSpacingBanner = keyframes`
   from {
     // transform: scale(.9);

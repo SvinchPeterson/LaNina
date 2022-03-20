@@ -1,5 +1,6 @@
 'use strict'
 import { Block, Flex, Link, Text } from '@rackai/symbols'
+import { coverLogoAnimation, coverLogoAnimation2 } from '../../animations'
 
 import { Logo } from '../../components'
 import { logoB } from '../../components/Logo'
@@ -19,6 +20,11 @@ const logo = {
     zIndex: 400,
     pointerEvents: 'none',
     opacity: 0.85,
+    '@media only screen and (min-width: 1225px)': {
+      animationName: coverLogoAnimation,
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out'
+    },
     '@media only screen and (max-width: 1225px)': {
       opacity: 0
     }
@@ -34,7 +40,10 @@ const logo2 = {
     transform: 'translate(-50%, -50%) scale(1)',
     opacity: 0,
     '@media only screen and (max-width: 1225px)': {
-      opacity: 1
+      opacity: 1,
+      animationName: coverLogoAnimation2,
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out'
     }
   }
 }
