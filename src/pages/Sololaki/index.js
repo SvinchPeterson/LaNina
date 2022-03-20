@@ -13,22 +13,23 @@ const banner = {
   style: styleBanner,
 
   image: { tag: 'span' },
-  bbBanner: {
-    proto: BBbanner,
-    logo: {},
-    h5: {
+  p: {
+    proto: [Text, Block],
+    props: {
+      flexFlow: 'column',
+      flexAlign: 'center center'
+    },
+    text: 'bb residence',
+    span: {
+      proto: Text,
       props: {
-        text: 'sololaki',
-        size: 'C'
+        text: 'sololaki'
       }
     }
   }
   // p: {
   //   proto: Text,
-  //   props: {
-  //     text: 'where ordinary becomes extraordinary',
-  //     size: 'B'
-  //   }
+  //   props: { text: 'BB residence' }
   // }
 }
 
@@ -46,8 +47,8 @@ export default {
   },
 
   banner,
-  // Header,
-  // Menu,
+  Header,
+  Menu,
 
   Residence
   // Apartments,

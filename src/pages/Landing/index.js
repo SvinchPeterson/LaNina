@@ -9,6 +9,36 @@ import SOLOLAKI_JPG from '../../assets/images/sololaki.jpg'
 
 import style from './style'
 
+const logo = {
+  proto: Logo,
+  style: {
+    position: 'absolute',
+    top: '45%',
+    left: '50%',
+    transform: 'translate(-50%, -50%) scale(1.4)',
+    zIndex: 400,
+    pointerEvents: 'none',
+    opacity: 0.85,
+    '@media only screen and (max-width: 1225px)': {
+      opacity: 0
+    }
+  }
+}
+const logo2 = {
+  proto: logoB,
+  style: {
+    position: 'absolute',
+    zIndex: '400',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%) scale(1)',
+    opacity: 0,
+    '@media only screen and (max-width: 1225px)': {
+      opacity: 1
+    }
+  }
+}
+
 const link = {
   proto: [Link, Flex],
   image: {}
@@ -23,7 +53,6 @@ const heading = {
     alignItems: 'center',
     opacity: 1,
     transition: 'all 1s ease-in-out',
-    fontFamily: 'Helvetica',
     position: 'absolute',
     '@media only screen and (min-width: 1225px)': {
       width: '200px',
@@ -189,8 +218,8 @@ export default {
   proto: [Block, Flex],
   style,
 
-  Logo,
-  logoB,
+  logo,
+  logo2,
   sololaki,
   rustaveli
 }

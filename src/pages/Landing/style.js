@@ -49,7 +49,6 @@ const styleLink = {
       backgroundPosition: 'top 50px right',
       transform: 'scale(1)'
     }
-
   }
 }
 
@@ -76,12 +75,12 @@ const styleUnderConstruction = {
   '@media only screen and (min-width: 1225px)': {
     marginTop: '40px'
   },
-  color: '#E6763F',
+  // color: '#E6763F',
+  color: 'rgba(168, 98, 63, 1)',
   position: 'absolute',
   zIndex: '200',
   fontSize: '14px',
   fontWeight: 500,
-  fontFamily: 'Helvetica',
   letterSpacing: '1.1px',
   opacity: 0,
   transition: 'opacity 1s ease-in-out',

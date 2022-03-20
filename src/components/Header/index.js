@@ -1,9 +1,14 @@
 'use strict'
 import { Block, Text, Flex, Shape, SVG, Link } from '@rackai/symbols'
+import { logoB } from '../../components/Logo'
 
 import style from './style'
 
 import PHONE_PNG from '../../assets/phoneRight.svg'
+
+const logo = {
+  proto: logoB
+}
 
 const check = {
   tag: 'input',
@@ -103,6 +108,7 @@ export default {
   },
 
   check,
+  logo,
 
   menuIcon,
   book,
