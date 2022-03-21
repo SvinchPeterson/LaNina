@@ -23,7 +23,4 @@ set('color', {
 }, {
   name: 'purple',
   value: '#7345AF'
-}, {
-  name: 'white',
-  value: 'white'
 })

@@ -4,12 +4,19 @@ export default {
   width: '100%',
   height: '100%',
   position: 'absolute',
-  fontFamily: 'Gilda Display',
   top: 0,
   left: 0,
-  boxSizing: 'border-box',
   overflow: 'hidden',
+  boxSizing: 'border-box',
   display: 'flex',
   h4: { margin: 0 },
-  h1: { margin: 0 }
+  h1: { margin: 0 },
+  h3: { margin: 0 },
+  h5: { margin: 0 },
+  p: { margin: 0 },
+  h6: { margin: 0 },
+  fontFamily: 'Helvetica Neue'
+  // fontFamily: 'Helvetica'
+  // fontFamily: 'DejaVu Sans'
+  // background: 'rgba(42, 81, 61, 1)'
 }

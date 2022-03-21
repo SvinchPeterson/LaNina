@@ -1,0 +1,78 @@
+'use strict'
+import { Block, Text } from '@rackai/symbols'
+
+import { locationText, distanceText, transferText } from '../../texts'
+
+import style from './style'
+
+const paragraph = {
+  tag: 'p',
+  proto: [locationText, Block]
+
+}
+
+const map = {
+  tag: 'span',
+  proto: Block
+}
+
+const airPort = {
+  proto: Block,
+  props: {
+    flexFlow: 'column',
+    flexAlign: 'center center',
+    gap: 'C'
+  },
+
+  childProto: {
+    tag: 'p',
+    proto: [Block, Text]
+  },
+  ...[
+    { proto: distanceText },
+
+    {
+      proto: transferText,
+      props: {
+        flexFlow: 'column',
+        flexAlign: 'flex-start flex-start',
+        gap: 'W2'
+      },
+
+      caption: {
+        proto: Text,
+        props: {
+          text: 'transfer'
+        }
+      }
+    }
+  ]
+}
+
+export default {
+  tag: 'article',
+  proto: Block,
+  props: {
+    flexFlow: 'column',
+    gap: '0',
+    padding: 'F 0 0 0'
+  },
+  attr: {
+    id: 'location'
+  },
+  style,
+
+  paragraph,
+
+  location: {
+    tag: 'section',
+    proto: Block,
+    props: {
+      flexAlign: 'center center',
+      gap: 'B'
+    },
+
+    map,
+    airPort
+  }
+}
