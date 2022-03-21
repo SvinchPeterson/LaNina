@@ -5,7 +5,7 @@ import { coverLogoAnimation, coverLogoAnimation2 } from '../../animations'
 import { Logo } from '../../components'
 import { logoB } from '../../components/Logo'
 
-import RUSTAVELI_JPG from '../../assets/images/rustaveli.jpg'
+import RUSTAVELI_JPG from '../../assets/images/rustaveliS.jpg'
 import SOLOLAKI_JPG from '../../assets/images/sololaki.jpg'
 
 import style from './style'
@@ -19,7 +19,7 @@ const logo = {
     transform: 'translate(-50%, -50%) scale(1.4)',
     zIndex: 400,
     pointerEvents: 'none',
-    opacity: 0.85,
+    opacity: 0.75,
     '@media only screen and (min-width: 1225px)': {
       animationName: coverLogoAnimation,
       animationDuration: '2s',
@@ -105,10 +105,11 @@ const heading = {
     style: {
       width: '0px',
       height: '80px',
-      background: 'radial-gradient(rgba(42, 81, 61, .6), rgba(42, 81, 61, 1))',
+      background: 'radial-gradient(rgba(42, 81, 61, 1), rgba(42, 81, 61, 1))',
       opacity: 0,
       display: 'block',
       transition: 'all .8s ease-in-out'
+      // display: 'none'
     }
   }
 }
@@ -130,7 +131,7 @@ const sololaki = {
 
   image: {
     style: {
-      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .55)),url(' + SOLOLAKI_JPG + ')',
+      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .5), rgba(42, 81, 61, 1)),url(' + SOLOLAKI_JPG + ')',
 
       '@media only screen and (max-width: 1225px)': {
         backgroundPosition: 'top left'
@@ -190,7 +191,11 @@ const rustaveli = {
     }
   },
 
-  image: { style: { backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .55)),url(' + RUSTAVELI_JPG + ')' } },
+  image: {
+    style: {
+      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .5), rgba(42, 81, 61, 1)),url(' + RUSTAVELI_JPG + ')'
+    }
+  },
 
   heading: {
     proto: heading,

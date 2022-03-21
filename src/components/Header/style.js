@@ -41,12 +41,12 @@ const styleLangs = {
   transition: 'all .3s ease-in-out',
   cursor: 'pointer',
   height: 'fit-content',
-  position: 'absolute',
-  right: '30px',
-  top: '35px',
+  // position: 'absolute',
+  // right: '80px',
+  // top: '40px',
   fontWeight: 600,
   '> div:hover': { color: 'rgba(244, 233, 217, 1)' },
-  '> div:first-child': { borderBottom: '1.8px solid rgba(244, 233, 217, .65)' },
+  // '> div:first-child': { borderBottom: '1.8px solid rgba(244, 233, 217, .65)' },
   '@media only screen and (max-width: 768px)': {
     top: '200px'
   }
@@ -123,8 +123,7 @@ export default {
   zIndex: 1000,
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
-  backdropFilter: 'blur(10px)',
-  // maxWidth: `${1440 / 16}em`,
+  backdropFilter: 'blur(5px)',
 
   '@media only screen and (max-width: 768px)': {
     gap: '0px',
@@ -138,7 +137,7 @@ export default {
 
   '> input': styleCheck,
   '> label': styleMenuIcon,
-  '> div': styleLangs,
   '> a': styleBook,
-  '> span': styleCall
+  '> span': styleCall,
+  '> div': styleLangs
 }

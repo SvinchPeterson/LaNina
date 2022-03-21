@@ -6,10 +6,6 @@ import style from './style'
 
 import PHONE_PNG from '../../assets/phoneRight.svg'
 
-const logo = {
-  proto: logoB
-}
-
 const check = {
   tag: 'input',
   attr: {
@@ -48,8 +44,8 @@ const menuIcon = {
 const langs = {
   proto: Block,
   props: {
-    flexFlow: 'column',
-    flexAlign: 'flex-start center'
+    flexAlign: 'flex-start center',
+    gap: 'Y'
   },
 
   childProto: {
@@ -58,9 +54,9 @@ const langs = {
   },
 
   ...[
-    { props: { text: 'en' } },
+    { props: { text: 'eng' } },
 
-    { props: { text: 'ru' } }
+    { props: { text: 'rus' } }
   ]
 }
 
@@ -108,10 +104,9 @@ export default {
   },
 
   check,
-  logo,
 
   menuIcon,
-  book,
-  call,
-  langs
+  // book,
+  langs,
+  call
 }

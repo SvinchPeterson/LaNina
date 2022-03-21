@@ -22,7 +22,8 @@ const styleLink = {
       borderTop: 'none',
       '> div': {
         backgroundPosition: 'top left',
-        filter: 'grayscale(50%) brightness(65%) blur(0px)'
+        filter: 'grayscale(25%) brightness(55%) blur(0px)'
+        // backgroundBlendMode: 'screen'
       },
       '> h3': {
         background: 'rgba(0, 0,0, 0)',
@@ -56,11 +57,13 @@ const styleImage = {
   flex: 1,
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
+  backgroundBlendMode: 'screen',
+  // backgroundBlendMode: 'screen',
   '@media only screen and (min-width: 1225px)': {
-    filter: 'grayscale(100%) brightness(50%) blur(0px)'
+    filter: 'grayscale(100%) brightness(30%) blur(0px)'
   },
   '@media only screen and (max-width: 1225px)': {
-    filter: 'grayscale(100%) brightness(50%) blur(0px)'
+    filter: 'grayscale(100%) brightness(50%) blur(.2px)'
   },
   transition: 'all 1s ease-in-out',
 
@@ -106,11 +109,13 @@ export default {
   flex: 1,
   position: 'relative',
   overflow: 'hidden',
-  background: 'black',
+  // background: 'black',
+  // background: 'rgba(42, 81, 61, 1)',
   animationName: brightnessLanding,
   animationDuration: '2s',
   animationTimingFunction: 'ease-in-out',
   margin: '0 auto',
+  background: 'red',
   '@media only screen and (max-width: 1225px)': {
     flexFlow: 'column'
   }
