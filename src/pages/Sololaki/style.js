@@ -29,7 +29,7 @@ export const styleBanner = {
       transition: 'all 2s ease-in-out'
     }
   },
-  '> p': {
+  '> caption': {
     fontWeight: '500',
     position: 'absolute',
     top: '50%',
@@ -45,6 +45,17 @@ export const styleBanner = {
       textTransform: 'capitalize'
 
     }
+  },
+  '> p': {
+    position: 'absolute',
+    top: '60%',
+    left: '50%',
+    transfomrm: 'translate(-50%, -50%)',
+    color: 'rgba(244, 233, 217, 1)',
+    fontSize: '18px',
+    // fontWeight: '400',
+    fontFamily: 'DejaVu Sans'
+
   }
 }
 

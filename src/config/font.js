@@ -3,7 +3,8 @@
 import { getFontFace, set } from '@rackai/symbols'
 import { injectGlobal } from '@emotion/css'
 
-import Dejavu from '../assets/fonts/DejaVuSans-Bold.woff2'
+import DejavuBold from '../assets/fonts/DejaVuSans-Bold.woff2'
+import Dejavu from '../assets/fonts/DejaVuSans.woff2'
 
 const RegisterFont = set('font',
   // {
@@ -51,7 +52,11 @@ const RegisterFont = set('font',
   // },
   {
     name: 'DejaVu Sans',
+    url: DejavuBold
+  }, {
+    name: 'DejaVu Sans',
     url: Dejavu
+
   })
 
 const FontFace = getFontFace(RegisterFont)

@@ -20,7 +20,7 @@ const book2 = {
     // border: '1px solid red',
     position: 'fixed',
     right: '0px',
-    top: '40%',
+    top: '35%',
     zIndex: '1002',
     transform: 'scale(1)',
     backdropFilter: 'blur(6px) brightness(100%)',
@@ -31,19 +31,23 @@ const book2 = {
     background: 'rgba(42, 81, 61, .6)',
     // background: 'radial-gradient(rgba(42, 81, 61, .3), rgba(42, 81, 61, .3))',
 
-    color: 'white',
-    fontSize: '15px',
+    color: 'rgba(244, 233, 217, .65)',
+    fontSize: '15.5px',
     lineHeight: '20px',
     textTransform: 'uppercase',
     cursor: 'pointer',
     fontWeight: '500',
+
     // writingMode: 'vertical-rl'
-    textOrientation: ' upLeft'
+    textOrientation: ' upLeft',
+    '&:hover': { color: 'rgba(244, 233, 217, 1)' },
+    '&:hover > img': { opacity: 1 }
   },
   logo: {
     proto: logoPng,
     style: {
-      width: '35px'
+      width: '35px',
+      opacity: '.65'
     }
   },
   text: 'ook'
@@ -63,7 +67,7 @@ const banner = {
   style: styleBanner,
 
   image: { tag: 'span' },
-  p: {
+  caption: {
     proto: [Text, Block],
     props: {
       flexFlow: 'column',
@@ -76,11 +80,11 @@ const banner = {
         text: 'sololaki'
       }
     }
+  },
+  p: {
+    proto: Text,
+    props: { text: 'Where ordinary, becomes extraordinary' }
   }
-  // p: {
-  //   proto: Text,
-  //   props: { text: 'BB residence' }
-  // }
 }
 
 export default {
