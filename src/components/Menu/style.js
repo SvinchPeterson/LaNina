@@ -56,7 +56,7 @@ const styleSocialMedia = {
 
   '> a': {
     cursor: 'pointer',
-    opacity: '.5',
+    opacity: '.75',
     border: '1.7px solid rgba(244, 233, 217, 0)',
     padding: '15px',
     borderRadius: '100%',

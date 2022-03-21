@@ -1,9 +1,9 @@
 'use strict'
 import { Block, Text, Link, SVG, Flex } from '@rackai/symbols'
 
-import FACEBOOK_SVG from '../../assets/facebook2.svg'
-import INSTAGRAM_SVG from '../../assets/instagram2.svg'
-import LINKEDIN_SVG from '../../assets/linkedin2.svg'
+import FACEBOOK_SVG from '../../assets/icons/facebook.svg'
+import INSTAGRAM_SVG from '../../assets/icons/instagram.svg'
+import LINKEDIN_SVG from '../../assets/icons/linkedin.svg'
 
 import style from './style'
 
@@ -20,7 +20,7 @@ const sectionLinks = {
   childProto: {
     proto: [Link, Text, Block],
     props: {
-      size: 'A'
+      size: 'B'
     }
   },
   ...[
