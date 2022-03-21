@@ -5,6 +5,7 @@ import { injectGlobal } from '@emotion/css'
 
 import DejavuBold from '../assets/fonts/DejaVuSans-Bold.woff2'
 import Dejavu from '../assets/fonts/DejaVuSans.woff2'
+import Geo from '../assets/fonts/BPGExtraSquareMtavruli.woff2'
 
 const RegisterFont = set('font',
   // {
@@ -57,6 +58,9 @@ const RegisterFont = set('font',
     name: 'DejaVu Sans',
     url: Dejavu
 
+  }, {
+    name: 'BPG ExtraSquare Mtavruli',
+    url: Geo
   })
 
 const FontFace = getFontFace(RegisterFont)

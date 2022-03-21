@@ -60,7 +60,7 @@ const styleImage = {
   backgroundBlendMode: 'screen',
   // backgroundBlendMode: 'screen',
   '@media only screen and (min-width: 1225px)': {
-    filter: 'grayscale(100%) brightness(30%) blur(0px)'
+    filter: 'grayscale(100%) brightness(25%) blur(0px)'
   },
   '@media only screen and (max-width: 1225px)': {
     filter: 'grayscale(100%) brightness(50%) blur(.2px)'
@@ -115,7 +115,6 @@ export default {
   animationDuration: '2s',
   animationTimingFunction: 'ease-in-out',
   margin: '0 auto',
-  background: 'red',
   '@media only screen and (max-width: 1225px)': {
     flexFlow: 'column'
   }

@@ -54,9 +54,11 @@ const langs = {
   },
 
   ...[
+    { props: { text: 'ქარ' }, style: { fontFamily: 'BPG ExtraSquare Mtavruli' } },
     { props: { text: 'eng' } },
 
     { props: { text: 'rus' } }
+
   ]
 }
 

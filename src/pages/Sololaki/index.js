@@ -14,26 +14,26 @@ const book2 = {
   proto: Block,
   props: {
     flexFlow: 'column',
-    flexAlign: 'center center'
+    flexAlign: 'flex-start flex-start'
   },
   style: {
     // border: '1px solid red',
     position: 'fixed',
-    right: '0px',
+    left: '0px',
     top: '35%',
     zIndex: '1002',
     transform: 'scale(1)',
     backdropFilter: 'blur(6px) brightness(100%)',
-    padding: '40px 20px 40px 30px',
+    padding: '40px 40px 40px 20px',
     // borderRadius: '100px',
-    borderTopLeftRadius: '100px',
-    borderBottomLeftRadius: '100px',
+    borderTopRightRadius: '100px',
+    borderBottomRightRadius: '100px',
     background: 'rgba(42, 81, 61, .6)',
     // background: 'radial-gradient(rgba(42, 81, 61, .3), rgba(42, 81, 61, .3))',
 
     color: 'rgba(244, 233, 217, .65)',
-    fontSize: '15.5px',
-    lineHeight: '20px',
+    fontSize: '19px',
+    lineHeight: '25px',
     textTransform: 'uppercase',
     cursor: 'pointer',
     fontWeight: '500',
@@ -46,7 +46,7 @@ const book2 = {
   logo: {
     proto: logoPng,
     style: {
-      width: '35px',
+      width: '45px',
       opacity: '.65'
     }
   },

@@ -11,16 +11,16 @@ const sectionLinks = {
   tag: 'nav',
   proto: Block,
   props: {
-    padding: 'G1 0 0 0',
+    padding: 'G1 D 0 0',
     // flexFlow: 'column',
-    gap: 'D',
-    flexAlign: 'flex-start center'
+    gap: 'C',
+    flexAlign: 'flex-start flex-end'
   },
 
   childProto: {
     proto: [Link, Text, Block],
     props: {
-      size: 'B'
+      size: 'A'
     }
   },
   ...[
@@ -87,7 +87,7 @@ export default {
   proto: [Block, Flex],
   style,
   props: {
-    flexAlign: 'flex-end flex-end',
+    // flexAlign: 'flex-end flex-end',
     gap: 'B'
     // flexAlign: 'center space-between'
   },

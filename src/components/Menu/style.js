@@ -10,13 +10,12 @@ const styleSectionLinks = {
     flexFlow: 'column',
     justifyContent: 'flex-start',
     minheight: 'fit-content',
-    alignItems: 'flex-start',
-    padding: '250px 200px 0px 50px',
-    textAlign: 'left'
+    alignItems: 'flex-end',
+    padding: '250px 0px 0px 50px',
+    textAlign: 'right'
   },
   '@media only screen and (max-width: 480px)': {
     padding: '250px 200px 100px 10px'
-
   },
   // paddingTop: '100px',
   // flex: 12,
@@ -32,7 +31,7 @@ const styleSectionLinks = {
     textAlign: 'left',
 
     '&:hover': {
-      color: 'rgba(244, 233, 217, .85)',
+      color: 'rgba(168, 98, 63, .75)',
       letterSpacing: '4px'
     }
   }

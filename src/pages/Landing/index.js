@@ -64,7 +64,7 @@ const heading = {
     transition: 'all 1s ease-in-out',
     position: 'absolute',
     '@media only screen and (min-width: 1225px)': {
-      width: '200px',
+      width: '150px',
       height: '220px',
       top: '65%'
       // position: 'absolute'

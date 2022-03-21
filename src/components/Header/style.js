@@ -123,7 +123,7 @@ export default {
   zIndex: 1000,
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
-  backdropFilter: 'blur(5px)',
+  backdropFilter: 'blur(2px)',
 
   '@media only screen and (max-width: 768px)': {
     gap: '0px',
