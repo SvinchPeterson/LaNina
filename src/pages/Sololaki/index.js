@@ -1,8 +1,9 @@
 'use strict'
 
-import { Block, Flex, Text } from '@rackai/symbols'
+import { Block, Flex, Text, Link } from '@rackai/symbols'
 
 import { Residence, Apartments, Location } from '../../articles'
+import { paddingOut, opacity } from '../../animations'
 
 import { Header, Menu, BBbanner } from '../../components'
 
@@ -11,13 +12,16 @@ import { logoB, logoPng } from '../../components/Logo'
 import style, { styleBanner } from './style'
 
 const book2 = {
-  proto: Block,
+  proto: [Block, Link],
   props: {
     flexFlow: 'column',
-    flexAlign: 'flex-start flex-start'
+    flexAlign: 'flex-start flex-start',
+    href: `https://www.airbnb.com/users/404104381/listings?fbclid=IwAR3RqnCcBkIXwGaJauHmAlgdNYGa9ASOcUMk7ph2i1XBqDG0DqvOMx7XnrM`,
+    target: '_blank'
   },
   style: {
     // border: '1px solid red',
+    textDecoration: 'none',
     position: 'fixed',
     left: '0px',
     top: '35%',
@@ -25,10 +29,14 @@ const book2 = {
     transform: 'scale(1)',
     backdropFilter: 'blur(6px) brightness(100%)',
     padding: '40px 40px 40px 20px',
+    animationName: paddingOut,
+    animationDuration: '1.5s',
+    animationTimingFunction: 'ease-in-out',
     // borderRadius: '100px',
     borderTopRightRadius: '100px',
     borderBottomRightRadius: '100px',
-    background: 'rgba(42, 81, 61, .6)',
+    background: 'rgba(42, 81, 61, .65)',
+
     // background: 'radial-gradient(rgba(42, 81, 61, .3), rgba(42, 81, 61, .3))',
 
     color: 'rgba(244, 233, 217, .65)',
@@ -47,7 +55,10 @@ const book2 = {
     proto: logoPng,
     style: {
       width: '45px',
-      opacity: '.65'
+      opacity: '.65',
+      animationName: opacity,
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out'
     }
   },
   text: 'ook'
@@ -83,7 +94,7 @@ const banner = {
   },
   p: {
     proto: Text,
-    props: { text: 'Where ordinary, becomes extraordinary' }
+    props: { text: '"Where ordinary, becomes extraordinary"' }
   }
 }
 

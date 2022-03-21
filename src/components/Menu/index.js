@@ -47,7 +47,7 @@ const socialMedia = {
     icon: {
       proto: [SVG, Block],
       props: {
-        boxSize: 'B B'
+        boxSize: 'B1 B1'
       }
     }
   },

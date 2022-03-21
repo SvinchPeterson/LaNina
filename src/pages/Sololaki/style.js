@@ -1,6 +1,6 @@
 'use strict'
 
-import { scaleSololakiBanner, opacityBanner } from '../../animations'
+import { scaleSololakiBanner, zoomInB, letterSpacingIn, verticalMove, paddingOut } from '../../animations'
 
 import COVER_JPG from '../../assets/images/sololaki/sololaki.jpg'
 import COVER2_JPG from '../../assets/images/sololaki/coverMobile.jpg'
@@ -32,30 +32,39 @@ export const styleBanner = {
   '> caption': {
     fontWeight: '500',
     position: 'absolute',
-    top: '45%',
+    top: '40%',
     left: '50%',
     zIndex: '100',
-    transform: 'translate(-50%, -50%)',
+    transform: 'translate(-50%, -50%) scale(1)',
     color: 'rgba(244, 233, 217, .55)',
     fontSize: `${50 / 16}em`,
     textTransform: 'uppercase',
+    animationName: zoomInB,
+    animationDuration: '3s',
+    animationTiminFunction: 'ease-in-out',
     '> span': {
       fontSize: `${30 / 50}em`,
-      letterSpacing: '1px',
-      textTransform: 'capitalize'
+      textTransform: 'capitalize',
+      animationName: letterSpacingIn,
+      animationDuration: '1.3s',
+      animationTimingFunction: 'ease-in-out',
+      letterSpacing: '2px'
 
     }
   },
   '> p': {
     position: 'absolute',
-    top: '55%',
+    top: '52%',
     left: '50%',
     // transform: 'translate(-50%, -50%)',
     // transfomrm: 'translate(-50%, -50%)',
     // color: 'rgba(244, 233, 217, 1)',
     color: 'rgba(168, 98, 63, .65)',
     fontSize: '18px',
-    fontFamily: 'DejaVu Sans'
+    fontFamily: 'DejaVu Sans',
+    animationName: verticalMove,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out'
 
   }
 }

@@ -44,7 +44,7 @@ const styleLangs = {
   // position: 'absolute',
   // right: '80px',
   // top: '40px',
-  fontWeight: 600,
+  fontWeight: 500,
   '> div:hover': { color: 'rgba(244, 233, 217, 1)' },
   // '> div:first-child': { borderBottom: '1.8px solid rgba(244, 233, 217, .65)' },
   '@media only screen and (max-width: 768px)': {

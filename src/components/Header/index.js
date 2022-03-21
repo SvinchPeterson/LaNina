@@ -45,7 +45,7 @@ const langs = {
   proto: Block,
   props: {
     flexAlign: 'flex-start center',
-    gap: 'Y2'
+    gap: 'Z2'
   },
 
   childProto: {

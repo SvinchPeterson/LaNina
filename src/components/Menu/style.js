@@ -20,19 +20,20 @@ const styleSectionLinks = {
   // paddingTop: '100px',
   // flex: 12,
   '> a': {
-    color: 'rgba(244, 233, 217, .55)',
+    color: 'rgba(244, 233, 217, .45)',
     textTransform: 'uppercase',
-    letterSpacing: '3.8px',
+    letterSpacing: '2px',
     cursor: 'pointer',
     transformOrigin: 'left',
     transition: 'all .3s linear',
     textDecoration: 'none',
-    fontWeight: 600,
+    fontWeight: 500,
     textAlign: 'left',
+    // fontFamily: 'DejaVu Sans',
 
     '&:hover': {
-      color: 'rgba(168, 98, 63, .75)',
-      letterSpacing: '4px'
+      color: 'rgba(168, 98, 63, .65)',
+      letterSpacing: '2.2px'
     }
   }
 }
@@ -56,15 +57,15 @@ const styleSocialMedia = {
 
   '> a': {
     cursor: 'pointer',
-    opacity: '.75',
-    border: '1.7px solid rgba(244, 233, 217, 0)',
+    opacity: '.55',
+    border: '1.7px solid rgba(168, 98, 63, 0)',
     padding: '15px',
     borderRadius: '100%',
     transition: 'all .3s linear',
+    // background: 'radial-gradient(rgba(244, 233, 217, .15),rgba(244, 233, 217, .0))',
     '&:hover': {
       // background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, 0))',
-      border: '1.7px solid rgba(244, 233, 217, .25)',
-      opacity: '.9'
+      opacity: '1'
     },
     '> img': {
       width: '25px'

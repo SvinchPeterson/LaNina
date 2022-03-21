@@ -11,6 +11,44 @@ export const zoomOutLanding = keyframes`
     // background-position: center center;
   }
 `
+export const opacity = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .65;
+  }
+`
+export const paddingOut = keyframes`
+  from {
+    opacity: 0;
+    padding: 0px 0px 0px 0px;
+  }
+  to {
+    opacity: 1;
+    padding: 40px 40px 40px 20px;
+  }
+`
+
+export const letterSpacingIn = keyframes`
+  from {
+   letter-spacing: 6px;
+  }
+  to {
+    letter-spacing: 2px;
+  }
+`
+
+export const verticalMove = keyframes`
+  from {
+   left: 53%;
+   opacity: 0;
+  }
+  to {
+    left: 50%;
+   opacity: 1;
+  }
+`
 
 export const border = keyframes`
   from {
@@ -33,10 +71,13 @@ export const imagePosition = keyframes`
 
 export const zoomInB = keyframes`
   from {
-    transform: scale(.8);
+    opacity: 0;
+    transform: scale(.95) translate(-50%, -50%);
+
   }
   to {
-    transform: scale(1);
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
   }
 `
 export const zoomOutB = keyframes`
