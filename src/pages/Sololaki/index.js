@@ -108,7 +108,10 @@ export default {
     offers: true,
     activeBallerina: true,
     activeRedBrick: true,
-    activeYellowCouch: true
+    activeYellowCouch: true,
+
+    activeLang: 0,
+    activeMenuLink: 0
   },
 
   book2,

@@ -12,6 +12,7 @@ const bbResidence = {
   proto: Block,
   props: { flexAlign: 'flex-start center' },
   style: styleBBresidence,
+  image: {},
 
   p: {
     proto: [Block, bbSololaki],

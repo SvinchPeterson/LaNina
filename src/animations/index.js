@@ -142,11 +142,14 @@ export const brightnessLanding = keyframes`
 export const scaleSololakiBanner = keyframes`
   from {
    transform: scale(1.2);
+   filter: grayscale(50%) brightness(0%);
   }
   to {
     transform: scale(1);
+    filter: grayscale(70%) brightness(60%)
   }
 `
+
 export const scaleOpacitySololakiBannerHeading = keyframes`
   from {
     opacity: 0;

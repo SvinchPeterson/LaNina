@@ -20,7 +20,7 @@ const styleSectionLinks = {
   // paddingTop: '100px',
   // flex: 12,
   '> a': {
-    color: 'rgba(244, 233, 217, .45)',
+    // color: 'rgba(244, 233, 217, .45)',
     textTransform: 'uppercase',
     letterSpacing: '2px',
     cursor: 'pointer',

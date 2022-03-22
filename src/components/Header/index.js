@@ -48,16 +48,95 @@ const langs = {
     gap: 'Z2'
   },
 
+  // on: {
+  //   click: (event, element, state) => {
+  //     const { activeImage } = state
+  //     state.update({
+  //       activeImage: activeImage > (element.parent.gallery.length - 2) ? 0 : activeImage + 1
+  //     })
+  //     // if (activeImage === element.parent.gallery.length) {
+  //     //   state.update({
+  //     //     activeImage: activeImage === element.parent.gallery.length - 2
+  //     //   })
+  //     // }
+  //   }
+  // },
+
   childProto: {
-    proto: [Text, Block],
-    props: { padding: 'Y 0' }
+    proto: [Text, Block, Link],
+    props: { padding: 'Y 0' },
+    on: {
+      click: (event, element, state) => {
+        // state.activeMenuLink === 0 ? state.update({ activeMenuLink: element.key }) : state.update({ activeLangEng: true })
+        state.update({ activeLang: element.key })
+        console.log(state.activeLang, element.key)
+      }
+    },
+
+    class: {
+      show: (element, state) => state.activeLang === element.key ? { color: 'rgba(244, 233, 217, 1)' } : { color: 'rgba(244, 233, 217, .65)' }
+    }
   },
 
   ...[
-    { props: { text: 'ქარ' }, style: { fontFamily: 'BPG ExtraSquare Mtavruli' } },
-    { props: { text: 'eng' } },
+    {
+      props: { text: 'ქარ' },
+      style: { fontFamily: 'BPG ExtraSquare Mtavruli' }
+      // on: {
+      //   click: (event, element, state) => {
+      //     state.activeLangGeo ? state.update({ activeLangGeo: false }) : state.update({ activeLangGeo: true })
+      //     state.update({ activeLangEng: false, activeLangRus: false })
 
-    { props: { text: 'rus' } }
+      //     console.log(state.activeLangGeo)
+      //   }
+      // },
+      // class: {
+      //   show: (element, state) => state.activeLangGeo ? {
+      //     color: 'rgba(244, 233, 217, 1)'
+
+      //   } : {
+      //     color: 'rgba(244, 233, 217, .65)'
+      //   }
+      // }
+    },
+    {
+      props: { text: 'eng' }
+      // on: {
+      //   click: (event, element, state) => {
+      //     state.activeLangEng ? state.update({ activeLangEng: false }) : state.update({ activeLangEng: true })
+      //     state.update({ activeLangGeo: false, activeLangRus: false })
+      //     console.log(state.activeLangEng)
+      //   }
+      // },
+      // class: {
+      //   show: (element, state) => state.activeLangEng ? {
+      //     color: 'rgba(244, 233, 217, 1)'
+
+      //   } : {
+      //     color: 'rgba(244, 233, 217, .65)'
+      //   }
+      // }
+    },
+
+    {
+      props: { text: 'rus' }
+      // on: {
+      //   click: (event, element, state) => {
+      //     state.activeLangRus ? state.update({ activeLangRus: false }) : state.update({ activeLangRus: true })
+      //     state.update({ activeLangGeo: false, activeLangEng: false })
+
+      //     console.log(state.activeLangRus)
+      //   }
+      // },
+      // class: {
+      //   show: (element, state) => state.activeLangRus ? {
+      //     color: 'rgba(244, 233, 217, 1)'
+
+      //   } : {
+      //     color: 'rgba(244, 233, 217, .65)'
+      //   }
+      // }
+    }
 
   ]
 }

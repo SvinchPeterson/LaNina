@@ -5,15 +5,21 @@ import GREEN_LANINA_JPG from '../../assets/images/sololaki/greenLanina2.jpg'
 import BALCONY_JPG from '../../assets/images/sololaki/balcony3.jpg'
 
 export const styleBBresidence = {
-  width: '100%',
-  backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
-  backgroundSize: 'contain',
-  backgroundPosition: 'left 100px bottom',
-  backgroundRepeat: 'no-repeat',
-  backgroundAttachment: 'fixed',
-  transition: 'all 1s ease-in-out',
-  '&:hover': {
-    // transform: 'scale(1.1)'
+  minWidth: '100%',
+  display: 'flex',
+  border: '4px solid red',
+  boxSizing: 'border-box',
+  '&:hover > div': { backgroundPosition: 'left 50px bottom' },
+  '> div': {
+    width: '100%',
+    backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
+    backgroundSize: 'contain',
+    // backgroundPosition: 'left 100px bottom',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    minHeight: '600px',
+    transition: 'all 1s ease-in-out'
+
   },
 
   p: {
@@ -29,7 +35,7 @@ export const styleEntrence = {
   backgroundImage: 'url(' + BALCONY_JPG + ')',
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
-  // transform: 'scale(1.05)',
+  transform: 'scale(1.05)',
   marginBottom: '150px',
 
   p: {

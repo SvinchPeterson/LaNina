@@ -35,7 +35,7 @@ const styleMenuIcon = {
 }
 
 const styleLangs = {
-  color: 'rgba(244, 233, 217, .65)',
+  // color: 'rgba(244, 233, 217, .65)',
   // opacity: 0.85,
   textTransform: 'uppercase',
   transition: 'all .3s ease-in-out',
@@ -45,7 +45,8 @@ const styleLangs = {
   // right: '80px',
   // top: '40px',
   fontWeight: 500,
-  '> div:hover': { color: 'rgba(244, 233, 217, 1)' },
+  '> a:hover': { color: 'rgba(244, 233, 217, 1)' },
+  '> a:activer': { color: 'rgba(244, 233, 217, 1)' },
   // '> div:first-child': { borderBottom: '1.8px solid rgba(244, 233, 217, .65)' },
   '@media only screen and (max-width: 768px)': {
     top: '200px'

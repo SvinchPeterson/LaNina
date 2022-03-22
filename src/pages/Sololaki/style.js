@@ -1,6 +1,6 @@
 'use strict'
 
-import { scaleSololakiBanner, zoomInB, letterSpacingIn, verticalMove, paddingOut } from '../../animations'
+import { scaleSololakiBanner, zoomInB, letterSpacingIn, verticalMove } from '../../animations'
 
 import COVER_JPG from '../../assets/images/sololaki/sololaki.jpg'
 import COVER2_JPG from '../../assets/images/sololaki/coverMobile.jpg'

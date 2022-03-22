@@ -21,6 +21,17 @@ const sectionLinks = {
     proto: [Link, Text, Block],
     props: {
       size: 'B'
+    },
+    on: {
+      click: (event, element, state) => {
+        // state.activeMenuLink === 0 ? state.update({ activeMenuLink: element.key }) : state.update({ activeLangEng: true })
+        state.update({ activeMenuLink: element.key })
+        console.log(state.activeMenuLink, element.key)
+      }
+    },
+
+    class: {
+      show: (element, state) => state.activeMenuLink === element.key ? { color: 'rgba(168, 98, 63, .65)' } : { color: 'rgba(244, 233, 217, .45)' }
     }
   },
   ...[
@@ -81,7 +92,6 @@ const socialMedia = {
     // }
   ]
 }
-
 export default {
   tag: 'aside',
   proto: [Block, Flex],
