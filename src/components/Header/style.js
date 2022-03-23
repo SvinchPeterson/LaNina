@@ -8,7 +8,9 @@ const styleCheck = {
     padding: `20px`
   },
   '&:checked ~ label > div:first-child': { width: `${10 / 16}em` },
-  '&:checked ~ label > div:last-child': { width: `${30 / 16}em` }
+  '&:checked ~ label > div:last-child': { width: `${30 / 16}em` },
+  '&:checked ~ label > div': { opacity: 1 }
+
 }
 
 const styleMenuIcon = {

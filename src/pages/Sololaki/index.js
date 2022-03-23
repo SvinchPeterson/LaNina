@@ -23,19 +23,31 @@ const book2 = {
     // border: '1px solid red',
     textDecoration: 'none',
     position: 'fixed',
-    left: '0px',
-    top: '35%',
+    animationDuration: '1.5s',
+    animationTimingFunction: 'ease-in-out',
+
+    '@media only screen and (min-width: 768px)': {
+      left: '0px',
+      top: '35%',
+      padding: '40px 40px 40px 20px',
+      borderTopRightRadius: '100px',
+      borderBottomRightRadius: '100px',
+      animationName: paddingOut
+    },
+    '@media only screen and (max-width: 768px)': {
+      bottom: '0',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      padding: '25px 60px 10px 60px',
+      borderTopRightRadius: '100px',
+      borderTopLeftRadius: '100px'
+
+    },
     zIndex: '1002',
     transform: 'scale(1)',
     backdropFilter: 'blur(6px) brightness(100%)',
-    padding: '40px 40px 40px 20px',
-    animationName: paddingOut,
-    animationDuration: '1.5s',
-    animationTimingFunction: 'ease-in-out',
     // borderRadius: '100px',
-    borderTopRightRadius: '100px',
-    borderBottomRightRadius: '100px',
-    background: 'rgba(42, 81, 61, .65)',
+    background: 'rgba(42, 81, 61, .35)',
 
     // background: 'radial-gradient(rgba(42, 81, 61, .3), rgba(42, 81, 61, .3))',
 
