@@ -12,11 +12,13 @@ const residenceOrigin = {
   proto: Block,
   style: styleResidenceOrigin,
   props: {
-    flexFlow: 'row'
+    flexAlign: '0 center'
   },
   image: {},
   p: {
-    proto: bbSololaki
+    proto: [bbSololaki, Block],
+    props: { padding: 'E 0 E E' }
+
   }
 }
 
@@ -26,7 +28,7 @@ export default {
   attr: { id: 'residence' },
   style,
   props: {
-    padding: 'G 0 F 0',
+    padding: 'F 0 F 0',
     flexFlow: 'column',
     gap: 'G'
   },
