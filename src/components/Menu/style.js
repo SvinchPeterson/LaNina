@@ -6,21 +6,8 @@ const styleSectionLinks = {
   zIndex: 0,
   minWidth: '100%',
   flex: 20,
-  '@media only screen and (max-width: 768px)': {
-    flexFlow: 'column',
-    justifyContent: 'flex-start',
-    minheight: 'fit-content',
-    alignItems: 'flex-end',
-    padding: '250px 0px 0px 50px',
-    textAlign: 'right'
-  },
-  '@media only screen and (max-width: 480px)': {
-    padding: '250px 200px 100px 10px'
-  },
-  // paddingTop: '100px',
-  // flex: 12,
+
   '> a': {
-    // color: 'rgba(244, 233, 217, .45)',
     textTransform: 'uppercase',
     letterSpacing: '2px',
     cursor: 'pointer',
@@ -28,13 +15,19 @@ const styleSectionLinks = {
     transition: 'all .3s linear',
     textDecoration: 'none',
     fontWeight: 500,
-    textAlign: 'left',
-    // fontFamily: 'DejaVu Sans',
-
     '&:hover': {
       color: 'rgba(168, 98, 63, .65)',
       letterSpacing: '2.2px'
     }
+  },
+
+  '@media only screen and (max-width: 768px)': {
+    flexFlow: 'column',
+    justifyContent: 'flex-start',
+    minheight: 'fit-content',
+    alignItems: 'center',
+    padding: '250px 0px 0px 0px',
+    gap: '30px'
   }
 }
 
@@ -44,16 +37,7 @@ const styleSocialMedia = {
   flex: 20,
   minWidth: '100%',
   paddingBottom: '0px',
-  alignSelf: 'flex-end',
-  '@media only screen and (max-width: 768px)': {
-    padding: 0
-  },
-  '@media only screen and (max-width: 480px)': {
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    gap: '20px'
-  },
-  // border: '10px solid yellow',
+  alignSelf: 'center',
 
   '> a': {
     cursor: 'pointer',
@@ -62,15 +46,17 @@ const styleSocialMedia = {
     padding: '15px',
     borderRadius: '100%',
     transition: 'all .3s linear',
-    // background: 'radial-gradient(rgba(244, 233, 217, .15),rgba(244, 233, 217, .0))',
     '&:hover': {
-      // background: 'radial-gradient(rgba(243, 231, 219, .1), rgba(243, 231, 219, 0))',
       opacity: '1'
     },
     '> img': {
       width: '25px'
     }
-  }
+  },
+
+  '@media only screen and (max-width: 768px)': { padding: 0 },
+  '@media only screen and (max-width: 480px)': { gap: '20px' }
+
 }
 
 export default {
@@ -88,12 +74,8 @@ export default {
   flexFlow: 'column',
   gap: '320px',
 
-  '@media only screen and (max-width: 768px)': {
-    gap: '100px'
-  },
-  '@media only screen and (max-width: 480px)': {
-    gap: 0
-  },
+  '@media only screen and (max-width: 860px)': { padding: 0 },
+  '@media only screen and (max-width: 768px)': { gap: '100px' },
 
   '> nav': styleSectionLinks,
   '> div': styleSocialMedia

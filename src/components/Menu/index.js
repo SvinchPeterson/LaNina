@@ -12,7 +12,6 @@ const sectionLinks = {
   proto: Block,
   props: {
     padding: 'G1 D 0 0',
-    // flexFlow: 'column',
     gap: 'C',
     flexAlign: 'flex-start flex-end'
   },
@@ -24,7 +23,6 @@ const sectionLinks = {
     },
     on: {
       click: (event, element, state) => {
-        // state.activeMenuLink === 0 ? state.update({ activeMenuLink: element.key }) : state.update({ activeLangEng: true })
         state.update({ activeMenuLink: element.key })
         console.log(state.activeMenuLink, element.key)
       }
@@ -83,13 +81,6 @@ const socialMedia = {
         src: LINKEDIN_SVG
       }
     }
-
-    // {
-    //   icon: {
-    //     proto: Img,
-    //     props: { src: MAIL_PNG }
-    //   }
-    // }
   ]
 }
 export default {
@@ -97,9 +88,7 @@ export default {
   proto: [Block, Flex],
   style,
   props: {
-    // flexAlign: 'flex-end flex-end',
     gap: 'B'
-    // flexAlign: 'center space-between'
   },
 
   class: {

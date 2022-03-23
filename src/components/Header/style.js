@@ -78,19 +78,18 @@ const styleCall = {
     content: '"+995 571 017 170"',
     disply: 'block',
     position: 'absolute',
-    top: '0px',
-    left: '50px',
+    top: `${10 / 18}em`,
+    left: `${50 / 18}em`,
     width: '180px',
     pointerEvents: 'none',
     color: cream,
-    padding: '15px 20px',
     fontSize: `${18 / 16}em`,
-    fontWeight: 600,
+    fontWeight: 500,
     opacity: 0,
     transition: 'all .3s ease-in-out',
     '@media only screen and (max-width: 1000px)': {
-      top: '50px',
-      left: '-150px'
+      top: `${45 / 18}em`,
+      left: `-${120 / 18}em`
     }
   }
 }
