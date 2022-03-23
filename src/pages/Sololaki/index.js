@@ -47,7 +47,7 @@ const book2 = {
     transform: 'scale(1)',
     backdropFilter: 'blur(6px) brightness(100%)',
     // borderRadius: '100px',
-    background: 'rgba(42, 81, 61, .35)',
+    background: 'rgba(42, 81, 61, .5)',
 
     // background: 'radial-gradient(rgba(42, 81, 61, .3), rgba(42, 81, 61, .3))',
 
@@ -131,7 +131,7 @@ export default {
   Header,
   Menu,
 
-  Residence,
-  Apartments,
-  Location
+  Residence
+  // Apartments,
+  // Location
 }

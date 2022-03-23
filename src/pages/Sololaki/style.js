@@ -3,8 +3,6 @@
 import { scaleSololakiBanner, zoomInB, letterSpacingIn, verticalMove } from '../../animations'
 
 import COVER_JPG from '../../assets/images/sololaki/sololaki.jpg'
-import COVER2_JPG from '../../assets/images/sololaki/coverMobile.jpg'
-
 import { cream } from '../../colors'
 
 export const styleBanner = {

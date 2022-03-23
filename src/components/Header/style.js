@@ -17,15 +17,8 @@ const styleMenuIcon = {
   cursor: 'pointer',
   transition: 'all .2s linear',
   background: 'radial-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, 0))',
-  border: '1.5px solid rgba(244, 233, 217, 0)',
   borderRadius: '100%',
-  '&:hover': {
-    // border: '1.5px solid rgba(244, 233, 217, .1)',
-    // background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))',
-    '> div': {
-      opacity: 1
-    }
-  },
+  '&:hover > div': { opacity: 1 },
   '> div': {
     background: cream,
     width: '100%',
@@ -37,22 +30,14 @@ const styleMenuIcon = {
 }
 
 const styleLangs = {
-  // color: 'rgba(244, 233, 217, .65)',
-  // opacity: 0.85,
   textTransform: 'uppercase',
   transition: 'all .3s ease-in-out',
   cursor: 'pointer',
   height: 'fit-content',
-  // position: 'absolute',
-  // right: '80px',
-  // top: '40px',
   fontWeight: 500,
   '> a:hover': { color: 'rgba(244, 233, 217, 1)' },
   '> a:activer': { color: 'rgba(244, 233, 217, 1)' },
-  // '> div:first-child': { borderBottom: '1.8px solid rgba(244, 233, 217, .65)' },
-  '@media only screen and (max-width: 768px)': {
-    top: '200px'
-  }
+  '@media only screen and (max-width: 768px)': { top: '200px' }
 }
 
 const styleCall = {
@@ -65,14 +50,8 @@ const styleCall = {
   transition: 'all .2s ease-in-out',
   position: 'relative',
 
-  '&:hover': {
-    opacity: 1
-    // border: '1.5px solid rgba(244, 233, 217, .1)',
-    // background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))'
-  },
-  '&:hover::after': {
-    opacity: 0.85
-  },
+  '&:hover': { opacity: 1 },
+  '&:hover::after': { opacity: 0.85 },
 
   '&::after': {
     content: '"+995 571 017 170"',
@@ -91,29 +70,6 @@ const styleCall = {
       top: `${45 / 18}em`,
       left: `-${120 / 18}em`
     }
-  }
-}
-
-const styleBook = {
-  letterSpacing: '7px',
-  textTransform: 'uppercase',
-  color: 'rgba(244, 233, 217, .75)',
-  cursor: 'pointer',
-  transition: 'all .2s linear',
-  borderRadius: '50px',
-  border: '1.5px solid rgba(244, 233, 217, 0)',
-  display: 'block',
-  background: 'radial-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, 0))',
-  fontWeight: 700,
-  textDecoration: 'none',
-  '&:hover': {
-    // border: '1.5px solid rgba(244, 233, 217, .1)',
-    // background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(244, 233, 217, 0))',
-    color: 'rgba(244, 233, 217, 1)'
-  },
-
-  '@media only screen and (max-width: 768px)': {
-    border: '2px solid rgba(244, 233, 217, 0)'
   }
 }
 
@@ -139,7 +95,6 @@ export default {
 
   '> input': styleCheck,
   '> label': styleMenuIcon,
-  '> a': styleBook,
   '> span': styleCall,
   '> div': styleLangs
 }

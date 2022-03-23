@@ -1,6 +1,5 @@
 'use strict'
 import { Block, Text, Flex, Shape, SVG, Link } from '@rackai/symbols'
-import { logoB } from '../../components/Logo'
 
 import style from './style'
 
@@ -48,26 +47,11 @@ const langs = {
     gap: 'Z2'
   },
 
-  // on: {
-  //   click: (event, element, state) => {
-  //     const { activeImage } = state
-  //     state.update({
-  //       activeImage: activeImage > (element.parent.gallery.length - 2) ? 0 : activeImage + 1
-  //     })
-  //     // if (activeImage === element.parent.gallery.length) {
-  //     //   state.update({
-  //     //     activeImage: activeImage === element.parent.gallery.length - 2
-  //     //   })
-  //     // }
-  //   }
-  // },
-
   childProto: {
     proto: [Text, Block, Link],
     props: { padding: 'Y 0' },
     on: {
       click: (event, element, state) => {
-        // state.activeMenuLink === 0 ? state.update({ activeMenuLink: element.key }) : state.update({ activeLangEng: true })
         state.update({ activeLang: element.key })
         console.log(state.activeLang, element.key)
       }
@@ -82,60 +66,13 @@ const langs = {
     {
       props: { text: 'ქარ' },
       style: { fontFamily: 'BPG ExtraSquare Mtavruli' }
-      // on: {
-      //   click: (event, element, state) => {
-      //     state.activeLangGeo ? state.update({ activeLangGeo: false }) : state.update({ activeLangGeo: true })
-      //     state.update({ activeLangEng: false, activeLangRus: false })
-
-      //     console.log(state.activeLangGeo)
-      //   }
-      // },
-      // class: {
-      //   show: (element, state) => state.activeLangGeo ? {
-      //     color: 'rgba(244, 233, 217, 1)'
-
-      //   } : {
-      //     color: 'rgba(244, 233, 217, .65)'
-      //   }
-      // }
     },
     {
       props: { text: 'eng' }
-      // on: {
-      //   click: (event, element, state) => {
-      //     state.activeLangEng ? state.update({ activeLangEng: false }) : state.update({ activeLangEng: true })
-      //     state.update({ activeLangGeo: false, activeLangRus: false })
-      //     console.log(state.activeLangEng)
-      //   }
-      // },
-      // class: {
-      //   show: (element, state) => state.activeLangEng ? {
-      //     color: 'rgba(244, 233, 217, 1)'
-
-      //   } : {
-      //     color: 'rgba(244, 233, 217, .65)'
-      //   }
-      // }
     },
 
     {
       props: { text: 'rus' }
-      // on: {
-      //   click: (event, element, state) => {
-      //     state.activeLangRus ? state.update({ activeLangRus: false }) : state.update({ activeLangRus: true })
-      //     state.update({ activeLangGeo: false, activeLangEng: false })
-
-      //     console.log(state.activeLangRus)
-      //   }
-      // },
-      // class: {
-      //   show: (element, state) => state.activeLangRus ? {
-      //     color: 'rgba(244, 233, 217, 1)'
-
-      //   } : {
-      //     color: 'rgba(244, 233, 217, .65)'
-      //   }
-      // }
     }
 
   ]
@@ -162,18 +99,6 @@ const call = {
   }
 }
 
-const book = {
-  // tag: 'button',
-  proto: [Link, Text, Block],
-  props: {
-    text: 'book',
-    size: 'B',
-    padding: 'Y2 B',
-    href: `https://www.airbnb.com/users/404104381/listings?fbclid=IwAR3RqnCcBkIXwGaJauHmAlgdNYGa9ASOcUMk7ph2i1XBqDG0DqvOMx7XnrM`,
-    target: '_blank'
-  }
-}
-
 export default {
   tag: 'header',
   style,
@@ -187,7 +112,6 @@ export default {
   check,
 
   menuIcon,
-  // book,
   langs,
   call
 }
