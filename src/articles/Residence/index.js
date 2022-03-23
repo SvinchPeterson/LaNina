@@ -8,10 +8,11 @@ import LUGGAGE_PNG from '../../assets/luggage.PNG'
 import style, { styleResidenceOrigin } from './style'
 
 const residenceOrigin = {
+  tag: 'section',
   proto: Block,
   style: styleResidenceOrigin,
   props: {
-    flexFlow: 'column'
+    flexFlow: 'row'
   },
   image: {},
   p: {
