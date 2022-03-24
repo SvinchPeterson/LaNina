@@ -101,7 +101,13 @@ import { brightnessLanding, imagePosition } from '../../animations'
 //   }
 // }
 
+export const styleLink = {
+  border: '5px solid green',
+  flex: 1
+}
+
 export default {
+  flex: 1
   // '> a': styleLink,
   // '> a > div': styleImage,
   // '> a > h3 > div': styleUnderConstruction,

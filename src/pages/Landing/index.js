@@ -8,7 +8,7 @@ import { logoB } from '../../components/Logo'
 import RUSTAVELI_JPG from '../../assets/images/rustaveliS.jpg'
 import SOLOLAKI_JPG from '../../assets/images/sololaki.jpg'
 
-import style from './style'
+import style, { styleLink } from './style'
 
 // const logo = {
 //   proto: Logo,
@@ -228,9 +228,23 @@ import style from './style'
 //   }
 // }
 
+const Sololaki = {
+  proto: Link,
+  class: [styleLink]
+}
+
+const Rustaveli = {
+  proto: Link,
+  class: [styleLink]
+}
+
 export default {
-  proto: [Block, Flex],
-  style
+  proto: [Block],
+  props: { flexFlow: 'row' },
+  style,
+
+  Sololaki,
+  Rustaveli
 
   // logo,
   // logo2,
