@@ -1,11 +1,11 @@
 'use strict'
-import { Block, Img } from '@rackai/symbols'
+import { Block, Img, Text } from '@rackai/symbols'
 
 import { bbSololaki } from '../../texts'
 
 import LUGGAGE_PNG from '../../assets/luggage.PNG'
 
-import style, { styleResidenceOrigin } from './style'
+import style, { styleResidenceOrigin, styleEntrence } from './style'
 
 const residenceOrigin = {
   tag: 'section',
@@ -18,7 +18,17 @@ const residenceOrigin = {
   p: {
     proto: [bbSololaki, Block],
     props: { padding: 'E 0 E E' }
+  }
+}
 
+const entrence = {
+  tag: 'section',
+  proto: Block,
+  style: styleEntrence,
+  props: { flexFlow: 'column' },
+  image: {},
+  p: {
+    proto: [Block, Text]
   }
 }
 
@@ -33,5 +43,6 @@ export default {
     gap: 'G'
   },
 
-  residenceOrigin
+  residenceOrigin,
+  entrence
 }

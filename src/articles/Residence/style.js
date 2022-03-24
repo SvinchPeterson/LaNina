@@ -7,13 +7,12 @@ import BALCONY_JPG from '../../assets/images/sololaki/balcony3.jpg'
 export const styleResidenceOrigin = {
   position: 'relative',
   minHeight: `${650 / 16}em`,
-  // border: '3px solid red',
   boxSizing: 'border-box',
   paddingLeft: `${80 / 16}em`,
   '@media only screen and (max-width: 768px)': {
     paddingLeft: `0`
   },
-  // justifyContent: 'center',
+
   '> div': {
     backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
     filter: 'grayscale(30%) brightness(80%)',
@@ -28,13 +27,12 @@ export const styleResidenceOrigin = {
       backgroundSize: 'cover',
       backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .5)), url(' + GREEN_LANINA_JPG + ')'
     }
-    // borderTopLeftRadius: '200px'
   },
+
   '> p': {
     flex: 1,
     background: 'rgba(244, 233, 217, 1)',
     color: 'rgba(0, 0, 0, .25)',
-    // border: '4px solid green',
     position: 'absolute',
     maxWidth: `${900 / 16}em`,
     boxShadow: '0px 0px 75px 0px rgba(244, 233, 217, .55)',
@@ -50,6 +48,15 @@ export const styleResidenceOrigin = {
       padding: `0 ${30 / 16}em`
     },
     '@media only screen and (max-width: 480px)': { fontSize: `${15 / 16}em` }
+  }
+}
+
+export const styleEntrence = {
+  minHeight: `${650 / 16}em`,
+  '> div': {
+    backgroundImage: 'linear-gradient(rgba(42, 81, 61, .1), rgba(42, 81, 61, .3)), url(' + BALCONY_JPG + ')',
+    backgroundSize: 'cover',
+    flex: 1
   }
 }
 
