@@ -10,23 +10,46 @@ export const styleResidenceOrigin = {
   // border: '3px solid red',
   boxSizing: 'border-box',
   paddingLeft: `${80 / 16}em`,
+  '@media only screen and (max-width: 768px)': {
+    paddingLeft: `0`
+  },
   // justifyContent: 'center',
   '> div': {
     backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
-    filter: 'grayscale(50%) brightness(70%)',
+    filter: 'grayscale(30%) brightness(80%)',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     flex: 1,
-    transition: 'all 1s ease-in-out'
+    transition: 'all 1s ease-in-out',
+    '@media only screen and (max-width: 1225px)': {
+      backgroundPosition: 'center center'
+    },
+    '@media only screen and (max-width: 768px)': {
+      backgroundSize: 'cover',
+      backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .5)), url(' + GREEN_LANINA_JPG + ')'
+    }
     // borderTopLeftRadius: '200px'
   },
   '> p': {
     flex: 1,
+    background: 'rgba(244, 233, 217, 1)',
+    color: 'rgba(0, 0, 0, .25)',
     // border: '4px solid green',
     position: 'absolute',
     maxWidth: `${900 / 16}em`,
     boxShadow: '0px 0px 75px 0px rgba(244, 233, 217, .55)',
-    lineHeight: `${28 / 16}em`
+    lineHeight: `${28 / 16}em`,
+    '@media only screen and (max-width: 1225px)': {
+      padding: `0 ${80 / 16}em ${80 / 16}em ${20 / 16}em`
+    },
+    '@media only screen and (max-width: 768px)': {
+      background: 'transparent',
+      color: 'rgba(244, 233, 217, .55)',
+      boxShadow: 'none',
+      alignSelf: 'center',
+      padding: `0 ${30 / 16}em`
+    },
+    '@media only screen and (max-width: 480px)': { fontSize: `${15 / 16}em` }
   }
 }
 
@@ -35,8 +58,6 @@ export default {
   '> section': {
     '> div': { backgroundAttachment: 'fixed' },
     '> p': {
-      background: 'rgba(244, 233, 217, 1)',
-      color: 'rgba(0, 0, 0, .25)',
       letterSpacing: '.5px'
     }
   }
