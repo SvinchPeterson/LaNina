@@ -1,6 +1,6 @@
 'use strict'
 
-import { brightnessLanding, imagePosition } from '../../animations'
+import { brightness, backgroundPosition } from '../../animations'
 
 // const styleLink = {
 //   flex: 1,
@@ -105,12 +105,17 @@ export const styleLink = {
   // border: '5px solid green',
   flex: 1,
   display: 'block',
-  transition: 'all 1s ease-in-out',
+  transition: 'flex 1s ease-in-out, background-position 1s ease-in-out, background-image 1s ease-in-out',
+  // transition: 'all 1s ease-in-out',
   overflow: 'hidden',
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
   backgroundRepeat: 'no-repeat',
-  // backgroundPosition: 'bottom right 100px',
+  animationName: backgroundPosition,
+  animationDuration: '1.5s',
+  animationTimingFunction: 'ease-in-out',
+  backgroundPosition: '0% 0%',
+
   '&:hover': {
     flex: 8
   }
@@ -119,7 +124,11 @@ export const styleLink = {
 export default {
   flex: 1,
   position: 'relative',
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
+  animationName: brightness,
+  animationDuration: '2s',
+  animationTimingFunction: 'ease-in-out',
+  border: '1px solid black'
   // '> a': styleLink,
   // '> a > div': styleImage,
   // '> a > h3 > div': styleUnderConstruction,

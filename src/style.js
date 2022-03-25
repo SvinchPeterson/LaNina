@@ -15,8 +15,7 @@ export default {
   h5: { margin: 0 },
   p: { margin: 0, fontFamily: 'DejaVu Sans' },
   h6: { margin: 0 },
-  fontFamily: 'Helvetica Neue',
-  border: '10px solid red'
+  fontFamily: 'Helvetica Neue'
   // fontFamily: 'Helvetica'
   // fontFamily: 'DejaVu Sans'
   // background: 'rgba(42, 81, 61, 1)'
