@@ -1,12 +1,12 @@
 'use strict'
-import { Block, Flex, Link, Text } from '@rackai/symbols'
+import { Block, Flex, Img, Link, Text } from '@rackai/symbols'
 import { coverLogoAnimation, coverLogoAnimation2 } from '../../animations'
 
 import { Logo } from '../../components'
 import { logoB } from '../../components/Logo'
 
-import RUSTAVELI_JPG from '../../assets/images/rustaveliS.jpg'
-import SOLOLAKI_JPG from '../../assets/images/sololaki.jpg'
+import RUSTAVELI_JPG from '../../assets/images/coverPage/rustaveli.jpg'
+import SOLOLAKI_JPG from '../../assets/images/coverPage/sololaki.jpg'
 
 import style, { styleLink } from './style'
 
@@ -230,12 +230,22 @@ import style, { styleLink } from './style'
 
 const Sololaki = {
   proto: Link,
-  class: [styleLink]
+  class: [styleLink],
+  style: {
+    backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
+    '&:hover': { backgroundPosition: 'top right 100px' }
+  }
 }
 
 const Rustaveli = {
   proto: Link,
-  class: [styleLink]
+  class: [styleLink],
+  style: {
+    backgroundImage: 'url(' + RUSTAVELI_JPG + ')',
+    '&:hover': {
+      backgroundPosition: 'top left 100px'
+    }
+  }
 }
 
 export default {

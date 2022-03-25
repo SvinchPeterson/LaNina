@@ -102,12 +102,24 @@ import { brightnessLanding, imagePosition } from '../../animations'
 // }
 
 export const styleLink = {
-  border: '5px solid green',
-  flex: 1
+  // border: '5px solid green',
+  flex: 1,
+  display: 'block',
+  transition: 'all 1s ease-in-out',
+  overflow: 'hidden',
+  backgroundSize: 'cover',
+  backgroundAttachment: 'fixed',
+  backgroundRepeat: 'no-repeat',
+  // backgroundPosition: 'bottom right 100px',
+  '&:hover': {
+    flex: 8
+  }
 }
 
 export default {
-  flex: 1
+  flex: 1,
+  position: 'relative',
+  boxSizing: 'border-box'
   // '> a': styleLink,
   // '> a > div': styleImage,
   // '> a > h3 > div': styleUnderConstruction,
