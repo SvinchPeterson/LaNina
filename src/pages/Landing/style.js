@@ -1,6 +1,6 @@
 'use strict'
 
-import { brightness, backgroundPosition } from '../../animations'
+import { brightness, backgroundPosition, coverLogoAnimation } from '../../animations'
 
 // const styleLink = {
 //   flex: 1,
@@ -102,11 +102,9 @@ import { brightness, backgroundPosition } from '../../animations'
 // }
 
 export const styleLink = {
-  // border: '5px solid green',
   flex: 1,
   display: 'block',
   transition: 'flex 1s ease-in-out, background-position 1s ease-in-out, background-image 1s ease-in-out',
-  // transition: 'all 1s ease-in-out',
   overflow: 'hidden',
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
@@ -115,10 +113,29 @@ export const styleLink = {
   animationDuration: '1.5s',
   animationTimingFunction: 'ease-in-out',
   backgroundPosition: '0% 0%',
-
+  // backgroundBlendMode: 'screen',
   '&:hover': {
     flex: 8
   }
+}
+
+export const styleLogo = {
+  position: 'absolute',
+  top: '45%',
+  left: '50%',
+  transform: 'translate(-50%, -50%) scale(1.4)',
+  zIndex: 400,
+  pointerEvents: 'none',
+  opacity: 1,
+  '@media only screen and (min-width: 1225px)': {
+    animationName: coverLogoAnimation,
+    animationDuration: '1s',
+    animationTimingFunction: 'ease-in-out'
+  },
+  '@media only screen and (max-width: 1225px)': {
+    opacity: 0
+  }
+
 }
 
 export default {

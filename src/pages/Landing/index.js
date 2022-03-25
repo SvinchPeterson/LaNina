@@ -1,6 +1,5 @@
 'use strict'
 import { Block, Flex, Img, Link, Text } from '@rackai/symbols'
-import { coverLogoAnimation, coverLogoAnimation2 } from '../../animations'
 
 import { Logo } from '../../components'
 import { logoB } from '../../components/Logo'
@@ -11,7 +10,7 @@ import SOLOLAKI_LOAD_JPG from '../../assets/images/coverPage/sololakiDark.jpg'
 import RUSTAVELI_HOVER_JPG from '../../assets/images/coverPage/rustaveliHover.jpg'
 import SOLOLAKI_HOVER_JPG from '../../assets/images/coverPage/sololakiHover.jpg'
 
-import style, { styleLink } from './style'
+import style, { styleLink, styleLogo } from './style'
 
 // const logo = {
 //   proto: Logo,
@@ -235,12 +234,10 @@ const Sololaki = {
   proto: Link,
   class: [styleLink],
   style: {
-    // backgroundImage: 'radial-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, 1)),url(' + SOLOLAKI_LOAD_JPG + ')',
-    // backgroundImage: 'linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, 5)),url(' + SOLOLAKI_LOAD_JPG + ')',
-    backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .3), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_LOAD_JPG + ')',
+    backgroundImage: 'radial-gradient(rgba(244, 233, 217, .2), rgba(42, 81, 61, .3), rgba(0, 0, 0, .8)),url(' + SOLOLAKI_LOAD_JPG + ')',
     '&:hover': {
       backgroundPosition: 'top left -100px',
-      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .4), rgba(0, 0, 0, .3)),url(' + SOLOLAKI_HOVER_JPG + ')'
+      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .2), rgba(42, 81, 61, .3), rgba(0, 0, 0, .6)),url(' + SOLOLAKI_HOVER_JPG + ')'
     }
   }
 }
@@ -249,23 +246,25 @@ const Rustaveli = {
   proto: Link,
   class: [styleLink],
   style: {
-    // backgroundImage: 'radial-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, 1)), url(' + RUSTAVELI_LOAD_JPG + ')',
-    // backgroundImage: 'linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .5)), url(' + RUSTAVELI_LOAD_JPG + ')',
-    backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .3), rgba(0, 0, 0, .5)), url(' + RUSTAVELI_LOAD_JPG + ')',
+    backgroundImage: 'radial-gradient(rgba(244, 233, 217, .2), rgba(42, 81, 61, .3), rgba(0, 0, 0, .8)), url(' + RUSTAVELI_LOAD_JPG + ')',
     '&:hover': {
       backgroundPosition: 'top left 100px',
-      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .25), rgba(42, 81, 61, .4), rgba(0, 0, 0, .3)), url(' + RUSTAVELI_HOVER_JPG + ')'
+      backgroundImage: 'radial-gradient(rgba(244, 233, 217, .2), rgba(42, 81, 61, .3), rgba(0, 0, 0, .6)), url(' + RUSTAVELI_HOVER_JPG + ')'
     }
   }
 }
-
+const logo = {
+  proto: Logo,
+  style: styleLogo
+}
 export default {
   proto: [Block],
   props: { flexFlow: 'row' },
   style,
 
   Sololaki,
-  Rustaveli
+  Rustaveli,
+  logo
 
   // logo,
   // logo2,

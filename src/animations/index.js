@@ -11,10 +11,21 @@ export const brightness = keyframes`
 `
 export const backgroundPosition = keyframes`
   from {
-   background-position: bottom center;
+   background-position: center center;
   }
   to {
     background-position: 0% 0%;
+  }
+`
+export const coverLogoAnimation = keyframes`
+  from {
+    opacity: .2;
+    transform: translate(-50%, -50%) scale(1.3);
+
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.4);
   }
 `
 // export const zoomOutLanding = keyframes`
