@@ -12,7 +12,7 @@ export const styleBanner = {
   overflow: 'hidden',
 
   '> span': {
-    backgroundImage: 'linear-gradient(rgba(42, 81, 61, .45), rgba(42, 81, 61, 1)), url(' + COVER_JPG + ')',
+    backgroundImage: 'linear-gradient(rgba(42, 81, 61, .5), rgba(42, 81, 61, .5)), url(' + COVER_JPG + ')',
     backgroundSize: 'cover',
     flex: 1,
     animationName: scaleSololakiBanner,
@@ -20,7 +20,6 @@ export const styleBanner = {
     animationTimingFunction: 'ease-in-out',
     backgroundAttachment: 'fixed',
     transition: 'all 1s ease-in-out',
-    filter: 'grayscale(70%) brightness(60%)',
 
     '&:hover': {
       backgroundPosition: 'center center',
@@ -73,7 +72,6 @@ export const styleBanner = {
     '@media only screen and (max-width: 480px)': {
       fontSize: `${16 / 16}em`,
       boxSizing: 'border-box'
-      // textAlign: 'center'
     },
     '@media only screen and (max-width: 370px)': {
       fontSize: `${14 / 16}em`

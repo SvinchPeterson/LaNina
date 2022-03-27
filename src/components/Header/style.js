@@ -80,7 +80,7 @@ export default {
   top: '0px',
   zIndex: 1000,
   boxSizing: 'border-box',
-  mixBlendMode: 'difference',
+  // mixBlendMode: 'difference',
   backdropFilter: 'blur(2px)',
 
   '@media only screen and (max-width: 768px)': {
