@@ -6,25 +6,32 @@ export const styleLink = {
   flex: 1,
   transition: 'all 1s ease-in-out',
   overflow: 'hidden',
-  backgroundSize: 'cover',
-  backgroundAttachment: 'fixed',
   backgroundRepeat: 'no-repeat',
-  animationName: backgroundPosition,
-  animationDuration: '1.5s',
-  animationTimingFunction: 'ease-in-out',
-  backgroundPosition: '0% 0%',
   position: 'relative',
-  // backgroundBlendMode: 'screen',
-  '&:hover': {
-    flex: 8
-  },
+  backgroundSize: 'cover',
+  textDecoration: 'none',
   '&:hover > h3': {
-    color: 'rgba(244, 233, 217, 1)',
-    transform: 'scale(1.05)'
-    // fontSize: `${22 / 16}em`
+    color: 'rgba(244, 233, 217, 1)'
   },
   '&:hover > h3::after': { opacity: 1 },
-  '&:not(:hover) > h3::after': { transition: 'opacity 0s ease-in-out' }
+  '&:not(:hover) > h3::after': { transition: 'opacity 0s ease-in-out' },
+
+  '@media only screen and (min-width: 1225px)': {
+    backgroundPosition: '0% 0%',
+    backgroundAttachment: 'fixed',
+    animationName: backgroundPosition,
+    animationDuration: '1.5s',
+    animationTimingFunction: 'ease-in-out',
+    '&:hover': {
+      flex: 8
+    }
+  },
+  '@media only screen and (max-width: 1225px)': {
+    backgroundPosition: 'bottom center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 }
 
 export const styleLogo = {
@@ -62,15 +69,21 @@ export const styleLogo2 = {
 }
 
 export const styleheading = {
-  position: 'absolute',
-  bottom: '15%',
-  fontSize: `${18 / 16}em`,
   color: 'rgba(244, 233, 217, .75)',
   textTransform: 'uppercase',
   fontWeight: 700,
   letterSpacing: '1px',
-  transition: 'all 1s ease-in-out'
+  transition: 'all 1s ease-in-out',
+  textAlign: 'center',
+  '@media only screen and (min-width: 1225px)': {
+    fontSize: `${18 / 16}em`,
+    position: 'absolute',
+    bottom: '15%'
+  },
+  '@media only screen and (max-width: 1225px)': {
+    fontSize: `${36 / 16}em`
 
+  }
 }
 
 export default {
@@ -83,21 +96,4 @@ export default {
   '@media only screen and (max-width: 1225px)': {
     flexFlow: 'column'
   }
-
-  // '> a': styleLink,
-  // '> a > div': styleImage,
-  // '> a > h3 > div': styleUnderConstruction,
-
-  // flex: 1,
-  // position: 'relative',
-  // overflow: 'hidden',
-  // // background: 'black',
-  // // background: 'rgba(42, 81, 61, 1)',
-  // animationName: brightnessLanding,
-  // animationDuration: '2s',
-  // animationTimingFunction: 'ease-in-out',
-  // margin: '0 auto',
-  // '@media only screen and (max-width: 1225px)': {
-  //   flexFlow: 'column'
-  // }
 }
