@@ -14,14 +14,22 @@ export const styleLink = {
   animationTimingFunction: 'ease-in-out',
   backgroundPosition: '0% 0%',
   position: 'relative',
+  // backgroundBlendMode: 'screen',
   '&:hover': {
     flex: 8
-  }
+  },
+  '&:hover > h3': {
+    color: 'rgba(244, 233, 217, 1)',
+    transform: 'scale(1.05)'
+    // fontSize: `${22 / 16}em`
+  },
+  '&:hover > h3::after': { opacity: 1 },
+  '&:not(:hover) > h3::after': { transition: 'opacity 0s ease-in-out' }
 }
 
 export const styleLogo = {
   position: 'absolute',
-  top: '45%',
+  top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%) scale(1.4)',
   zIndex: 400,
@@ -54,7 +62,14 @@ export const styleLogo2 = {
 }
 
 export const styleheading = {
-  position: 'absolute'
+  position: 'absolute',
+  bottom: '15%',
+  fontSize: `${18 / 16}em`,
+  color: 'rgba(244, 233, 217, .75)',
+  textTransform: 'uppercase',
+  fontWeight: 700,
+  letterSpacing: '1px',
+  transition: 'all 1s ease-in-out'
 
 }
 
