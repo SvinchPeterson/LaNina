@@ -3,6 +3,7 @@
 import { scaleSololakiBanner, zoomInB, letterSpacingIn, verticalMove } from '../../animations'
 
 import COVER_JPG from '../../assets/images/sololaki/sololaki.jpg'
+import COVER2_JPG from '../../assets/images/sololaki/coverMobile.jpg'
 import { cream } from '../../colors'
 
 export const styleBanner = {
@@ -12,7 +13,7 @@ export const styleBanner = {
   overflow: 'hidden',
 
   '> span': {
-    backgroundImage: 'linear-gradient(rgba(42, 81, 61, .5), rgba(42, 81, 61, .5)), url(' + COVER_JPG + ')',
+    backgroundImage: 'linear-gradient(rgba(42, 81, 61, .5), rgba(42, 81, 61, .8)), url(' + COVER_JPG + ')',
     backgroundSize: 'cover',
     flex: 1,
     animationName: scaleSololakiBanner,
@@ -20,10 +21,16 @@ export const styleBanner = {
     animationTimingFunction: 'ease-in-out',
     backgroundAttachment: 'fixed',
     transition: 'all 1s ease-in-out',
+    backgroundRepeat: 'no-repeat',
+    '@media only screen and (min-width: 1225px)': {
+      '&:hover': {
+        backgroundPosition: 'center center',
+        transition: 'all 2s ease-in-out'
+      }
+    },
 
-    '&:hover': {
-      backgroundPosition: 'center center',
-      transition: 'all 2s ease-in-out'
+    '@media only screen and (max-width: 480px)': {
+      // backgroundImage: 'linear-gradient(rgba(42, 81, 61, .5), rgba(42, 81, 61, .8)), url(' + COVER2_JPG + ')',
     }
   },
   '> caption': {
@@ -56,16 +63,17 @@ export const styleBanner = {
   },
   '> p': {
     position: 'absolute',
-    top: '52%',
+    top: '50%',
     left: '50%',
     pointerEvents: 'none',
-    color: 'rgba(168, 98, 63, .65)',
+    color: 'rgba(168, 98, 63, .85)',
     fontSize: `${18 / 16}em`,
     fontFamily: 'DejaVu Sans',
     animationName: verticalMove,
     animationDuration: '1.5s',
     animationTimingFunction: 'ease-in-out',
     whiteSpace: 'nowrap',
+    fontStyle: 'italic',
     '@media only screen and (max-width: 1024px)': {
       transform: 'translate(-50%, -50%)'
     },

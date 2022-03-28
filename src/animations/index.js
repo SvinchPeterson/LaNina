@@ -28,6 +28,37 @@ export const coverLogoAnimation = keyframes`
     transform: translate(-50%, -50%) scale(1.4);
   }
 `
+export const zoomInB = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(.95) translate(-50%, -50%);
+
+  }
+  to {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+  }
+`
+export const verticalMove = keyframes`
+  from {
+   left: 53%;
+   opacity: 0;
+  }
+  to {
+    left: 50%;
+   opacity: 1;
+  }
+`
+
+export const scaleSololakiBanner = keyframes`
+  from {
+   transform: scale(1.2);
+
+  }
+  to {
+    transform: scale(1);
+  }
+`
 // export const zoomOutLanding = keyframes`
 //   from {
 //     transform: scale(1.1);
@@ -96,17 +127,6 @@ export const coverLogoAnimation = keyframes`
 //   }
 // `
 
-// export const zoomInB = keyframes`
-//   from {
-//     opacity: 0;
-//     transform: scale(.95) translate(-50%, -50%);
-
-//   }
-//   to {
-//     transform: scale(1) translate(-50%, -50%);
-//     opacity: 1;
-//   }
-// `
 // export const zoomOutB = keyframes`
 //   from {
 //     transform: scale(1.05);
@@ -163,17 +183,6 @@ export const coverLogoAnimation = keyframes`
 // `
 
 // // Sololaki page animations
-
-// export const scaleSololakiBanner = keyframes`
-//   from {
-//    transform: scale(1.2);
-//    filter: grayscale(50%) brightness(0%);
-//   }
-//   to {
-//     transform: scale(1);
-//     filter: grayscale(70%) brightness(60%)
-//   }
-// `
 
 // export const scaleOpacitySololakiBannerHeading = keyframes`
 //   from {

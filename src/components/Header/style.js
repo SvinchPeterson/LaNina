@@ -16,7 +16,6 @@ const styleCheck = {
 const styleMenuIcon = {
   cursor: 'pointer',
   transition: 'all .2s linear',
-  background: 'radial-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, 0))',
   borderRadius: '100%',
   '&:hover > div': { opacity: 1 },
   '> div': {
@@ -46,7 +45,6 @@ const styleCall = {
   display: 'block',
   borderRadius: '100%',
   background: 'radial-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, 0))',
-  border: '1.5px solid rgba(244, 233, 217, 0)',
   transition: 'all .2s ease-in-out',
   position: 'relative',
 
@@ -80,16 +78,17 @@ export default {
   top: '0px',
   zIndex: 1000,
   boxSizing: 'border-box',
-  // mixBlendMode: 'difference',
-  backdropFilter: 'blur(2px)',
+  mixBlendMode: 'difference',
+  padding: `30px 0`,
 
   '@media only screen and (max-width: 768px)': {
     gap: '0px',
     justifyContent: 'space-between',
-    padding: '60px 60px'
+    padding: `30px 10px`
+    // padding: '60px 60px'
   },
   '@media only screen and (max-width: 480px)': {
-    padding: '60px 10px'
+    // padding: '60px 10px'
 
   },
 
