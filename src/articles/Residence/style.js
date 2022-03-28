@@ -8,23 +8,20 @@ export const styleResidenceOrigin = {
   minHeight: `${650 / 16}em`,
   boxSizing: 'border-box',
   paddingLeft: `${80 / 16}em`,
-  '@media only screen and (max-width: 768px)': {
-    paddingLeft: 0
+  backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
+  backgroundSize: 'contain',
+  backgroundRepeat: 'no-repeat',
+  flex: 1,
+  transition: 'all 1s ease-in-out',
+  backgroundAttachment: 'fixed',
+  backgroundPosition: 'top left 80px',
+  '@media only screen and (max-width: 1225px)': {
+    backgroundPosition: 'center center'
   },
-
-  '> div': {
-    backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    flex: 1,
-    transition: 'all 1s ease-in-out',
-    '@media only screen and (max-width: 1225px)': {
-      backgroundPosition: 'center center'
-    },
-    '@media only screen and (max-width: 768px)': {
-      backgroundSize: 'cover',
-      backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .5)), url(' + GREEN_LANINA_JPG + ')'
-    }
+  '@media only screen and (max-width: 768px)': {
+    paddingLeft: 0,
+    backgroundSize: 'cover',
+    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .5)), url(' + GREEN_LANINA_JPG + ')'
   },
 
   '> p': {
@@ -59,6 +56,7 @@ export const styleEntrence = {
     backgroundSize: 'cover',
     flex: 1
   }
+
 }
 
 export default {

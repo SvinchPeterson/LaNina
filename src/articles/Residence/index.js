@@ -14,7 +14,7 @@ const residenceOrigin = {
   props: {
     flexAlign: '0 center'
   },
-  image: {},
+  // image: {},
   p: {
     proto: [bbSololaki, Block],
     props: { padding: 'F 0 E E' }
