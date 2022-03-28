@@ -85,11 +85,6 @@ export default {
     gap: '0px',
     justifyContent: 'space-between',
     padding: `30px 10px`
-    // padding: '60px 60px'
-  },
-  '@media only screen and (max-width: 480px)': {
-    // padding: '60px 10px'
-
   },
 
   '> input': styleCheck,

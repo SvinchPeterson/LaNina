@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Img, Text } from '@rackai/symbols'
+import { Block, Text } from '@rackai/symbols'
 
 import { bbSololaki } from '../../texts'
 
@@ -17,7 +17,7 @@ const residenceOrigin = {
   image: {},
   p: {
     proto: [bbSololaki, Block],
-    props: { padding: 'E 0 E E' }
+    props: { padding: 'F 0 E E' }
   }
 }
 

@@ -1,6 +1,5 @@
 'use strict'
 
-import { cream } from '../../colors'
 import GREEN_LANINA_JPG from '../../assets/images/sololaki/greenLanina2.jpg'
 import BALCONY_JPG from '../../assets/images/sololaki/balcony3.jpg'
 
@@ -10,12 +9,11 @@ export const styleResidenceOrigin = {
   boxSizing: 'border-box',
   paddingLeft: `${80 / 16}em`,
   '@media only screen and (max-width: 768px)': {
-    paddingLeft: `0`
+    paddingLeft: 0
   },
 
   '> div': {
     backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
-    filter: 'grayscale(30%) brightness(80%)',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     flex: 1,
@@ -34,20 +32,23 @@ export const styleResidenceOrigin = {
     background: 'rgba(244, 233, 217, 1)',
     color: 'rgba(0, 0, 0, .25)',
     position: 'absolute',
-    maxWidth: `${900 / 16}em`,
+    fontSize: `${15 / 16}em`,
+    maxWidth: `${900 / 15}em`,
     boxShadow: '0px 0px 75px 0px rgba(244, 233, 217, .55)',
-    lineHeight: `${28 / 16}em`,
+    lineHeight: `${28 / 15}em`,
+    overflow: 'hidden',
+    fontWeight: 500,
     '@media only screen and (max-width: 1225px)': {
-      padding: `0 ${80 / 16}em ${80 / 16}em ${20 / 16}em`
+      padding: `0 ${80 / 15}em ${80 / 15}em ${20 / 15}em`
     },
     '@media only screen and (max-width: 768px)': {
       background: 'transparent',
       color: 'rgba(244, 233, 217, .55)',
       boxShadow: 'none',
       alignSelf: 'center',
-      padding: `0 ${30 / 16}em`
-    },
-    '@media only screen and (max-width: 480px)': { fontSize: `${15 / 16}em` }
+      padding: `${30 / 15}em`,
+      backdropFilter: 'blur(5px)'
+    }
   }
 }
 

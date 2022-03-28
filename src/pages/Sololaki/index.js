@@ -5,9 +5,9 @@ import { Block, Flex, Text, Link } from '@rackai/symbols'
 import { Residence, Apartments, Location } from '../../articles'
 import { paddingOut, opacity } from '../../animations'
 
-import { Header, Menu, BBbanner } from '../../components'
+import { Header, Menu } from '../../components'
 
-import { logoB, logoPng } from '../../components/Logo'
+import { logoPng } from '../../components/Logo'
 
 import style, { styleBanner } from './style'
 
@@ -20,7 +20,6 @@ const book2 = {
     target: '_blank'
   },
   style: {
-    // border: '1px solid red',
     textDecoration: 'none',
     position: 'fixed',
     animationDuration: '1.5s',
@@ -46,10 +45,7 @@ const book2 = {
     zIndex: '1002',
     transform: 'scale(1)',
     backdropFilter: 'blur(6px) brightness(100%)',
-    // borderRadius: '100px',
     background: 'rgba(42, 81, 61, .5)',
-
-    // background: 'radial-gradient(rgba(42, 81, 61, .3), rgba(42, 81, 61, .3))',
 
     color: 'rgba(244, 233, 217, .65)',
     fontSize: '19px',
@@ -57,8 +53,6 @@ const book2 = {
     textTransform: 'uppercase',
     cursor: 'pointer',
     fontWeight: '500',
-
-    // writingMode: 'vertical-rl'
     textOrientation: ' upLeft',
     '&:hover': { color: 'rgba(244, 233, 217, 1)' },
     '&:hover > img': { opacity: 1 }
@@ -74,15 +68,6 @@ const book2 = {
     }
   },
   text: 'ook'
-  // h5: {
-  //   proto: Text,
-  //   props: { text: 'ook' },
-  //   style: {
-  //     color: 'white',
-  //     border: '2px solid green',
-  //     height: 'fit-content'
-  //   }
-  // }
 }
 
 const banner = {
