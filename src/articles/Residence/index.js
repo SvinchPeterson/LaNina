@@ -16,7 +16,7 @@ const residenceOrigin = {
   },
   p: {
     proto: [bbSololaki, Block],
-    props: { padding: 'F 0 E E' }
+    props: { padding: 'E 0 F E' }
   }
 }
 
