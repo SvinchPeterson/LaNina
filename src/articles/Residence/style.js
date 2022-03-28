@@ -56,7 +56,6 @@ export const styleEntrence = {
   transition: 'all 1s ease-in-out',
   '&:hover': { backgroundPosition: 'bottom 50px right' },
   '> p': {
-    background: 'rgba(244, 233, 217, 1)',
     maxWidth: 'fit-content',
     fontSize: `${15 / 16}em`,
     fontWeight: 500,
@@ -72,7 +71,8 @@ export default {
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     '> p': {
-      letterSpacing: '.5px'
+      letterSpacing: '.7px',
+      background: 'rgba(244, 233, 217, 1)'
     }
   }
 }

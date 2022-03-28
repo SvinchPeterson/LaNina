@@ -27,7 +27,7 @@ const entrence = {
   props: { flexAlign: 'flex-end flex-end' },
   p: {
     proto: [Block, Text],
-    props: { padding: 'D' },
+    props: { padding: 'E E D E' },
     entrences: {
       proto: Block,
       props: {
@@ -42,18 +42,17 @@ const entrence = {
           gap: 'Z'
         },
         style: {
-          // opacity: '.45',
-          color: 'rgba(168, 98, 63, 1)',
-          fontWeight: 700,
-          fontSize: `${13 / 15}em`
+          opacity: '.35',
+          // color: 'rgba(168, 98, 63, 1)',
+          fontSize: `${14 / 15}em`,
+          letterSpacing: '1.3px'
         },
         dot: {
           style: {
             width: '4px',
             height: '4px',
             borderRadius: '100%',
-            background: 'rgba(168, 98, 63, 1)'
-            // background: 'rgba(0, 0, 0, 1)'
+            background: 'rgba(0, 0, 0, .75)'
           }
         },
         span: { proto: Text }
@@ -81,18 +80,21 @@ const entrence = {
       },
       style: {
         maxWidth: `${500 / 15}em`,
-        opacity: '.5'
+        opacity: '.25'
       },
       icon: {
         proto: Img,
-        props: { src: LUGGAGE_PNG }
+        props: { src: LUGGAGE_PNG },
+        style: { marginTop: '5px' }
       },
       text: `Luggage dropoff allowed
       for guests' convenience when they have early arrival or late departure`
     },
     stay: {
       proto: [stayText, Block],
-      props: { padding: 'Z 0 0 B1' }
+      props: { padding: 'Z 0 0 B1' },
+      style: { color: 'rgba(0, 0, 0, .25)' }
+      // style: { color: 'rgba(168, 98, 63, .35)', fontWeight: 'bold' }
     }
   }
 }

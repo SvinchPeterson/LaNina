@@ -112,11 +112,11 @@ export default {
   },
 
   book2,
-  banner,
-  Header,
-  Menu,
+  // banner,
+  // Header,
+  // Menu,
 
-  Residence,
-  Apartments,
-  Location
+  Residence
+  // Apartments,
+  // Location
 }
