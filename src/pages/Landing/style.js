@@ -4,17 +4,12 @@ import { brightness, backgroundPosition, coverLogoAnimation, coverLogoAnimation2
 
 export const styleLink = {
   flex: 1,
-  transition: 'all 1s ease-in-out',
+  transition: 'flex 1s ease-in-out, background-image 1s ease-in-out, background-position 1s ease-in-out',
   overflow: 'hidden',
   backgroundRepeat: 'no-repeat',
   position: 'relative',
   backgroundSize: 'cover',
   textDecoration: 'none',
-  '&:hover > h3': {
-    color: 'rgba(244, 233, 217, 1)'
-  },
-  '&:hover > h3::after': { opacity: 1 },
-  '&:not(:hover) > h3::after': { transition: 'opacity 0s ease-in-out' },
 
   '@media only screen and (min-width: 1225px)': {
     backgroundPosition: '0% 0%',
@@ -24,7 +19,13 @@ export const styleLink = {
     animationTimingFunction: 'ease-in-out',
     '&:hover': {
       flex: 8
-    }
+    },
+    '&:hover > h3': {
+      color: 'rgba(244, 233, 217, 1)',
+      transform: 'scale(1.1)'
+    },
+    '&:hover > h3::after': { opacity: 1 },
+    '&:not(:hover) > h3::after': { transition: 'opacity 0s ease-in-out' }
   },
   '@media only screen and (max-width: 1225px)': {
     backgroundPosition: 'bottom center',
@@ -41,7 +42,7 @@ export const styleLogo = {
   transform: 'translate(-50%, -50%) scale(1.4)',
   zIndex: 400,
   pointerEvents: 'none',
-  opacity: 1,
+  opacity: 0.7,
   '@media only screen and (min-width: 1225px)': {
     animationName: coverLogoAnimation,
     animationDuration: '1s',

@@ -13,7 +13,6 @@ export const styleResidenceOrigin = {
   backgroundRepeat: 'no-repeat',
   flex: 1,
   transition: 'all 1s ease-in-out',
-  backgroundAttachment: 'fixed',
   backgroundPosition: 'top left 80px',
   '@media only screen and (max-width: 1225px)': {
     backgroundPosition: 'center center'
@@ -51,18 +50,23 @@ export const styleResidenceOrigin = {
 
 export const styleEntrence = {
   minHeight: `${650 / 16}em`,
-  '> div': {
-    backgroundImage: 'linear-gradient(rgba(42, 81, 61, .1), rgba(42, 81, 61, .3)), url(' + BALCONY_JPG + ')',
-    backgroundSize: 'cover',
-    flex: 1
+  backgroundImage: 'linear-gradient(rgba(42, 81, 61, .1), rgba(42, 81, 61, .3)), url(' + BALCONY_JPG + ')',
+  backgroundSize: 'cover',
+  '> p': {
+    background: 'rgba(244, 233, 217, 1)',
+    maxWidth: 'fit-content',
+    fontSize: `${15 / 16}em`,
+    fontWeight: 500,
+    img: {
+      width: `${20 / 16}em`
+    }
   }
-
 }
 
 export default {
   // border: '8px solid red',
   '> section': {
-    '> div': { backgroundAttachment: 'fixed' },
+    backgroundAttachment: 'fixed',
     '> p': {
       letterSpacing: '.5px'
     }
