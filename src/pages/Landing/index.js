@@ -12,78 +12,67 @@ import SOLOLAKI_HOVER_JPG from '../../assets/images/coverPage/sololakiHover.jpg'
 
 import style, { styleLink, styleLogo, styleLogo2, styleheading } from './style'
 
+const heading = {
+  tag: 'h3',
+  proto: [Block, Text],
+  props: { size: 'B' },
+  class: [styleheading]
+}
+
 const Sololaki = {
-  proto: Link,
+  proto: [Link, Block],
   class: [styleLink],
-  props: { href: './Sololaki' },
+  props: {
+    href: './Sololaki',
+    flexAlign: 'flex-end flex-end'
+  },
   style: {
     backgroundImage: 'radial-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, .5), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_LOAD_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
       '&:hover': {
         backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .3)),url(' + SOLOLAKI_HOVER_JPG + ')',
-        backgroundPosition: 'top left -100px',
-        '> h3': { right: `${30 / 18}em` }
+        backgroundPosition: 'top left -100px'
       }
     }
   },
-
-  heading: {
-    tag: 'h3',
-    proto: [Block, Text],
-    props: { text: 'sololaki' },
-    class: [styleheading],
-    style: { right: `${10 / 18}em` }
+  caption: {
+    proto: heading,
+    props: {
+      text: 'sololaki',
+      padding: '0 Z E 0'
+    }
   }
 }
 
 const Rustaveli = {
-  proto: Link,
+  proto: [Link, Block],
   class: [styleLink],
-  // props: { href: './Rustaveli' },
+  props: {
+    // href: './Rustaveli',
+    flexAlign: 'flex-end flex-start'
+  },
   style: {
     backgroundImage: 'radial-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, .5), rgba(0, 0, 0, .5)), url(' + RUSTAVELI_LOAD_JPG + ')',
     cursor: 'auto',
     '@media only screen and (min-width: 1225px)': {
       '&:hover': {
         backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .3)),url(' + RUSTAVELI_HOVER_JPG + ')',
-        backgroundPosition: 'top left 100px',
-        '> h3': { left: `${30 / 18}em` }
+        backgroundPosition: 'top left 100px'
       }
     }
   },
-
-  on: {
-    click: (event, element, state) => {
-      state.update({ underConstruction: true })
-    }
-  },
-
-  heading: {
-    tag: 'h3',
-    proto: [Block, Text],
-    props: { text: 'rustaveli' },
-    class: [styleheading],
+  caption: {
+    proto: heading,
+    props: {
+      padding: '0 0 E Z'
+    },
+    text: 'rustaveli',
     span: {
       proto: Text,
-      props: { text: 'under construction' },
-      style: {
-        color: '#DD7C4C',
-        whiteSpace: 'nowrap',
-        textTransform: 'lowercase',
-        transition: 'opacity .5s ease-in-out',
-        fontWeight: '400',
-        position: 'absolute',
-        top: '20px',
-        fontSize: `${16 / 18}em`,
-        opacity: 0
-      },
-
-      class: {
-        show: (element, state) => state.underConstruction ? { opacity: 1 } : { opacity: 0 }
+      props: {
+        text: 'under construction',
+        size: 'Z'
       }
-    },
-    style: {
-      left: `${10 / 18}em`
     }
   }
 }

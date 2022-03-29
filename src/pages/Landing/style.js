@@ -10,6 +10,7 @@ export const styleLink = {
   position: 'relative',
   backgroundSize: 'cover',
   textDecoration: 'none',
+  color: 'rgba(244, 233, 217, 1)',
 
   '@media only screen and (min-width: 1225px)': {
     backgroundPosition: '0% 0%',
@@ -21,11 +22,10 @@ export const styleLink = {
       flex: 8
     },
     '&:hover > h3': {
-      color: 'rgba(244, 233, 217, 1)',
-      transform: 'scale(1.1)'
-    },
-    '&:hover > h3 > span': { opacity: 1 },
-    '&:not(:hover) > h3 > span': { transition: 'opacity 0s ease-in-out' }
+      color: 'rgba(244, 233, 217, 1)'
+    }
+    // '&:hover > h3 > span': { opacity: 1 },
+    // '&:not(:hover) > h3 > span': { transition: 'opacity 0s ease-in-out' }
   },
   '@media only screen and (max-width: 1225px)': {
     backgroundPosition: 'bottom center',
@@ -42,7 +42,7 @@ export const styleLogo = {
   transform: 'translate(-50%, -50%) scale(1.4)',
   zIndex: 400,
   pointerEvents: 'none',
-  opacity: 0.7,
+  opacity: 0.85,
   '@media only screen and (min-width: 1225px)': {
     animationName: coverLogoAnimation,
     animationDuration: '1s',
@@ -50,6 +50,7 @@ export const styleLogo = {
   },
   '@media only screen and (max-width: 1225px)': {
     opacity: 0
+
   }
 }
 
@@ -65,27 +66,26 @@ export const styleLogo2 = {
     opacity: 1,
     animationName: coverLogoAnimation2,
     animationDuration: '2s',
-    animationTimingFunction: 'ease-in-out'
+    animationTimingFunction: 'ease-in-out',
+    transform: 'translate(-50%, -50%) scale(1.3)'
   }
 }
 
 export const styleheading = {
-  color: 'rgba(244, 233, 217, .75)',
   textTransform: 'uppercase',
-  fontWeight: 700,
-  letterSpacing: '1px',
-  transition: 'all 1s ease-in-out',
-  textAlign: 'center',
+  letterSpacing: '.7px',
+  color: 'rgba(244, 233, 217, .55)',
   position: 'relative',
-  '@media only screen and (min-width: 1225px)': {
-    fontSize: `${18 / 16}em`,
+  transition: 'color 1s ease-in-out',
+  '> span': {
+    textTransform: 'lowercase',
     position: 'absolute',
-    bottom: '15%'
-  },
-  '@media only screen and (max-width: 1225px)': {
-    fontSize: `${36 / 16}em`
-
+    whiteSpace: 'nowrap',
+    top: '30px',
+    left: '15px',
+    color: 'rgba(168, 98, 63, 1)'
   }
+
 }
 
 export default {
