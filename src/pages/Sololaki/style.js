@@ -12,7 +12,7 @@ export const styleBanner = {
   overflow: 'hidden',
 
   '> span': {
-    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .65), rgba(42, 81, 61, .75), rgba(0, 0, 0, 1)), url(' + COVER_JPG + ')',
+    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .5), rgba(0, 0, 0, .7)), url(' + COVER_JPG + ')',
     // backgroundImage: 'url(' + COVER_JPG + ')',
     backgroundSize: 'cover',
     flex: 1,
@@ -20,7 +20,7 @@ export const styleBanner = {
     animationDuration: '3s',
     animationTimingFunction: 'ease-in-out',
     backgroundAttachment: 'fixed',
-    transition: 'all 1s ease-in-out',
+    transition: 'all 2s ease-in-out',
     backgroundRepeat: 'no-repeat',
     position: 'absolute',
     width: '100%',
@@ -33,14 +33,14 @@ export const styleBanner = {
     }
   },
   '> caption': {
-    fontWeight: '500',
+    fontWeight: '700',
     position: 'absolute',
-    top: '40%',
+    top: '50%',
     left: '50%',
     zIndex: '100',
     transform: 'translate(-50%, -50%) scale(1)',
-    color: 'rgba(244, 233, 217, .55)',
-    fontSize: `${50 / 16}em`,
+    color: 'rgba(244, 233, 217, .75)',
+    fontSize: `${60 / 16}em`,
     textTransform: 'uppercase',
     animationName: zoomInB,
     animationDuration: '3s',
@@ -62,7 +62,7 @@ export const styleBanner = {
   },
   '> p': {
     position: 'absolute',
-    top: '50%',
+    top: '60%',
     left: '50%',
     pointerEvents: 'none',
     color: 'rgba(168, 98, 63, 1)',

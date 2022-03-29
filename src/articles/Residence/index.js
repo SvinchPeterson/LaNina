@@ -16,7 +16,7 @@ const residenceOrigin = {
   },
   p: {
     proto: [bbSololaki, Block],
-    props: { padding: 'E 0 F E' }
+    props: { padding: 'E 0 E E' }
   }
 }
 
@@ -33,7 +33,7 @@ const entrence = {
       props: {
         flexFlow: 'column',
         gap: 'Y',
-        padding: '0 0 B 0'
+        padding: '0 0 C 0'
       },
       childProto: {
         proto: Block,
@@ -76,7 +76,7 @@ const entrence = {
       proto: Block,
       props: {
         flexAlign: 'flex-start center',
-        gap: 'Z'
+        gap: 'Z2'
       },
       style: {
         maxWidth: `${500 / 15}em`,
@@ -85,14 +85,14 @@ const entrence = {
       icon: {
         proto: Img,
         props: { src: LUGGAGE_PNG },
-        style: { marginTop: '5px' }
+        style: { marginTop: '3px' }
       },
       text: `Luggage dropoff allowed
       for guests' convenience when they have early arrival or late departure`
     },
     stay: {
       proto: [stayText, Block],
-      props: { padding: 'Z 0 0 B1' },
+      props: { padding: 'Z 0 0 B2' },
       style: { color: 'rgba(0, 0, 0, .25)' }
       // style: { color: 'rgba(168, 98, 63, .35)', fontWeight: 'bold' }
     }

@@ -1,7 +1,7 @@
 'use strict'
 
-import GREEN_LANINA_JPG from '../../assets/images/sololaki/greenLanina2.jpg'
-import BALCONY_JPG from '../../assets/images/sololaki/balcony3.jpg'
+import GREEN_LANINA_JPG from '../../assets/images/sololaki/BBgreen.jpg'
+import ENTRENCE_JPG from '../../assets/images/sololaki/entrence2.jpg'
 
 export const styleResidenceOrigin = {
   position: 'relative',
@@ -50,9 +50,8 @@ export const styleResidenceOrigin = {
 
 export const styleEntrence = {
   minHeight: `${700 / 16}em`,
-  backgroundImage: 'url(' + BALCONY_JPG + ')',
+  backgroundImage: 'url(' + ENTRENCE_JPG + ')',
   transition: 'all 1s ease-in-out',
-  border: '4px solid red',
   boxSizing: 'border-box',
   '> p': {
     maxWidth: 'fit-content',
@@ -78,8 +77,7 @@ export const styleEntrence = {
   '@media only screen and (max-width: 768px)': {
     '> p': {
       minWidth: '100%',
-      alignItems: 'center',
-      border: '5px solid red'
+      alignItems: 'center'
     }
   }
 }

@@ -80,7 +80,9 @@ export default {
   boxSizing: 'border-box',
   mixBlendMode: 'difference',
   padding: `30px 0`,
+  '@media only screen and (max-width: 1225px)': {
 
+  },
   '@media only screen and (max-width: 768px)': {
     gap: '0px',
     justifyContent: 'space-between',

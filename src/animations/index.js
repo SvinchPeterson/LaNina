@@ -59,6 +59,15 @@ export const scaleSololakiBanner = keyframes`
     transform: scale(1);
   }
 `
+
+export const letterSpacingIn = keyframes`
+  from {
+   letter-spacing: 6px;
+  }
+  to {
+    letter-spacing: 2px;
+  }
+`
 // export const zoomOutLanding = keyframes`
 //   from {
 //     transform: scale(1.1);
@@ -85,15 +94,6 @@ export const scaleSololakiBanner = keyframes`
 //   to {
 //     opacity: 1;
 //     padding: 40px 40px 40px 20px;
-//   }
-// `
-
-// export const letterSpacingIn = keyframes`
-//   from {
-//    letter-spacing: 6px;
-//   }
-//   to {
-//     letter-spacing: 2px;
 //   }
 // `
 
