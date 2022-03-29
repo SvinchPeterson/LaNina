@@ -24,8 +24,8 @@ export const styleLink = {
       color: 'rgba(244, 233, 217, 1)',
       transform: 'scale(1.1)'
     },
-    '&:hover > h3::after': { opacity: 1 },
-    '&:not(:hover) > h3::after': { transition: 'opacity 0s ease-in-out' }
+    '&:hover > h3 > span': { opacity: 1 },
+    '&:not(:hover) > h3 > span': { transition: 'opacity 0s ease-in-out' }
   },
   '@media only screen and (max-width: 1225px)': {
     backgroundPosition: 'bottom center',
@@ -76,6 +76,7 @@ export const styleheading = {
   letterSpacing: '1px',
   transition: 'all 1s ease-in-out',
   textAlign: 'center',
+  position: 'relative',
   '@media only screen and (min-width: 1225px)': {
     fontSize: `${18 / 16}em`,
     position: 'absolute',

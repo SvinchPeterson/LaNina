@@ -49,18 +49,37 @@ export const styleResidenceOrigin = {
 }
 
 export const styleEntrence = {
-  minHeight: `${650 / 16}em`,
+  minHeight: `${700 / 16}em`,
   backgroundImage: 'url(' + BALCONY_JPG + ')',
-  backgroundSize: 'cover',
-  backgroundPosition: 'bottom 100px right',
   transition: 'all 1s ease-in-out',
-  '&:hover': { backgroundPosition: 'bottom 50px right' },
+  border: '4px solid red',
+  boxSizing: 'border-box',
   '> p': {
     maxWidth: 'fit-content',
     fontSize: `${15 / 16}em`,
     fontWeight: 500,
+    background: 'rgba(244, 233, 217, 1)',
     img: {
       width: `${20 / 16}em`
+    }
+  },
+
+  '@media only screen and (min-width: 1024px)': {
+    backgroundPosition: 'bottom 100px right',
+    backgroundSize: 'cover',
+    '&:hover': { backgroundPosition: 'bottom 50px right' }
+  },
+
+  '@media only screen and (max-width: 1024px)': {
+    backgroundSize: 'contain',
+    maxHeight: `${300 / 16}em]`,
+    backgroundPosition: 'bottom left'
+  },
+  '@media only screen and (max-width: 768px)': {
+    '> p': {
+      minWidth: '100%',
+      alignItems: 'center',
+      border: '5px solid red'
     }
   }
 }
@@ -71,8 +90,7 @@ export default {
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     '> p': {
-      letterSpacing: '.7px',
-      background: 'rgba(244, 233, 217, 1)'
+      letterSpacing: '.7px'
     }
   }
 }
