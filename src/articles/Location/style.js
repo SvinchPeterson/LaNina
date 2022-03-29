@@ -15,13 +15,15 @@ const styleMap = {
   display: 'block',
   maxWidth: `${900 / 16}em`,
   minHeight: '600px',
-  transform: 'scale(.9)',
-  filter: 'brightness(70%) grayscale(70%)',
+  // transform: 'scale(.9)',
+
+  // filter: 'brightness(70%) grayscale(70%)',
   flex: 1,
-  backgroundImage: 'url(' + MAP_PNG + ')',
-  backgroundSize: 'contain',
-  backgroundPosition: 'center center',
-  backgroundRepeat: 'no-repeat'
+  border: 0
+  // backgroundImage: 'url(' + MAP_PNG + ')',
+  // backgroundSize: 'contain',
+  // backgroundPosition: 'center center',
+  // backgroundRepeat: 'no-repeat'
 }
 
 const styleAirPort = {
@@ -46,7 +48,7 @@ export default {
   '> p': styleLocation,
 
   '> section': {
-    span: styleMap,
+    iframe: styleMap,
     div: styleAirPort
   }
 }

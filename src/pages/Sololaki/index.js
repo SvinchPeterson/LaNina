@@ -115,10 +115,10 @@ export default {
   book2,
   banner,
   Header,
-  Menu,
+  Menu
 
-  Residence,
-  Apartments,
-  Wine,
-  Location
+  // Residence,
+  // Apartments,
+  // Wine,
+  // Location
 }

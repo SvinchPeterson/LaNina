@@ -7,13 +7,18 @@ import style from './style'
 
 const paragraph = {
   tag: 'p',
-  proto: [locationText, Block]
+  proto: [locationText, Block],
+  props: { padding: '0 0 D 0' }
 
 }
 
 const map = {
-  tag: 'span',
-  proto: Block
+  tag: 'iframe',
+  proto: Block,
+  attr: {
+    src: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAtj5iaocoLdNMIS2JBIymMUQTmds8_nlI&q=Lanina+Residence',
+    allowfullscreen: true
+  }
 }
 
 const airPort = {
@@ -55,7 +60,7 @@ export default {
   props: {
     flexFlow: 'column',
     gap: '0',
-    padding: 'F 0 0 0'
+    padding: 'B 0 G 0'
   },
   attr: {
     id: 'location'

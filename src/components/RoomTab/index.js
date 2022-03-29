@@ -4,9 +4,7 @@ import { Block, Link, Img, Text } from '@rackai/symbols'
 
 import { ballerina, redBrick, yellowCouch } from '../../texts'
 
-import style, { styleBook, styleParagraph, styleImage } from './style'
-
-import { roomsContainer } from '../../animations'
+import style, { styleBook } from './style'
 
 import BALLERINA_TAB_IMG from '../../assets/images/sololaki/ballerinaTab.jpg'
 import REDBRICK_TAB_IMG from '../../assets/images/sololaki/redBrickTab.jpg'

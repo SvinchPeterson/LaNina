@@ -32,12 +32,12 @@ const Sololaki = {
     href: './Sololaki'
   },
   style: {
-    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .4), rgba(0, 0, 0, .7)),url(' + SOLOLAKI_JPG + ')',
+    backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
       justifyContent: 'flex-end',
       alignItems: 'flex-end',
       '&:hover': {
-        backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .3)),url(' + SOLOLAKI_HOVER_JPG + ')',
+        backgroundImage: 'url(' + SOLOLAKI_HOVER_JPG + ')',
         backgroundPosition: 'top left -100px'
       },
 
@@ -57,14 +57,14 @@ const Rustaveli = {
     // href: './Rustaveli',
   },
   style: {
-    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .4), rgba(0, 0, 0, .7)),url(' + RUSTAVELI_JPG + ')',
+    backgroundImage: 'url(' + RUSTAVELI_JPG + ')',
     cursor: 'auto',
     '@media only screen and (min-width: 1225px)': {
       alignItems: 'flex-end',
       justifyContet: 'flex-start',
 
       '&:hover': {
-        backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .3)),url(' + RUSTAVELI_HOVER_JPG + ')',
+        backgroundImage: 'url(' + RUSTAVELI_HOVER_JPG + ')',
         backgroundPosition: 'top left 100px'
       },
       '> h3': { padding: `0 0 ${70 / 18}em ${10 / 18}em` }

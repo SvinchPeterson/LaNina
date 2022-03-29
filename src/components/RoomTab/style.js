@@ -46,10 +46,9 @@ export const styleImage = {
   height: '100%',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
-  filter: 'brightness(60%) grayscale(50%)',
+  filter: 'brightness(40%) grayscale(100%)',
   transition: 'all .7s ease-in-out',
-  zIndex: '-1',
-  transform: 'scale(1.1)'
+  zIndex: '-1'
 }
 
 export default {
@@ -65,15 +64,15 @@ export default {
   boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .5)',
   '&::after': {
     content: '""',
-    fontSize: `${17 / 16}em`,
+    fontSize: `${20 / 16}em`,
     position: 'absolute',
-    color: 'rgba(243, 231, 219, .85)',
+    color: 'rgba(168, 98, 63, 1)',
     top: '27%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     whiteSpace: 'nowrap',
     textTransform: 'Uppercase',
-    letterSpacing: `${3 / 16}em`,
+    letterSpacing: `${1.5 / 16}em`,
     fontWeight: 600
   },
   '&:hover': {
