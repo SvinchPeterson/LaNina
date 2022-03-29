@@ -11,6 +11,7 @@ export const styleLink = {
   backgroundSize: 'cover',
   textDecoration: 'none',
   color: 'rgba(244, 233, 217, 1)',
+  display: 'flex',
 
   '@media only screen and (min-width: 1225px)': {
     backgroundPosition: '0% 0%',
@@ -18,20 +19,24 @@ export const styleLink = {
     animationName: backgroundPosition,
     animationDuration: '1.5s',
     animationTimingFunction: 'ease-in-out',
-    '&:hover': {
-      flex: 8
-    },
-    '&:hover > h3': {
-      color: 'rgba(244, 233, 217, 1)'
-    }
-    // '&:hover > h3 > span': { opacity: 1 },
-    // '&:not(:hover) > h3 > span': { transition: 'opacity 0s ease-in-out' }
+    '&:hover': { flex: 8 },
+    '&:hover > h3': { color: 'rgba(244, 233, 217, 1)' }
   },
+
   '@media only screen and (max-width: 1225px)': {
     backgroundPosition: 'bottom center',
-    display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    '> h3': {
+      fontSize: `${60 / 18}em`
+    },
+    '> h3 > span': {
+      fontSize: `22px`,
+      top: '110%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
+
+    }
   }
 }
 
@@ -43,15 +48,13 @@ export const styleLogo = {
   zIndex: 400,
   pointerEvents: 'none',
   opacity: 0.85,
+
   '@media only screen and (min-width: 1225px)': {
     animationName: coverLogoAnimation,
     animationDuration: '1s',
     animationTimingFunction: 'ease-in-out'
   },
-  '@media only screen and (max-width: 1225px)': {
-    opacity: 0
-
-  }
+  '@media only screen and (max-width: 1225px)': { opacity: 0 }
 }
 
 export const styleLogo2 = {
@@ -62,6 +65,7 @@ export const styleLogo2 = {
   transform: 'translate(-50%, -50%) scale(1)',
   opacity: 0,
   pointerEvents: 'none',
+
   '@media only screen and (max-width: 1225px)': {
     opacity: 1,
     animationName: coverLogoAnimation2,
@@ -77,15 +81,16 @@ export const styleheading = {
   color: 'rgba(244, 233, 217, .55)',
   position: 'relative',
   transition: 'color 1s ease-in-out',
+
   '> span': {
     textTransform: 'lowercase',
     position: 'absolute',
     whiteSpace: 'nowrap',
-    top: '30px',
+    top: '25px',
     left: '15px',
-    color: 'rgba(168, 98, 63, 1)'
+    color: '#DD7C4C',
+    opacity: '.85'
   }
-
 }
 
 export default {
@@ -95,7 +100,6 @@ export default {
   animationDuration: '2s',
   animationTimingFunction: 'ease-in-out',
   display: 'flex',
-  '@media only screen and (max-width: 1225px)': {
-    flexFlow: 'column'
-  }
+
+  '@media only screen and (max-width: 1225px)': { flexFlow: 'column' }
 }
