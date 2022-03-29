@@ -2,7 +2,7 @@
 
 import { Block, Flex, Text, Link } from '@rackai/symbols'
 
-import { Residence, Apartments, Location } from '../../articles'
+import { Residence, Apartments, Location, Wine } from '../../articles'
 import { paddingOut, opacity } from '../../animations'
 
 import { Header, Menu } from '../../components'
@@ -119,5 +119,6 @@ export default {
 
   Residence,
   Apartments,
+  Wine,
   Location
 }
