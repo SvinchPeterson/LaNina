@@ -3,7 +3,7 @@ import MAP_PNG from '../../assets/images/sololaki/map.png'
 
 // backgroundImage: 'radial-gradient(rgba(243, 231, 219, .4), rgba(243, 231, 219, .3)), url(' + SOLOLAKI_JPG + ')',
 const styleLocation = {
-  color: 'rgba(0, 0, 0, .35)',
+  color: 'rgba(168, 98, 63, .45)',
   fontWeight: '500',
   maxWidth: '500px',
   textAlign: 'center',
