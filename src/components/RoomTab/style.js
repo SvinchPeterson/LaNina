@@ -79,6 +79,7 @@ export default {
   '&:hover': {
     flex: 3,
     zIndex: 70,
+    minWidth: '1000px',
     '> div': {
       filter: 'brightness(20%) grayscale(50%)',
       transform: 'scale(1)'

@@ -106,6 +106,7 @@ export default {
     activeBallerina: true,
     activeRedBrick: true,
     activeYellowCouch: true,
+    activeTab: true,
 
     activeLang: 0,
     activeMenuLink: 0
@@ -117,6 +118,6 @@ export default {
   Menu,
 
   Residence,
-  Apartments
-  // Location
+  Apartments,
+  Location
 }

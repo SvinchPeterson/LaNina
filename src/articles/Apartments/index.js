@@ -1,18 +1,20 @@
 'use strict'
 import { Block } from '@rackai/symbols'
 
-import { tabBallerina, tabRedBrick, tabYellowCouch, roomBallerina, roomRedBrick, roomYellowCouch } from '../../components'
+import { tabBallerina, tabRedBrick, tabYellowCouch, tabRetro, tabGreenForest, roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from '../../components'
 
 // import { roomBallerina, roomRedBrick, roomYellowCouch } from './rooms'
 
 import style from './style'
+// import style2 from '../style'
 
 export default {
   tag: 'article',
-  style,
   proto: Block,
+  style,
   props: {
-    flexFlow: 'column'
+    flexFlow: 'column',
+    padding: 'B 0 E 0'
   },
   attr: { id: 'apartments' },
 
@@ -20,84 +22,56 @@ export default {
     tag: 'header',
     proto: Block,
     props: {
-      padding: 'D 0'
+      padding: 'E 0'
     },
-
+    // props: {
+    //   flexFlow: 'row',
+    //   gap: 'B1',
+    //   padding: '0'
+    // },
     container: {
       proto: Block,
-      props: { flexFlow: 'row', gap: 'A' },
+      props: {
+        flexFlow: 'row',
+        gap: 'B1',
+        padding: '0'
+      },
       childProto: {
         proto: Block
       },
       ...[
         { proto: tabBallerina },
         { proto: tabRedBrick },
-        { proto: tabYellowCouch }
+        { proto: tabYellowCouch },
+        { proto: tabRetro },
+        { proto: tabGreenForest }
       ]
+      // ballerina: { proto: tabBallerina },
+      // redBrick: { proto: tabRedBrick },
+      // yellowCouch: { proto: tabYellowCouch }
+      // ...[
+      //   tabBallerina,
+      //   tabRedBrick,
+      //   tabYellowCouch
+      // ]
     }
+  },
+
+  rooms: {
+    tag: 'section',
+    proto: Block,
+    props: {
+      // padding: 'E'
+    },
+    ...[
+      roomBallerina,
+      roomRedBrick,
+      roomYellowCouch,
+      roomRetro,
+      roomGreenForest
+    ]
   }
 }
-
-// export default {
-//   tag: 'article',
-//   proto: Block,
-//   style,
-//   props: {
-//     flexFlow: 'column',
-//     padding: 'B 0 E 0'
-//   },
-//   attr: { id: 'apartments' },
-
-//   tabs: {
-//     tag: 'header',
-//     proto: Block,
-//     props: {
-//       padding: 'E 0'
-//     },
-//     // props: {
-//     //   flexFlow: 'row',
-//     //   gap: 'B1',
-//     //   padding: '0'
-//     // },
-//     container: {
-//       proto: Block,
-//       props: {
-//         flexFlow: 'row',
-//         gap: 'B1',
-//         padding: '0'
-//       },
-//       childProto: {
-//         proto: Block
-//       },
-//       ...[
-//         { proto: tabBallerina },
-//         { proto: tabRedBrick },
-//         { proto: tabYellowCouch }
-//       ]
-//       // ballerina: { proto: tabBallerina },
-//       // redBrick: { proto: tabRedBrick },
-//       // yellowCouch: { proto: tabYellowCouch }
-//       // ...[
-//       //   tabBallerina,
-//       //   tabRedBrick,
-//       //   tabYellowCouch
-//       // ]
-//     }
-//   },
-
-//   rooms: {
-//     tag: 'section',
-//     proto: Block,
-//     props: {
-//       // padding: 'E'
-//     },
-//     ...[
-//       roomBallerina,
-//       roomRedBrick,
-//       roomYellowCouch
-//     ]
-//   }
-// }
 
 // export default {
 //   tag: 'article',

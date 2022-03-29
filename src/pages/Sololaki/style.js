@@ -95,6 +95,7 @@ export default {
   background: cream,
 
   scrollBehavior: 'smooth',
+  behavior: 'smooth',
   margin: '0 auto',
   boxSizing: 'border-box'
 }

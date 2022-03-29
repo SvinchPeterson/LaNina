@@ -25,7 +25,8 @@ export default {
   left: 0,
   width: '100%',
   boxSizing: 'border-box',
-  padding: '120px 0px 60px 0px',
+  padding: '0px 0px 60px 0px',
+  borderTop: '5px solid rgba(168, 98, 63, 1)',
   '> aside': {
     display: 'none'
   },

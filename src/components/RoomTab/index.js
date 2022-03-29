@@ -73,6 +73,8 @@ const roomTab = {
       : {
         flex: 1
       }
+    // show2: (element, state) => state.activeTab ? { transform: 'translateX(200px)' } : { transform: 'translateX(-200px)' }
+    // show2: (element, state) => state.activeTab === true ? { transform: 'translateX(1000px)' } : { transform: 'translateX(-1000px)' }
   },
   image: {},
   p: {},
@@ -169,11 +171,11 @@ export const tabYellowCouch = {
 
 export const tabRetro = {
   proto: roomTab,
-  props: { href: '#yellowCouch' },
+  props: { href: '#retro' },
   style: {
     flex: 1,
     '&::after': {
-      content: '"yellow couch"'
+      content: '"retro"'
     }
   },
 
@@ -199,11 +201,11 @@ export const tabRetro = {
 
 export const tabGreenForest = {
   proto: roomTab,
-  props: { href: '#yellowCouch' },
+  props: { href: '#greenForest' },
   style: {
     flex: 1,
     '&::after': {
-      content: '"yellow couch"'
+      content: '"green forest"'
     }
   },
 

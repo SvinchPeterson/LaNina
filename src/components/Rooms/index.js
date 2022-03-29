@@ -2,7 +2,7 @@
 
 import { Block, Button, Img, Flex } from '@rackai/symbols'
 
-import { galleryBallerina, galleryRedBrick, galleryYellowCouch, RoomOffers } from '..'
+import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, galleryGreenForest, RoomOffers } from '..'
 
 import { roomsContainer } from '../../animations'
 
@@ -215,5 +215,18 @@ export const roomYellowCouch = {
   attr: { id: 'yellowCouch' },
 
   gallery: { proto: galleryYellowCouch }
+}
 
+export const roomRetro = {
+  proto: room,
+  attr: { id: 'retro' },
+
+  gallery: { proto: galleryRetro }
+}
+
+export const roomGreenForest = {
+  proto: room,
+  attr: { id: 'greenForest' },
+
+  gallery: { proto: galleryGreenForest }
 }
