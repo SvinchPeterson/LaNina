@@ -1,6 +1,6 @@
 'use strict'
 
-import { brightness, backgroundPosition, coverLogoAnimation, coverLogoAnimation2 } from '../../animations'
+import { brightness, coverLogoAnimation, coverLogoAnimation2 } from '../../animations'
 
 export const styleLink = {
   flex: 1,
@@ -14,9 +14,8 @@ export const styleLink = {
   display: 'flex',
 
   '@media only screen and (min-width: 1225px)': {
-    backgroundPosition: '0% 0%',
     backgroundAttachment: 'fixed',
-    animationName: backgroundPosition,
+    animationName: brightness,
     animationDuration: '1.5s',
     animationTimingFunction: 'ease-in-out',
     '&:hover': { flex: 8 },
@@ -27,6 +26,7 @@ export const styleLink = {
     backgroundPosition: 'bottom center',
     justifyContent: 'center',
     alignItems: 'center',
+
     '> h3': {
       fontSize: `${65 / 18}em`,
       color: 'rgba(244, 233, 217, .85)'
@@ -36,7 +36,6 @@ export const styleLink = {
       top: '120%',
       left: '50%',
       transform: 'translate(-50%, -50%)'
-
     }
   }
 }
@@ -52,7 +51,7 @@ export const styleLogo = {
 
   '@media only screen and (min-width: 1225px)': {
     animationName: coverLogoAnimation,
-    animationDuration: '1s',
+    animationDuration: '1.5s',
     animationTimingFunction: 'ease-in-out'
   },
   '@media only screen and (max-width: 1225px)': { opacity: 0 }
@@ -101,6 +100,7 @@ export default {
   animationDuration: '2s',
   animationTimingFunction: 'ease-in-out',
   display: 'flex',
+  overflow: 'hidden',
 
   '@media only screen and (max-width: 1225px)': { flexFlow: 'column' }
 }

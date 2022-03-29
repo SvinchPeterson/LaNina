@@ -4,12 +4,6 @@ import { Block, Link, Text } from '@rackai/symbols'
 import { Logo } from '../../components'
 import { logoB } from '../../components/Logo'
 
-// import RUSTAVELI_LOAD_JPG from '../../assets/images/coverPage/rustaveliLoad.jpg'
-// import SOLOLAKI_LOAD_JPG from '../../assets/images/coverPage/sololakiLoad.jpg'
-
-// import RUSTAVELI_HOVER_JPG from '../../assets/images/coverPage/rustaveliHover.jpg'
-// import SOLOLAKI_HOVER_JPG from '../../assets/images/coverPage/sololakiHover.jpg'
-
 import RUSTAVELI_JPG from '../../assets/images/coverPage/rustaveli.jpg'
 import SOLOLAKI_JPG from '../../assets/images/coverPage/sololaki.jpg'
 
@@ -28,9 +22,7 @@ const heading = {
 const Sololaki = {
   proto: [Link, Block],
   class: [styleLink],
-  props: {
-    href: './Sololaki'
-  },
+  props: { href: './Sololaki' },
   style: {
     backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
@@ -38,12 +30,13 @@ const Sololaki = {
       alignItems: 'flex-end',
       '&:hover': {
         backgroundImage: 'url(' + SOLOLAKI_HOVER_JPG + ')',
-        backgroundPosition: 'top left -100px'
+        backgroundPosition: `top left -${100 / 16}em`
       },
 
       '> h3': { padding: `0 ${10 / 18}em ${70 / 18}em 0` }
     }
   },
+
   caption: {
     proto: heading,
     props: { text: 'sololaki' }
@@ -53,9 +46,7 @@ const Sololaki = {
 const Rustaveli = {
   proto: [Link, Block],
   class: [styleLink],
-  props: {
-    // href: './Rustaveli',
-  },
+  // props: {href: './Rustaveli',},
   style: {
     backgroundImage: 'url(' + RUSTAVELI_JPG + ')',
     cursor: 'auto',
@@ -65,11 +56,13 @@ const Rustaveli = {
 
       '&:hover': {
         backgroundImage: 'url(' + RUSTAVELI_HOVER_JPG + ')',
-        backgroundPosition: 'top left 100px'
+        backgroundPosition: `top left ${100 / 16}em`
       },
+
       '> h3': { padding: `0 0 ${70 / 18}em ${10 / 18}em` }
     }
   },
+
   caption: {
     proto: heading,
     text: 'rustaveli',

@@ -9,18 +9,10 @@ export const brightness = keyframes`
     filter: brightness(100%);
   }
 `
-export const backgroundPosition = keyframes`
-  from {
-   background-position: center center;
-  }
-  to {
-    background-position: 0% 0%;
-  }
-`
 export const coverLogoAnimation = keyframes`
   from {
     opacity: .2;
-    transform: translate(-50%, -50%) scale(1.3);
+    transform: translate(-50%, -50%) scale(1.5);
 
   }
   to {
