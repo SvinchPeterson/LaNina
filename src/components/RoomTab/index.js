@@ -8,9 +8,11 @@ import style, { styleBook, styleParagraph, styleImage } from './style'
 
 import { roomsContainer } from '../../animations'
 
-import BALLERINA_COVER_IMG from '../../assets/images/ballerina/ballerinaCovers.jpg'
-import REDBRICK_COVER_IMG from '../../assets/images/redBrick/redBrickCovers.jpg'
-import YELLOWCOUCH_COVER_IMG from '../../assets/images/yellowCouch/yellowCouchCovers.jpg'
+import BALLERINA_TAB_IMG from '../../assets/images/sololaki/ballerinaTab.jpg'
+import REDBRICK_TAB_IMG from '../../assets/images/sololaki/redBrickTab.jpg'
+import YELLOWCOUCH_TAB_IMG from '../../assets/images/sololaki/yellowCouchTab.jpg'
+import RETRO_TAB_IMG from '../../assets/images/sololaki/retroTab.jpg'
+import GREENFOREST_TAB_IMG from '../../assets/images/sololaki/greenForestTab.jpg'
 
 import BALLERINA_ICON from '../../assets/dress.png'
 import BRICKS_ICON from '../../assets/bricks.png'
@@ -88,7 +90,7 @@ export const tabBallerina = {
   },
 
   image: {
-    style: { backgroundImage: 'url(' + BALLERINA_COVER_IMG + ')' }
+    style: { backgroundImage: 'url(' + BALLERINA_TAB_IMG + ')' }
   },
   p: {
     proto: ballerina
@@ -118,7 +120,7 @@ export const tabRedBrick = {
   },
 
   image: {
-    style: { backgroundImage: 'url(' + REDBRICK_COVER_IMG + ')' }
+    style: { backgroundImage: 'url(' + REDBRICK_TAB_IMG + ')' }
   },
   p: { proto: redBrick },
   book: {
@@ -146,7 +148,67 @@ export const tabYellowCouch = {
   },
 
   image: {
-    style: { backgroundImage: 'url(' + YELLOWCOUCH_COVER_IMG + ')' }
+    style: { backgroundImage: 'url(' + YELLOWCOUCH_TAB_IMG + ')' }
+  },
+  p: {
+    proto: yellowCouch
+  },
+  book: {
+    props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1645550425_4DUFFaIG0wB3DIEA' },
+    icon: {
+      style: {
+        width: '25px',
+        height: '20px'
+      },
+      props: {
+        src: COUCH_ICON
+      }
+    }
+  }
+}
+
+export const tabRetro = {
+  proto: roomTab,
+  props: { href: '#yellowCouch' },
+  style: {
+    flex: 1,
+    '&::after': {
+      content: '"yellow couch"'
+    }
+  },
+
+  image: {
+    style: { backgroundImage: 'url(' + RETRO_TAB_IMG + ')' }
+  },
+  p: {
+    proto: yellowCouch
+  },
+  book: {
+    props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1645550425_4DUFFaIG0wB3DIEA' },
+    icon: {
+      style: {
+        width: '25px',
+        height: '20px'
+      },
+      props: {
+        src: COUCH_ICON
+      }
+    }
+  }
+}
+
+export const tabGreenForest = {
+  proto: roomTab,
+  props: { href: '#yellowCouch' },
+  style: {
+    flex: 1,
+    '&::after': {
+      content: '"yellow couch"'
+    }
+  },
+
+  image: {
+    style: { backgroundImage: 'url(' + GREENFOREST_TAB_IMG + ')' }
   },
   p: {
     proto: yellowCouch

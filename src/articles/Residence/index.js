@@ -52,7 +52,7 @@ const entrence = {
             width: '4px',
             height: '4px',
             borderRadius: '100%',
-            background: 'rgba(0, 0, 0, .75)'
+            background: 'rgba(0, 0, 0, 1)'
           }
         },
         span: { proto: Text }
@@ -93,7 +93,7 @@ const entrence = {
     stay: {
       proto: [stayText, Block],
       props: { padding: 'Z 0 0 B2' },
-      style: { color: 'rgba(0, 0, 0, .25)' }
+      style: { color: 'rgba(168, 98, 63, .5)' }
       // style: { color: 'rgba(168, 98, 63, .35)', fontWeight: 'bold' }
     }
   }

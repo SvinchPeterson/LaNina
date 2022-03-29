@@ -116,7 +116,7 @@ export default {
   Header,
   Menu,
 
-  Residence
-  // Apartments,
+  Residence,
+  Apartments
   // Location
 }
