@@ -4,11 +4,17 @@ import { Block, Link, Text } from '@rackai/symbols'
 import { Logo } from '../../components'
 import { logoB } from '../../components/Logo'
 
-import RUSTAVELI_LOAD_JPG from '../../assets/images/coverPage/rustaveliLoad.jpg'
-import SOLOLAKI_LOAD_JPG from '../../assets/images/coverPage/sololakiLoad.jpg'
+// import RUSTAVELI_LOAD_JPG from '../../assets/images/coverPage/rustaveliLoad.jpg'
+// import SOLOLAKI_LOAD_JPG from '../../assets/images/coverPage/sololakiLoad.jpg'
 
-import RUSTAVELI_HOVER_JPG from '../../assets/images/coverPage/rustaveliHover.jpg'
-import SOLOLAKI_HOVER_JPG from '../../assets/images/coverPage/sololakiHover.jpg'
+// import RUSTAVELI_HOVER_JPG from '../../assets/images/coverPage/rustaveliHover.jpg'
+// import SOLOLAKI_HOVER_JPG from '../../assets/images/coverPage/sololakiHover.jpg'
+
+import RUSTAVELI_JPG from '../../assets/images/coverPage/rustaveli.jpg'
+import SOLOLAKI_JPG from '../../assets/images/coverPage/sololaki.jpg'
+
+import RUSTAVELI_HOVER_JPG from '../../assets/images/coverPage/rustaveli-hover.jpg'
+import SOLOLAKI_HOVER_JPG from '../../assets/images/coverPage/sololaki-hover.jpg'
 
 import style, { styleLink, styleLogo, styleLogo2, styleheading } from './style'
 
@@ -26,7 +32,7 @@ const Sololaki = {
     href: './Sololaki'
   },
   style: {
-    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, .5), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_LOAD_JPG + ')',
+    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .4), rgba(0, 0, 0, .7)),url(' + SOLOLAKI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
       justifyContent: 'flex-end',
       alignItems: 'flex-end',
@@ -51,7 +57,7 @@ const Rustaveli = {
     // href: './Rustaveli',
   },
   style: {
-    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, .5), rgba(0, 0, 0, .5)), url(' + RUSTAVELI_LOAD_JPG + ')',
+    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .4), rgba(0, 0, 0, .7)),url(' + RUSTAVELI_JPG + ')',
     cursor: 'auto',
     '@media only screen and (min-width: 1225px)': {
       alignItems: 'flex-end',

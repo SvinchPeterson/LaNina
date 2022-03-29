@@ -28,11 +28,12 @@ export const styleLink = {
     justifyContent: 'center',
     alignItems: 'center',
     '> h3': {
-      fontSize: `${60 / 18}em`
+      fontSize: `${65 / 18}em`,
+      color: 'rgba(244, 233, 217, .85)'
     },
     '> h3 > span': {
-      fontSize: `22px`,
-      top: '110%',
+      fontSize: `30px`,
+      top: '120%',
       left: '50%',
       transform: 'translate(-50%, -50%)'
 
