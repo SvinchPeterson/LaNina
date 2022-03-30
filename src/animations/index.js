@@ -68,6 +68,17 @@ export const opacity = keyframes`
     opacity: 1;
   }
 `
+export const paddingOpacity = keyframes`
+  from {
+    opacity: 0;
+    padding: 0px 0px 0px 0px;
+  }
+  to {
+    opacity: 1;
+    padding: 40px 40px 40px 20px;
+  }
+`
+
 // export const zoomOutLanding = keyframes`
 //   from {
 //     transform: scale(1.1);

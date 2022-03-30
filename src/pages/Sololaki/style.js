@@ -1,6 +1,6 @@
 'use strict'
 
-import { scaleSololakiBanner, zoomIn, letterSpacingIn, verticalMove, opacity } from '../../animations'
+import { scaleSololakiBanner, zoomIn, letterSpacingIn, verticalMove, opacity, paddingOpacity } from '../../animations'
 
 import BANNER_JPG from '../../assets/images/sololaki/banner.jpg'
 import BANNER_MOBILE_JPG from '../../assets/images/sololaki/banner-mobile.jpg'
@@ -53,7 +53,7 @@ export const styleBanner = {
     fontSize: `${22 / 16}em`,
     fontStyle: 'italic',
     color: 'rgba(168, 98, 63, 1)',
-    paddingLeft: `${400 / 20}em`,
+    paddingLeft: `${400 / 22}em`,
     animationName: verticalMove,
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out',
@@ -62,6 +62,53 @@ export const styleBanner = {
       animationName: opacity
     }
   }
+}
+
+export const styleBook = {
+  textDecoration: 'none',
+  position: 'fixed',
+  animationDuration: '1.5s',
+  animationTimingFunction: 'ease-in-out',
+  borderTopRightRadius: '100px',
+  borderBottomRightRadius: `100px`,
+  '@media only screen and (min-width: 1024px)': {
+    animationName: paddingOpacity
+  },
+  left: 0,
+  bottom: '45%',
+  padding: `${40 / 19}em ${40 / 19}em ${40 / 19}em ${20 / 19}em`,
+  zIndex: 400,
+  backdropFilter: 'blur(6px) brightness(100%)',
+  background: 'rgba(42, 81, 61, .5)',
+  color: 'rgba(244, 233, 217, .65)',
+  fontSize: `${19 / 16}em`,
+  lineHeight: '25px',
+  textTransform: 'uppercase',
+  cursor: 'pointer',
+  fontWeight: '500',
+  textOrientation: ' upLeft',
+  '&:hover': { color: 'rgba(244, 233, 217, 1)' },
+  '&:hover > img': { opacity: 1 },
+  '> img': {
+    width: `${45 / 19}em`,
+    opacity: '.65',
+    animationName: opacity,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out'
+  },
+
+  '@media only screen and (max-width: 1024px)': {
+    bottom: 0,
+    fontSize: `${40 / 16}em`,
+    left: '50%',
+    transform: 'translateX(-50%)',
+    padding: `${40 / 19}em ${40 / 19}em ${20 / 19}em ${40 / 19}em`,
+    borderBottomRightRadius: `0`,
+    borderTopLeftRadius: `150px`,
+    borderTopRightRadius: '150px',
+    gap: '10px'
+  }
+
 }
 
 export default {
