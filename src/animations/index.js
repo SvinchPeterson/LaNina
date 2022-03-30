@@ -33,7 +33,7 @@ export const zoomIn = keyframes`
 `
 export const verticalMove = keyframes`
   from {
-   padding-left: 500px;
+   padding-left: 450px;
    opacity: 0;
   }
   to {
@@ -58,6 +58,14 @@ export const letterSpacingIn = keyframes`
   }
   to {
     letter-spacing: 2px;
+  }
+`
+export const opacity = keyframes`
+  from {
+   opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 `
 // export const zoomOutLanding = keyframes`

@@ -82,7 +82,6 @@ const banner = {
   caption: {
     proto: [Text, Block],
     props: {
-      size: 'H',
       flexFlow: 'column',
       flexAlign: 'center center'
     },
