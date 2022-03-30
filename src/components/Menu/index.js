@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Link, SVG, Flex } from '@rackai/symbols'
+import { Block, Text, Link, SVG } from '@rackai/symbols'
 
 import FACEBOOK_SVG from '../../assets/icons/facebook.svg'
 import INSTAGRAM_SVG from '../../assets/icons/instagram.svg'
@@ -89,7 +89,6 @@ export default {
   style,
   props: {
     flexFlow: 'column'
-    // gap: 'F'
   },
   class: {
     show: (element, state) => state.active ? {
@@ -105,7 +104,6 @@ export default {
       }
     } : {
       opacity: 1,
-      // '> nav': { opacity: 1, transform: 'scale(1.02)' },
       '> div': {
         opacity: 1,
         transitionDelay: 0

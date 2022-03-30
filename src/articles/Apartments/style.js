@@ -3,8 +3,6 @@
 import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
 export default {
-  // background: 'rgba(42, 81, 61, .8)',
-  marginTop: '200px',
   '> header': {
     minHeight: `${550 / 16}em`,
     overflow: 'hidden',
@@ -12,11 +10,12 @@ export default {
     overflowY: 'auto',
     backgroundImage: 'url(' + ORNAMENT_PNG + ')',
     backgroundSize: 'cover',
-    // backgroundPosition: 'center center',
-    // backgroundColor: 'rgba(42, 81, 61, 1)',
-    // backgroundBlendMode: 'screen',
-    // background: 'rgba(42, 81, 61, .8)',
-    backgroundAttachment: 'fixed'
+    backgroundPosition: 'center center',
+    backgroundAttachment: 'fixed',
+    '@media only screen and (max-width: 1225px)': {
+      backgroundAttachment: 'initial'
+
+    }
   },
   '> header > div': {
     minHeight: `${550 / 16}em`,

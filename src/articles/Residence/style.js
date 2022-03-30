@@ -11,39 +11,33 @@ export const styleResidenceOrigin = {
   backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
-  flex: 1,
   transition: 'all 1s ease-in-out',
   backgroundPosition: 'bottom 100px left 80px',
   '@media only screen and (max-width: 1225px)': {
-    backgroundPosition: 'center center'
-  },
-  '@media only screen and (max-width: 768px)': {
+    backgroundPosition: 'center center',
     paddingLeft: 0,
     backgroundSize: 'cover',
-    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .5)), url(' + GREEN_LANINA_JPG + ')'
+    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .25)), url(' + GREEN_LANINA_JPG + ')'
   },
 
   '> p': {
-    flex: 1,
     background: 'rgba(244, 233, 217, 1)',
     color: 'rgba(0, 0, 0, .25)',
-    position: 'absolute',
     fontSize: `${15 / 16}em`,
-    maxWidth: `${900 / 15}em`,
+    maxWidth: `${800 / 15}em`,
     boxShadow: '0px 0px 75px 0px rgba(244, 233, 217, .55)',
     lineHeight: `${28 / 15}em`,
     overflow: 'hidden',
     fontWeight: 500,
     '@media only screen and (max-width: 1225px)': {
-      padding: `0 ${80 / 15}em ${80 / 15}em ${20 / 15}em`
-    },
-    '@media only screen and (max-width: 768px)': {
       background: 'transparent',
-      color: 'rgba(244, 233, 217, .55)',
+      color: 'rgba(244, 233, 217, .85)',
       boxShadow: 'none',
       alignSelf: 'center',
-      padding: `${30 / 15}em`,
-      backdropFilter: 'blur(5px)'
+      fontSize: `${20 / 15}em`,
+      padding: `${60 / 26}em`,
+      backdropFilter: 'blur(1px)',
+      lineHeight: `${26 / 20}em`
     }
   }
 }
@@ -53,6 +47,14 @@ export const styleEntrence = {
   backgroundImage: 'url(' + ENTRENCE_JPG + ')',
   transition: 'all 1s ease-in-out',
   boxSizing: 'border-box',
+  backgroundPosition: 'bottom 100px right',
+  backgroundSize: 'cover',
+  '&:hover': { backgroundPosition: 'bottom 50px right' },
+
+  '@media only screen and (max-width: 1225px)': {
+    backgroundAttachment: 'initial',
+    backgroundPosition: 'initial'
+  },
   '> p': {
     maxWidth: 'fit-content',
     fontSize: `${15 / 16}em`,
@@ -60,24 +62,13 @@ export const styleEntrence = {
     background: 'rgba(244, 233, 217, 1)',
     img: {
       width: `${20 / 16}em`
-    }
-  },
-
-  '@media only screen and (min-width: 1024px)': {
-    backgroundPosition: 'bottom 100px right',
-    backgroundSize: 'cover',
-    '&:hover': { backgroundPosition: 'bottom 50px right' }
-  },
-
-  '@media only screen and (max-width: 1024px)': {
-    backgroundSize: 'contain',
-    maxHeight: `${300 / 16}em]`,
-    backgroundPosition: 'bottom left'
-  },
-  '@media only screen and (max-width: 768px)': {
-    '> p': {
-      minWidth: '100%',
-      alignItems: 'center'
+    },
+    '@media only screen and (max-width: 1225px)': {
+      fontSize: `${18 / 15}em`,
+      minWidth: `100%`,
+      boxSizing: 'border-box',
+      padding: `${100 / 18}em ${0 / 18}em ${0 / 18}em ${100 / 18}em`,
+      marginBottom: '-150px'
     }
   }
 }
@@ -87,6 +78,7 @@ export default {
   '> section': {
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
+    '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' },
     '> p': {
       letterSpacing: '.7px'
     }

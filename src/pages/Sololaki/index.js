@@ -73,10 +73,10 @@ export default {
   book,
   banner,
   Header,
-  Menu
+  Menu,
 
-  // Residence,
-  // Apartments
-  // Wine,
-  // Location
+  Residence,
+  Apartments,
+  Wine,
+  Location
 }

@@ -12,11 +12,11 @@ const residenceOrigin = {
   proto: Block,
   style: styleResidenceOrigin,
   props: {
-    flexAlign: '0 center'
+    flexAlign: 'flex-start center'
   },
   p: {
     proto: [bbSololaki, Block],
-    props: { padding: 'E 0 E E' }
+    props: { padding: 'E' }
   }
 }
 
@@ -27,13 +27,19 @@ const entrence = {
   props: { flexAlign: 'flex-end flex-end' },
   p: {
     proto: [Block, Text],
-    props: { padding: 'E E D E' },
+    props: {
+      padding: 'E E D E',
+      flexFlow: 'column'
+    },
     entrences: {
       proto: Block,
       props: {
         flexFlow: 'column',
         gap: 'Y',
         padding: '0 0 C 0'
+      },
+      style: {
+        width: 'fit-content'
       },
       childProto: {
         proto: Block,
