@@ -24,7 +24,7 @@ const styleMenuIcon = {
     height: `${5 / 16}em`,
     transition: 'width .5s ease-in-out',
     borderRadius: '30px',
-    opacity: 0.85
+    opacity: 1
   }
 }
 
@@ -34,13 +34,12 @@ const styleLangs = {
   cursor: 'pointer',
   height: 'fit-content',
   fontWeight: 500,
-  '> a:hover': { color: 'rgba(244, 233, 217, 1)' },
-  '> a:activer': { color: 'rgba(244, 233, 217, 1)' },
+  '> a:hover': { color: 'rgba(244, 233, 217, .85)' },
   '@media only screen and (max-width: 768px)': { top: '200px' }
 }
 
 const styleCall = {
-  opacity: '.85',
+  opacity: 1,
   cursor: 'pointer',
   display: 'block',
   borderRadius: '100%',
@@ -48,7 +47,7 @@ const styleCall = {
   transition: 'all .2s ease-in-out',
   position: 'relative',
 
-  '&:hover': { opacity: 1 },
+  '&:hover': { opacity: 0.85 },
   '&:hover::after': { opacity: 0.85 },
 
   '&::after': {
@@ -64,7 +63,7 @@ const styleCall = {
     fontWeight: 500,
     opacity: 0,
     transition: 'all .3s ease-in-out',
-    '@media only screen and (max-width: 1000px)': {
+    '@media only screen and (max-width: 1024px)': {
       top: `${45 / 18}em`,
       left: `-${120 / 18}em`
     }
@@ -81,13 +80,13 @@ export default {
   mixBlendMode: 'difference',
   padding: `30px 0`,
   '@media only screen and (max-width: 1225px)': {
-
+    fontSize: '30px'
   },
-  '@media only screen and (max-width: 768px)': {
-    gap: '0px',
-    justifyContent: 'space-between',
-    padding: `30px 10px`
-  },
+  // '@media only screen and (max-width: 768px)': {
+  //   gap: '0px',
+  //   justifyContent: 'space-between',
+  //   // padding: `30px 10px`
+  // },
 
   '> input': styleCheck,
   '> label': styleMenuIcon,
