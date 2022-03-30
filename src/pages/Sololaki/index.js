@@ -72,8 +72,8 @@ export default {
 
   book,
   banner,
-  Header
-  // Menu
+  Header,
+  Menu
 
   // Residence,
   // Apartments

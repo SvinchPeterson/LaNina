@@ -11,15 +11,15 @@ const sectionLinks = {
   tag: 'nav',
   proto: Block,
   props: {
-    padding: 'G1 D 0 0',
+    padding: '0 E 0 0',
     gap: 'C',
-    flexAlign: 'flex-start flex-end'
+    flexAlign: 'flex-end flex-end'
   },
 
   childProto: {
     proto: [Link, Text, Block],
     props: {
-      size: 'B'
+      size: 'D'
     },
     on: {
       click: (event, element, state) => {
@@ -43,10 +43,10 @@ const sectionLinks = {
 const socialMedia = {
   proto: Block,
   props: {
-    flexAlign: 'center center',
-    gap: 'D'
+    flexAlign: 'flex-end center',
+    gap: 'E',
+    padding: '0 0 D 0'
   },
-  style: { marginBottom: `${200 / 16}em` },
 
   childProto: {
     proto: [Link, Block],
@@ -85,12 +85,12 @@ const socialMedia = {
 }
 export default {
   tag: 'aside',
-  proto: [Block, Flex],
+  proto: Block,
   style,
   props: {
-    gap: 'B'
+    flexFlow: 'column'
+    // gap: 'F'
   },
-
   class: {
     show: (element, state) => state.active ? {
       opacity: 0,
@@ -105,7 +105,7 @@ export default {
       }
     } : {
       opacity: 1,
-      '> nav': { opacity: 1, transform: 'scale(1.02)' },
+      // '> nav': { opacity: 1, transform: 'scale(1.02)' },
       '> div': {
         opacity: 1,
         transitionDelay: 0

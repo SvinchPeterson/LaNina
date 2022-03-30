@@ -4,8 +4,9 @@ const styleSectionLinks = {
   transition: 'all .7s linear',
   boxSizing: 'border-box',
   zIndex: 0,
-  minWidth: '100%',
-  flex: 20,
+  flex: 1,
+  // minWidth: '100%',
+  // border: '5px solid green',
 
   '> a': {
     textTransform: 'uppercase',
@@ -21,41 +22,41 @@ const styleSectionLinks = {
     }
   },
 
-  '@media only screen and (max-width: 768px)': {
+  '@media only screen and (max-width: 1225px)': {
     flexFlow: 'column',
-    justifyContent: 'flex-start',
-    minheight: 'fit-content',
     alignItems: 'center',
-    padding: '250px 0px 0px 0px',
-    gap: '30px'
+    justifyContent: 'flex-end',
+    paddingRight: 0,
+    paddingTop: '200px'
   }
 }
 
 const styleSocialMedia = {
   transition: 'all .5s linear',
   transitionDelay: '.4s',
-  flex: 20,
   minWidth: '100%',
-  paddingBottom: '0px',
   alignSelf: 'center',
+  // border: '5px solid yellow',
+  flex: 1,
 
   '> a': {
     cursor: 'pointer',
     opacity: '.55',
-    border: '1.7px solid rgba(168, 98, 63, 0)',
-    padding: '15px',
-    borderRadius: '100%',
     transition: 'all .3s linear',
     '&:hover': {
       opacity: '1'
     },
     '> img': {
-      width: '25px'
+      width: `${26 / 16}em`
     }
   },
 
-  '@media only screen and (max-width: 768px)': { padding: 0 },
-  '@media only screen and (max-width: 480px)': { gap: '20px' }
+  '@media only screen and (max-width: 1024px)': {
+    alignItems: 'center'
+  }
+
+  // '@media only screen and (max-width: 768px)': { padding: 0 },
+  // '@media only screen and (max-width: 480px)': { gap: '20px' }
 
 }
 
@@ -63,19 +64,20 @@ export default {
   background: 'radial-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7))',
   backdropFilter: 'blur(5px)',
   position: 'fixed',
-  minWidth: '100%',
-  minHeight: '100%',
-  padding: '0 45px',
+  width: '100%',
+  height: '100%',
+  // padding: '0 45px',
   top: 0,
   left: 0,
   transition: 'all .5s linear',
   zIndex: 200,
   boxSizing: 'border-box',
-  flexFlow: 'column',
-  gap: '320px',
+  // gap: `${320 / 16}em`,
+  '@media only screen and (max-width: 1225px)': { fontSize: '26px' },
+  // border: '10px solid red',
 
-  '@media only screen and (max-width: 860px)': { padding: 0 },
-  '@media only screen and (max-width: 768px)': { gap: '100px' },
+  // '@media only screen and (max-width: 860px)': { padding: 0 },
+  // '@media only screen and (max-width: 768px)': { gap: '100px' },
 
   '> nav': styleSectionLinks,
   '> div': styleSocialMedia

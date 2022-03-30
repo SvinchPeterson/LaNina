@@ -82,11 +82,6 @@ export default {
   '@media only screen and (max-width: 1225px)': {
     fontSize: '30px'
   },
-  // '@media only screen and (max-width: 768px)': {
-  //   gap: '0px',
-  //   justifyContent: 'space-between',
-  //   // padding: `30px 10px`
-  // },
 
   '> input': styleCheck,
   '> label': styleMenuIcon,
