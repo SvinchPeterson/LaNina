@@ -1,6 +1,6 @@
 'use strict'
 
-import { scaleSololakiBanner, zoomInB, letterSpacingIn, verticalMove } from '../../animations'
+import { scaleSololakiBanner, zoomIn, letterSpacingIn, verticalMove } from '../../animations'
 
 import BANNER_JPG from '../../assets/images/sololaki/banner.jpg'
 import BANNER_MOBILE_JPG from '../../assets/images/sololaki/banner-mobile.jpg'
@@ -19,10 +19,42 @@ export const styleBanner = {
   animationTimingFunction: 'ease-in-out',
   backgroundAttachment: 'fixed',
   backgroundRepeat: 'no-repeat',
+  transition: 'background-position 1s ease-in-out',
+  '&:hover': { backgroundPosition: 'center center' },
 
   '@media only screen and (max-width: 1024px)': {
     backgroundImage: 'url(' + BANNER_MOBILE_JPG + ')',
     backgroundPosition: 'center center'
+  },
+
+  '> caption': {
+    whiteSpace: 'no-wrap',
+    textTransform: 'uppercase',
+    fontWeight: 700,
+    color: 'rgba(244, 233, 217, .65)',
+    lineHeight: '60px',
+    animationName: zoomIn,
+    animationDuration: '3s',
+    animationTiminFunction: 'ease-in-out',
+    '> span': {
+      fontSize: `${26 / 36}em`,
+      textTransform: 'capitalize',
+      letterSpacing: '2px',
+      animationName: letterSpacingIn,
+      animationDuration: '1.5s',
+      animationTimingFunction: 'ease-in-out',
+      fontWeight: 500
+    }
+  },
+
+  '> p': {
+    fontSize: `${20 / 16}em`,
+    fontStyle: 'italic',
+    color: 'rgba(168, 98, 63, 1)',
+    paddingLeft: `${400 / 20}em`,
+    animationName: verticalMove,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out'
   }
 
   // '> span': {

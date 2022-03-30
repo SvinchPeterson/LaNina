@@ -20,24 +20,24 @@ export const coverLogoAnimation = keyframes`
     transform: translate(-50%, -50%) scale(1.4);
   }
 `
-export const zoomInB = keyframes`
+export const zoomIn = keyframes`
   from {
     opacity: 0;
-    transform: scale(.95) translate(-50%, -50%);
+    transform: scale(.9);
 
   }
   to {
-    transform: scale(1) translate(-50%, -50%);
+    transform: scale(1);
     opacity: 1;
   }
 `
 export const verticalMove = keyframes`
   from {
-   left: 53%;
+   padding-left: 500px;
    opacity: 0;
   }
   to {
-    left: 50%;
+    padding-left: 400px;
    opacity: 1;
   }
 `

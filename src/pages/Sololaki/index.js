@@ -71,28 +71,32 @@ const book2 = {
 }
 
 const banner = {
-  proto: [Block, Flex],
-  style: styleBanner
+  proto: [Block],
+  style: styleBanner,
+  props: {
+    flexFlow: 'column',
+    flexAlign: 'center center',
+    gap: 'A'
+  },
 
-  // image: { tag: 'span' }
-  // caption: {
-  //   proto: [Text, Block],
-  //   props: {
-  //     flexFlow: 'column',
-  //     flexAlign: 'center center'
-  //   },
-  //   text: 'bb residence',
-  //   span: {
-  //     proto: Text,
-  //     props: {
-  //       text: 'sololaki'
-  //     }
-  //   }
-  // },
-  // p: {
-  //   proto: Text,
-  //   props: { text: '"Where ordinary, becomes extraordinary"' }
-  // }
+  caption: {
+    proto: [Text, Block],
+    props: {
+      size: 'H',
+      flexFlow: 'column',
+      flexAlign: 'center center'
+    },
+    text: 'bb residence',
+    span: {
+      proto: Text,
+      props: { text: 'sololaki' }
+    }
+  },
+
+  p: {
+    proto: Text,
+    props: { text: '"Where ordinary, becomes extraordinary"' }
+  }
 }
 
 export default {
