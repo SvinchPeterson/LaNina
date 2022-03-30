@@ -40,7 +40,7 @@ const styleLangs = {
 }
 
 const styleCall = {
-  opacity: '.7',
+  opacity: '.85',
   cursor: 'pointer',
   display: 'block',
   borderRadius: '100%',

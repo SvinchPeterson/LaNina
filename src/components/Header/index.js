@@ -58,7 +58,7 @@ const langs = {
     },
 
     class: {
-      show: (element, state) => state.activeLang === element.key ? { color: 'rgba(244, 233, 217, 1)' } : { color: 'rgba(244, 233, 217, .65)' }
+      show: (element, state) => state.activeLang === element.key ? { color: 'rgba(244, 233, 217, 1)' } : { color: 'rgba(244, 233, 217, .85)' }
     }
   },
 

@@ -72,27 +72,27 @@ const book2 = {
 
 const banner = {
   proto: [Block, Flex],
-  style: styleBanner,
+  style: styleBanner
 
-  image: { tag: 'span' },
-  caption: {
-    proto: [Text, Block],
-    props: {
-      flexFlow: 'column',
-      flexAlign: 'center center'
-    },
-    text: 'bb residence',
-    span: {
-      proto: Text,
-      props: {
-        text: 'sololaki'
-      }
-    }
-  },
-  p: {
-    proto: Text,
-    props: { text: '"Where ordinary, becomes extraordinary"' }
-  }
+  // image: { tag: 'span' }
+  // caption: {
+  //   proto: [Text, Block],
+  //   props: {
+  //     flexFlow: 'column',
+  //     flexAlign: 'center center'
+  //   },
+  //   text: 'bb residence',
+  //   span: {
+  //     proto: Text,
+  //     props: {
+  //       text: 'sololaki'
+  //     }
+  //   }
+  // },
+  // p: {
+  //   proto: Text,
+  //   props: { text: '"Where ordinary, becomes extraordinary"' }
+  // }
 }
 
 export default {
@@ -112,13 +112,13 @@ export default {
     activeMenuLink: 0
   },
 
-  book2,
-  banner,
-  Header,
-  Menu
+  // book2,
+  banner
+  // Header,
+  // Menu
 
   // Residence,
-  // Apartments,
+  // Apartments
   // Wine,
   // Location
 }
