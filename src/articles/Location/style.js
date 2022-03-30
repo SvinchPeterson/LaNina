@@ -13,8 +13,8 @@ const styleLocation = {
 
 const styleMap = {
   display: 'block',
-  maxWidth: `${900 / 16}em`,
-  minHeight: '600px',
+  maxWidth: `${700 / 16}em`,
+  minHeight: '500px',
   // transform: 'scale(.9)',
 
   // filter: 'brightness(70%) grayscale(70%)',

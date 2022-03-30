@@ -16,18 +16,29 @@ export default {
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    backgroundPosition: 'center center'
+    backgroundPosition: 'center center',
+    '@media only screen and (max-width: 1225px)': {
+      backgroundAttachment: 'initial',
+      backgroundSize: 'cover'
+    }
   },
 
   p: {
     proto: wineText,
     style: {
       background: 'rgba(244, 233, 217, 1)',
-      maxWidth: '700px',
-      padding: '100px',
-      fontSize: '15px',
+      maxWidth: `${700 / 15}em`,
+      padding: `${100 / 15}em`,
+      fontSize: `${15 / 16}em`,
       color: 'rgba(0, 0, 0, .25)',
-      letterSpacing: '.7px'
+      letterSpacing: '.7px',
+      '@media only screen and (max-width: 1225px)': {
+        fontSize: `${16 / 15}em`,
+        background: 'rgba(244, 233, 217, .5)',
+        color: 'rgba(0, 0, 0, .55)',
+        backdropFilter: 'blur(.5px)'
+
+      }
     }
   }
 

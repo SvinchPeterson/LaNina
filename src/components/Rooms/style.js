@@ -2,21 +2,27 @@
 
 const styleNavButtons = {
   position: 'absolute',
-  right: '100px',
-  bottom: '0px',
+  top: '50%',
+  right: '70px',
+  transform: 'translate(50%, -50%)',
+  zIndex: 200,
+  height: 'fit-content',
+
   // background: 'rgba(0, 0, 0, .05)',
-  borderRadius: '30px',
+  background: 'rgba(168, 98, 63, .7)',
+  borderRadius: '25px',
+  // border: '5px solid red',
   button: {
     background: 'transparent',
     transition: 'all .4s ease-in-out',
     '&:hover': {
-      '> img': { opacity: '.5' }
+      '> img': { opacity: '1' }
     }
   },
   '> button > img': {
     display: 'block',
     width: '35px',
-    opacity: '.3'
+    opacity: '.65'
   }
 }
 export default {

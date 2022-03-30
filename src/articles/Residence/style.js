@@ -34,10 +34,10 @@ export const styleResidenceOrigin = {
       color: 'rgba(244, 233, 217, .85)',
       boxShadow: 'none',
       alignSelf: 'center',
-      fontSize: `${20 / 15}em`,
+      fontSize: `${16 / 15}em`,
       padding: `${60 / 26}em`,
       backdropFilter: 'blur(1px)',
-      lineHeight: `${26 / 20}em`
+      lineHeight: `${26 / 16}em`
     }
   }
 }

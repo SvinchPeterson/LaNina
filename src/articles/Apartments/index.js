@@ -22,7 +22,8 @@ export default {
     tag: 'header',
     proto: Block,
     props: {
-      padding: 'E 0'
+      padding: 'E 0',
+      flexAlign: 'center center'
     },
     // props: {
     //   flexFlow: 'row',

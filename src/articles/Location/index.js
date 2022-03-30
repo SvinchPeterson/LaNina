@@ -74,7 +74,7 @@ export default {
     proto: Block,
     props: {
       flexAlign: 'center center',
-      gap: 'B'
+      gap: 'D'
     },
 
     map,

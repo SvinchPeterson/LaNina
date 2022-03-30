@@ -3,15 +3,15 @@
 export const styleBook = {
   letterSpacing: '5px',
   textDecoration: 'none',
-  color: 'rgba(243, 231, 219, .75)',
+  color: 'rgba(243, 231, 219, 1)',
   position: 'absolute',
   top: '80%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  background: 'radial-gradient(rgba(243, 231, 219, .15), rgba(243, 231, 219, 0))',
-  border: '.5px solid rgba(243, 231, 219, .45)',
+  // background: 'radial-gradient(rgba(168, 98, 63, .25), rgba(168, 98, 63, .7))',
+  border: '2px solid rgba(168, 98, 63, .75)',
   borderRadius: '50px',
-  opacity: 0,
+  // opacity: 0,
   transition: 'opacity .7s ease-in-out',
   transitionDelay: '.5s',
   fontWeight: 700,
@@ -72,7 +72,7 @@ export default {
     transform: 'translate(-50%, -50%)',
     whiteSpace: 'nowrap',
     textTransform: 'Uppercase',
-    letterSpacing: `${1.5 / 16}em`,
+    letterSpacing: `${1 / 16}em`,
     fontWeight: 600
   },
   '&:hover': {

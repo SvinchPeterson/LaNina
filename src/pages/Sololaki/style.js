@@ -14,9 +14,9 @@ export const styleBanner = {
   overflow: 'hidden',
   backgroundImage: 'url(' + BANNER_JPG + ')',
   backgroundSize: 'cover',
-  // animationName: scaleSololakiBanner,
-  // animationDuration: '3s',
-  // animationTimingFunction: 'ease-in-out',
+  animationName: scaleSololakiBanner,
+  animationDuration: '3s',
+  animationTimingFunction: 'ease-in-out',
   backgroundAttachment: 'fixed',
   backgroundRepeat: 'no-repeat',
   transition: 'background-position 1s ease-in-out',
@@ -35,17 +35,17 @@ export const styleBanner = {
     color: 'rgba(244, 233, 217, .65)',
     fontSize: `${60 / 16}em`,
     lineHeight: `1em`,
-    // animationName: zoomIn,
-    // animationDuration: '3s',
-    // animationTiminFunction: 'ease-in-out',
+    animationName: zoomIn,
+    animationDuration: '3s',
+    animationTiminFunction: 'ease-in-out',
 
     '> span': {
       fontSize: `${42 / 60}em`,
       textTransform: 'capitalize',
       letterSpacing: '2px',
-      // animationName: letterSpacingIn,
-      // animationDuration: '1.5s',
-      // animationTimingFunction: 'ease-in-out',
+      animationName: letterSpacingIn,
+      animationDuration: '1.5s',
+      animationTimingFunction: 'ease-in-out',
       fontWeight: 500
     }
   },
@@ -73,7 +73,7 @@ export const styleBook = {
   borderTopRightRadius: '100px',
   borderBottomRightRadius: `100px`,
   '@media only screen and (min-width: 1024px)': {
-    // animationName: paddingOpacity
+    animationName: paddingOpacity
   },
   left: 0,
   bottom: '45%',

@@ -3,8 +3,9 @@
 import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
 export default {
+  marginTop: `${200 / 16}em`,
   '> header': {
-    minHeight: `${550 / 16}em`,
+    minHeight: `${700 / 16}em`,
     overflow: 'hidden',
     position: 'relative',
     overflowY: 'auto',
@@ -14,7 +15,6 @@ export default {
     backgroundAttachment: 'fixed',
     '@media only screen and (max-width: 1225px)': {
       backgroundAttachment: 'initial'
-
     }
   },
   '> header > div': {
@@ -31,8 +31,6 @@ export default {
   '> section': {
     position: 'relative',
     boxSizing: 'border-box',
-    // marginTop: '100px',
-    // minHeight: '850px',
     '> div': {
       width: '100%'
     }

@@ -6,8 +6,11 @@ import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, ga
 
 import { roomsContainer } from '../../animations'
 
-import LEFT_ARROW from '../../assets/left.png'
-import RIGHT_ARROW from '../../assets/right.png'
+// import LEFT_ARROW from '../../assets/left.png'
+// import RIGHT_ARROW from '../../assets/right.png'
+import UP_ARROW from '../../assets/upArrow.png'
+import DOWN_ARROW from '../../assets/downArrow.png'
+
 import style from './style'
 
 const navButtons = {
@@ -15,8 +18,9 @@ const navButtons = {
   proto: Block,
   props: {
     flexAlign: 'center center',
-    gap: 'C'
-    // padding: 'A W'
+    flexFlow: 'column',
+    // gap: 'C'
+    padding: 'A W'
   },
 
   childProto: {
@@ -25,7 +29,7 @@ const navButtons = {
   },
   ...[
     {
-      arrow: { props: { src: LEFT_ARROW } },
+      arrow: { props: { src: UP_ARROW } },
       on: {
         click: (event, element, state) => {
           const { activeImage } = state
@@ -37,7 +41,7 @@ const navButtons = {
     },
 
     {
-      arrow: { props: { src: RIGHT_ARROW } },
+      arrow: { props: { src: DOWN_ARROW } },
 
       on: {
         click: (event, element, state) => {
