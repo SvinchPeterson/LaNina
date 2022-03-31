@@ -6,11 +6,11 @@ import { ballerina, redBrick, yellowCouch } from '../../texts'
 
 import style, { styleBook } from './style'
 
-import BALLERINA_TAB_IMG from '../../assets/images/sololaki/ballerinaTab.jpg'
-import REDBRICK_TAB_IMG from '../../assets/images/sololaki/redBrickTab.jpg'
-import YELLOWCOUCH_TAB_IMG from '../../assets/images/sololaki/yellowCouchTab.jpg'
-import RETRO_TAB_IMG from '../../assets/images/sololaki/retroTab.jpg'
-import GREENFOREST_TAB_IMG from '../../assets/images/sololaki/greenForestTab.jpg'
+import BALLERINA_TAB_IMG from '../../assets/images/ballerina/livingroom.jpg'
+import REDBRICK_TAB_IMG from '../../assets/images/redBrick/livingroom.jpg'
+import YELLOWCOUCH_TAB_IMG from '../../assets/images/yellowCouch/livingroom.jpg'
+import RETRO_TAB_IMG from '../../assets/images/retro/livingroom.jpg'
+import GREENFOREST_TAB_IMG from '../../assets/images/greenForest/livingroom.jpg'
 
 import BALLERINA_ICON from '../../assets/icons/dress.png'
 import BRICKS_ICON from '../../assets/icons/bricks.png'

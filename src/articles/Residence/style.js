@@ -1,7 +1,7 @@
 'use strict'
 
 import GREEN_LANINA_JPG from '../../assets/images/sololaki/BBgreen.jpg'
-import ENTRENCE_JPG from '../../assets/images/sololaki/entrence2.jpg'
+import ENTRENCE_JPG from '../../assets/images/sololaki/entrence.jpg'
 
 export const styleResidenceOrigin = {
   position: 'relative',

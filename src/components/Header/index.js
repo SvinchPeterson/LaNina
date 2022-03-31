@@ -3,7 +3,7 @@ import { Block, Text, Flex, Shape, SVG, Link } from '@rackai/symbols'
 
 import style from './style'
 
-import PHONE_PNG from '../../assets/phoneRight.svg'
+import PHONE_PNG from '../../assets/icons/phoneRight.svg'
 
 const check = {
   tag: 'input',
