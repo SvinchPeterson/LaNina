@@ -58,10 +58,17 @@ const Rustaveli = {
         backgroundImage: 'url(' + RUSTAVELI_HOVER_JPG + ')',
         backgroundPosition: `top left ${100 / 16}em`
       },
+      '&:not(:hover)': { border: 'none' },
 
       '> h3': { padding: `0 0 ${70 / 18}em ${10 / 18}em` }
     }
   },
+  // on: {
+  //   mouseover: (event, element, state) => {
+  //     element.update({ style: { border: '30px solid red' } })
+  //   }
+
+  // },
 
   caption: {
     proto: heading,

@@ -12,9 +12,9 @@ import YELLOWCOUCH_TAB_IMG from '../../assets/images/sololaki/yellowCouchTab.jpg
 import RETRO_TAB_IMG from '../../assets/images/sololaki/retroTab.jpg'
 import GREENFOREST_TAB_IMG from '../../assets/images/sololaki/greenForestTab.jpg'
 
-import BALLERINA_ICON from '../../assets/dress.png'
-import BRICKS_ICON from '../../assets/bricks.png'
-import COUCH_ICON from '../../assets/couch.png'
+import BALLERINA_ICON from '../../assets/icons/dress.png'
+import BRICKS_ICON from '../../assets/icons/bricks.png'
+import COUCH_ICON from '../../assets/icons/couch.png'
 
 const book = {
   proto: [Link, Text, Block],
