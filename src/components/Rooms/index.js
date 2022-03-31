@@ -8,8 +8,8 @@ import { roomsContainer } from '../../animations'
 
 // import LEFT_ARROW from '../../assets/left.png'
 // import RIGHT_ARROW from '../../assets/right.png'
-import UP_ARROW from '../../assets/upArrow.png'
-import DOWN_ARROW from '../../assets/downArrow.png'
+import UP_ARROW from '../../assets/icons/up-arrow.png'
+import DOWN_ARROW from '../../assets/icons/down-arrow.png'
 
 import style from './style'
 

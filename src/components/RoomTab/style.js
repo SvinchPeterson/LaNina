@@ -3,7 +3,7 @@
 export const styleBook = {
   letterSpacing: '5px',
   textDecoration: 'none',
-  color: 'rgba(243, 231, 219, 1)',
+  color: 'rgba(244, 233, 217, .75)',
   position: 'absolute',
   top: '80%',
   left: '50%',

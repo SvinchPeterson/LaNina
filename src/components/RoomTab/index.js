@@ -15,6 +15,8 @@ import GREENFOREST_TAB_IMG from '../../assets/images/greenForest/livingroom.jpg'
 import BALLERINA_ICON from '../../assets/icons/dress.png'
 import BRICKS_ICON from '../../assets/icons/bricks.png'
 import COUCH_ICON from '../../assets/icons/couch.png'
+import KEY_ICON from '../../assets/icons/key.png'
+import LEAF_ICON from '../../assets/icons/leaf.png'
 
 const book = {
   proto: [Link, Text, Block],
@@ -191,7 +193,7 @@ export const tabRetro = {
         height: '20px'
       },
       props: {
-        src: COUCH_ICON
+        src: KEY_ICON
       }
     }
   }
@@ -221,7 +223,7 @@ export const tabGreenForest = {
         height: '20px'
       },
       props: {
-        src: COUCH_ICON
+        src: LEAF_ICON
       }
     }
   }
