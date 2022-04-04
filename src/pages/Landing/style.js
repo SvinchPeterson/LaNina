@@ -1,55 +1,106 @@
 'use strict'
-import COVER_JPG from '../../assets/images/cover.jpg'
-import { fadeUp } from '../../animations'
 
-export const styleLaninaBanner = {
-  flexDirection: 'column',
-  position: 'absolute',
-  zIndex: '20',
-  color: 'white',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  alignItems: 'center',
-  textAlign: 'center',
+import { brightness, coverLogoAnimation, coverLogoAnimation2 } from '../../animations'
 
-  '> img': {
-    width: `${80 / 16}em`,
-    height: `${100 / 16}em`,
-    animationName: fadeUp,
-    animationDuration: '3s'
-  },
-  '> div': {
-    lineHeight: `${40 / 16}em`,
-    opacity: '.65',
-    animationName: fadeUp,
-    animationDuration: '5s'
+export const styleLink = {
+  flex: 1,
+  transition: 'flex 1s ease-in-out, background-image 1s ease-in-out, background-position 1s ease-in-out',
+  overflow: 'hidden',
+  backgroundRepeat: 'no-repeat',
+  position: 'relative',
+  backgroundSize: 'cover',
+  textDecoration: 'none',
+  color: 'rgba(244, 233, 217, 1)',
+  display: 'flex',
+
+  '@media only screen and (min-width: 1225px)': {
+    backgroundAttachment: 'fixed',
+    animationName: brightness,
+    animationDuration: '1.5s',
+    animationTimingFunction: 'ease-in-out',
+    '&:hover': { flex: 8 },
+    '&:hover > h3': { color: 'rgba(244, 233, 217, 1)' }
   },
 
-  h4: {
-    fontSize: `${48 / 16}em`
+  '@media only screen and (max-width: 1225px)': {
+    backgroundPosition: 'bottom center',
+    justifyContent: 'center',
+    alignItems: 'center',
 
+    '> h3': {
+      fontSize: `${65 / 18}em`,
+      color: 'rgba(244, 233, 217, .85)'
+    },
+    '> h3 > span': {
+      fontSize: `30px`,
+      top: '120%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
+    }
   }
 }
 
-export const stylePageLink = {
-  color: 'white',
-  writingMode: 'vertical-rl',
-  textOrientation: 'upright',
-  cursor: 'pointer',
-  marginLeft: '60px',
-  background: 'linear-gradient(rgba(209, 153, 115, .4), rgba(0, 0, 0, .2))',
-  // color: 'rgba(255, 255, 255, .6)',
+export const styleLogo = {
   position: 'absolute',
-  zIndex: 20
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%) scale(1.4)',
+  zIndex: 400,
+  pointerEvents: 'none',
+  opacity: 1,
+
+  '@media only screen and (min-width: 1225px)': {
+    animationName: coverLogoAnimation,
+    animationDuration: '1.5s',
+    animationTimingFunction: 'ease-in-out'
+  },
+  '@media only screen and (max-width: 1225px)': { opacity: 0 }
 }
 
-export const styleCover = {
+export const styleLogo2 = {
+  position: 'absolute',
+  zIndex: '400',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%) scale(1)',
+  opacity: 0,
+  pointerEvents: 'none',
+
+  '@media only screen and (max-width: 1225px)': {
+    opacity: 1,
+    animationName: coverLogoAnimation2,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out',
+    transform: 'translate(-50%, -50%) scale(1.3)'
+  }
+}
+
+export const styleheading = {
+  textTransform: 'uppercase',
+  letterSpacing: '.7px',
+  color: 'rgba(244, 233, 217, 1)',
+  position: 'relative',
+  transition: 'color 1s ease-in-out',
+
+  '> span': {
+    textTransform: 'lowercase',
+    position: 'absolute',
+    whiteSpace: 'nowrap',
+    top: '25px',
+    left: '15px',
+    color: '#DD7C4C',
+    opacity: '.85'
+  }
 }
 
 export default {
-  width: '100%',
-  height: '100%',
+  flex: 1,
   boxSizing: 'border-box',
-  flex: 1
+  animationName: brightness,
+  animationDuration: '2s',
+  animationTimingFunction: 'ease-in-out',
+  display: 'flex',
+  overflow: 'hidden',
+
+  '@media only screen and (max-width: 1225px)': { flexFlow: 'column' }
 }

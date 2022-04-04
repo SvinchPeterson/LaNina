@@ -1,0 +1,61 @@
+'use strict'
+
+// backgroundImage: 'radial-gradient(rgba(243, 231, 219, .4), rgba(243, 231, 219, .3)), url(' + SOLOLAKI_JPG + ')',
+const styleLocation = {
+  color: 'rgba(168, 98, 63, .45)',
+  fontWeight: '500',
+  maxWidth: '500px',
+  textAlign: 'center',
+  margin: '0 auto',
+  lineHeight: '25px'
+}
+
+const styleMap = {
+  display: 'block',
+  maxWidth: `${700 / 16}em`,
+  minHeight: '500px',
+  // transform: 'scale(.9)',
+
+  // filter: 'brightness(70%) grayscale(70%)',
+  flex: 1,
+  border: 0,
+  '@media only screen and (max-width: 1225px)': {
+    minWidth: '100%',
+    maxWidth: `100%`
+  }
+  // backgroundImage: 'url(' + MAP_PNG + ')',
+  // backgroundSize: 'contain',
+  // backgroundPosition: 'center center',
+  // backgroundRepeat: 'no-repeat'
+}
+
+const styleAirPort = {
+  '> p': {
+    fontSize: `${15 / 16}em`,
+    maxWidth: `${400 / 15}em`,
+    // fontWeight: 500,
+    color: 'rgba(0, 0, 0, .225)',
+    letterSpacing: '.4px'
+  },
+  '> p > caption': {
+    textTransform: 'uppercase',
+    letterSpacing: '1px',
+    color: 'rgba(0, 0, 0, .5)',
+    fontWeight: 700
+  }
+
+}
+
+export default {
+
+  '> p': styleLocation,
+
+  '> section': {
+    iframe: styleMap,
+    div: styleAirPort,
+    '@media only screen and (max-width: 1225px)': {
+      flexFlow: 'column'
+
+    }
+  }
+}

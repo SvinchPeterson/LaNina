@@ -1,124 +1,106 @@
 'use strict'
-import { Block, Img, Text, Flex, Link } from '@rackai/symbols'
+import { Block, Link, Text } from '@rackai/symbols'
 
-import Logo from '../../assets/logoWhite.png'
+import { Logo } from '../../components'
+import { logoB } from '../../components/Logo'
 
-import style, { styleLaninaBanner, stylePageLink } from './style'
+import RUSTAVELI_JPG from '../../assets/images/coverPage/rustaveli.jpg'
+import SOLOLAKI_JPG from '../../assets/images/coverPage/sololaki.jpg'
 
-import { move, move2, filter } from '../../animations'
+import RUSTAVELI_HOVER_JPG from '../../assets/images/coverPage/rustaveli-hover.jpg'
+import SOLOLAKI_HOVER_JPG from '../../assets/images/coverPage/sololaki-hover.jpg'
 
-import COVER_JPG from '../../assets/images/cover.jpg'
+import style, { styleLink, styleLogo, styleLogo2, styleheading } from './style'
 
-const logo = {
-  proto: Img,
-  props: { src: Logo },
-  style: {
-    width: '120px',
-    height: '150px',
-    opacity: '.65'
-  }
+const heading = {
+  tag: 'h3',
+  proto: [Block, Text],
+  props: { size: 'B' },
+  class: [styleheading]
 }
 
-const pageLink = {
-  proto: [Block, Text, Link],
-  props: {
-    text: 'SOLOLAKI',
-    spacing: 'A'
+const Sololaki = {
+  proto: [Link, Block],
+  class: [styleLink],
+  props: { href: './Sololaki' },
+  style: {
+    backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
+    '@media only screen and (min-width: 1225px)': {
+      justifyContent: 'flex-end',
+      alignItems: 'flex-end',
+      '&:hover': {
+        backgroundImage: 'url(' + SOLOLAKI_HOVER_JPG + ')',
+        backgroundPosition: `top left -${100 / 16}em`
+      },
+
+      '> h3': { padding: `0 ${10 / 18}em ${70 / 18}em 0` }
+    }
   },
-  class: [stylePageLink],
-  style: {
-    animationName: move2,
-    animationDuration: '3s',
-    animationTimingFunction: 'ease-in-out'
+
+  caption: {
+    proto: heading,
+    props: { text: 'sololaki' }
   }
 }
 
-const pageLink2 = {
-  proto: [Block, Text, Link],
-  props: {
-    text: 'RUSTAVELI',
-    spacing: 'A'
+const Rustaveli = {
+  proto: [Link, Block],
+  class: [styleLink],
+  // props: {href: './Rustaveli',},
+  style: {
+    backgroundImage: 'url(' + RUSTAVELI_JPG + ')',
+    cursor: 'auto',
+    '@media only screen and (min-width: 1225px)': {
+      alignItems: 'flex-end',
+      justifyContet: 'flex-start',
+
+      '&:hover': {
+        backgroundImage: 'url(' + RUSTAVELI_HOVER_JPG + ')',
+        backgroundPosition: `top left ${100 / 16}em`
+      },
+      '&:not(:hover)': { border: 'none' },
+
+      '> h3': { padding: `0 0 ${70 / 18}em ${10 / 18}em` }
+    }
   },
-  class: [stylePageLink],
-  style: {
-    bottom: 0,
-    right: '60px',
-    background: 'linear-gradient(rgba(209, 153, 115, .3), rgba(0, 0, 0, .2))',
-    animationName: move,
-    animationDuration: '3s',
-    animationTimingFunction: 'ease-in-out'
-  }
-}
+  // on: {
+  //   mouseover: (event, element, state) => {
+  //     element.update({ style: { border: '30px solid red' } })
+  //   }
 
-const laninaBanner = {
-  proto: [Block, Flex],
-  class: [styleLaninaBanner],
-  props: { gap: 'B' },
-  logo,
-  heading: {
-    h4: {
-      proto: Text,
-      props: {
-        text: 'La Nina'
-      }
-    },
+  // },
+
+  caption: {
+    proto: heading,
+    text: 'rustaveli',
     span: {
       proto: Text,
       props: {
-        text: 'Residence',
-        size: 'C'
+        text: 'under construction',
+        size: 'Z'
       }
     }
   }
 }
+const logo = {
+  proto: Logo,
+  style: styleLogo
+}
+
+const logo2 = {
+  proto: logoB,
+  style: styleLogo2
+}
 
 export default {
-  proto: Flex,
+  proto: [Block],
   style,
-  laninaBanner,
+  state: {
+    underConstruction: false
+  },
 
-  main: {
-    proto: Flex,
-    style: {
-      flex: 1
-    },
-    childProto: {
-      proto: [Block, Flex],
-      style: {
-        position: 'relative',
-        flex: '.5',
-        overflow: 'hidden',
-        transition: 'all 1s ease-in-out',
-        animationName: filter,
-        animationDuration: '6s',
-        '&:hover': {
-          flex: '2.5',
-          '> div': {
-            transform: 'scale(1.1)',
-            backgroundImage: 'linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url(' + COVER_JPG + ')'
-          }
-        },
-        '> div': {
-          flex: 1,
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .95)), url(' + COVER_JPG + ')',
-          backgroundSize: 'cover',
-          transition: 'all 1s ease-out',
-          transitionDelay: '.05s'
-        }
-      }
-    },
-    ...[
-      {
-        pageLink,
-        image: {
-          style: { backgroundPosition: 'center left' }
-        }
-      },
-      {
-        pageLink2,
-        image: { style: { backgroundPosition: 'center right' } }
-
-      }
-    ]
-  }
+  Sololaki,
+  Rustaveli,
+  logo,
+  logo2
 }

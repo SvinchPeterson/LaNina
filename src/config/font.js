@@ -3,46 +3,66 @@
 import { getFontFace, set } from '@rackai/symbols'
 import { injectGlobal } from '@emotion/css'
 
-import Light from '../assets/fonts/49c5f3e1-5867-4b1d-a843-2d07fa60d85d.woff2'
-import Regular from '../assets/fonts/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2'
-import Medium from '../assets/fonts/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2'
-import DemiBold from '../assets/fonts/6afe4676-059a-4aa8-b891-29856bbcba22.woff2'
-import Bold from '../assets/fonts/14c73713-e4df-4dba-933b-057feeac8dd1.woff2'
-import Heavy from '../assets/fonts/5c57b2e2-f641-421e-a95f-65fcb47e409a.woff2'
-import Times from '../assets/fonts/Times-Roman.woff2'
-import gilda from '../assets/fonts/GildaDisplay-Regular.woff2'
+import DejavuBold from '../assets/fonts/DejaVuSans-Bold.woff2'
+import Dejavu from '../assets/fonts/DejaVuSans.woff2'
+import Geo from '../assets/fonts/BPGExtraSquareMtavruli.woff2'
 
-const RegisterFont = set('font', {
-  name: 'Avenir Next',
-  url: Light,
-  fontWeight: 300
-}, {
-  name: 'Avenir Next',
-  url: Regular,
-  fontWeight: 400
-}, {
-  name: 'Avenir Next',
-  url: Medium,
-  fontWeight: 500
-}, {
-  name: 'Avenir Next',
-  url: DemiBold,
-  fontWeight: 600
-}, {
-  name: 'Avenir Next',
-  url: Bold,
-  fontWeight: 700
-}, {
-  name: 'Avenir Next',
-  url: Heavy,
-  fontWeight: 900
-}, {
-  name: 'Times',
-  url: Times
-}, {
-  name: 'Gilda Display',
-  url: gilda
-})
+const RegisterFont = set('font',
+  // {
+  //   name: 'Avenir Next',
+  //   url: Light,
+  //   fontWeight: 300
+  // }, {
+  //   name: 'Avenir Next',
+  //   url: Regular,
+  //   fontWeight: 400
+  // }, {
+  //   name: 'Avenir Next',
+  //   url: Medium,
+  //   fontWeight: 500
+  // }, {
+  //   name: 'Avenir Next',
+  //   url: DemiBold,
+  //   fontWeight: 600
+  // }, {
+  //   name: 'Avenir Next',
+  //   url: Bold,
+  //   fontWeight: 700
+  // }, {
+  //   name: 'Avenir Next',
+  //   url: Heavy,
+  //   fontWeight: 900
+  // }, {
+  //   name: 'Times',
+  //   url: Times
+  // }, {
+  //   name: 'Gilda Display',
+  //   url: gilda
+  // }, {
+  //   name: 'Alice',
+  //   url: Alice
+  // }, {
+  //   name: 'Hina Mincho',
+  //   url: HinaMincho
+  // }, {
+  //   name: 'Cormorant Garamond',
+  //   url: CormorantGaramond
+  // }, {
+  //   name: 'Marcellus',
+  //   url: Marcellus
+  // },
+  {
+    name: 'DejaVu Sans',
+    url: DejavuBold,
+    fontWeight: 700
+  }, {
+    name: 'DejaVu Sans',
+    url: Dejavu
+
+  }, {
+    name: 'BPG ExtraSquare Mtavruli',
+    url: Geo
+  })
 
 const FontFace = getFontFace(RegisterFont)
 

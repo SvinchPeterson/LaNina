@@ -1,18 +1,43 @@
 'use strict'
 
-import { Block, Button, Flex } from '@rackai/symbols'
+import { Block } from '@rackai/symbols'
+import router from '@rackai/domql/packages/router'
 import style from './style'
 
 import './config'
 import './define'
 
-import { Landing } from './pages'
+import { Landing, Sololaki } from './pages'
+// import { Story } from './sections'
 
 const App = {
-  proto: Flex,
   key: 'app',
+  proto: Block,
   style,
-  Landing
+
+  state: {
+    isLoaded: false
+  },
+  props: {
+    // flexAlign: 'flex-start center'
+  },
+
+  define: { routes: param => param },
+  routes: {
+    '/': Landing,
+    '/Sololaki': Sololaki
+    // '/story': Story
+  },
+
+  on: {
+    render: element => {
+      router(element, window.location.pathname, {})
+    }
+  }
 }
+
+window.addEventListener('load', event => {
+  App.state.update({ isLoaded: true })
+})
 
 export default App
