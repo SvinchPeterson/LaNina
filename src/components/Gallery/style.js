@@ -17,6 +17,7 @@ export default {
   flex: 1,
   position: 'relative',
   boxSizing: 'border-box',
+  borderBottom: '5px solid rgba(168, 98, 63, 1)',
 
   '> span': styleImage
 }

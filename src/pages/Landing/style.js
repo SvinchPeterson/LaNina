@@ -47,7 +47,7 @@ export const styleLogo = {
   transform: 'translate(-50%, -50%) scale(1.4)',
   zIndex: 400,
   pointerEvents: 'none',
-  opacity: 0.85,
+  opacity: 1,
 
   '@media only screen and (min-width: 1225px)': {
     animationName: coverLogoAnimation,
@@ -78,7 +78,7 @@ export const styleLogo2 = {
 export const styleheading = {
   textTransform: 'uppercase',
   letterSpacing: '.7px',
-  color: 'rgba(244, 233, 217, .55)',
+  color: 'rgba(244, 233, 217, 1)',
   position: 'relative',
   transition: 'color 1s ease-in-out',
 

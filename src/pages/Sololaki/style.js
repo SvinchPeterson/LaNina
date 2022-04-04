@@ -80,7 +80,7 @@ export const styleBook = {
   padding: `${40 / 19}em ${40 / 19}em ${40 / 19}em ${20 / 19}em`,
   zIndex: 400,
   backdropFilter: 'blur(6px) brightness(100%)',
-  background: 'rgba(42, 81, 61, .5)',
+  background: 'rgba(42, 81, 61, .75)',
   color: 'rgba(244, 233, 217, .65)',
   fontSize: `${19 / 16}em`,
   lineHeight: '25px',
@@ -92,7 +92,7 @@ export const styleBook = {
   '&:hover > img': { opacity: 1 },
   '> img': {
     width: `${45 / 19}em`,
-    opacity: '.65',
+    opacity: '.85',
     animationName: opacity,
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out'

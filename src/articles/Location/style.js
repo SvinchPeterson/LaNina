@@ -18,7 +18,11 @@ const styleMap = {
 
   // filter: 'brightness(70%) grayscale(70%)',
   flex: 1,
-  border: 0
+  border: 0,
+  '@media only screen and (max-width: 1225px)': {
+    minWidth: '100%',
+    maxWidth: `100%`
+  }
   // backgroundImage: 'url(' + MAP_PNG + ')',
   // backgroundSize: 'contain',
   // backgroundPosition: 'center center',
@@ -48,6 +52,10 @@ export default {
 
   '> section': {
     iframe: styleMap,
-    div: styleAirPort
+    div: styleAirPort,
+    '@media only screen and (max-width: 1225px)': {
+      flexFlow: 'column'
+
+    }
   }
 }

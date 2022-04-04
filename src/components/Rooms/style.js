@@ -9,8 +9,9 @@ const styleNavButtons = {
   height: 'fit-content',
 
   // background: 'rgba(0, 0, 0, .05)',
-  background: 'rgba(168, 98, 63, .7)',
-  borderRadius: '25px',
+  background: 'radial-gradient(rgba(244, 233, 217, .25), rgba(244, 233, 217, .5))',
+  border: '2px solid rgba(168, 98, 63, .75)',
+  borderRadius: '30px',
   // border: '5px solid red',
   button: {
     background: 'transparent',

@@ -54,13 +54,12 @@ const styleOffers = {
 
 export default {
   position: 'absolute',
-  bottom: '-12px',
+  bottom: '-10.5px',
   zIndex: 50,
-  // background: 'rgba(243, 231, 219, 1)',
+  borderTop: '5px solid rgba(168, 98, 63, 1)',
   background: cream,
   overflow: 'hidden',
   boxSizing: 'border-box',
-  // border: '2px solid red',
 
   '> header': styleHeader,
   '> div': styleOffers

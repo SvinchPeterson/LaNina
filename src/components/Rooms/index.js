@@ -50,8 +50,13 @@ const navButtons = {
           console.log(state)
           const { activeImage } = state
           state.update({
-            activeImage: activeImage < (element.parent.parent.gallery.length - 2) ? 0 : activeImage - 1
+            activeImage: activeImage < (element.parent.parent.gallery.length + 2) ? 0 : activeImage - 1
           })
+          // if (activeImage === element.parent.gallery.length) {
+          //   state.update({
+          //     activeImage: activeImage === element.parent.gallery.length - 2
+          //   })
+          // }
         }
       }
     }
