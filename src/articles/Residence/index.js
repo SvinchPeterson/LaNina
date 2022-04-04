@@ -1,88 +1,107 @@
 'use strict'
-import { Block, Img } from '@rackai/symbols'
+import { Block, Img, Text } from '@rackai/symbols'
 
-import { bbSololaki } from '../../texts'
+import { bbSololaki, stayText } from '../../texts'
 
-import LUGGAGE_PNG from '../../assets/luggage.PNG'
+import LUGGAGE_PNG from '../../assets/icons/luggage.PNG'
 
-import style, { styleBBresidence, styleEntrence } from './style'
+import style, { styleResidenceOrigin, styleEntrence } from './style'
 
-const bbResidence = {
+const residenceOrigin = {
   tag: 'section',
   proto: Block,
-  props: { flexAlign: 'flex-start center' },
-  style: styleBBresidence,
-
+  style: styleResidenceOrigin,
+  props: {
+    flexAlign: 'flex-start center'
+  },
   p: {
-    proto: [Block, bbSololaki],
-    props: {
-      padding: 'E 0 E E'
-    }
+    proto: [bbSololaki, Block],
+    props: { padding: 'E' }
   }
 }
 
 const entrence = {
   tag: 'section',
   proto: Block,
-  props: {
-    flexAlign: 'flex-end flex-end'
-  },
   style: styleEntrence,
-
+  props: { flexAlign: 'flex-end flex-end' },
   p: {
-    proto: Block,
+    proto: [Block, Text],
     props: {
-      padding: 'D E',
-      flexFlow: 'column',
-      gap: 'A'
+      padding: 'E E D E',
+      flexFlow: 'column'
     },
     entrences: {
-      tag: 'ul',
       proto: Block,
-
+      props: {
+        flexFlow: 'column',
+        gap: 'Y',
+        padding: '0 0 C 0'
+      },
+      style: {
+        width: 'fit-content'
+      },
       childProto: {
-        tag: 'li',
         proto: Block,
         props: {
           flexAlign: 'center flex-start',
-          gap: 'Y2'
+          gap: 'Z'
+        },
+        style: {
+          opacity: '.35',
+          // color: 'rgba(168, 98, 63, 1)',
+          fontSize: `${14 / 15}em`,
+          letterSpacing: '1.3px'
         },
         dot: {
-          tag: 'span',
-          proto: Block,
-          props: { boxSize: 'X X' }
-        }
+          style: {
+            width: '4px',
+            height: '4px',
+            borderRadius: '100%',
+            background: 'rgba(0, 0, 0, 1)'
+          }
+        },
+        span: { proto: Text }
       },
       ...[
         {
           dot: {},
-          text: 'Private entrance'
+          span: { props: { text: 'private entrance' } }
         },
         {
           dot: {},
-          text: 'Separate street or building entrance'
+          span: { props: { text: 'separate street or building entrance' } }
         },
         {
           dot: {},
-          text: 'Free parking on premises'
+          span: { props: { text: 'free parking on premises' } }
         }
       ]
     },
-
     luggage: {
-      proto: [Block],
+      proto: Block,
       props: {
         flexAlign: 'flex-start center',
-        gap: 'Y2'
+        gap: 'Z2'
+      },
+      style: {
+        maxWidth: `${500 / 15}em`,
+        opacity: '.25'
       },
       icon: {
         proto: Img,
-        props: { src: LUGGAGE_PNG }
+        props: { src: LUGGAGE_PNG },
+        style: { marginTop: '3px' }
       },
-      text: 'Luggage dropoff allowed for guests convenience when they have early arrival or late departure'
-
+      text: `Luggage dropoff allowed
+      for guests' convenience when they have early arrival or late departure`
+    },
+    stay: {
+      proto: [stayText, Block],
+      props: { padding: 'Z 0 0 B2' },
+      style: { color: 'rgba(168, 98, 63, .5)' }
+      // style: { color: 'rgba(168, 98, 63, .35)', fontWeight: 'bold' }
     }
-
   }
 }
 
@@ -97,6 +116,6 @@ export default {
     gap: 'G'
   },
 
-  bbResidence,
+  residenceOrigin,
   entrence
 }

@@ -3,15 +3,15 @@
 export const styleBook = {
   letterSpacing: '5px',
   textDecoration: 'none',
-  color: 'rgba(243, 231, 219, .75)',
+  color: 'rgba(244, 233, 217, .75)',
   position: 'absolute',
   top: '80%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  background: 'radial-gradient(rgba(243, 231, 219, .15), rgba(243, 231, 219, 0))',
-  border: '.5px solid rgba(243, 231, 219, .45)',
+  // background: 'radial-gradient(rgba(168, 98, 63, .25), rgba(168, 98, 63, .7))',
+  border: '2px solid rgba(168, 98, 63, .75)',
   borderRadius: '50px',
-  opacity: 0,
+  // opacity: 0,
   transition: 'opacity .7s ease-in-out',
   transitionDelay: '.5s',
   fontWeight: 700,
@@ -46,10 +46,9 @@ export const styleImage = {
   height: '100%',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
-  filter: 'brightness(60%) grayscale(50%)',
+  filter: 'brightness(40%) grayscale(100%)',
   transition: 'all .7s ease-in-out',
-  zIndex: '-1',
-  transform: 'scale(1.1)'
+  zIndex: '-1'
 }
 
 export default {
@@ -65,20 +64,21 @@ export default {
   boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .5)',
   '&::after': {
     content: '""',
-    fontSize: `${17 / 16}em`,
+    fontSize: `${20 / 16}em`,
     position: 'absolute',
-    color: 'rgba(243, 231, 219, .85)',
+    color: 'rgba(168, 98, 63, 1)',
     top: '27%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     whiteSpace: 'nowrap',
     textTransform: 'Uppercase',
-    letterSpacing: `${3 / 16}em`,
+    letterSpacing: `${1 / 16}em`,
     fontWeight: 600
   },
   '&:hover': {
     flex: 3,
     zIndex: 70,
+    minWidth: '1000px',
     '> div': {
       filter: 'brightness(20%) grayscale(50%)',
       transform: 'scale(1)'

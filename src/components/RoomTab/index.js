@@ -4,17 +4,19 @@ import { Block, Link, Img, Text } from '@rackai/symbols'
 
 import { ballerina, redBrick, yellowCouch } from '../../texts'
 
-import style, { styleBook, styleParagraph, styleImage } from './style'
+import style, { styleBook } from './style'
 
-import { roomsContainer } from '../../animations'
+import BALLERINA_TAB_IMG from '../../assets/images/ballerina/livingroom.jpg'
+import REDBRICK_TAB_IMG from '../../assets/images/redBrick/livingroom.jpg'
+import YELLOWCOUCH_TAB_IMG from '../../assets/images/yellowCouch/livingroom.jpg'
+import RETRO_TAB_IMG from '../../assets/images/retro/livingroom.jpg'
+import GREENFOREST_TAB_IMG from '../../assets/images/greenForest/livingroom.jpg'
 
-import BALLERINA_COVER_IMG from '../../assets/images/ballerina/ballerinaCovers.jpg'
-import REDBRICK_COVER_IMG from '../../assets/images/redBrick/redBrickCovers.jpg'
-import YELLOWCOUCH_COVER_IMG from '../../assets/images/yellowCouch/yellowCouchCovers.jpg'
-
-import BALLERINA_ICON from '../../assets/dress.png'
-import BRICKS_ICON from '../../assets/bricks.png'
-import COUCH_ICON from '../../assets/couch.png'
+import BALLERINA_ICON from '../../assets/icons/dress.png'
+import BRICKS_ICON from '../../assets/icons/bricks.png'
+import COUCH_ICON from '../../assets/icons/couch.png'
+import KEY_ICON from '../../assets/icons/key.png'
+import LEAF_ICON from '../../assets/icons/leaf.png'
 
 const book = {
   proto: [Link, Text, Block],
@@ -71,6 +73,8 @@ const roomTab = {
       : {
         flex: 1
       }
+    // show2: (element, state) => state.activeTab ? { transform: 'translateX(200px)' } : { transform: 'translateX(-200px)' }
+    // show2: (element, state) => state.activeTab === true ? { transform: 'translateX(1000px)' } : { transform: 'translateX(-1000px)' }
   },
   image: {},
   p: {},
@@ -88,7 +92,7 @@ export const tabBallerina = {
   },
 
   image: {
-    style: { backgroundImage: 'url(' + BALLERINA_COVER_IMG + ')' }
+    style: { backgroundImage: 'url(' + BALLERINA_TAB_IMG + ')' }
   },
   p: {
     proto: ballerina
@@ -118,7 +122,7 @@ export const tabRedBrick = {
   },
 
   image: {
-    style: { backgroundImage: 'url(' + REDBRICK_COVER_IMG + ')' }
+    style: { backgroundImage: 'url(' + REDBRICK_TAB_IMG + ')' }
   },
   p: { proto: redBrick },
   book: {
@@ -146,7 +150,7 @@ export const tabYellowCouch = {
   },
 
   image: {
-    style: { backgroundImage: 'url(' + YELLOWCOUCH_COVER_IMG + ')' }
+    style: { backgroundImage: 'url(' + YELLOWCOUCH_TAB_IMG + ')' }
   },
   p: {
     proto: yellowCouch
@@ -160,6 +164,66 @@ export const tabYellowCouch = {
       },
       props: {
         src: COUCH_ICON
+      }
+    }
+  }
+}
+
+export const tabRetro = {
+  proto: roomTab,
+  props: { href: '#retro' },
+  style: {
+    flex: 1,
+    '&::after': {
+      content: '"retro"'
+    }
+  },
+
+  image: {
+    style: { backgroundImage: 'url(' + RETRO_TAB_IMG + ')' }
+  },
+  p: {
+    proto: yellowCouch
+  },
+  book: {
+    props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1645550425_4DUFFaIG0wB3DIEA' },
+    icon: {
+      style: {
+        width: '25px',
+        height: '20px'
+      },
+      props: {
+        src: KEY_ICON
+      }
+    }
+  }
+}
+
+export const tabGreenForest = {
+  proto: roomTab,
+  props: { href: '#greenForest' },
+  style: {
+    flex: 1,
+    '&::after': {
+      content: '"green forest"'
+    }
+  },
+
+  image: {
+    style: { backgroundImage: 'url(' + GREENFOREST_TAB_IMG + ')' }
+  },
+  p: {
+    proto: yellowCouch
+  },
+  book: {
+    props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1645550425_4DUFFaIG0wB3DIEA' },
+    icon: {
+      style: {
+        width: '25px',
+        height: '20px'
+      },
+      props: {
+        src: LEAF_ICON
       }
     }
   }

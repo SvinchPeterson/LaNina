@@ -2,21 +2,28 @@
 
 const styleNavButtons = {
   position: 'absolute',
-  right: '100px',
-  bottom: '0px',
+  top: '50%',
+  right: '70px',
+  transform: 'translate(50%, -50%)',
+  zIndex: 200,
+  height: 'fit-content',
+
   // background: 'rgba(0, 0, 0, .05)',
+  background: 'radial-gradient(rgba(244, 233, 217, .25), rgba(244, 233, 217, .5))',
+  border: '2px solid rgba(168, 98, 63, .75)',
   borderRadius: '30px',
+  // border: '5px solid red',
   button: {
     background: 'transparent',
     transition: 'all .4s ease-in-out',
     '&:hover': {
-      '> img': { opacity: '.5' }
+      '> img': { opacity: '1' }
     }
   },
   '> button > img': {
     display: 'block',
     width: '35px',
-    opacity: '.3'
+    opacity: '.65'
   }
 }
 export default {
@@ -25,7 +32,8 @@ export default {
   left: 0,
   width: '100%',
   boxSizing: 'border-box',
-  padding: '120px 0px 60px 0px',
+  padding: '0px 0px 60px 0px',
+  borderTop: '5px solid rgba(168, 98, 63, 1)',
   '> aside': {
     display: 'none'
   },

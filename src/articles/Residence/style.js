@@ -1,71 +1,86 @@
 'use strict'
 
-import { cream } from '../../colors'
-import GREEN_LANINA_JPG from '../../assets/images/sololaki/greenLanina2.jpg'
-import BALCONY_JPG from '../../assets/images/sololaki/balcony3.jpg'
+import GREEN_LANINA_JPG from '../../assets/images/sololaki/BBgreen.jpg'
+import ENTRENCE_JPG from '../../assets/images/sololaki/entrence.jpg'
 
-export const styleBBresidence = {
-  width: '100%',
+export const styleResidenceOrigin = {
+  position: 'relative',
+  minHeight: `${650 / 16}em`,
+  boxSizing: 'border-box',
+  paddingLeft: `${80 / 16}em`,
   backgroundImage: 'url(' + GREEN_LANINA_JPG + ')',
   backgroundSize: 'contain',
-  backgroundPosition: 'left 100px bottom',
   backgroundRepeat: 'no-repeat',
-  backgroundAttachment: 'fixed',
   transition: 'all 1s ease-in-out',
-  '&:hover': {
-    // transform: 'scale(1.1)'
+  backgroundPosition: 'bottom 100px left 80px',
+  '@media only screen and (max-width: 1225px)': {
+    backgroundPosition: 'center center',
+    paddingLeft: 0,
+    backgroundSize: 'cover',
+    backgroundImage: 'radial-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .25)), url(' + GREEN_LANINA_JPG + ')'
   },
 
-  p: {
-    maxWidth: `${800 / 16}em`,
-    boxShadow: '-50px 50px 100px 20px rgba(243, 231, 219, .2)',
-    lineHeight: `${30 / 16}em`,
-    color: 'rgba(0, 0, 0, .35)',
-    letterSpacing: '.7px'
+  '> p': {
+    background: 'rgba(244, 233, 217, 1)',
+    color: 'rgba(0, 0, 0, .25)',
+    fontSize: `${15 / 16}em`,
+    maxWidth: `${800 / 15}em`,
+    boxShadow: '0px 0px 75px 0px rgba(244, 233, 217, .55)',
+    lineHeight: `${28 / 15}em`,
+    overflow: 'hidden',
+    fontWeight: 500,
+    '@media only screen and (max-width: 1225px)': {
+      background: 'transparent',
+      color: 'rgba(244, 233, 217, .85)',
+      boxShadow: 'none',
+      alignSelf: 'center',
+      fontSize: `${16 / 15}em`,
+      padding: `${60 / 26}em`,
+      backdropFilter: 'blur(1px)',
+      lineHeight: `${26 / 16}em`
+    }
   }
 }
 
 export const styleEntrence = {
-  backgroundImage: 'url(' + BALCONY_JPG + ')',
+  minHeight: `${700 / 16}em`,
+  backgroundImage: 'url(' + ENTRENCE_JPG + ')',
+  transition: 'all 1s ease-in-out',
+  boxSizing: 'border-box',
+  backgroundPosition: 'bottom 100px right',
   backgroundSize: 'cover',
-  backgroundAttachment: 'fixed',
-  // transform: 'scale(1.05)',
-  marginBottom: '150px',
+  '&:hover': { backgroundPosition: 'bottom 50px right' },
 
-  p: {
+  '@media only screen and (max-width: 1225px)': {
+    backgroundAttachment: 'initial',
+    backgroundPosition: 'initial'
+  },
+  '> p': {
+    maxWidth: 'fit-content',
     fontSize: `${15 / 16}em`,
-    letterSpacing: '.7px',
-
-    '> ul': {
-      padding: 0,
-      listStyleType: 'none'
+    fontWeight: 500,
+    background: 'rgba(244, 233, 217, 1)',
+    img: {
+      width: `${20 / 16}em`
     },
-    '> ul > li': {
-      color: 'rgba(0, 0, 0, .25)',
-      fontWeight: 500
-    },
-    '> ul > li > span': {
-      display: 'block',
-      background: 'rgba(0, 0, 0, .35)',
-      borderRadius: '100%'
-    },
-
-    '> div': {
-      maxWidth: `${500 / 15}em`,
-      color: 'rgba(0, 0, 0, .35)',
-      lineHeight: '20px'
-    },
-    '> div > img': {
-      width: `${20 / 15}em`,
-      marginTop: '4px',
-      opacity: 0.65
+    '@media only screen and (max-width: 1225px)': {
+      fontSize: `${18 / 15}em`,
+      minWidth: `100%`,
+      boxSizing: 'border-box',
+      padding: `${100 / 18}em ${0 / 18}em ${0 / 18}em ${100 / 18}em`,
+      marginBottom: '-150px'
     }
   }
 }
 
 export default {
-  section: {
-    minHeight: `${700 / 16}em`
-  },
-  p: { background: cream }
+  // border: '8px solid red',
+  '> section': {
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+    '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' },
+    '> p': {
+      letterSpacing: '.7px'
+    }
+  }
 }

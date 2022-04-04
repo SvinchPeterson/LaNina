@@ -1,121 +1,106 @@
 'use strict'
 
-import { brightnessLanding, imagePosition } from '../../animations'
+import { brightness, coverLogoAnimation, coverLogoAnimation2 } from '../../animations'
 
-const styleLink = {
+export const styleLink = {
   flex: 1,
+  transition: 'flex 1s ease-in-out, background-image 1s ease-in-out, background-position 1s ease-in-out',
   overflow: 'hidden',
+  backgroundRepeat: 'no-repeat',
   position: 'relative',
   backgroundSize: 'cover',
-  transition: 'all .85s ease-in-out',
-  boxSizing: 'border-box',
-  animationName: brightnessLanding,
-  animationDuration: '2s',
-  animationTimingFunction: 'ease-in-out',
-  borderTop: '0px solid black',
-  borderBottom: '0px solid black',
+  textDecoration: 'none',
+  color: 'rgba(244, 233, 217, 1)',
+  display: 'flex',
 
   '@media only screen and (min-width: 1225px)': {
-    '&:hover': {
-      flex: 8,
-      borderBottom: 'none',
-      borderTop: 'none',
-      '> div': {
-        backgroundPosition: 'top left',
-        filter: 'grayscale(25%) brightness(55%) blur(0px)'
-        // backgroundBlendMode: 'screen'
-      },
-      '> h3': {
-        background: 'rgba(0, 0,0, 0)',
-        // transform: 'scale(1)',
-        '> span': { opacity: 1, width: '60px' },
-        '> div': { opacity: 1 }
-        // '&::before': {transform: 'scale(1.1)'}
-      },
-      '> h3::before': {
-        opacity: '1',
-        transform: 'scale(1.2)',
-        letterSpacing: '1px'
-      }
-    }
-
+    backgroundAttachment: 'fixed',
+    animationName: brightness,
+    animationDuration: '1.5s',
+    animationTimingFunction: 'ease-in-out',
+    '&:hover': { flex: 8 },
+    '&:hover > h3': { color: 'rgba(244, 233, 217, 1)' }
   },
 
   '@media only screen and (max-width: 1225px)': {
+    backgroundPosition: 'bottom center',
     justifyContent: 'center',
+    alignItems: 'center',
 
-    '> div': {
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'top 50px right',
-      transform: 'scale(1)'
+    '> h3': {
+      fontSize: `${65 / 18}em`,
+      color: 'rgba(244, 233, 217, .85)'
+    },
+    '> h3 > span': {
+      fontSize: `30px`,
+      top: '120%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
     }
   }
 }
 
-const styleImage = {
-  flex: 1,
-  backgroundSize: 'cover',
-  backgroundAttachment: 'fixed',
-  backgroundBlendMode: 'screen',
-  // backgroundBlendMode: 'screen',
+export const styleLogo = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%) scale(1.4)',
+  zIndex: 400,
+  pointerEvents: 'none',
+  opacity: 1,
+
   '@media only screen and (min-width: 1225px)': {
-    filter: 'grayscale(100%) brightness(25%) blur(0px)'
+    animationName: coverLogoAnimation,
+    animationDuration: '1.5s',
+    animationTimingFunction: 'ease-in-out'
   },
-  '@media only screen and (max-width: 1225px)': {
-    filter: 'grayscale(100%) brightness(50%) blur(.2px)'
-  },
-  transition: 'all 1s ease-in-out',
-
-  backgroundPosition: 'center center',
-
-  animationName: imagePosition,
-  animationDuration: '2s',
-  animationTimingFunction: 'ease-in-out'
+  '@media only screen and (max-width: 1225px)': { opacity: 0 }
 }
 
-const styleUnderConstruction = {
-  '@media only screen and (min-width: 1225px)': {
-    marginTop: '40px'
-  },
-  // color: '#E6763F',
-  color: 'rgba(168, 98, 63, 1)',
+export const styleLogo2 = {
   position: 'absolute',
-  zIndex: '200',
-  fontSize: '14px',
-  fontWeight: 500,
-  letterSpacing: '1.1px',
+  zIndex: '400',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%) scale(1)',
   opacity: 0,
-  transition: 'opacity 1s ease-in-out',
-  whiteSpace: 'nowrap',
-  marginLeft: '16.5px',
+  pointerEvents: 'none',
+
   '@media only screen and (max-width: 1225px)': {
     opacity: 1,
-    width: 'fit-content',
-    margin: 'auto',
+    animationName: coverLogoAnimation2,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out',
+    transform: 'translate(-50%, -50%) scale(1.3)'
+  }
+}
+
+export const styleheading = {
+  textTransform: 'uppercase',
+  letterSpacing: '.7px',
+  color: 'rgba(244, 233, 217, 1)',
+  position: 'relative',
+  transition: 'color 1s ease-in-out',
+
+  '> span': {
+    textTransform: 'lowercase',
     position: 'absolute',
-    top: '70%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    fontSize: '20px'
+    whiteSpace: 'nowrap',
+    top: '25px',
+    left: '15px',
+    color: '#DD7C4C',
+    opacity: '.85'
   }
 }
 
 export default {
-  '> a': styleLink,
-  '> a > div': styleImage,
-  '> a > h3 > div': styleUnderConstruction,
-
   flex: 1,
-  position: 'relative',
-  overflow: 'hidden',
-  // background: 'black',
-  // background: 'rgba(42, 81, 61, 1)',
-  animationName: brightnessLanding,
+  boxSizing: 'border-box',
+  animationName: brightness,
   animationDuration: '2s',
   animationTimingFunction: 'ease-in-out',
-  margin: '0 auto',
-  '@media only screen and (max-width: 1225px)': {
-    flexFlow: 'column'
-  }
+  display: 'flex',
+  overflow: 'hidden',
+
+  '@media only screen and (max-width: 1225px)': { flexFlow: 'column' }
 }

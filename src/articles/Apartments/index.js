@@ -1,7 +1,7 @@
 'use strict'
 import { Block } from '@rackai/symbols'
 
-import { tabBallerina, tabRedBrick, tabYellowCouch, roomBallerina, roomRedBrick, roomYellowCouch } from '../../components'
+import { tabBallerina, tabRedBrick, tabYellowCouch, tabRetro, tabGreenForest, roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from '../../components'
 
 // import { roomBallerina, roomRedBrick, roomYellowCouch } from './rooms'
 
@@ -22,7 +22,8 @@ export default {
     tag: 'header',
     proto: Block,
     props: {
-      padding: 'E 0'
+      padding: 'E 0',
+      flexAlign: 'center center'
     },
     // props: {
     //   flexFlow: 'row',
@@ -42,7 +43,9 @@ export default {
       ...[
         { proto: tabBallerina },
         { proto: tabRedBrick },
-        { proto: tabYellowCouch }
+        { proto: tabYellowCouch },
+        { proto: tabRetro },
+        { proto: tabGreenForest }
       ]
       // ballerina: { proto: tabBallerina },
       // redBrick: { proto: tabRedBrick },
@@ -64,7 +67,9 @@ export default {
     ...[
       roomBallerina,
       roomRedBrick,
-      roomYellowCouch
+      roomYellowCouch,
+      roomRetro,
+      roomGreenForest
     ]
   }
 }

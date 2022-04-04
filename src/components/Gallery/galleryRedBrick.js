@@ -2,21 +2,24 @@
 
 import Gallery from './gallery'
 
-import APARTMENT_JPG from '../../assets/images/redBrick/apartment.jpg'
-import BEDROOM_JPG from '../../assets/images/redBrick/bedroom.jpg'
-import KITCHEN_JPG from '../../assets/images/redBrick/kitchen.jpg'
 import LIVINGROOM_JPG from '../../assets/images/redBrick/livingroom.jpg'
-import TORSHER_JPG from '../../assets/images/redBrick/torsher.jpg'
-import WINE_GLASS_JPG from '../../assets/images/redBrick/wine-glass.jpg'
+import LIVINGROOM2_JPG from '../../assets/images/redBrick/livingroom2.jpg'
+import BEDROOM_JPG from '../../assets/images/redBrick/bedroom.jpg'
+import BEDROOM2_JPG from '../../assets/images/redBrick/bedroom2.jpg'
+import KITCHEN_JPG from '../../assets/images/redBrick/kitchen.jpg'
+import BATHROOM_JPG from '../../assets/images/redBrick/bathroom.jpg'
+import BATHROOM2_JPG from '../../assets/images/redBrick/bathroom2.jpg'
 
 export const galleryRedBrick = {
   proto: Gallery,
   ...[
     { style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + APARTMENT_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')' } },
     { style: { backgroundImage: 'url(' + BEDROOM_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + BEDROOM2_JPG + ')' } },
     { style: { backgroundImage: 'url(' + KITCHEN_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + TORSHER_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + WINE_GLASS_JPG + ')' } }
+    { style: { backgroundImage: 'url(' + BATHROOM_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + BATHROOM2_JPG + ')' } }
+
   ]
 }

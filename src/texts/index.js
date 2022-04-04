@@ -1,4 +1,4 @@
-import { Block, Img, Flex, Link, Text } from '@rackai/symbols'
+import { Text } from '@rackai/symbols'
 
 export const origin = {
   proto: Text,

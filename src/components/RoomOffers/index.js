@@ -2,7 +2,7 @@
 import { Block, Text, Button, Img } from '@rackai/symbols'
 
 import { roomOffers, roomOffers2 } from '../../animations'
-import MINUS_ICON from '../../assets/minus.png'
+import MINUS_ICON from '../../assets/icons/minus.png'
 
 import style from './style'
 

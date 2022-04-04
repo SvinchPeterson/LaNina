@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Link, SVG, Flex } from '@rackai/symbols'
+import { Block, Text, Link, SVG } from '@rackai/symbols'
 
 import FACEBOOK_SVG from '../../assets/icons/facebook.svg'
 import INSTAGRAM_SVG from '../../assets/icons/instagram.svg'
@@ -11,16 +11,25 @@ const sectionLinks = {
   tag: 'nav',
   proto: Block,
   props: {
-    padding: 'G1 D 0 0',
-    // flexFlow: 'column',
+    padding: '0 E 0 0',
     gap: 'C',
-    flexAlign: 'flex-start flex-end'
+    flexAlign: 'flex-end flex-end'
   },
 
   childProto: {
     proto: [Link, Text, Block],
     props: {
-      size: 'B'
+      size: 'D'
+    },
+    on: {
+      click: (event, element, state) => {
+        state.update({ activeMenuLink: element.key })
+        console.log(state.activeMenuLink, element.key)
+      }
+    },
+
+    class: {
+      show: (element, state) => state.activeMenuLink === element.key ? { color: 'rgba(168, 98, 63, .65)' } : { color: 'rgba(244, 233, 217, .45)' }
     }
   },
   ...[
@@ -34,10 +43,10 @@ const sectionLinks = {
 const socialMedia = {
   proto: Block,
   props: {
-    flexAlign: 'center center',
-    gap: 'D'
+    flexAlign: 'flex-end center',
+    gap: 'E',
+    padding: '0 0 D 0'
   },
-  style: { marginBottom: `${200 / 16}em` },
 
   childProto: {
     proto: [Link, Block],
@@ -72,26 +81,15 @@ const socialMedia = {
         src: LINKEDIN_SVG
       }
     }
-
-    // {
-    //   icon: {
-    //     proto: Img,
-    //     props: { src: MAIL_PNG }
-    //   }
-    // }
   ]
 }
-
 export default {
   tag: 'aside',
-  proto: [Block, Flex],
+  proto: Block,
   style,
   props: {
-    // flexAlign: 'flex-end flex-end',
-    gap: 'B'
-    // flexAlign: 'center space-between'
+    flexFlow: 'column'
   },
-
   class: {
     show: (element, state) => state.active ? {
       opacity: 0,
@@ -106,7 +104,6 @@ export default {
       }
     } : {
       opacity: 1,
-      '> nav': { opacity: 1, transform: 'scale(1.02)' },
       '> div': {
         opacity: 1,
         transitionDelay: 0

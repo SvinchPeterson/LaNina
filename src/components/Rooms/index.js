@@ -2,12 +2,15 @@
 
 import { Block, Button, Img, Flex } from '@rackai/symbols'
 
-import { galleryBallerina, galleryRedBrick, galleryYellowCouch, RoomOffers } from '..'
+import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, galleryGreenForest, RoomOffers } from '..'
 
 import { roomsContainer } from '../../animations'
 
-import LEFT_ARROW from '../../assets/left.png'
-import RIGHT_ARROW from '../../assets/right.png'
+// import LEFT_ARROW from '../../assets/left.png'
+// import RIGHT_ARROW from '../../assets/right.png'
+import UP_ARROW from '../../assets/icons/up-arrow.png'
+import DOWN_ARROW from '../../assets/icons/down-arrow.png'
+
 import style from './style'
 
 const navButtons = {
@@ -15,8 +18,9 @@ const navButtons = {
   proto: Block,
   props: {
     flexAlign: 'center center',
-    gap: 'C'
-    // padding: 'A W'
+    flexFlow: 'column',
+    // gap: 'C'
+    padding: 'A W'
   },
 
   childProto: {
@@ -25,7 +29,7 @@ const navButtons = {
   },
   ...[
     {
-      arrow: { props: { src: LEFT_ARROW } },
+      arrow: { props: { src: UP_ARROW } },
       on: {
         click: (event, element, state) => {
           const { activeImage } = state
@@ -37,7 +41,7 @@ const navButtons = {
     },
 
     {
-      arrow: { props: { src: RIGHT_ARROW } },
+      arrow: { props: { src: DOWN_ARROW } },
 
       on: {
         click: (event, element, state) => {
@@ -46,8 +50,13 @@ const navButtons = {
           console.log(state)
           const { activeImage } = state
           state.update({
-            activeImage: activeImage < (element.parent.parent.gallery.length - 2) ? 0 : activeImage - 1
+            activeImage: activeImage < (element.parent.parent.gallery.length + 2) ? 0 : activeImage - 1
           })
+          // if (activeImage === element.parent.gallery.length) {
+          //   state.update({
+          //     activeImage: activeImage === element.parent.gallery.length - 2
+          //   })
+          // }
         }
       }
     }
@@ -215,5 +224,18 @@ export const roomYellowCouch = {
   attr: { id: 'yellowCouch' },
 
   gallery: { proto: galleryYellowCouch }
+}
 
+export const roomRetro = {
+  proto: room,
+  attr: { id: 'retro' },
+
+  gallery: { proto: galleryRetro }
+}
+
+export const roomGreenForest = {
+  proto: room,
+  attr: { id: 'greenForest' },
+
+  gallery: { proto: galleryGreenForest }
 }

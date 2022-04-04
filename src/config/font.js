@@ -53,7 +53,8 @@ const RegisterFont = set('font',
   // },
   {
     name: 'DejaVu Sans',
-    url: DejavuBold
+    url: DejavuBold,
+    fontWeight: 700
   }, {
     name: 'DejaVu Sans',
     url: Dejavu

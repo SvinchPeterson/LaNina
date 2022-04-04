@@ -1,9 +1,8 @@
 'use strict'
-import MAP_PNG from '../../assets/images/sololaki/map.png'
 
 // backgroundImage: 'radial-gradient(rgba(243, 231, 219, .4), rgba(243, 231, 219, .3)), url(' + SOLOLAKI_JPG + ')',
 const styleLocation = {
-  color: 'rgba(0, 0, 0, .35)',
+  color: 'rgba(168, 98, 63, .45)',
   fontWeight: '500',
   maxWidth: '500px',
   textAlign: 'center',
@@ -13,15 +12,21 @@ const styleLocation = {
 
 const styleMap = {
   display: 'block',
-  maxWidth: `${900 / 16}em`,
-  minHeight: '600px',
-  transform: 'scale(.9)',
-  filter: 'brightness(70%) grayscale(70%)',
+  maxWidth: `${700 / 16}em`,
+  minHeight: '500px',
+  // transform: 'scale(.9)',
+
+  // filter: 'brightness(70%) grayscale(70%)',
   flex: 1,
-  backgroundImage: 'url(' + MAP_PNG + ')',
-  backgroundSize: 'contain',
-  backgroundPosition: 'center center',
-  backgroundRepeat: 'no-repeat'
+  border: 0,
+  '@media only screen and (max-width: 1225px)': {
+    minWidth: '100%',
+    maxWidth: `100%`
+  }
+  // backgroundImage: 'url(' + MAP_PNG + ')',
+  // backgroundSize: 'contain',
+  // backgroundPosition: 'center center',
+  // backgroundRepeat: 'no-repeat'
 }
 
 const styleAirPort = {
@@ -46,7 +51,11 @@ export default {
   '> p': styleLocation,
 
   '> section': {
-    span: styleMap,
-    div: styleAirPort
+    iframe: styleMap,
+    div: styleAirPort,
+    '@media only screen and (max-width: 1225px)': {
+      flexFlow: 'column'
+
+    }
   }
 }

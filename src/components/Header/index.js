@@ -1,10 +1,9 @@
 'use strict'
 import { Block, Text, Flex, Shape, SVG, Link } from '@rackai/symbols'
-import { logoB } from '../../components/Logo'
 
 import style from './style'
 
-import PHONE_PNG from '../../assets/phoneRight.svg'
+import PHONE_PNG from '../../assets/icons/phoneRight.svg'
 
 const check = {
   tag: 'input',
@@ -49,15 +48,32 @@ const langs = {
   },
 
   childProto: {
-    proto: [Text, Block],
-    props: { padding: 'Y 0' }
+    proto: [Text, Block, Link],
+    props: { padding: 'Y 0' },
+    on: {
+      click: (event, element, state) => {
+        state.update({ activeLang: element.key })
+        console.log(state.activeLang, element.key)
+      }
+    },
+
+    class: {
+      show: (element, state) => state.activeLang === element.key ? { color: 'rgba(244, 233, 217, .55)' } : { color: 'rgba(244, 233, 217, 1)' }
+    }
   },
 
   ...[
-    { props: { text: 'ქარ' }, style: { fontFamily: 'BPG ExtraSquare Mtavruli' } },
-    { props: { text: 'eng' } },
+    {
+      props: { text: 'ქარ' },
+      style: { fontFamily: 'BPG ExtraSquare Mtavruli' }
+    },
+    {
+      props: { text: 'eng' }
+    },
 
-    { props: { text: 'rus' } }
+    {
+      props: { text: 'rus' }
+    }
 
   ]
 }
@@ -83,32 +99,18 @@ const call = {
   }
 }
 
-const book = {
-  // tag: 'button',
-  proto: [Link, Text, Block],
-  props: {
-    text: 'book',
-    size: 'B',
-    padding: 'Y2 B',
-    href: `https://www.airbnb.com/users/404104381/listings?fbclid=IwAR3RqnCcBkIXwGaJauHmAlgdNYGa9ASOcUMk7ph2i1XBqDG0DqvOMx7XnrM`,
-    target: '_blank'
-  }
-}
-
 export default {
   tag: 'header',
   style,
   proto: [Block, Flex],
   props: {
     flexAlign: 'center center',
-    gap: 'E',
-    padding: 'C 0 A 0'
+    gap: 'E'
   },
 
   check,
 
   menuIcon,
-  // book,
   langs,
   call
 }
