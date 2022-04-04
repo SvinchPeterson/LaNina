@@ -1,10 +1,24 @@
 'use strict'
-import { Box, Link, Text } from '@symbo.ls/symbols'
+import { Box, Link } from '@symbo.ls/symbols'
+
+import { Logo } from '../../components'
 
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
 
 import style, { styleLink } from './style'
+
+const logo = {
+  proto: Logo,
+  props: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%'
+  },
+  style: {
+    transform: 'translate(-50%, -50%)'
+  }
+}
 
 const Sololaki = {
   proto: [Link, Box],
@@ -34,11 +48,13 @@ export default {
   proto: Box,
   style,
   props: {
-    flexAlign: 'flex-start space-between'
+    flexAlign: 'flex-start space-between',
+    position: 'relative'
   },
 
   Sololaki,
-  Rustaveli
+  Rustaveli,
+  logo
 }
 
 // import { Logo } from '../../components'
