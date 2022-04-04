@@ -1,6 +1,6 @@
 'use strict'
 
-import DOM from '@rackai/domql'
+import DOM from 'domql'
 import App from './src/app'
 import { getCookie, setCookie } from './src/utils'
 

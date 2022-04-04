@@ -1,10 +1,10 @@
 'use strict'
 
-import { Block } from '@rackai/symbols'
-import router from '@rackai/domql/packages/router'
+import { Block } from '@symbo.ls/symbols'
+import router from 'domql/packages/router'
 import style from './style'
 
-import './config'
+// import './config'
 import './define'
 
 import { Landing, Sololaki } from './pages'

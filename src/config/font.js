@@ -1,6 +1,6 @@
 'use strict'
 
-import { getFontFace, set } from '@rackai/symbols'
+import { getFontFace, set } from '@symbo.ls/symbols'
 import { injectGlobal } from '@emotion/css'
 
 import DejavuBold from '../assets/fonts/DejaVuSans-Bold.woff2'

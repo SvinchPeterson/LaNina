@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Button, Img } from '@rackai/symbols'
+import { Block, Text, Button, Img } from '@symbo.ls/symbols'
 
 import { roomOffers, roomOffers2 } from '../../animations'
 import MINUS_ICON from '../../assets/icons/minus.png'

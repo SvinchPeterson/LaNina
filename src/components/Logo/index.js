@@ -1,5 +1,5 @@
 'use strict'
-import { SVG, Img } from '@rackai/symbols'
+import { SVG, Img } from '@symbo.ls/symbols'
 
 import LOGO_SVG from '../../assets/icons/logo.svg'
 import LOGO_PNG from '../../assets/icons/logo.png'

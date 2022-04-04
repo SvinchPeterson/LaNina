@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block, Link, Img, Text } from '@rackai/symbols'
+import { Block, Link, Img, Text } from '@symbo.ls/symbols'
 
 import { ballerina, redBrick, yellowCouch } from '../../texts'
 

@@ -1,6 +1,6 @@
 'use strict'
 
-import { set, opacify, THEME } from '@rackai/symbols'
+import { set, opacify, THEME } from '@symbo.ls/symbols'
 
 set('theme', {
   name: 'primary',

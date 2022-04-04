@@ -1,5 +1,5 @@
 'use strict'
-import { Block } from '@rackai/symbols'
+import { Block } from '@symbo.ls/symbols'
 
 import { tabBallerina, tabRedBrick, tabYellowCouch, tabRetro, tabGreenForest, roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from '../../components'
 

@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block, Flex, Text, Link } from '@rackai/symbols'
+import { Block, Flex, Text, Link } from '@symbo.ls/symbols'
 
 import { Residence, Apartments, Location, Wine } from '../../articles'
 import { paddingOut, opacity } from '../../animations'

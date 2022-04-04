@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block, Button, Img, Flex } from '@rackai/symbols'
+import { Block, Button, Img, Flex } from '@symbo.ls/symbols'
 
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, galleryGreenForest, RoomOffers } from '..'
 

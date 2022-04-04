@@ -1,4 +1,4 @@
-import { Text } from '@rackai/symbols'
+import { Text } from '@symbo.ls/symbols'
 
 export const origin = {
   proto: Text,

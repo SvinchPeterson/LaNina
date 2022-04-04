@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Img, Text } from '@rackai/symbols'
+import { Block, Img, Text } from '@symbo.ls/symbols'
 
 import { bbSololaki, stayText } from '../../texts'
 

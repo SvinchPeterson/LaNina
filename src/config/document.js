@@ -1,6 +1,6 @@
 'use strict'
 
-import { DOCUMENT } from '@rackai/symbols'
+import { DOCUMENT } from '@symbo.ls/symbols'
 
 export default {
   theme: {

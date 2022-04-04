@@ -1,6 +1,6 @@
 'use strict'
 
-import { set } from '@rackai/symbols'
+import { set } from '@symbo.ls/symbols'
 
 set('color', {
   name: 'green',

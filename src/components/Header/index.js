@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text, Flex, Shape, SVG, Link } from '@rackai/symbols'
+import { Block, Text, Flex, Shape, SVG, Link } from '@symbo.ls/symbols'
 
 import style from './style'
 

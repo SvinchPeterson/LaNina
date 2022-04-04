@@ -1,6 +1,6 @@
 'use strict'
 
-import { Block } from '@rackai/symbols'
+import { Block } from '@symbo.ls/symbols'
 
 import style from './style'
 

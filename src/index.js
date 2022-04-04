@@ -1,6 +1,6 @@
 'use strict'
 
-import DOM from '@rackai/domql'
+import DOM from 'domql'
 import App from './app'
 
 export default DOM.create(App)

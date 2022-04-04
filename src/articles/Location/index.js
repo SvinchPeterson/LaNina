@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text } from '@rackai/symbols'
+import { Block, Text } from '@symbo.ls/symbols'
 
 import { locationText, distanceText, transferText } from '../../texts'
 
