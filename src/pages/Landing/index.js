@@ -10,9 +10,10 @@ const Sololaki = {
   proto: [Link, Box],
   class: [styleLink],
   style: {
-    backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .85)),url(' + SOLOLAKI_JPG + ')',
     '&:hover': {
-      backgroundPosition: `top left -${100 / 16}em`
+      backgroundPosition: `top left -${150 / 16}em`,
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .35)),url(' + SOLOLAKI_JPG + ')'
     }
   }
 }
@@ -21,9 +22,10 @@ const Rustaveli = {
   proto: [Link, Box],
   class: [styleLink],
   style: {
-    backgroundImage: 'url(' + RUSTAVELI_JPG + ')',
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
     '&:hover': {
-      backgroundPosition: `top left ${100 / 16}em`
+      backgroundPosition: `top left ${150 / 16}em`,
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url(' + RUSTAVELI_JPG + ')'
     }
   }
 }
