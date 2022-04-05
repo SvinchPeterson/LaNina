@@ -1,17 +1,11 @@
 'use strict'
-export const styleLink = {
-  flex: 1,
-  minHeight: '100%',
-  backgroundSize: 'cover',
-  backgroundAttachment: 'fixed',
-  transition: 'flex 1s ease-in-out, background-position 1s ease-in-out, background-image 1s ease-in-out',
-  '&:hover': {
-    flex: 8
-  }
-}
 
+export const styleLink = {
+  border: '10px solid green',
+  flex: 1
+}
 export default {
-  // border: '10px solid red',
+  border: '10px solid red',
   flex: 1,
   boxSizing: 'border-box'
 }

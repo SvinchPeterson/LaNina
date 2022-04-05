@@ -4,7 +4,6 @@ import { scaleSololakiBanner, zoomIn, letterSpacingIn, verticalMove, opacity, pa
 
 import BANNER_JPG from '../../assets/images/sololaki/banner.jpg'
 import BANNER_MOBILE_JPG from '../../assets/images/sololaki/banner-mobile.jpg'
-import { cream } from '../../colors'
 
 export const styleBanner = {
   width: '100%',
@@ -117,7 +116,6 @@ export default {
   overflowX: 'hidden',
   overflowY: 'auto',
   position: 'relative',
-  background: cream,
   scrollBehavior: 'smooth',
   behavior: 'smooth',
   margin: '0 auto',

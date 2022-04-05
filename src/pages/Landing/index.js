@@ -1,77 +1,39 @@
 'use strict'
 import { Box, Link, Text } from '@symbo.ls/symbols'
 
-import { Logo } from '../../components'
-
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
 
 import style, { styleLink } from './style'
 
-const logo = {
-  proto: Logo,
+const link = {
+  proto: [Link, Box],
+  class: [styleLink],
   props: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%'
-  },
-  style: {
-    transform: 'translate(-50%, -50%)'
-  }
-}
-
-const Heading = {
-  proto: [Box, Text],
-  props: {
-    color: 'green'
+    minHeight: '100%'
   }
 }
 
 const Sololaki = {
-  proto: [Link, Box],
-  class: [styleLink],
+  proto: link,
   style: {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .85)),url(' + SOLOLAKI_JPG + ')',
-    '&:hover': {
-      backgroundPosition: `top left -${150 / 16}em`,
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .35)),url(' + SOLOLAKI_JPG + ')'
-    }
-  },
 
-  heading: {
-    proto: Heading,
-    props: { text: 'sololaki' }
   }
 }
 
 const Rustaveli = {
-  proto: [Link, Box],
-  class: [styleLink],
-  style: {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
-    '&:hover': {
-      backgroundPosition: `top left ${150 / 16}em`,
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url(' + RUSTAVELI_JPG + ')'
-    }
-  },
-
-  heading: {
-    proto: Heading,
-    props: { text: 'rustaveli' }
-  }
+  proto: link
 }
 
 export default {
-  proto: Box,
   style,
+  proto: Box,
   props: {
-    flexAlign: 'flex-start space-between',
-    position: 'relative'
+    flexAlign: 'center center'
   },
 
   Sololaki,
-  Rustaveli,
-  logo
+  Rustaveli
 }
 
 // import { Logo } from '../../components'

@@ -1,5 +1,4 @@
 'use strict'
-import { cream } from '../../colors'
 
 const styleCheck = {
   display: 'none',
@@ -19,7 +18,6 @@ const styleMenuIcon = {
   borderRadius: '100%',
   '&:hover > div': { opacity: 1 },
   '> div': {
-    background: cream,
     width: '100%',
     height: `${5 / 16}em`,
     transition: 'width .5s ease-in-out',
@@ -58,7 +56,7 @@ const styleCall = {
     left: `${50 / 18}em`,
     width: '180px',
     pointerEvents: 'none',
-    color: cream,
+
     fontSize: `${18 / 16}em`,
     fontWeight: 500,
     opacity: 0,
