@@ -6,7 +6,7 @@ import { Logo } from '../../components'
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
 
-import style, { styleLink, styleheading } from './style'
+import style, { styleLink, styleheading, styleUnderConstruction } from './style'
 
 const Page = {
   props: {
@@ -20,7 +20,7 @@ const logo = {
   props: {
     position: 'absolute'
   },
-  style: { transform: 'scale(1.2)' }
+  style: { transform: 'scale(1.1)' }
 }
 
 const link = {
@@ -53,13 +53,7 @@ const underConstruction = {
     bottom: '5px',
     left: '16px'
   },
-  style: {
-    textTransform: 'initial',
-    whiteSpace: 'nowrap',
-    fontWeight: '400',
-    letterSpacing: '.5px',
-    opacity: 0
-  }
+  class: [styleUnderConstruction]
 }
 
 const Sololaki = {

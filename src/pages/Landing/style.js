@@ -8,8 +8,12 @@ export const styleLink = {
   '&:hover': { flex: 8 },
   '&:hover > h4': {
     backdropFilter: 'blur(10px)',
+    letterSpacing: '1.5px',
     color: 'rgba(244, 233, 217, 1)',
     '> span': { opacity: 1 }
+  },
+  '&:not(:hover) > h4 > span': {
+    transition: 'opacity 0s ease-in-out'
   }
 }
 
@@ -17,7 +21,16 @@ export const styleheading = {
   textTransform: 'uppercase',
   letterSpacing: '1px',
   fontWeight: 500,
-  transition: 'backdrop-filter .5s ease-in-out, color 1s ease-in-out'
+  transition: 'backdrop-filter .5s ease-in-out, color 1s ease-in-out, letter-spacing 1s ease-in-out'
+}
+
+export const styleUnderConstruction = {
+  textTransform: 'initial',
+  whiteSpace: 'nowrap',
+  fontWeight: '400',
+  letterSpacing: '.5px',
+  opacity: 0,
+  transition: 'opacity 1s ease-in-out'
 }
 
 export default {
