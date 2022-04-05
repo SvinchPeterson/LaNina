@@ -1,5 +1,5 @@
 'use strict'
-import { Logo } from './Logo'
+import { Logo, Logo2 } from './Logo'
 import Header from './Header'
 import { tabBallerina, tabRedBrick, tabYellowCouch, tabRetro, tabGreenForest } from './RoomTab'
 import RoomOffers from './RoomOffers'
@@ -11,6 +11,7 @@ import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenFores
 
 export {
   Logo,
+  Logo2,
   Header,
   RoomOffers,
   Menu,
