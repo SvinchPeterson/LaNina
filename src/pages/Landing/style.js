@@ -1,6 +1,5 @@
 'use strict'
 export const styleLink = {
-  // border: '10px solid green',
   flex: 1,
   minHeight: '100%',
   backgroundSize: 'cover',

@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Link } from '@symbo.ls/symbols'
+import { Box, Link, Text } from '@symbo.ls/symbols'
 
 import { Logo } from '../../components'
 
@@ -20,6 +20,13 @@ const logo = {
   }
 }
 
+const Heading = {
+  proto: [Box, Text],
+  props: {
+    color: 'green'
+  }
+}
+
 const Sololaki = {
   proto: [Link, Box],
   class: [styleLink],
@@ -29,6 +36,11 @@ const Sololaki = {
       backgroundPosition: `top left -${150 / 16}em`,
       backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .35)),url(' + SOLOLAKI_JPG + ')'
     }
+  },
+
+  heading: {
+    proto: Heading,
+    props: { text: 'sololaki' }
   }
 }
 
@@ -41,6 +53,11 @@ const Rustaveli = {
       backgroundPosition: `top left ${150 / 16}em`,
       backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25)), url(' + RUSTAVELI_JPG + ')'
     }
+  },
+
+  heading: {
+    proto: Heading,
+    props: { text: 'rustaveli' }
   }
 }
 

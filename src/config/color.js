@@ -4,7 +4,7 @@ import { set } from '@symbo.ls/symbols'
 
 set('color', {
   name: 'green',
-  value: '#59AC56'
+  value: 'rgba(255, 255, 255, 1)'
 }, {
   name: 'red',
   value: '#FE5B47'
