@@ -20,12 +20,3 @@ export const zoomInCoverLogo = keyframes`
     opacity: 1;
   }
 `
-
-export const flex = keyframes`
-  from {
-    flex: 1;
-  }
-  to {
-    flex: 8;
-  }
-`

@@ -1,6 +1,8 @@
 'use strict'
 import { Box, Link, Text } from '@symbo.ls/symbols'
 
+import { zoomInCoverLogo } from '../../animations'
+
 import { Logo, Logo2 } from '../../components'
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
@@ -16,9 +18,14 @@ const logo = {
   },
   class: [styleLogo],
   style: {
-    '@media only screen and (min-width: 1225px)': { opacity: 1 },
-    '@media only screen and (min-width: 1366px)': {
-      transform: 'translate(-50%, -50%) scale(1.3)'
+    '@media only screen and (min-width: 1225px)': {
+      opacity: 1,
+      animationName: zoomInCoverLogo,
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out'
+    },
+    '@media only screen and (max-width: 1366px)': {
+      transform: 'translate(-50%, -50%) scale(1.1)'
     },
     '@media only screen and (min-width: 1680px)': {
       transform: 'translate(-50%, -50%) scale(1.5)'
@@ -136,7 +143,7 @@ const Rustaveli = {
         display: 'flex',
         flexFlow: 'column-reverse',
         alignItems: 'center',
-        gap: `${20 / 50}em`
+        gap: `${50 / 50}em`
 
       }
     },

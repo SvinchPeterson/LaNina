@@ -1,4 +1,5 @@
 'use strict'
+import { brightness } from '../../animations'
 
 export const styleLink = {
   flex: 1,
@@ -7,6 +8,9 @@ export const styleLink = {
   boxSizing: 'border-box',
   display: 'flex',
   textDecoration: 'none',
+  animationName: brightness,
+  animationDuration: '3.5s',
+  animationTimingFunction: 'ease-in-out',
   '@media only screen and (min-width: 1225px)': {
     transition: 'flex .8s ease-in-out, background-position .8s ease-in-out, background-image .8s ease-in-out',
     paddingBottom: `${100 / 16}em`,
@@ -22,12 +26,13 @@ export const styleLink = {
 
   '@media only screen and (max-width: 1225px)': {
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundAttachment: 'initial'
   }
 }
 
 export const styleLogo = {
-  transform: 'translate(-50%, -50%) scale(1.2)',
+  transform: 'translate(-50%, -50%) scale(1.1)',
   pointerEvents: 'none',
   opacity: 0
 }
@@ -73,8 +78,10 @@ export const styleUnderConstruction = {
 export default {
   flex: 1,
   display: 'flex',
+  animationName: brightness,
+  animationDuration: '1s',
+  animationTimingFunction: 'ease-in-out',
   '@media only screen and (max-width: 1225px)': {
     flexFlow: 'column'
-
   }
 }
