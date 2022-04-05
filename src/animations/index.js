@@ -12,11 +12,20 @@ export const brightness = keyframes`
 export const zoomInCoverLogo = keyframes`
   from {
     opacity: 0;
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
 
   }
   to {
-    transform: scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
     opacity: 1;
+  }
+`
+
+export const flex = keyframes`
+  from {
+    flex: 1;
+  }
+  to {
+    flex: 8;
   }
 `
