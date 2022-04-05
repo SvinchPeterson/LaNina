@@ -12,6 +12,13 @@ export const styleLink = {
     }
   }
 }
+
+export const styleLogo = {
+  transform: 'translate(-50%, -50%) scale(1.1)',
+  pointerEvents: 'none',
+  opacity: 0
+
+}
 export default {
   border: '10px solid red',
   flex: 1,

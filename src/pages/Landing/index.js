@@ -5,7 +5,29 @@ import { Logo, Logo2 } from '../../components'
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
 
-import style, { styleLink } from './style'
+import style, { styleLink, styleLogo } from './style'
+
+const logo = {
+  proto: Logo,
+  props: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%'
+  },
+  class: [styleLogo],
+  style: { '@media only screen and (min-width: 1024px)': { opacity: 1 } }
+}
+
+const logo2 = {
+  proto: Logo2,
+  props: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%'
+  },
+  class: [styleLogo],
+  style: { '@media only screen and (max-width: 1024px)': { opacity: 1 } }
+}
 
 const link = {
   proto: [Link, Box],
@@ -40,8 +62,13 @@ const Rustaveli = {
 
 export default {
   proto: Box,
+  props: {
+    position: 'relative'
+  },
   style,
 
   Sololaki,
-  Rustaveli
+  Rustaveli,
+  logo,
+  logo2
 }
