@@ -57,18 +57,22 @@ const underConstruction = {
     textTransform: 'initial',
     whiteSpace: 'nowrap',
     fontWeight: '300',
-    letterSpacing: '.5px'
+    letterSpacing: '.5px',
+    opacity: 0
   }
-
 }
+
 const Sololaki = {
   proto: link,
+  props: { flexAlign: 'flex-end flex-end' },
   style: {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)),url(' + SOLOLAKI_JPG + ')'
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)),url(' + SOLOLAKI_JPG + ')',
+    '&:hover': {
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .35)),url(' + SOLOLAKI_JPG + ')',
+      backgroundPosition: 'center center'
+    }
   },
-  props: {
-    flexAlign: 'flex-end flex-end'
-  },
+
   heading: {
     proto: heading,
     props: {
@@ -80,12 +84,15 @@ const Sololaki = {
 
 const Rustaveli = {
   proto: link,
+  props: { flexAlign: 'flex-end flex-start' },
   style: {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')'
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)),url(' + RUSTAVELI_JPG + ')',
+    '&:hover': {
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .35)),url(' + RUSTAVELI_JPG + ')',
+      backgroundPosition: 'center center'
+    }
   },
-  props: {
-    flexAlign: 'flex-end flex-start'
-  },
+
   heading: {
     proto: heading,
     props: {
@@ -93,6 +100,7 @@ const Rustaveli = {
       padding: 'A1 C A1 Z1',
       position: 'relative'
     },
+
     underConstruction
   }
 }

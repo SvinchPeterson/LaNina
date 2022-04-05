@@ -2,14 +2,18 @@
 
 export const styleLink = {
   flex: 1,
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
+  '&:hover': { flex: 8 },
+  '&:hover > h4': {
+    backdropFilter: 'blur(10px)',
+    '> span': { opacity: 1 }
+  }
 }
 
 export const styleheading = {
   textTransform: 'uppercase',
-  // border: '1px solid red',
-  letterSpacing: '1px'
-
+  letterSpacing: '1px',
+  fontWeight: 500
 }
 export default {
   flex: 1,
