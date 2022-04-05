@@ -1,11 +1,17 @@
 'use strict'
 
 export const styleLink = {
-  border: '10px solid green',
-  flex: 1
+  flex: 1,
+  backgroundSize: 'cover'
+}
+
+export const styleheading = {
+  textTransform: 'uppercase',
+  // border: '1px solid red',
+  letterSpacing: '1px'
+
 }
 export default {
-  border: '10px solid red',
   flex: 1,
   boxSizing: 'border-box'
 }

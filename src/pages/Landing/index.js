@@ -1,39 +1,109 @@
 'use strict'
 import { Box, Link, Text } from '@symbo.ls/symbols'
 
+import { Logo } from '../../components'
+
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
 
-import style, { styleLink } from './style'
+import style, { styleLink, styleheading } from './style'
+
+const Page = {
+  props: {
+    flexAlign: 'center center',
+    position: 'relative'
+  }
+}
+
+const logo = {
+  proto: Logo,
+  props: {
+    position: 'absolute'
+  },
+  style: { transform: 'scale(1.1)' }
+}
 
 const link = {
   proto: [Link, Box],
   class: [styleLink],
   props: {
-    minHeight: '100%'
+    minHeight: '100%',
+    padding: '0 0 E 0'
   }
 }
 
+const heading = {
+  tag: 'h4',
+  proto: [Text, Box],
+  props: {
+    color: 'cream .65',
+    size: 'B'
+  },
+  class: [styleheading]
+}
+
+const underConstruction = {
+  tag: 'span',
+  proto: [Text, Box],
+  props: {
+    text: 'under construction',
+    position: 'absolute',
+    size: 'Z',
+    color: 'orange',
+    bottom: '5px',
+    left: '16px'
+  },
+  style: {
+    textTransform: 'initial',
+    whiteSpace: 'nowrap',
+    fontWeight: '300',
+    letterSpacing: '.5px'
+  }
+
+}
 const Sololaki = {
   proto: link,
   style: {
-
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)),url(' + SOLOLAKI_JPG + ')'
+  },
+  props: {
+    flexAlign: 'flex-end flex-end'
+  },
+  heading: {
+    proto: heading,
+    props: {
+      text: 'sololaki',
+      padding: 'A1 Z1 A1 A1'
+    }
   }
 }
 
 const Rustaveli = {
-  proto: link
+  proto: link,
+  style: {
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')'
+  },
+  props: {
+    flexAlign: 'flex-end flex-start'
+  },
+  heading: {
+    proto: heading,
+    props: {
+      text: 'rustaveli',
+      padding: 'A1 C A1 Z1',
+      position: 'relative'
+    },
+    underConstruction
+  }
 }
 
 export default {
   style,
-  proto: Box,
-  props: {
-    flexAlign: 'center center'
-  },
+  proto: [Box, Page],
 
   Sololaki,
-  Rustaveli
+  Rustaveli,
+  logo
 }
 
 // import { Logo } from '../../components'
