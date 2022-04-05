@@ -20,7 +20,7 @@ const logo = {
   props: {
     position: 'absolute'
   },
-  style: { transform: 'scale(1.1)' }
+  style: { transform: 'scale(1.2)' }
 }
 
 const link = {
@@ -56,7 +56,7 @@ const underConstruction = {
   style: {
     textTransform: 'initial',
     whiteSpace: 'nowrap',
-    fontWeight: '300',
+    fontWeight: '400',
     letterSpacing: '.5px',
     opacity: 0
   }
@@ -69,7 +69,7 @@ const Sololaki = {
     backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)),url(' + SOLOLAKI_JPG + ')',
     '&:hover': {
       backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .35)),url(' + SOLOLAKI_JPG + ')',
-      backgroundPosition: 'center center'
+      backgroundPosition: `top left -${100 / 16}em`
     }
   },
 
@@ -78,6 +78,11 @@ const Sololaki = {
     props: {
       text: 'sololaki',
       padding: 'A1 Z1 A1 A1'
+    },
+
+    style: {
+      borderTopLeftRadius: `${40 / 18}em`,
+      borderBottomLeftRadius: `${40 / 18}em`
     }
   }
 }
@@ -89,7 +94,7 @@ const Rustaveli = {
     backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)),url(' + RUSTAVELI_JPG + ')',
     '&:hover': {
       backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .35)),url(' + RUSTAVELI_JPG + ')',
-      backgroundPosition: 'center center'
+      backgroundPosition: `top left ${100 / 16}em`
     }
   },
 
@@ -97,8 +102,12 @@ const Rustaveli = {
     proto: heading,
     props: {
       text: 'rustaveli',
-      padding: 'A1 C A1 Z1',
+      padding: 'A1 A1 A1 Z1',
       position: 'relative'
+    },
+    style: {
+      borderTopRightRadius: `${40 / 18}em`,
+      borderBottomRightRadius: `${40 / 18}em`
     },
 
     underConstruction

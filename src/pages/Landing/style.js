@@ -3,9 +3,12 @@
 export const styleLink = {
   flex: 1,
   backgroundSize: 'cover',
+  transition: 'flex 1s ease-in-out, background-image 1s ease-in-out, background-position 1s ease-in-out',
+  backgroundAttachment: 'fixed',
   '&:hover': { flex: 8 },
   '&:hover > h4': {
     backdropFilter: 'blur(10px)',
+    color: 'rgba(244, 233, 217, 1)',
     '> span': { opacity: 1 }
   }
 }
@@ -13,8 +16,10 @@ export const styleLink = {
 export const styleheading = {
   textTransform: 'uppercase',
   letterSpacing: '1px',
-  fontWeight: 500
+  fontWeight: 500,
+  transition: 'backdrop-filter .5s ease-in-out, color 1s ease-in-out'
 }
+
 export default {
   flex: 1,
   boxSizing: 'border-box'
