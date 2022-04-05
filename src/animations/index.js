@@ -20,14 +20,14 @@ export const coverLogoAnimation = keyframes`
     transform: translate(-50%, -50%) scale(1.4);
   }
 `
-export const zoomIn = keyframes`
+export const zoomInCoverLogo = keyframes`
   from {
     opacity: 0;
-    transform: scale(.9);
+    transform: scale(1);
 
   }
   to {
-    transform: scale(1);
+    transform: scale(1.1);
     opacity: 1;
   }
 `

@@ -1,6 +1,8 @@
 'use strict'
 import { Box, Link, Text } from '@symbo.ls/symbols'
 
+import { zoomInCoverLogo } from '../../animations'
+
 import { Logo } from '../../components'
 
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
@@ -20,7 +22,12 @@ const logo = {
   props: {
     position: 'absolute'
   },
-  style: { transform: 'scale(1.1)' }
+  style: {
+    transform: 'scale(1.1)',
+    animationName: zoomInCoverLogo,
+    animationDuration: '1.5s',
+    animationTimingFunction: 'ease-in-out'
+  }
 }
 
 const link = {
@@ -51,7 +58,7 @@ const underConstruction = {
     size: 'Z',
     color: 'orange',
     bottom: '5px',
-    left: '16px'
+    left: '13px'
   },
   class: [styleUnderConstruction]
 }
@@ -71,7 +78,7 @@ const Sololaki = {
     proto: heading,
     props: {
       text: 'sololaki',
-      padding: 'A1 Z1 A1 A1'
+      padding: 'A1 Z A1 A1'
     },
 
     style: {
@@ -96,7 +103,7 @@ const Rustaveli = {
     proto: heading,
     props: {
       text: 'rustaveli',
-      padding: 'A1 A1 A1 Z1',
+      padding: 'A1 A1 A1 Z',
       position: 'relative'
     },
     style: {

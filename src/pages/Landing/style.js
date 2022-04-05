@@ -1,10 +1,15 @@
 'use strict'
 
+import { brightness } from '../../animations'
+
 export const styleLink = {
   flex: 1,
   backgroundSize: 'cover',
   transition: 'flex 1s ease-in-out, background-image 1s ease-in-out, background-position 1s ease-in-out',
   backgroundAttachment: 'fixed',
+  animationName: brightness,
+  animationDuration: '3s',
+  animationTimingFunction: 'ease-in-out',
   '&:hover': { flex: 8 },
   '&:hover > h4': {
     backdropFilter: 'blur(10px)',
@@ -35,7 +40,10 @@ export const styleUnderConstruction = {
 
 export default {
   flex: 1,
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
+  animationName: brightness,
+  animationDuration: '1s',
+  animationTimingFunction: 'ease-in-out'
 }
 
 // import { brightness, coverLogoAnimation, coverLogoAnimation2 } from '../../animations'
