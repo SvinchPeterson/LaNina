@@ -7,7 +7,7 @@ export const styleLink = {
   boxSizing: 'border-box',
   display: 'flex',
   textDecoration: 'none',
-  '@media only screen and (min-width: 1024px)': {
+  '@media only screen and (min-width: 1225px)': {
     transition: 'flex .8s ease-in-out, background-position .8s ease-in-out, background-image .8s ease-in-out',
     paddingBottom: `${100 / 16}em`,
     '&:hover': { flex: 8 },
@@ -20,14 +20,14 @@ export const styleLink = {
     '&:not(:hover) > h4 > span': { transition: 'opacity .2s ease-in-out' }
   },
 
-  '@media only screen and (max-width: 1024px)': {
+  '@media only screen and (max-width: 1225px)': {
     alignItems: 'center',
     justifyContent: 'center'
   }
 }
 
 export const styleLogo = {
-  transform: 'translate(-50%, -50%) scale(1.1)',
+  transform: 'translate(-50%, -50%) scale(1.2)',
   pointerEvents: 'none',
   opacity: 0
 }
@@ -36,13 +36,21 @@ export const styleHeading = {
   textTransform: 'uppercase',
   letterSpacing: '1.5px',
   fontWeight: 700,
-  '@media only screen and (min-width: 1024px)': {
-    transition: 'backdrop-filter .5s ease-in-out, letter-spacing .8s ease-in-out'
+  '@media only screen and (min-width: 1225px)': {
+    transition: 'backdrop-filter .5s ease-in-out, letter-spacing .8s ease-in-out',
+    color: 'rgba(244, 233, 217, .75)'
   },
-  '@media only screen and (max-width: 1024px)': {
+  '@media only screen and (max-width: 1225px)': {
+    fontSize: `${50 / 16}em`,
+    color: 'rgba(244, 233, 217, 1)'
+  },
+  '@media only screen and (max-height: 1110px) and  (max-width: 1225px)': {
     fontSize: `${30 / 16}em`
-
+  },
+  '@media only screen and (min-width: 1480px)': {
+    fontSize: `${30 / 16}em`
   }
+
 }
 
 export const styleUnderConstruction = {
@@ -50,18 +58,22 @@ export const styleUnderConstruction = {
   fontWeight: 500,
   whiteSpace: 'nowrap',
   fontSize: `${15 / 16}em`,
-  '@media only screen and (min-width: 1024px)': {
+  '@media only screen and (min-width: 1225px)': {
     transition: 'opacity 1s ease-in-out',
     opacity: 0,
     position: 'absolute',
-    bottom: '3px',
+    bottom: '7px',
     left: '12px'
+  },
+  '@media only screen and (max-width: 1225px)': {
+    fontWeight: 300
+
   }
 }
 export default {
   flex: 1,
   display: 'flex',
-  '@media only screen and (max-width: 1024px)': {
+  '@media only screen and (max-width: 1225px)': {
     flexFlow: 'column'
 
   }
