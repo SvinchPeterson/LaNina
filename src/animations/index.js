@@ -9,17 +9,6 @@ export const brightness = keyframes`
     filter: brightness(100%);
   }
 `
-export const coverLogoAnimation = keyframes`
-  from {
-    opacity: .2;
-    transform: translate(-50%, -50%) scale(1.5);
-
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.4);
-  }
-`
 export const zoomInCoverLogo = keyframes`
   from {
     opacity: 0;
