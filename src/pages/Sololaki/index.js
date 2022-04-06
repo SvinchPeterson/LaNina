@@ -8,8 +8,43 @@ export const banner = {
   proto: Box,
   class: [styleBanner],
   props: {
-    boxSize: '100% 100%'
+    boxSize: '100% 100%',
+    flexAlign: 'center center',
+    flexFlow: 'column',
+    gap: 'B'
+  },
+  heading: {
+    proto: Box,
+    props: {
+      flexFlow: 'column',
+      flexAlign: 'center flex-start',
+      color: 'cream',
+      gap: 'Z'
+    },
+    h1: {
+      proto: Text,
+      props: {
+        text: 'bb residence',
+        size: 'H'
+      }
+    },
+    h3: {
+      proto: Text,
+      props: {
+        text: 'sololaki',
+        size: 'D'
+      }
+    }
+  },
+  p: {
+    proto: [Text, Box],
+    props: {
+      text: 'where ordinary, becomes extraordinary',
+      size: 'C',
+      color: 'orange2'
+    }
   }
+
 }
 
 export default {

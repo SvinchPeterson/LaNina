@@ -3,9 +3,20 @@
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki2.jpg'
 
 export const styleBanner = {
-  border: '10px solid red',
   backgroundImage: 'linear-gradient(rgba(42, 81, 61, .25), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_JPG + ')',
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
+  '> div': {
+    textTransform: 'uppercase'
+  },
+  h3: {
+    letterSpacing: '5px'
+  },
+  p: {
+    fontWeight: '300',
+    letterSpacing: '2px',
+    // paddingLeft: `${200 / 20}em`,
+    // fontStyle: 'italic'
+  }
 }
 
 export default {
