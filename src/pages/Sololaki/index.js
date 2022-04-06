@@ -3,10 +3,15 @@
 import { Box, Text, Link } from '@symbo.ls/symbols'
 
 import style, { styleBanner } from './style'
+
 export const banner = {
   proto: Box,
-  class: [styleBanner]
+  class: [styleBanner],
+  props: {
+    boxSize: '100% 100%'
+  }
 }
+
 export default {
   proto: Box,
   style,

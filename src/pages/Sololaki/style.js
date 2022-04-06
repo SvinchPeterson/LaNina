@@ -1,8 +1,15 @@
 'use strict'
 
-export const styleBanner = {
-  border: '2px solid red'
+import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki2.jpg'
 
+export const styleBanner = {
+  border: '10px solid red',
+  backgroundImage: 'linear-gradient(rgba(42, 81, 61, .25), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_JPG + ')',
+  backgroundSize: 'cover'
+}
+
+export default {
+  flex: 1
 }
 
 // import { scaleSololakiBanner, zoomIn, letterSpacingIn, verticalMove, opacity, paddingOpacity } from '../../animations'
