@@ -1,19 +1,58 @@
 'use strict'
 import { Text, SVG, Link, Box } from '@symbo.ls/symbols'
 
-import style from './style'
+import style, { styleMenuIcon, styleCheck } from './style'
 
 import PHONE_PNG from '../../assets/icons/phoneRight.svg'
 
+const check = {
+  tag: 'input',
+  attr: {
+    type: 'checkbox',
+    id: 'toggle'
+  },
+  class: [styleCheck]
+}
+
+const menuIcon = {
+  tag: 'label',
+  attr: { for: 'toggle' },
+  proto: Box,
+  class: [styleMenuIcon],
+  props: {
+    flexFlow: 'column',
+    boxSize: 'C A2',
+    flexAlign: 'flex-start space-between'
+  },
+  childProto: {
+    proto: Box,
+    props: {
+      boxSize: '50% W',
+      background: 'cream',
+      round: 'C'
+    }
+
+  },
+  ...[
+    { props: { boxSize: '100% W' } },
+    {},
+    {}
+  ]
+}
+
 export default {
+  tag: 'header',
   proto: Box,
   style,
   props: {
     boxSize: '100% E',
     position: 'fixed',
     top: '0',
-    padding: '0 C'
-  }
+    padding: '0 C',
+    flexAlign: 'center center'
+  },
+  check,
+  menuIcon
 }
 
 // const check = {

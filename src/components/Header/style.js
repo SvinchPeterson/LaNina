@@ -1,5 +1,14 @@
 'use strict'
+export const styleCheck = {
+  display: 'none',
+  '&:checked ~ label > div:first-child': { width: '50%' },
+  '&:checked ~ label > div:last-child': { width: '100%' }
 
+}
+export const styleMenuIcon = {
+  cursor: 'pointer',
+  '> div': { transition: 'width .5s ease-in-out' }
+}
 export default {
   border: '5px solid red',
   boxSizing: 'border-box'
