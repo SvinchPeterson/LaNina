@@ -77,7 +77,7 @@ const Sololaki = {
   proto: link,
   props: { href: '/Sololaki' },
   style: {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)),url(' + SOLOLAKI_JPG + ')',
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .85)),url(' + SOLOLAKI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
       cursor: 'pointer',
       alignItems: 'flex-end',
@@ -112,7 +112,7 @@ const Sololaki = {
 const Rustaveli = {
   proto: link,
   style: {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
     '@media only screen and (min-width: 1255px)': {
       alignItems: 'flex-end',
       justifyContent: 'flex-start',
@@ -152,8 +152,7 @@ const Rustaveli = {
       proto: [Text, Box],
       class: [styleUnderConstruction],
       props: {
-        text: 'under construction',
-        color: 'orange'
+        text: 'under construction'
       }
     }
   }

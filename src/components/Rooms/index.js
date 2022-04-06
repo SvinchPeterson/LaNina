@@ -12,6 +12,7 @@ import UP_ARROW from '../../assets/icons/up-arrow.png'
 import DOWN_ARROW from '../../assets/icons/down-arrow.png'
 
 import style from './style'
+import { galleryImgs } from '../Gallery/galleryBallerina'
 
 const navButtons = {
   tag: 'span',
@@ -34,7 +35,7 @@ const navButtons = {
         click: (event, element, state) => {
           const { activeImage } = state
           state.update({
-            activeImage: activeImage > (element.parent.parent.gallery.length - 2) ? 0 : activeImage + 1
+            activeImage: (galleryImgs - 1) < activeImage ? 0 : activeImage + 1
           })
         }
       }
@@ -50,7 +51,7 @@ const navButtons = {
           console.log(state)
           const { activeImage } = state
           state.update({
-            activeImage: activeImage < (element.parent.parent.gallery.length + 2) ? 0 : activeImage - 1
+            activeImage: activeImage < (galleryImgs.length + 1) ? 0 : activeImage - 1
           })
           // if (activeImage === element.parent.gallery.length) {
           //   state.update({

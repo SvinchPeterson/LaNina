@@ -27,7 +27,8 @@ export const styleLink = {
   '@media only screen and (max-width: 1225px)': {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundAttachment: 'initial'
+    backgroundAttachment: 'initial',
+    backgoundPosition: 'top center'
   }
 }
 
@@ -50,7 +51,8 @@ export const styleHeading = {
     color: 'rgba(244, 233, 217, 1)'
   },
   '@media only screen and (max-height: 1110px) and  (max-width: 1225px)': {
-    fontSize: `${30 / 16}em`
+    fontSize: `${30 / 16}em`,
+    letterSpacing: '8px'
   },
   '@media only screen and (min-width: 1480px)': {
     fontSize: `${30 / 16}em`
@@ -63,6 +65,7 @@ export const styleUnderConstruction = {
   fontWeight: 500,
   whiteSpace: 'nowrap',
   fontSize: `${15 / 16}em`,
+  color: '#EC8551',
   '@media only screen and (min-width: 1225px)': {
     transition: 'opacity 1s ease-in-out',
     opacity: 0,
@@ -71,7 +74,9 @@ export const styleUnderConstruction = {
     left: '12px'
   },
   '@media only screen and (max-width: 1225px)': {
-    fontWeight: 300
+    fontSize: '18px',
+    letterSpacing: '2px',
+    textTransform: 'uppercase'
 
   }
 }
