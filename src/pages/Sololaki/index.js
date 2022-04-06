@@ -1,6 +1,8 @@
 'use strict'
 
-import { Box, Text, Link } from '@symbo.ls/symbols'
+import { Box, Text } from '@symbo.ls/symbols'
+
+import { Header } from '../../components'
 
 import style, { styleBanner } from './style'
 
@@ -13,6 +15,7 @@ export const banner = {
     flexFlow: 'column',
     gap: 'B'
   },
+
   heading: {
     proto: Box,
     props: {
@@ -21,6 +24,7 @@ export const banner = {
       color: 'cream',
       gap: 'Z'
     },
+
     h1: {
       proto: Text,
       props: {
@@ -36,6 +40,7 @@ export const banner = {
       }
     }
   },
+
   p: {
     proto: [Text, Box],
     props: {
@@ -44,13 +49,18 @@ export const banner = {
       color: 'orange2'
     }
   }
-
 }
 
 export default {
   proto: Box,
   style,
-  banner
+  props: {
+    background: 'cream',
+    position: 'relative'
+  },
+
+  banner,
+  Header
 }
 
 // import { Residence, Apartments, Location, Wine } from '../../articles'

@@ -9,13 +9,11 @@ export const styleBanner = {
     textTransform: 'uppercase'
   },
   h3: {
-    letterSpacing: '5px'
+    letterSpacing: `${5 / 23}em`
   },
   p: {
     fontWeight: '300',
-    letterSpacing: '2px',
-    // paddingLeft: `${200 / 20}em`,
-    // fontStyle: 'italic'
+    letterSpacing: `${1.5 / 20}em`
   }
 }
 
