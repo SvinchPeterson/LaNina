@@ -1,7 +1,7 @@
 'use strict'
 import { Text, SVG, Link, Box } from '@symbo.ls/symbols'
 
-import style, { styleMenuIcon, styleCheck } from './style'
+import style, { styleMenuIcon, styleCheck, styleLangs } from './style'
 
 import PHONE_PNG from '../../assets/icons/phoneRight.svg'
 
@@ -40,6 +40,26 @@ const menuIcon = {
   ]
 }
 
+const langs = {
+  proto: Box,
+  class: [styleLangs],
+  props: {
+    flexAlign: 'center center',
+    gap: 'A'
+  },
+  childProto: {
+    proto: [Text, Box],
+    props: {
+      color: 'cream'
+    }
+  },
+  ...[
+    { props: { text: 'geo' } },
+    { props: { text: 'eng' } },
+    { props: { text: 'rus' } }
+  ]
+}
+
 export default {
   tag: 'header',
   proto: Box,
@@ -52,7 +72,8 @@ export default {
     flexAlign: 'center center'
   },
   check,
-  menuIcon
+  menuIcon,
+  langs
 }
 
 // const check = {

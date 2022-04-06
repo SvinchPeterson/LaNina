@@ -9,6 +9,12 @@ export const styleMenuIcon = {
   cursor: 'pointer',
   '> div': { transition: 'width .5s ease-in-out' }
 }
+export const styleLangs = {
+  textTransform: 'uppercase',
+  '> div': {
+    cursor: 'pointer'
+  }
+}
 export default {
   border: '5px solid red',
   boxSizing: 'border-box'
