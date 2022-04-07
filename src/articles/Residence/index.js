@@ -1,11 +1,9 @@
 'use strict'
-import { Box, Img, Text } from '@symbo.ls/symbols'
+import { Box, Text } from '@symbo.ls/symbols'
 
-import { bbSololaki, stayText } from '../../texts'
+import { bbSololaki } from '../../texts'
 
-import style, { styleResidence } from './style'
-
-import LUGGAGE_PNG from '../../assets/icons/luggage.PNG'
+import style, { styleResidence, styleEntrence } from './style'
 
 const residence = {
   proto: Box,
@@ -23,126 +21,104 @@ const residence = {
   }
 }
 
-export default {
+const entrenceItem = {
   proto: Box,
-  style,
   props: {
-    padding: 'F 0'
+    flexFlow: 'row',
+    flexAlign: 'center flex-start',
+    gap: 'Z'
   },
-
-  residence
+  dot: {
+    proto: Box,
+    props: {
+      boxSize: 'X1 X1',
+      background: 'orange .5'
+    },
+    style: { borderRadius: '100%' }
+  },
+  p: {
+    proto: [Text, Box],
+    props: { color: 'orange .5' },
+    style: { letterSpacing: '1px', fontWeight: 300 }
+  }
 
 }
+const entrence = {
+  proto: Box,
+  class: [styleEntrence],
+  props: {
+    flexAlign: 'flex-end flex-end'
+  },
 
-// const residenceOrigin = {
-//   tag: 'section',
-//   proto: Block,
-//   style: styleResidenceOrigin,
-//   props: {
-//     flexAlign: 'flex-start center'
-//   },
-//   p: {
-//     proto: [bbSololaki, Block],
-//     props: { padding: 'E' }
-//   }
-// }
+  texts: {
+    proto: Box,
+    props: {
+      flexFlow: 'column',
+      background: 'cream',
+      padding: 'E'
+    },
+    entrences: {
+      proto: Box,
+      props: {
+        flexFlow: 'column',
+        gap: 'Z'
+      },
+      childProto: entrenceItem,
+      ...[
+        {
+          dot: {},
+          p: { props: { text: 'private entrance' } }
+        },
+        {
+          dot: {},
+          p: { props: { text: 'separate street or building entrance' } }
+        },
+        {
+          dot: {},
+          p: { props: { text: 'free parking on premises' } }
+        }
+      ]
+    },
+    luggage: {
+      tag: 'p',
+      proto: [Text, Box],
+      props: {
+        text: `Luggage dropoff allowed for guests' convenience when they have early arrival or late departure`,
+        color: 'black .35',
+        padding: 'B 0 Z 0'
+      },
+      style: {
+        maxWidth: `${400 / 16}em`,
+        letterSpacing: '1px',
+        lineHeight: '25px',
+        fontWeight: 300
+      }
+    },
+    stay: {
+      tag: 'p',
+      proto: [Text, Box],
+      props: {
+        text: 'Long term stays allow for 28 days or more',
+        color: 'black .35'
+      },
+      style: {
+        fontWeight: 300,
+        letterSpacing: '1px'
+      }
+    }
+  }
+}
 
-// const entrence = {
-//   tag: 'section',
-//   proto: Block,
-//   style: styleEntrence,
-//   props: { flexAlign: 'flex-end flex-end' },
-//   p: {
-//     proto: [Block, Text],
-//     props: {
-//       padding: 'E E D E',
-//       flexFlow: 'column'
-//     },
-//     entrences: {
-//       proto: Block,
-//       props: {
-//         flexFlow: 'column',
-//         gap: 'Y',
-//         padding: '0 0 C 0'
-//       },
-//       style: {
-//         width: 'fit-content'
-//       },
-//       childProto: {
-//         proto: Block,
-//         props: {
-//           flexAlign: 'center flex-start',
-//           gap: 'Z'
-//         },
-//         style: {
-//           opacity: '.35',
-//           // color: 'rgba(168, 98, 63, 1)',
-//           fontSize: `${14 / 15}em`,
-//           letterSpacing: '1.3px'
-//         },
-//         dot: {
-//           style: {
-//             width: '4px',
-//             height: '4px',
-//             borderRadius: '100%',
-//             background: 'rgba(0, 0, 0, 1)'
-//           }
-//         },
-//         span: { proto: Text }
-//       },
-//       ...[
-//         {
-//           dot: {},
-//           span: { props: { text: 'private entrance' } }
-//         },
-//         {
-//           dot: {},
-//           span: { props: { text: 'separate street or building entrance' } }
-//         },
-//         {
-//           dot: {},
-//           span: { props: { text: 'free parking on premises' } }
-//         }
-//       ]
-//     },
-//     luggage: {
-//       proto: Block,
-//       props: {
-//         flexAlign: 'flex-start center',
-//         gap: 'Z2'
-//       },
-//       style: {
-//         maxWidth: `${500 / 15}em`,
-//         opacity: '.25'
-//       },
-//       icon: {
-//         proto: Img,
-//         props: { src: LUGGAGE_PNG },
-//         style: { marginTop: '3px' }
-//       },
-//       text: `Luggage dropoff allowed
-//       for guests' convenience when they have early arrival or late departure`
-//     },
-//     stay: {
-//       proto: [stayText, Block],
-//       props: { padding: 'Z 0 0 B2' },
-//       style: { color: 'rgba(168, 98, 63, .5)' }
-//       // style: { color: 'rgba(168, 98, 63, .35)', fontWeight: 'bold' }
-//     }
-//   }
-// }
+export default {
+  proto: Box,
+  props: {
+    padding: 'F 0',
+    flexFlow: 'column',
+    gap: 'F'
+  },
+  attr: { id: 'residence' },
 
-// export default {
-//   tag: 'article',
-//   proto: Block,
-//   attr: { id: 'residence' },
-//   style,
-//   props: {
-//     padding: 'F 0 F 0',
-//     flexFlow: 'column',
-//     gap: 'G'
-//   },
+  residence,
+  entrence
 
-//   residenceOrigin,
-//   entrence
-// }
+}
