@@ -13,7 +13,7 @@ const book = {
   style: {
     borderTopRightRadius: `${80 / 16}em`,
     borderBottomRightRadius: `${80 / 16}em`,
-    zIndex: 220,
+    zIndex: 10,
     cursor: 'pointer',
     textDecoration: 'none'
   },

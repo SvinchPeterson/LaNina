@@ -55,6 +55,7 @@ const socialMedia = {
 
   childProto: {
     proto: Link,
+    props: { target: '_blank' },
     icon: {
       proto: [Img, Box],
       props: { boxSize: ' B2' }
@@ -66,7 +67,7 @@ const socialMedia = {
       icon: { props: { src: FACEBOOK_PNG } }
     },
     {
-      props: { props: { href: 'https://www.instagram.com/laninaresidence/' } },
+      props: { href: 'https://www.instagram.com/laninaresidence/' },
       icon: { props: { src: INSTAGRAM_PNG } }
     },
     {
@@ -81,7 +82,7 @@ export default {
   style,
   class: {
     show: (element, state) => state.activeMenu
-      ? { opacity: 0 }
+      ? { opacity: 0, pointerEvents: 'none' }
       : { opacity: 1 }
   },
   props: {
@@ -89,124 +90,11 @@ export default {
     position: 'absolute',
     top: '0',
     left: '0',
-    //   backdropFilter: 'blur(5px)',
     flexFlow: 'column',
     flexAlign: 'flex-end center',
-    // padding: '0 E 0 0',
     gap: 'E'
   },
 
   sectionLinks,
   socialMedia
 }
-
-// import style from './style'
-
-// const sectionLinks = {
-//   tag: 'nav',
-//   proto: Block,
-//   props: {
-//     padding: '0 E 0 0',
-//     gap: 'C',
-//     flexAlign: 'flex-end flex-end'
-//   },
-
-//   childProto: {
-//     proto: [Link, Text, Block],
-//     props: {
-//       size: 'D'
-//     },
-// on: {
-//   click: (event, element, state) => {
-//     state.update({ activeMenuLink: element.key })
-//     console.log(state.activeMenuLink, element.key)
-//   }
-// },
-
-// class: {
-//   show: (element, state) => state.activeMenuLink === element.key ? { color: 'rgba(168, 98, 63, .65)' } : { color: 'rgba(244, 233, 217, .45)' }
-//     }
-//   },
-//   ...[
-//     { props: { text: 'residence', href: '#residence' } },
-//     { props: { text: 'apartments', href: '#apartments' } },
-//     { props: { text: 'wine', href: '#wine' } },
-//     { props: { text: 'location', href: '#location' } }
-//   ]
-// }
-
-// const socialMedia = {
-//   proto: Block,
-//   props: {
-//     flexAlign: 'flex-end center',
-//     gap: 'E',
-//     padding: '0 0 D 0'
-//   },
-
-//   childProto: {
-//     proto: [Link, Block],
-//     props: {
-//       target: '_blank'
-//     },
-//     icon: {
-//       proto: [SVG, Block],
-//       props: {
-//         boxSize: 'B1 B1'
-//       }
-//     }
-//   },
-
-//   ...[
-//     {
-//       props: { href: `https://www.facebook.com/laninaresidence` },
-//       icon: {
-//         src: FACEBOOK_SVG
-//       }
-//     },
-
-//     {
-//       props: { href: 'https://www.instagram.com/laninaresidence/' },
-//       icon: {
-//         src: INSTAGRAM_SVG
-//       }
-//     },
-
-//     {
-//       icon: {
-//         src: LINKEDIN_SVG
-//       }
-//     }
-//   ]
-// }
-// export default {
-//   tag: 'aside',
-//   proto: Block,
-//   style,
-//   props: {
-//     flexFlow: 'column'
-//   },
-// class: {
-//   show: (element, state) => state.active ? {
-//     opacity: 0,
-//     pointerEvents: 'none',
-//     '> nav': {
-//       opacity: 0,
-//       transitionDelay: 0
-//     },
-//     '> div': {
-//       opacity: 0,
-//       transitionDelay: 0
-//     }
-//   } : {
-//     opacity: 1,
-//     '> div': {
-//       opacity: 1,
-//       transitionDelay: 0
-//     }
-//   }
-// },
-
-//   sectionLinks,
-//   socialMedia
-
-// }
