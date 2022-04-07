@@ -1,10 +1,51 @@
 'use strict'
 
-import { Box, Text } from '@symbo.ls/symbols'
+import { Box, Text, Img, Link } from '@symbo.ls/symbols'
 
 import { Header, Menu } from '../../components'
 
+import LOGO_PNG from '../../assets/icons/logo.png'
+
 import style, { styleBanner } from './style'
+
+const book = {
+  proto: [Link, Box],
+  style: {
+    borderTopRightRadius: `${80 / 16}em`,
+    borderBottomRightRadius: `${80 / 16}em`,
+    zIndex: 220,
+    cursor: 'pointer',
+    textDecoration: 'none'
+  },
+  props: {
+    position: 'fixed',
+    top: '43%',
+    background: 'green',
+    flexFlow: 'column',
+    padding: 'B C B A2',
+    href: `https://www.airbnb.com/users/404104381/listings?fbclid=IwAR3RqnCcBkIXwGaJauHmAlgdNYGa9ASOcUMk7ph2i1XBqDG0DqvOMx7XnrM`,
+    target: '_blank'
+  },
+  image: {
+    proto: [Img, Box],
+    props: {
+      src: LOGO_PNG,
+      boxSize: 'C1'
+    }
+  },
+  ook: {
+    proto: [Text, Box],
+    props: {
+      text: 'ook',
+      size: 'C',
+      color: 'cream'
+    },
+    style: {
+      textTransform: 'uppercase'
+      // fontWeight: '500'
+    }
+  }
+}
 
 export const banner = {
   proto: Box,
@@ -67,7 +108,8 @@ export default {
 
   banner,
   Header,
-  Menu
+  Menu,
+  book
 }
 
 // import { Residence, Apartments, Location, Wine } from '../../articles'
