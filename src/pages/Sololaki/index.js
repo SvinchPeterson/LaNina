@@ -2,7 +2,7 @@
 
 import { Box, Text } from '@symbo.ls/symbols'
 
-import { Header } from '../../components'
+import { Header, Menu } from '../../components'
 
 import style, { styleBanner } from './style'
 
@@ -67,7 +67,8 @@ export default {
   },
 
   banner,
-  Header
+  Header,
+  Menu
 }
 
 // import { Residence, Apartments, Location, Wine } from '../../articles'

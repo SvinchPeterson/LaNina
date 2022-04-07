@@ -11,10 +11,8 @@ export const styleMenuIcon = {
 }
 export const styleLangs = {
   textTransform: 'uppercase',
-  width: '200px',
-  '> div': {
-    cursor: 'pointer'
-  },
+  width: `${200 / 16}em`,
+  '> div': { cursor: 'pointer' },
   '> div:hover': { opacity: 1, fontWeight: 700 }
 }
 
@@ -27,7 +25,8 @@ export const styleCall = {
   '&:hover > span': { opacity: 1 }
 }
 export default {
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
+  zIndex: 1000
 }
 // const styleCheck = {
 //   display: 'none',

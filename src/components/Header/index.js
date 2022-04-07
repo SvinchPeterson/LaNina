@@ -1,5 +1,5 @@
 'use strict'
-import { Text, SVG, Link, Box, Img } from '@symbo.ls/symbols'
+import { Text, Box, Img } from '@symbo.ls/symbols'
 
 import PHONE_PNG from '../../assets/icons/phoneRight.png'
 
