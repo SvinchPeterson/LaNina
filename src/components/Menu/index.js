@@ -1,43 +1,77 @@
 'use strict'
-import { Box, Text, Link, SVG, Img } from '@symbo.ls/symbols'
+import { Box, Text, Link, Img } from '@symbo.ls/symbols'
 
 import FACEBOOK_PNG from '../../assets/icons/facebook.png'
 import INSTAGRAM_PNG from '../../assets/icons/instagram.png'
 import LINKEDIN_PNG from '../../assets/icons/linkedin.png'
 
-import style, {} from './style'
+import style, { styleSectionLinks, styleSocialMedia } from './style'
 
 const sectionLinks = {
   tag: 'nav',
   proto: Box,
+  class: [styleSectionLinks],
+  props: {
+    flexFlow: 'row',
+    gap: 'D',
+    padding: '0 E 0 0'
+  },
+
   childProto: {
-    proto: [Link, Text, Box],
+    proto: [Link, Text],
     props: {
-      color: 'cream'
+      color: 'cream .75',
+      size: 'C'
+    },
+    on: {
+      click: (event, element, state) => {
+        state.update({ activeMenuItem: element.key })
+      }
+    },
+
+    class: {
+      show: (element, state) => state.activeMenuItem === element.key
+        ? { color: 'rgba(168, 98, 63, 1)' }
+        : { color: 'rgba(244, 233, 217, 1)' }
     }
   },
   ...[
-    { props: { text: 'residence' } },
-    { props: { text: 'apartments' } },
-    { props: { text: 'wine' } },
-    { props: { text: 'location' } }
+    { props: { text: 'residence', href: '#residence' } },
+    { props: { text: 'apartments', href: '#apartments' } },
+    { props: { text: 'wine', href: '#wine' } },
+    { props: { text: 'location', href: '#location' } }
   ]
 }
 
 const socialMedia = {
   tag: 'nav',
   proto: Box,
+  class: [styleSocialMedia],
+  props: {
+    flexFlow: 'row',
+    gap: 'D',
+    padding: '0 F 0 0'
+  },
+
   childProto: {
-    proto: [Link, Box],
+    proto: Link,
     icon: {
       proto: [Img, Box],
-      props: { boxSize: 'B' }
+      props: { boxSize: ' B2' }
     }
   },
   ...[
-    { icon: { props: { src: FACEBOOK_PNG } } },
-    { icon: { props: { src: INSTAGRAM_PNG } } },
-    { icon: { props: { src: LINKEDIN_PNG } } }
+    {
+      props: { href: `https://www.facebook.com/laninaresidence` },
+      icon: { props: { src: FACEBOOK_PNG } }
+    },
+    {
+      props: { props: { href: 'https://www.instagram.com/laninaresidence/' } },
+      icon: { props: { src: INSTAGRAM_PNG } }
+    },
+    {
+      icon: { props: { src: LINKEDIN_PNG } }
+    }
   ]
 }
 
@@ -45,12 +79,21 @@ export default {
   tag: 'aside',
   proto: Box,
   style,
+  class: {
+    show: (element, state) => state.activeMenu
+      ? { opacity: 0 }
+      : { opacity: 1 }
+  },
   props: {
     boxSize: '100% 100%',
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'black'
+    //   backdropFilter: 'blur(5px)',
+    flexFlow: 'column',
+    flexAlign: 'flex-end center',
+    // padding: '0 E 0 0',
+    gap: 'E'
   },
 
   sectionLinks,
@@ -73,15 +116,15 @@ export default {
 //     props: {
 //       size: 'D'
 //     },
-//     on: {
-//       click: (event, element, state) => {
-//         state.update({ activeMenuLink: element.key })
-//         console.log(state.activeMenuLink, element.key)
-//       }
-//     },
+// on: {
+//   click: (event, element, state) => {
+//     state.update({ activeMenuLink: element.key })
+//     console.log(state.activeMenuLink, element.key)
+//   }
+// },
 
-//     class: {
-//       show: (element, state) => state.activeMenuLink === element.key ? { color: 'rgba(168, 98, 63, .65)' } : { color: 'rgba(244, 233, 217, .45)' }
+// class: {
+//   show: (element, state) => state.activeMenuLink === element.key ? { color: 'rgba(168, 98, 63, .65)' } : { color: 'rgba(244, 233, 217, .45)' }
 //     }
 //   },
 //   ...[
@@ -142,26 +185,26 @@ export default {
 //   props: {
 //     flexFlow: 'column'
 //   },
-//   class: {
-//     show: (element, state) => state.active ? {
+// class: {
+//   show: (element, state) => state.active ? {
+//     opacity: 0,
+//     pointerEvents: 'none',
+//     '> nav': {
 //       opacity: 0,
-//       pointerEvents: 'none',
-//       '> nav': {
-//         opacity: 0,
-//         transitionDelay: 0
-//       },
-//       '> div': {
-//         opacity: 0,
-//         transitionDelay: 0
-//       }
-//     } : {
-//       opacity: 1,
-//       '> div': {
-//         opacity: 1,
-//         transitionDelay: 0
-//       }
+//       transitionDelay: 0
+//     },
+//     '> div': {
+//       opacity: 0,
+//       transitionDelay: 0
 //     }
-//   },
+//   } : {
+//     opacity: 1,
+//     '> div': {
+//       opacity: 1,
+//       transitionDelay: 0
+//     }
+//   }
+// },
 
 //   sectionLinks,
 //   socialMedia

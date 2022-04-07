@@ -24,6 +24,12 @@ const menuIcon = {
     boxSize: 'B2 A2',
     flexAlign: 'flex-start space-between'
   },
+  on: {
+    click: (event, element, state) => {
+      state.activeMenu ? state.update({ activeMenu: false }) : state.update({ activeMenu: true })
+    }
+  },
+
   childProto: {
     proto: Box,
     props: {
@@ -142,11 +148,11 @@ export default {
 //     padding: 'A'
 //   },
 
-//   on: {
-//     click: (event, element, state) => {
-//       state.active ? state.update({ active: false }) : state.update({ active: true })
-//     }
-//   },
+// on: {
+//   click: (event, element, state) => {
+//     state.active ? state.update({ active: false }) : state.update({ active: true })
+//   }
+// },
 
 //   childProto: {
 //     proto: Box,
