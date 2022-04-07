@@ -15,8 +15,12 @@ export const styleLangs = {
     cursor: 'pointer'
   }
 }
+
+export const styleCall = {
+  cursor: 'pointer'
+}
 export default {
-  border: '5px solid red',
+  // border: '5px solid red',
   boxSizing: 'border-box'
 }
 // const styleCheck = {

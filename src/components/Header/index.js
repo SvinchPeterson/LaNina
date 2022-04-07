@@ -1,9 +1,9 @@
 'use strict'
-import { Text, SVG, Link, Box } from '@symbo.ls/symbols'
+import { Text, SVG, Link, Box, Img } from '@symbo.ls/symbols'
 
-import style, { styleMenuIcon, styleCheck, styleLangs } from './style'
+import PHONE_PNG from '../../assets/icons/phoneRight.png'
 
-import PHONE_PNG from '../../assets/icons/phoneRight.svg'
+import style, { styleMenuIcon, styleCheck, styleLangs, styleCall } from './style'
 
 const check = {
   tag: 'input',
@@ -21,20 +21,20 @@ const menuIcon = {
   class: [styleMenuIcon],
   props: {
     flexFlow: 'column',
-    boxSize: 'C A2',
+    boxSize: 'B2 A2',
     flexAlign: 'flex-start space-between'
   },
   childProto: {
     proto: Box,
     props: {
-      boxSize: '50% W',
+      boxSize: '50% W1',
       background: 'cream',
       round: 'C'
     }
 
   },
   ...[
-    { props: { boxSize: '100% W' } },
+    { props: { boxSize: '100% W1' } },
     {},
     {}
   ]
@@ -60,6 +60,20 @@ const langs = {
   ]
 }
 
+const call = {
+  proto: Box,
+  props: { boxSize: 'A2 A2' },
+  class: [styleCall],
+  image: {
+    proto: Img,
+    props: { src: PHONE_PNG },
+    style: {
+      width: '100%',
+      height: '100%'
+    }
+  }
+}
+
 export default {
   tag: 'header',
   proto: Box,
@@ -69,11 +83,13 @@ export default {
     position: 'fixed',
     top: '0',
     padding: '0 C',
-    flexAlign: 'center center'
+    flexAlign: 'center center',
+    gap: 'E'
   },
   check,
   menuIcon,
-  langs
+  langs,
+  call
 }
 
 // const check = {
