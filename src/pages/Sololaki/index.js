@@ -4,6 +4,8 @@ import { Box, Text, Img, Link } from '@symbo.ls/symbols'
 
 import { Header, Menu } from '../../components'
 
+import { Residence } from '../../articles'
+
 import LOGO_PNG from '../../assets/icons/logo.png'
 
 import style, { styleBanner } from './style'
@@ -40,10 +42,7 @@ const book = {
       size: 'C',
       color: 'cream'
     },
-    style: {
-      textTransform: 'uppercase'
-      // fontWeight: '500'
-    }
+    style: { textTransform: 'uppercase' }
   }
 }
 
@@ -109,7 +108,9 @@ export default {
   banner,
   Header,
   Menu,
-  book
+  book,
+
+  Residence
 }
 
 // import { Residence, Apartments, Location, Wine } from '../../articles'

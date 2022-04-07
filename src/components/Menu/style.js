@@ -19,9 +19,8 @@ export const styleSocialMedia = {
 }
 
 export default {
-  zIndex: 9,
   boxSizing: 'border-box',
   background: 'radial-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7))',
-  backdropFilter: 'blur(8px)',
+  backdropFilter: 'blur(5px)',
   transition: 'opacity .5s ease-in-out'
 }

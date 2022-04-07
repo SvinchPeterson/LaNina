@@ -87,7 +87,7 @@ export default {
   },
   props: {
     boxSize: '100% 100%',
-    position: 'absolute',
+    position: 'fixed',
     top: '0',
     left: '0',
     flexFlow: 'column',

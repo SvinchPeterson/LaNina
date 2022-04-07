@@ -1,7 +1,7 @@
 'use strict'
 import { Block } from '@symbo.ls/symbols'
 import { wineText } from '../../texts'
-import WINE_JPG from '../../assets/images/sololaki/wine.jpg'
+// import WINE_JPG from '../../assets/images/sololaki/wine.jpg'
 
 export default {
   tag: 'article',
@@ -12,7 +12,7 @@ export default {
   style: {
     margin: '200px 0',
     minHeight: `${700 / 16}em`,
-    backgroundImage: 'url(' + WINE_JPG + ')',
+    // backgroundImage: 'url(' + WINE_JPG + ')',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',

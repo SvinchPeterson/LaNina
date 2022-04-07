@@ -7,11 +7,13 @@ export const styleCheck = {
 }
 export const styleMenuIcon = {
   cursor: 'pointer',
+  // mixBlendMode: 'difference',
   '> div': { transition: 'width .5s ease-in-out' }
 }
 export const styleLangs = {
   textTransform: 'uppercase',
   width: `${200 / 16}em`,
+  // backdropFilter: 'blur(10px)',
   '> div': { cursor: 'pointer' },
   '> div:hover': { opacity: 1, fontWeight: 700 }
 }
@@ -27,5 +29,6 @@ export const styleCall = {
 
 export default {
   boxSizing: 'border-box',
-  zIndex: 10
+  zIndex: 10,
+  mixBlendMode: 'difference'
 }

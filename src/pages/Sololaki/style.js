@@ -1,16 +1,15 @@
 'use strict'
 
-import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki2.jpg'
+import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
 
 export const styleBanner = {
   backgroundImage: 'linear-gradient(rgba(42, 81, 61, .25), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_JPG + ')',
   backgroundSize: 'cover',
+  backgroundAttachment: 'fixed',
   '> div': {
     textTransform: 'uppercase'
   },
-  h3: {
-    letterSpacing: `${5 / 23}em`
-  },
+  h3: { letterSpacing: `${5 / 23}em` },
   p: {
     fontWeight: '300',
     letterSpacing: `${1.5 / 20}em`
@@ -18,7 +17,10 @@ export const styleBanner = {
 }
 
 export default {
-  flex: 1
+  flex: 1,
+  overflowX: 'hidden',
+  overflowY: 'auto',
+  scrollBehavior: 'smooth'
 }
 
 // import { scaleSololakiBanner, zoomIn, letterSpacingIn, verticalMove, opacity, paddingOpacity } from '../../animations'
