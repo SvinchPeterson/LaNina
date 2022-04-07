@@ -6,6 +6,12 @@ import { Header } from '../../components'
 
 import style, { styleBanner } from './style'
 
+const states = {
+  state: {
+    activeLang: 0
+  }
+}
+
 export const banner = {
   proto: Box,
   class: [styleBanner],
@@ -52,6 +58,7 @@ export const banner = {
 }
 
 export default {
+  states,
   proto: Box,
   style,
   props: {

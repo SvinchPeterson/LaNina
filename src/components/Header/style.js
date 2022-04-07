@@ -11,16 +11,22 @@ export const styleMenuIcon = {
 }
 export const styleLangs = {
   textTransform: 'uppercase',
+  width: '200px',
   '> div': {
     cursor: 'pointer'
-  }
+  },
+  '> div:hover': { opacity: 1, fontWeight: 700 }
 }
 
 export const styleCall = {
-  cursor: 'pointer'
+  cursor: 'pointer',
+  '> span': {
+    opacity: 0,
+    whiteSpace: 'nowrap'
+  },
+  '&:hover > span': { opacity: 1 }
 }
 export default {
-  // border: '5px solid red',
   boxSizing: 'border-box'
 }
 // const styleCheck = {

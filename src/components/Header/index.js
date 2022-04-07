@@ -50,7 +50,19 @@ const langs = {
   childProto: {
     proto: [Text, Box],
     props: {
-      color: 'cream'
+      // color: 'cream'
+    },
+    on: {
+      click: (event, element, state) => {
+        state.update({ activeLang: element.key })
+        console.log(state.activeLang, element.key)
+      }
+    },
+
+    class: {
+      show: (element, state) => state.activeLang === element.key
+        ? { color: 'rgba(244, 233, 217, 1)', fontWeight: 700 }
+        : { color: 'rgba(244, 233, 217, .85)', fontWeight: 500 }
     }
   },
   ...[
@@ -62,14 +74,33 @@ const langs = {
 
 const call = {
   proto: Box,
-  props: { boxSize: 'A2 A2' },
   class: [styleCall],
+  props: {
+    flexAlign: 'center center',
+    gap: 'A',
+    position: 'relative'
+  },
   image: {
-    proto: Img,
-    props: { src: PHONE_PNG },
+    proto: [Img, Box],
+    props: {
+      src: PHONE_PNG,
+      boxSize: 'A2 A2'
+    },
     style: {
       width: '100%',
       height: '100%'
+    }
+  },
+  numb: {
+    tag: 'span',
+    proto: [Text, Box],
+    props: {
+      text: '+995 571 017 170',
+      color: 'cream',
+      size: 'B',
+      position: 'absolute',
+      left: '100%',
+      padding: '0 0 0 Z'
     }
   }
 }
@@ -137,16 +168,16 @@ export default {
 //   childProto: {
 //     proto: Box,
 //     props: { padding: 'Y 0' },
-//     on: {
-//       click: (event, element, state) => {
-//         state.update({ activeLang: element.key })
-//         console.log(state.activeLang, element.key)
-//       }
-//     },
+// on: {
+//   click: (event, element, state) => {
+//     state.update({ activeLang: element.key })
+//     console.log(state.activeLang, element.key)
+//   }
+// },
 
-//     class: {
-//       show: (element, state) => state.activeLang === element.key ? { color: 'rgba(244, 233, 217, .55)' } : { color: 'rgba(244, 233, 217, 1)' }
-//     }
+// class: {
+//   show: (element, state) => state.activeLang === element.key ? { color: 'rgba(244, 233, 217, .55)' } : { color: 'rgba(244, 233, 217, 1)' }
+// }
 //   },
 
 //   ...[
