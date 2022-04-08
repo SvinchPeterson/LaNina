@@ -3,7 +3,7 @@ import { Box, Text } from '@symbo.ls/symbols'
 
 import { bbSololaki } from '../../texts'
 
-import style, { styleResidence, styleEntrence } from './style'
+import { styleResidence, styleEntrence } from './style'
 
 const residence = {
   proto: Box,
@@ -32,17 +32,17 @@ const entrenceItem = {
     proto: Box,
     props: {
       boxSize: 'X1 X1',
-      background: 'orange .5'
+      background: 'black .35'
     },
     style: { borderRadius: '100%' }
   },
   p: {
     proto: [Text, Box],
-    props: { color: 'orange .5' },
+    props: { color: 'black .35' },
     style: { letterSpacing: '1px', fontWeight: 300 }
   }
-
 }
+
 const entrence = {
   proto: Box,
   class: [styleEntrence],
@@ -55,7 +55,7 @@ const entrence = {
     props: {
       flexFlow: 'column',
       background: 'cream',
-      padding: 'E'
+      padding: 'D1 E C1 E'
     },
     entrences: {
       proto: Box,
@@ -84,13 +84,13 @@ const entrence = {
       proto: [Text, Box],
       props: {
         text: `Luggage dropoff allowed for guests' convenience when they have early arrival or late departure`,
-        color: 'black .35',
+        color: 'orange .75',
         padding: 'B 0 Z 0'
       },
       style: {
         maxWidth: `${400 / 16}em`,
         letterSpacing: '1px',
-        lineHeight: '25px',
+        lineHeight: '23px',
         fontWeight: 300
       }
     },
@@ -99,7 +99,7 @@ const entrence = {
       proto: [Text, Box],
       props: {
         text: 'Long term stays allow for 28 days or more',
-        color: 'black .35'
+        color: 'orange .75'
       },
       style: {
         fontWeight: 300,
