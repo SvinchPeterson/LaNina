@@ -1,5 +1,9 @@
 'use strict'
 
+export default {
+  border: '4px solid red'
+}
+
 // import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
 // export default {

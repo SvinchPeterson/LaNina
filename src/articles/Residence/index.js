@@ -112,9 +112,9 @@ const entrence = {
 export default {
   proto: Box,
   props: {
-    padding: 'F 0',
+    padding: 'F1 0',
     flexFlow: 'column',
-    gap: 'F'
+    gap: 'G'
   },
   attr: { id: 'residence' },
 

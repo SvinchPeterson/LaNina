@@ -1,4 +1,29 @@
 'use strict'
+import { Box } from '@symbo.ls/symbols'
+
+import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from '../../components'
+import style, {} from './style'
+export default {
+  style,
+  proto: Box,
+  tabsHeader: {
+    tag: 'header',
+    style: { border: '5px solid green' },
+    proto: Box,
+    tabsContainer: {
+      proto: Box,
+      props: {
+        flexAlign: 'center flex-start'
+      },
+      style: { border: '5px solid yellow' },
+      childProto: {
+        proto: Box,
+        style: { border: '5px solid blue' }
+      },
+      ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
+    }
+  }
+}
 // import { Block } from '@symbo.ls/symbols'
 
 // import { tabBallerina, tabRedBrick, tabYellowCouch, tabRetro, tabGreenForest, roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from '../../components'

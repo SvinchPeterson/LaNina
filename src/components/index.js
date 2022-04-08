@@ -1,7 +1,6 @@
 'use strict'
 import { Logo, Logo2 } from './Logo'
 import Header from './Header'
-import { tabBallerina, tabRedBrick, tabYellowCouch, tabRetro, tabGreenForest } from './RoomTab'
 import RoomOffers from './RoomOffers'
 import Menu from './Menu'
 
@@ -15,12 +14,6 @@ export {
   Header,
   RoomOffers,
   Menu,
-
-  tabBallerina,
-  tabRedBrick,
-  tabYellowCouch,
-  tabRetro,
-  tabGreenForest,
 
   galleryBallerina,
   galleryRedBrick,

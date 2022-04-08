@@ -7,7 +7,7 @@ export const styleResidence = {
   backgroundImage: 'url(' + BB_JPG + ')',
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
-  minHeight: `${700 / 16}em`,
+  minHeight: `${600 / 16}em`,
   backgroundAttachment: 'fixed',
   backgroundPosition: 'top left 100px',
   p: {
