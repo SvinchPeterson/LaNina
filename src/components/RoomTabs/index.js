@@ -1,6 +1,48 @@
 'use strict'
 
-// import { Box, Link, Img, Text } from '@symbo.ls/symbols'
+import { Box, Link, Img, Text } from '@symbo.ls/symbols'
+
+import { ballerina, redBrick, yellowCouch } from '../../texts'
+
+const book = {
+  proto: Box,
+  icon: { proto: Img },
+  span: {
+    proto: Text
+  }
+}
+
+const roomTab = {
+  proto: [Link, Box],
+  h3: {
+    proto: [Text, Box],
+    props: { text: 'ballerina' }
+  },
+  p: {
+    proto: [Text, Box]
+  },
+  book
+}
+
+export const tabBallerina = {
+  proto: roomTab
+}
+
+export const tabRedBrick = {
+  proto: roomTab
+}
+
+export const tabYellowCouch = {
+  proto: roomTab
+}
+
+export const tabGreenForest = {
+  proto: roomTab
+}
+
+export const tabRetro = {
+  proto: roomTab
+}
 
 // import { ballerina, redBrick, yellowCouch } from '../../texts'
 

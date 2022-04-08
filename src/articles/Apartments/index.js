@@ -2,6 +2,7 @@
 import { Box } from '@symbo.ls/symbols'
 
 import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from '../../components'
+
 import style, {} from './style'
 export default {
   style,
