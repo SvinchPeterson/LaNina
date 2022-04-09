@@ -53,7 +53,9 @@ const roomTab = {
 
     }
   },
-  book
+  book: {
+    proto: book
+  }
 }
 
 export const tabBallerina = {
@@ -65,7 +67,10 @@ export const tabBallerina = {
     }
   },
   h3: { props: { text: 'ballerina' } },
-  p: { proto: ballerina }
+  p: { proto: ballerina },
+  book: {
+
+  }
 }
 
 export const tabRedBrick = {
@@ -75,7 +80,6 @@ export const tabRedBrick = {
       backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + REDBRICK_JPG + ')',
       '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')' }
     }
-
   },
   h3: { props: { text: 'red brick' } },
   p: { proto: redBrick }
@@ -107,7 +111,6 @@ export const tabGreenForest = {
 
 export const tabRetro = {
   proto: roomTab,
-  style: { transformOrigin: 'right' },
   image: {
     style: {
       backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + RETRO_JPG + ')',
