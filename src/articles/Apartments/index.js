@@ -5,11 +5,7 @@ import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } f
 
 import LEFT_ARROW from '../../assets/icons/left-arrowCream.png'
 import RIGHT_ARROW from '../../assets/icons/right-arrowCream.png'
-import DRESS_PNG from '../../assets/icons/dress.png'
-import BRICKS_PNG from '../../assets/icons/bricks.png'
-import COUCH_PNG from '../../assets/icons/couch.png'
-import LEAF_PNG from '../../assets/icons/leaf.png'
-import KEY_PNG from '../../assets/icons/key.png'
+
 import style, { styleHeader, styleNavButtons } from './style'
 
 const navButtons = {

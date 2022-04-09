@@ -10,13 +10,35 @@ import YELLOWCOUCH_JPG from '../../assets/images/yellowCouch/yellowcouchTab.jpg'
 import GREENFOREST_JPG from '../../assets/images/greenForest/greenforestTab.jpg'
 import RETRO_JPG from '../../assets/images/retro/retroTab.jpg'
 
+import DRESS_PNG from '../../assets/icons/dress.png'
+import BRICKS_PNG from '../../assets/icons/bricks.png'
+import COUCH_PNG from '../../assets/icons/couch.png'
+import LEAF_PNG from '../../assets/icons/leaf.png'
+import KEY_PNG from '../../assets/icons/key.png'
+
 import { styleRoomTab } from './style'
 
 const book = {
-  proto: Box,
-  icon: { proto: Img },
+  proto: [Link, Box],
+  props: {
+    flexAlign: 'center center',
+    flexFlow: 'row',
+    bottom: '10%',
+    left: '50%',
+    padding: 'Z1 A1',
+    gap: 'Y'
+  },
+  icon: {
+    proto: [Img, Box],
+    props: { boxSize: 'A1 A1' }
+  },
   span: {
-    proto: Text
+    proto: [Text, Box],
+    props: {
+      text: 'book',
+      color: 'cream',
+      size: 'B'
+    }
   }
 }
 
@@ -49,7 +71,7 @@ const roomTab = {
     proto: [Text, Box],
     props: {
       color: 'cream .75',
-      padding: 'C 0 0 0'
+      padding: 'D 0 0 0'
 
     }
   },
@@ -68,9 +90,7 @@ export const tabBallerina = {
   },
   h3: { props: { text: 'ballerina' } },
   p: { proto: ballerina },
-  book: {
-
-  }
+  book: { icon: { props: { src: DRESS_PNG } } }
 }
 
 export const tabRedBrick = {
@@ -82,7 +102,8 @@ export const tabRedBrick = {
     }
   },
   h3: { props: { text: 'red brick' } },
-  p: { proto: redBrick }
+  p: { proto: redBrick },
+  book: { icon: { props: { src: BRICKS_PNG } } }
 }
 
 export const tabYellowCouch = {
@@ -90,11 +111,12 @@ export const tabYellowCouch = {
   image: {
     style: {
       backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + YELLOWCOUCH_JPG + ')',
-      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')' }
+      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + YELLOWCOUCH_JPG + ')' }
     }
   },
   h3: { props: { text: 'yellow couch' } },
-  p: { proto: yellowCouch }
+  p: { proto: yellowCouch },
+  book: { icon: { props: { src: COUCH_PNG } } }
 }
 
 export const tabGreenForest = {
@@ -106,7 +128,8 @@ export const tabGreenForest = {
     }
   },
   h3: { props: { text: 'green forest' } },
-  p: { proto: greenForest }
+  p: { proto: greenForest },
+  book: { icon: { props: { src: LEAF_PNG } } }
 }
 
 export const tabRetro = {
@@ -118,7 +141,8 @@ export const tabRetro = {
     }
   },
   h3: { props: { text: 'retro' } },
-  p: { proto: retro }
+  p: { proto: retro },
+  book: { icon: { props: { src: KEY_PNG } } }
 }
 
 // import { ballerina, redBrick, yellowCouch } from '../../texts'

@@ -20,11 +20,13 @@ export const styleRoomTab = {
     transitionDelay: '0s',
     transition: 'opacity 0s ease-in-out'
   },
+  '&:hover > h3': { letterSpacing: '1px' },
   '> h3': {
     textTransform: 'uppercase',
     zIndex: 10,
     pointerEvents: 'none',
-    whiteSpace: 'nowrap'
+    // whiteSpace: 'nowrap',
+    transition: 'letter-spacing 1s ease-in-out'
   },
   '> p': {
     zIndex: 10,
@@ -32,10 +34,26 @@ export const styleRoomTab = {
     pointerEvents: 'none',
     minWidth: `${400 / 16}em`,
     maxWidth: `${600 / 16}em`,
-    transition: 'opacity .8s ease-in-out',
+    transition: 'opacity .3s ease-in-out',
     transitionDelay: '.8s',
     lineHeight: `${23 / 16}em`,
-    letterSpacing: '1px'
+    letterSpacing: '1px',
+    fontWeight: '300'
+  },
+  '> a': {
+    zIndex: 10,
+    position: 'absolute',
+    transform: 'translate(-50%, -50%)',
+    textTransform: 'uppercase',
+    fontWeight: 700,
+    borderRadius: '50px',
+    border: '1.5px solid rgba(168, 98, 63, 1)',
+    backdropFilter: 'blur(30px)',
+    pointerEvents: 'none',
+    letterSpacing: '1px',
+    opacity: '.85',
+    // background: 'radial-gradient(rgba(244, 233, 217, .1), rgba(244, 233, 217, .25))'
+    background: 'radial-gradient( rgba(168, 98, 63, .05), rgba(168, 98, 63, .15))'
   }
 }
 
