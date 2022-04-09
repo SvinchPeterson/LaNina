@@ -4,6 +4,14 @@ import { Box, Link, Img, Text } from '@symbo.ls/symbols'
 
 import { ballerina, redBrick, yellowCouch } from '../../texts'
 
+import BALLERINA_JPG from '../../assets/images/ballerina/ballerinaTab.jpg'
+import REDBRICK_JPG from '../../assets/images/redBrick/redbrickTab.jpg'
+import YELLOWCOUCH_JPG from '../../assets/images/yellowCouch/yellowcouchTab.jpg'
+import GREENFOREST_JPG from '../../assets/images/greenForest/greenforestTab.jpg'
+import RETRO_JPG from '../../assets/images/retro/retroTab.jpg'
+
+import { styleRoomTab } from './style'
+
 const book = {
   proto: Box,
   icon: { proto: Img },
@@ -14,6 +22,7 @@ const book = {
 
 const roomTab = {
   proto: [Link, Box],
+  class: [styleRoomTab],
   h3: {
     proto: [Text, Box],
     props: { text: 'ballerina' }
@@ -25,23 +34,38 @@ const roomTab = {
 }
 
 export const tabBallerina = {
-  proto: roomTab
+  proto: roomTab,
+  style: {
+    backgroundImage: 'url(' + BALLERINA_JPG + ')'
+  }
 }
 
 export const tabRedBrick = {
-  proto: roomTab
+  proto: roomTab,
+  style: {
+    backgroundImage: 'url(' + REDBRICK_JPG + ')'
+  }
 }
 
 export const tabYellowCouch = {
-  proto: roomTab
+  proto: roomTab,
+  style: {
+    backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')'
+  }
 }
 
 export const tabGreenForest = {
-  proto: roomTab
+  proto: roomTab,
+  style: {
+    backgroundImage: 'url(' + GREENFOREST_JPG + ')'
+  }
 }
 
 export const tabRetro = {
-  proto: roomTab
+  proto: roomTab,
+  style: {
+    backgroundImage: 'url(' + RETRO_JPG + ')'
+  }
 }
 
 // import { ballerina, redBrick, yellowCouch } from '../../texts'

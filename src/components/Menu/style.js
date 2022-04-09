@@ -20,7 +20,7 @@ export const styleSocialMedia = {
 
 export default {
   boxSizing: 'border-box',
-  background: 'radial-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7))',
-  backdropFilter: 'blur(5px)',
+  background: 'radial-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9))',
+  backdropFilter: 'blur(10px)',
   transition: 'opacity .5s ease-in-out'
 }

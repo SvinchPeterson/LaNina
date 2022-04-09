@@ -1,7 +1,30 @@
 'use strict'
 
+import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
+export const styleHeader = {
+  backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+  backgroundSize: 'cover',
+  backgroundAttachment: 'fixed',
+  '> div': {
+    width: '100%',
+    overflowX: 'auto',
+    scrollBehavior: 'smooth'
+  }
+}
+
+export const styleNavButtons = {
+  '> button': {
+    cursor: 'pointer',
+    background: 'transparent',
+    border: 'none',
+    opacity: '.85',
+    '&:hover': { opacity: 1 }
+    // border: '3px solid rgba(168, 98, 63, 1)'
+    // background: 'rgba(244, 233, 217, .65)'
+    // background: 'rgba(168, 98, 63, 1)'
+  }
+}
 export default {
-  border: '4px solid red'
 }
 
 // import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'

@@ -95,7 +95,8 @@ export default {
   state: {
     activeLang: 0,
     activeMenu: true,
-    activeMenuItem: 0
+    activeMenuItem: 0,
+    activeTab: 0
   },
 
   proto: Box,

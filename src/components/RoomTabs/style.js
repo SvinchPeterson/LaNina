@@ -1,5 +1,14 @@
 'use strict'
 
+export const styleRoomTab = {
+  backgroundSize: 'cover',
+  flex: 1,
+  minWidth: `${400 / 16}em`,
+  minHeight: `${500 / 16}em`,
+  backgroundPosition: 'center',
+  cursor: 'pointer'
+}
+
 // export const styleBook = {
 //   letterSpacing: '5px',
 //   textDecoration: 'none',
