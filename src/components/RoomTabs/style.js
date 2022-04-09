@@ -1,12 +1,29 @@
 'use strict'
 
 export const styleRoomTab = {
-  backgroundSize: 'cover',
   flex: 1,
-  minWidth: `${400 / 16}em`,
   minHeight: `${500 / 16}em`,
-  backgroundPosition: 'center',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  boxSize: 'border-box',
+  transition: 'all 1s ease-in-out',
+  overflow: 'hidden',
+  '> div': {
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'all 1s ease-in-out',
+    zIndex: 1
+    // transform: 'scale(1.2)'
+  },
+  '&:hover': {
+    flex: 6
+    // '> div': { transform: 'scale(1)' }
+  },
+  '> h3': {
+    textTransform: 'uppercase',
+    zIndex: 10,
+    pointerEvents: 'none',
+    whiteSpace: 'nowrap'
+  }
 }
 
 // export const styleBook = {

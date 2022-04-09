@@ -10,6 +10,8 @@ import YELLOWCOUCH_JPG from '../../assets/images/yellowCouch/yellowcouchTab.jpg'
 import GREENFOREST_JPG from '../../assets/images/greenForest/greenforestTab.jpg'
 import RETRO_JPG from '../../assets/images/retro/retroTab.jpg'
 
+import BALLERINA_BLACK_JPG from '../../assets/images/ballerina/ballerinaTabBlack.jpg'
+
 import { styleRoomTab } from './style'
 
 const book = {
@@ -23,9 +25,27 @@ const book = {
 const roomTab = {
   proto: [Link, Box],
   class: [styleRoomTab],
+  props: {
+    flexFlow: 'column',
+    flexAlign: 'center flex-start',
+    padding: 'D A',
+    position: 'relative'
+  },
+  image: {
+    proto: Box,
+    props: {
+      boxSize: '100% 100%',
+      position: 'absolute',
+      top: '0',
+      left: '0'
+    }
+  },
   h3: {
     proto: [Text, Box],
-    props: { text: 'ballerina' }
+    props: {
+      size: 'B',
+      color: 'cream'
+    }
   },
   p: {
     proto: [Text, Box]
@@ -35,37 +55,59 @@ const roomTab = {
 
 export const tabBallerina = {
   proto: roomTab,
-  style: {
-    backgroundImage: 'url(' + BALLERINA_JPG + ')'
-  }
+  image: {
+    style: {
+      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)),url(' + BALLERINA_JPG + ')',
+      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')' }
+    }
+  },
+  h3: { props: { text: 'ballerina' } }
 }
 
 export const tabRedBrick = {
   proto: roomTab,
-  style: {
-    backgroundImage: 'url(' + REDBRICK_JPG + ')'
-  }
+  image: {
+    style: {
+      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + REDBRICK_JPG + ')',
+      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')' }
+    }
+
+  },
+  h3: { props: { text: 'red brick' } }
 }
 
 export const tabYellowCouch = {
   proto: roomTab,
-  style: {
-    backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')'
-  }
+  image: {
+    style: {
+      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + YELLOWCOUCH_JPG + ')',
+      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')' }
+    }
+  },
+  h3: { props: { text: 'yellow couch' } }
 }
 
 export const tabGreenForest = {
   proto: roomTab,
-  style: {
-    backgroundImage: 'url(' + GREENFOREST_JPG + ')'
-  }
+  image: {
+    style: {
+      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + GREENFOREST_JPG + ')',
+      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + GREENFOREST_JPG + ')' }
+    }
+  },
+  h3: { props: { text: 'green forest' } }
 }
 
 export const tabRetro = {
   proto: roomTab,
-  style: {
-    backgroundImage: 'url(' + RETRO_JPG + ')'
-  }
+  style: { transformOrigin: 'right' },
+  image: {
+    style: {
+      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + RETRO_JPG + ')',
+      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + RETRO_JPG + ')' }
+    }
+  },
+  h3: { props: { text: 'retro' } }
 }
 
 // import { ballerina, redBrick, yellowCouch } from '../../texts'

@@ -56,8 +56,6 @@ const tabsHeader = {
     gap: 'B',
     padding: 'D 0 E 0'
   },
-
-  navButtons,
   tabsContainer: {
     proto: Box,
     props: {
