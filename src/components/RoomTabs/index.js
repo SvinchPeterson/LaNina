@@ -2,15 +2,13 @@
 
 import { Box, Link, Img, Text } from '@symbo.ls/symbols'
 
-import { ballerina, redBrick, yellowCouch } from '../../texts'
+import { ballerina, redBrick, yellowCouch, greenForest, retro } from '../../texts'
 
 import BALLERINA_JPG from '../../assets/images/ballerina/ballerinaTab.jpg'
 import REDBRICK_JPG from '../../assets/images/redBrick/redbrickTab.jpg'
 import YELLOWCOUCH_JPG from '../../assets/images/yellowCouch/yellowcouchTab.jpg'
 import GREENFOREST_JPG from '../../assets/images/greenForest/greenforestTab.jpg'
 import RETRO_JPG from '../../assets/images/retro/retroTab.jpg'
-
-import BALLERINA_BLACK_JPG from '../../assets/images/ballerina/ballerinaTabBlack.jpg'
 
 import { styleRoomTab } from './style'
 
@@ -48,7 +46,12 @@ const roomTab = {
     }
   },
   p: {
-    proto: [Text, Box]
+    proto: [Text, Box],
+    props: {
+      color: 'cream .75',
+      padding: 'C 0 0 0'
+
+    }
   },
   book
 }
@@ -61,7 +64,8 @@ export const tabBallerina = {
       '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')' }
     }
   },
-  h3: { props: { text: 'ballerina' } }
+  h3: { props: { text: 'ballerina' } },
+  p: { proto: ballerina }
 }
 
 export const tabRedBrick = {
@@ -73,7 +77,8 @@ export const tabRedBrick = {
     }
 
   },
-  h3: { props: { text: 'red brick' } }
+  h3: { props: { text: 'red brick' } },
+  p: { proto: redBrick }
 }
 
 export const tabYellowCouch = {
@@ -84,7 +89,8 @@ export const tabYellowCouch = {
       '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')' }
     }
   },
-  h3: { props: { text: 'yellow couch' } }
+  h3: { props: { text: 'yellow couch' } },
+  p: { proto: yellowCouch }
 }
 
 export const tabGreenForest = {
@@ -95,7 +101,8 @@ export const tabGreenForest = {
       '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + GREENFOREST_JPG + ')' }
     }
   },
-  h3: { props: { text: 'green forest' } }
+  h3: { props: { text: 'green forest' } },
+  p: { proto: greenForest }
 }
 
 export const tabRetro = {
@@ -107,7 +114,8 @@ export const tabRetro = {
       '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + RETRO_JPG + ')' }
     }
   },
-  h3: { props: { text: 'retro' } }
+  h3: { props: { text: 'retro' } },
+  p: { proto: retro }
 }
 
 // import { ballerina, redBrick, yellowCouch } from '../../texts'

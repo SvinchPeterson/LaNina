@@ -14,15 +14,28 @@ export const styleRoomTab = {
     zIndex: 1
     // transform: 'scale(1.2)'
   },
-  '&:hover': {
-    flex: 6
-    // '> div': { transform: 'scale(1)' }
+  '&:hover': { flex: 6 },
+  '&:hover > p': { opacity: 1 },
+  '&:not(:hover) > p': {
+    transitionDelay: '0s',
+    transition: 'opacity 0s ease-in-out'
   },
   '> h3': {
     textTransform: 'uppercase',
     zIndex: 10,
     pointerEvents: 'none',
     whiteSpace: 'nowrap'
+  },
+  '> p': {
+    zIndex: 10,
+    opacity: 0,
+    pointerEvents: 'none',
+    minWidth: `${400 / 16}em`,
+    maxWidth: `${600 / 16}em`,
+    transition: 'opacity .8s ease-in-out',
+    transitionDelay: '.8s',
+    lineHeight: `${23 / 16}em`,
+    letterSpacing: '1px'
   }
 }
 

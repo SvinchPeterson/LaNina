@@ -1,4 +1,4 @@
-import { Text } from '@symbo.ls/symbols'
+import { Text, Box } from '@symbo.ls/symbols'
 
 export const origin = {
   proto: Text,
@@ -65,7 +65,7 @@ export const wineText = {
 }
 
 export const ballerina = {
-  proto: Text,
+  proto: [Text, Box],
   props: {
     text: `"Yellow Couch " is a cozy and quite one bedroom apartment of 50 m2 with open terrace,
     located on high first floor and composed of living room with comfortable sofa bed for 1 person and
@@ -77,7 +77,7 @@ export const ballerina = {
 }
 
 export const redBrick = {
-  proto: Text,
+  proto: [Text, Box],
   props: {
     text: `"Red Brick" is a cozy and quite one bedroom apartment of 55m2 , combining Georgian old style and modern interior elements
     is located on the ground floor, just few steps downstairs, is composed of living area with comfortable sofa bed for 1 person and sleeping
@@ -86,12 +86,26 @@ export const redBrick = {
 }
 
 export const yellowCouch = {
-  proto: Text,
+  proto: [Text, Box],
   props: {
     text: `"Yellow Couch " is a cozy and quite one bedroom apartment of 50 m2 with open terrace, located on high first floor
     and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower,
     kitchen with a dining area, making the apartment comfortable for 3 people.
     `
+  }
+}
+
+export const greenForest = {
+  proto: [Text, Box],
+  props: {
+    text: `"Green Forest " is a cozy and quite one bedroom apartment of 51 m2 with open terrace, located on high first floor and composed of living room and bedroom with 1 King bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 2 people.`
+  }
+}
+
+export const retro = {
+  proto: [Text, Box],
+  props: {
+    text: `"Retro " is a cozy and quite one bedroom apartment of 44 m2 with open terrace, located on high first floor and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people`
   }
 }
 
