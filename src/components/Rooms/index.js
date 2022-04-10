@@ -67,20 +67,20 @@ const navButtons = {
 const room = {
   proto: [Block, Flex],
   style,
-  class: {
-    show: (element, state) => state.activeLink === element.key ? {
-      animationName: roomsContainer,
-      animationDuration: '1.5s',
-      animationTimingFunction: 'ease-in-out',
-      height: '100%',
-      opacity: 1,
-      '> aside': { display: 'grid' }
-    }
-      : {
-        height: 0,
-        opacity: 0
-      }
-  },
+  // class: {
+  //   show: (element, state) => state.activeTab === element.key ? {
+  //     // animationName: roomsContainer,
+  //     // animationDuration: '1.5s',
+  //     // animationTimingFunction: 'ease-in-out',
+  //     height: '100%',
+  //     opacity: 1,
+  //     '> aside': { display: 'grid' }
+  //   }
+  //     : {
+  //       height: 0,
+  //       opacity: 0
+  //     }
+  // },
   props: {
     // padding: 'E 0 0 0'
   },
@@ -88,6 +88,41 @@ const room = {
   gallery: {},
   offer: { proto: RoomOffers },
   navButtons
+}
+
+export const roomBallerina = {
+  proto: room,
+  attr: { id: 'ballerina' },
+
+  gallery: { proto: galleryBallerina }
+}
+
+export const roomRedBrick = {
+  proto: room,
+  attr: { id: 'redBrick' },
+
+  gallery: { proto: galleryRedBrick }
+}
+
+export const roomYellowCouch = {
+  proto: room,
+  attr: { id: 'yellowCouch' },
+
+  gallery: { proto: galleryYellowCouch }
+}
+
+export const roomRetro = {
+  proto: room,
+  attr: { id: 'retro' },
+
+  gallery: { proto: galleryRetro }
+}
+
+export const roomGreenForest = {
+  proto: room,
+  attr: { id: 'greenForest' },
+
+  gallery: { proto: galleryGreenForest }
 }
 
 // const room = {
@@ -206,37 +241,3 @@ const room = {
 //     // }
 //   }
 // }
-export const roomBallerina = {
-  proto: room,
-  attr: { id: 'ballerina' },
-
-  gallery: { proto: galleryBallerina }
-}
-
-export const roomRedBrick = {
-  proto: room,
-  attr: { id: 'redBrick' },
-
-  gallery: { proto: galleryRedBrick }
-}
-
-export const roomYellowCouch = {
-  proto: room,
-  attr: { id: 'yellowCouch' },
-
-  gallery: { proto: galleryYellowCouch }
-}
-
-export const roomRetro = {
-  proto: room,
-  attr: { id: 'retro' },
-
-  gallery: { proto: galleryRetro }
-}
-
-export const roomGreenForest = {
-  proto: room,
-  attr: { id: 'greenForest' },
-
-  gallery: { proto: galleryGreenForest }
-}

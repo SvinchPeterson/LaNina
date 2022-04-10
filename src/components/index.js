@@ -9,6 +9,7 @@ import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } f
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, galleryGreenForest } from './Gallery'
 
 import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
+import { galleryBallerinaa } from './NewGallery/image'
 
 export {
   Logo,
@@ -33,6 +34,8 @@ export {
   roomRedBrick,
   roomYellowCouch,
   roomRetro,
-  roomGreenForest
+  roomGreenForest,
+
+  galleryBallerinaa
 
 }

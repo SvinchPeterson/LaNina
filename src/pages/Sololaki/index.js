@@ -106,12 +106,12 @@ export default {
     position: 'relative'
   },
 
-  banner,
-  Header,
-  Menu,
-  book,
+  // banner,
+  // Header,
+  // Menu,
+  // book,
 
-  Residence,
+  // Residence,
   Apartments
 }
 

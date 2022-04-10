@@ -26,6 +26,7 @@ const styleNavButtons = {
     opacity: '.65'
   }
 }
+
 export default {
   position: 'absolute',
   top: 0,
@@ -34,6 +35,7 @@ export default {
   boxSizing: 'border-box',
   padding: '0px 0px 60px 0px',
   borderTop: '5px solid rgba(168, 98, 63, 1)',
+  border: '5px solid green',
   '> aside': {
     display: 'none'
   },

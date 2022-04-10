@@ -23,6 +23,7 @@ export const styleBook = {
   letterSpacing: '1px',
   background: 'radial-gradient( rgba(168, 98, 63, .05), rgba(168, 98, 63, .15))',
   opacity: '.9',
+  textDecoration: 'none',
   '&:hover': { opacity: 1 }
 }
 export const styleRoomTab = {

@@ -1,7 +1,8 @@
 'use strict'
 import { Box } from '@symbo.ls/symbols'
 
-import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from '../../components'
+import {
+  tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro, galleryBallerina, galleryBallerinaa } from '../../components'
 
 // import LEFT_ARROW from '../../assets/icons/left-arrowCream.png'
 // import RIGHT_ARROW from '../../assets/icons/right-arrowCream.png'
@@ -53,14 +54,14 @@ const tabsHeader = {
   props: {
     flexFlow: 'column',
     flexAlign: 'center center',
-    gap: 'B',
+    // gap: 'B',
     padding: 'D 0 E 0'
   },
   tabsContainer: {
     proto: Box,
     props: {
       flexAlign: 'flex-start flex-start',
-      gap: 'B2'
+      gap: 'Z'
     },
     childProto: {
       proto: Box
@@ -72,10 +73,22 @@ const tabsHeader = {
 export default {
   style,
   proto: Box,
-  props: { padding: 'E 0' },
+  props: {
+    padding: 'E 0',
+    flexFlow: 'column'
+  },
   attr: { id: 'apartments' },
 
-  tabsHeader
+  tabsHeader,
+  rooms: {
+    tag: 'section',
+    proto: Box,
+    style: {
+      border: '3px solid rgba(168, 98, 63, 1)',
+      position: 'relative'
+    },
+    ...[galleryBallerinaa]
+  }
 }
 // import { Block } from '@symbo.ls/symbols'
 

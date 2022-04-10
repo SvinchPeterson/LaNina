@@ -55,14 +55,14 @@ const roomTab = {
   on: {
     click: (event, element, state) => {
       state.update({ activeTab: element.key })
+      element.parent.parent.parent.rooms.update({ style: { minHeight: `${800 / 16}em`, borderTop: '10px solid rgba(168, 98, 63, 1)' } })
     }
   },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
         flex: 6,
-        backgroundAttachment: 'fixed',
-        '> h3': { border: '5px solid red' }
+        backgroundAttachment: 'fixed'
       }
       : {}
   },
@@ -104,7 +104,7 @@ export const tabBallerina = {
     show: (element, state) => state.activeTab === element.key
       ? {
         flex: 6,
-        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')',
+        // backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')',
         backgroundAttachment: 'fixed'
       } : {}
   },
