@@ -11,10 +11,10 @@ import GREENFOREST_JPG from '../../assets/images/greenForest/greenforestTab.jpg'
 import RETRO_JPG from '../../assets/images/retro/retroTab.jpg'
 
 import DRESS_PNG from '../../assets/icons/dress.png'
-import BRICKS_PNG from '../../assets/icons/bricks.png'
-import COUCH_PNG from '../../assets/icons/couch.png'
+import BRICKS_PNG from '../../assets/icons/bricks2.png'
+import SOFA_PNG from '../../assets/icons/sofa.png'
 import LEAF_PNG from '../../assets/icons/leaf.png'
-import KEY_PNG from '../../assets/icons/key.png'
+import VINYL_PNG from '../../assets/icons/vinyl.png'
 
 import { styleRoomTab } from './style'
 
@@ -116,7 +116,7 @@ export const tabYellowCouch = {
   },
   h3: { props: { text: 'yellow couch' } },
   p: { proto: yellowCouch },
-  book: { icon: { props: { src: COUCH_PNG } } }
+  book: { icon: { props: { src: SOFA_PNG } } }
 }
 
 export const tabGreenForest = {
@@ -142,7 +142,7 @@ export const tabRetro = {
   },
   h3: { props: { text: 'retro' } },
   p: { proto: retro },
-  book: { icon: { props: { src: KEY_PNG } } }
+  book: { icon: { props: { src: VINYL_PNG } } }
 }
 
 // import { ballerina, redBrick, yellowCouch } from '../../texts'
