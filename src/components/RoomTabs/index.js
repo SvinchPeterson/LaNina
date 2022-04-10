@@ -16,10 +16,11 @@ import SOFA_PNG from '../../assets/icons/sofa.png'
 import LEAF_PNG from '../../assets/icons/leaf.png'
 import VINYL_PNG from '../../assets/icons/vinyl.png'
 
-import { styleRoomTab } from './style'
+import { styleRoomTab, styleParagraph, styleBook } from './style'
 
 const book = {
   proto: [Link, Box],
+  class: [styleBook],
   props: {
     flexAlign: 'center center',
     flexFlow: 'row',
@@ -44,35 +45,48 @@ const book = {
 
 const roomTab = {
   proto: [Link, Box],
-  class: [styleRoomTab],
+  style: styleRoomTab,
   props: {
     flexFlow: 'column',
     flexAlign: 'center flex-start',
-    padding: 'D A',
+    padding: 'D B',
     position: 'relative'
   },
-  image: {
-    proto: Box,
-    props: {
-      boxSize: '100% 100%',
-      position: 'absolute',
-      top: '0',
-      left: '0'
+  on: {
+    click: (event, element, state) => {
+      state.update({ activeTab: element.key })
     }
   },
+  class: {
+    show: (element, state) => state.activeTab === element.key
+      ? {
+        flex: 6,
+        backgroundAttachment: 'fixed',
+        '> h3': { border: '5px solid red' }
+      }
+      : {}
+  },
+
   h3: {
     proto: [Text, Box],
     props: {
       size: 'B',
       color: 'cream'
+    },
+    class: {
+      show: (element, state) => state.activeTab === element.parent.key ? { letterSpacing: '1px' } : {}
     }
   },
+
   p: {
     proto: [Text, Box],
+    style: styleParagraph,
     props: {
       color: 'cream .75',
       padding: 'D 0 0 0'
-
+    },
+    class: {
+      show: (element, state) => state.activeTab === element.parent.key ? { opacity: 1 } : {}
     }
   },
   book: {
@@ -82,67 +96,127 @@ const roomTab = {
 
 export const tabBallerina = {
   proto: roomTab,
-  image: {
-    style: {
-      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)),url(' + BALLERINA_JPG + ')',
-      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')' }
-    }
+  style: {
+    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)),url(' + BALLERINA_JPG + ')',
+    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')' }
+  },
+  class: {
+    show: (element, state) => state.activeTab === element.key
+      ? {
+        flex: 6,
+        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')',
+        backgroundAttachment: 'fixed'
+      } : {}
   },
   h3: { props: { text: 'ballerina' } },
   p: { proto: ballerina },
-  book: { icon: { props: { src: DRESS_PNG } } }
+  book: {
+    props: {
+      href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub',
+      target: '_blank'
+    },
+    icon: { props: { src: DRESS_PNG } }
+  }
 }
 
 export const tabRedBrick = {
   proto: roomTab,
-  image: {
-    style: {
-      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + REDBRICK_JPG + ')',
-      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')' }
-    }
+  style: {
+    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + REDBRICK_JPG + ')',
+    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')' }
+  },
+  class: {
+    show: (element, state) => state.activeTab === element.key
+      ? {
+        flex: 6,
+        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')',
+        backgroundAttachment: 'fixed'
+      } : {}
   },
   h3: { props: { text: 'red brick' } },
   p: { proto: redBrick },
-  book: { icon: { props: { src: BRICKS_PNG } } }
+  book: {
+    props: {
+      href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1649549944_%2BCos1t1uD845OoWN',
+      target: '_blank'
+    },
+    icon: { props: { src: BRICKS_PNG } }
+  }
 }
 
 export const tabYellowCouch = {
   proto: roomTab,
-  image: {
-    style: {
-      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + YELLOWCOUCH_JPG + ')',
-      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + YELLOWCOUCH_JPG + ')' }
-    }
+  style: {
+    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + YELLOWCOUCH_JPG + ')',
+    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + YELLOWCOUCH_JPG + ')' }
+  },
+  class: {
+    show: (element, state) => state.activeTab === element.key
+      ? {
+        flex: 6,
+        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + YELLOWCOUCH_JPG + ')',
+        backgroundAttachment: 'fixed'
+      } : {}
   },
   h3: { props: { text: 'yellow couch' } },
   p: { proto: yellowCouch },
-  book: { icon: { props: { src: SOFA_PNG } } }
+  book: {
+    props: {
+      href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1649549947_6qVLP%2BHZyXqY%2BvrL',
+      target: '_blank'
+    },
+    icon: { props: { src: SOFA_PNG } }
+  }
 }
 
 export const tabGreenForest = {
   proto: roomTab,
-  image: {
-    style: {
-      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + GREENFOREST_JPG + ')',
-      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + GREENFOREST_JPG + ')' }
-    }
+  style: {
+    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + GREENFOREST_JPG + ')',
+    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + GREENFOREST_JPG + ')' }
+  },
+  class: {
+    show: (element, state) => state.activeTab === element.key
+      ? {
+        flex: 6,
+        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + GREENFOREST_JPG + ')',
+        backgroundAttachment: 'fixed'
+      } : {}
   },
   h3: { props: { text: 'green forest' } },
   p: { proto: greenForest },
-  book: { icon: { props: { src: LEAF_PNG } } }
+  book: {
+    props: {
+      href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1649549949_GCS4Ixi%2FrxMbApfW',
+      target: '_blank'
+    },
+    icon: { props: { src: LEAF_PNG } }
+  }
 }
 
 export const tabRetro = {
   proto: roomTab,
-  image: {
-    style: {
-      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + RETRO_JPG + ')',
-      '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + RETRO_JPG + ')' }
-    }
+  style: {
+    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + RETRO_JPG + ')',
+    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + RETRO_JPG + ')' }
+  },
+  class: {
+    show: (element, state) => state.activeTab === element.key
+      ? {
+        flex: 6,
+        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + RETRO_JPG + ')',
+        backgroundAttachment: 'fixed'
+      } : {}
   },
   h3: { props: { text: 'retro' } },
   p: { proto: retro },
-  book: { icon: { props: { src: VINYL_PNG } } }
+  book: {
+    props: {
+      href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1649552000_jBh%2BzYZTB7v6VHUs',
+      target: '_blank'
+    },
+    icon: { props: { src: VINYL_PNG } }
+  }
 }
 
 // import { ballerina, redBrick, yellowCouch } from '../../texts'

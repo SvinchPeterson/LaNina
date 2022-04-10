@@ -1,50 +1,50 @@
 'use strict'
-import { Box, Img } from '@symbo.ls/symbols'
+import { Box } from '@symbo.ls/symbols'
 
 import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from '../../components'
 
-import LEFT_ARROW from '../../assets/icons/left-arrowCream.png'
-import RIGHT_ARROW from '../../assets/icons/right-arrowCream.png'
+// import LEFT_ARROW from '../../assets/icons/left-arrowCream.png'
+// import RIGHT_ARROW from '../../assets/icons/right-arrowCream.png'
 
-import style, { styleHeader, styleNavButtons } from './style'
+import style, { styleHeader } from './style'
 
-const navButtons = {
-  tag: 'nav',
-  proto: Box,
-  class: [styleNavButtons],
-  props: {
-    flexAlign: 'center space-between',
-    gap: 'A'
-  },
-  childProto: {
-    tag: 'button',
-    proto: Box,
-    props: {
-      padding: 'Y'
-    },
-    icon: {
-      proto: [Img, Box],
-      props: { boxSize: 'B' }
+// const navButtons = {
+//   tag: 'nav',
+//   proto: Box,
+//   class: [styleNavButtons],
+//   props: {
+//     flexAlign: 'center space-between',
+//     gap: 'A'
+//   },
+//   childProto: {
+//     tag: 'button',
+//     proto: Box,
+//     props: {
+//       padding: 'Y'
+//     },
+//     icon: {
+//       proto: [Img, Box],
+//       props: { boxSize: 'B' }
 
-    }
-  },
-  ...[
-    {
-      style: {
-        borderTopLeftRadius: '50px',
-        borderBottomLeftRadius: '50px'
-      },
-      icon: { props: { src: LEFT_ARROW } }
-    },
-    {
-      style: {
-        borderTopRightRadius: '50px',
-        borderBottomRightRadius: '50px'
-      },
-      icon: { props: { src: RIGHT_ARROW } }
-    }
-  ]
-}
+//     }
+//   },
+//   ...[
+//     {
+//       style: {
+//         borderTopLeftRadius: '50px',
+//         borderBottomLeftRadius: '50px'
+//       },
+//       icon: { props: { src: LEFT_ARROW } }
+//     },
+//     {
+//       style: {
+//         borderTopRightRadius: '50px',
+//         borderBottomRightRadius: '50px'
+//       },
+//       icon: { props: { src: RIGHT_ARROW } }
+//     }
+//   ]
+// }
 
 const tabsHeader = {
   tag: 'header',

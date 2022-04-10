@@ -1,5 +1,30 @@
 'use strict'
+export const styleParagraph = {
+  zIndex: 10,
+  opacity: 0,
+  pointerEvents: 'none',
+  minWidth: `${400 / 16}em`,
+  maxWidth: `${600 / 16}em`,
+  transition: 'opacity .3s ease-in-out',
+  transitionDelay: '.7s',
+  lineHeight: `${23 / 16}em`,
+  letterSpacing: '1px',
+  fontWeight: '300'
+}
 
+export const styleBook = {
+  zIndex: 10,
+  position: 'absolute',
+  transform: 'translate(-50%, -50%)',
+  textTransform: 'uppercase',
+  fontWeight: 700,
+  borderRadius: '50px',
+  border: '1.5px solid rgba(168, 98, 63, 1)',
+  letterSpacing: '1px',
+  background: 'radial-gradient( rgba(168, 98, 63, .05), rgba(168, 98, 63, .15))',
+  opacity: '.9',
+  '&:hover': { opacity: 1 }
+}
 export const styleRoomTab = {
   flex: 1,
   minHeight: `${500 / 16}em`,
@@ -7,13 +32,9 @@ export const styleRoomTab = {
   boxSize: 'border-box',
   transition: 'all 1s ease-in-out',
   overflow: 'hidden',
-  '> div': {
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    transition: 'all 1s ease-in-out',
-    zIndex: 1
-    // transform: 'scale(1.2)'
-  },
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  zIndex: 1,
   '&:hover': { flex: 6 },
   '&:hover > p': { opacity: 1 },
   '&:not(:hover) > p': {
@@ -25,35 +46,7 @@ export const styleRoomTab = {
     textTransform: 'uppercase',
     zIndex: 10,
     pointerEvents: 'none',
-    // whiteSpace: 'nowrap',
     transition: 'letter-spacing 1s ease-in-out'
-  },
-  '> p': {
-    zIndex: 10,
-    opacity: 0,
-    pointerEvents: 'none',
-    minWidth: `${400 / 16}em`,
-    maxWidth: `${600 / 16}em`,
-    transition: 'opacity .3s ease-in-out',
-    transitionDelay: '.8s',
-    lineHeight: `${23 / 16}em`,
-    letterSpacing: '1px',
-    fontWeight: '300'
-  },
-  '> a': {
-    zIndex: 10,
-    position: 'absolute',
-    transform: 'translate(-50%, -50%)',
-    textTransform: 'uppercase',
-    fontWeight: 700,
-    borderRadius: '50px',
-    border: '1.5px solid rgba(168, 98, 63, 1)',
-    backdropFilter: 'blur(30px)',
-    pointerEvents: 'none',
-    letterSpacing: '1px',
-    opacity: '.85',
-    // background: 'radial-gradient(rgba(244, 233, 217, .1), rgba(244, 233, 217, .25))'
-    background: 'radial-gradient( rgba(168, 98, 63, .05), rgba(168, 98, 63, .15))'
   }
 }
 
