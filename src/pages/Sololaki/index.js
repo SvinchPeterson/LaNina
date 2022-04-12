@@ -97,7 +97,7 @@ export default {
     activeMenu: true,
     activeMenuItem: 0,
     activeTab: 0,
-    activeOffers: false
+    offers: true
   },
 
   proto: Box,

@@ -14,6 +14,8 @@ export const styleHeader = {
 }
 
 export const styleRooms = {
+  opacity: 0
+  // overflow: 'hidden'
   // border: '10px solid green'
 }
 

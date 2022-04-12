@@ -1,7 +1,7 @@
 'use strict'
 import { Box, Text, Button, Img } from '@symbo.ls/symbols'
 
-import { } from '../../animations'
+import { roomOffer, roomOffer2 } from '../../animations'
 import style, { styleHeader, styleOffers } from './style'
 import MINUS_ICON from '../../assets/icons/minus.png'
 
@@ -13,7 +13,7 @@ const header = {
   style: styleHeader,
   props: {
     flexAlign: 'center space-between',
-    padding: '0 0 B 0'
+    padding: '0 B1'
   },
   h5: {
     proto: [Text, Box],
@@ -32,12 +32,14 @@ const header = {
         src: MINUS_ICON,
         boxSize: 'C B1'
       }
+    },
+    on: {
+      click: (event, element, state) => {
+        state.offers
+          ? state.update({ offers: false })
+          : state.update({ offers: true })
+      }
     }
-    // on: {
-    //   click: (event, element, state) => {
-    //     state.offers ? state.update({ offers: false }) : state.update({ offers: true })
-    //   }
-    // }
   }
 }
 
@@ -45,25 +47,25 @@ const offers = {
   proto: Box,
   style: styleOffers,
   props: {
+    padding: '0 C 0 C'
   },
-  // class: {
-  //   show: (element, state) => state.offers ? {
-  //     height: '300px',
-  //     animationName: roomOffers2,
-  //     animationDuration: '.55s',
-  //     animationTimingFunction: 'ease-in-out',
-
-  //     '> span': { opacity: '1' }
-  //   } : {
-  //     animationName: roomOffers,
-  //     animationDuration: '.55s',
-  //     animationTimingFunction: 'ease-in-out',
-  //     paddingTop: 0,
-  //     paddingBottom: 0,
-  //     height: 0,
-  //     '> span': { opacity: '0' }
-  //   }
-  // },
+  class: {
+    show: (element, state) => state.offers
+      ? {
+        minHeight: `${300 / 16}em`,
+        paddingBottom: `${100 / 16}em`,
+        '> span': { height: '30px', opacity: '1' }
+      }
+      : {
+        minHeight: `${0 / 16}em`,
+        paddingBottom: `${0 / 16}em`,
+        '> span': {
+          height: 0,
+          opacity: '0',
+          transitionDelay: '0s'
+        }
+      }
+  },
   childProto: {
     tag: 'span',
     proto: [Box, Text],
@@ -100,10 +102,10 @@ export const RoomOffers = {
   props: {
     position: 'absolute',
     left: '0',
-    bottom: '0',
+    bottom: '-80px',
     flexFlow: 'column',
-    background: 'cream',
-    padding: 'B C1 C C1'
+    background: 'cream'
+    // padding: '0 C1 C C1'
   },
   header,
   offers
@@ -161,9 +163,9 @@ export const RoomOffers = {
 //     class: {
 //       show: (element, state) => state.offers ? {
 //         height: '300px',
-//         animationName: roomOffers2,
-//         animationDuration: '.55s',
-//         animationTimingFunction: 'ease-in-out',
+// animationName: roomOffers2,
+// animationDuration: '.55s',
+// animationTimingFunction: 'ease-in-out',
 
 //         '> span': { opacity: '1' }
 //       } : {

@@ -49,7 +49,8 @@ export default {
   proto: Box,
   props: {
     padding: 'E 0',
-    flexFlow: 'column'
+    flexFlow: 'column',
+    gap: '0'
   },
   attr: { id: 'apartments' },
 

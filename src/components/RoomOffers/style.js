@@ -3,6 +3,8 @@
 export const styleHeader = {
   textTransform: 'uppercase',
   letterSpacing: '.5px',
+  height: `${80 / 16}em`,
+  borderTop: '5px solid rgba(168, 98, 63, 1)',
   '> button': {
     background: 'transparent',
     opacity: '.55'
@@ -11,18 +13,22 @@ export const styleHeader = {
 export const styleOffers = {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
-  rowGap: `${10 / 16}em`,
+  paddingBottom: `${100 / 16}em`,
   columnGap: `${60 / 16}em`,
   fontWeight: '400',
   letterSpacing: '.5px',
+  transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out',
+  // border: '3px solid red',
   '> span': {
-    fontSize: `${15 / 16}em`
+    fontSize: `${15 / 16}em`,
+    transition: 'height .6s ease-in-out, opacity .4s ease-in-out .3s'
   }
 }
 
 export default {
-  boxSizing: 'border-box',
-  borderTop: '5px solid rgba(168, 98, 63, 1)'
+  // boxSizing: 'border-box',
+  transition: 'all 1s ease-in-out',
+  minWidth: `${500 / 16}em`
 
 }
 // const styleHeader = {
