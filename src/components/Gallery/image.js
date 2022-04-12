@@ -4,10 +4,16 @@ import { Box } from '@symbo.ls/symbols'
 
 export const image = {
   proto: Box,
+  props: {
+    position: 'absolute',
+    boxSize: '100% 100%',
+    top: '0',
+    left: '0'
+  },
   tag: 'span',
-  define: { url: param => param },
-  style: { backgroundSize: 'cover' }
-  // class: {
-  //   show: (element, state) => state.activeImage === parseInt(element.key) ? { zIndex: '30', opacity: 1, backgroundPosition: 'center right' } : { zIndex: 0, opacity: 0 }
-  // }
+  style: {
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+    backgroundPosition: 'center'
+  }
 }

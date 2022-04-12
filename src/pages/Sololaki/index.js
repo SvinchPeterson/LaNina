@@ -96,7 +96,8 @@ export default {
     activeLang: 0,
     activeMenu: true,
     activeMenuItem: 0,
-    activeTab: 0
+    activeTab: 0,
+    activeOffers: false
   },
 
   proto: Box,

@@ -59,9 +59,8 @@ const roomTab = {
       state.update({ activeTab: element.key })
       element.parent.parent.parent.rooms.update({
         style: {
-          minHeight: '700px',
-          border: '5px solid green',
-          transition: 'all 3s ease-in-out'
+          minHeight: `${700 / 16}em`
+          // border: '10px solid green'
         }
       })
     }

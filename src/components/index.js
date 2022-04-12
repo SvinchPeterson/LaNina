@@ -1,7 +1,7 @@
 'use strict'
 import { Logo, Logo2 } from './Logo'
 import Header from './Header'
-import RoomOffers from './RoomOffers'
+import { RoomOffers } from './RoomOffers'
 import Menu from './Menu'
 
 import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs'

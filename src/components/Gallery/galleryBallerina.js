@@ -1,5 +1,6 @@
 'use strict'
 
+import { Gallery } from './gallery'
 import { image } from './image'
 
 import LIVINGROOM_JPG from '../../assets/images/ballerina/livingroom.jpg'
@@ -13,16 +14,17 @@ import HOLL_JPG from '../../assets/images/ballerina/holl.jpg'
 import BATHROOM_JPG from '../../assets/images/ballerina/bathroom.jpg'
 
 export const galleryBallerina = {
+  proto: Gallery,
   childProto: image,
   ...[
     { style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + BEDROOM_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + BEDROOM2_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + BEDROOM3_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + BEDROOM4_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + KITCHEN_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + HOLL_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + BATHROOM_JPG + ')' } }
+    { style: { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + BEDROOM_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + BEDROOM2_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + BEDROOM3_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + BEDROOM4_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + KITCHEN_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + HOLL_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + BATHROOM_JPG + ')', display: 'none' } }
   ]
 }

@@ -1,4 +1,5 @@
 'use strict'
+import { Gallery } from './gallery'
 import { image } from './image'
 
 import LIVINGROOM_JPG from '../../assets/images/redBrick/livingroom.jpg'
@@ -10,14 +11,15 @@ import BATHROOM_JPG from '../../assets/images/redBrick/bathroom.jpg'
 import BATHROOM2_JPG from '../../assets/images/redBrick/bathroom2.jpg'
 
 export const galleryRedBrick = {
+  proto: Gallery,
   childProto: image,
   ...[
     { style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + BEDROOM_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + BEDROOM2_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + KITCHEN_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + BATHROOM_JPG + ')' } },
-    { style: { backgroundImage: 'url(' + BATHROOM2_JPG + ')' } }
+    { style: { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + BEDROOM_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + BEDROOM2_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + KITCHEN_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + BATHROOM_JPG + ')', display: 'none' } },
+    { style: { backgroundImage: 'url(' + BATHROOM2_JPG + ')', display: 'none' } }
   ]
 }

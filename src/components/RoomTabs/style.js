@@ -6,7 +6,7 @@ export const styleParagraph = {
   minWidth: `${400 / 16}em`,
   maxWidth: `${600 / 16}em`,
   transition: 'opacity .3s ease-in-out',
-  transitionDelay: '.5s',
+  transitionDelay: '.6s',
   lineHeight: `${23 / 16}em`,
   letterSpacing: '1px',
   fontWeight: '300'

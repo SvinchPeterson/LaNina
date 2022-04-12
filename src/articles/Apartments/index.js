@@ -3,11 +3,8 @@ import { Box } from '@symbo.ls/symbols'
 
 import {
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
-  roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetroxw, roomRetro
+  roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro
 } from '../../components'
-
-// import LEFT_ARROW from '../../assets/icons/left-arrowCream.png'
-// import RIGHT_ARROW from '../../assets/icons/right-arrowCream.png'
 
 import style, { styleHeader, styleRooms } from './style'
 
@@ -38,9 +35,6 @@ const rooms = {
   tag: 'section',
   proto: Box,
   style: styleRooms,
-  props: {
-    // position: 'relative'
-  },
   ...[
     roomBallerina,
     roomRedBrick,

@@ -10,50 +10,49 @@ import {
 
 const Room = {
   proto: Box,
+  style: { },
+  props: {
+    position: 'relative'
+  },
   class: {
     show: (element, state) => state.activeTab === element.key
-      ? { minHeight: '800px', border: '5px solid green' }
-      : { minHeight: 0 }
+      ? { height: `${700 / 16}em`, transition: 'all 1s ease-in-out', opacity: 1 }
+      : { height: 0, opacity: 0 }
   },
 
-  gallery: {}
-  // RoomOffers,
+  gallery: {},
+  RoomOffers
   // navButtons
 }
 
 export const roomBallerina = {
   proto: Room,
   attr: { id: 'roomBallerina' },
-  gallery: { proto: galleryBallerina },
-  style: { background: 'red' }
+  gallery: { proto: galleryBallerina }
 }
 
 export const roomRedBrick = {
   proto: Room,
   attr: { id: 'roomRedBrick' },
-  gallery: { proto: galleryRedBrick },
-  style: { background: 'blue' }
+  gallery: { proto: galleryRedBrick }
 }
 
 export const roomYellowCouch = {
   proto: Room,
   attr: { id: 'roomYellowCouch' },
-  gallery: { proto: galleryYellowCouch },
-  style: { background: 'green' }
+  gallery: { proto: galleryYellowCouch }
 }
 
 export const roomGreenForest = {
   proto: Room,
   attr: { id: 'roomGreenForest' },
-  gallery: { proto: galleryGreenForest },
-  style: { background: 'yellow' }
+  gallery: { proto: galleryGreenForest }
 }
 
 export const roomRetro = {
   proto: Room,
   attr: { id: 'roomRetro' },
-  gallery: { proto: galleryRetro },
-  style: { background: 'orange' }
+  gallery: { proto: galleryRetro }
 }
 
 // import { Block, Button, Img, Flex } from '@symbo.ls/symbols'
