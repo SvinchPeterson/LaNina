@@ -19,6 +19,5 @@ export const galleryRedBrick = {
     { style: { backgroundImage: 'url(' + KITCHEN_JPG + ')' } },
     { style: { backgroundImage: 'url(' + BATHROOM_JPG + ')' } },
     { style: { backgroundImage: 'url(' + BATHROOM2_JPG + ')' } }
-
   ]
 }

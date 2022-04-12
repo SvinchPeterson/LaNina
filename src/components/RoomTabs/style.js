@@ -36,6 +36,7 @@ export const styleRoomTab = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   zIndex: 1,
+  textDecoration: 'none',
   '&:hover': { flex: 6 },
   '&:hover > p': { opacity: 1 },
   '&:not(:hover) > p': {

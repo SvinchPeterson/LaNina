@@ -16,6 +16,8 @@ import SOFA_PNG from '../../assets/icons/sofa.png'
 import LEAF_PNG from '../../assets/icons/leaf.png'
 import VINYL_PNG from '../../assets/icons/vinyl.png'
 
+import { minHeight } from '../../animations'
+
 import { styleRoomTab, styleParagraph, styleBook } from './style'
 
 const book = {
@@ -55,7 +57,13 @@ const roomTab = {
   on: {
     click: (event, element, state) => {
       state.update({ activeTab: element.key })
-      element.parent.parent.parent.rooms.update({ style: { minHeight: `${800 / 16}em`, borderTop: '10px solid rgba(168, 98, 63, 1)' } })
+      element.parent.parent.parent.rooms.update({
+        style: {
+          minHeight: '700px',
+          border: '5px solid green',
+          transition: 'all 3s ease-in-out'
+        }
+      })
     }
   },
   class: {
@@ -104,10 +112,11 @@ export const tabBallerina = {
     show: (element, state) => state.activeTab === element.key
       ? {
         flex: 6,
-        // backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')',
+        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')',
         backgroundAttachment: 'fixed'
       } : {}
   },
+  props: { href: '#roomBallerina' },
   h3: { props: { text: 'ballerina' } },
   p: { proto: ballerina },
   book: {
@@ -121,6 +130,7 @@ export const tabBallerina = {
 
 export const tabRedBrick = {
   proto: roomTab,
+  props: { href: '#roomRedBrick' },
   style: {
     backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + REDBRICK_JPG + ')',
     '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')' }
@@ -146,6 +156,7 @@ export const tabRedBrick = {
 
 export const tabYellowCouch = {
   proto: roomTab,
+  props: { href: '#roomYellowCouch' },
   style: {
     backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + YELLOWCOUCH_JPG + ')',
     '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + YELLOWCOUCH_JPG + ')' }
@@ -171,6 +182,7 @@ export const tabYellowCouch = {
 
 export const tabGreenForest = {
   proto: roomTab,
+  props: { href: '#roomGreenForest' },
   style: {
     backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + GREENFOREST_JPG + ')',
     '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + GREENFOREST_JPG + ')' }
@@ -196,6 +208,7 @@ export const tabGreenForest = {
 
 export const tabRetro = {
   proto: roomTab,
+  props: { href: '#roomRetro' },
   style: {
     backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + RETRO_JPG + ')',
     '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + RETRO_JPG + ')' }

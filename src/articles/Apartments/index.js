@@ -3,51 +3,13 @@ import { Box } from '@symbo.ls/symbols'
 
 import {
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
-  roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetroxw
+  roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetroxw, roomRetro
 } from '../../components'
 
 // import LEFT_ARROW from '../../assets/icons/left-arrowCream.png'
 // import RIGHT_ARROW from '../../assets/icons/right-arrowCream.png'
 
-import style, { styleHeader } from './style'
-
-// const navButtons = {
-//   tag: 'nav',
-//   proto: Box,
-//   class: [styleNavButtons],
-//   props: {
-//     flexAlign: 'center space-between',
-//     gap: 'A'
-//   },
-//   childProto: {
-//     tag: 'button',
-//     proto: Box,
-//     props: {
-//       padding: 'Y'
-//     },
-//     icon: {
-//       proto: [Img, Box],
-//       props: { boxSize: 'B' }
-
-//     }
-//   },
-//   ...[
-//     {
-//       style: {
-//         borderTopLeftRadius: '50px',
-//         borderBottomLeftRadius: '50px'
-//       },
-//       icon: { props: { src: LEFT_ARROW } }
-//     },
-//     {
-//       style: {
-//         borderTopRightRadius: '50px',
-//         borderBottomRightRadius: '50px'
-//       },
-//       icon: { props: { src: RIGHT_ARROW } }
-//     }
-//   ]
-// }
+import style, { styleHeader, styleRooms } from './style'
 
 const roomsTabs = {
   tag: 'header',
@@ -75,7 +37,17 @@ const roomsTabs = {
 const rooms = {
   tag: 'section',
   proto: Box,
-  roomBallerina
+  style: styleRooms,
+  props: {
+    // position: 'relative'
+  },
+  ...[
+    roomBallerina,
+    roomRedBrick,
+    roomYellowCouch,
+    roomGreenForest,
+    roomRetro
+  ]
 }
 
 export default {

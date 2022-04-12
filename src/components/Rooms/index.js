@@ -10,6 +10,12 @@ import {
 
 const Room = {
   proto: Box,
+  class: {
+    show: (element, state) => state.activeTab === element.key
+      ? { minHeight: '800px', border: '5px solid green' }
+      : { minHeight: 0 }
+  },
+
   gallery: {}
   // RoomOffers,
   // navButtons
@@ -17,27 +23,37 @@ const Room = {
 
 export const roomBallerina = {
   proto: Room,
-  gallery: { proto: galleryBallerina }
+  attr: { id: 'roomBallerina' },
+  gallery: { proto: galleryBallerina },
+  style: { background: 'red' }
 }
 
 export const roomRedBrick = {
   proto: Room,
-  gallery: { proto: galleryRedBrick }
+  attr: { id: 'roomRedBrick' },
+  gallery: { proto: galleryRedBrick },
+  style: { background: 'blue' }
 }
 
 export const roomYellowCouch = {
   proto: Room,
-  gallery: { proto: galleryYellowCouch }
+  attr: { id: 'roomYellowCouch' },
+  gallery: { proto: galleryYellowCouch },
+  style: { background: 'green' }
 }
 
 export const roomGreenForest = {
   proto: Room,
-  gallery: { proto: galleryGreenForest }
+  attr: { id: 'roomGreenForest' },
+  gallery: { proto: galleryGreenForest },
+  style: { background: 'yellow' }
 }
 
 export const roomRetro = {
   proto: Room,
-  gallery: { proto: galleryRetro }
+  attr: { id: 'roomRetro' },
+  gallery: { proto: galleryRetro },
+  style: { background: 'orange' }
 }
 
 // import { Block, Button, Img, Flex } from '@symbo.ls/symbols'

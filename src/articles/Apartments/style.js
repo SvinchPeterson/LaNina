@@ -1,6 +1,7 @@
 'use strict'
 
 import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
+
 export const styleHeader = {
   backgroundImage: 'url(' + ORNAMENT_PNG + ')',
   backgroundSize: 'cover',
@@ -12,25 +13,30 @@ export const styleHeader = {
   }
 }
 
-export const styleNavButtons = {
-  '> button': {
-    cursor: 'pointer',
-    background: 'transparent',
-    border: 'none',
-    opacity: '.85',
-    '&:hover': { opacity: 1 }
-    // border: '3px solid rgba(168, 98, 63, 1)'
-    // background: 'rgba(244, 233, 217, .65)'
-    // background: 'rgba(168, 98, 63, 1)'
-  }
-}
-export default {
-  border: '5px solid red',
-  '> section': {
-    minHeight: '700px',
-    border: '10px solid green'
+export const styleRooms = {
+  border: '10px solid green',
+  // flex: 1,
+  // minHeight: `${700 / 16}em`,
+  '> div': {
+    // border: '10px solid orange'
+    transition: 'all 3s ease-in-out'
+  },
+  '> div > div': {
+    // border: '10px solid black',
+    flex: 1,
+    position: 'relative'
+  },
+  '> div > div > span': {
+    // border: '10px solid yellow',
+    position: 'absolute',
+    width: '100%',
+    height: '100%'
 
   }
+}
+
+export default {
+  border: '5px solid red'
 }
 
 // import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
