@@ -32,22 +32,3 @@ export const minHeight = keyframes`
     border: 10px solid green;
   }
 `
-
-export const roomOffer = keyframes`
-  from {
-    display: none;
-  }
-  to {
-    display: grid;
-  }
-`
-
-export const roomOffer2 = keyframes`
-  from {
-    display: grid;
-
-  }
-  to {
-    display: none;
-  }
-`
