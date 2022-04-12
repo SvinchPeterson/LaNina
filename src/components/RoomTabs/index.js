@@ -16,8 +16,6 @@ import SOFA_PNG from '../../assets/icons/sofa.png'
 import LEAF_PNG from '../../assets/icons/leaf.png'
 import VINYL_PNG from '../../assets/icons/vinyl.png'
 
-import { minHeight } from '../../animations'
-
 import { styleRoomTab, styleParagraph, styleBook } from './style'
 
 const book = {
@@ -62,7 +60,6 @@ const roomTab = {
           minHeight: `${700 / 16}em`,
           opacity: 1,
           borderTop: '5px solid rgba(168, 98, 63, 1)'
-          // border: '10px solid green'
         }
       })
     }

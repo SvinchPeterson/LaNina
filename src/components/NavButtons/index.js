@@ -1,6 +1,6 @@
 'use strict'
 
-import { Box, Button, Img } from '@symbo.ls/symbols'
+import { Box, Img } from '@symbo.ls/symbols'
 
 import UP_ARROW_PNG from '../../assets/icons/up-arrow.png'
 import DOWN_ARROW_PNG from '../../assets/icons/down-arrow.png'
@@ -26,8 +26,7 @@ export const navButtons = {
       padding: 'Z2 Z'
     },
     style: {
-      // background: 'radial-gradient(rgba(244, 233, 217, .55), rgba(168, 98, 63, .45))',
-      background: 'radial-gradient(rgba(244, 233, 217, .15), rgba(168, 98, 63, .45))',
+      background: 'radial-gradient(rgba(244, 233, 217, .45), rgba(168, 98, 63, .45))',
       backdropFilter: 'blur(10px)',
       border: '1.5px solid rgba(168, 98, 63, 1)',
       '&:hover': { background: 'radial-gradient(rgba(244, 233, 217, .35), rgba(168, 98, 63, .45))' },
