@@ -26,19 +26,19 @@ const book = {
     flexFlow: 'row',
     bottom: '10%',
     left: '50%',
-    padding: 'Z1 A1',
+    padding: 'Z A1',
     gap: 'Y'
   },
   icon: {
     proto: [Img, Box],
-    props: { boxSize: 'A1 A1' }
+    props: { boxSize: 'A A' }
   },
   span: {
     proto: [Text, Box],
     props: {
       text: 'book',
       color: 'cream',
-      size: 'B'
+      size: 'A'
     }
   }
 }

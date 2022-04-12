@@ -6,7 +6,7 @@ export const styleParagraph = {
   minWidth: `${400 / 16}em`,
   maxWidth: `${600 / 16}em`,
   transition: 'opacity .3s ease-in-out',
-  transitionDelay: '.7s',
+  transitionDelay: '.5s',
   lineHeight: `${23 / 16}em`,
   letterSpacing: '1px',
   fontWeight: '300'
@@ -21,7 +21,7 @@ export const styleBook = {
   borderRadius: '50px',
   border: '1.5px solid rgba(168, 98, 63, 1)',
   letterSpacing: '1px',
-  background: 'radial-gradient( rgba(168, 98, 63, .05), rgba(168, 98, 63, .15))',
+  background: 'radial-gradient( rgba(168, 98, 63, .2), rgba(168, 98, 63, .15))',
   opacity: '.9',
   textDecoration: 'none',
   '&:hover': { opacity: 1 }
@@ -31,7 +31,7 @@ export const styleRoomTab = {
   minHeight: `${500 / 16}em`,
   cursor: 'pointer',
   boxSize: 'border-box',
-  transition: 'all 1s ease-in-out',
+  transition: 'all .7s ease-in-out',
   overflow: 'hidden',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
@@ -47,7 +47,8 @@ export const styleRoomTab = {
     textTransform: 'uppercase',
     zIndex: 10,
     pointerEvents: 'none',
-    transition: 'letter-spacing 1s ease-in-out'
+    transition: 'letter-spacing .7s ease-in-out',
+    whiteSpace: 'nowrap'
   }
 }
 

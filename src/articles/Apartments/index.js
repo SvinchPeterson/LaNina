@@ -2,7 +2,9 @@
 import { Box } from '@symbo.ls/symbols'
 
 import {
-  tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro, galleryBallerina, galleryBallerinaa } from '../../components'
+  tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
+  galleryBallerina
+} from '../../components'
 
 // import LEFT_ARROW from '../../assets/icons/left-arrowCream.png'
 // import RIGHT_ARROW from '../../assets/icons/right-arrowCream.png'
@@ -47,7 +49,7 @@ import style, { styleHeader } from './style'
 //   ]
 // }
 
-const tabsHeader = {
+const roomsTabs = {
   tag: 'header',
   proto: Box,
   class: [styleHeader],
@@ -70,6 +72,12 @@ const tabsHeader = {
   }
 }
 
+const rooms = {
+  tag: 'section',
+  proto: Box,
+  galleryBallerina
+}
+
 export default {
   style,
   proto: Box,
@@ -79,16 +87,9 @@ export default {
   },
   attr: { id: 'apartments' },
 
-  tabsHeader,
-  rooms: {
-    tag: 'section',
-    proto: Box,
-    style: {
-      border: '3px solid rgba(168, 98, 63, 1)',
-      position: 'relative'
-    },
-    ...[galleryBallerinaa]
-  }
+  roomsTabs,
+  rooms
+
 }
 // import { Block } from '@symbo.ls/symbols'
 

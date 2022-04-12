@@ -5,11 +5,9 @@ import RoomOffers from './RoomOffers'
 import Menu from './Menu'
 
 import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs'
+import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from './Gallery/index'
 
-import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, galleryGreenForest } from './Gallery'
-
-import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
-import { galleryBallerinaa } from './NewGallery/image'
+// import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
 
 export {
   Logo,
@@ -24,18 +22,11 @@ export {
   tabGreenForest,
   tabRetro,
 
-  galleryBallerina,
-  galleryRedBrick,
-  galleryYellowCouch,
-  galleryRetro,
-  galleryGreenForest,
+  galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro
 
-  roomBallerina,
-  roomRedBrick,
-  roomYellowCouch,
-  roomRetro,
-  roomGreenForest,
-
-  galleryBallerinaa
-
+  // roomBallerina,
+  // roomRedBrick,
+  // roomYellowCouch,
+  // roomRetro,
+  // roomGreenForest
 }

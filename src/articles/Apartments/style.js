@@ -25,6 +25,12 @@ export const styleNavButtons = {
   }
 }
 export default {
+  border: '5px solid red',
+  '> section': {
+    minHeight: '700px',
+    border: '10px solid green'
+
+  }
 }
 
 // import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
