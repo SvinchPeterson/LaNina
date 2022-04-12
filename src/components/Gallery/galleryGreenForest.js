@@ -13,15 +13,18 @@ import KITCHEN3_JPG from '../../assets/images/greenForest/kitchen3.jpg'
 import HOLL_JPG from '../../assets/images/greenForest/holl.jpg'
 import CROSLEY_JPG from '../../assets/images/greenForest/crosley.jpg'
 
-const livingroom = { proto: image, style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' } }
-const livingroom2 = { proto: image, style: { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')' } }
-const meama = { proto: image, style: { backgroundImage: 'url(' + MEAMA_JPG + ')' } }
-const bedroom = { proto: image, style: { backgroundImage: 'url(' + BEDROOM_JPG + ')' } }
-const kitchen = { proto: image, style: { backgroundImage: 'url(' + KITCHEN_JPG + ')' } }
-const kitchen2 = { proto: image, style: { backgroundImage: 'url(' + KITCHEN2_JPG + ')' } }
-const kitchen3 = { proto: image, style: { backgroundImage: 'url(' + KITCHEN3_JPG + ')' } }
-const bathroom = { proto: image, style: { backgroundImage: 'url(' + BATHROOM_JPG + ')' } }
-const holl = { proto: image, style: { backgroundImage: 'url(' + HOLL_JPG + ')' } }
-const crosley = { proto: image, style: { backgroundImage: 'url(' + CROSLEY_JPG + ')' } }
-
-export const galleryGreenForest = [livingroom, livingroom2, meama, bedroom, kitchen, kitchen2, kitchen3, bathroom, holl, crosley]
+export const galleryGreenForest = {
+  childProto: image,
+  ...[
+    { style: { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + MEAMA_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + BEDROOM_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + KITCHEN_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + KITCHEN2_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + KITCHEN3_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + BATHROOM_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + HOLL_JPG + ')' } },
+    { style: { backgroundImage: 'url(' + CROSLEY_JPG + ')' } }
+  ]
+}

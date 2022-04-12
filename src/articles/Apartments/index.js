@@ -3,7 +3,7 @@ import { Box } from '@symbo.ls/symbols'
 
 import {
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
-  galleryBallerina
+  roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetroxw
 } from '../../components'
 
 // import LEFT_ARROW from '../../assets/icons/left-arrowCream.png'
@@ -75,7 +75,7 @@ const roomsTabs = {
 const rooms = {
   tag: 'section',
   proto: Box,
-  galleryBallerina
+  roomBallerina
 }
 
 export default {

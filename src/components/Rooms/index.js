@@ -1,5 +1,44 @@
 'use strict'
+
 import { Box } from '@symbo.ls/symbols'
+
+import {
+  galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
+  RoomOffers,
+  navButtons
+} from '..'
+
+const Room = {
+  proto: Box,
+  gallery: {}
+  // RoomOffers,
+  // navButtons
+}
+
+export const roomBallerina = {
+  proto: Room,
+  gallery: { proto: galleryBallerina }
+}
+
+export const roomRedBrick = {
+  proto: Room,
+  gallery: { proto: galleryRedBrick }
+}
+
+export const roomYellowCouch = {
+  proto: Room,
+  gallery: { proto: galleryYellowCouch }
+}
+
+export const roomGreenForest = {
+  proto: Room,
+  gallery: { proto: galleryGreenForest }
+}
+
+export const roomRetro = {
+  proto: Room,
+  gallery: { proto: galleryRetro }
+}
 
 // import { Block, Button, Img, Flex } from '@symbo.ls/symbols'
 

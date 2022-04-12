@@ -6,8 +6,9 @@ import Menu from './Menu'
 
 import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs'
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from './Gallery/index'
+import { navButtons } from './NavButtons'
 
-// import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
+import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
 
 export {
   Logo,
@@ -16,17 +17,11 @@ export {
   RoomOffers,
   Menu,
 
-  tabBallerina,
-  tabRedBrick,
-  tabYellowCouch,
-  tabGreenForest,
-  tabRetro,
+  tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
 
-  galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro
+  galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
 
-  // roomBallerina,
-  // roomRedBrick,
-  // roomYellowCouch,
-  // roomRetro,
-  // roomGreenForest
+  navButtons,
+
+  roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest
 }
