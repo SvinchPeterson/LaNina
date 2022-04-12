@@ -26,6 +26,6 @@ export const styleOffers = {
 
 export default {
   transition: 'all 1s ease-in-out',
-  minWidth: `${500 / 16}em`
+  minWidth: `${550 / 16}em`
 
 }

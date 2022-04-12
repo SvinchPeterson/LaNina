@@ -20,8 +20,8 @@ const Room = {
   },
 
   gallery: {},
-  RoomOffers
-  // navButtons
+  RoomOffers,
+  navButtons
 }
 
 export const roomBallerina = {
