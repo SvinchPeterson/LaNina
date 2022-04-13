@@ -3,7 +3,7 @@ import { Block, Img, Text } from '@symbo.ls/symbols'
 
 import { bbSololaki, stayText } from '../../texts'
 
-import LUGGAGE_PNG from '../../assets/icons/luggage.PNG'
+import LUGGAGE_PNG from '../../assets/icons/luggage.png'
 
 import style, { styleResidenceOrigin, styleEntrence } from './style'
 
