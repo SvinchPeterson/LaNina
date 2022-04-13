@@ -50,7 +50,7 @@ export const styleHeading = {
     fontSize: `${50 / 16}em`,
     color: 'rgba(244, 233, 217, 1)'
   },
-  '@media only screen and (max-height: 1110px) and  (max-width: 1225px)': {
+  '@media only screen and (max-height: 1110px) and (max-width: 1225px)': {
     fontSize: `${30 / 16}em`,
     letterSpacing: '8px'
   },
