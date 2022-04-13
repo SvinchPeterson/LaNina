@@ -9,6 +9,7 @@ export default {
     flexAlign: 'center center',
     margin: '200px 0'
   },
+  attr: { id: 'wine' },
   style: {
     minHeight: `${700 / 16}em`,
     backgroundImage: 'url(' + WINE_JPG + ')',

@@ -22,5 +22,6 @@ export default {
   boxSizing: 'border-box',
   background: 'radial-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9))',
   backdropFilter: 'blur(10px)',
-  transition: 'opacity .5s ease-in-out'
+  transition: 'opacity .5s ease-in-out',
+  zIndex: '400'
 }
