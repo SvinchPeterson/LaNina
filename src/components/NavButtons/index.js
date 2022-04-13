@@ -52,9 +52,13 @@ export const navButtons = {
         click: (event, element, state) => {
           const { activeImage } = state
           state.update({
-            activeImage: activeImage > (element.parent.parent.gallery.length - 2) ? 0 : activeImage + 1
-
+            activeImage: activeImage > (element.parent.parent.gallery.length - 1) ? 0 : activeImage + 1
           })
+          if (activeImage === element.parent.gallery.length) {
+            state.update({
+              activeImage: activeImage === element.parent.gallery.length - 2
+            })
+          }
         }
       }
       // on: {
@@ -63,11 +67,11 @@ export const navButtons = {
       //     state.update({
       //       activeImage: activeImage > (element.parent.gallery.length - 2) ? 0 : activeImage + 1
       //     })
-      //     // if (activeImage === element.parent.gallery.length) {
-      //     //   state.update({
-      //     //     activeImage: activeImage === element.parent.gallery.length - 2
-      //     //   })
-      //     // }
+      // if (activeImage === element.parent.gallery.length) {
+      //   state.update({
+      //     activeImage: activeImage === element.parent.gallery.length - 2
+      //   })
+      // }
       //   }
       // }
     },
@@ -82,6 +86,20 @@ export const navButtons = {
         props: {
           src: DOWN_ARROW_PNG,
           boxSize: 'C '
+        }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          const { activeImage } = state
+          state.update({
+            activeImage: activeImage === (element.parent.parent.gallery.length + 1) ? 0 : activeImage + 1
+          })
+          if (activeImage === element.parent.gallery.length) {
+            state.update({
+              activeImage: activeImage === element.parent.gallery.length - 2
+            })
+          }
         }
       }
     }
