@@ -16,7 +16,11 @@ export default {
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+    '@media only screen and (max-width: 1225px)': {
+      backgroundSize: 'cover',
+      backgroundAttachment: 'initial'
+    }
   },
   p: {
     proto: Box,
@@ -25,9 +29,14 @@ export default {
     },
     style: {
       background: 'rgba(244, 233, 217, 1)',
-      fontSize: `${15 / 16}em`,
       color: 'rgba(0, 0, 0, .35)',
-      flex: 1
+      flex: 1,
+      '@media only screen and (max-width: 1225px)': {
+        background: 'rgba(244, 233, 217, .55)',
+        backdropFilter: 'blur(5px)',
+        color: 'rgba(0, 0, 0, .55)',
+        fontSize: `${22 / 16}em`
+      }
     },
 
     span: {
@@ -39,7 +48,11 @@ export default {
         margin: '0 auto',
         lineHeight: '23px',
         letterSpacing: '.7px',
-        fontWeight: 300
+        fontWeight: 300,
+        '@media only screen and (max-width: 1225px)': {
+          fontWeight: 500,
+          lineHeight: '30px'
+        }
       }
     }
   }

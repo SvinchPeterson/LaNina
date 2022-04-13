@@ -14,6 +14,7 @@ export const styleOffers = {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   paddingBottom: `${100 / 16}em`,
+  rowGap: `${0 / 16}em`,
   columnGap: `${60 / 16}em`,
   fontWeight: '400',
   letterSpacing: '.5px',
@@ -27,5 +28,6 @@ export const styleOffers = {
 export default {
   transition: 'all 1s ease-in-out',
   minWidth: `${550 / 16}em`
+  // border: '5px solid red'
 
 }

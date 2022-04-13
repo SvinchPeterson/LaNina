@@ -28,7 +28,6 @@ export const styleBook = {
 }
 export const styleRoomTab = {
   flex: 1,
-  minHeight: `${500 / 16}em`,
   cursor: 'pointer',
   boxSize: 'border-box',
   transition: 'all .7s ease-in-out',
@@ -37,13 +36,21 @@ export const styleRoomTab = {
   backgroundPosition: 'center',
   zIndex: 1,
   textDecoration: 'none',
-  '&:hover': { flex: 6 },
-  '&:hover > p': { opacity: 1 },
-  '&:not(:hover) > p': {
-    transitionDelay: '0s',
-    transition: 'opacity 0s ease-in-out'
+  '@media only screen and (min-width: 1225px)': {
+    minHeight: `${500 / 16}em`,
+    '&:hover': { flex: 6 },
+    '&:hover > p': { opacity: 1 },
+    '&:not(:hover) > p': {
+      transitionDelay: '0s',
+      transition: 'opacity 0s ease-in-out'
+    },
+    '&:hover > h3': { letterSpacing: '1px' }
   },
-  '&:hover > h3': { letterSpacing: '1px' },
+  '@media only screen and (max-width: 1225px)': {
+    minWidth: `${700 / 16}em`,
+    height: `${500 / 16}em`
+
+  },
   '> h3': {
     textTransform: 'uppercase',
     zIndex: 10,

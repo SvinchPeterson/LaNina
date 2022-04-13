@@ -13,7 +13,10 @@ export const image = {
   tag: 'span',
   style: {
     backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+    '@media only screen and (min-width: 1225px)': {
+      backgroundAttachment: 'fixed'
+
+    }
   }
 }

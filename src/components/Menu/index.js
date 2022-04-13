@@ -28,6 +28,7 @@ const sectionLinks = {
       show: (element, state) => state.activeMenuItem === element.key
         ? { color: 'rgba(168, 98, 63, 1)' }
         : { color: 'rgba(244, 233, 217, 1)' }
+      // show2: (element, state) => state.activeMenu === false ? { color: 'rgba(244, 233, 217, 1)' } : {}
     }
   },
   ...[
@@ -83,7 +84,7 @@ export default {
     boxSize: '100% 100%',
     position: 'fixed',
     top: '0',
-    left: '0',
+    left: '0'
     // flexFlow: 'column',
     // flexAlign: 'flex-end center',
     // gap: 'E'

@@ -6,7 +6,7 @@ import Menu from './Menu'
 
 import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs'
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from './Gallery/index'
-import { navButtons } from './NavButtons'
+import { navButtons, navButtons2 } from './NavButtons'
 
 import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
 
@@ -22,6 +22,7 @@ export {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
 
   navButtons,
+  navButtons2,
 
   roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest
 }

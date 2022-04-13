@@ -111,7 +111,10 @@ export const tabBallerina = {
       ? {
         flex: 6,
         backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        '@media only screen and (max-width: 1225px)': {
+          backgroundAttachment: 'initial'
+        }
       } : {}
   },
   props: { href: '#roomBallerina' },
@@ -138,7 +141,10 @@ export const tabRedBrick = {
       ? {
         flex: 6,
         backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        '@media only screen and (max-width: 1225px)': {
+          backgroundAttachment: 'initial'
+        }
       } : {}
   },
   h3: { props: { text: 'red brick' } },
@@ -164,7 +170,10 @@ export const tabYellowCouch = {
       ? {
         flex: 6,
         backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + YELLOWCOUCH_JPG + ')',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        '@media only screen and (max-width: 1225px)': {
+          backgroundAttachment: 'initial'
+        }
       } : {}
   },
   h3: { props: { text: 'yellow couch' } },
@@ -190,7 +199,10 @@ export const tabGreenForest = {
       ? {
         flex: 6,
         backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + GREENFOREST_JPG + ')',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        '@media only screen and (max-width: 1225px)': {
+          backgroundAttachment: 'initial'
+        }
       } : {}
   },
   h3: { props: { text: 'green forest' } },
@@ -216,7 +228,10 @@ export const tabRetro = {
       ? {
         flex: 6,
         backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + RETRO_JPG + ')',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        '@media only screen and (max-width: 1225px)': {
+          backgroundAttachment: 'initial'
+        }
       } : {}
   },
   h3: { props: { text: 'retro' } },

@@ -37,7 +37,7 @@ const entrenceItem = {
     style: {
       borderRadius: '100%',
       '@media only screen and (max-width: 1225px)': {
-        background: 'rgba(0, 0, 0, .75)'
+        background: 'rgba(0, 0, 0, .55)'
       }
     }
   },
@@ -50,7 +50,7 @@ const entrenceItem = {
   style: {
     '@media only screen and (max-width: 1225px)': {
       '> p': {
-        color: 'rgba(0, 0, 0, .75)',
+        color: 'rgba(0, 0, 0, .55)',
         fontWeight: 500
       }
     }

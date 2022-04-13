@@ -3,7 +3,8 @@ import { Box } from '@symbo.ls/symbols'
 
 import {
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
-  roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro
+  roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro,
+  navButtons2
 } from '../../components'
 
 import style, { styleHeader, styleRooms } from './style'
@@ -13,12 +14,17 @@ const roomsTabs = {
   proto: Box,
   class: [styleHeader],
   props: {
+    position: 'relative',
     flexFlow: 'column',
-    flexAlign: 'center center',
-    // gap: 'B',
-    padding: 'D 0 E 0'
+    flexAlign: 'center center'
+    // gap: 'B'
+  },
+  buttons: {
+    proto: navButtons2
+
   },
   tabsContainer: {
+    tag: 'nav',
     proto: Box,
     props: {
       flexAlign: 'flex-start flex-start',
@@ -48,7 +54,7 @@ export default {
   style,
   proto: Box,
   props: {
-    padding: 'E 0',
+    padding: '0 0',
     flexFlow: 'column',
     gap: '0'
   },

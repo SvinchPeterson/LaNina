@@ -26,7 +26,9 @@ const menuIcon = {
   },
   on: {
     click: (event, element, state) => {
-      state.activeMenu ? state.update({ activeMenu: false }) : state.update({ activeMenu: true })
+      state.activeMenu
+        ? state.update({ activeMenu: false, activeMenuItem: null })
+        : state.update({ activeMenu: true })
     }
   },
 
