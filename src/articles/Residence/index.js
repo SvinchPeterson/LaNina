@@ -34,12 +34,26 @@ const entrenceItem = {
       boxSize: 'X1 X1',
       background: 'black .35'
     },
-    style: { borderRadius: '100%' }
+    style: {
+      borderRadius: '100%',
+      '@media only screen and (max-width: 1225px)': {
+        background: 'rgba(0, 0, 0, .75)'
+      }
+    }
   },
   p: {
     proto: [Text, Box],
     props: { color: 'black .35' },
     style: { letterSpacing: '1px', fontWeight: 300 }
+  },
+
+  style: {
+    '@media only screen and (max-width: 1225px)': {
+      '> p': {
+        color: 'rgba(0, 0, 0, .75)',
+        fontWeight: 500
+      }
+    }
   }
 }
 
@@ -91,7 +105,10 @@ const entrence = {
         maxWidth: `${400 / 16}em`,
         letterSpacing: '1px',
         lineHeight: '23px',
-        fontWeight: 300
+        fontWeight: 300,
+        '@media only screen and (max-width: 1225px)': {
+          color: '#EC8551'
+        }
       }
     },
     stay: {
@@ -103,7 +120,10 @@ const entrence = {
       },
       style: {
         fontWeight: 300,
-        letterSpacing: '1px'
+        letterSpacing: '1px',
+        '@media only screen and (max-width: 1225px)': {
+          color: '#EC8551'
+        }
       }
     }
   }
