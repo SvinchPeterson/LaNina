@@ -4,7 +4,7 @@ import { Box, Text, Img, Link } from '@symbo.ls/symbols'
 
 import { Header, Menu } from '../../components'
 
-import { Residence, Apartments, Wine } from '../../articles'
+import { Residence, Apartments, Wine, Location } from '../../articles'
 
 import LOGO_PNG from '../../assets/icons/logo.png'
 
@@ -114,7 +114,8 @@ export default {
 
   Residence,
   Apartments,
-  Wine
+  Wine,
+  Location
 }
 
 // import { Residence, Apartments, Location, Wine } from '../../articles'
