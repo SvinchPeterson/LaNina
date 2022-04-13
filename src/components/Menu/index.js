@@ -11,11 +11,6 @@ const sectionLinks = {
   tag: 'nav',
   proto: Box,
   class: [styleSectionLinks],
-  props: {
-    flexFlow: 'row',
-    gap: 'D',
-    padding: '0 E 0 0'
-  },
 
   childProto: {
     proto: [Link, Text],
@@ -49,8 +44,7 @@ const socialMedia = {
   class: [styleSocialMedia],
   props: {
     flexFlow: 'row',
-    gap: 'D',
-    padding: '0 F 0 0'
+    gap: 'D'
   },
 
   childProto: {
@@ -90,9 +84,9 @@ export default {
     position: 'fixed',
     top: '0',
     left: '0',
-    flexFlow: 'column',
-    flexAlign: 'flex-end center',
-    gap: 'E'
+    // flexFlow: 'column',
+    // flexAlign: 'flex-end center',
+    // gap: 'E'
   },
 
   sectionLinks,
