@@ -60,19 +60,19 @@
 //       props: { src: UP_ARROW }
 //     },
 
-//     on: {
-//       click: (event, element, state) => {
-//         const { activeImage } = state
-//         state.update({
-//           activeImage: activeImage > (element.parent.gallery.length - 2) ? 0 : activeImage + 1
-//         })
-//         // if (activeImage === element.parent.gallery.length) {
-//         //   state.update({
-//         //     activeImage: activeImage === element.parent.gallery.length - 2
-//         //   })
-//         // }
-//       }
-//     }
+// on: {
+//   click: (event, element, state) => {
+//     const { activeImage } = state
+//     state.update({
+//       activeImage: activeImage > (element.parent.gallery.length - 2) ? 0 : activeImage + 1
+//     })
+//     // if (activeImage === element.parent.gallery.length) {
+//     //   state.update({
+//     //     activeImage: activeImage === element.parent.gallery.length - 2
+//     //   })
+//     // }
+//   }
+// }
 //   },
 
 //   downArrow: {
@@ -120,26 +120,26 @@
 //   }
 // }
 
-// // const Room = {
-// //   proto: Block,
-// //   gallery: {
-// //     tag: 'nav',
-// //     style: {
-// //       position: 'relative',
-// //       overflow: 'hidden'
-// //     },
-// //     description: {
-// //       proto: RoomDescription,
-// //       style: {
-// //         transition: 'all 2s ease-in-out',
-// //         transitionDelay: '1s'
-// //       },
-// // class: {
-// //   show: (element, state) => state.active === element.parent.parent.key ? { height: '100%', opacity: 1, left: 0 } : { height: 0, opacity: 0, left: '-100%' }
-// // }
-// //     }
-// //   }
-// // }
+// const Room = {
+//   proto: Block,
+//   gallery: {
+//     tag: 'nav',
+//     style: {
+//       position: 'relative',
+//       overflow: 'hidden'
+//     },
+//     description: {
+//       proto: RoomDescription,
+//       style: {
+//         transition: 'all 2s ease-in-out',
+//         transitionDelay: '1s'
+//       },
+// class: {
+//   show: (element, state) => state.active === element.parent.parent.key ? { height: '100%', opacity: 1, left: 0 } : { height: 0, opacity: 0, left: '-100%' }
+// }
+//     }
+//   }
+// }
 // // export const roomBallerina = {
 // //   proto: Room,
 // //   gallery: {

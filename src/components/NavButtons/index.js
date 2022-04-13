@@ -47,7 +47,29 @@ export const navButtons = {
           src: UP_ARROW_PNG,
           boxSize: 'C '
         }
+      },
+      on: {
+        click: (event, element, state) => {
+          const { activeImage } = state
+          state.update({
+            activeImage: activeImage > (element.parent.parent.gallery.length - 2) ? 0 : activeImage + 1
+
+          })
+        }
       }
+      // on: {
+      //   click: (event, element, state) => {
+      //     const { activeImage } = state
+      //     state.update({
+      //       activeImage: activeImage > (element.parent.gallery.length - 2) ? 0 : activeImage + 1
+      //     })
+      //     // if (activeImage === element.parent.gallery.length) {
+      //     //   state.update({
+      //     //     activeImage: activeImage === element.parent.gallery.length - 2
+      //     //   })
+      //     // }
+      //   }
+      // }
     },
 
     {

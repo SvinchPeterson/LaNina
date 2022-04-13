@@ -18,5 +18,9 @@ export const image = {
       backgroundAttachment: 'fixed'
 
     }
+  },
+
+  class: {
+    show: (element, state) => state.activeImage === parseInt(element.key) ? { display: 'block' } : { display: 'none' }
   }
 }
