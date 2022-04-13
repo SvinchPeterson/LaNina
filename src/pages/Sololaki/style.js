@@ -13,6 +13,17 @@ export const styleBanner = {
   p: {
     fontWeight: '300',
     letterSpacing: `${1.5 / 20}em`
+  },
+
+  '@media only screen and (max-width: 1225px)': {
+    fontSize: `${30 / 16}em`,
+    backgroundAttachment: 'initial',
+    p: {
+      fontWeight: 500,
+      fontSize: `${30 / 30}em`,
+      paddingTop: `${50 / 30}em`,
+      color: '#FFD1BA'
+    }
   }
 }
 

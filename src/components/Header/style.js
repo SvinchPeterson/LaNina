@@ -20,7 +20,12 @@ export const styleCall = {
   cursor: 'pointer',
   '> span': {
     opacity: 0,
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
+    '@media only screen and (max-width: 1225px)': {
+      left: '-200px',
+      top: `${40 / 20}em`
+    }
+
   },
   '&:hover > span': { opacity: 1 }
 }

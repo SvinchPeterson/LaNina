@@ -13,15 +13,27 @@ import style, { styleBanner } from './style'
 const book = {
   proto: [Link, Box],
   style: {
-    borderTopRightRadius: `${80 / 16}em`,
-    borderBottomRightRadius: `${80 / 16}em`,
+    '@media only screen and (min-width: 1225px)': {
+      borderTopRightRadius: `${80 / 16}em`,
+      borderBottomRightRadius: `${80 / 16}em`,
+      top: '43%'
+    },
+    '@media only screen and (max-width: 1225px)': {
+      bottom: 0,
+      left: '50%',
+      transform: 'translate(-50%, 0%)',
+      fontSize: `${30 / 16}em`,
+      padding: `${60 / 30}em ${100 / 30}em ${30 / 30}em ${100 / 30}em`,
+      borderTopRightRadius: `${80 / 16}em`,
+      borderTopLeftRadius: `${80 / 16}em`
+
+    },
     zIndex: 10,
     cursor: 'pointer',
     textDecoration: 'none'
   },
   props: {
     position: 'fixed',
-    top: '43%',
     background: 'green',
     flexFlow: 'column',
     padding: 'B C B A2',
@@ -85,7 +97,7 @@ export const banner = {
     proto: [Text, Box],
     props: {
       text: 'where ordinary, becomes extraordinary',
-      size: 'C',
+      size: 'B',
       color: 'orange2'
     }
   }
