@@ -3,8 +3,6 @@ import { Block, Img, Text } from '@symbo.ls/symbols'
 
 import { bbSololaki, stayText } from '../../texts'
 
-import LUGGAGE_PNG from '../../assets/icons/luggage.png'
-
 import style, { styleResidenceOrigin, styleEntrence } from './style'
 
 const residenceOrigin = {
@@ -87,11 +85,6 @@ const entrence = {
       style: {
         maxWidth: `${500 / 15}em`,
         opacity: '.25'
-      },
-      icon: {
-        proto: Img,
-        props: { src: LUGGAGE_PNG },
-        style: { marginTop: '3px' }
       },
       text: `Luggage dropoff allowed
       for guests' convenience when they have early arrival or late departure`
