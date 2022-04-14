@@ -1,79 +1,127 @@
 'use strict'
 
-import { Block, Flex, Text, Link } from '@symbo.ls/symbols'
-
-import { Residence, Apartments, Location, Wine } from '../../articles'
-import { paddingOut, opacity } from '../../animations'
+import { Box, Text, Img, Link } from '@symbo.ls/symbols'
 
 import { Header, Menu } from '../../components'
 
-import { logoPng } from '../../components/Logo'
+import { Residence, Apartments, Wine, Location } from '../../articles'
 
-import style, { styleBanner, styleBook } from './style'
+import style, { styleBanner } from './style'
 
 const book = {
-  proto: [Block, Link],
-  class: [styleBook],
+  proto: [Link, Box],
+  style: {
+    '@media only screen and (min-width: 1225px)': {
+      borderTopRightRadius: `${80 / 16}em`,
+      borderBottomRightRadius: `${80 / 16}em`,
+      top: '43%'
+    },
+    '@media only screen and (max-width: 1225px)': {
+      bottom: 0,
+      left: '50%',
+      transform: 'translate(-50%, 0%)',
+      fontSize: `${30 / 16}em`,
+      padding: `${60 / 30}em ${100 / 30}em ${30 / 30}em ${100 / 30}em`,
+      borderTopRightRadius: `${80 / 16}em`,
+      borderTopLeftRadius: `${80 / 16}em`
+
+    },
+    zIndex: 10,
+    cursor: 'pointer',
+    textDecoration: 'none'
+  },
   props: {
+    position: 'fixed',
+    background: 'green',
     flexFlow: 'column',
-    flexAlign: 'flex-start flex-start',
+    padding: 'B C B A2',
     href: `https://www.airbnb.com/users/404104381/listings?fbclid=IwAR3RqnCcBkIXwGaJauHmAlgdNYGa9ASOcUMk7ph2i1XBqDG0DqvOMx7XnrM`,
     target: '_blank'
   },
-
-  logo: { proto: logoPng },
-  text: 'ook'
+  image: {
+    proto: [Img, Box],
+    props: {
+      src: LOGO_PNG,
+      boxSize: 'C1'
+    }
+  },
+  ook: {
+    proto: [Text, Box],
+    props: {
+      text: 'ook',
+      size: 'C',
+      color: 'cream'
+    },
+    style: { textTransform: 'uppercase' }
+  }
 }
 
-const banner = {
-  proto: [Block],
-  style: styleBanner,
+export const banner = {
+  proto: Box,
+  class: [styleBanner],
   props: {
-    flexFlow: 'column',
+    boxSize: '100% 100%',
     flexAlign: 'center center',
-    gap: 'A'
+    flexFlow: 'column',
+    gap: 'B'
   },
 
-  caption: {
-    proto: [Text, Block],
+  heading: {
+    proto: Box,
     props: {
       flexFlow: 'column',
-      flexAlign: 'center center'
+      flexAlign: 'center flex-start',
+      color: 'cream',
+      gap: 'Z'
     },
-    text: 'bb residence',
-    span: {
+
+    h1: {
       proto: Text,
-      props: { text: 'sololaki' }
+      props: {
+        text: 'bb residence',
+        size: 'H'
+      }
+    },
+    h3: {
+      proto: Text,
+      props: {
+        text: 'sololaki',
+        size: 'D'
+      }
     }
   },
 
   p: {
-    proto: Text,
-    props: { text: '"Where ordinary, becomes extraordinary"' }
+    proto: [Text, Box],
+    props: {
+      text: 'where ordinary, becomes extraordinary',
+      size: 'B',
+      color: 'orange2'
+    }
   }
 }
 
 export default {
-  proto: Block,
-  style,
   state: {
-    active: true,
-    activeLink: 0,
-    activeImage: 0,
-    offers: true,
-    activeBallerina: true,
-    activeRedBrick: true,
-    activeYellowCouch: true,
-    activeTab: true,
-
     activeLang: 0,
-    activeMenuLink: 0
+    activeMenu: true,
+    activeMenuItem: 0,
+    activeTab: 0,
+    offers: true,
+    activeImage: 0
   },
 
-  book,
+  proto: Box,
+  style,
+  props: {
+    background: 'cream',
+    position: 'relative'
+  },
+
   banner,
   Header,
   Menu,
+  book,
 
   Residence,
   Apartments,

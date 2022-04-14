@@ -1,35 +1,34 @@
 'use strict'
-import { Block, Text, Link, SVG } from '@symbo.ls/symbols'
+import { Box, Text, Link, Img } from '@symbo.ls/symbols'
 
-import FACEBOOK_SVG from '../../assets/icons/facebook.svg'
-import INSTAGRAM_SVG from '../../assets/icons/instagram.svg'
-import LINKEDIN_SVG from '../../assets/icons/linkedin.svg'
+import FACEBOOK_PNG from '../../assets/icons/facebook.png'
+import INSTAGRAM_PNG from '../../assets/icons/instagram.png'
+import LINKEDIN_PNG from '../../assets/icons/linkedin.png'
 
-import style from './style'
+import style, { styleSectionLinks, styleSocialMedia } from './style'
 
 const sectionLinks = {
   tag: 'nav',
-  proto: Block,
-  props: {
-    padding: '0 E 0 0',
-    gap: 'C',
-    flexAlign: 'flex-end flex-end'
-  },
+  proto: Box,
+  class: [styleSectionLinks],
 
   childProto: {
-    proto: [Link, Text, Block],
+    proto: [Link, Text],
     props: {
-      size: 'D'
+      color: 'cream .75',
+      size: 'C'
     },
     on: {
       click: (event, element, state) => {
-        state.update({ activeMenuLink: element.key })
-        console.log(state.activeMenuLink, element.key)
+        state.update({ activeMenuItem: element.key })
       }
     },
 
     class: {
-      show: (element, state) => state.activeMenuLink === element.key ? { color: 'rgba(168, 98, 63, .65)' } : { color: 'rgba(244, 233, 217, .45)' }
+      show: (element, state) => state.activeMenuItem === element.key
+        ? { color: 'rgba(168, 98, 63, 1)' }
+        : { color: 'rgba(244, 233, 217, 1)' }
+      // show2: (element, state) => state.activeMenu === false ? { color: 'rgba(244, 233, 217, 1)' } : {}
     }
   },
   ...[
@@ -41,77 +40,56 @@ const sectionLinks = {
 }
 
 const socialMedia = {
-  proto: Block,
+  tag: 'nav',
+  proto: Box,
+  class: [styleSocialMedia],
   props: {
-    flexAlign: 'flex-end center',
-    gap: 'E',
-    padding: '0 0 D 0'
+    flexFlow: 'row',
+    gap: 'D'
   },
 
   childProto: {
-    proto: [Link, Block],
-    props: {
-      target: '_blank'
-    },
+    proto: Link,
+    props: { target: '_blank' },
     icon: {
-      proto: [SVG, Block],
-      props: {
-        boxSize: 'B1 B1'
-      }
+      proto: [Img, Box],
+      props: { boxSize: ' B2' }
     }
   },
-
   ...[
     {
       props: { href: `https://www.facebook.com/laninaresidence` },
-      icon: {
-        src: FACEBOOK_SVG
-      }
+      icon: { props: { src: FACEBOOK_PNG } }
     },
-
     {
       props: { href: 'https://www.instagram.com/laninaresidence/' },
-      icon: {
-        src: INSTAGRAM_SVG
-      }
+      icon: { props: { src: INSTAGRAM_PNG } }
     },
-
     {
-      icon: {
-        src: LINKEDIN_SVG
-      }
+      icon: { props: { src: LINKEDIN_PNG } }
     }
   ]
 }
+
 export default {
   tag: 'aside',
-  proto: Block,
+  proto: Box,
   style,
-  props: {
-    flexFlow: 'column'
-  },
   class: {
-    show: (element, state) => state.active ? {
-      opacity: 0,
-      pointerEvents: 'none',
-      '> nav': {
-        opacity: 0,
-        transitionDelay: 0
-      },
-      '> div': {
-        opacity: 0,
-        transitionDelay: 0
-      }
-    } : {
-      opacity: 1,
-      '> div': {
-        opacity: 1,
-        transitionDelay: 0
-      }
-    }
+    show: (element, state) => state.activeMenu
+      ? { opacity: 0, pointerEvents: 'none' }
+      : { opacity: 1 }
+  },
+  props: {
+    boxSize: '100% 100%',
+    position: 'fixed',
+    top: '0',
+    left: '0'
+    // flexFlow: 'column',
+    // flexAlign: 'flex-end center',
+    // gap: 'E'
   },
 
   sectionLinks,
   socialMedia
-
 }

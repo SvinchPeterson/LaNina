@@ -20,3 +20,15 @@ export const zoomInCoverLogo = keyframes`
     opacity: 1;
   }
 `
+
+export const minHeight = keyframes`
+  from {
+    min-height: 0;
+    border: 10px solid green;
+
+  }
+  to {
+    min-height: 700px;
+    border: 10px solid green;
+  }
+`

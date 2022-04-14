@@ -35,6 +35,7 @@ export const FONT_FAMILY = {
 export const COLORS = {
   cream: 'rgba(244, 233, 217, 1)',
   orange: 'rgba(168, 98, 63, 1)',
+  orange2: '#EC8551',
   green: 'rgba(42, 81, 61, 1)',
   black: 'rgba(0, 0, 0, 1)'
 }

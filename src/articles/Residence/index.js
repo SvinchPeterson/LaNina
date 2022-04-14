@@ -1,114 +1,144 @@
 'use strict'
-import { Block, Img, Text } from '@symbo.ls/symbols'
+import { Box, Text } from '@symbo.ls/symbols'
 
-import { bbSololaki, stayText } from '../../texts'
+import { bbSololaki } from '../../texts'
 
-import style, { styleResidenceOrigin, styleEntrence } from './style'
+import { styleResidence, styleEntrence } from './style'
 
-const residenceOrigin = {
-  tag: 'section',
-  proto: Block,
-  style: styleResidenceOrigin,
+const residence = {
+  proto: Box,
+  class: [styleResidence],
   props: {
     flexAlign: 'flex-start center'
   },
   p: {
-    proto: [bbSololaki, Block],
-    props: { padding: 'E' }
+    proto: [bbSololaki, Box],
+    props: {
+      color: 'black .35',
+      background: 'cream',
+      padding: 'E 0 E E'
+    }
+  }
+}
+
+const entrenceItem = {
+  proto: Box,
+  props: {
+    flexFlow: 'row',
+    flexAlign: 'center flex-start',
+    gap: 'Z'
+  },
+  dot: {
+    proto: Box,
+    props: {
+      boxSize: 'X1 X1',
+      background: 'black .35'
+    },
+    style: {
+      borderRadius: '100%',
+      '@media only screen and (max-width: 1225px)': {
+        background: 'rgba(0, 0, 0, .55)'
+      }
+    }
+  },
+  p: {
+    proto: [Text, Box],
+    props: { color: 'black .35' },
+    style: { letterSpacing: '1px', fontWeight: 300 }
+  },
+
+  style: {
+    '@media only screen and (max-width: 1225px)': {
+      '> p': {
+        color: 'rgba(0, 0, 0, .55)',
+        fontWeight: 500
+      }
+    }
   }
 }
 
 const entrence = {
-  tag: 'section',
-  proto: Block,
-  style: styleEntrence,
-  props: { flexAlign: 'flex-end flex-end' },
-  p: {
-    proto: [Block, Text],
+  proto: Box,
+  class: [styleEntrence],
+  props: {
+    flexAlign: 'flex-end flex-end'
+  },
+
+  texts: {
+    proto: Box,
     props: {
-      padding: 'E E D E',
-      flexFlow: 'column'
+      flexFlow: 'column',
+      background: 'cream',
+      padding: 'D1 E C1 E'
     },
     entrences: {
-      proto: Block,
+      proto: Box,
       props: {
         flexFlow: 'column',
-        gap: 'Y',
-        padding: '0 0 C 0'
+        gap: 'Z'
       },
-      style: {
-        width: 'fit-content'
-      },
-      childProto: {
-        proto: Block,
-        props: {
-          flexAlign: 'center flex-start',
-          gap: 'Z'
-        },
-        style: {
-          opacity: '.35',
-          // color: 'rgba(168, 98, 63, 1)',
-          fontSize: `${14 / 15}em`,
-          letterSpacing: '1.3px'
-        },
-        dot: {
-          style: {
-            width: '4px',
-            height: '4px',
-            borderRadius: '100%',
-            background: 'rgba(0, 0, 0, 1)'
-          }
-        },
-        span: { proto: Text }
-      },
+      childProto: entrenceItem,
       ...[
         {
           dot: {},
-          span: { props: { text: 'private entrance' } }
+          p: { props: { text: 'private entrance' } }
         },
         {
           dot: {},
-          span: { props: { text: 'separate street or building entrance' } }
+          p: { props: { text: 'separate street or building entrance' } }
         },
         {
           dot: {},
-          span: { props: { text: 'free parking on premises' } }
+          p: { props: { text: 'free parking on premises' } }
         }
       ]
     },
     luggage: {
-      proto: Block,
+      tag: 'p',
+      proto: [Text, Box],
       props: {
-        flexAlign: 'flex-start center',
-        gap: 'Z2'
+        text: `Luggage dropoff allowed for guests' convenience when they have early arrival or late departure`,
+        color: 'orange .75',
+        padding: 'B 0 Z 0'
       },
       style: {
-        maxWidth: `${500 / 15}em`,
-        opacity: '.25'
-      },
-      text: `Luggage dropoff allowed
-      for guests' convenience when they have early arrival or late departure`
+        maxWidth: `${400 / 16}em`,
+        letterSpacing: '1px',
+        lineHeight: '23px',
+        fontWeight: 300,
+        '@media only screen and (max-width: 1225px)': {
+          color: '#EC8551'
+        }
+      }
     },
     stay: {
-      proto: [stayText, Block],
-      props: { padding: 'Z 0 0 B2' },
-      style: { color: 'rgba(168, 98, 63, .5)' }
-      // style: { color: 'rgba(168, 98, 63, .35)', fontWeight: 'bold' }
+      tag: 'p',
+      proto: [Text, Box],
+      props: {
+        text: 'Long term stays allow for 28 days or more',
+        color: 'orange .75'
+      },
+      style: {
+        fontWeight: 300,
+        letterSpacing: '1px',
+        '@media only screen and (max-width: 1225px)': {
+          color: '#EC8551'
+        }
+      }
     }
   }
 }
 
 export default {
-  tag: 'article',
-  proto: Block,
-  attr: { id: 'residence' },
-  style,
+  proto: Box,
   props: {
-    padding: 'F 0 F 0',
+    padding: 'F1 0',
     flexFlow: 'column',
     gap: 'G'
   },
+  attr: { id: 'residence' },
 
-  residenceOrigin,
+  residence,
   entrence
+
 }

@@ -2,37 +2,35 @@
 
 import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
-export default {
-  marginTop: `${200 / 16}em`,
-  '> header': {
-    minHeight: `${700 / 16}em`,
-    overflow: 'hidden',
-    position: 'relative',
-    overflowY: 'auto',
-    backgroundImage: 'url(' + ORNAMENT_PNG + ')',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    backgroundAttachment: 'fixed',
+export const styleHeader = {
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+  padding: `${200 / 16}em 0`,
+  // border: '5px solid red',
+  '@media only screen and (min-width: 1225px)': {
+    backgroundAttachment: 'fixed'
+  },
+  '@media only screen and (max-width: 1225px)': {
+    // backgroundImage: 'url(' + ORNAMENT2_PNG + ')',
+    overflowX: 'hidden'
+
+  },
+  '> nav': {
+    width: '100%',
     '@media only screen and (max-width: 1225px)': {
-      backgroundAttachment: 'initial'
-    }
-  },
-  '> header > div': {
-    minHeight: `${550 / 16}em`,
-    maxWidth: '100%',
-    overflowY: 'auto',
+      minWidth: '100%',
+      overflowX: 'auto'
 
-    '> a': {
-      flex: 1,
-      minWidth: '800px'
-    }
-  },
-
-  '> section': {
-    position: 'relative',
-    boxSizing: 'border-box',
-    '> div': {
-      width: '100%'
     }
   }
+}
+
+export const styleRooms = {
+  opacity: 0
+}
+
+export default {
+  scrollBehavior: 'smooth'
+  // border: '5px solid green'
 }

@@ -1,94 +1,183 @@
 'use strict'
 
-import { Block, Button, Img, Flex } from '@symbo.ls/symbols'
+import { Box } from '@symbo.ls/symbols'
 
-import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, galleryGreenForest, RoomOffers } from '..'
+import {
+  galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
+  RoomOffers,
+  navButtons
+} from '..'
 
-import { roomsContainer } from '../../animations'
-
-// import LEFT_ARROW from '../../assets/left.png'
-// import RIGHT_ARROW from '../../assets/right.png'
-import UP_ARROW from '../../assets/icons/up-arrow.png'
-import DOWN_ARROW from '../../assets/icons/down-arrow.png'
-
-import style from './style'
-import { galleryImgs } from '../Gallery/galleryBallerina'
-
-const navButtons = {
-  tag: 'span',
-  proto: Block,
+const Room = {
+  proto: Box,
   props: {
-    flexAlign: 'center center',
-    flexFlow: 'column',
-    // gap: 'C'
-    padding: 'A W'
+    position: 'relative'
   },
-
-  childProto: {
-    proto: Button,
-    arrow: { proto: Img }
-  },
-  ...[
-    {
-      arrow: { props: { src: UP_ARROW } },
-      on: {
-        click: (event, element, state) => {
-          const { activeImage } = state
-          state.update({
-            activeImage: (galleryImgs - 1) < activeImage ? 0 : activeImage + 1
-          })
-        }
-      }
-    },
-
-    {
-      arrow: { props: { src: DOWN_ARROW } },
-
-      on: {
-        click: (event, element, state) => {
-          console.log(event)
-          console.log(element)
-          console.log(state)
-          const { activeImage } = state
-          state.update({
-            activeImage: activeImage < (galleryImgs.length + 1) ? 0 : activeImage - 1
-          })
-          // if (activeImage === element.parent.gallery.length) {
-          //   state.update({
-          //     activeImage: activeImage === element.parent.gallery.length - 2
-          //   })
-          // }
-        }
-      }
-    }
-  ]
-}
-
-const room = {
-  proto: [Block, Flex],
-  style,
   class: {
-    show: (element, state) => state.activeLink === element.key ? {
-      animationName: roomsContainer,
-      animationDuration: '1.5s',
-      animationTimingFunction: 'ease-in-out',
-      height: '100%',
-      opacity: 1,
-      '> aside': { display: 'grid' }
-    }
-      : {
-        height: 0,
-        opacity: 0
-      }
-  },
-  props: {
-    // padding: 'E 0 0 0'
+    show: (element, state) => state.activeTab === element.key
+      ? { height: `${700 / 16}em`, transition: 'all 1s ease-in-out', opacity: 1, borderBottom: '5px solid rgba(168, 98, 63, 1)' }
+      : { height: 0, opacity: 0 }
   },
 
   gallery: {},
-  offer: { proto: RoomOffers },
+  RoomOffers,
   navButtons
 }
+
+export const roomBallerina = {
+  proto: Room,
+  attr: { id: 'roomBallerina' },
+  gallery: { proto: galleryBallerina }
+}
+
+export const roomRedBrick = {
+  proto: Room,
+  attr: { id: 'roomRedBrick' },
+  gallery: { proto: galleryRedBrick }
+}
+
+export const roomYellowCouch = {
+  proto: Room,
+  attr: { id: 'roomYellowCouch' },
+  gallery: { proto: galleryYellowCouch }
+}
+
+export const roomGreenForest = {
+  proto: Room,
+  attr: { id: 'roomGreenForest' },
+  gallery: { proto: galleryGreenForest }
+}
+
+export const roomRetro = {
+  proto: Room,
+  attr: { id: 'roomRetro' },
+  gallery: { proto: galleryRetro }
+}
+
+// import { Block, Button, Img, Flex } from '@symbo.ls/symbols'
+
+// import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, galleryGreenForest, RoomOffers } from '..'
+
+// import { roomsContainer } from '../../animations'
+
+// // import LEFT_ARROW from '../../assets/left.png'
+// // import RIGHT_ARROW from '../../assets/right.png'
+// import UP_ARROW from '../../assets/icons/up-arrow.png'
+// import DOWN_ARROW from '../../assets/icons/down-arrow.png'
+
+// import style from './style'
+// import { galleryImgs } from '../Gallery/galleryBallerina'
+
+// const navButtons = {
+//   tag: 'span',
+//   proto: Block,
+//   props: {
+//     flexAlign: 'center center',
+//     flexFlow: 'column',
+//     // gap: 'C'
+//     padding: 'A W'
+//   },
+
+//   childProto: {
+//     proto: Button,
+//     arrow: { proto: Img }
+//   },
+//   ...[
+//     {
+//       arrow: { props: { src: UP_ARROW } },
+//       on: {
+//         click: (event, element, state) => {
+//           const { activeImage } = state
+//           state.update({
+//             activeImage: (galleryImgs - 1) < activeImage ? 0 : activeImage + 1
+//           })
+//         }
+//       }
+//     },
+
+//     {
+//       arrow: { props: { src: DOWN_ARROW } },
+
+//       on: {
+//         click: (event, element, state) => {
+//           console.log(event)
+//           console.log(element)
+//           console.log(state)
+//           const { activeImage } = state
+//           state.update({
+//             activeImage: activeImage < (galleryImgs.length + 1) ? 0 : activeImage - 1
+//           })
+//           // if (activeImage === element.parent.gallery.length) {
+//           //   state.update({
+//           //     activeImage: activeImage === element.parent.gallery.length - 2
+//           //   })
+//           // }
+//         }
+//       }
+//     }
+//   ]
+// }
+
+// const room = {
+//   proto: [Block, Flex],
+//   style,
+//   // class: {
+//   //   show: (element, state) => state.activeTab === element.key ? {
+//   //     // animationName: roomsContainer,
+//   //     // animationDuration: '1.5s',
+//   //     // animationTimingFunction: 'ease-in-out',
+//   //     height: '100%',
+//   //     opacity: 1,
+//   //     '> aside': { display: 'grid' }
+//   //   }
+//   //     : {
+//   //       height: 0,
+//   //       opacity: 0
+//   //     }
+//   // },
+//   props: {
+//     // padding: 'E 0 0 0'
+//   },
+
+//   gallery: {},
+//   offer: { proto: RoomOffers },
+//   navButtons
+// }
+
+// export const roomBallerina = {
+//   proto: room,
+//   attr: { id: 'ballerina' },
+
+//   gallery: { proto: galleryBallerina }
+// }
+
+// export const roomRedBrick = {
+//   proto: room,
+//   attr: { id: 'redBrick' },
+
+//   gallery: { proto: galleryRedBrick }
+// }
+
+// export const roomYellowCouch = {
+//   proto: room,
+//   attr: { id: 'yellowCouch' },
+
+//   gallery: { proto: galleryYellowCouch }
+// }
+
+// export const roomRetro = {
+//   proto: room,
+//   attr: { id: 'retro' },
+
+//   gallery: { proto: galleryRetro }
+// }
+
+// export const roomGreenForest = {
+//   proto: room,
+//   attr: { id: 'greenForest' },
+
+//   gallery: { proto: galleryGreenForest }
+// }
 
 // const room = {
 //   proto: [Block, Flex],
@@ -206,37 +295,3 @@ const room = {
 //     // }
 //   }
 // }
-export const roomBallerina = {
-  proto: room,
-  attr: { id: 'ballerina' },
-
-  gallery: { proto: galleryBallerina }
-}
-
-export const roomRedBrick = {
-  proto: room,
-  attr: { id: 'redBrick' },
-
-  gallery: { proto: galleryRedBrick }
-}
-
-export const roomYellowCouch = {
-  proto: room,
-  attr: { id: 'yellowCouch' },
-
-  gallery: { proto: galleryYellowCouch }
-}
-
-export const roomRetro = {
-  proto: room,
-  attr: { id: 'retro' },
-
-  gallery: { proto: galleryRetro }
-}
-
-export const roomGreenForest = {
-  proto: room,
-  attr: { id: 'greenForest' },
-
-  gallery: { proto: galleryGreenForest }
-}

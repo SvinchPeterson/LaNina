@@ -1,55 +1,62 @@
 'use strict'
-import { Block, Text, Flex, Shape, SVG, Link } from '@symbo.ls/symbols'
+import { Text, Box, Img } from '@symbo.ls/symbols'
 
-import style from './style'
+import PHONE_PNG from '../../assets/icons/phoneRight.png'
 
-import PHONE_PNG from '../../assets/icons/phoneRight.svg'
+import style, { styleMenuIcon, styleCheck, styleLangs, styleCall } from './style'
 
 const check = {
   tag: 'input',
   attr: {
     type: 'checkbox',
     id: 'toggle'
-  }
+  },
+  class: [styleCheck]
 }
 
 const menuIcon = {
   tag: 'label',
   attr: { for: 'toggle' },
-  proto: Block,
+  proto: Box,
+  class: [styleMenuIcon],
   props: {
     flexFlow: 'column',
-    gap: 'Y',
-    boxSize: 'A2 A2',
-    padding: 'A'
+    boxSize: 'B2 A2',
+    flexAlign: 'flex-start space-between'
   },
-
   on: {
     click: (event, element, state) => {
-      state.active ? state.update({ active: false }) : state.update({ active: true })
+      state.activeMenu
+        ? state.update({ activeMenu: false, activeMenuItem: null })
+        : state.update({ activeMenu: true })
     }
   },
 
   childProto: {
-    proto: [Block, Shape],
+    proto: Box,
     props: {
-      round: 'A'
+      boxSize: '50% W1',
+      background: 'cream',
+      round: 'C'
     }
-  },
 
-  ...[{}, {}, {}]
+  },
+  ...[
+    { props: { boxSize: '100% W1' } },
+    {},
+    {}
+  ]
 }
 
 const langs = {
-  proto: Block,
+  proto: Box,
+  class: [styleLangs],
   props: {
-    flexAlign: 'flex-start center',
-    gap: 'Z2'
+    flexAlign: 'center center',
+    gap: 'A'
   },
-
   childProto: {
-    proto: [Text, Block, Link],
-    props: { padding: 'Y 0' },
+    proto: [Text, Box],
     on: {
       click: (event, element, state) => {
         state.update({ activeLang: element.key })
@@ -58,58 +65,64 @@ const langs = {
     },
 
     class: {
-      show: (element, state) => state.activeLang === element.key ? { color: 'rgba(244, 233, 217, .55)' } : { color: 'rgba(244, 233, 217, 1)' }
+      show: (element, state) => state.activeLang === element.key
+        ? { color: 'rgba(244, 233, 217, 1)', fontWeight: 700 }
+        : { color: 'rgba(244, 233, 217, .85)', fontWeight: 500 }
     }
   },
-
   ...[
-    {
-      props: { text: 'ქარ' },
-      style: { fontFamily: 'BPG ExtraSquare Mtavruli' }
-    },
-    {
-      props: { text: 'eng' }
-    },
-
-    {
-      props: { text: 'rus' }
-    }
-
+    { props: { text: 'geo' } },
+    { props: { text: 'eng' } },
+    { props: { text: 'rus' } }
   ]
 }
 
 const call = {
-  tag: 'span',
-  proto: Block,
+  proto: Box,
+  class: [styleCall],
   props: {
-    boxSize: 'A2 A2',
-    padding: 'A'
+    flexAlign: 'center center',
+    gap: 'A',
+    position: 'relative'
+  },
+  image: {
+    proto: [Img, Box],
+    props: {
+      src: PHONE_PNG,
+      boxSize: 'A2 A2'
+    },
+    style: {
+      width: '100%',
+      height: '100%'
+    }
   },
   numb: {
-    proto: Link,
+    tag: 'span',
+    proto: [Text, Box],
     props: {
-      href: 'https://api.whatsapp.com/send?phone=+995571017170',
-      target: '_blank'
-    },
-    svg: {
-      proto: [SVG, Block],
-      src: PHONE_PNG,
-      props: { boxSize: 'A1 A1' }
+      text: '+995 571 017 170',
+      color: 'cream',
+      size: 'B',
+      position: 'absolute',
+      left: '100%',
+      padding: '0 0 0 Z'
     }
   }
 }
 
 export default {
   tag: 'header',
+  proto: Box,
   style,
-  proto: [Block, Flex],
   props: {
+    boxSize: '100% E',
+    position: 'fixed',
+    top: '0',
+    padding: '0 C',
     flexAlign: 'center center',
     gap: 'E'
   },
-
   check,
-
   menuIcon,
   langs,
   call

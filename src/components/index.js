@@ -1,11 +1,12 @@
 'use strict'
 import { Logo, Logo2 } from './Logo'
 import Header from './Header'
-import { tabBallerina, tabRedBrick, tabYellowCouch, tabRetro, tabGreenForest } from './RoomTab'
-import RoomOffers from './RoomOffers'
+import { RoomOffers } from './RoomOffers'
 import Menu from './Menu'
 
-import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, galleryGreenForest } from './Gallery'
+import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs'
+import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from './Gallery/index'
+import { navButtons, navButtons2 } from './NavButtons'
 
 import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
 
@@ -16,22 +17,12 @@ export {
   RoomOffers,
   Menu,
 
-  tabBallerina,
-  tabRedBrick,
-  tabYellowCouch,
-  tabRetro,
-  tabGreenForest,
+  tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
 
-  galleryBallerina,
-  galleryRedBrick,
-  galleryYellowCouch,
-  galleryRetro,
-  galleryGreenForest,
+  galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
 
-  roomBallerina,
-  roomRedBrick,
-  roomYellowCouch,
-  roomRetro,
-  roomGreenForest
+  navButtons,
+  navButtons2,
 
+  roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest
 }

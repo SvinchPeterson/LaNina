@@ -1,5 +1,5 @@
 'use strict'
-import { Block, Text } from '@symbo.ls/symbols'
+import { Box, Text } from '@symbo.ls/symbols'
 
 import { locationText, distanceText, transferText } from '../../texts'
 
@@ -7,14 +7,14 @@ import style from './style'
 
 const paragraph = {
   tag: 'p',
-  proto: [locationText, Block],
+  proto: [locationText, Box],
   props: { padding: '0 0 D 0' }
 
 }
 
 const map = {
   tag: 'iframe',
-  proto: Block,
+  proto: Box,
   attr: {
     src: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAtj5iaocoLdNMIS2JBIymMUQTmds8_nlI&q=Lanina+Residence',
     allowfullscreen: true
@@ -22,7 +22,7 @@ const map = {
 }
 
 const airPort = {
-  proto: Block,
+  proto: Box,
   props: {
     flexFlow: 'column',
     flexAlign: 'center center',
@@ -31,7 +31,7 @@ const airPort = {
 
   childProto: {
     tag: 'p',
-    proto: [Block, Text]
+    proto: [Box, Text]
   },
   ...[
     { proto: distanceText },
@@ -41,7 +41,7 @@ const airPort = {
       props: {
         flexFlow: 'column',
         flexAlign: 'flex-start flex-start',
-        gap: 'W2'
+        gap: 'Y'
       },
 
       caption: {
@@ -56,7 +56,7 @@ const airPort = {
 
 export default {
   tag: 'article',
-  proto: Block,
+  proto: Box,
   props: {
     flexFlow: 'column',
     gap: '0',
@@ -71,7 +71,7 @@ export default {
 
   location: {
     tag: 'section',
-    proto: Block,
+    proto: Box,
     props: {
       flexAlign: 'center center',
       gap: 'D'
