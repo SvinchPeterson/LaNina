@@ -6,8 +6,6 @@ import { Header, Menu } from '../../components'
 
 import { Residence, Apartments, Wine, Location } from '../../articles'
 
-import LOGO_PNG from '../../assets/icons/logo.png'
-
 import style, { styleBanner } from './style'
 
 const book = {
