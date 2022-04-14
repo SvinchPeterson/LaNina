@@ -3,7 +3,7 @@ import { Box, Text, Link, Img } from '@symbo.ls/symbols'
 
 import FACEBOOK_PNG from '../../assets/icons/facebook.png'
 import INSTAGRAM_PNG from '../../assets/icons/instagram.png'
-import LINKEDIN_PNG from '../../assets/icons/linkedin.png'
+import LINKEDIN_PNG from '../../assets/icons/linkedIn.png'
 
 import style, { styleSectionLinks, styleSocialMedia } from './style'
 
