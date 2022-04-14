@@ -38,13 +38,6 @@ const book = {
     href: `https://www.airbnb.com/users/404104381/listings?fbclid=IwAR3RqnCcBkIXwGaJauHmAlgdNYGa9ASOcUMk7ph2i1XBqDG0DqvOMx7XnrM`,
     target: '_blank'
   },
-  image: {
-    proto: [Img, Box],
-    props: {
-      src: LOGO_PNG,
-      boxSize: 'C1'
-    }
-  },
   ook: {
     proto: [Text, Box],
     props: {
