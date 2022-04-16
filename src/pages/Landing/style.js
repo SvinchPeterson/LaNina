@@ -86,7 +86,6 @@ export default {
   animationName: brightness,
   animationDuration: '1s',
   animationTimingFunction: 'ease-in-out',
-  border: '3px solid red',
   '@media only screen and (max-width: 1225px)': {
     flexFlow: 'column'
   }
