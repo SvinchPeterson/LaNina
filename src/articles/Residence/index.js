@@ -137,6 +137,7 @@ export default {
     gap: 'G'
   },
   attr: { id: 'residence' },
+  style: { background: 'rgba(244, 233, 217, 1)' },
 
   residence,
   entrence

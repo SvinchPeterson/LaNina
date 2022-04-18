@@ -31,6 +31,7 @@ export const styleRooms = {
 }
 
 export default {
-  scrollBehavior: 'smooth'
+  scrollBehavior: 'smooth',
+  background: 'rgba(244, 233, 217, 1)'
   // border: '5px solid green'
 }
