@@ -37,7 +37,8 @@ export default {
   scrollBehavior: 'smooth',
   animationName: brightness,
   animationDuration: '1s',
-  animationTimingFunction: 'ease-in-out'
+  animationTimingFunction: 'ease-in-out',
+  background: 'black'
 }
 
 // import { scaleSololakiBanner, zoomIn, letterSpacingIn, verticalMove, opacity, paddingOpacity } from '../../animations'
