@@ -6,6 +6,9 @@ export const styleBanner = {
   backgroundImage: 'linear-gradient(rgba(42, 81, 61, .25), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_JPG + ')',
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
+  animationName: brightness,
+  animationDuration: '1s',
+  animationTimingFunction: 'ease-in-out',
   '> div': {
     textTransform: 'uppercase'
   },
