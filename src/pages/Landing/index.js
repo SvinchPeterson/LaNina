@@ -4,8 +4,10 @@ import { Box, Link, Text } from '@symbo.ls/symbols'
 import { zoomInCoverLogo } from '../../animations'
 
 import { Logo, Logo2 } from '../../components'
-import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
-import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
+// import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
+// import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
+import SOLOLAKI_JPG from '../../assets/images/CoverPage/solo.jpg'
+import RUSTAVELI_JPG from '../../assets/images/CoverPage/rus.jpg'
 
 import style, { styleLink, styleLogo, styleHeading, styleUnderConstruction } from './style'
 
