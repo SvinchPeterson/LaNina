@@ -1,6 +1,6 @@
 'use strict'
-
-import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
+import { brightness } from '../../animations'
+import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki2.jpg'
 
 export const styleBanner = {
   backgroundImage: 'linear-gradient(rgba(42, 81, 61, .25), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_JPG + ')',
@@ -31,7 +31,10 @@ export default {
   flex: 1,
   overflowX: 'hidden',
   overflowY: 'auto',
-  scrollBehavior: 'smooth'
+  scrollBehavior: 'smooth',
+  animationName: brightness,
+  animationDuration: '1s',
+  animationTimingFunction: 'ease-in-out'
 }
 
 // import { scaleSololakiBanner, zoomIn, letterSpacingIn, verticalMove, opacity, paddingOpacity } from '../../animations'
