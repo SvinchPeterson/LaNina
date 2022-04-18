@@ -3,10 +3,12 @@ import { keyframes } from '@emotion/css'
 
 export const brightness = keyframes`
   from {
-    filter: brightness(0);
+    // filter: brightness(0);
+    opacity: 0;
   }
   to {
-    filter: brightness(100%);
+    // filter: brightness(100%);
+    opacity: 1;
   }
 `
 export const zoomInCoverLogo = keyframes`
