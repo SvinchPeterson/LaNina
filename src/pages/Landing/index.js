@@ -5,6 +5,10 @@ import { Logo, Logo2 } from '../../components'
 
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
+import SOLOLAKI_TABLET_JPG from '../../assets/images/CoverPage/sololaki-tablet.jpg'
+import RUSTAVELI_TABLET_JPG from '../../assets/images/CoverPage/rustaveli-tablet.jpg'
+import SOLOLAKI_MOBILE_JPG from '../../assets/images/CoverPage/sololaki-mobile.jpg'
+import RUSTAVELI_MOBILE_JPG from '../../assets/images/CoverPage/rustaveli-mobile.jpg'
 
 const PropsLogo = {
   props: {
@@ -39,9 +43,16 @@ const heading = {
 
   style: {
     textTransform: 'uppercase',
-    letterSpacing: '2px',
-    fontWeight: 500,
-    '@media only screen and (min-width: 1225px)': { transition: 'font-weight .8s ease-in-out, letter-spacing .8s ease-in-out' }
+    '@media only screen and (min-width: 1225px)': {
+      transition: 'font-weight .8s ease-in-out, letter-spacing .8s ease-in-out',
+      fontWeight: 500,
+      letterSpacing: '2px'
+    },
+    '@media only screen and (max-width: 1225px)': {
+      fontSize: '2em',
+      color: 'rgba(244, 233, 217, 1)',
+      letterSpacing: '1px'
+    }
   }
 }
 const underConstruction = {
@@ -60,6 +71,7 @@ const underConstruction = {
       paddingTop: `${3 / 14}em`,
       opacity: 0
     },
+    '@media only screen and (max-width: 1225px)': { fontSize: `${16 / 32}em` },
     fontWeight: 500,
     textTransform: 'uppercase',
     letterSpacing: '1px'
@@ -73,8 +85,8 @@ const link = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     boxSizing: 'border-box',
-    paddingBottom: `${100 / 16}em`,
     '@media only screen and (min-width: 1225px)': {
+      paddingBottom: `${100 / 16}em`,
       transition: 'flex .8s ease-in-out, background-position .8s ease-in-out',
       backgroundAttachment: 'fixed',
       alignItems: 'flex-end',
@@ -84,6 +96,11 @@ const link = {
         fontWeight: 700,
         letterSpacing: '2.5px'
       }
+    },
+    '@media only screen and (max-width: 1225px)': {
+      alignItems: 'center',
+      justifyContent: 'center'
+
     }
   },
 
@@ -93,14 +110,21 @@ const link = {
 const sololaki = {
   proto: link,
   style: {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)) ,url(' + SOLOLAKI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)) ,url(' + SOLOLAKI_JPG + ')',
       justifyContent: 'flex-end',
       paddingRight: `${10 / 16}em`,
       '&:hover': {
         backgroundImage: 'linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .35)) ,url(' + SOLOLAKI_JPG + ')',
         backgroundPosition: 'center left -100px'
       }
+    },
+
+    '@media only screen and (max-width: 1225px)': {
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .65)) ,url(' + SOLOLAKI_TABLET_JPG + ')'
+    },
+    '@media only screen and (max-width: 768px)': {
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .65)) ,url(' + SOLOLAKI_MOBILE_JPG + ')'
     }
   },
   heading: {
@@ -111,8 +135,8 @@ const sololaki = {
 const rustaveli = {
   proto: link,
   style: {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
       paddingLeft: `${10 / 16}em`,
       '&:hover': {
         backgroundImage: 'linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .35)) ,url(' + RUSTAVELI_JPG + ')',
@@ -122,6 +146,13 @@ const rustaveli = {
         opacity: 1,
         transition: 'opacity .5s ease-in-out'
       }
+    },
+
+    '@media only screen and (max-width: 1225px)': {
+      backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .65)), url(' + RUSTAVELI_TABLET_JPG + ')'
+    },
+    '@media only screen and (max-width: 768px)': {
+      backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .65)), url(' + RUSTAVELI_MOBILE_JPG + ')'
     }
   },
   heading: {
@@ -131,15 +162,18 @@ const rustaveli = {
   }
 }
 const Container = {
-  proto: Box,
+  proto: [Box, Flex],
   props: {
-    flexFlow: 'row',
     boxSize: '100% 100%'
   },
   style: {
     position: 'relative',
     border: '1px solid black',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    '@media only screen and (max-width: 1225px)': {
+      flexFlow: 'column'
+
+    }
   }
 }
 export default {
