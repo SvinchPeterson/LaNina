@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Link } from '@symbo.ls/symbols'
+import { Box, Link, Text, Flex } from '@symbo.ls/symbols'
 
 import { Logo, Logo2 } from '../../components'
 
@@ -32,20 +32,62 @@ const logo2 = {
   }
 }
 
+const heading = {
+  tag: 'h4',
+  proto: [Text, Box],
+  props: { color: 'cream .75' },
+
+  style: {
+    textTransform: 'uppercase',
+    letterSpacing: '2px',
+    fontWeight: 500,
+    '@media only screen and (min-width: 1225px)': { transition: 'font-weight .8s ease-in-out, letter-spacing .8s ease-in-out' }
+  }
+}
+const underConstruction = {
+  tag: 'span',
+  proto: [Text, Box],
+  text: 'under construction',
+  props: {
+    color: 'orange3',
+    position: 'absolute'
+  },
+  style: {
+    whiteSpace: 'nowrap',
+    display: 'block',
+    '@media only screen and (min-width: 1225px)': {
+      fontSize: `${14 / 16}em`,
+      paddingTop: `${3 / 14}em`,
+      opacity: 0
+    },
+    fontWeight: 500,
+    textTransform: 'uppercase',
+    letterSpacing: '1px'
+  }
+}
+
 const link = {
-  proto: [Link, Box],
+  proto: [Link, Box, Flex],
   style: {
     flex: 1,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    boxSizing: 'border-box',
+    paddingBottom: `${100 / 16}em`,
     '@media only screen and (min-width: 1225px)': {
       transition: 'flex .8s ease-in-out, background-position .8s ease-in-out',
       backgroundAttachment: 'fixed',
-      '&:hover': {
-        flex: 8
+      alignItems: 'flex-end',
+      '&:hover': { flex: 8 },
+      '&:hover > h4': {
+        color: 'rgba(244, 233, 217, 1)',
+        fontWeight: 700,
+        letterSpacing: '2.5px'
       }
     }
-  }
+  },
+
+  heading: { proto: heading }
 }
 
 const sololaki = {
@@ -53,11 +95,16 @@ const sololaki = {
   style: {
     backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)) ,url(' + SOLOLAKI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
+      justifyContent: 'flex-end',
+      paddingRight: `${10 / 16}em`,
       '&:hover': {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .35)) ,url(' + SOLOLAKI_JPG + ')',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .35)) ,url(' + SOLOLAKI_JPG + ')',
         backgroundPosition: 'center left -100px'
       }
     }
+  },
+  heading: {
+    text: 'sololaki'
   }
 }
 
@@ -66,14 +113,23 @@ const rustaveli = {
   style: {
     backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
+      paddingLeft: `${10 / 16}em`,
       '&:hover': {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .35)) ,url(' + RUSTAVELI_JPG + ')',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .35)) ,url(' + RUSTAVELI_JPG + ')',
         backgroundPosition: 'center left 100px'
+      },
+      '&:hover > h4 > span': {
+        opacity: 1,
+        transition: 'opacity .5s ease-in-out'
       }
     }
+  },
+  heading: {
+    text: 'rustaveli',
+    props: { position: 'relative' },
+    underConstruction
   }
 }
-
 const Container = {
   proto: Box,
   props: {
@@ -81,7 +137,9 @@ const Container = {
     boxSize: '100% 100%'
   },
   style: {
-    position: 'relative'
+    position: 'relative',
+    border: '1px solid black',
+    overflow: 'hidden'
   }
 }
 export default {
