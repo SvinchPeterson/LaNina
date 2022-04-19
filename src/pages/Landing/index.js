@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Link, Text } from '@symbo.ls/symbols'
+import { Box, Link } from '@symbo.ls/symbols'
 
 import { Logo, Logo2 } from '../../components'
 
@@ -39,6 +39,8 @@ const link = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     '@media only screen and (min-width: 1225px)': {
+      transition: 'flex .8s ease-in-out, background-position .8s ease-in-out',
+      backgroundAttachment: 'fixed',
       '&:hover': {
         flex: 8
       }
@@ -52,7 +54,8 @@ const sololaki = {
     backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)) ,url(' + SOLOLAKI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
       '&:hover': {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .35)) ,url(' + SOLOLAKI_JPG + ')'
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .35)) ,url(' + SOLOLAKI_JPG + ')',
+        backgroundPosition: 'center left -100px'
       }
     }
   }
@@ -64,7 +67,8 @@ const rustaveli = {
     backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
     '@media only screen and (min-width: 1225px)': {
       '&:hover': {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .35)) ,url(' + RUSTAVELI_JPG + ')'
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .35)) ,url(' + RUSTAVELI_JPG + ')',
+        backgroundPosition: 'center left 100px'
       }
     }
   }
