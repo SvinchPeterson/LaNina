@@ -1,6 +1,55 @@
 'use strict'
 import { Box, Link, Text } from '@symbo.ls/symbols'
 
+import { Logo, Logo2 } from '../../components'
+
+const logo = {
+  proto: Logo,
+  props: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%'
+  },
+
+  style: {
+    transform: 'translate(-50%, -50%)'
+  }
+}
+
+const link = {
+  proto: [Link, Box],
+  style: {
+    border: '3px solid red',
+    flex: 1
+  }
+}
+
+const sololaki = {
+  proto: link
+}
+
+const rustaveli = {
+  proto: link
+}
+
+const Container = {
+  proto: Box,
+  props: {
+    flexFlow: 'row',
+    boxSize: '100% 100%'
+  },
+  style: {
+    position: 'relative'
+  }
+}
+export default {
+  proto: Container,
+
+  sololaki,
+  rustaveli,
+  logo
+}
+
 // import { Box, Link, Text } from '@symbo.ls/symbols'
 
 // import { zoomInCoverLogo } from '../../animations'
