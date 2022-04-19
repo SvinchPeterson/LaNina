@@ -3,16 +3,28 @@ import { Box, Link, Text } from '@symbo.ls/symbols'
 
 import { Logo, Logo2 } from '../../components'
 
-const logo = {
-  proto: Logo,
+const PropsLogo = {
   props: {
     position: 'absolute',
     top: '50%',
     left: '50%'
   },
-
   style: {
     transform: 'translate(-50%, -50%)'
+  }
+}
+
+const logo = {
+  proto: [Logo, PropsLogo],
+  style: {
+    '@media only screen and (max-width: 1225px)': { display: 'none' }
+  }
+}
+
+const logo2 = {
+  proto: [Logo2, PropsLogo],
+  style: {
+    '@media only screen and (min-width: 1225px)': { display: 'none' }
   }
 }
 
@@ -47,7 +59,8 @@ export default {
 
   sololaki,
   rustaveli,
-  logo
+  logo,
+  logo2
 }
 
 // import { Box, Link, Text } from '@symbo.ls/symbols'
