@@ -50,8 +50,7 @@ const heading = {
     },
     '@media only screen and (max-width: 1225px)': {
       fontSize: '2em',
-      color: 'rgba(244, 233, 217, 1)',
-      letterSpacing: '1px'
+      color: 'rgba(244, 233, 217, 1)'
     }
   }
 }
