@@ -3,6 +3,9 @@ import { Box, Link, Text } from '@symbo.ls/symbols'
 
 import { Logo, Logo2 } from '../../components'
 
+import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
+import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
+
 const PropsLogo = {
   props: {
     position: 'absolute',
@@ -10,7 +13,8 @@ const PropsLogo = {
     left: '50%'
   },
   style: {
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    pointerEvents: 'none'
   }
 }
 
@@ -31,17 +35,39 @@ const logo2 = {
 const link = {
   proto: [Link, Box],
   style: {
-    border: '3px solid red',
-    flex: 1
+    flex: 1,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    '@media only screen and (min-width: 1225px)': {
+      '&:hover': {
+        flex: 8
+      }
+    }
   }
 }
 
 const sololaki = {
-  proto: link
+  proto: link,
+  style: {
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)) ,url(' + SOLOLAKI_JPG + ')',
+    '@media only screen and (min-width: 1225px)': {
+      '&:hover': {
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .35)) ,url(' + SOLOLAKI_JPG + ')'
+      }
+    }
+  }
 }
 
 const rustaveli = {
-  proto: link
+  proto: link,
+  style: {
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
+    '@media only screen and (min-width: 1225px)': {
+      '&:hover': {
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .35)) ,url(' + RUSTAVELI_JPG + ')'
+      }
+    }
+  }
 }
 
 const Container = {
