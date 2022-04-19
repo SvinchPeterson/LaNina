@@ -73,8 +73,7 @@ const underConstruction = {
     },
     '@media only screen and (max-width: 1225px)': { fontSize: `${16 / 32}em` },
     fontWeight: 500,
-    textTransform: 'uppercase',
-    letterSpacing: '1px'
+    textTransform: 'uppercase'
   }
 }
 
@@ -121,10 +120,10 @@ const sololaki = {
     },
 
     '@media only screen and (max-width: 1225px)': {
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .65)) ,url(' + SOLOLAKI_TABLET_JPG + ')'
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)) ,url(' + SOLOLAKI_TABLET_JPG + ')'
     },
     '@media only screen and (max-width: 768px)': {
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .65)) ,url(' + SOLOLAKI_MOBILE_JPG + ')'
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)) ,url(' + SOLOLAKI_MOBILE_JPG + ')'
     }
   },
   heading: {
@@ -149,10 +148,10 @@ const rustaveli = {
     },
 
     '@media only screen and (max-width: 1225px)': {
-      backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .65)), url(' + RUSTAVELI_TABLET_JPG + ')'
+      backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)), url(' + RUSTAVELI_TABLET_JPG + ')'
     },
     '@media only screen and (max-width: 768px)': {
-      backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .65)), url(' + RUSTAVELI_MOBILE_JPG + ')'
+      backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)), url(' + RUSTAVELI_MOBILE_JPG + ')'
     }
   },
   heading: {
