@@ -86,14 +86,14 @@ const link = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     boxSizing: 'border-box',
+    animationName: brightness,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out',
     '@media only screen and (min-width: 1225px)': {
       paddingBottom: `${100 / 16}em`,
       transition: 'flex .8s ease-in-out, background-position .8s ease-in-out',
       backgroundAttachment: 'fixed',
       alignItems: 'flex-end',
-      animationName: brightness,
-      animationDuration: '2s',
-      animationTimingFunction: 'ease-in-out',
       '&:hover': { flex: 8 },
       '&:hover > h4': {
         color: 'rgba(244, 233, 217, 1)',
