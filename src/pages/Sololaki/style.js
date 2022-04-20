@@ -1,6 +1,6 @@
 'use strict'
 import { brightness } from '../../animations'
-import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki2.jpg'
+import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
 
 export const styleBanner = {
   backgroundImage: 'linear-gradient(rgba(42, 81, 61, .25), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_JPG + ')',
