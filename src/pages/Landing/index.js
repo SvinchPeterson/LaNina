@@ -3,6 +3,8 @@ import { Box, Link, Text, Flex } from '@symbo.ls/symbols'
 
 import { Logo, Logo2 } from '../../components'
 
+import { brightness } from '../../animations'
+
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
 import SOLOLAKI_TABLET_JPG from '../../assets/images/CoverPage/sololaki-tablet.jpg'
@@ -50,7 +52,8 @@ const heading = {
     },
     '@media only screen and (max-width: 1225px)': {
       fontSize: '2em',
-      color: 'rgba(244, 233, 217, 1)'
+      color: 'rgba(244, 233, 217, 1)',
+      fontWeight: 700
     }
   }
 }
@@ -71,7 +74,7 @@ const underConstruction = {
       opacity: 0
     },
     '@media only screen and (max-width: 1225px)': { fontSize: `${16 / 32}em` },
-    fontWeight: 500,
+    fontWeight: 700,
     textTransform: 'uppercase'
   }
 }
@@ -88,6 +91,9 @@ const link = {
       transition: 'flex .8s ease-in-out, background-position .8s ease-in-out',
       backgroundAttachment: 'fixed',
       alignItems: 'flex-end',
+      animationName: brightness,
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out',
       '&:hover': { flex: 8 },
       '&:hover > h4': {
         color: 'rgba(244, 233, 217, 1)',
@@ -98,7 +104,6 @@ const link = {
     '@media only screen and (max-width: 1225px)': {
       alignItems: 'center',
       justifyContent: 'center'
-
     }
   },
 
@@ -109,20 +114,24 @@ const sololaki = {
   proto: link,
   style: {
     '@media only screen and (min-width: 1225px)': {
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)) ,url(' + SOLOLAKI_JPG + ')',
+      // backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)) ,url(' + SOLOLAKI_JPG + ')',
+      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .1), rgba(42, 81, 61, .75)) ,url(' + SOLOLAKI_JPG + ')',
       justifyContent: 'flex-end',
       paddingRight: `${10 / 16}em`,
       '&:hover': {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .35)) ,url(' + SOLOLAKI_JPG + ')',
+        // backgroundImage: 'linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .35)) ,url(' + SOLOLAKI_JPG + ')',
+        backgroundImage: 'linear-gradient(rgba(42, 81, 61, .1), rgba(42, 81, 61, .35)) ,url(' + SOLOLAKI_JPG + ')',
         backgroundPosition: 'center left -100px'
       }
     },
 
     '@media only screen and (max-width: 1225px)': {
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)) ,url(' + SOLOLAKI_TABLET_JPG + ')'
+      // backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)) ,url(' + SOLOLAKI_TABLET_JPG + ')',
+      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .65)), url(' + SOLOLAKI_TABLET_JPG + ')'
     },
     '@media only screen and (max-width: 768px)': {
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)) ,url(' + SOLOLAKI_MOBILE_JPG + ')'
+      // backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)) ,url(' + SOLOLAKI_MOBILE_JPG + ')'
+      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .65)), url(' + SOLOLAKI_MOBILE_JPG + ')'
     }
   },
   heading: {
@@ -134,10 +143,12 @@ const rustaveli = {
   proto: link,
   style: {
     '@media only screen and (min-width: 1225px)': {
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
+      // backgroundImage: 'linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .85)), url(' + RUSTAVELI_JPG + ')',
+      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .1), rgba(42, 81, 61, .75)), url(' + RUSTAVELI_JPG + ')',
       paddingLeft: `${10 / 16}em`,
       '&:hover': {
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .35)) ,url(' + RUSTAVELI_JPG + ')',
+        // backgroundImage: 'linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .35)) ,url(' + RUSTAVELI_JPG + ')',
+        backgroundImage: 'linear-gradient(rgba(42, 81, 61, .1), rgba(42, 81, 61, .35)), url(' + RUSTAVELI_JPG + ')',
         backgroundPosition: 'center left 100px'
       },
       '&:hover > h4 > span': {
@@ -147,10 +158,12 @@ const rustaveli = {
     },
 
     '@media only screen and (max-width: 1225px)': {
-      backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)), url(' + RUSTAVELI_TABLET_JPG + ')'
+      // backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)), url(' + RUSTAVELI_TABLET_JPG + ')'
+      backgroundImage: 'linear-gradient(to top, rgba(42, 81, 61, .15), rgba(42, 81, 61, .65)), url(' + RUSTAVELI_TABLET_JPG + ')'
     },
     '@media only screen and (max-width: 768px)': {
-      backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)), url(' + RUSTAVELI_MOBILE_JPG + ')'
+      // backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, .1), rgba(0, 0, 0, .45)), url(' + RUSTAVELI_MOBILE_JPG + ')'
+      backgroundImage: 'linear-gradient(to top, rgba(42, 81, 61, .15), rgba(42, 81, 61, .65)), url(' + RUSTAVELI_MOBILE_JPG + ')'
     }
   },
   heading: {
@@ -162,7 +175,8 @@ const rustaveli = {
 const Container = {
   proto: [Box, Flex],
   props: {
-    boxSize: '100% 100%'
+    boxSize: '100% 100%',
+    background: 'green'
   },
   style: {
     position: 'relative',
