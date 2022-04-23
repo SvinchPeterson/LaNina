@@ -54,10 +54,11 @@ const heading = {
       letterSpacing: '2px'
     },
     '@media only screen and (max-width: 1225px)': {
-      fontSize: '2.5em',
+      fontSize: '1.4em',
       color: 'rgba(244, 233, 217, 1)',
+      letterSpacing: '3px',
       fontWeight: 900,
-      '> span': { letterSpacing: '5px', fontSize: '.3em', paddingLeft: '4px' }
+      '> span': { letterSpacing: '5px', fontSize: '.35em', paddingLeft: '4px' }
       // letterSpacing: '2px'
     },
     '@media only screen and (max-width: 768px)': {
@@ -225,8 +226,8 @@ const rustaveli = {
   },
   heading: {
     text: 'rustaveli',
-    props: { position: 'relative' },
-    underConstruction
+    props: { position: 'relative' }
+    // underConstruction
   }
 }
 const Container = {
