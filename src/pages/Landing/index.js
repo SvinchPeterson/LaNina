@@ -65,7 +65,7 @@ const underConstruction = {
   proto: [Text, Box],
   text: 'under construction',
   props: {
-    color: 'orange3',
+    color: 'orange2',
     position: 'absolute'
   },
   style: {
@@ -164,9 +164,14 @@ const sololaki = {
     },
 
     '@media only screen and (max-width: 1225px)': {
-      backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')',
-      '&:before': { background: 'linear-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
+      backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')'
+
     },
+    '@media only screen and (max-width: 1024px)': {
+      '&:before': { background: 'linear-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
+
+    },
+
     '@media only screen and (max-width: 768px)': {
       backgroundImage: 'url(' + SOLOLAKI_MOBILE_JPG + ')'
     }
@@ -192,8 +197,8 @@ const rustaveli = {
     },
 
     '@media only screen and (max-width: 1225px)': {
-      backgroundImage: 'url(' + RUSTAVELI_TABLET_JPG + ')',
-      '&:before': { background: 'linear-gradient(to top, rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
+      backgroundImage: 'url(' + RUSTAVELI_TABLET_JPG + ')'
+      // '&:before': { background: 'linear-gradient(to top, rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
       // '&:after': {
       //   content: "''",
       //   width: '100%',
@@ -204,6 +209,9 @@ const rustaveli = {
       //   left: 0,
       //   transition: 'opacity 1s ease-in-out'
       // }
+    },
+    '@media only screen and (max-width: 1024px)': {
+      '&:before': { background: 'linear-gradient(to top, rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
     },
     '@media only screen and (max-width: 768px)': {
       backgroundImage: 'url(' + RUSTAVELI_MOBILE_JPG + ')'
