@@ -54,9 +54,10 @@ const heading = {
       letterSpacing: '2px'
     },
     '@media only screen and (max-width: 1225px)': {
-      fontSize: '1.3em',
+      fontSize: '2.5em',
       color: 'rgba(244, 233, 217, 1)',
-      fontWeight: 700
+      fontWeight: 900,
+      '> span': { letterSpacing: '5px', fontSize: '.3em', paddingLeft: '4px' }
       // letterSpacing: '2px'
     },
     '@media only screen and (max-width: 1024px)': {
