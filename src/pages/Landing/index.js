@@ -54,11 +54,11 @@ const heading = {
       letterSpacing: '2px'
     },
     '@media only screen and (max-width: 1225px)': {
-      fontSize: '1.4em',
+      fontSize: '1.7em',
       color: 'rgba(244, 233, 217, 1)',
-      letterSpacing: '3px',
-      fontWeight: 900,
-      '> span': { letterSpacing: '5px', fontSize: '.35em', paddingLeft: '4px' }
+      // letterSpacing: '3px',
+      fontWeight: 700,
+      '> span': { letterSpacing: '3px', fontSize: '.45em', paddingLeft: '4px', fontWeight: 500 }
       // letterSpacing: '2px'
     },
     '@media only screen and (max-width: 768px)': {
@@ -226,8 +226,8 @@ const rustaveli = {
   },
   heading: {
     text: 'rustaveli',
-    props: { position: 'relative' }
-    // underConstruction
+    props: { position: 'relative' },
+    underConstruction
   }
 }
 const Container = {
