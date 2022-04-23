@@ -216,7 +216,7 @@ const rustaveli = {
       // }
     },
     '@media only screen and (max-width: 1024px)': {
-      '&:before': { background: 'linear-gradient(to top, rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
+      // '&:before': { background: 'linear-gradient(to top, rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
     },
     '@media only screen and (max-width: 768px)': {
       backgroundImage: 'url(' + RUSTAVELI_MOBILE_JPG + ')'
