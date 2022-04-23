@@ -1,45 +1,45 @@
 'use strict'
-import { brightness } from '../../animations'
-import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
+// import { brightness } from '../../animations'
+// import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
 
-export const styleBanner = {
-  backgroundImage: 'linear-gradient(rgba(42, 81, 61, .25), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_JPG + ')',
-  backgroundSize: 'cover',
-  backgroundAttachment: 'fixed',
-  animationName: brightness,
-  animationDuration: '1s',
-  animationTimingFunction: 'ease-in-out',
-  '> div': {
-    textTransform: 'uppercase'
-  },
-  h3: { letterSpacing: `${5 / 23}em` },
-  p: {
-    fontWeight: '300',
-    letterSpacing: `${1.5 / 20}em`
-  },
+// export const styleBanner = {
+//   backgroundImage: 'linear-gradient(rgba(42, 81, 61, .25), rgba(0, 0, 0, .5)),url(' + SOLOLAKI_JPG + ')',
+//   backgroundSize: 'cover',
+//   backgroundAttachment: 'fixed',
+//   animationName: brightness,
+//   animationDuration: '1s',
+//   animationTimingFunction: 'ease-in-out',
+//   '> div': {
+//     textTransform: 'uppercase'
+//   },
+//   h3: { letterSpacing: `${5 / 23}em` },
+//   p: {
+//     fontWeight: '300',
+//     letterSpacing: `${1.5 / 20}em`
+//   },
 
-  '@media only screen and (max-width: 1225px)': {
-    fontSize: `${30 / 16}em`,
-    backgroundAttachment: 'initial',
-    p: {
-      fontWeight: 500,
-      fontSize: `${30 / 30}em`,
-      paddingTop: `${50 / 30}em`,
-      color: '#FFD1BA'
-    }
-  }
-}
+//   '@media only screen and (max-width: 1225px)': {
+//     fontSize: `${30 / 16}em`,
+//     backgroundAttachment: 'initial',
+//     p: {
+//       fontWeight: 500,
+//       fontSize: `${30 / 30}em`,
+//       paddingTop: `${50 / 30}em`,
+//       color: '#FFD1BA'
+//     }
+//   }
+// }
 
-export default {
-  flex: 1,
-  overflowX: 'hidden',
-  overflowY: 'auto',
-  scrollBehavior: 'smooth',
-  animationName: brightness,
-  animationDuration: '1s',
-  animationTimingFunction: 'ease-in-out',
-  background: 'black'
-}
+// export default {
+//   flex: 1,
+//   overflowX: 'hidden',
+//   overflowY: 'auto',
+//   scrollBehavior: 'smooth',
+//   animationName: brightness,
+//   animationDuration: '1s',
+//   animationTimingFunction: 'ease-in-out',
+//   background: 'black'
+// }
 
 // import { scaleSololakiBanner, zoomIn, letterSpacingIn, verticalMove, opacity, paddingOpacity } from '../../animations'
 

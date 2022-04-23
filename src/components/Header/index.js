@@ -110,7 +110,7 @@ const call = {
   }
 }
 
-export default {
+export const Header = {
   tag: 'header',
   proto: Box,
   style,
