@@ -60,7 +60,8 @@ const heading = {
       '> span': { letterSpacing: '5px', fontSize: '.3em', paddingLeft: '4px' }
       // letterSpacing: '2px'
     },
-    '@media only screen and (max-width: 1024px)': {
+    '@media only screen and (max-width: 768px)': {
+      fontSize: '1.8em'
 
     }
   }
