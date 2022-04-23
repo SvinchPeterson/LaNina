@@ -226,7 +226,7 @@ const Container = {
     border: '1px solid black',
     overflow: 'hidden',
     boxSizing: 'border-box',
-    '@media only screen and (max-width: 1225px)': {
+    '@media only screen and (max-width: 1024px)': {
       flexFlow: 'column'
     }
   }
