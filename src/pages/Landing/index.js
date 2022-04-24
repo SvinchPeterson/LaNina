@@ -84,9 +84,9 @@ const underConstruction = {
     },
     '@media only screen and (max-width: 1225px)': {
       // fontSize: `${16 / 32}em`,
-      letterSpacing: '3.54px',
-      fontSize: '.3em',
-      paddingLeft: '2.2px',
+      letterSpacing: '3.1px',
+      fontSize: '.32em',
+      paddingLeft: '2px',
       fontWeight: 700,
       marginTop: '-3px'
     },
