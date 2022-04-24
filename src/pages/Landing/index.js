@@ -54,7 +54,7 @@ const heading = {
       letterSpacing: '2px'
     },
     '@media only screen and (max-width: 1225px)': {
-      fontSize: '3em',
+      fontSize: '2.2em',
       color: 'rgba(244, 233, 217, 1)',
       // letterSpacing: '3px',
       fontWeight: 700
@@ -79,15 +79,16 @@ const underConstruction = {
     display: 'block',
     '@media only screen and (min-width: 1225px)': {
       fontSize: `${12 / 16}em`,
-      // paddingTop: `${3 / 14}em`,
+      paddingTop: `${3 / 14}em`,
       opacity: 0
     },
     '@media only screen and (max-width: 1225px)': {
       // fontSize: `${16 / 32}em`,
-      letterSpacing: '5px',
+      letterSpacing: '3.54px',
       fontSize: '.3em',
-      paddingLeft: '4px',
-      fontWeight: 500
+      paddingLeft: '2.2px',
+      fontWeight: 700,
+      marginTop: '-3px'
     },
     '@media only screen and (max-width: 768px)': {
       fontWeight: 700,
