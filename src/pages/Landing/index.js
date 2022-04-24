@@ -54,11 +54,10 @@ const heading = {
       letterSpacing: '2px'
     },
     '@media only screen and (max-width: 1225px)': {
-      fontSize: '1.7em',
+      fontSize: '3em',
       color: 'rgba(244, 233, 217, 1)',
       // letterSpacing: '3px',
-      fontWeight: 700,
-      '> span': { letterSpacing: '3px', fontSize: '.45em', paddingLeft: '4px', fontWeight: 500 }
+      fontWeight: 700
       // letterSpacing: '2px'
     },
     '@media only screen and (max-width: 768px)': {
@@ -80,12 +79,24 @@ const underConstruction = {
     display: 'block',
     '@media only screen and (min-width: 1225px)': {
       fontSize: `${12 / 16}em`,
-      paddingTop: `${3 / 14}em`,
+      // paddingTop: `${3 / 14}em`,
       opacity: 0
     },
-    '@media only screen and (max-width: 1225px)': { fontSize: `${16 / 32}em` },
-    fontWeight: 700,
-    textTransform: 'uppercase'
+    '@media only screen and (max-width: 1225px)': {
+      // fontSize: `${16 / 32}em`,
+      letterSpacing: '5px',
+      fontSize: '.3em',
+      paddingLeft: '4px',
+      fontWeight: 500
+    },
+    '@media only screen and (max-width: 768px)': {
+      fontWeight: 700,
+      textTransform: 'uppercase',
+      letterSpacing: '2.9px !important',
+      paddingLeft: '2px'
+
+    }
+    // border: '3px solid red'
   }
 }
 
