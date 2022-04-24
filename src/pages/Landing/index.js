@@ -56,9 +56,7 @@ const heading = {
     '@media only screen and (max-width: 1225px)': {
       fontSize: '2.2em',
       color: 'rgba(244, 233, 217, 1)',
-      // letterSpacing: '3px',
       fontWeight: 700
-      // letterSpacing: '2px'
     },
     '@media only screen and (max-width: 768px)': {
       fontSize: '1.8em'
@@ -83,7 +81,6 @@ const underConstruction = {
       opacity: 0
     },
     '@media only screen and (max-width: 1225px)': {
-      // fontSize: `${16 / 32}em`,
       letterSpacing: '3.1px',
       fontSize: '.32em',
       paddingLeft: '2px',
@@ -97,7 +94,6 @@ const underConstruction = {
       paddingLeft: '2px'
 
     }
-    // border: '3px solid red'
   }
 }
 
@@ -153,16 +149,6 @@ const link = {
     '@media only screen and (max-width: 1225px)': {
       alignItems: 'center',
       justifyContent: 'center'
-      // '&:before': {
-      //   content: "''",
-      //   width: '100%',
-      //   height: '100%',
-      //   position: 'absolute',
-      //   background: 'linear-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .65))',
-      //   top: 0,
-      //   left: 0,
-      //   transition: 'opacity 1s ease-in-out'
-      // }
     }
   },
 
@@ -217,20 +203,6 @@ const rustaveli = {
 
     '@media only screen and (max-width: 1225px)': {
       backgroundImage: 'url(' + RUSTAVELI_TABLET_JPG + ')'
-      // '&:before': { background: 'linear-gradient(to top, rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
-      // '&:after': {
-      //   content: "''",
-      //   width: '100%',
-      //   height: '100%',
-      //   position: 'absolute',
-      //   background: 'linear-gradient(to top, rgba(42, 81, 61, .25), rgba(42, 81, 61, .65))',
-      //   top: 0,
-      //   left: 0,
-      //   transition: 'opacity 1s ease-in-out'
-      // }
-    },
-    '@media only screen and (max-width: 1024px)': {
-      // '&:before': { background: 'linear-gradient(to top, rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
     },
     '@media only screen and (max-width: 768px)': {
       backgroundImage: 'url(' + RUSTAVELI_MOBILE_JPG + ')'
@@ -242,6 +214,7 @@ const rustaveli = {
     underConstruction
   }
 }
+
 const Container = {
   proto: [Box, Flex],
   props: {
