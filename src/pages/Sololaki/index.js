@@ -2,13 +2,16 @@
 import { Box, Text, Img, Link } from '@symbo.ls/symbols'
 import { Header } from '../../components'
 import { opacity } from '../../animations'
+import { title } from '../Landing'
 
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
 
 const banner = {
   proto: Box,
   props: {
-    boxSize: '100% 100%'
+    boxSize: '100% 100%',
+    flexAlign: 'flex-start center',
+    flexFlow: 'column'
   },
   style: {
     animationName: opacity,
@@ -16,8 +19,35 @@ const banner = {
     animationTimingFunction: 'linear',
     '@media only screen and (min-width: 1225px)': {
       backgroundAttachment: 'fixed',
-      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .65)), url(' + SOLOLAKI_JPG + ')',
+      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_JPG + ')',
       backgroundSize: 'cover'
+    }
+  },
+  heading: {
+    proto: Box,
+    style: { paddingLeft: '150px' },
+    title: {
+      proto: title,
+      text: 'BB residence',
+      style: {
+        fontSize: '3em',
+        letterSpacing: '0px',
+        fontWeight: 700
+        // paddingLeft: '4em'
+      }
+    },
+    p: {
+      proto: [Text, Box],
+      props: {
+        size: 'B',
+        color: 'orange2'
+      },
+      text: 'where ordinary, becomes extraordinary',
+      style: {
+        letterSpacing: '1.1px',
+        marginTop: '-30px',
+        paddingTop: 0
+      }
     }
   }
 }
@@ -29,12 +59,12 @@ const container = {
     flex: 1,
     overflowX: 'hidden',
     overflowY: 'auto'
-
   }
 }
 export default {
   proto: container,
-  banner
+  banner,
+  Header
 
 }
 

@@ -38,7 +38,7 @@ const logo2 = {
   }
 }
 
-const heading = {
+export const title = {
   tag: 'h4',
   proto: [Text, Box],
   props: {
@@ -60,7 +60,6 @@ const heading = {
     },
     '@media only screen and (max-width: 768px)': {
       fontSize: '1.8em'
-
     }
   }
 }
@@ -152,7 +151,7 @@ const link = {
     }
   },
 
-  heading: { proto: heading }
+  title
 }
 
 const sololaki = {
@@ -181,7 +180,7 @@ const sololaki = {
       backgroundImage: 'url(' + SOLOLAKI_MOBILE_JPG + ')'
     }
   },
-  heading: {
+  title: {
     text: 'sololaki'
   }
 }
@@ -208,7 +207,7 @@ const rustaveli = {
       backgroundImage: 'url(' + RUSTAVELI_MOBILE_JPG + ')'
     }
   },
-  heading: {
+  title: {
     text: 'rustaveli',
     props: { position: 'relative' },
     underConstruction
