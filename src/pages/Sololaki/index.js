@@ -15,7 +15,8 @@ const banner = {
     boxSize: '100% 100%',
     flexAlign: 'flex-start flex-end',
     flexFlow: 'column',
-    padding: 'D D'
+    padding: '0 0 C C',
+    position: 'relative'
   },
   style: {
     animationName: opacity,
@@ -38,14 +39,14 @@ const banner = {
     proto: Box,
     props: {
       flexFlow: 'column',
-      flexAlign: 'flex-end flex-end'
+      flexAlign: 'flex-start flex-end'
     },
     title: {
       proto: title,
       text: 'BB residence',
       props: {
         color: 'cream',
-        size: 'E'
+        size: 'F'
       },
       style: {
         letterSpacing: '-1px'
@@ -60,10 +61,28 @@ const banner = {
       },
       style: {
         fontWeight: 700,
-        letterSpacing: '5px',
+        letterSpacing: '10px',
         marginTop: '-2px',
-        marginRight: '-5px'
+        marginLeft: '2px'
+        // marginRight: '-5px'
       }
+    }
+  },
+  p: {
+    proto: [Text, Box],
+    props: {
+      text: 'where ordinary, becomes extraordinary',
+      size: 'B',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      color: 'cream .75'
+    },
+    style: {
+      transform: 'translate(-50%, -50%)',
+      textTransform: 'uppercase',
+      fontWeight: 500,
+      letterSpacing: '5px'
     }
   }
 }

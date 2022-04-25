@@ -56,7 +56,7 @@ export const title = {
       fontSize: '2.2em',
       color: 'rgba(244, 233, 217, 1)',
       fontWeight: 700,
-      letterSpacing: '-2px'
+      letterSpacing: '-1px'
     },
     '@media only screen and (max-width: 768px)': {
       fontSize: '1.8em'
