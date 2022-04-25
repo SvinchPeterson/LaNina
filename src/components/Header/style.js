@@ -20,12 +20,7 @@ export const styleCall = {
   cursor: 'pointer',
   '> span': {
     opacity: 0,
-    whiteSpace: 'nowrap',
-    '@media only screen and (max-width: 1225px)': {
-      left: '-200px',
-      top: `${40 / 20}em`
-    }
-
+    whiteSpace: 'nowrap'
   },
   '&:hover > span': { opacity: 1 }
 }
@@ -33,9 +28,9 @@ export const styleCall = {
 export default {
   boxSizing: 'border-box',
   zIndex: 500,
-  mixBlendMode: 'difference',
+  width: 'fit-content',
+  transform: 'translate(-50%, 0%)',
+  background: 'radial-gradient(rgba(42, 81, 61, .85),rgba(42, 81, 61, 1))',
   '@media only screen and (max-width: 1225px)': {
-    fontSize: '2em',
-    gap: `${42 / 32}em`
   }
 }

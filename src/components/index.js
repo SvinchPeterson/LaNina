@@ -1,8 +1,6 @@
 'use strict'
-
-export * from './Logo'
 export * from './Header'
-// import { Logo, Logo2 } from './Logo'
+export * from './Logo'
 // import Header from './Header'
 // import { RoomOffers } from './RoomOffers'
 // import Menu from './Menu'

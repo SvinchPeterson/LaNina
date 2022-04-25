@@ -1,5 +1,6 @@
 'use strict'
-import { Text, Box, Img } from '@symbo.ls/symbols'
+import { Text, Box, Img, Link } from '@symbo.ls/symbols'
+import { Logo2 } from '../../components/Logo'
 
 import PHONE_PNG from '../../assets/icons/phoneRight.png'
 
@@ -21,7 +22,7 @@ const menuIcon = {
   class: [styleMenuIcon],
   props: {
     flexFlow: 'column',
-    boxSize: 'B2 A2',
+    boxSize: 'B1 A1',
     flexAlign: 'flex-start space-between'
   },
   on: {
@@ -48,34 +49,34 @@ const menuIcon = {
   ]
 }
 
-const langs = {
-  proto: Box,
-  class: [styleLangs],
-  props: {
-    flexAlign: 'center center',
-    gap: 'A'
-  },
-  childProto: {
-    proto: [Text, Box],
-    on: {
-      click: (event, element, state) => {
-        state.update({ activeLang: element.key })
-        console.log(state.activeLang, element.key)
-      }
-    },
+// const langs = {
+//   proto: Box,
+//   class: [styleLangs],
+//   props: {
+//     flexAlign: 'center center',
+//     gap: 'A'
+//   },
+//   childProto: {
+//     proto: [Text, Box],
+//     on: {
+//       click: (event, element, state) => {
+//         state.update({ activeLang: element.key })
+//         console.log(state.activeLang, element.key)
+//       }
+//     },
 
-    class: {
-      show: (element, state) => state.activeLang === element.key
-        ? { color: 'rgba(244, 233, 217, 1)', fontWeight: 700 }
-        : { color: 'rgba(244, 233, 217, .85)', fontWeight: 500 }
-    }
-  },
-  ...[
-    { props: { text: 'geo' } },
-    { props: { text: 'eng' } },
-    { props: { text: 'rus' } }
-  ]
-}
+//     class: {
+//       show: (element, state) => state.activeLang === element.key
+//         ? { color: 'rgba(244, 233, 217, 1)', fontWeight: 700 }
+//         : { color: 'rgba(244, 233, 217, .85)', fontWeight: 500 }
+//     }
+//   },
+//   ...[
+//     { props: { text: 'geo' } },
+//     { props: { text: 'eng' } },
+//     { props: { text: 'rus' } }
+//   ]
+// }
 
 const call = {
   proto: Box,
@@ -89,7 +90,7 @@ const call = {
     proto: [Img, Box],
     props: {
       src: PHONE_PNG,
-      boxSize: 'A2 A2'
+      boxSize: 'A1 A1'
     },
     style: {
       width: '100%',
@@ -104,8 +105,37 @@ const call = {
       color: 'cream',
       size: 'B',
       position: 'absolute',
-      left: '100%',
-      padding: '0 0 0 Z'
+      // left: '100%',
+      padding: '0 0 0 Z',
+      bottom: '-55px'
+    }
+  }
+}
+
+const book = {
+  proto: [Link, Box, Text],
+  props: {
+    flexFlow: 'column',
+    flexAlign: 'center center',
+    color: 'cream'
+  },
+  style: { cursor: 'pointer' },
+  logo: {
+    proto: Logo2,
+    props: {
+      boxSize: 'B1 B1'
+    }
+  },
+  span: {
+    proto: Text,
+    props: {
+      text: 'ook'
+    },
+    style: {
+      textTransform: 'uppercase',
+      fontSize: `${13 / 16}em`,
+      marginLeft: '-1px',
+      fontWeight: '700'
     }
   }
 }
@@ -115,15 +145,19 @@ export const Header = {
   proto: Box,
   style,
   props: {
-    boxSize: '100% E',
+    // boxSize: '100% E',
     position: 'fixed',
-    top: '0',
-    padding: '0 C',
+    top: '30px',
+    left: '50%',
     flexAlign: 'center center',
-    gap: 'E'
+    padding: 'Z B',
+    gap: 'E',
+    // background: 'green .9',
+    round: 'F'
   },
   check,
+
   menuIcon,
-  langs,
+  book,
   call
 }

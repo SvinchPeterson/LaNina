@@ -3,6 +3,7 @@ import { Box, Text, Img, Link } from '@symbo.ls/symbols'
 import { Header } from '../../components'
 import { opacity } from '../../animations'
 import { title } from '../Landing'
+import { Residence } from '../../articles'
 
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
 
@@ -64,7 +65,8 @@ const container = {
 export default {
   proto: container,
   banner,
-  Header
+  Header,
+  Residence
 
 }
 
