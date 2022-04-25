@@ -4,27 +4,31 @@ import { Logo2 } from '../../components/Logo'
 
 import PHONE_PNG from '../../assets/icons/phoneRight.png'
 
-import style, { styleMenuIcon, styleCheck, styleLangs, styleCall } from './style'
-
 const check = {
   tag: 'input',
   attr: {
     type: 'checkbox',
     id: 'toggle'
   },
-  class: [styleCheck]
+  style: {
+    display: 'none',
+    '&:checked ~ label > div:first-child': { width: '50%' },
+    '&:checked ~ label > div:last-child': { width: '100%' }
+  }
 }
 
 const menuIcon = {
   tag: 'label',
   attr: { for: 'toggle' },
   proto: Box,
-  class: [styleMenuIcon],
+  style: {
+    cursor: 'pointer',
+    '> div': { transition: 'width .5s ease-in-out' }
+  },
   props: {
     flexFlow: 'column',
     boxSize: 'B1 A1',
     flexAlign: 'flex-start space-between'
-    // padding: 'Z'
   },
   on: {
     click: (event, element, state) => {
@@ -57,6 +61,12 @@ const menuIcon = {
 //     flexAlign: 'center center',
 //     gap: 'A'
 //   },
+//   style: {
+//     textTransform: 'uppercase',
+//     width: `${200 / 16}em`,
+//     '> div': { cursor: 'pointer' },
+//     '> div:hover': { opacity: 1, fontWeight: 700 }
+//   },
 //   childProto: {
 //     proto: [Text, Box],
 //     on: {
@@ -81,12 +91,9 @@ const menuIcon = {
 
 const call = {
   proto: Box,
-  class: [styleCall],
   props: {
     flexAlign: 'center center',
-    // gap: 'A',
     position: 'relative'
-    // padding: 'Z'
   },
   image: {
     proto: [Img, Box],
@@ -107,10 +114,17 @@ const call = {
       color: 'cream',
       size: 'B',
       position: 'absolute',
-      // left: '100%',
       padding: '0 0 0 Z',
       bottom: '-55px'
     }
+  },
+  style: {
+    cursor: 'pointer',
+    '> span': {
+      opacity: 0,
+      whiteSpace: 'nowrap'
+    },
+    '&:hover > span': { opacity: 1 }
   }
 }
 
@@ -143,19 +157,30 @@ const book = {
   }
 }
 
-export const Header = {
+const container = {
   tag: 'header',
   proto: Box,
-  style,
   props: {
     position: 'fixed',
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    // padding: 'Z B',
-    gap: 'D2',
-    round: 'F'
+    padding: 'Z B',
+    gap: 'D2'
   },
+
+  style: {
+    zIndex: 500,
+    width: 'fit-content',
+    transform: 'translate(-50%, 0%)',
+    borderBottomLeftRadius: '30px',
+    borderBottomRightRadius: '30px',
+    background: 'radial-gradient(rgba(42, 81, 61, 1),rgba(42, 81, 61, 1))'
+  }
+}
+
+export const Header = {
+  proto: container,
   check,
 
   menuIcon,

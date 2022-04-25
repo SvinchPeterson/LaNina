@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Text, Img, Link } from '@symbo.ls/symbols'
+import { Box, Text } from '@symbo.ls/symbols'
 import { Header, Menu } from '../../components'
 import { opacity } from '../../animations'
 import { title } from '../Landing'
@@ -40,7 +40,6 @@ const banner = {
       flexFlow: 'column',
       flexAlign: 'flex-end flex-end'
     },
-    // style: { paddingLeft: '150px' },
     title: {
       proto: title,
       text: 'BB residence',
@@ -49,11 +48,7 @@ const banner = {
         size: 'E'
       },
       style: {
-        letterSpacing: '-2px'
-        // fontSize: '2.3em',
-        // letterSpacing: 'px',
-        // fontWeight: 700
-        // paddingLeft: '4em'
+        letterSpacing: '-1px'
       }
     },
     caption: {
@@ -70,19 +65,6 @@ const banner = {
         marginRight: '-5px'
       }
     }
-    // p: {
-    //   proto: [Text, Box],
-    //   props: {
-    //     size: 'B',
-    //     color: 'orange2'
-    //   },
-    //   text: 'where ordinary, becomes extraordinary',
-    //   style: {
-    //     letterSpacing: '1.1px',
-    //     marginTop: '-30px',
-    //     paddingTop: 0
-    //   }
-    // }
   }
 }
 
