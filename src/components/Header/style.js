@@ -7,6 +7,8 @@ export const styleCheck = {
 }
 export const styleMenuIcon = {
   cursor: 'pointer',
+  // border: '2px solid red',
+  padding: '10px',
   '> div': { transition: 'width .5s ease-in-out' }
 }
 export const styleLangs = {

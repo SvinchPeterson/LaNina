@@ -22,7 +22,7 @@ const menuIcon = {
   class: [styleMenuIcon],
   props: {
     flexFlow: 'column',
-    boxSize: 'B1 A1',
+    boxSize: 'C1 C',
     flexAlign: 'flex-start space-between'
   },
   on: {
