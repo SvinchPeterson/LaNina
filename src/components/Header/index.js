@@ -152,7 +152,7 @@ export const Header = {
     top: '40px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Z B',
+    // padding: 'Z B',
     gap: 'D2',
     round: 'F'
   },
