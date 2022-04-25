@@ -149,7 +149,7 @@ export const Header = {
   style,
   props: {
     position: 'fixed',
-    top: '40px',
+    top: '0px',
     left: '50%',
     flexAlign: 'center center',
     // padding: 'Z B',

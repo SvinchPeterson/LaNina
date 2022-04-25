@@ -34,10 +34,11 @@ export default {
   zIndex: 500,
   width: 'fit-content',
   transform: 'translate(-50%, 0%)',
-  padding: '10px 25px',
+  borderTopLeftRadius: 0,
+  borderTopRightRadius: 0,
+  borderBottomLeftRadius: '30px',
+  borderBottomRightRadius: '30px',
+  padding: '6px 25px',
   // border: '1px solid rgba(42, 81, 61, 1)',
-  background: 'radial-gradient(rgba(42, 81, 61, 1),rgba(42, 81, 61, 1))',
-  '@media only screen and (max-width: 768px)': {
-    padding: '10px 25px'
-  }
+  background: 'radial-gradient(rgba(42, 81, 61, 1),rgba(42, 81, 61, 1))'
 }
