@@ -22,8 +22,9 @@ const menuIcon = {
   class: [styleMenuIcon],
   props: {
     flexFlow: 'column',
-    boxSize: 'C1 C',
+    boxSize: 'B1 A1',
     flexAlign: 'flex-start space-between'
+    // padding: 'Z'
   },
   on: {
     click: (event, element, state) => {
@@ -83,8 +84,9 @@ const call = {
   class: [styleCall],
   props: {
     flexAlign: 'center center',
-    gap: 'A',
+    // gap: 'A',
     position: 'relative'
+    // padding: 'Z'
   },
   image: {
     proto: [Img, Box],

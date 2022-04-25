@@ -8,7 +8,7 @@ export const styleCheck = {
 export const styleMenuIcon = {
   cursor: 'pointer',
   // border: '2px solid red',
-  padding: '10px',
+  // border: '1px solid red',
   '> div': { transition: 'width .5s ease-in-out' }
 }
 export const styleLangs = {
@@ -20,6 +20,8 @@ export const styleLangs = {
 
 export const styleCall = {
   cursor: 'pointer',
+  // border: '1px solid red',
+  // padding: '10px',
   '> span': {
     opacity: 0,
     whiteSpace: 'nowrap'
@@ -28,7 +30,7 @@ export const styleCall = {
 }
 
 export default {
-  boxSizing: 'border-box',
+  // boxSizing: 'border-box',
   zIndex: 500,
   width: 'fit-content',
   transform: 'translate(-50%, 0%)',
