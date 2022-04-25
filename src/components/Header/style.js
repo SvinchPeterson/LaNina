@@ -37,6 +37,7 @@ export default {
   padding: '10px 25px',
   // border: '1px solid rgba(42, 81, 61, 1)',
   background: 'radial-gradient(rgba(42, 81, 61, 1),rgba(42, 81, 61, 1))',
-  '@media only screen and (max-width: 1225px)': {
+  '@media only screen and (max-width: 768px)': {
+    padding: '10px 25px'
   }
 }
