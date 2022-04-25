@@ -71,7 +71,7 @@ const socialMedia = {
   ]
 }
 
-export default {
+export const Menu = {
   tag: 'aside',
   proto: Box,
   style,

@@ -1,6 +1,7 @@
 'use strict'
 export * from './Header'
 export * from './Logo'
+export * from './Menu'
 // import Header from './Header'
 // import { RoomOffers } from './RoomOffers'
 // import Menu from './Menu'

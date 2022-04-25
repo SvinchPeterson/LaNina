@@ -50,13 +50,13 @@ export const title = {
     zIndex: 2,
     '@media only screen and (min-width: 1225px)': {
       transition: 'font-weight .8s ease-in-out, letter-spacing .8s ease-in-out, border .8s ease-in-out',
-      fontWeight: 500,
-      letterSpacing: '2px'
+      fontWeight: 700
     },
     '@media only screen and (max-width: 1225px)': {
       fontSize: '2.2em',
       color: 'rgba(244, 233, 217, 1)',
-      fontWeight: 700
+      fontWeight: 700,
+      letterSpacing: '-2px'
     },
     '@media only screen and (max-width: 768px)': {
       fontSize: '1.8em'
@@ -74,6 +74,7 @@ const underConstruction = {
   style: {
     whiteSpace: 'nowrap',
     display: 'block',
+    letterSpacing: '2px',
     '@media only screen and (min-width: 1225px)': {
       fontSize: `${12 / 16}em`,
       paddingTop: `${3 / 14}em`,
@@ -142,7 +143,7 @@ const link = {
       '&:hover > h4': {
         color: 'rgba(244, 233, 217, 1)',
         fontWeight: 700,
-        letterSpacing: '2.5px'
+        letterSpacing: '0px'
       }
     },
     '@media only screen and (max-width: 1225px)': {

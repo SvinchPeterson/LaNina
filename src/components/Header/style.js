@@ -30,7 +30,8 @@ export default {
   zIndex: 500,
   width: 'fit-content',
   transform: 'translate(-50%, 0%)',
-  background: 'radial-gradient(rgba(42, 81, 61, .85),rgba(42, 81, 61, 1))',
+  // border: '1px solid rgba(42, 81, 61, 1)',
+  background: 'radial-gradient(rgba(42, 81, 61, 1),rgba(42, 81, 61, 1))',
   '@media only screen and (max-width: 1225px)': {
   }
 }

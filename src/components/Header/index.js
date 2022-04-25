@@ -134,8 +134,9 @@ const book = {
     style: {
       textTransform: 'uppercase',
       fontSize: `${13 / 16}em`,
-      marginLeft: '-1px',
-      fontWeight: '700'
+      marginLeft: '-2.5px',
+      fontWeight: '700',
+      letterSpacing: '0px'
     }
   }
 }
@@ -145,14 +146,12 @@ export const Header = {
   proto: Box,
   style,
   props: {
-    // boxSize: '100% E',
     position: 'fixed',
-    top: '30px',
+    top: '40px',
     left: '50%',
     flexAlign: 'center center',
     padding: 'Z B',
-    gap: 'E',
-    // background: 'green .9',
+    gap: 'D2',
     round: 'F'
   },
   check,

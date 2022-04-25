@@ -1,55 +1,88 @@
 'use strict'
 import { Box, Text, Img, Link } from '@symbo.ls/symbols'
-import { Header } from '../../components'
+import { Header, Menu } from '../../components'
 import { opacity } from '../../animations'
 import { title } from '../Landing'
 import { Residence } from '../../articles'
 
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
+import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
+import SOLOLAKI_MOBILE_JPG from '../../assets/images/sololaki/sololaki-mobile.jpg'
 
 const banner = {
   proto: Box,
   props: {
     boxSize: '100% 100%',
-    flexAlign: 'flex-start center',
-    flexFlow: 'column'
+    flexAlign: 'flex-start flex-end',
+    flexFlow: 'column',
+    padding: 'D D'
   },
   style: {
     animationName: opacity,
     animationDuration: '2s',
     animationTimingFunction: 'linear',
+    boxSizing: 'border-box',
+    backgroundSize: 'cover',
     '@media only screen and (min-width: 1225px)': {
       backgroundAttachment: 'fixed',
-      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_JPG + ')',
-      backgroundSize: 'cover'
+      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_JPG + ')'
+    },
+    '@media only screen and (max-width: 1225px)': {
+      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_TABLET_JPG + ')'
+    },
+    '@media only screen and (max-width: 768px)': {
+      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_MOBILE_JPG + ')'
     }
   },
   heading: {
     proto: Box,
-    style: { paddingLeft: '150px' },
+    props: {
+      flexFlow: 'column',
+      flexAlign: 'flex-end flex-end'
+    },
+    // style: { paddingLeft: '150px' },
     title: {
       proto: title,
       text: 'BB residence',
+      props: {
+        color: 'cream',
+        size: 'E'
+      },
       style: {
-        fontSize: '3em',
-        letterSpacing: '0px',
-        fontWeight: 700
+        letterSpacing: '-2px'
+        // fontSize: '2.3em',
+        // letterSpacing: 'px',
+        // fontWeight: 700
         // paddingLeft: '4em'
       }
     },
-    p: {
+    caption: {
       proto: [Text, Box],
       props: {
-        size: 'B',
-        color: 'orange2'
+        text: 'SOLOLAKI',
+        size: 'A',
+        color: 'orange'
       },
-      text: 'where ordinary, becomes extraordinary',
       style: {
-        letterSpacing: '1.1px',
-        marginTop: '-30px',
-        paddingTop: 0
+        fontWeight: 700,
+        letterSpacing: '5px',
+        marginTop: '-2px',
+        marginRight: '-5px'
       }
     }
+    // p: {
+    //   proto: [Text, Box],
+    //   props: {
+    //     size: 'B',
+    //     color: 'orange2'
+    //   },
+    //   text: 'where ordinary, becomes extraordinary',
+    //   style: {
+    //     letterSpacing: '1.1px',
+    //     marginTop: '-30px',
+    //     paddingTop: 0
+    //   }
+    // }
   }
 }
 
@@ -63,9 +96,15 @@ const container = {
   }
 }
 export default {
+  state: {
+    activeMenu: true,
+    activeMenuItem: 0
+  },
+
   proto: container,
   banner,
   Header,
+  Menu,
   Residence
 
 }
