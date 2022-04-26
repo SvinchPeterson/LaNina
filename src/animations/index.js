@@ -9,6 +9,14 @@ export const opacity = keyframes`
     opacity: 1;
   }
 `
+export const zoomiIn = keyframes`
+  from {
+    transform: scale(1.3);
+  }
+  to {
+    transform: scale(1);
+  }
+`
 export const zoomInCoverLogo = keyframes`
   from {
     opacity: 0;

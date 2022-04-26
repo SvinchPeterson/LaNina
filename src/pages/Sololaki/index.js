@@ -1,8 +1,7 @@
 'use strict'
 import { Box, Text } from '@symbo.ls/symbols'
 import { Header, Menu } from '../../components'
-import { opacity } from '../../animations'
-import { title } from '../Landing'
+import { opacity, zoomiIn } from '../../animations'
 import { Residence } from '../../articles'
 
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
@@ -15,7 +14,7 @@ const banner = {
     boxSize: '100% 100%',
     flexAlign: 'flex-start flex-end',
     flexFlow: 'column',
-    padding: '0 0 C C',
+    padding: '0 0 D D',
     position: 'relative'
   },
   style: {
@@ -42,21 +41,23 @@ const banner = {
       flexAlign: 'flex-start flex-end'
     },
     title: {
-      proto: title,
+      proto: [Text, Box],
       text: 'BB residence',
       props: {
         color: 'cream',
         size: 'F'
       },
       style: {
-        letterSpacing: '-1px'
+        letterSpacing: '-2.5px',
+        fontWeight: 'bold',
+        textTransform: 'uppercase'
       }
     },
     caption: {
       proto: [Text, Box],
       props: {
         text: 'SOLOLAKI',
-        size: 'A',
+        // size: 'B',
         color: 'orange'
       },
       style: {
@@ -64,7 +65,6 @@ const banner = {
         letterSpacing: '10px',
         marginTop: '-2px',
         marginLeft: '2px'
-        // marginRight: '-5px'
       }
     }
   },
@@ -82,7 +82,8 @@ const banner = {
       transform: 'translate(-50%, -50%)',
       textTransform: 'uppercase',
       fontWeight: 500,
-      letterSpacing: '5px'
+      letterSpacing: '5px',
+      whiteSpace: 'nowrap'
     }
   }
 }
