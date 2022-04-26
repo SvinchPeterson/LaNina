@@ -32,7 +32,6 @@ export const styleSocialMedia = {
 
 export default {
   boxSizing: 'border-box',
-  // background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7))',
   background: 'radial-gradient(rgba(42, 81, 61, .55), rgba(42, 81, 61, .85))',
   backdropFilter: 'blur(2px)',
   transition: 'opacity .5s ease-in-out',
@@ -49,7 +48,7 @@ export default {
   '@media only screen and (max-width: 1024px)': {
     alignItems: 'center',
     justifyContent: 'center',
-    gap: `${100 / 16}em`
+    gap: `${200 / 16}em`
   }
 
 }
