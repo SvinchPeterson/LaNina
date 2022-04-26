@@ -40,8 +40,18 @@ const heading = {
     flexFlow: 'column',
     flexAlign: 'flex-start flex-end',
     position: 'absolute',
-    padding: 'E'
+    padding: '0 0 E E'
   },
+  style: {
+    '@media only screen and (max-width: 768px)': {
+      padding: `0 0 ${50 / 16}em ${50 / 16}em`
+    },
+    '@media only screen and (max-width: 480px)': {
+      padding: `0 0 ${100 / 16}em 0`,
+      alignSelf: 'center'
+    }
+  },
+
   title: {
     proto: [Text, Box],
     text: 'BB residence',
@@ -76,7 +86,6 @@ const paragraph = {
   tag: 'p',
   proto: [Text, Box],
   props: {
-    // text: 'where ordinary, becomes extraordinary',
     size: 'B',
     position: 'absolute',
     top: '50%',
@@ -89,10 +98,15 @@ const paragraph = {
     fontWeight: 500,
     letterSpacing: '5px',
     whiteSpace: 'nowrap',
-    lineHeight: '30px',
     '@media only screen and (max-width: 768px)': {
       display: 'flex',
-      flexFlow: 'column'
+      flexFlow: 'column',
+      fontSize: '16px',
+      lineHeight: '25px'
+    },
+    '@media only screen and (max-width: 380px)': {
+      fontSize: '14px'
+
     }
   },
   span: { text: 'where ordinary,' },
@@ -104,7 +118,8 @@ const container = {
   props: {
     boxSize: '100% 100%',
     position: 'relative',
-    flexAlign: 'flex-end flex-start'
+    flexAlign: 'flex-start flex-end',
+    flexFlow: 'column'
   },
   style: {
     overflow: 'hidden',
