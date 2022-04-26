@@ -48,7 +48,9 @@ export default {
   '@media only screen and (max-width: 1024px)': {
     alignItems: 'center',
     justifyContent: 'center',
+    gap: `${100 / 16}em`
+  },
+  '@media only screen and (min-height: 1024px)': {
     gap: `${200 / 16}em`
   }
-
 }
