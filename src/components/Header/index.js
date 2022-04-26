@@ -116,14 +116,17 @@ const call = {
       position: 'absolute',
       padding: '0 0 0 Z',
       bottom: '-55px'
+    },
+    style: {
+      opacity: 0,
+      whiteSpace: 'nowrap',
+      '@media only screen and (max-width: 768px)': {
+        right: 0
+      }
     }
   },
   style: {
     cursor: 'pointer',
-    '> span': {
-      opacity: 0,
-      whiteSpace: 'nowrap'
-    },
     '&:hover > span': { opacity: 1 }
   }
 }
