@@ -52,7 +52,8 @@ const heading = {
     style: {
       letterSpacing: '-2.5px',
       fontWeight: 'bold',
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
+      whiteSpace: 'nowrap'
     }
   },
   caption: {
