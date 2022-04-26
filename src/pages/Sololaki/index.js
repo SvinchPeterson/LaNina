@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Text } from '@symbo.ls/symbols'
+import { Box } from '@symbo.ls/symbols'
 import { Header, Menu } from '../../components'
 import { Residence } from '../../articles'
 import { banner } from './banner'

@@ -85,9 +85,6 @@ export const Menu = {
     position: 'fixed',
     top: '0',
     left: '0'
-    // flexFlow: 'column',
-    // flexAlign: 'flex-end center',
-    // gap: 'E'
   },
 
   sectionLinks,

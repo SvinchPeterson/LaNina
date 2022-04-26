@@ -102,7 +102,8 @@ const paragraph = {
       display: 'flex',
       flexFlow: 'column',
       fontSize: '16px',
-      lineHeight: '25px'
+      lineHeight: '23px',
+      textAlign: 'center'
     },
     '@media only screen and (max-width: 380px)': {
       fontSize: '14px'
