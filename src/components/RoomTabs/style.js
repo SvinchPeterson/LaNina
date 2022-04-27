@@ -9,7 +9,12 @@ export const styleParagraph = {
   transitionDelay: '.6s',
   lineHeight: `${23 / 16}em`,
   letterSpacing: '1px',
-  fontWeight: '300'
+  fontWeight: 400,
+  '@media only screen and (max-width: 480px)': {
+    fontSize: `${15 / 16}em`,
+    minWidth: `${300 / 16}em`,
+    paddingTop: `${35 / 15}em`
+  }
 }
 
 export const styleBook = {
@@ -24,7 +29,9 @@ export const styleBook = {
   background: 'radial-gradient( rgba(168, 98, 63, .2), rgba(168, 98, 63, .15))',
   opacity: '.9',
   textDecoration: 'none',
-  '&:hover': { opacity: 1 }
+  bottom: '10%',
+  '&:hover': { opacity: 1 },
+  '@media only screen and (max-width: 480px)': { bottom: '5%' }
 }
 export const styleRoomTab = {
   flex: 1,
@@ -36,6 +43,18 @@ export const styleRoomTab = {
   backgroundPosition: 'center',
   zIndex: 1,
   textDecoration: 'none',
+  position: 'relative',
+  '&:before': {
+    content: '""',
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0,
+    background: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, .85))',
+    opacity: '.55',
+    transition: 'opacity .7s ease-in-out'
+  },
   '@media only screen and (min-width: 1225px)': {
     minHeight: `${500 / 16}em`,
     '&:hover': { flex: 6 },
@@ -44,12 +63,15 @@ export const styleRoomTab = {
       transitionDelay: '0s',
       transition: 'opacity 0s ease-in-out'
     },
-    '&:hover > h3': { letterSpacing: '1px' }
+    '&:hover > h3': { letterSpacing: '1px' },
+    '&:hover:before': { opacity: 1 }
   },
   '@media only screen and (max-width: 1225px)': {
     minWidth: `${700 / 16}em`,
     height: `${500 / 16}em`
-
+  },
+  '@media only screen and (max-width: 768px)': {
+    minWidth: `100%`
   },
   '> h3': {
     textTransform: 'uppercase',

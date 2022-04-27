@@ -1,7 +1,7 @@
 'use strict'
 import { Box } from '@symbo.ls/symbols'
 import { Header, Menu } from '../../components'
-import { Residence } from '../../articles'
+import { Residence, Apartments } from '../../articles'
 import { banner } from './banner'
 
 const container = {
@@ -25,7 +25,8 @@ export default {
   banner,
   Header,
   Menu,
-  Residence
+  Residence,
+  Apartments
 
 }
 

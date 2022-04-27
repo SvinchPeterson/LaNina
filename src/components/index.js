@@ -2,6 +2,7 @@
 export * from './Header'
 export * from './Logo'
 export * from './Menu'
+export * from './RoomTabs'
 // import Header from './Header'
 // import { RoomOffers } from './RoomOffers'
 // import Menu from './Menu'

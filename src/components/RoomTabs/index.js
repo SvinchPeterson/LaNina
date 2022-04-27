@@ -11,7 +11,7 @@ import GREENFOREST_JPG from '../../assets/images/greenForest/greenforestTab.jpg'
 import RETRO_JPG from '../../assets/images/retro/retroTab.jpg'
 
 import DRESS_PNG from '../../assets/icons/dress.png'
-import BRICKS_PNG from '../../assets/icons/bricks2.png'
+import BRICKS_PNG from '../../assets/icons/bricks.png'
 import SOFA_PNG from '../../assets/icons/sofa.png'
 import LEAF_PNG from '../../assets/icons/leaf.png'
 import VINYL_PNG from '../../assets/icons/vinyl.png'
@@ -24,7 +24,6 @@ const book = {
   props: {
     flexAlign: 'center center',
     flexFlow: 'row',
-    bottom: '10%',
     left: '50%',
     padding: 'Z A1',
     gap: 'Y'
@@ -64,14 +63,6 @@ const roomTab = {
       })
     }
   },
-  class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 6,
-        backgroundAttachment: 'fixed'
-      }
-      : {}
-  },
 
   h3: {
     proto: [Text, Box],
@@ -102,19 +93,14 @@ const roomTab = {
 
 export const tabBallerina = {
   proto: roomTab,
-  style: {
-    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)),url(' + BALLERINA_JPG + ')',
-    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')' }
-  },
+  style: { backgroundImage: 'url(' + BALLERINA_JPG + ')' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
         flex: 6,
-        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + BALLERINA_JPG + ')',
+        '&:before': { opacity: 1 },
         backgroundAttachment: 'fixed',
-        '@media only screen and (max-width: 1225px)': {
-          backgroundAttachment: 'initial'
-        }
+        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
   props: { href: '#roomBallerina' },
@@ -132,19 +118,14 @@ export const tabBallerina = {
 export const tabRedBrick = {
   proto: roomTab,
   props: { href: '#roomRedBrick' },
-  style: {
-    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + REDBRICK_JPG + ')',
-    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')' }
-  },
+  style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
         flex: 6,
-        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + REDBRICK_JPG + ')',
         backgroundAttachment: 'fixed',
-        '@media only screen and (max-width: 1225px)': {
-          backgroundAttachment: 'initial'
-        }
+        '&:before': { opacity: 1 },
+        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
   h3: { props: { text: 'red brick' } },
@@ -161,19 +142,14 @@ export const tabRedBrick = {
 export const tabYellowCouch = {
   proto: roomTab,
   props: { href: '#roomYellowCouch' },
-  style: {
-    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + YELLOWCOUCH_JPG + ')',
-    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + YELLOWCOUCH_JPG + ')' }
-  },
+  style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
         flex: 6,
-        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + YELLOWCOUCH_JPG + ')',
         backgroundAttachment: 'fixed',
-        '@media only screen and (max-width: 1225px)': {
-          backgroundAttachment: 'initial'
-        }
+        '&:before': { opacity: 1 },
+        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
   h3: { props: { text: 'yellow couch' } },
@@ -190,19 +166,14 @@ export const tabYellowCouch = {
 export const tabGreenForest = {
   proto: roomTab,
   props: { href: '#roomGreenForest' },
-  style: {
-    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + GREENFOREST_JPG + ')',
-    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + GREENFOREST_JPG + ')' }
-  },
+  style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
         flex: 6,
-        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + GREENFOREST_JPG + ')',
         backgroundAttachment: 'fixed',
-        '@media only screen and (max-width: 1225px)': {
-          backgroundAttachment: 'initial'
-        }
+        '&:before': { opacity: 1 },
+        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
   h3: { props: { text: 'green forest' } },
@@ -219,19 +190,14 @@ export const tabGreenForest = {
 export const tabRetro = {
   proto: roomTab,
   props: { href: '#roomRetro' },
-  style: {
-    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45)), url(' + RETRO_JPG + ')',
-    '&:hover': { backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + RETRO_JPG + ')' }
-  },
+  style: { backgroundImage: 'url(' + RETRO_JPG + ')' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
         flex: 6,
-        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),url(' + RETRO_JPG + ')',
         backgroundAttachment: 'fixed',
-        '@media only screen and (max-width: 1225px)': {
-          backgroundAttachment: 'initial'
-        }
+        '&:before': { opacity: 1 },
+        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
   h3: { props: { text: 'retro' } },

@@ -1,5 +1,5 @@
 'use strict'
-import { Box, IconText, Text } from '@symbo.ls/symbols'
+import { Box, Text } from '@symbo.ls/symbols'
 
 import { bbSololaki } from '../../texts'
 

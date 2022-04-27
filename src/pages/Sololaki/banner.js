@@ -70,12 +70,12 @@ const heading = {
     proto: [Text, Box],
     props: {
       text: 'SOLOLAKI',
-      // size: 'B',
+      size: 'B',
       color: 'orange'
     },
     style: {
       fontWeight: 700,
-      letterSpacing: '10px',
+      letterSpacing: '7px',
       marginTop: '-2px',
       marginLeft: '2px'
     }
