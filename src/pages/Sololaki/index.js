@@ -10,7 +10,9 @@ const container = {
   style: {
     flex: 1,
     overflowX: 'hidden',
-    overflowY: 'auto'
+    overflowY: 'auto',
+    scrollBehavior: 'smooth',
+    background: 'rgba(244, 233, 217, 1)'
   }
 }
 export default {

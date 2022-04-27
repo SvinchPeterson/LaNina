@@ -17,9 +17,9 @@ const image = {
   style: {
     boxSizing: 'border-box',
     backgroundSize: 'cover',
-    animationName: zoomiIn,
-    animationDuration: '7s',
-    animationTimingFunction: 'ease-in-out',
+    // animationName: zoomiIn,
+    // animationDuration: '10s',
+    // animationTimingFunction: 'ease-in-out',
     '@media only screen and (min-width: 1225px)': {
       backgroundAttachment: 'fixed',
       backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_JPG + ')'
@@ -126,7 +126,8 @@ const container = {
     overflow: 'hidden',
     animationName: opacity,
     animationDuration: '3s',
-    animationTimingFunction: 'linear'
+    animationTimingFunction: 'linear',
+    margin: '0 auto'
   }
 }
 

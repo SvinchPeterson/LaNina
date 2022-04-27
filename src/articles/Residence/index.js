@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Text } from '@symbo.ls/symbols'
+import { Box, IconText, Text } from '@symbo.ls/symbols'
 
 import { bbSololaki } from '../../texts'
 
@@ -8,89 +8,42 @@ import { styleResidence, styleEntrence } from './style'
 const residence = {
   proto: Box,
   class: [styleResidence],
-  props: {
-    flexAlign: 'flex-start center'
-  },
   p: {
-    proto: [bbSololaki, Box],
-    props: {
-      color: 'black .35',
-      background: 'cream',
-      padding: 'E 0 E E'
-    }
+    proto: [bbSololaki, Box]
   }
 }
 
-const entrenceItem = {
-  proto: Box,
-  props: {
-    flexFlow: 'row',
-    flexAlign: 'center flex-start',
-    gap: 'Z'
-  },
-  dot: {
-    proto: Box,
-    props: {
-      boxSize: 'X1 X1',
-      background: 'black .35'
-    },
-    style: {
-      borderRadius: '100%',
-      '@media only screen and (max-width: 1225px)': {
-        background: 'rgba(0, 0, 0, .55)'
-      }
-    }
-  },
-  p: {
-    proto: [Text, Box],
-    props: { color: 'black .35' },
-    style: { letterSpacing: '1px', fontWeight: 300 }
-  },
-
-  style: {
-    '@media only screen and (max-width: 1225px)': {
-      '> p': {
-        color: 'rgba(0, 0, 0, .55)',
-        fontWeight: 500
-      }
-    }
-  }
-}
-
-const entrence = {
+const entrance = {
   proto: Box,
   class: [styleEntrence],
-  props: {
-    flexAlign: 'flex-end flex-end'
-  },
 
   texts: {
     proto: Box,
     props: {
-      flexFlow: 'column',
-      background: 'cream',
-      padding: 'D1 E C1 E'
+      flexFlow: 'column'
+    },
+    style: {
+      fontSize: `${15 / 16}em`,
+      fontWeight: 400
     },
     entrences: {
       proto: Box,
       props: {
         flexFlow: 'column',
-        gap: 'Z'
+        gap: 'Y2'
       },
-      childProto: entrenceItem,
-      ...[
-        {
-          dot: {},
-          p: { props: { text: 'private entrance' } }
-        },
-        {
-          dot: {},
-          p: { props: { text: 'separate street or building entrance' } }
-        },
-        {
-          dot: {},
-          p: { props: { text: 'free parking on premises' } }
+      childProto: {
+        proto: [Text, Box],
+        props: { color: 'cream' },
+        style: {
+          letterSpacing: '1.5px',
+          textTransform: 'uppercase'
         }
+      },
+      ...[
+        { props: { text: 'private entrance' } },
+        { props: { text: 'separate street or building entrance' } },
+        { props: { text: 'free parking on premises' } }
       ]
     },
     luggage: {
@@ -98,17 +51,13 @@ const entrence = {
       proto: [Text, Box],
       props: {
         text: `Luggage dropoff allowed for guests' convenience when they have early arrival or late departure`,
-        color: 'orange .75',
+        color: 'orange2 1',
         padding: 'B 0 Z 0'
       },
       style: {
-        maxWidth: `${400 / 16}em`,
+        maxWidth: `${450 / 16}em`,
         letterSpacing: '1px',
-        lineHeight: '23px',
-        fontWeight: 300,
-        '@media only screen and (max-width: 1225px)': {
-          color: '#EC8551'
-        }
+        lineHeight: '20px'
       }
     },
     stay: {
@@ -116,16 +65,17 @@ const entrence = {
       proto: [Text, Box],
       props: {
         text: 'Long term stays allow for 28 days or more',
-        color: 'orange .75'
+        color: 'orange2 1'
       },
       style: {
-        fontWeight: 300,
-        letterSpacing: '1px',
-        '@media only screen and (max-width: 1225px)': {
-          color: '#EC8551'
-        }
+        fontWeight: 400,
+        letterSpacing: '1px'
       }
     }
+  },
+
+  image: {
+    tag: 'span'
   }
 }
 
@@ -140,6 +90,6 @@ export default {
   style: { background: 'rgba(244, 233, 217, 1)' },
 
   residence,
-  entrence
+  entrance
 
 }
