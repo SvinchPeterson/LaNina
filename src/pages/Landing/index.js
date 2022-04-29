@@ -3,7 +3,7 @@ import { Box, Link, Text, Flex } from '@symbo.ls/symbols'
 
 import { Logo, Logo2 } from '../../components'
 
-import { opacity } from '../../animations'
+import { opacity, position } from '../../animations'
 
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
@@ -104,9 +104,9 @@ const link = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     boxSizing: 'border-box',
-    animationName: opacity,
-    animationDuration: '2s',
-    animationTimingFunction: 'ease-in-out',
+    // animationName: position,
+    // animationDuration: '1s',
+    // animationTimingFunction: 'ease-in-out',
     textDecoration: 'none',
     position: 'relative',
     '&:before': {
@@ -226,6 +226,9 @@ const Container = {
     border: '1px solid black',
     overflow: 'hidden',
     boxSizing: 'border-box',
+    // animationName: opacity,
+    // animationDuration: '2s',
+    // animationTimingFunction: 'ease-in-out',
     '@media only screen and (max-width: 1024px)': {
       flexFlow: 'column'
     }

@@ -5,15 +5,14 @@ import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 export const styleHeader = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(' + ORNAMENT_PNG + ')',
-  padding: `${200 / 16}em 0`,
-  // border: '5px solid red',
+  padding: `${150 / 16}em 0`,
   '@media only screen and (min-width: 1225px)': {
-    backgroundAttachment: 'fixed'
+    backgroundAttachment: 'fixed',
+    backgroundImage: 'url(' + ORNAMENT_PNG + ')'
   },
   '@media only screen and (max-width: 1225px)': {
-    // backgroundImage: 'url(' + ORNAMENT2_PNG + ')',
-    overflowX: 'hidden'
+    overflowX: 'hidden',
+    background: 'rgba(42, 81, 61, .75)'
 
   },
   '> nav': {

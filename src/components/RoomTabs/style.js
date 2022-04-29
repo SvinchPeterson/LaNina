@@ -25,7 +25,7 @@ export const styleBook = {
   fontWeight: 700,
   borderRadius: '50px',
   border: '1.5px solid rgba(168, 98, 63, 1)',
-  letterSpacing: '1px',
+  letterSpacing: '0',
   background: 'radial-gradient( rgba(168, 98, 63, .2), rgba(168, 98, 63, .15))',
   opacity: '.9',
   textDecoration: 'none',
@@ -52,7 +52,7 @@ export const styleRoomTab = {
     top: 0,
     left: 0,
     background: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, .85))',
-    opacity: '.55',
+    opacity: '.5',
     transition: 'opacity .7s ease-in-out'
   },
   '@media only screen and (min-width: 1225px)': {

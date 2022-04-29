@@ -9,6 +9,14 @@ export const opacity = keyframes`
     opacity: 1;
   }
 `
+export const position = keyframes`
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: center;
+  }
+`
 export const zoomiIn = keyframes`
   from {
     transform: scale(1.3);

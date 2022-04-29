@@ -110,20 +110,21 @@ export const navButtons2 = {
   proto: Box,
   props: {
     position: 'absolute',
-    top: '150px',
+    top: '50%',
     left: `50%`,
     flexFlow: 'row',
-    gap: 'B'
+    flexAlign: 'center space-between',
+    gap: 'B',
+    padding: ''
   },
   style: {
     transform: 'translate(-50%, -50%)',
     zIndex: '200',
     display: 'none',
-
-    '> button': { cursor: 'pointer' },
+    height: 0,
+    width: '100%',
     '@media only screen and (max-width: 1225px)': {
       display: 'flex'
-
     }
   },
 
@@ -131,41 +132,43 @@ export const navButtons2 = {
     proto: Box,
     tag: 'button',
     props: {
-      padding: 'Z B'
+      padding: 'A'
     },
     style: {
-      background: 'radial-gradient(rgba(244, 233, 217, .45), rgba(168, 98, 63, .45))',
+      background: 'transparent',
       backdropFilter: 'blur(10px)',
-      border: '1.5px solid rgba(168, 98, 63, 1)',
-      '&:hover': { background: 'radial-gradient(rgba(244, 233, 217, .35), rgba(168, 98, 63, .45))' },
-      '> img': { opacity: '.55' }
+      // border: 'none',
+      cursor: 'pointer',
+      border: '2px solid rgba(168, 98, 63, 1)'
+      // '&:hover': { background: 'radial-gradient(rgba(244, 233, 217, .35), rgba(168, 98, 63, .45))' }
+      // '> img': { opacity: '.55' }
     }
   },
   ...[
     {
       style: {
-        borderTopLeftRadius: '50px',
-        borderBottomLeftRadius: '50px'
+        // borderTopLeftRadius: '50px',
+        // borderBottomLeftRadius: '50px'
       },
       image: {
         proto: [Img, Box],
         props: {
           src: LEFT_ARROW_PNG,
-          boxSize: 'C '
+          boxSize: 'B '
         }
       }
     },
 
     {
       style: {
-        borderTopRightRadius: '50px',
-        borderBottomRightRadius: '50px'
+        // borderTopRightRadius: '50px',
+        // borderBottomRightRadius: '50px'
       },
       image: {
         proto: [Img, Box],
         props: {
           src: RIGHT_ARROW_PNG,
-          boxSize: 'C '
+          boxSize: 'B '
         }
       }
     }

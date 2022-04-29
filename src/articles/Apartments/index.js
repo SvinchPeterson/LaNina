@@ -17,11 +17,9 @@ const roomsTabs = {
     position: 'relative',
     flexFlow: 'column',
     flexAlign: 'center center'
-    // gap: 'B'
   },
   buttons: {
     proto: navButtons2
-
   },
   tabsContainer: {
     tag: 'nav',

@@ -10,9 +10,7 @@ import {
 
 const Room = {
   proto: Box,
-  props: {
-    position: 'relative'
-  },
+  props: { position: 'relative' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? { height: `${700 / 16}em`, transition: 'all 1s ease-in-out', opacity: 1, borderBottom: '5px solid rgba(168, 98, 63, 1)' }

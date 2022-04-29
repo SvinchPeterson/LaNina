@@ -17,7 +17,7 @@ const header = {
     props: {
       text: 'room offers',
       size: 'A',
-      color: 'black .55'
+      color: 'black 1'
     }
   },
   minimize: {
@@ -67,7 +67,7 @@ const offers = {
     tag: 'span',
     proto: [Box, Text],
     props: {
-      color: 'black .2'
+      color: 'black .8'
     }
   },
   ...[

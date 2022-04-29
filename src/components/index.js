@@ -1,31 +1,28 @@
 'use strict'
-export * from './Header'
-export * from './Logo'
-export * from './Menu'
-export * from './RoomTabs'
-// import Header from './Header'
-// import { RoomOffers } from './RoomOffers'
-// import Menu from './Menu'
 
-// import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs'
-// import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from './Gallery/index'
-// import { navButtons, navButtons2 } from './NavButtons'
+import { Header } from './Header'
+import { RoomOffers } from './RoomOffers'
+import { Menu } from './Menu'
 
-// import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
+import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs'
+import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from './Gallery/index'
+import { navButtons, navButtons2 } from './NavButtons'
+import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
+import { Logo, Logo2 } from './Logo'
 
-// export {
-//   Logo,
-//   Logo2,
-//   Header,
-//   RoomOffers,
-//   Menu,
+export {
+  Logo,
+  Logo2,
+  Header,
+  RoomOffers,
+  Menu,
 
-//   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
+  tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
 
-//   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
+  galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
 
-//   navButtons,
-//   navButtons2,
+  navButtons,
+  navButtons2,
 
-//   roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest
-// }
+  roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest
+}

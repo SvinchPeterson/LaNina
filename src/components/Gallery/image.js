@@ -16,7 +16,6 @@ export const image = {
     backgroundPosition: 'center',
     '@media only screen and (min-width: 1225px)': {
       backgroundAttachment: 'fixed'
-
     }
   },
 

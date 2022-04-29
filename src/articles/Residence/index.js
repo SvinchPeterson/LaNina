@@ -30,7 +30,7 @@ const entrance = {
       proto: Box,
       props: {
         flexFlow: 'column',
-        gap: 'Y2'
+        gap: 'Y'
       },
       childProto: {
         proto: [Text, Box],

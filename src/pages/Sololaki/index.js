@@ -18,14 +18,17 @@ const container = {
 export default {
   state: {
     activeMenu: true,
-    activeMenuItem: 0
+    activeMenuItem: 0,
+    activeTab: 0,
+    activeImage: 0,
+    offers: true
   },
 
   proto: container,
-  banner,
-  Header,
-  Menu,
-  Residence,
+  // banner,
+  // Header,
+  // Menu,
+  // Residence,
   Apartments
 
 }
