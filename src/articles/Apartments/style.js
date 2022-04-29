@@ -26,7 +26,8 @@ export const styleHeader = {
 }
 
 export const styleRooms = {
-  opacity: 0
+  opacity: 1,
+  border: '5px solid red'
 }
 
 export default {

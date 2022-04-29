@@ -25,10 +25,10 @@ export default {
   },
 
   proto: container,
-  banner,
-  Header,
-  Menu,
-  Residence,
+  // banner,
+  // Header,
+  // Menu,
+  // Residence,
   Apartments
 
 }
