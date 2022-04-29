@@ -61,19 +61,6 @@ export const navButtons = {
           }
         }
       }
-      // on: {
-      //   click: (event, element, state) => {
-      //     const { activeImage } = state
-      //     state.update({
-      //       activeImage: activeImage > (element.parent.gallery.length - 2) ? 0 : activeImage + 1
-      //     })
-      // if (activeImage === element.parent.gallery.length) {
-      //   state.update({
-      //     activeImage: activeImage === element.parent.gallery.length - 2
-      //   })
-      // }
-      //   }
-      // }
     },
 
     {
@@ -132,44 +119,44 @@ export const navButtons2 = {
     proto: Box,
     tag: 'button',
     props: {
-      padding: 'A'
+      flexAlign: 'center center'
     },
     style: {
-      background: 'transparent',
-      backdropFilter: 'blur(10px)',
-      // border: 'none',
-      cursor: 'pointer',
-      border: '2px solid rgba(168, 98, 63, 1)'
-      // '&:hover': { background: 'radial-gradient(rgba(244, 233, 217, .35), rgba(168, 98, 63, .45))' }
-      // '> img': { opacity: '.55' }
+      background: 'radial-gradient( rgba(168, 98, 63, .25), rgba(168, 98, 63, .25))',
+      backdropFilter: 'blur(0px)',
+      cursor: 'pointer'
+    },
+    image: {
+      proto: [Img, Box],
+      props: { boxSize: 'A2' }
     }
   },
   ...[
     {
+      props: { padding: 'A B A A' },
       style: {
-        // borderTopLeftRadius: '50px',
-        // borderBottomLeftRadius: '50px'
+        borderTopRightRadius: '50px',
+        borderBottomRightRadius: '50px',
+        border: '1.5px solid rgba(168, 98, 63, 1)',
+        borderLeft: 'none'
       },
       image: {
         proto: [Img, Box],
-        props: {
-          src: LEFT_ARROW_PNG,
-          boxSize: 'B '
-        }
+        props: { src: LEFT_ARROW_PNG }
       }
     },
 
     {
+      props: { padding: 'A A A B' },
       style: {
-        // borderTopRightRadius: '50px',
-        // borderBottomRightRadius: '50px'
+        borderTopLeftRadius: '50px',
+        borderBottomLeftRadius: '50px',
+        border: '2px solid rgba(168, 98, 63, 1)',
+        borderRight: 'none'
       },
       image: {
         proto: [Img, Box],
-        props: {
-          src: RIGHT_ARROW_PNG,
-          boxSize: 'B '
-        }
+        props: { src: RIGHT_ARROW_PNG }
       }
     }
   ]

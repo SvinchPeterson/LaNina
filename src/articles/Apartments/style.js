@@ -12,7 +12,7 @@ export const styleHeader = {
   },
   '@media only screen and (max-width: 1225px)': {
     overflowX: 'hidden',
-    background: 'rgba(42, 81, 61, .75)'
+    background: 'radial-gradient(rgba(42, 81, 61, .55), rgba(42, 81, 61, 1))'
 
   },
   '> nav': {
