@@ -57,11 +57,11 @@ const heading = {
     text: 'BB residence',
     props: {
       color: 'cream',
-      size: 'F'
+      size: 'E'
     },
     style: {
       letterSpacing: '-2.5px',
-      fontWeight: 'bold',
+      fontWeight: '700',
       textTransform: 'uppercase',
       whiteSpace: 'nowrap'
     }
@@ -70,12 +70,12 @@ const heading = {
     proto: [Text, Box],
     props: {
       text: 'SOLOLAKI',
-      size: 'B',
+      size: 'A',
       color: 'orange'
     },
     style: {
       fontWeight: 700,
-      letterSpacing: '7px',
+      letterSpacing: '5px',
       marginTop: '-2px',
       marginLeft: '2px'
     }
@@ -86,7 +86,7 @@ const paragraph = {
   tag: 'p',
   proto: [Text, Box],
   props: {
-    size: 'B',
+    size: 'A',
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -95,7 +95,7 @@ const paragraph = {
   style: {
     transform: 'translate(-50%, -50%)',
     textTransform: 'uppercase',
-    fontWeight: 500,
+    fontWeight: 400,
     letterSpacing: '5px',
     whiteSpace: 'nowrap',
     '@media only screen and (max-width: 768px)': {

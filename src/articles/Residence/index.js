@@ -9,7 +9,9 @@ const residence = {
   proto: Box,
   class: [styleResidence],
   p: {
-    proto: [bbSololaki, Box]
+    span: {
+      proto: [bbSololaki, Box]
+    }
   }
 }
 
@@ -82,12 +84,17 @@ const entrance = {
 export default {
   proto: Box,
   props: {
-    padding: 'F1 0',
+    padding: '0 0',
     flexFlow: 'column',
     gap: 'G'
   },
   attr: { id: 'residence' },
-  style: { background: 'rgba(244, 233, 217, 1)' },
+  style: {
+    // background: 'rgba(244, 233, 217, 1)',
+    borderBottom: '1px solid rgba(42, 81, 61, 1)'
+    // marginBottom: '40px'
+    // borderBottom: '3px solid rgba(168, 98, 63, 1)'
+  },
 
   residence,
   entrance

@@ -57,8 +57,8 @@ const roomTab = {
       element.parent.parent.parent.rooms.update({
         style: {
           minHeight: `${800 / 16}em`,
-          opacity: 1,
-          borderTop: '5px solid rgba(168, 98, 63, 1)'
+          opacity: 1
+          // borderTop: '5px solid rgba(168, 98, 63, 1)'
         }
       })
     }
@@ -98,7 +98,8 @@ export const tabBallerina = {
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        flex: 6,
+        flex: 6.5,
+        pointerEvents: 'none',
         '&:before': { opacity: 1 },
         backgroundAttachment: 'fixed',
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }

@@ -50,7 +50,7 @@ export const title = {
     zIndex: 2,
     '@media only screen and (min-width: 1225px)': {
       transition: 'font-weight .8s ease-in-out, letter-spacing .8s ease-in-out, border .8s ease-in-out',
-      fontWeight: 700
+      fontWeight: 500
     },
     '@media only screen and (max-width: 1225px)': {
       fontSize: '2.2em',

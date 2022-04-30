@@ -142,7 +142,7 @@ const book = {
   logo: {
     proto: Logo2,
     props: {
-      boxSize: 'B1 B1'
+      boxSize: 'B B'
     }
   },
   span: {
@@ -153,8 +153,8 @@ const book = {
     style: {
       textTransform: 'uppercase',
       fontSize: `${13 / 16}em`,
-      marginLeft: '-2.5px',
-      fontWeight: '700',
+      marginLeft: '-1px',
+      fontWeight: '500',
       letterSpacing: '0px'
     }
   }
@@ -168,7 +168,7 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Z B',
+    padding: 'Y B1',
     gap: 'D2'
   },
 
@@ -178,7 +178,10 @@ const container = {
     transform: 'translate(-50%, 0%)',
     borderBottomLeftRadius: '30px',
     borderBottomRightRadius: '30px',
-    background: 'radial-gradient(rgba(42, 81, 61, 1),rgba(42, 81, 61, 1))'
+    background: 'radial-gradient(rgba(42, 81, 61, .9),rgba(42, 81, 61, 1))',
+    boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
+    backdropFilter: 'blur(.5px)'
+    // border: '2px solid orange'
   }
 }
 

@@ -2,25 +2,29 @@
 
 export const styleSectionLinks = {
   display: 'flex',
-  gap: `${40 / 16}em`,
+  '@media only screen and (min-width: 1024px)': {
+    fontSize: `${18 / 16}em`,
+    gap: `${70 / 18}em`
+  },
+  '@media only screen and (max-width: 1024px)': {
+    flexFlow: 'column',
+    gap: `${48 / 17.5}em`,
+    textAlign: 'center'
+  },
   '> a': {
     textTransform: 'uppercase',
     cursor: 'pointer',
     fontWeight: 500,
     textDecoration: 'none',
-    '&:hover': { color: 'rgba(168, 98, 63, 1)' }
-  },
 
-  '@media only screen and (max-width: 1024px)': {
-    flexFlow: 'column',
-    gap: `${30 / 16}em`,
-    textAlign: 'center'
+    '&:hover': { color: 'rgba(168, 98, 63, 1)' }
   }
 }
 
 export const styleSocialMedia = {
   '@media only screen and (min-width: 1024px)': {
-    paddingRight: `${50 / 16}em`
+    paddingRight: `${50 / 16}em`,
+    paddingTop: `${200 / 16}em`
 
   },
   '> a': {
@@ -32,17 +36,21 @@ export const styleSocialMedia = {
 
 export default {
   boxSizing: 'border-box',
-  background: 'radial-gradient(rgba(42, 81, 61, .55), rgba(42, 81, 61, .85))',
+  background: 'linear-gradient(rgba(42, 81, 61, .55),rgba(42, 81, 61, .65))',
   backdropFilter: 'blur(2px)',
+  boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, .5)',
   transition: 'opacity .5s ease-in-out',
   zIndex: '400',
   display: 'flex',
   flexFlow: 'column',
+  // borderTopLeftRadius: '300px',
+  // borderBottomLeftRadius: '300px',
   '@media only screen and (min-width: 1024px)': {
     justifyContent: 'center',
     alignItems: 'flex-end',
-    gap: `${100 / 16}em`,
-    paddingRight: `${80 / 16}em`
+    // alignItems: 'center'
+    // gap: `${100 / 16}em`
+    paddingRight: `10%`
   },
 
   '@media only screen and (max-width: 1024px)': {

@@ -15,8 +15,8 @@ const sectionLinks = {
   childProto: {
     proto: [Link, Text],
     props: {
-      color: 'cream .75',
-      size: 'C'
+      color: 'cream .75'
+      // size: 'B'
     },
     on: {
       click: (event, element, state) => {
@@ -53,7 +53,7 @@ const socialMedia = {
     props: { target: '_blank' },
     icon: {
       proto: [Img, Box],
-      props: { boxSize: ' B2' }
+      props: { boxSize: ' C' }
     }
   },
   ...[
@@ -87,6 +87,6 @@ export const Menu = {
     left: '0'
   },
 
-  sectionLinks,
-  socialMedia
+  sectionLinks
+  // socialMedia
 }

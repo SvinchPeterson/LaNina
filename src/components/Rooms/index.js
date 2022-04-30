@@ -11,14 +11,22 @@ import {
 const Room = {
   proto: Box,
   props: { position: 'relative' },
+  style: { marginTop: '-200px' },
   class: {
     show: (element, state) => state.activeTab === element.key
-      ? { height: `${700 / 16}em`, transition: 'all 1s ease-in-out', opacity: 1, borderBottom: '5px solid rgba(168, 98, 63, 1)' }
-      : { height: '0', opacity: 0 }
+      ? {
+        height: `${800 / 16}em`,
+        transition: 'all 1s ease-in-out',
+        opacity: 1,
+        // border: '5px solid red',
+        marginTop: '-280px',
+        paddingTop: '50px'
+      }
+      : { height: '0', button: { opacity: 0 } }
   },
 
   gallery: {},
-  RoomOffers,
+  // RoomOffers,
   navButtons
 }
 

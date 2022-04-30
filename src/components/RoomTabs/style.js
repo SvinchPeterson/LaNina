@@ -44,6 +44,7 @@ export const styleRoomTab = {
   zIndex: 1,
   textDecoration: 'none',
   position: 'relative',
+  backdropFilter: 'blur(2px)',
   '&:before': {
     content: '""',
     position: 'absolute',
@@ -53,11 +54,12 @@ export const styleRoomTab = {
     left: 0,
     background: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, .85))',
     opacity: '.5',
-    transition: 'opacity .7s ease-in-out'
+    transition: 'opacity .7s ease-in-out',
+    cursor: 'pointer'
   },
   '@media only screen and (min-width: 1225px)': {
-    minHeight: `${500 / 16}em`,
-    '&:hover': { flex: 6 },
+    minHeight: `${400 / 16}em`,
+    '&:hover': { flex: 5.5 },
     '&:hover > p': { opacity: 1 },
     '&:not(:hover) > p': {
       transitionDelay: '0s',

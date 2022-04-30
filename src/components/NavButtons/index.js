@@ -2,8 +2,8 @@
 
 import { Box, Img } from '@symbo.ls/symbols'
 
-import UP_ARROW_PNG from '../../assets/icons/up-arrow.png'
-import DOWN_ARROW_PNG from '../../assets/icons/down-arrow.png'
+import UP_ARROW_PNG from '../../assets/icons/up-arrowCream.png'
+import DOWN_ARROW_PNG from '../../assets/icons/down-arrowCream.png'
 import LEFT_ARROW_PNG from '../../assets/icons/left-arrowCream.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/right-arrowCream.png'
 
@@ -11,10 +11,10 @@ export const navButtons = {
   proto: Box,
   props: {
     position: 'absolute',
-    top: '50%',
+    top: '60%',
     right: `${80 / 16}em`,
     flexFlow: 'column',
-    gap: 'Y'
+    gap: 'W'
   },
   style: {
     transform: 'translate(50%, -50%)',
@@ -25,27 +25,29 @@ export const navButtons = {
     proto: Box,
     tag: 'button',
     props: {
-      padding: 'Z2 Z'
+      padding: 'A1 Z1'
     },
     style: {
-      background: 'radial-gradient(rgba(244, 233, 217, .45), rgba(168, 98, 63, .45))',
-      backdropFilter: 'blur(10px)',
-      border: '1.5px solid rgba(168, 98, 63, 1)',
-      '&:hover': { background: 'radial-gradient(rgba(244, 233, 217, .35), rgba(168, 98, 63, .45))' },
-      '> img': { opacity: '.55' }
+      // background: 'radial-gradient(rgba(244, 233, 217, .45), rgba(168, 98, 63, .45))',
+      border: 'none',
+      background: 'radial-gradient(rgba(42, 81, 61, 1),rgba(42, 81, 61, 1))',
+      // backdropFilter: 'blur(10px)',
+      // border: '1.5px solid rgba(168, 98, 63, 1)',
+      // '&:hover': { background: 'radial-gradient(rgba(244, 233, 217, .35), rgba(168, 98, 63, .45))' },
+      '> img': { opacity: '1' }
     }
   },
   ...[
     {
       style: {
-        borderTopLeftRadius: '30px',
-        borderTopRightRadius: '30px'
+        borderTopLeftRadius: '25px',
+        borderTopRightRadius: '25px'
       },
       image: {
         proto: [Img, Box],
         props: {
           src: UP_ARROW_PNG,
-          boxSize: 'C '
+          boxSize: 'B1 '
         }
       },
       on: {
@@ -65,14 +67,14 @@ export const navButtons = {
 
     {
       style: {
-        borderBottomLeftRadius: '30px',
-        borderBottomRightRadius: '30px'
+        borderBottomLeftRadius: '25px',
+        borderBottomRightRadius: '25px'
       },
       image: {
         proto: [Img, Box],
         props: {
           src: DOWN_ARROW_PNG,
-          boxSize: 'C '
+          boxSize: 'B1 '
         }
       },
 

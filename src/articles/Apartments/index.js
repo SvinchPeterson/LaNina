@@ -16,7 +16,7 @@ const roomsTabs = {
   props: {
     position: 'relative',
     flexFlow: 'column',
-    flexAlign: 'center center'
+    flexAlign: 'flex-start center'
   },
   buttons: {
     proto: navButtons2
@@ -25,11 +25,12 @@ const roomsTabs = {
     tag: 'nav',
     proto: Box,
     props: {
-      flexAlign: 'flex-start flex-start',
-      gap: 'Z'
+      flexAlign: 'center center',
+      gap: 'B'
     },
     childProto: {
-      proto: Box
+      proto: Box,
+      style: { boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .35)' }
     },
     ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
   }
@@ -38,6 +39,7 @@ const roomsTabs = {
 const rooms = {
   tag: 'section',
   proto: Box,
+  props: { padding: '0 D1 0 D1' },
   style: styleRooms,
   ...[
     roomBallerina,
@@ -52,7 +54,7 @@ export default {
   style,
   proto: Box,
   props: {
-    padding: '0 0',
+    padding: 'A 0',
     flexFlow: 'column',
     gap: '0'
   },
