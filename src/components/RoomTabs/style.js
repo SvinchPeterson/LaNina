@@ -29,7 +29,7 @@ export const styleBook = {
   background: 'radial-gradient( rgba(168, 98, 63, .2), rgba(168, 98, 63, .15))',
   opacity: '.9',
   textDecoration: 'none',
-  bottom: '10%',
+  bottom: '2%',
   '&:hover': { opacity: 1 },
   '@media only screen and (max-width: 480px)': { bottom: '5%' }
 }

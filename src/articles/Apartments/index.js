@@ -12,11 +12,16 @@ import style, { styleHeader, styleRooms } from './style'
 const roomsTabs = {
   tag: 'header',
   proto: Box,
-  class: [styleHeader],
+  style: styleHeader,
   props: {
     position: 'relative',
     flexFlow: 'column',
     flexAlign: 'flex-start center'
+  },
+  class: {
+    show: (element, state) => state.activeTab
+      ? { borderBottom: '3px solid rgba(168, 98, 63, 1)' }
+      : {}
   },
   buttons: {
     proto: navButtons2

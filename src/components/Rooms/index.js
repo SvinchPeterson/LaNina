@@ -15,18 +15,17 @@ const Room = {
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        height: `${800 / 16}em`,
+        height: `${852 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
         // border: '5px solid red',
-        marginTop: '-280px',
-        paddingTop: '50px'
+        marginTop: '-230px'
       }
-      : { height: '0', button: { opacity: 0 } }
+      : { height: '0', opacity: 0, button: { opacity: 0 }, '> aside': { display: 'none' } }
   },
 
   gallery: {},
-  // RoomOffers,
+  RoomOffers,
   navButtons
 }
 

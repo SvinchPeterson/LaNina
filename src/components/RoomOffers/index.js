@@ -2,7 +2,7 @@
 import { Box, Text, Button, Img } from '@symbo.ls/symbols'
 
 import style, { styleHeader, styleOffers } from './style'
-import MINUS_ICON from '../../assets/icons/minus.png'
+import MINUS_ICON from '../../assets/icons/minusCream.png'
 
 const header = {
   tag: 'header',
@@ -16,20 +16,37 @@ const header = {
     proto: [Text, Box],
     props: {
       text: 'room offers',
-      size: 'A',
-      color: 'black 1'
-    }
+      size: 'Z',
+      color: 'cream .55'
+    },
+    style: { fontWeight: '700' }
   },
   minimize: {
-    proto: [Box, Button],
-    props: { padding: 'Z' },
-    minus: {
-      proto: [Img, Box],
+    proto: [Button, Box],
+    props: {
+      padding: 'Y'
+    },
+    span: {
+      proto: [Button, Box],
       props: {
-        src: MINUS_ICON,
-        boxSize: 'C B1'
+        boxSize: 'B1 X',
+        background: 'cream .65',
+        round: 'Z'
       }
     },
+
+    style: {
+      // border: '1px solid red',
+      background: 'transparent'
+    },
+
+    // minus: {
+    //   proto: [Img, Box],
+    //   props: {
+    //     src: MINUS_ICON,
+    //     boxSize: 'C B1'
+    //   }
+    // },
     on: {
       click: (event, element, state) => {
         state.offers
@@ -44,14 +61,16 @@ const offers = {
   proto: Box,
   style: styleOffers,
   props: {
-    padding: '0 C 0 C'
+    padding: '0 C2 C C2'
   },
   class: {
     show: (element, state) => state.offers
       ? {
-        minHeight: `${300 / 16}em`,
+        minHeight: `${200 / 16}em`,
         paddingBottom: `${100 / 16}em`,
-        '> span': { height: '30px', opacity: '1' }
+        '> span': {
+          height: '25px'
+        }
       }
       : {
         minHeight: `${0 / 16}em`,
@@ -67,7 +86,8 @@ const offers = {
     tag: 'span',
     proto: [Box, Text],
     props: {
-      color: 'black .8'
+      size: 'Z',
+      color: 'cream .55'
     }
   },
   ...[
@@ -99,9 +119,8 @@ export const RoomOffers = {
   props: {
     position: 'absolute',
     left: '0',
-    bottom: '-80px',
-    flexFlow: 'column',
-    background: 'cream'
+    bottom: '0',
+    flexFlow: 'column'
   },
   header,
   offers

@@ -11,8 +11,8 @@ export const navButtons = {
   proto: Box,
   props: {
     position: 'absolute',
-    top: '60%',
-    right: `${80 / 16}em`,
+    top: '55%',
+    right: `${120 / 16}em`,
     flexFlow: 'column',
     gap: 'W'
   },
@@ -25,7 +25,7 @@ export const navButtons = {
     proto: Box,
     tag: 'button',
     props: {
-      padding: 'A1 Z1'
+      padding: 'A1 Z2'
     },
     style: {
       // background: 'radial-gradient(rgba(244, 233, 217, .45), rgba(168, 98, 63, .45))',

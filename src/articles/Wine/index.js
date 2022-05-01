@@ -7,7 +7,7 @@ export default {
   proto: Box,
   attr: { id: 'wine' },
   props: {
-    padding: '200px 0'
+    padding: '300px 0'
   },
   style: {
     backgroundColor: 'rgba(244, 233, 217, 1)',
@@ -19,7 +19,6 @@ export default {
       flexAlign: 'center center'
     },
     style: {
-      border: '2px solid red',
       minHeight: `${700 / 16}em`,
       backgroundImage: 'url(' + WINE_JPG + ')',
       backgroundSize: 'contain',
@@ -41,11 +40,12 @@ export default {
         background: 'rgba(244, 233, 217, 1)',
         color: 'rgba(0, 0, 0, .35)',
         flex: 1,
+        fontSize: `${15 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
           background: 'rgba(244, 233, 217, .55)',
           backdropFilter: 'blur(5px)',
           color: 'rgba(0, 0, 0, .55)',
-          fontSize: `${22 / 16}em`
+          fontSize: `${22 / 15}em`
         }
       },
 
@@ -54,7 +54,7 @@ export default {
         props: { padding: 'E D' },
         style: {
           display: 'block',
-          maxWidth: `${800 / 16}em`,
+          maxWidth: `${700 / 16}em`,
           margin: '0 auto',
           lineHeight: '23px',
           letterSpacing: '.7px',

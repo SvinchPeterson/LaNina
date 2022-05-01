@@ -6,7 +6,8 @@ export const styleHeader = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   padding: `${250 / 16}em ${80 / 16}em`,
-  borderBottom: '3px solid rgba(168, 98, 63, 1)',
+  borderBottom: '3px solid rgba(168, 98, 63, 0)',
+  transition: 'border 2s ease-in-out',
   '@media only screen and (min-width: 1225px)': {
     backgroundAttachment: 'fixed'
     // backgroundColor: 'rgba(168, 98, 63, 1)'

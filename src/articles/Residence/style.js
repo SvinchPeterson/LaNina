@@ -42,7 +42,7 @@ export const styleResidence = {
         // border: '3px solid red',
         display: 'block',
         padding: '80px',
-        maxWidth: '900px'
+        maxWidth: '700px'
       }
     },
     '@media only screen and (max-width: 1225px)': {

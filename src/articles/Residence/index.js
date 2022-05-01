@@ -25,14 +25,14 @@ const entrance = {
       flexFlow: 'column'
     },
     style: {
-      fontSize: `${15 / 16}em`,
+      fontSize: `${14 / 16}em`,
       fontWeight: 400
     },
     entrences: {
       proto: Box,
       props: {
         flexFlow: 'column',
-        gap: 'Y'
+        gap: 'Y1'
       },
       childProto: {
         proto: [Text, Box],
@@ -44,7 +44,18 @@ const entrance = {
       },
       ...[
         { props: { text: 'private entrance' } },
-        { props: { text: 'separate street or building entrance' } },
+        {
+          proto: Box,
+          props: {
+            flexAlign: 'center flex-start',
+            gap: '8px'
+          },
+          ...[
+            { text: 'separate street' },
+            { text: 'or', style: { textTransform: 'initial' } },
+            { text: 'building entrance' }
+          ]
+        },
         { props: { text: 'free parking on premises' } }
       ]
     },
