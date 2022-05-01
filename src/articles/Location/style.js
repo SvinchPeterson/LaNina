@@ -25,15 +25,16 @@ const styleAirPort = {
   '> p': {
     fontSize: `${15 / 16}em`,
     maxWidth: `${400 / 15}em`,
-    color: 'rgba(0, 0, 0, .225)',
+    // color: 'rgba(0, 0, 0, .225)',
     letterSpacing: '1px',
-    lineHeight: `${20 / 15}em`
+    lineHeight: `${20 / 15}em`,
+    fontWeight: '700'
   },
   '> p > caption': {
     textTransform: 'uppercase',
     letterSpacing: '1px',
     color: 'rgba(0, 0, 0, .5)',
-    fontWeight: 700
+    fontWeight: 500
   }
 
 }

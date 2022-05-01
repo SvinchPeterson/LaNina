@@ -104,9 +104,9 @@ const link = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     boxSizing: 'border-box',
-    // animationName: position,
-    // animationDuration: '1s',
-    // animationTimingFunction: 'ease-in-out',
+    animationName: opacity,
+    animationDuration: '3s',
+    animationTimingFunction: 'ease-in-out',
     textDecoration: 'none',
     position: 'relative',
     '&:before': {
@@ -226,9 +226,9 @@ const Container = {
     border: '1px solid black',
     overflow: 'hidden',
     boxSizing: 'border-box',
-    // animationName: opacity,
-    // animationDuration: '2s',
-    // animationTimingFunction: 'ease-in-out',
+    animationName: opacity,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out',
     '@media only screen and (max-width: 1024px)': {
       flexFlow: 'column'
     }
