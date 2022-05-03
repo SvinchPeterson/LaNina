@@ -10,10 +10,14 @@ export const styleParagraph = {
   lineHeight: `${23 / 16}em`,
   letterSpacing: '1px',
   fontWeight: 400,
-  '@media only screen and (max-width: 480px)': {
+  '@media only screen and (max-width: 1225px)': {
+    fontSize: `${16 / 14}em`,
+    paddingTop: `${100 / 16}em`,
+    fontWeight: 300
+  },
+  '@media only screen and (max-width: 768px)': {
     fontSize: `${15 / 16}em`,
-    minWidth: `${300 / 16}em`,
-    paddingTop: `${35 / 15}em`
+    minWidth: `${300 / 16}em`
   }
 }
 
@@ -69,8 +73,8 @@ export const styleRoomTab = {
     '&:hover:before': { opacity: 1 }
   },
   '@media only screen and (max-width: 1225px)': {
-    minWidth: `${700 / 16}em`,
-    height: `${500 / 16}em`
+    minWidth: `100%`,
+    height: `${600 / 16}em`
   },
   '@media only screen and (max-width: 768px)': {
     minWidth: `100%`

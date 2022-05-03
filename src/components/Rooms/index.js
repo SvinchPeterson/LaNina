@@ -10,21 +10,20 @@ import {
 
 const Room = {
   proto: Box,
-  props: { position: 'relative' },
-  style: { marginTop: '-200px' },
+  props: {
+    position: 'relative'
+  },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        height: `${852 / 16}em`,
+        height: `${700 / 16}em`,
         transition: 'all 1s ease-in-out',
-        opacity: 1,
-        // border: '5px solid red',
-        marginTop: '-230px'
+        opacity: 1
       }
       : { height: '0', opacity: 0, button: { opacity: 0 }, '> aside': { display: 'none' } }
   },
 
-  gallery: {},
+  gallery: { },
   RoomOffers,
   navButtons
 }

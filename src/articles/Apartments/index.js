@@ -7,7 +7,7 @@ import {
   navButtons2
 } from '../../components'
 
-import style, { styleHeader, styleRooms } from './style'
+import style, { styleHeader } from './style'
 
 const roomsTabs = {
   tag: 'header',
@@ -16,8 +16,10 @@ const roomsTabs = {
   props: {
     position: 'relative',
     flexFlow: 'column',
-    flexAlign: 'flex-start center'
+    flexAlign: 'flex-start center',
+    padding: '0 D1'
   },
+  attr: { id: 'apartments' },
   class: {
     show: (element, state) => state.activeTab
       ? { borderBottom: '3px solid rgba(168, 98, 63, 1)' }
@@ -30,7 +32,7 @@ const roomsTabs = {
     tag: 'nav',
     proto: Box,
     props: {
-      flexAlign: 'center center',
+      flexAlign: 'center flex-start',
       gap: 'B'
     },
     childProto: {
@@ -44,8 +46,7 @@ const roomsTabs = {
 const rooms = {
   tag: 'section',
   proto: Box,
-  props: { padding: '0 D1 0 D1' },
-  style: styleRooms,
+  props: { padding: '0 D1' },
   ...[
     roomBallerina,
     roomRedBrick,
@@ -60,12 +61,10 @@ export default {
   proto: Box,
   props: {
     padding: 'A 0',
-    flexFlow: 'column',
-    gap: '0'
+    flexFlow: 'column'
   },
-  attr: { id: 'apartments' },
 
-  roomsTabs
-  // rooms
+  roomsTabs,
+  rooms
 
 }

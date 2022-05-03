@@ -98,8 +98,7 @@ export const tabBallerina = {
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        flex: 6.5,
-        pointerEvents: 'none',
+        flex: 5.5,
         '&:before': { opacity: 1 },
         backgroundAttachment: 'fixed',
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
@@ -124,7 +123,7 @@ export const tabRedBrick = {
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        flex: 6,
+        flex: 5.5,
         backgroundAttachment: 'fixed',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
@@ -148,7 +147,7 @@ export const tabYellowCouch = {
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        flex: 6,
+        flex: 5.5,
         backgroundAttachment: 'fixed',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
@@ -172,7 +171,7 @@ export const tabGreenForest = {
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        flex: 6,
+        flex: 5.5,
         backgroundAttachment: 'fixed',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
@@ -196,7 +195,7 @@ export const tabRetro = {
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        flex: 6,
+        flex: 5.5,
         backgroundAttachment: 'fixed',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
