@@ -65,7 +65,7 @@ export default {
   },
   attr: { id: 'apartments' },
 
-  roomsTabs,
-  rooms
+  roomsTabs
+  // rooms
 
 }

@@ -34,8 +34,8 @@ export default {
   Header,
   Menu,
 
-  Residence
-  // Apartments
+  Residence,
+  Apartments
   // Wine,
   // Location
 

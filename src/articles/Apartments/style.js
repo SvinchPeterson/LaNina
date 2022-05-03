@@ -1,6 +1,6 @@
 'use strict'
 
-import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments4.png'
+import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
 export const styleHeader = {
   backgroundSize: 'cover',
@@ -10,9 +10,6 @@ export const styleHeader = {
   transition: 'border 2s ease-in-out',
   '@media only screen and (min-width: 1225px)': {
     backgroundAttachment: 'fixed'
-    // backgroundColor: 'rgba(168, 98, 63, 1)'
-    // backgroundColor: 'rgba(244, 233, 217, 1)',
-    // backgroundImage: 'url(' + ORNAMENT_PNG + ')'
   },
   '@media only screen and (max-width: 1225px)': {
     overflowX: 'hidden',
