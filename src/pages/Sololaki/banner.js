@@ -1,7 +1,7 @@
 'use strict'
 import { Box, Text } from '@symbo.ls/symbols'
 
-import { opacity, zoomiIn } from '../../animations'
+import { opacity, positionOpacity, letterSpacing } from '../../animations'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
 import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
 import SOLOLAKI_MOBILE_JPG from '../../assets/images/sololaki/sololaki-mobile.jpg'
@@ -17,9 +17,10 @@ const image = {
   style: {
     boxSizing: 'border-box',
     backgroundSize: 'cover',
-    // animationName: zoomiIn,
-    // animationDuration: '10s',
-    // animationTimingFunction: 'ease-in-out',
+    backgroundPosition: 'center',
+    animationName: positionOpacity,
+    animationDuration: '3s',
+    animationTimingFunction: 'ease-in-out',
     '@media only screen and (min-width: 1225px)': {
       backgroundAttachment: 'fixed',
       backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_JPG + ')'
@@ -60,7 +61,7 @@ const heading = {
       size: 'E'
     },
     style: {
-      letterSpacing: '-2.5px',
+      letterSpacing: '-1px',
       fontWeight: '700',
       textTransform: 'uppercase',
       whiteSpace: 'nowrap'
@@ -76,7 +77,7 @@ const heading = {
     style: {
       fontWeight: 700,
       letterSpacing: '5px',
-      marginTop: '-2px',
+      marginTop: '0px',
       marginLeft: '2px'
     }
   }
@@ -98,6 +99,9 @@ const paragraph = {
     fontWeight: 400,
     letterSpacing: '5px',
     whiteSpace: 'nowrap',
+    animationName: letterSpacing,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out',
     '@media only screen and (max-width: 768px)': {
       display: 'flex',
       flexFlow: 'column',
@@ -125,7 +129,7 @@ const container = {
   style: {
     overflow: 'hidden',
     animationName: opacity,
-    animationDuration: '3s',
+    animationDuration: '2s',
     animationTimingFunction: 'linear',
     margin: '0 auto'
   }

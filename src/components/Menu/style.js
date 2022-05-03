@@ -4,11 +4,13 @@ export const styleSectionLinks = {
   display: 'flex',
   '@media only screen and (min-width: 1024px)': {
     fontSize: `${18 / 16}em`,
-    gap: `${70 / 18}em`
+    gap: `${70 / 18}em`,
+    paddingBottom: `${100 / 16}em`
   },
   '@media only screen and (max-width: 1024px)': {
+    fontSize: `${24 / 16}em`,
     flexFlow: 'column',
-    gap: `${48 / 17.5}em`,
+    gap: `${40 / 24}em`,
     textAlign: 'center'
   },
   '> a': {
@@ -24,7 +26,7 @@ export const styleSectionLinks = {
 export const styleSocialMedia = {
   '@media only screen and (min-width: 1024px)': {
     paddingRight: `${50 / 16}em`,
-    paddingTop: `${200 / 16}em`
+    paddingTop: `${0 / 16}em`
 
   },
   '> a': {

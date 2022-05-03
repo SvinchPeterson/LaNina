@@ -4,6 +4,8 @@ import { Header, Menu } from '../../components'
 import { Residence, Apartments, Wine, Location } from '../../articles'
 import { banner } from './banner'
 
+import { opacity } from '../../animations'
+
 const container = {
   proto: Box,
   props: { background: 'green' },
@@ -12,7 +14,10 @@ const container = {
     overflowX: 'hidden',
     overflowY: 'auto',
     scrollBehavior: 'smooth',
-    background: 'rgba(244, 233, 217, 1)'
+    background: 'rgba(42, 81, 61, 1)',
+    animationName: opacity,
+    animationDuration: '2s',
+    animationTimingFunction: 'ease-in-out'
   }
 }
 export default {
@@ -29,10 +34,10 @@ export default {
   Header,
   Menu,
 
-  Residence,
-  Apartments,
-  Wine,
-  Location
+  Residence
+  // Apartments
+  // Wine,
+  // Location
 
 }
 

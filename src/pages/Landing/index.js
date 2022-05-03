@@ -3,7 +3,7 @@ import { Box, Link, Text, Flex } from '@symbo.ls/symbols'
 
 import { Logo, Logo2 } from '../../components'
 
-import { opacity, position } from '../../animations'
+import { opacity, scale } from '../../animations'
 
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
@@ -105,7 +105,7 @@ const link = {
     backgroundPosition: 'center',
     boxSizing: 'border-box',
     animationName: opacity,
-    animationDuration: '3s',
+    animationDuration: '1.5s',
     animationTimingFunction: 'ease-in-out',
     textDecoration: 'none',
     position: 'relative',

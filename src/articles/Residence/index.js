@@ -101,10 +101,8 @@ export default {
   },
   attr: { id: 'residence' },
   style: {
-    // background: 'rgba(244, 233, 217, 1)',
+    background: 'rgba(244, 233, 217, 1)',
     borderBottom: '1px solid rgba(42, 81, 61, 1)'
-    // marginBottom: '40px'
-    // borderBottom: '3px solid rgba(168, 98, 63, 1)'
   },
 
   residence,

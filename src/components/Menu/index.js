@@ -53,7 +53,7 @@ const socialMedia = {
     props: { target: '_blank' },
     icon: {
       proto: [Img, Box],
-      props: { boxSize: ' C' }
+      props: { boxSize: ' B1' }
     }
   },
   ...[
@@ -87,6 +87,6 @@ export const Menu = {
     left: '0'
   },
 
-  sectionLinks
-  // socialMedia
+  sectionLinks,
+  socialMedia
 }

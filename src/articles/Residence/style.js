@@ -3,20 +3,19 @@
 import BB_JPG from '../../assets/images/sololaki/BB.jpg'
 import ENTRENCE_JPG from '../../assets/images/sololaki/entrance.jpg'
 import STREET_JPG from '../../assets/images/sololaki/street.jpg'
-import STREET2_JPG from '../../assets/images/sololaki/street2.jpg'
 
 export const styleResidence = {
   backgroundImage: 'url(' + BB_JPG + ')',
   minHeight: `${600 / 16}em`,
   display: 'flex',
   justifyContent: 'center',
+  marginTop: `${200 / 16}em`,
   '@media only screen and (min-width: 1225px)': {
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center center',
-    alignItems: 'flex-start',
-    marginTop: '200px'
+    alignItems: 'flex-start'
   },
   '@media only screen and (max-width: 1225px)': {
     backgroundImage: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, 1)), url(' + BB_JPG + ')',
@@ -30,7 +29,7 @@ export const styleResidence = {
     fontSize: `${15 / 16}em`,
     letterSpacing: '1.5px',
     fontWeight: 300,
-    lineHeight: `${23 / 15}em`,
+    lineHeight: `${27 / 15}em`,
     '@media only screen and (min-width: 1225px)': {
       boxShadow: '0px 0px 75px 0px rgba(244, 233, 217, .55)',
       maxWidth: `100%`,
@@ -41,8 +40,8 @@ export const styleResidence = {
       '> span': {
         // border: '3px solid red',
         display: 'block',
-        padding: '80px',
-        maxWidth: '700px'
+        padding: `${80 / 15}em`,
+        maxWidth: `${815 / 15}em`
       }
     },
     '@media only screen and (max-width: 1225px)': {
