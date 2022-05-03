@@ -47,6 +47,9 @@ const rooms = {
   tag: 'section',
   proto: Box,
   props: { padding: '0 D1' },
+  style: {
+    border: '5px solid red'
+  },
   ...[
     roomBallerina,
     roomRedBrick,
@@ -60,7 +63,7 @@ export default {
   style,
   proto: Box,
   props: {
-    padding: 'A 0',
+    padding: 'F 0',
     flexFlow: 'column'
   },
 

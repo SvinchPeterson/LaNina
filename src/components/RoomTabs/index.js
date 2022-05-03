@@ -58,6 +58,7 @@ const roomTab = {
         style: {
           minHeight: `${800 / 16}em`,
           opacity: 1
+          // paddingTop: '100px'
           // borderTop: '5px solid rgba(168, 98, 63, 1)'
         }
       })

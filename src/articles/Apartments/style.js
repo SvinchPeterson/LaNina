@@ -3,8 +3,9 @@
 import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
 export const styleHeader = {
-  borderBottom: '3px solid rgba(168, 98, 63, 0)',
+  // borderBottom: '3px solid rgba(168, 98, 63, 0)',
   transition: 'border 2s ease-in-out',
+  padding: '100px 80px',
   '@media only screen and (max-width: 1225px)': {
     overflowX: 'hidden'
     // background: 'radial-gradient(rgba(42, 81, 61, .55), rgba(42, 81, 61, 1))'
