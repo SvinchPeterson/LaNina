@@ -17,7 +17,7 @@ const header = {
     props: {
       text: 'room offers',
       size: 'Z',
-      color: 'cream .55'
+      color: 'cream 1'
     },
     style: { fontWeight: '700' }
   },
@@ -87,7 +87,7 @@ const offers = {
     proto: [Box, Text],
     props: {
       size: 'Z',
-      color: 'cream .55'
+      color: 'cream 1'
     }
   },
   ...[
@@ -118,8 +118,8 @@ export const RoomOffers = {
   style,
   props: {
     position: 'absolute',
-    left: '0',
-    bottom: '0',
+    left: '30px',
+    bottom: '-100px',
     flexFlow: 'column'
   },
   header,

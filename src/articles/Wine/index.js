@@ -25,10 +25,10 @@ export default {
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
       backgroundPosition: 'center',
-      backgroundColor: 'rgba(244, 233, 217, 1)',
       '@media only screen and (max-width: 1225px)': {
         backgroundSize: 'cover',
-        backgroundAttachment: 'initial'
+        backgroundAttachment: 'initial',
+        backgroundImage: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, 1)), url(' + WINE_JPG + ')'
       }
     },
     p: {
@@ -42,10 +42,8 @@ export default {
         flex: 1,
         fontSize: `${15 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
-          background: 'rgba(244, 233, 217, .55)',
-          backdropFilter: 'blur(5px)',
-          color: 'rgba(0, 0, 0, .55)',
-          fontSize: `${22 / 15}em`
+          background: 'transparent',
+          color: 'rgba(244, 233, 217, 1)'
         }
       },
 
@@ -60,8 +58,8 @@ export default {
           letterSpacing: '.7px',
           fontWeight: 300,
           '@media only screen and (max-width: 1225px)': {
-            fontWeight: 500,
-            lineHeight: '30px'
+            fontWeight: 400,
+            padding: '0 30px'
           }
         }
       }

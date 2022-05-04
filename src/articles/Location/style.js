@@ -22,18 +22,21 @@ const styleMap = {
 }
 
 const styleAirPort = {
+  '@media only screen and (max-width: 480px)': {
+    padding: '0 16px'
+  },
   '> p': {
     fontSize: `${15 / 16}em`,
     maxWidth: `${400 / 15}em`,
-    // color: 'rgba(0, 0, 0, .225)',
+    color: 'rgba(0, 0, 0, .45)',
     letterSpacing: '1px',
     lineHeight: `${20 / 15}em`,
-    fontWeight: '700'
+    fontWeight: '400'
   },
   '> p > caption': {
     textTransform: 'uppercase',
     letterSpacing: '1px',
-    color: 'rgba(0, 0, 0, .5)',
+    color: 'rgba(168, 98, 63, 1)',
     fontWeight: 500
   }
 

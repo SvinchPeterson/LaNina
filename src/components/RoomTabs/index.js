@@ -25,7 +25,8 @@ const book = {
     flexAlign: 'center center',
     flexFlow: 'row',
     left: '50%',
-    padding: 'Y2 A1',
+    bottom: '0px',
+    padding: 'Z1 A1 Z1 A1',
     gap: 'Y'
   },
   icon: {
@@ -56,8 +57,11 @@ const roomTab = {
       state.update({ activeTab: element.key })
       element.parent.parent.parent.rooms.update({
         style: {
-          minHeight: `${800 / 16}em`,
-          opacity: 1
+          minHeight: `${700 / 16}em`,
+          opacity: 1,
+          padding: `0 ${80 / 16}em`,
+          '@media only screen and (max-width: 1024px)': { padding: 0 }
+
           // paddingTop: '100px'
           // borderTop: '5px solid rgba(168, 98, 63, 1)'
         }

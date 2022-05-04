@@ -11,8 +11,8 @@ export const navButtons = {
   proto: Box,
   props: {
     position: 'absolute',
-    top: '55%',
-    right: `${120 / 16}em`,
+    top: '63%',
+    right: `${80 / 16}em`,
     flexFlow: 'column',
     gap: 'W'
   },
@@ -28,10 +28,11 @@ export const navButtons = {
       padding: 'A1 Z2'
     },
     style: {
-      // background: 'radial-gradient(rgba(244, 233, 217, .45), rgba(168, 98, 63, .45))',
       border: 'none',
-      background: 'radial-gradient(rgba(42, 81, 61, 1),rgba(42, 81, 61, 1))',
-      // backdropFilter: 'blur(10px)',
+      // background: 'radial-gradient(rgba(42, 81, 61, .15),rgba(42, 81, 61, .25))',
+      background: 'radial-gradient(rgba(42, 81, 61, .5),rgba(42, 81, 61, .7))',
+      backdropFilter: 'blur(10px)',
+      // background: 'radial-gradient(rgba(168, 98, 63, .15), rgba(168, 98, 63, .25))',
       // border: '1.5px solid rgba(168, 98, 63, 1)',
       // '&:hover': { background: 'radial-gradient(rgba(244, 233, 217, .35), rgba(168, 98, 63, .45))' },
       '> img': { opacity: '1' }
@@ -124,7 +125,8 @@ export const navButtons2 = {
       flexAlign: 'center center'
     },
     style: {
-      background: 'radial-gradient( rgba(168, 98, 63, .25), rgba(168, 98, 63, .25))',
+      // background: 'radial-gradient( rgba(168, 98, 63, 1), rgba(168, 98, 63, 1))',
+      background: 'radial-gradient(rgba(42, 81, 61, .9),rgba(42, 81, 61, 1))',
       backdropFilter: 'blur(0px)',
       cursor: 'pointer'
     },
@@ -135,12 +137,13 @@ export const navButtons2 = {
   },
   ...[
     {
-      props: { padding: 'A B A A' },
+      props: { padding: 'A2 B A2 Z' },
       style: {
         borderTopRightRadius: '50px',
         borderBottomRightRadius: '50px',
-        border: '1.5px solid rgba(168, 98, 63, 1)',
-        borderLeft: 'none'
+        border: 'none'
+        // border: '1.5px solid rgba(168, 98, 63, 1)',
+        // borderLeft: 'none'
       },
       image: {
         proto: [Img, Box],
@@ -149,12 +152,13 @@ export const navButtons2 = {
     },
 
     {
-      props: { padding: 'A A A B' },
+      props: { padding: 'A2 Z A2 B' },
       style: {
         borderTopLeftRadius: '50px',
         borderBottomLeftRadius: '50px',
-        border: '2px solid rgba(168, 98, 63, 1)',
-        borderRight: 'none'
+        // border: '2px solid rgba(168, 98, 63, 1)',
+        // borderRight: 'none'
+        border: 'none'
       },
       image: {
         proto: [Img, Box],

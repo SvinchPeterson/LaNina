@@ -17,12 +17,12 @@ const roomsTabs = {
     position: 'relative',
     flexFlow: 'column',
     flexAlign: 'flex-start center',
-    padding: '0 D1'
+    padding: 'F D1 B D1'
   },
   attr: { id: 'apartments' },
   class: {
     show: (element, state) => state.activeTab
-      ? { borderBottom: '3px solid rgba(168, 98, 63, 1)' }
+      ? { }
       : {}
   },
   buttons: {
@@ -46,9 +46,10 @@ const roomsTabs = {
 const rooms = {
   tag: 'section',
   proto: Box,
-  props: { padding: '0 D1' },
+  props: { round: 'B' },
   style: {
-    border: '5px solid red'
+    '@media only screen and (max-width: 768px)': {
+    }
   },
   ...[
     roomBallerina,
@@ -63,7 +64,7 @@ export default {
   style,
   proto: Box,
   props: {
-    padding: 'F 0',
+    padding: 'E 0 G1 0',
     flexFlow: 'column'
   },
 

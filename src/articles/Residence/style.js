@@ -63,7 +63,7 @@ export const styleEntrence = {
   backgroundImage: 'linear-gradient(rgba(42, 81, 61, 0),rgba(42, 81, 61, .35), rgba(42, 81, 61, 1)),url(' + ENTRENCE_JPG + ')',
   display: 'flex',
   boxSizing: 'border-box',
-  padding: `${70 / 16}em ${50 / 16}em `,
+  padding: `${100 / 16}em ${100 / 16}em `,
   backgroundSize: 'cover',
   '@media only screen and (min-width: 1225px)': {
     backgroundAttachment: 'fixed',

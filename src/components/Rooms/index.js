@@ -13,12 +13,14 @@ const Room = {
   props: {
     position: 'relative'
   },
+  style: { borderRadius: '100px' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
         height: `${700 / 16}em`,
         transition: 'all 1s ease-in-out',
-        opacity: 1
+        opacity: 1,
+        paddingTop: `${100 / 16}em`
       }
       : { height: '0', opacity: 0, button: { opacity: 0 }, '> aside': { display: 'none' } }
   },

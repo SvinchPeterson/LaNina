@@ -1,6 +1,6 @@
 'use strict'
 import { Text, Box, Img, Link } from '@symbo.ls/symbols'
-import { Logo2 } from '../../components/Logo'
+import { Logo3 } from '../../components/Logo'
 
 import PHONE_PNG from '../../assets/icons/phoneRight.png'
 
@@ -140,9 +140,9 @@ const book = {
   },
   style: { cursor: 'pointer' },
   logo: {
-    proto: Logo2,
+    proto: Logo3,
     props: {
-      boxSize: 'B B'
+      boxSize: 'B1 B1'
     }
   },
   span: {
@@ -152,10 +152,10 @@ const book = {
     },
     style: {
       textTransform: 'uppercase',
-      fontSize: `${13 / 16}em`,
-      marginLeft: '-1px',
+      fontSize: `${13.5 / 16}em`,
+      marginLeft: '-2.5px',
       fontWeight: '500',
-      letterSpacing: '0px'
+      letterSpacing: '-1px'
     }
   }
 }
@@ -168,7 +168,7 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Y B1',
+    padding: 'Y1 B1',
     gap: 'D2'
   },
 
@@ -176,11 +176,13 @@ const container = {
     zIndex: 500,
     width: 'fit-content',
     transform: 'translate(-50%, 0%)',
-    borderBottomLeftRadius: '30px',
-    borderBottomRightRadius: '30px',
-    background: 'radial-gradient(rgba(42, 81, 61, .9),rgba(42, 81, 61, 1))',
+    borderBottomLeftRadius: '32.5px',
+    borderBottomRightRadius: '32.5px',
+    // borderBottom: '1px solid rgba(168, 98, 63, 1)',
+    // borderRadius: '32px',
+    background: 'radial-gradient(rgba(42, 81, 61, .65),rgba(42, 81, 61, .85))',
     boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
-    backdropFilter: 'blur(.5px)'
+    backdropFilter: 'blur(5px)'
     // border: '2px solid orange'
   }
 }

@@ -35,8 +35,8 @@ export default {
   Menu,
 
   Residence,
-  Apartments
-  // Wine,
-  // Location
+  Apartments,
+  Wine,
+  Location
 
 }

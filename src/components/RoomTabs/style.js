@@ -27,13 +27,19 @@ export const styleBook = {
   transform: 'translate(-50%, -50%)',
   textTransform: 'uppercase',
   fontWeight: 700,
-  borderRadius: '50px',
-  border: '1.5px solid rgba(168, 98, 63, 1)',
+  // borderRadius: '50px',
+  borderTopRightRadius: '30px',
+  borderBottomRightRadius: '30px',
+  borderTopLeftRadius: '30px',
+  borderBottomLeftRadius: '30px',
+  border: '1px solid rgba(168, 98, 63, 1)',
   letterSpacing: '0',
-  background: 'radial-gradient( rgba(168, 98, 63, .2), rgba(168, 98, 63, .15))',
+  backdropFilter: 'blur(5px)',
+  background: 'radial-gradient(rgba(42, 81, 61, .15),rgba(42, 81, 61, .25))',
+  // background: 'radial-gradient( rgba(168, 98, 63, .2), rgba(168, 98, 63, .15))',
   opacity: '.9',
   textDecoration: 'none',
-  bottom: '2%',
+  borderBottom: 'none',
   '&:hover': { opacity: 1 },
   '@media only screen and (max-width: 480px)': { bottom: '5%' }
 }
@@ -74,7 +80,7 @@ export const styleRoomTab = {
   },
   '@media only screen and (max-width: 1225px)': {
     minWidth: `100%`,
-    height: `${600 / 16}em`
+    height: `${500 / 16}em`
   },
   '@media only screen and (max-width: 768px)': {
     minWidth: `100%`

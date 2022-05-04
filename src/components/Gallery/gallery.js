@@ -5,7 +5,7 @@ export const Gallery = {
   props: {
     position: 'absolute',
     boxSize: '100% 100%',
-    top: '0',
+    // top: '0',
     left: '0'
   }
 }
