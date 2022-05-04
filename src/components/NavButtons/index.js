@@ -100,7 +100,7 @@ export const navButtons2 = {
   proto: Box,
   props: {
     position: 'absolute',
-    top: '50%',
+    top: '57%',
     left: `50%`,
     flexFlow: 'row',
     flexAlign: 'center space-between',
@@ -108,8 +108,8 @@ export const navButtons2 = {
     padding: ''
   },
   style: {
-    transform: 'translate(-50%, -50%)',
     zIndex: '200',
+    transform: 'translate(-50%, -50%)',
     display: 'none',
     height: 0,
     width: '100%',
@@ -126,21 +126,21 @@ export const navButtons2 = {
     },
     style: {
       // background: 'radial-gradient( rgba(168, 98, 63, 1), rgba(168, 98, 63, 1))',
-      background: 'radial-gradient(rgba(42, 81, 61, .9),rgba(42, 81, 61, 1))',
+      background: 'radial-gradient(rgba(42, 81, 61, .25),rgba(42, 81, 61, .5))',
       backdropFilter: 'blur(0px)',
       cursor: 'pointer'
     },
     image: {
       proto: [Img, Box],
-      props: { boxSize: 'A2' }
+      props: { boxSize: 'A' }
     }
   },
   ...[
     {
-      props: { padding: 'A2 B A2 Z' },
+      props: { padding: 'C C C A' },
       style: {
-        borderTopRightRadius: '50px',
-        borderBottomRightRadius: '50px',
+        borderTopRightRadius: '70px',
+        borderBottomRightRadius: '70px',
         border: 'none'
         // border: '1.5px solid rgba(168, 98, 63, 1)',
         // borderLeft: 'none'
@@ -152,7 +152,7 @@ export const navButtons2 = {
     },
 
     {
-      props: { padding: 'A2 Z A2 B' },
+      props: { padding: 'C A C C' },
       style: {
         borderTopLeftRadius: '50px',
         borderBottomLeftRadius: '50px',
