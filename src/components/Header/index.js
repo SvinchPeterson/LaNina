@@ -111,7 +111,7 @@ const call = {
     proto: [Text, Box],
     props: {
       text: '+995 571 017 170',
-      color: 'cream',
+      color: 'orange2',
       size: 'B',
       position: 'absolute',
       padding: '0 0 0 Z',
@@ -136,7 +136,8 @@ const book = {
   props: {
     flexFlow: 'column',
     flexAlign: 'center center',
-    color: 'cream'
+    color: 'cream',
+    href: ''
   },
   style: { cursor: 'pointer' },
   logo: {

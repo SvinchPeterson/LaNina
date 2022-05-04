@@ -26,7 +26,7 @@ export default {
     activeMenuItem: 0,
     activeTab: 0,
     activeImage: 0,
-    offers: true
+    offers: false
   },
 
   proto: container,

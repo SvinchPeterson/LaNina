@@ -26,10 +26,10 @@ const styleAirPort = {
     padding: '0 16px'
   },
   '> p': {
-    fontSize: `${15 / 16}em`,
+    fontSize: `${14 / 16}em`,
     maxWidth: `${400 / 15}em`,
-    color: 'rgba(0, 0, 0, .45)',
-    letterSpacing: '1px',
+    color: 'rgba(0, 0, 0, .25)',
+    letterSpacing: '0px',
     lineHeight: `${20 / 15}em`,
     fontWeight: '400'
   },

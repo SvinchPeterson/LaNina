@@ -67,7 +67,7 @@ const offers = {
     show: (element, state) => state.offers
       ? {
         minHeight: `${200 / 16}em`,
-        paddingBottom: `${100 / 16}em`,
+        paddingBottom: `${60 / 16}em`,
         '> span': {
           height: '25px'
         }
@@ -119,7 +119,7 @@ export const RoomOffers = {
   props: {
     position: 'absolute',
     left: '30px',
-    bottom: '-100px',
+    bottom: '-150px',
     flexFlow: 'column'
   },
   header,

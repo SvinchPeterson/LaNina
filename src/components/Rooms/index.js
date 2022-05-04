@@ -5,7 +5,8 @@ import { Box } from '@symbo.ls/symbols'
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
   RoomOffers,
-  navButtons
+  navButtons,
+  navButtons2
 } from '..'
 
 const Room = {
@@ -18,6 +19,13 @@ const Room = {
     show: (element, state) => state.activeTab === element.key
       ? {
         height: `${700 / 16}em`,
+        '@media only screen and (max-width: 768px)': {
+          height: `${500 / 16}em`
+        },
+        '@media only screen and (max-width: 480px)': {
+          height: `${400 / 16}em`
+
+        },
         transition: 'all 1s ease-in-out',
         opacity: 1,
         paddingTop: `${100 / 16}em`
@@ -27,7 +35,15 @@ const Room = {
 
   gallery: { },
   RoomOffers,
-  navButtons
+  navButton: {
+    proto: navButtons,
+    style: {
+      '@media only screen and (max-width: 1225px)': {
+        display: 'none'
+      }
+    }
+  },
+  navButton2: { proto: navButtons2 }
 }
 
 export const roomBallerina = {
