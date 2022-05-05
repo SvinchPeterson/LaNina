@@ -1,6 +1,7 @@
 'use strict'
 
 import { Gallery } from './gallery'
+import { position } from '../../animations'
 import { image } from './image'
 
 import LIVINGROOM_JPG from '../../assets/images/ballerina/livingroom.jpg'
@@ -102,6 +103,9 @@ export const galleryBallerina = {
 
     {
       style: {
+        animationName: position,
+        animationDuration: '2s',
+        animationTimingFunction: 'ease-in-out',
         '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BATHROOM_JPG + ')' },
         '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BATHROOM_TABLET_JPG + ')' },
         '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BATHROOM_MOBILE_JPG + ')' }

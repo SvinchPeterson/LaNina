@@ -24,7 +24,7 @@ const header = {
   minimize: {
     proto: [Button, Box],
     props: {
-      padding: 'Y'
+      padding: 'Y2'
     },
     span: {
       proto: [Button, Box],
@@ -61,15 +61,17 @@ const offers = {
   proto: Box,
   style: styleOffers,
   props: {
-    padding: '0 C2 C C2'
+    padding: '0 C2 0 C2'
   },
   class: {
     show: (element, state) => state.offers
       ? {
         minHeight: `${200 / 16}em`,
         paddingBottom: `${60 / 16}em`,
+        paddingTop: '20px',
         '> span': {
-          height: '25px'
+          height: '25px',
+          opacity: 1
         }
       }
       : {
@@ -78,7 +80,8 @@ const offers = {
         '> span': {
           height: 0,
           opacity: '0',
-          transitionDelay: '0s'
+          transition: 'height .6s ease-in-out, opacity .4s ease-in-out 0s !important'
+          // transition: 'height -1s ease-in-out, opacity -1s ease-in-out'
         }
       }
   },
@@ -86,7 +89,6 @@ const offers = {
     tag: 'span',
     proto: [Box, Text],
     props: {
-      size: 'Z',
       color: 'cream 1'
     }
   },
@@ -118,8 +120,8 @@ export const RoomOffers = {
   style,
   props: {
     position: 'absolute',
-    left: '30px',
-    bottom: '-150px',
+    left: '50px',
+    bottom: '-80px',
     flexFlow: 'column'
   },
   header,

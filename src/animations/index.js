@@ -29,6 +29,16 @@ export const positionOpacity = keyframes`
     opacity: 1;
   }
 `
+export const position = keyframes`
+  from {
+    background-position: top left;
+
+  }
+  to {
+    background-position: center;
+  }
+`
+
 // export const zoomiIn = keyframes`
 //   from {
 //     transform: scale(1.3);

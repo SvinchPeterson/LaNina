@@ -1,6 +1,7 @@
 'use strict'
 
-import { Box } from '@symbo.ls/symbols'
+import { Box, Link, Img, Text } from '@symbo.ls/symbols'
+import BACK_PNG from '../../assets/icons/left-arrowCream.png'
 
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
@@ -9,6 +10,57 @@ import {
   navButtons2
 } from '..'
 
+const book = {
+  proto: [Link, Text, Box],
+  text: 'book',
+  props: {
+    size: 'A',
+    color: 'cream',
+    position: 'absolute',
+    right: '80px',
+    bottom: '0px',
+    padding: 'Z A'
+    // background: 'cream'
+  },
+  attr: { target: '_blank' },
+  style: {
+    textTransform: 'uppercase',
+    fontWeight: 700,
+    zIndex: '30',
+    textDecoration: 'none'
+    // backdropFilter: 'blur(10px)'
+
+  }
+}
+const back = {
+  proto: [Link, Box, Text],
+  icon: {
+    proto: [Img, Box],
+    props: {
+      boxSize: ' A',
+      src: BACK_PNG
+    }
+  },
+  text: 'apartments',
+
+  props: {
+    position: 'absolute',
+    top: '65px',
+    left: '50px',
+    href: '#apartments',
+    color: 'cream',
+    flexAlign: 'center center',
+    gap: 'Z1'
+  },
+  style: {
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    fontSize: `${11.5 / 16}em`,
+    fontWeight: 500,
+    letterSpacing: '2px'
+
+  }
+}
 const Room = {
   proto: Box,
   props: {
@@ -37,43 +89,91 @@ const Room = {
   RoomOffers,
   navButton: {
     proto: navButtons,
+
     style: {
       '@media only screen and (max-width: 1225px)': {
         display: 'none'
       }
     }
   },
-  navButton2: { proto: navButtons2 }
+  navButton2: {
+    proto: navButtons2,
+    ...[
+      {
+        on: {
+          click: (event, element, state) => {
+            const { activeImage } = state
+            state.update({
+              activeImage: activeImage + 1
+            })
+            if (activeImage >= 8) {
+              state.update({ activeImage: 0 })
+            }
+          }
+        }
+      },
+      {
+        on: {
+          click: (event, element, state) => {
+            const { activeImage } = state
+            state.update({
+              activeImage: activeImage - 1
+            })
+            if (activeImage <= 0) {
+              state.update({ activeImage: 8 })
+            }
+          }
+        }
+      }
+    ]
+  },
+  book: { proto: book },
+  back: { proto: back }
 }
 
 export const roomBallerina = {
   proto: Room,
   attr: { id: 'roomBallerina' },
-  gallery: { proto: galleryBallerina }
+  gallery: { proto: galleryBallerina },
+  RoomOffers: {},
+  navButton: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub' } }
 }
 
 export const roomRedBrick = {
   proto: Room,
   attr: { id: 'roomRedBrick' },
-  gallery: { proto: galleryRedBrick }
+  gallery: { proto: galleryRedBrick },
+  RoomOffers: {},
+  navButton: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1649549944_%2BCos1t1uD845OoWN' } }
 }
 
 export const roomYellowCouch = {
   proto: Room,
   attr: { id: 'roomYellowCouch' },
-  gallery: { proto: galleryYellowCouch }
+  gallery: { proto: galleryYellowCouch },
+  RoomOffers: {},
+  navButton: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1649549947_6qVLP%2BHZyXqY%2BvrL' } }
 }
 
 export const roomGreenForest = {
   proto: Room,
   attr: { id: 'roomGreenForest' },
-  gallery: { proto: galleryGreenForest }
+  gallery: { proto: galleryGreenForest },
+  RoomOffers: {},
+  navButton: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1649549949_GCS4Ixi%2FrxMbApfW' } }
 }
 
 export const roomRetro = {
   proto: Room,
   attr: { id: 'roomRetro' },
-  gallery: { proto: galleryRetro }
+  gallery: { proto: galleryRetro },
+  RoomOffers: {},
+  navButton: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1649552000_jBh%2BzYZTB7v6VHUs' } }
 }
 
 // import { Block, Button, Img, Flex } from '@symbo.ls/symbols'

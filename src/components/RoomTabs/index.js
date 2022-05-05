@@ -29,6 +29,7 @@ const book = {
     padding: 'Z1 A1 Z1 A1',
     gap: 'Y'
   },
+  style: { pointerEvents: 'pointed !important' },
   icon: {
     proto: [Img, Box],
     props: { boxSize: 'A A' }
@@ -68,6 +69,9 @@ const roomTab = {
       })
     }
   },
+  // class: {
+  //   show: (element, state) => state.activeTab === element.key ? { display: 'none' } : {}
+  // },
 
   h3: {
     proto: [Text, Box],
@@ -104,6 +108,7 @@ export const tabBallerina = {
     show: (element, state) => state.activeTab === element.key
       ? {
         flex: 5.5,
+        pointerEvents: 'none',
         '&:before': { opacity: 1 },
         backgroundAttachment: 'fixed',
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
@@ -117,6 +122,7 @@ export const tabBallerina = {
       href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub',
       target: '_blank'
     },
+    style: { pointerEvents: 'painted' },
     icon: { props: { src: DRESS_PNG } }
   }
 }
@@ -130,6 +136,7 @@ export const tabRedBrick = {
       ? {
         flex: 5.5,
         backgroundAttachment: 'fixed',
+        pointerEvents: 'none',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
@@ -141,6 +148,7 @@ export const tabRedBrick = {
       href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1649549944_%2BCos1t1uD845OoWN',
       target: '_blank'
     },
+    style: { pointerEvents: 'painted' },
     icon: { props: { src: BRICKS_PNG } }
   }
 }
@@ -154,6 +162,7 @@ export const tabYellowCouch = {
       ? {
         flex: 5.5,
         backgroundAttachment: 'fixed',
+        pointerEvents: 'none',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
@@ -165,6 +174,7 @@ export const tabYellowCouch = {
       href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1649549947_6qVLP%2BHZyXqY%2BvrL',
       target: '_blank'
     },
+    style: { pointerEvents: 'painted' },
     icon: { props: { src: SOFA_PNG } }
   }
 }
@@ -178,6 +188,7 @@ export const tabGreenForest = {
       ? {
         flex: 5.5,
         backgroundAttachment: 'fixed',
+        pointerEvents: 'none',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
@@ -189,6 +200,7 @@ export const tabGreenForest = {
       href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1649549949_GCS4Ixi%2FrxMbApfW',
       target: '_blank'
     },
+    style: { pointerEvents: 'painted' },
     icon: { props: { src: LEAF_PNG } }
   }
 }
@@ -202,6 +214,7 @@ export const tabRetro = {
       ? {
         flex: 5.5,
         backgroundAttachment: 'fixed',
+        pointerEvents: 'none',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
@@ -213,6 +226,7 @@ export const tabRetro = {
       href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1649552000_jBh%2BzYZTB7v6VHUs',
       target: '_blank'
     },
+    style: { pointerEvents: 'painted' },
     icon: { props: { src: VINYL_PNG } }
   }
 }

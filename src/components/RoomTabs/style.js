@@ -11,13 +11,13 @@ export const styleParagraph = {
   letterSpacing: '1px',
   fontWeight: 400,
   '@media only screen and (max-width: 1225px)': {
-    fontSize: `${16 / 14}em`,
-    paddingTop: `${100 / 16}em`,
-    fontWeight: 300
+    fontSize: `${15 / 16}em`,
+    paddingTop: `${100 / 15}em`
+    // fontWeight: 300
   },
   '@media only screen and (max-width: 768px)': {
-    fontSize: `${15 / 16}em`,
-    minWidth: `${300 / 16}em`
+    fontSize: `${15 / 15}em`,
+    minWidth: `${300 / 15}em`
   }
 }
 

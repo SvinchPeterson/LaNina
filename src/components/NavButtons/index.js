@@ -55,12 +55,10 @@ export const navButtons = {
         click: (event, element, state) => {
           const { activeImage } = state
           state.update({
-            activeImage: activeImage > (element.parent.parent.gallery.length - 1) ? 0 : activeImage + 1
+            activeImage: activeImage + 1
           })
-          if (activeImage === element.parent.gallery.length) {
-            state.update({
-              activeImage: activeImage === element.parent.gallery.length - 2
-            })
+          if (activeImage >= 8) {
+            state.update({ activeImage: 0 })
           }
         }
       }
@@ -78,20 +76,31 @@ export const navButtons = {
           boxSize: 'B1 '
         }
       },
-
       on: {
         click: (event, element, state) => {
           const { activeImage } = state
           state.update({
-            activeImage: activeImage === (element.parent.parent.gallery.length + 1) ? 0 : activeImage + 1
+            activeImage: activeImage - 1
           })
-          if (activeImage === element.parent.gallery.length) {
-            state.update({
-              activeImage: activeImage === element.parent.gallery.length - 2
-            })
+          if (activeImage <= 0) {
+            state.update({ activeImage: 8 })
           }
         }
       }
+
+      // on: {
+      //   click: (event, element, state) => {
+      //     const { activeImage } = state
+      //     state.update({
+      //       activeImage: activeImage === (element.parent.parent.gallery.length + 1) ? 0 : activeImage + 1
+      //     })
+      //     if (activeImage === element.parent.gallery.length) {
+      //       state.update({
+      //         activeImage: activeImage === element.parent.gallery.length - 2
+      //       })
+      //     }
+      //   }
+      // }
     }
   ]
 }
@@ -126,7 +135,7 @@ export const navButtons2 = {
     },
     style: {
       // background: 'radial-gradient( rgba(168, 98, 63, 1), rgba(168, 98, 63, 1))',
-      background: 'radial-gradient(rgba(42, 81, 61, .25),rgba(42, 81, 61, .5))',
+      background: 'radial-gradient(rgba(42, 81, 61, .45),rgba(42, 81, 61, .5))',
       backdropFilter: 'blur(0px)',
       cursor: 'pointer'
     },

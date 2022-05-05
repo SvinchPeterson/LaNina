@@ -149,14 +149,14 @@ const book = {
   span: {
     proto: Text,
     props: {
-      text: 'ook'
+      // text: 'ook'
     },
     style: {
       textTransform: 'uppercase',
-      fontSize: `${13.5 / 16}em`,
+      fontSize: `${13 / 16}em`,
       marginLeft: '-2.5px',
       fontWeight: '500',
-      letterSpacing: '-1px'
+      letterSpacing: '-2px'
     }
   }
 }
@@ -169,7 +169,7 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Y1 B1',
+    padding: 'A C',
     gap: 'D2'
   },
 
@@ -177,8 +177,8 @@ const container = {
     zIndex: 500,
     width: 'fit-content',
     transform: 'translate(-50%, 0%)',
-    borderBottomLeftRadius: '32.5px',
-    borderBottomRightRadius: '32.5px',
+    borderBottomLeftRadius: '45px',
+    borderBottomRightRadius: '45px',
     // borderBottom: '1px solid rgba(168, 98, 63, 1)',
     // borderRadius: '32px',
     background: 'radial-gradient(rgba(42, 81, 61, .65),rgba(42, 81, 61, .85))',

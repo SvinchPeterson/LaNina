@@ -49,73 +49,73 @@ export const galleryGreenForest = {
 
     {
       style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + LIVINGROOM2_TABLET_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + LIVINGROOM2_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')' },
+        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + LIVINGROOM2_TABLET_JPG + ')' },
+        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + LIVINGROOM2_MOBILE_JPG + ')' }
       }
     },
 
     {
       style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + MEAMA_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + MEAMA_TABLET_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + MEAMA_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + MEAMA_JPG + ')' },
+        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + MEAMA_TABLET_JPG + ')' },
+        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + MEAMA_MOBILE_JPG + ')' }
       }
     },
 
     {
       style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM_TABLET_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM_JPG + ')' },
+        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM_TABLET_JPG + ')' },
+        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM_MOBILE_JPG + ')' }
       }
     },
 
     {
       style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN_TABLET_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1768px)': { backgroundImage: 'url(' + KITCHEN_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN_JPG + ')' },
+        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN_TABLET_JPG + ')' },
+        '@media only screen and (max-width: 1768px)': { backgroundImage: 'url(' + KITCHEN_MOBILE_JPG + ')' }
       }
     },
 
     {
       style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN2_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN2_TABLET_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + KITCHEN2_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN2_JPG + ')' },
+        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN2_TABLET_JPG + ')' },
+        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + KITCHEN2_MOBILE_JPG + ')' }
       }
     },
 
     {
       style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN3_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN3_TABLET_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + KITCHEN3_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN3_JPG + ')' },
+        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN3_TABLET_JPG + ')' },
+        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + KITCHEN3_MOBILE_JPG + ')' }
       }
     },
 
     {
       style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BATHROOM_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BATHROOM_TABLET_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BATHROOM_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BATHROOM_JPG + ')' },
+        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BATHROOM_TABLET_JPG + ')' },
+        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BATHROOM_MOBILE_JPG + ')' }
       }
     },
 
     {
       style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + HOLL_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + HOLL_TABLET_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + HOLL_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + HOLL_JPG + ')' },
+        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + HOLL_TABLET_JPG + ')' },
+        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + HOLL_MOBILE_JPG + ')' }
       }
     },
 
     {
       style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + CROSLEY_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + CROSLEY_TABLET_JPG + ')', display: 'none' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + CROSLEY_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + CROSLEY_JPG + ')' },
+        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + CROSLEY_TABLET_JPG + ')' },
+        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + CROSLEY_MOBILE_JPG + ')' }
       }
     }
   ]

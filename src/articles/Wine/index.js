@@ -11,7 +11,10 @@ export default {
   },
   style: {
     backgroundColor: 'rgba(244, 233, 217, 1)',
-    minHeight: `${700 / 16}em`
+    minHeight: `${700 / 16}em`,
+    '@media only screen and (max-width: 768px)': {
+      paddingTop: '100px'
+    }
   },
   content: {
     proto: Box,

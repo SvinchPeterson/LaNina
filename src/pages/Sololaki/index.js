@@ -17,7 +17,11 @@ const container = {
     background: 'rgba(42, 81, 61, 1)',
     animationName: opacity,
     animationDuration: '2s',
-    animationTimingFunction: 'ease-in-out'
+    animationTimingFunction: 'ease-in-out',
+    '@media only screen and (max-width: 1225px)': {
+      // fontSize: '32px'
+
+    }
   }
 }
 export default {
