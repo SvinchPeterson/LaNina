@@ -169,7 +169,7 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'A C',
+    padding: 'Z2 C',
     gap: 'D2'
   },
 

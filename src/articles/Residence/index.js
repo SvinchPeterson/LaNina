@@ -26,7 +26,11 @@ const entrance = {
     },
     style: {
       fontSize: `${14 / 16}em`,
-      fontWeight: 400
+      fontWeight: 400,
+      '@media only screen and (max-width: 768px)': {
+        fontWeight: 500
+        // fontSize: `${13 / 14}em`
+      }
     },
     entrences: {
       proto: Box,
@@ -39,7 +43,11 @@ const entrance = {
         props: { color: 'cream' },
         style: {
           letterSpacing: '1.5px',
-          textTransform: 'uppercase'
+          textTransform: 'uppercase',
+          '@media only screen and (max-width: 768px)': {
+            letterSpacing: 0,
+            fontWeight: 700
+          }
         }
       },
       ...[
@@ -49,6 +57,10 @@ const entrance = {
           props: {
             flexAlign: 'center flex-start',
             gap: '8px'
+          },
+          style: {
+            flexWrap: 'wrap',
+            lineHeight: '10px'
           },
           ...[
             { text: 'separate street' },
@@ -95,14 +107,21 @@ const entrance = {
 export default {
   proto: Box,
   props: {
-    padding: '0 0',
+    // padding: '0 0',
     flexFlow: 'column',
-    gap: 'G'
+    gap: 'G',
+    minMax: '100% 100%'
   },
   attr: { id: 'residence' },
   style: {
     background: 'rgba(244, 233, 217, 1)',
-    borderBottom: '1px solid rgba(42, 81, 61, 1)'
+    borderBottom: '1px solid rgba(42, 81, 61, 1)',
+    paddingTop: `${100 / 16}em`,
+    '@media only screen and (max-width: 768px)': {
+      gap: `${100 / 16}em`,
+      paddingTop: 0
+      // padding: '100px 0'
+    }
   },
 
   residence,

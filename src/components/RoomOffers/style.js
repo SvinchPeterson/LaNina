@@ -3,7 +3,7 @@
 export const styleHeader = {
   textTransform: 'uppercase',
   letterSpacing: '.5px',
-  height: `${70 / 16}em`
+  height: `${60 / 16}em`
 }
 export const styleOffers = {
   display: 'grid',

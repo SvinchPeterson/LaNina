@@ -88,7 +88,7 @@ const roomTab = {
     proto: [Text, Box],
     style: styleParagraph,
     props: {
-      color: 'cream .85',
+      color: 'cream 1',
       padding: 'C1 0 0 0',
       size: 'Z'
     },

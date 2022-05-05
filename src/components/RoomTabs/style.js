@@ -11,13 +11,17 @@ export const styleParagraph = {
   letterSpacing: '1px',
   fontWeight: 400,
   '@media only screen and (max-width: 1225px)': {
-    fontSize: `${15 / 16}em`,
-    paddingTop: `${100 / 15}em`
-    // fontWeight: 300
+    fontSize: `${18 / 16}em`,
+    padding: `${50 / 18}em`,
+    letterSpacing: 0
   },
   '@media only screen and (max-width: 768px)': {
-    fontSize: `${15 / 15}em`,
+    padding: `${50 / 18}em ${15 / 18}em`,
     minWidth: `${300 / 15}em`
+  },
+  '@media only screen and (max-width: 480px)': {
+    fontSize: `${17 / 18}em`
+
   }
 }
 
@@ -80,10 +84,14 @@ export const styleRoomTab = {
   },
   '@media only screen and (max-width: 1225px)': {
     minWidth: `100%`,
-    height: `${500 / 16}em`
+    height: `${500 / 16}em`,
+    '> h3': {
+      fontSize: `${24 / 16}em`
+    }
   },
   '@media only screen and (max-width: 768px)': {
-    minWidth: `100%`
+    minWidth: `100%`,
+    minHeight: '100%'
   },
   '> h3': {
     textTransform: 'uppercase',

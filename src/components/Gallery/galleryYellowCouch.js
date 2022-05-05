@@ -60,7 +60,6 @@ export const galleryYellowCouch = {
     {
       style: {
         animation: 'none',
-        backgroundSize: 'contain',
         '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM_JPG + ')' },
         '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM_TABLET_JPG + ')' },
         '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM_MOBILE_JPG + ')' }
@@ -83,7 +82,6 @@ export const galleryYellowCouch = {
     },
     {
       style: {
-        backgroundSize: 'contain',
         animation: 'none',
         '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BATHROOM_JPG + ')' },
         '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BATHROOM_TABLET_JPG + ')' },

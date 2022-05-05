@@ -94,8 +94,7 @@ export const galleryRedBrick = {
     },
     {
       style: {
-        backgroundSize: 'contain',
-        animation: 'none',
+        animationDuration: '2s',
         '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BATHROOM2_JPG + ')' },
         '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BATHROOM2_TABLET_JPG + ')' },
         '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BATHROOM2_MOBILE_JPG + ')' }

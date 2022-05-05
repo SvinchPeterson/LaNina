@@ -9,7 +9,6 @@ export const styleResidence = {
   minHeight: `${600 / 16}em`,
   display: 'flex',
   justifyContent: 'center',
-  marginTop: `${200 / 16}em`,
   '@media only screen and (min-width: 1225px)': {
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
@@ -22,7 +21,14 @@ export const styleResidence = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-    alignItems: 'center'
+    alignItems: 'center',
+    minHeight: `${800 / 16}em`,
+    paddingTop: `${200 / 16}em`,
+    paddingBottom: `${200 / 16}em`
+
+  },
+  '@media only screen and (max-width: 768px)': {
+    minHeight: `${700 / 16}em`
   },
 
   p: {
@@ -69,12 +75,18 @@ export const styleEntrence = {
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat'
   },
+  '@media only screen and (max-width: 1225px)': {
+    padding: `${50 / 16}em`
+  },
+  '@media only screen and (max-width: 768px)': {
+    padding: `${30 / 16}em`,
+    minHeight: `${450 / 16}em`,
+    justifyContent: 'center'
+  },
   '@media only screen and (max-width: 480px)': {
-    padding: `${50 / 16}em ${20 / 16}em `
   },
-  '> div': {
-    alignSelf: 'flex-end'
-  },
+
+  '> div': { alignSelf: 'flex-end' },
 
   '> span': {
     display: 'none',
