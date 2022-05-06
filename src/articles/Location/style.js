@@ -6,7 +6,7 @@ const styleLocation = {
   maxWidth: '500px',
   textAlign: 'center',
   margin: '0 auto',
-  lineHeight: '25px'
+  lineHeight: `${25 / 16}em`
 }
 
 const styleMap = {

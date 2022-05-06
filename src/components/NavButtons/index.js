@@ -48,7 +48,7 @@ export const navButtons = {
         proto: [Img, Box],
         props: {
           src: UP_ARROW_PNG,
-          boxSize: 'B1 '
+          boxSize: 'B '
         }
       },
       on: {
@@ -73,7 +73,7 @@ export const navButtons = {
         proto: [Img, Box],
         props: {
           src: DOWN_ARROW_PNG,
-          boxSize: 'B1 '
+          boxSize: 'B '
         }
       },
       on: {
@@ -121,7 +121,7 @@ export const navButtons2 = {
     transform: 'translate(-50%, -50%)',
     display: 'none',
     height: 0,
-    width: '100%',
+    width: '101%',
     '@media only screen and (max-width: 1225px)': {
       display: 'flex'
     }
@@ -135,18 +135,18 @@ export const navButtons2 = {
     },
     style: {
       // background: 'radial-gradient( rgba(168, 98, 63, 1), rgba(168, 98, 63, 1))',
-      background: 'radial-gradient(rgba(42, 81, 61, .45),rgba(42, 81, 61, .5))',
+      background: 'radial-gradient(rgba(42, 81, 61, .55),rgba(42, 81, 61, .65))',
       backdropFilter: 'blur(0px)',
       cursor: 'pointer'
     },
     image: {
       proto: [Img, Box],
-      props: { boxSize: 'A' }
+      props: { boxSize: 'A1' }
     }
   },
   ...[
     {
-      props: { padding: 'C C C A' },
+      props: { padding: 'C2 C C2 A' },
       style: {
         borderTopRightRadius: '70px',
         borderBottomRightRadius: '70px',
@@ -161,10 +161,10 @@ export const navButtons2 = {
     },
 
     {
-      props: { padding: 'C A C C' },
+      props: { padding: 'C2 A C2 C' },
       style: {
-        borderTopLeftRadius: '50px',
-        borderBottomLeftRadius: '50px',
+        borderTopLeftRadius: '70px',
+        borderBottomLeftRadius: '70px',
         // border: '2px solid rgba(168, 98, 63, 1)',
         // borderRight: 'none'
         border: 'none'

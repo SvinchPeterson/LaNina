@@ -16,7 +16,11 @@ export default {
   p: { margin: 0 },
   h6: { margin: 0 },
   fontFamily: 'Helvetica Neue',
-  background: 'black'
+  background: 'black',
+  '@media only screen and (min-width: 1680px)': {
+    fontSize: '18px'
+
+  }
   // fontFamily: 'DejaVu Sans'
   // background: 'rgba(244, 233, 217, 1)'
 }

@@ -12,6 +12,11 @@ const header = {
     flexAlign: 'center space-between',
     padding: '0 B1'
   },
+  // class: {
+  //   show: (element, state) => state.offers
+  //     ? { '@media only screen and (max-width: 1225px)': { height: '100px' } }
+  //     : {}
+  // },
   h5: {
     proto: [Text, Box],
     props: {
@@ -36,17 +41,9 @@ const header = {
     },
 
     style: {
-      // border: '1px solid red',
       background: 'transparent'
     },
 
-    // minus: {
-    //   proto: [Img, Box],
-    //   props: {
-    //     src: MINUS_ICON,
-    //     boxSize: 'C B1'
-    //   }
-    // },
     on: {
       click: (event, element, state) => {
         state.offers
@@ -67,11 +64,11 @@ const offers = {
     show: (element, state) => state.offers
       ? {
         minHeight: `${200 / 16}em`,
-        paddingBottom: `${60 / 16}em`,
-        paddingTop: '20px',
+        paddingBottom: `${30 / 16}em`,
         '> span': {
-          height: '25px',
-          opacity: 1
+          height: '23px',
+          opacity: 1,
+          transition: 'height .4s linear, opacity .5s linear .4s'
         }
       }
       : {
@@ -80,8 +77,7 @@ const offers = {
         '> span': {
           height: 0,
           opacity: '0',
-          transition: 'height .6s ease-in-out, opacity .4s ease-in-out 0s !important'
-          // transition: 'height -1s ease-in-out, opacity -1s ease-in-out'
+          transition: 'height .2s linear, opacity 0s linear 0s'
         }
       }
   },
@@ -123,6 +119,14 @@ export const RoomOffers = {
     left: '50px',
     bottom: '-80px',
     flexFlow: 'column'
+  },
+  class: {
+    show: (element, state) => state.offers
+      ? {
+        '@media only screen and (min-width: 1225px)': { paddingBottom: '30px' },
+        '@media only screen and (max-width: 1225px)': { paddingBottom: '16px' }
+      }
+      : {}
   },
   header,
   offers

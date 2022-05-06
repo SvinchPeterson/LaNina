@@ -82,7 +82,7 @@ const entrance = {
       style: {
         maxWidth: `${450 / 16}em`,
         letterSpacing: '1px',
-        lineHeight: '20px'
+        lineHeight: `${20 / 16}em`
       }
     },
     stay: {

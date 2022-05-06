@@ -1,7 +1,7 @@
 'use strict'
 
 import { Box, Link, Img, Text } from '@symbo.ls/symbols'
-import BACK_PNG from '../../assets/icons/left-arrowCream.png'
+import BACK_PNG from '../../assets/icons/leftCream.png'
 
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
@@ -37,7 +37,7 @@ const back = {
   icon: {
     proto: [Img, Box],
     props: {
-      boxSize: ' A',
+      boxSize: ' Z2',
       src: BACK_PNG
     }
   },
@@ -46,19 +46,31 @@ const back = {
   props: {
     position: 'absolute',
     top: '65px',
-    left: '50px',
+    left: '10px',
     href: '#apartments',
     color: 'cream',
     flexAlign: 'center center',
-    gap: 'Z1'
+    gap: 'Z',
+    padding: 'Z'
   },
   style: {
     textDecoration: 'none',
     textTransform: 'uppercase',
     fontSize: `${11.5 / 16}em`,
     fontWeight: 500,
-    letterSpacing: '2px'
-
+    letterSpacing: '2px',
+    '@media only screen and (max-width: 1225px)': {
+      left: '30px',
+      fontSize: '12.5px'
+    }
+  },
+  class: {
+    show: (element, state) => state.activeTab
+      ? {
+        opacity: 1,
+        transition: 'opacity 2s ease-in-out .5s'
+      }
+      : { opacity: 0 }
   }
 }
 const Room = {
@@ -66,26 +78,35 @@ const Room = {
   props: {
     position: 'relative'
   },
-  style: { borderRadius: '100px' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
         height: `${700 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
-          transition: 'all .1s ease-in-out'
+          transition: 'all .1s ease-in-out',
+          display: 'block',
+          height: `${600 / 16}em`
         },
         '@media only screen and (max-width: 768px)': {
           height: `${500 / 16}em`
         },
         '@media only screen and (max-width: 480px)': {
           height: `${400 / 16}em`
-
         },
         transition: 'all 1s ease-in-out',
         opacity: 1,
         paddingTop: `${100 / 16}em`
       }
-      : { height: '0', opacity: 0, button: { opacity: 0 }, '> aside': { display: 'none' } }
+
+      : {
+        '@media only screen and (max-width: 1225px)': {
+          display: 'none'
+        },
+        height: '0',
+        opacity: 0,
+        button: { opacity: 0 },
+        '> aside': { display: 'none' }
+      }
   },
 
   gallery: { },
@@ -101,6 +122,12 @@ const Room = {
   },
   navButton2: {
     proto: navButtons2,
+    style: {
+      top: '65%',
+      '@media only screen and (max-width: 768px)': {
+        top: '70%'
+      }
+    },
     ...[
       {
         on: {

@@ -26,7 +26,33 @@ const roomsTabs = {
       : {}
   },
   buttons: {
-    proto: navButtons2
+    proto: navButtons2,
+    ...[
+      {
+        on: {
+          click: (event, element, state) => {
+            const { tabsContainer } = element.parent.parent
+            tabsContainer.node.scrollBy({
+              top: 0,
+              left: -tabsContainer.node.clientWidth - 16 * 1.618,
+              behavior: 'smooth'
+            })
+          }
+        }
+      },
+      {
+        on: {
+          click: (event, element, state) => {
+            const { tabsContainer } = element.parent.parent
+            tabsContainer.node.scrollBy({
+              top: 0,
+              left: tabsContainer.node.clientWidth + 16 * 1.618,
+              behavior: 'smooth'
+            })
+          }
+        }
+      }
+    ]
   },
   tabsContainer: {
     tag: 'nav',

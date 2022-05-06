@@ -21,15 +21,25 @@ const image = {
     animationName: positionOpacity,
     animationDuration: '3s',
     animationTimingFunction: 'ease-in-out',
+    position: 'relative',
     '@media only screen and (min-width: 1225px)': {
       backgroundAttachment: 'fixed',
-      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_JPG + ')'
+      backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
     },
     '@media only screen and (max-width: 1225px)': {
-      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_TABLET_JPG + ')'
+      backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')'
     },
     '@media only screen and (max-width: 768px)': {
-      backgroundImage: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8)), url(' + SOLOLAKI_MOBILE_JPG + ')'
+      backgroundImage: 'url(' + SOLOLAKI_MOBILE_JPG + ')'
+    },
+    '&:before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      background: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8))'
     }
   }
 
@@ -106,7 +116,7 @@ const paragraph = {
       display: 'flex',
       flexFlow: 'column',
       fontSize: '16px',
-      lineHeight: '23px',
+      lineHeight: `${23 / 16}em`,
       textAlign: 'center'
     },
     '@media only screen and (max-width: 380px)': {

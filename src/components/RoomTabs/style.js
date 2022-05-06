@@ -3,22 +3,19 @@ export const styleParagraph = {
   zIndex: 10,
   opacity: 0,
   pointerEvents: 'none',
-  minWidth: `${400 / 16}em`,
-  width: `${460 / 16}em`,
   transition: 'opacity .3s ease-in-out',
   transitionDelay: '.6s',
   lineHeight: `${20 / 15}em`,
   letterSpacing: '.5px',
   fontWeight: 400,
-  fontSize: '15px',
-  // whiteSpace: 'nowrap',
+  '@media only screen and (min-width: 1225px)': {
+    fontSize: `${15 / 16}em`,
+    minWidth: `${400 / 15}em`,
+    width: `${435 / 15}em`
+  },
   '@media only screen and (max-width: 1225px)': {
-    fontSize: `${18 / 16}em`,
-    letterSpacing: 0,
-    position: 'absolute',
-    top: '40%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)'
+    fontSize: `${17 / 16}em`,
+    maxWidth: `${500 / 17}em`
   },
   '@media only screen and (max-width: 768px)': {
     padding: `${50 / 18}em ${15 / 18}em`,
@@ -26,45 +23,40 @@ export const styleParagraph = {
   },
   '@media only screen and (max-width: 480px)': {
     fontSize: `${17 / 18}em`
-
   }
 }
 
 export const styleBook = {
   zIndex: 10,
-  position: 'absolute',
-  transform: 'translate(-50%, -50%)',
   textTransform: 'uppercase',
-  fontWeight: 700,
-  // borderRadius: '50px',
-  borderTopRightRadius: '30px',
-  borderBottomRightRadius: '30px',
-  borderTopLeftRadius: '30px',
-  borderBottomLeftRadius: '30px',
+  fontWeight: 500,
+  borderRadius: '30px',
   border: '.7px solid rgba(168, 98, 63, 1)',
   letterSpacing: '.5px',
   backdropFilter: 'blur(2px)',
   background: 'radial-gradient(rgba(42, 81, 61, .15),rgba(42, 81, 61, .25))',
-  // background: 'radial-gradient( rgba(168, 98, 63, .2), rgba(168, 98, 63, .15))',
-  // opacity: '.9',
   textDecoration: 'none',
   borderBottom: 'none',
+  transform: 'translate(-50%, -50%)',
   '&:hover': { opacity: 1 },
-  '@media only screen and (max-width: 480px)': { bottom: '5%' }
-  // '> span': { fontSize: `${16 / 16}em` }
+  '@media only screen and (max-width: 480px)': { bottom: '5%' },
+  '> span': { fontSize: `${13.5 / 16}em` }
 }
 export const styleRoomTab = {
+  height: `${400 / 16}em`,
   flex: 1,
   cursor: 'pointer',
-  boxSize: 'border-box',
+  boxSizing: 'border-box',
   transition: 'all .7s ease-in-out',
-  overflow: 'hidden',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   zIndex: 1,
   textDecoration: 'none',
   position: 'relative',
   backdropFilter: 'blur(2px)',
+  '> div': {
+    overflow: 'hidden'
+  },
   '&:before': {
     content: '""',
     position: 'absolute',
@@ -77,11 +69,32 @@ export const styleRoomTab = {
     transition: 'opacity .7s ease-in-out',
     cursor: 'pointer'
   },
+  '&:after': {
+    content: '""',
+    fontSize: `${14 / 16}em`,
+    fontWeight: '500',
+    position: 'absolute',
+    top: '-25px',
+    left: '5px',
+    color: 'rgba(244, 233, 217, .85)',
+    textTransform: 'uppercase',
+    letterSpacing: '1.5px',
+    whiteSpace: 'nowrap',
+    '@media only screen and (max-width: 1225px)': {
+      fontSize: `${16 / 14}em`,
+      top: '-35px',
+      left: '30px',
+      letterSpacing: '1px'
+    },
+    '@media only screen and (max-width: 768px)': {
+      fontSize: `${14 / 14}em`
+    }
+  },
   '@media only screen and (min-width: 1225px)': {
     minHeight: `${400 / 16}em`,
     '&:hover': { flex: 5.5 },
-    '&:hover > p': { opacity: 1 },
-    '&:not(:hover) > p': {
+    '&:hover > div > p': { opacity: 1 },
+    '&:not(:hover) > div > p': {
       transitionDelay: '0s',
       transition: 'opacity 0s ease-in-out'
     },
@@ -90,15 +103,15 @@ export const styleRoomTab = {
   },
   '@media only screen and (max-width: 1225px)': {
     minWidth: `100%`,
-    height: `${600 / 16}em`,
-    justifyContent: 'space-between',
+    height: `${450 / 16}em`,
     '> h3': {
-      fontSize: `${24 / 16}em`
+      fontSize: `${28 / 16}em`
     }
   },
   '@media only screen and (max-width: 768px)': {
     minWidth: `100%`,
-    minHeight: '100%'
+    minHeight: '100%',
+    height: `${400 / 16}em`
   },
   '> h3': {
     textTransform: 'uppercase',

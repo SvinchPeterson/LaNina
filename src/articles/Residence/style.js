@@ -66,11 +66,12 @@ export const styleResidence = {
 
 export const styleEntrence = {
   minHeight: `${700 / 16}em`,
-  backgroundImage: 'linear-gradient(rgba(42, 81, 61, 0),rgba(42, 81, 61, .35), rgba(42, 81, 61, 1)),url(' + ENTRENCE_JPG + ')',
+  backgroundImage: 'url(' + ENTRENCE_JPG + ')',
   display: 'flex',
   boxSizing: 'border-box',
   padding: `${100 / 16}em ${100 / 16}em `,
   backgroundSize: 'cover',
+  position: 'relative',
   '@media only screen and (min-width: 1225px)': {
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat'
@@ -85,8 +86,16 @@ export const styleEntrence = {
   },
   '@media only screen and (max-width: 480px)': {
   },
-
-  '> div': { alignSelf: 'flex-end' },
+  '&:before': {
+    content: '""',
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0,
+    background: 'linear-gradient(rgba(42, 81, 61, 0),rgba(42, 81, 61, .35), rgba(42, 81, 61, 1))'
+  },
+  '> div': { alignSelf: 'flex-end', zIndex: 100 },
 
   '> span': {
     display: 'none',

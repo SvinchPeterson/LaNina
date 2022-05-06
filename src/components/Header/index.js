@@ -121,7 +121,8 @@ const call = {
       opacity: 0,
       whiteSpace: 'nowrap',
       '@media only screen and (max-width: 768px)': {
-        right: 0
+        right: 0,
+        fontSize: '16px'
       }
     }
   },
@@ -143,7 +144,7 @@ const book = {
   logo: {
     proto: Logo3,
     props: {
-      boxSize: 'B1 B1'
+      boxSize: 'B B'
     }
   },
   span: {
@@ -169,7 +170,7 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Z2 C',
+    padding: 'Z1 B',
     gap: 'D2'
   },
 
@@ -177,14 +178,11 @@ const container = {
     zIndex: 500,
     width: 'fit-content',
     transform: 'translate(-50%, 0%)',
-    borderBottomLeftRadius: '45px',
-    borderBottomRightRadius: '45px',
-    // borderBottom: '1px solid rgba(168, 98, 63, 1)',
-    // borderRadius: '32px',
+    borderBottomLeftRadius: '30px',
+    borderBottomRightRadius: '30px',
     background: 'radial-gradient(rgba(42, 81, 61, .65),rgba(42, 81, 61, .85))',
     boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
     backdropFilter: 'blur(5px)'
-    // border: '2px solid orange'
   }
 }
 

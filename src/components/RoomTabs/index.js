@@ -24,9 +24,10 @@ const book = {
   props: {
     flexAlign: 'center center',
     flexFlow: 'row',
+    position: 'absolute',
     left: '50%',
     bottom: '5%',
-    padding: 'Z1 A1 Z1 A1',
+    padding: 'Z A1 Z A1',
     gap: 'Y'
   },
   style: { pointerEvents: 'pointed !important' },
@@ -39,21 +40,17 @@ const book = {
     props: {
       text: 'book',
       color: 'cream'
-      // size: 'Z'
     }
   }
 }
 
 const roomTab = {
   proto: [Link, Box],
-  style: styleRoomTab,
   props: {
-    flexFlow: 'column',
-    flexAlign: 'center flex-start',
-    padding: 'D B',
-    position: 'relative',
-    gap: 'C'
+    padding: 'B',
+    position: 'relative'
   },
+  style: styleRoomTab,
   on: {
     click: (event, element, state) => {
       state.update({ activeTab: element.key })
@@ -63,48 +60,59 @@ const roomTab = {
           opacity: 1,
           padding: `0 ${80 / 16}em`,
           '@media only screen and (max-width: 1024px)': { padding: 0 }
-
-          // paddingTop: '100px'
-          // borderTop: '5px solid rgba(168, 98, 63, 1)'
         }
       })
     }
   },
-  // class: {
-  //   show: (element, state) => state.activeTab === element.key ? { display: 'none' } : {}
-  // },
-
-  h3: {
-    proto: [Text, Box],
+  content: {
+    proto: Box,
     props: {
-      size: 'A',
-      color: 'cream'
+      position: 'absolute',
+      boxSize: '100% 100%',
+      top: '0',
+      left: '0',
+      flexFlow: 'column',
+      flexAlign: 'center center',
+      gap: 'D2',
+      padding: '0 C B C'
     },
-    class: {
-      show: (element, state) => state.activeTab === element.parent.key ? { letterSpacing: '1px' } : {}
-    }
-  },
 
-  p: {
-    proto: [Text, Box],
-    style: styleParagraph,
-    props: {
-      color: 'cream 1'
-      // padding: 'C1 0 0 0',
-      // size: 'Z'
+    h3: {
+      proto: [Text, Box],
+      props: {
+        size: 'A',
+        color: 'cream'
+      },
+      class: {
+        show: (element, state) => state.activeTab === element.parent.parent.key ? { letterSpacing: '1px' } : {}
+      },
+      style: { display: 'none' }
     },
-    class: {
-      show: (element, state) => state.activeTab === element.parent.key ? { opacity: 1 } : {}
+
+    p: {
+      proto: [Text, Box],
+      style: styleParagraph,
+      props: {
+        color: 'cream 1'
+        // padding: 'C1 0 0 0',
+        // size: 'Z'
+      },
+      class: {
+        show: (element, state) => state.activeTab === element.parent.parent.key ? { opacity: 1 } : {}
+      }
+    },
+    book: {
+      proto: book
     }
-  },
-  book: {
-    proto: book
   }
 }
 
 export const tabBallerina = {
   proto: roomTab,
-  style: { backgroundImage: 'url(' + BALLERINA_JPG + ')' },
+  style: {
+    backgroundImage: 'url(' + BALLERINA_JPG + ')',
+    '&:after': { content: '"ballerina"' }
+  },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -116,22 +124,24 @@ export const tabBallerina = {
       } : {}
   },
   props: { href: '#roomBallerina' },
-  h3: { props: { text: 'ballerina' } },
-  p: { proto: ballerina },
-  book: {
-    props: {
-      href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub',
-      target: '_blank'
-    },
-    style: { pointerEvents: 'painted' },
-    icon: { props: { src: DRESS_PNG } }
+  content: {
+    h3: { props: { text: 'ballerina' } },
+    p: { proto: ballerina },
+    book: {
+      props: {
+        href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub',
+        target: '_blank'
+      },
+      style: { pointerEvents: 'painted' },
+      icon: { props: { src: DRESS_PNG } }
+    }
   }
 }
 
 export const tabRedBrick = {
   proto: roomTab,
   props: { href: '#roomRedBrick' },
-  style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' },
+  style: { backgroundImage: 'url(' + REDBRICK_JPG + ')', '&:after': { content: '"red brick"' } },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -142,22 +152,24 @@ export const tabRedBrick = {
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
-  h3: { props: { text: 'red brick' } },
-  p: { proto: redBrick },
-  book: {
-    props: {
-      href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1649549944_%2BCos1t1uD845OoWN',
-      target: '_blank'
-    },
-    style: { pointerEvents: 'painted' },
-    icon: { props: { src: BRICKS_PNG } }
+  content: {
+    h3: { props: { text: 'red brick' } },
+    p: { proto: redBrick },
+    book: {
+      props: {
+        href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1649549944_%2BCos1t1uD845OoWN',
+        target: '_blank'
+      },
+      style: { pointerEvents: 'painted' },
+      icon: { props: { src: BRICKS_PNG } }
+    }
   }
 }
 
 export const tabYellowCouch = {
   proto: roomTab,
   props: { href: '#roomYellowCouch' },
-  style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')' },
+  style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')', '&:after': { content: '"yellow couch"' } },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -168,22 +180,24 @@ export const tabYellowCouch = {
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
-  h3: { props: { text: 'yellow couch' } },
-  p: { proto: yellowCouch },
-  book: {
-    props: {
-      href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1649549947_6qVLP%2BHZyXqY%2BvrL',
-      target: '_blank'
-    },
-    style: { pointerEvents: 'painted' },
-    icon: { props: { src: SOFA_PNG } }
+  content: {
+    h3: { props: { text: 'yellow couch' } },
+    p: { proto: yellowCouch },
+    book: {
+      props: {
+        href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1649549947_6qVLP%2BHZyXqY%2BvrL',
+        target: '_blank'
+      },
+      style: { pointerEvents: 'painted' },
+      icon: { props: { src: SOFA_PNG } }
+    }
   }
 }
 
 export const tabGreenForest = {
   proto: roomTab,
   props: { href: '#roomGreenForest' },
-  style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')' },
+  style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')', '&:after': { content: '"green forest"' } },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -194,22 +208,24 @@ export const tabGreenForest = {
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
-  h3: { props: { text: 'green forest' } },
-  p: { proto: greenForest },
-  book: {
-    props: {
-      href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1649549949_GCS4Ixi%2FrxMbApfW',
-      target: '_blank'
-    },
-    style: { pointerEvents: 'painted' },
-    icon: { props: { src: LEAF_PNG } }
+  content: {
+    h3: { props: { text: 'green forest' } },
+    p: { proto: greenForest },
+    book: {
+      props: {
+        href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1649549949_GCS4Ixi%2FrxMbApfW',
+        target: '_blank'
+      },
+      style: { pointerEvents: 'painted' },
+      icon: { props: { src: LEAF_PNG } }
+    }
   }
 }
 
 export const tabRetro = {
   proto: roomTab,
   props: { href: '#roomRetro' },
-  style: { backgroundImage: 'url(' + RETRO_JPG + ')' },
+  style: { backgroundImage: 'url(' + RETRO_JPG + ')', '&:after': { content: '"retro"' } },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -220,14 +236,16 @@ export const tabRetro = {
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
-  h3: { props: { text: 'retro' } },
-  p: { proto: retro },
-  book: {
-    props: {
-      href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1649552000_jBh%2BzYZTB7v6VHUs',
-      target: '_blank'
-    },
-    style: { pointerEvents: 'painted' },
-    icon: { props: { src: VINYL_PNG } }
+  content: {
+    h3: { props: { text: 'retro' } },
+    p: { proto: retro },
+    book: {
+      props: {
+        href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1649552000_jBh%2BzYZTB7v6VHUs',
+        target: '_blank'
+      },
+      style: { pointerEvents: 'painted' },
+      icon: { props: { src: VINYL_PNG } }
+    }
   }
 }
