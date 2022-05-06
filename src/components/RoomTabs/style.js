@@ -4,16 +4,21 @@ export const styleParagraph = {
   opacity: 0,
   pointerEvents: 'none',
   minWidth: `${400 / 16}em`,
-  maxWidth: `${600 / 16}em`,
+  width: `${460 / 16}em`,
   transition: 'opacity .3s ease-in-out',
   transitionDelay: '.6s',
-  lineHeight: `${23 / 16}em`,
-  letterSpacing: '1px',
+  lineHeight: `${20 / 15}em`,
+  letterSpacing: '.5px',
   fontWeight: 400,
+  fontSize: '15px',
+  // whiteSpace: 'nowrap',
   '@media only screen and (max-width: 1225px)': {
     fontSize: `${18 / 16}em`,
-    padding: `${50 / 18}em`,
-    letterSpacing: 0
+    letterSpacing: 0,
+    position: 'absolute',
+    top: '40%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
   },
   '@media only screen and (max-width: 768px)': {
     padding: `${50 / 18}em ${15 / 18}em`,
@@ -36,16 +41,17 @@ export const styleBook = {
   borderBottomRightRadius: '30px',
   borderTopLeftRadius: '30px',
   borderBottomLeftRadius: '30px',
-  border: '1px solid rgba(168, 98, 63, 1)',
-  letterSpacing: '0',
-  backdropFilter: 'blur(5px)',
+  border: '.7px solid rgba(168, 98, 63, 1)',
+  letterSpacing: '.5px',
+  backdropFilter: 'blur(2px)',
   background: 'radial-gradient(rgba(42, 81, 61, .15),rgba(42, 81, 61, .25))',
   // background: 'radial-gradient( rgba(168, 98, 63, .2), rgba(168, 98, 63, .15))',
-  opacity: '.9',
+  // opacity: '.9',
   textDecoration: 'none',
   borderBottom: 'none',
   '&:hover': { opacity: 1 },
   '@media only screen and (max-width: 480px)': { bottom: '5%' }
+  // '> span': { fontSize: `${16 / 16}em` }
 }
 export const styleRoomTab = {
   flex: 1,
@@ -84,7 +90,8 @@ export const styleRoomTab = {
   },
   '@media only screen and (max-width: 1225px)': {
     minWidth: `100%`,
-    height: `${500 / 16}em`,
+    height: `${600 / 16}em`,
+    justifyContent: 'space-between',
     '> h3': {
       fontSize: `${24 / 16}em`
     }

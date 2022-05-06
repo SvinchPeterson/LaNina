@@ -7,7 +7,8 @@ export const styleHeader = {
   // background: 'linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .55))',
   // padding: '100px 80px 0 80px',
   '@media only screen and (max-width: 1225px)': {
-    overflowX: 'hidden'
+    overflowX: 'hidden',
+    paddingTop: `${120 / 16}em`
   },
   '@media only screen and (max-width: 768px)': {
     paddingLeft: 0,
@@ -33,5 +34,9 @@ export default {
     backgroundAttachment: 'fixed',
     backgroundImage: 'url(' + ORNAMENT_PNG + ')',
     backgroundSize: 'contain'
+  },
+  '@media only screen and (max-width: 1225px)': {
+    paddingBottom: `${120 / 16}em`
+
   }
 }

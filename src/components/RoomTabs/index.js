@@ -25,21 +25,21 @@ const book = {
     flexAlign: 'center center',
     flexFlow: 'row',
     left: '50%',
-    bottom: '0px',
+    bottom: '5%',
     padding: 'Z1 A1 Z1 A1',
     gap: 'Y'
   },
   style: { pointerEvents: 'pointed !important' },
   icon: {
     proto: [Img, Box],
-    props: { boxSize: 'A A' }
+    props: { boxSize: 'Z2 Z2' }
   },
   span: {
     proto: [Text, Box],
     props: {
       text: 'book',
-      color: 'cream',
-      size: 'A'
+      color: 'cream'
+      // size: 'Z'
     }
   }
 }
@@ -51,7 +51,8 @@ const roomTab = {
     flexFlow: 'column',
     flexAlign: 'center flex-start',
     padding: 'D B',
-    position: 'relative'
+    position: 'relative',
+    gap: 'C'
   },
   on: {
     click: (event, element, state) => {
@@ -88,9 +89,9 @@ const roomTab = {
     proto: [Text, Box],
     style: styleParagraph,
     props: {
-      color: 'cream 1',
-      padding: 'C1 0 0 0',
-      size: 'Z'
+      color: 'cream 1'
+      // padding: 'C1 0 0 0',
+      // size: 'Z'
     },
     class: {
       show: (element, state) => state.activeTab === element.parent.key ? { opacity: 1 } : {}
