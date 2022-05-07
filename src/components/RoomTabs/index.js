@@ -26,14 +26,14 @@ const book = {
     flexFlow: 'row',
     position: 'absolute',
     left: '50%',
-    bottom: '5%',
+    bottom: 'B',
     padding: 'Z A1 Z A1',
     gap: 'Y'
   },
   style: { pointerEvents: 'pointed !important' },
   icon: {
     proto: [Img, Box],
-    props: { boxSize: 'Z2 Z2' }
+    props: { boxSize: 'Z1 Z1' }
   },
   span: {
     proto: [Text, Box],
@@ -48,7 +48,8 @@ const roomTab = {
   proto: [Link, Box],
   props: {
     padding: 'B',
-    position: 'relative'
+    position: 'relative',
+    round: 'X'
   },
   style: styleRoomTab,
   on: {
@@ -72,28 +73,18 @@ const roomTab = {
       top: '0',
       left: '0',
       flexFlow: 'column',
-      flexAlign: 'center center',
-      gap: 'D2',
-      padding: '0 C B C'
-    },
+      // padding: 'A'
+      flexAlign: 'center center'
+      // gap: 'D2'
 
-    h3: {
-      proto: [Text, Box],
-      props: {
-        size: 'A',
-        color: 'cream'
-      },
-      class: {
-        show: (element, state) => state.activeTab === element.parent.parent.key ? { letterSpacing: '1px' } : {}
-      },
-      style: { display: 'none' }
     },
 
     p: {
       proto: [Text, Box],
       style: styleParagraph,
       props: {
-        color: 'cream 1'
+        color: 'cream .85',
+        round: 'Z'
         // padding: 'C1 0 0 0',
         // size: 'Z'
       },
@@ -120,6 +111,7 @@ export const tabBallerina = {
         pointerEvents: 'none',
         '&:before': { opacity: 1 },
         backgroundAttachment: 'fixed',
+        boxShadow: 'none',
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
@@ -148,13 +140,17 @@ export const tabRedBrick = {
         flex: 5.5,
         backgroundAttachment: 'fixed',
         pointerEvents: 'none',
+        boxShadow: 'none',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
   content: {
     h3: { props: { text: 'red brick' } },
-    p: { proto: redBrick },
+    p: {
+      proto: redBrick,
+      style: { width: `${465 / 14}em !important` }
+    },
     book: {
       props: {
         href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1649549944_%2BCos1t1uD845OoWN',
@@ -176,6 +172,7 @@ export const tabYellowCouch = {
         flex: 5.5,
         backgroundAttachment: 'fixed',
         pointerEvents: 'none',
+        boxShadow: 'none',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
@@ -204,6 +201,7 @@ export const tabGreenForest = {
         flex: 5.5,
         backgroundAttachment: 'fixed',
         pointerEvents: 'none',
+        boxShadow: 'none',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
@@ -232,6 +230,7 @@ export const tabRetro = {
         flex: 5.5,
         backgroundAttachment: 'fixed',
         pointerEvents: 'none',
+        boxShadow: 'none',
         '&:before': { opacity: 1 },
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}

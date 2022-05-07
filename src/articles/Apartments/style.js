@@ -13,7 +13,6 @@ export const styleHeader = {
     paddingLeft: 0,
     paddingRight: 0
   },
-
   '> nav': {
     paddingTop: `${40 / 16}em`,
     width: '100%',
@@ -27,6 +26,8 @@ export const styleHeader = {
 export default {
   scrollBehavior: 'smooth',
   background: 'rgba(244, 233, 217, .4)',
+  position: 'relative',
+
   '@media only screen and (min-width: 1225px)': {
     backgroundAttachment: 'fixed',
     backgroundImage: 'url(' + ORNAMENT_PNG + ')',

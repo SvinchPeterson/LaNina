@@ -93,7 +93,7 @@ export const styleEntrence = {
     height: '100%',
     top: 0,
     left: 0,
-    background: 'linear-gradient(rgba(42, 81, 61, 0),rgba(42, 81, 61, .35), rgba(42, 81, 61, 1))'
+    background: 'linear-gradient(rgba(42, 81, 61, 0),rgba(42, 81, 61, .35), rgba(42, 81, 61, .8))'
   },
   '> div': { alignSelf: 'flex-end', zIndex: 100 },
 

@@ -62,8 +62,12 @@ const roomsTabs = {
       gap: 'B'
     },
     childProto: {
-      proto: Box,
-      style: { boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .35)' }
+      proto: Box
+      // class: {
+      //   show: (element, state) => state.activeTab === element.key ? { border: '4px solid red' } : {}
+      // }
+      // style: { boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .35)' }
+
     },
     ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
   }
@@ -92,6 +96,20 @@ export default {
   props: {
     padding: 'E 0 G1 0',
     flexFlow: 'column'
+  },
+  line: {
+    style: {
+      position: 'absolute',
+      width: '100%',
+      height: '3px',
+      background: 'rgba(168, 98, 63, 1)',
+      zIndex: '50px',
+      top: '35%',
+      transition: 'top 1.2s ease-in-out'
+    },
+    class: {
+      show: (element, state) => state.activeTab ? { top: '53%' } : {}
+    }
   },
 
   roomsTabs,
