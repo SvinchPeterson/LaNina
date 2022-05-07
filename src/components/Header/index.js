@@ -90,10 +90,11 @@ const menuIcon = {
 // }
 
 const call = {
-  proto: Box,
+  proto: [Link, Box],
   props: {
     flexAlign: 'center center',
-    position: 'relative'
+    position: 'relative',
+    href: 'tel:571017170'
   },
   image: {
     proto: [Img, Box],
@@ -170,7 +171,7 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Z1 B',
+    padding: 'Z2 B1',
     gap: 'D2'
   },
 
@@ -178,9 +179,9 @@ const container = {
     zIndex: 500,
     width: 'fit-content',
     transform: 'translate(-50%, 0%)',
-    borderBottomLeftRadius: '30px',
-    borderBottomRightRadius: '30px',
-    background: 'radial-gradient(rgba(42, 81, 61, .65),rgba(42, 81, 61, .85))',
+    borderBottomLeftRadius: '32.5px',
+    borderBottomRightRadius: '32.5px',
+    background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
     boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
     backdropFilter: 'blur(5px)'
   }
