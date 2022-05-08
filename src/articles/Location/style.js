@@ -1,12 +1,13 @@
 'use strict'
 
 const styleLocation = {
-  color: 'rgba(168, 98, 63, .65)',
-  fontWeight: 400,
-  maxWidth: '500px',
+  fontSize: `${14 / 16}em`,
+  lineHeight: `${21 / 14}em`,
+  color: 'rgba(168, 98, 63, .35)',
+  fontWeight: 500,
+  maxWidth: `${500 / 14}em`,
   textAlign: 'center',
-  margin: '0 auto',
-  lineHeight: `${25 / 16}em`
+  margin: '0 auto'
 }
 
 const styleMap = {
@@ -27,17 +28,17 @@ const styleAirPort = {
   },
   '> p': {
     fontSize: `${14 / 16}em`,
-    maxWidth: `${400 / 15}em`,
-    color: 'rgba(0, 0, 0, .25)',
+    maxWidth: `${400 / 14}em`,
+    color: 'rgba(0, 0, 0, .2)',
     letterSpacing: '0px',
-    lineHeight: `${20 / 15}em`,
-    fontWeight: '400'
+    lineHeight: `${20 / 14}em`,
+    fontWeight: 500
   },
   '> p > caption': {
     textTransform: 'uppercase',
     letterSpacing: '1px',
-    color: 'rgba(168, 98, 63, 1)',
-    fontWeight: 500
+    color: 'rgba(168, 98, 63, .55)',
+    fontWeight: 700
   }
 
 }

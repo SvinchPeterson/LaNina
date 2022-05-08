@@ -25,8 +25,8 @@ const entrance = {
       flexFlow: 'column'
     },
     style: {
-      fontSize: `${14 / 16}em`,
-      fontWeight: 400,
+      fontSize: `${13 / 16}em`,
+      // fontWeight: ,
       '@media only screen and (max-width: 768px)': {
         fontWeight: 500
         // fontSize: `${13 / 14}em`
@@ -42,11 +42,11 @@ const entrance = {
         proto: [Text, Box],
         props: { color: 'cream' },
         style: {
-          letterSpacing: '1.5px',
+          letterSpacing: '0px',
           textTransform: 'uppercase',
+          fontWeight: 700,
           '@media only screen and (max-width: 768px)': {
-            letterSpacing: 0,
-            fontWeight: 700
+            letterSpacing: 0
           }
         }
       },
@@ -77,7 +77,7 @@ const entrance = {
       props: {
         text: `Luggage dropoff allowed for guests' convenience when they have early arrival or late departure`,
         color: 'orange2 1',
-        padding: 'B 0 Z 0'
+        padding: 'A 0 Y 0'
       },
       style: {
         maxWidth: `${450 / 16}em`,

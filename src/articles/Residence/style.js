@@ -32,16 +32,16 @@ export const styleResidence = {
   },
 
   p: {
-    fontSize: `${15 / 16}em`,
-    letterSpacing: '1.5px',
-    fontWeight: 300,
-    lineHeight: `${27 / 15}em`,
+    fontSize: `${14 / 16}em`,
+    letterSpacing: '.9px',
+    fontWeight: 400,
+    lineHeight: `${21 / 14}em`,
     '@media only screen and (min-width: 1225px)': {
       boxShadow: '0px 0px 75px 0px rgba(244, 233, 217, .55)',
       maxWidth: `100%`,
-      color: 'rgba(0, 0, 0, .35)',
+      color: 'rgba(0, 0, 0, .2)',
       background: 'rgba(244, 233, 217, 1)',
-      padding: `${50 / 15}em ${300 / 15}em`,
+      padding: `${50 / 15}em ${340 / 15}em`,
       paddingBottom: `${100 / 15}em`,
       '> span': {
         // border: '3px solid red',
@@ -93,7 +93,7 @@ export const styleEntrence = {
     height: '100%',
     top: 0,
     left: 0,
-    background: 'linear-gradient(rgba(42, 81, 61, 0),rgba(42, 81, 61, .35), rgba(42, 81, 61, .8))'
+    background: 'linear-gradient(rgba(42, 81, 61, 0),rgba(42, 81, 61, .35), rgba(42, 81, 61, .9))'
   },
   '> div': { alignSelf: 'flex-end', zIndex: 100 },
 
@@ -103,11 +103,12 @@ export const styleEntrence = {
       display: 'block',
       flex: 1,
       backgroundAttachment: 'fixed',
-      maxWidth: `${600 / 16}em`,
+      maxWidth: `${600 / 14}em`,
       marginLeft: 'auto',
       backgroundImage: 'url(' + STREET_JPG + ')',
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
+      // fontSize: `${10 / 16}em`,
       backgroundPosition: 'right bottom'
 
     }

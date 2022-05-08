@@ -60,7 +60,7 @@ export default {
   props: {
     flexFlow: 'column',
     gap: '0',
-    padding: 'E 0 G 0'
+    padding: 'B 0 G 0'
   },
   attr: {
     id: 'location'

@@ -49,9 +49,9 @@ export default {
       },
       style: {
         background: 'rgba(244, 233, 217, 1)',
-        color: 'rgba(0, 0, 0, .35)',
+        color: 'rgba(0, 0, 0, .2)',
         flex: 1,
-        fontSize: `${15 / 16}em`,
+        fontSize: `${14 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
           background: 'transparent',
           color: 'rgba(244, 233, 217, 1)'
@@ -60,14 +60,15 @@ export default {
 
       span: {
         proto: [wineText, Box],
-        props: { padding: 'E D' },
+        props: { padding: 'E D2' },
         style: {
           display: 'block',
-          maxWidth: `${700 / 16}em`,
+          maxWidth: `${700 / 14}em`,
           margin: '0 auto',
-          lineHeight: `${23 / 16}em`,
-          letterSpacing: '.7px',
-          fontWeight: 300,
+          lineHeight: `${21 / 14}em`,
+          // fontSize: `${15 / 16}em`,
+          letterSpacing: '.9px',
+          fontWeight: 400,
           '@media only screen and (max-width: 1225px)': {
             fontWeight: 400,
             padding: '0 30px'

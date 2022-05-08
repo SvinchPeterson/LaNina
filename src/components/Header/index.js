@@ -2,20 +2,7 @@
 import { Text, Box, Img, Link } from '@symbo.ls/symbols'
 import { Logo3 } from '../../components/Logo'
 
-import PHONE_PNG from '../../assets/icons/phoneRight.png'
-
-const check = {
-  tag: 'input',
-  attr: {
-    type: 'checkbox',
-    id: 'toggle'
-  },
-  style: {
-    display: 'none',
-    '&:checked ~ label > div:first-child': { width: '50%' },
-    '&:checked ~ label > div:last-child': { width: '100%' }
-  }
-}
+import PHONE_PNG from '../../assets/icons/phone2.png'
 
 const menuIcon = {
   tag: 'label',
@@ -27,7 +14,7 @@ const menuIcon = {
   },
   props: {
     flexFlow: 'column',
-    boxSize: 'B1 A1',
+    boxSize: 'B1 A',
     flexAlign: 'flex-start space-between'
   },
   on: {
@@ -41,14 +28,20 @@ const menuIcon = {
   childProto: {
     proto: Box,
     props: {
-      boxSize: '50% W1',
+      boxSize: '60% W',
       background: 'cream',
       round: 'C'
     }
 
   },
   ...[
-    { props: { boxSize: '100% W1' } },
+    {
+      class: {
+        show: (element, state) => state.activeMenu === false
+          ? { width: '100%' }
+          : { width: '60%' }
+      }
+    },
     {},
     {}
   ]
@@ -171,16 +164,16 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Z2 B1',
-    gap: 'D2'
+    padding: 'A B',
+    gap: 'E'
   },
 
   style: {
     zIndex: 500,
     width: 'fit-content',
     transform: 'translate(-50%, 0%)',
-    borderBottomLeftRadius: '32.5px',
-    borderBottomRightRadius: '32.5px',
+    borderBottomLeftRadius: '31px',
+    borderBottomRightRadius: '31px',
     background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
     boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
     backdropFilter: 'blur(5px)'
@@ -189,7 +182,6 @@ const container = {
 
 export const Header = {
   proto: container,
-  check,
 
   menuIcon,
   book,

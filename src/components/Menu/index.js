@@ -16,11 +16,12 @@ const sectionLinks = {
     proto: [Link, Text],
     props: {
       color: 'cream .75'
-      // size: 'B'
+      // size: 'Z'
     },
+    style: { fontSize: `${14.5 / 16}em` },
     on: {
       click: (event, element, state) => {
-        state.update({ activeMenuItem: element.key })
+        state.update({ activeMenuItem: element.key, activeMenu: true })
       }
     },
 
@@ -53,7 +54,7 @@ const socialMedia = {
     props: { target: '_blank' },
     icon: {
       proto: [Img, Box],
-      props: { boxSize: ' B1' }
+      props: { boxSize: ' B' }
     }
   },
   ...[

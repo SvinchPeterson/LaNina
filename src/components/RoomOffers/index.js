@@ -10,7 +10,7 @@ const header = {
   style: styleHeader,
   props: {
     flexAlign: 'center space-between',
-    padding: '0 B1'
+    padding: '0 A 0 B'
   },
   // class: {
   //   show: (element, state) => state.offers
@@ -20,11 +20,10 @@ const header = {
   h5: {
     proto: [Text, Box],
     props: {
-      text: 'room offers',
-      size: 'Z',
+      text: 'offers',
       color: 'cream 1'
     },
-    style: { fontWeight: '700' }
+    style: { fontWeight: 700, fontSize: `${12.7 / 16}em` }
   },
   minimize: {
     proto: [Button, Box],
@@ -34,8 +33,8 @@ const header = {
     span: {
       proto: [Button, Box],
       props: {
-        boxSize: 'B1 X',
-        background: 'cream .65',
+        boxSize: 'B W2',
+        background: 'cream 1',
         round: 'Z'
       }
     },
@@ -63,10 +62,8 @@ const offers = {
   class: {
     show: (element, state) => state.offers
       ? {
-        minHeight: `${200 / 16}em`,
-        paddingBottom: `${30 / 16}em`,
+        minHeight: `${180 / 16}em`,
         '> span': {
-          height: '23px',
           opacity: 1,
           transition: 'height .4s linear, opacity .5s linear .4s'
         }
@@ -85,7 +82,7 @@ const offers = {
     tag: 'span',
     proto: [Box, Text],
     props: {
-      color: 'cream 1'
+      color: 'cream .85'
     }
   },
   ...[
@@ -117,7 +114,7 @@ export const RoomOffers = {
   props: {
     position: 'absolute',
     left: '50px',
-    bottom: '-80px',
+    bottom: '-50px',
     flexFlow: 'column'
   },
   class: {

@@ -16,7 +16,7 @@ export const styleSectionLinks = {
   '> a': {
     textTransform: 'uppercase',
     cursor: 'pointer',
-    fontWeight: 500,
+    fontWeight: 700,
     textDecoration: 'none',
 
     '&:hover': { color: 'rgba(168, 98, 63, 1)' }

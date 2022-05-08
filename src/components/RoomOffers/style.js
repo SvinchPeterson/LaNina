@@ -2,16 +2,15 @@
 
 export const styleHeader = {
   textTransform: 'uppercase',
-  letterSpacing: '.5px',
-  height: `${60 / 16}em`,
+  // letterSpacing: '.5px',
+  height: `${50 / 16}em`,
   transition: 'height .3s linear'
 }
 export const styleOffers = {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
-  columnGap: `${30 / 14}em`,
-  fontWeight: '400',
-  letterSpacing: '.5px',
+  columnGap: `${20 / 16}em`,
+  letterSpacing: '1px',
   transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out',
   height: 0,
   '@media only screen and (max-width: 1225px)': {
@@ -21,11 +20,10 @@ export const styleOffers = {
   },
 
   '> span': {
-    fontSize: `${12.5 / 16}em`,
-    textTransform: 'uppercase',
-    height: '23px',
+    fontSize: `${13 / 16}em`,
+    // textTransform: 'uppercase',
     // transition: 'height .3s linear, opacity .3s linear .2s',
-    fontWeight: '400',
+    fontWeight: 400,
     '@media only screen and (max-width: 768px)': {
       fontSize: `${13 / 12.5}em`
 

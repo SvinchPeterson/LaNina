@@ -42,7 +42,7 @@ export const title = {
   tag: 'h4',
   proto: [Text, Box],
   props: {
-    color: 'cream .75'
+    color: 'cream .85'
   },
 
   style: {
@@ -50,7 +50,8 @@ export const title = {
     zIndex: 2,
     '@media only screen and (min-width: 1225px)': {
       transition: 'font-weight .8s ease-in-out, letter-spacing .8s ease-in-out, border .8s ease-in-out',
-      fontWeight: 500
+      fontWeight: 700,
+      fontSize: `${14.5 / 16}em`
     },
     '@media only screen and (max-width: 1225px)': {
       fontSize: '2.2em',
@@ -76,8 +77,8 @@ const underConstruction = {
     display: 'block',
     letterSpacing: '2px',
     '@media only screen and (min-width: 1225px)': {
-      fontSize: `${12 / 16}em`,
-      paddingTop: `${3 / 14}em`,
+      fontSize: `${11.5 / 16}em`,
+      paddingTop: `${3 / 11.5}em`,
       opacity: 0
     },
     '@media only screen and (max-width: 1225px)': {

@@ -2,6 +2,7 @@
 
 import { Box, Link, Img, Text } from '@symbo.ls/symbols'
 import BACK_PNG from '../../assets/icons/leftCream.png'
+import BACK2_PNG from '../../assets/icons/left-arrow2.png'
 
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
@@ -14,7 +15,7 @@ const book = {
   proto: [Link, Text, Box],
   text: 'book',
   props: {
-    size: 'A',
+    size: 'Z',
     color: 'cream',
     position: 'absolute',
     right: '80px',
@@ -34,14 +35,6 @@ const book = {
 }
 const back = {
   proto: [Link, Box, Text],
-  icon: {
-    proto: [Img, Box],
-    props: {
-      boxSize: ' Z2',
-      src: BACK_PNG
-    }
-  },
-  text: 'apartments',
 
   props: {
     position: 'absolute',
@@ -50,15 +43,15 @@ const back = {
     href: '#apartments',
     color: 'cream',
     flexAlign: 'center center',
-    gap: 'Z',
+    gap: 'Y2',
     padding: 'Z'
   },
   style: {
     textDecoration: 'none',
     textTransform: 'uppercase',
     fontSize: `${11.5 / 16}em`,
-    fontWeight: 500,
-    letterSpacing: '2px',
+    fontWeight: 700,
+    letterSpacing: '0px',
     '@media only screen and (max-width: 1225px)': {
       left: '30px',
       fontSize: '12.5px'
@@ -71,7 +64,16 @@ const back = {
         transition: 'opacity 2s ease-in-out .5s'
       }
       : { opacity: 0 }
-  }
+  },
+
+  icon: {
+    proto: [Img, Box],
+    props: {
+      boxSize: ' Z1',
+      src: BACK2_PNG
+    }
+  },
+  text: 'apartments'
 }
 const Room = {
   proto: Box,

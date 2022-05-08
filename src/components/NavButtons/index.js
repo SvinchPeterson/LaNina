@@ -2,8 +2,9 @@
 
 import { Box, Img } from '@symbo.ls/symbols'
 
-import UP_ARROW_PNG from '../../assets/icons/up-arrowCream.png'
-import DOWN_ARROW_PNG from '../../assets/icons/down-arrowCream.png'
+// import UP_ARROW_PNG from '../../assets/icons/up-arrowCream.png'
+import UP_ARROW_PNG from '../../assets/icons/up-arrows2.png'
+import DOWN_ARROW_PNG from '../../assets/icons/down-arrow2.png'
 import LEFT_ARROW_PNG from '../../assets/icons/left-arrowCream.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/right-arrowCream.png'
 
