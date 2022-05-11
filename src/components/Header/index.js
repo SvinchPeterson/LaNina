@@ -179,9 +179,9 @@ const container = {
     boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
     backdropFilter: 'blur(5px)',
     '@media only screen and (max-width: 480px)': {
-      gap: `${90 / 16}em`
-
-    }
+      gap: `${95 / 16}em`
+    },
+    '@media only screen and (max-width: 330px)': { gap: `${85 / 16}em` }
   }
 }
 

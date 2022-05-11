@@ -3,7 +3,7 @@ import { Box, Text } from '@symbo.ls/symbols'
 
 import { opacity, positionOpacity, letterSpacing } from '../../animations'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
-import SOLOLAKI_MOBILE_JPG from '../../assets/images/sololaki/sololaki-mobile.jpg'
+import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
 
 const image = {
   proto: Box,
@@ -29,7 +29,7 @@ const image = {
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
     },
     '@media only screen and (max-width: 768px)': {
-      backgroundImage: 'url(' + SOLOLAKI_MOBILE_JPG + ')'
+      backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')'
     },
     '&:before': {
       content: '""',
@@ -50,7 +50,7 @@ const heading = {
     flexFlow: 'column',
     flexAlign: 'flex-start flex-end',
     position: 'absolute',
-    padding: '0 0 E E'
+    padding: '0 0 D D'
   },
   style: {
     '@media only screen and (max-width: 768px)': {
@@ -59,6 +59,7 @@ const heading = {
     '@media only screen and (max-width: 480px)': {
       padding: `0 0 ${100 / 16}em 0`,
       alignSelf: 'center'
+      // alignItems: 'center'
     }
   },
 
@@ -67,7 +68,7 @@ const heading = {
     text: 'BB residence',
     props: {
       color: 'cream',
-      size: 'D'
+      size: 'F'
     },
     style: {
       letterSpacing: '-1px',
@@ -80,14 +81,14 @@ const heading = {
     proto: [Text, Box],
     props: {
       text: 'SOLOLAKI',
-      size: 'Z',
-      color: 'orange'
+      size: 'B',
+      color: 'orange2'
     },
     style: {
       fontWeight: 700,
-      letterSpacing: '5px',
+      letterSpacing: '10px',
       marginTop: '0px',
-      marginLeft: '2px'
+      marginLeft: '15px'
     }
   }
 }
@@ -96,16 +97,16 @@ const paragraph = {
   tag: 'p',
   proto: [Text, Box],
   props: {
-    size: 'Z',
     position: 'absolute',
     top: '50%',
     left: '50%',
-    color: 'cream .75'
+    color: 'cream 1'
   },
   style: {
+    fontSize: '15px',
     transform: 'translate(-50%, -50%)',
     textTransform: 'uppercase',
-    fontWeight: 500,
+    fontWeight: 400,
     letterSpacing: '5px',
     whiteSpace: 'nowrap',
     animationName: letterSpacing,
