@@ -15,7 +15,7 @@ const sectionLinks = {
   childProto: {
     proto: [Link, Text],
     props: {
-      color: 'cream .75'
+      color: 'cream .95'
       // size: 'Z'
     },
     style: { fontSize: `${14.5 / 16}em` },
@@ -54,7 +54,7 @@ const socialMedia = {
     props: { target: '_blank' },
     icon: {
       proto: [Img, Box],
-      props: { boxSize: ' B' }
+      props: { boxSize: 'C' }
     }
   },
   ...[

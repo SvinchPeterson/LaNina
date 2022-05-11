@@ -1,5 +1,5 @@
 'use strict'
-import { Box } from '@symbo.ls/symbols'
+import { Box, Text } from '@symbo.ls/symbols'
 
 import {
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
@@ -94,7 +94,7 @@ export default {
   style,
   proto: Box,
   props: {
-    // padding: 'B 0 D 0',
+    padding: '0 0 D 0',
     flexFlow: 'column'
   },
   line: {
@@ -114,6 +114,22 @@ export default {
     },
     class: {
       show: (element, state) => state.activeTab ? { top: '53%', opacity: 1 } : { opacity: 0 }
+    }
+  },
+
+  title: {
+    proto: [Text, Box],
+    props: {
+      size: 'F',
+      color: 'orange'
+    },
+    text: 'apartments',
+    style: {
+      position: 'absolute',
+      right: '100px',
+      top: '200px',
+      fontWeight: 900
+      // textTransform: 'uppercase'
     }
   },
 

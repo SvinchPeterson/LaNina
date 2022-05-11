@@ -3,7 +3,7 @@
 export const styleSectionLinks = {
   display: 'flex',
   '@media only screen and (min-width: 1024px)': {
-    fontSize: `${18 / 16}em`,
+    fontSize: `${24 / 16}em`,
     gap: `${70 / 18}em`,
     paddingBottom: `${100 / 16}em`
   },

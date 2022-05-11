@@ -5,8 +5,8 @@ import { Logo3 } from '../../components/Logo'
 import PHONE_PNG from '../../assets/icons/phone2.png'
 
 const menuIcon = {
-  tag: 'label',
-  attr: { for: 'toggle' },
+  // tag: 'label',
+  // attr: { for: 'toggle' },
   proto: Box,
   style: {
     cursor: 'pointer',
@@ -34,7 +34,7 @@ const menuIcon = {
       background: 'cream',
       round: 'C'
     },
-    style: { height: '2.5px' }
+    style: { height: '3px' }
 
   },
   ...[
@@ -152,7 +152,7 @@ const book = {
   logo: {
     proto: Logo3,
     props: {
-      boxSize: 'B B'
+      boxSize: 'B1 B1'
     }
   }
 }
@@ -165,7 +165,7 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Z2 B',
+    padding: 'Z1 B',
     gap: 'E'
   },
 

@@ -77,11 +77,10 @@ const back = {
   icon: {
     proto: [Img, Box],
     props: {
-      boxSize: ' Z1',
+      boxSize: 'B1',
       src: BACK2_PNG
     }
-  },
-  text: 'apartments'
+  }
 }
 
 const Room = {

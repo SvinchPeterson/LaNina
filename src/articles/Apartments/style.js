@@ -6,7 +6,7 @@ export const styleHeader = {
   transition: 'border 2s ease-in-out',
   '@media only screen and (max-width: 1225px)': {
     overflowX: 'hidden',
-    padding: `${230 / 16}em ${120 / 16}em ${200 / 16}em ${120 / 16}em`
+    padding: `${230 / 16}em ${120 / 16}em ${290 / 16}em ${120 / 16}em`
   },
   // '@media only screen and (max-width: 1024px)': { padding: `${120 / 16}em ${70 / 16}em` },
   '@media only screen and (max-width: 768px)': {
@@ -19,7 +19,7 @@ export const styleHeader = {
     paddingTop: `${80 / 16}em `
   },
   '> nav': {
-    paddingTop: `${40 / 16}em`,
+    paddingTop: `${100 / 16}em`,
     width: '100%',
     '@media only screen and (max-width: 1225px)': {
       minWidth: '100%',
@@ -33,7 +33,7 @@ export default {
   scrollBehavior: 'smooth',
   background: 'rgba(244, 233, 217, .4)',
   position: 'relative',
-  padding: '100px 0 200px 0',
+  padding: '100px 0 400px 0',
 
   '@media only screen and (min-width: 1225px)': {
     backgroundAttachment: 'fixed',
