@@ -62,11 +62,6 @@ export const title = {
       color: 'rgba(244, 233, 217, 1)',
       letterSpacing: '-1px'
     }
-    // '@media only screen and (max-width: 768px)': {
-    //   fontSize: `${24 / 16}em`,
-    //   letterSpacing: '10px'
-
-    // }
   }
 }
 const underConstruction = {
@@ -74,7 +69,6 @@ const underConstruction = {
   proto: [Text, Box],
   text: 'under construction',
   props: {
-    // color: 'orange2',
     position: 'absolute'
   },
   style: {
@@ -167,10 +161,6 @@ const sololaki = {
       backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')'
 
     },
-    // '@media only screen and (max-width: 1024px)': {
-    //   '&:before': { background: 'linear-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
-
-    // },
 
     '@media only screen and (max-width: 768px)': {
       backgroundImage: 'url(' + SOLOLAKI_MOBILE_JPG + ')'

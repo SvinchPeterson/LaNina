@@ -47,35 +47,3 @@ export const position = keyframes`
     background-position: center;
   }
 `
-
-// export const zoomiIn = keyframes`
-//   from {
-//     transform: scale(1.3);
-//   }
-//   to {
-//     transform: scale(1);
-//   }
-// `
-// export const zoomInCoverLogo = keyframes`
-//   from {
-//     opacity: 0;
-//     transform: translate(-50%, -50%) scale(1);
-
-//   }
-//   to {
-//     transform: translate(-50%, -50%) scale(1.1);
-//     opacity: 1;
-//   }
-// `
-
-// export const minHeight = keyframes`
-//   from {
-//     min-height: 0;
-//     border: 10px solid green;
-
-//   }
-//   to {
-//     min-height: 700px;
-//     border: 10px solid green;
-//   }
-// `

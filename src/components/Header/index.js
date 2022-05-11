@@ -10,11 +10,14 @@ const menuIcon = {
   proto: Box,
   style: {
     cursor: 'pointer',
-    '> div': { transition: 'width .3s ease-in-out' }
+    '> div': {
+      transition: 'width .3s ease-in-out',
+      '@media only screen and (max-width: 1225px)': { transition: 'width .1s ease-in-out' }
+    }
   },
   props: {
     flexFlow: 'column',
-    boxSize: 'B1 A1',
+    boxSize: 'B2 A1',
     flexAlign: 'flex-start space-between'
   },
   on: {
@@ -28,22 +31,35 @@ const menuIcon = {
   childProto: {
     proto: Box,
     props: {
-      boxSize: '60% W',
       background: 'cream',
       round: 'C'
-    }
+    },
+    style: { height: '2.5px' }
 
   },
   ...[
     {
+      // props: { boxSize: '100% W' },
       class: {
         show: (element, state) => state.activeMenu === false
-          ? { width: '100%' }
-          : { width: '60%' }
+          ? {
+            width: '50%'
+          }
+          : { width: '100%' }
       }
     },
-    {},
-    {}
+    {
+      style: { width: '50%' }
+    },
+    {
+      class: {
+        show: (element, state) => state.activeMenu === false
+          ? {
+            width: '100%'
+          }
+          : { width: '50%' }
+      }
+    }
   ]
 }
 
@@ -93,7 +109,7 @@ const call = {
     proto: [Img, Box],
     props: {
       src: PHONE_PNG,
-      boxSize: 'A1 A1'
+      boxSize: 'A2 A2'
     },
     style: {
       width: '100%',
@@ -129,29 +145,14 @@ const call = {
 const book = {
   proto: [Link, Box, Text],
   props: {
-    flexFlow: 'column',
-    flexAlign: 'center center',
-    color: 'cream',
-    href: ''
+    href: 'https://www.airbnb.com/users/show/404104381',
+    target: '_blank'
   },
   style: { cursor: 'pointer' },
   logo: {
     proto: Logo3,
     props: {
       boxSize: 'B B'
-    }
-  },
-  span: {
-    proto: Text,
-    props: {
-      // text: 'ook'
-    },
-    style: {
-      textTransform: 'uppercase',
-      fontSize: `${13 / 16}em`,
-      marginLeft: '-2.5px',
-      fontWeight: '500',
-      letterSpacing: '-2px'
     }
   }
 }
