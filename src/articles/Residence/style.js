@@ -53,8 +53,8 @@ export const styleResidence = {
     '@media only screen and (max-width: 1225px)': {
       background: 'transparent',
       color: ' rgba(244, 233, 217, 1)',
-      maxWidth: `${900 / 15}em`,
-      padding: `0 ${50 / 15}em`
+      maxWidth: `${700 / 15}em`,
+      padding: `0 ${100 / 15}em`
     },
     '@media only screen and (max-width: 768px)': {
       padding: `0 ${25 / 15}em`,

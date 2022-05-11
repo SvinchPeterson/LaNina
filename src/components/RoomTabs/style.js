@@ -87,13 +87,13 @@ export const styleRoomTab = {
     letterSpacing: '0px',
     whiteSpace: 'nowrap',
     '@media only screen and (max-width: 1225px)': {
-      fontSize: `${16 / 14}em`,
+      fontSize: `${14.2 / 14}em`,
       top: '-35px',
-      left: '30px',
-      letterSpacing: '1px'
+      left: '30px'
+      // letterSpacing: 'px'
     },
     '@media only screen and (max-width: 768px)': {
-      fontSize: `${14 / 14}em`
+      fontSize: `${14 / 14.3}em`
     }
   },
   '@media only screen and (min-width: 1225px)': {
@@ -118,6 +118,9 @@ export const styleRoomTab = {
     minWidth: `100%`,
     minHeight: '100%',
     height: `${400 / 16}em`
+  },
+  '@media only screen and (max-height: 600px)': {
+    height: `${300 / 16}em`
   },
   '> h3': {
     textTransform: 'uppercase',

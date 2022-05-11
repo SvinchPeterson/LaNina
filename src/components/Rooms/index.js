@@ -18,8 +18,8 @@ const book = {
     size: 'Z',
     color: 'cream',
     position: 'absolute',
-    right: '80px',
-    bottom: '0px',
+    // right: '80px',
+    // bottom: '0px',
     padding: 'Z A'
     // background: 'cream'
   },
@@ -28,7 +28,13 @@ const book = {
     textTransform: 'uppercase',
     fontWeight: 700,
     zIndex: '30',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    bottom: 0,
+    right: '80px',
+    '@median only screen and (max-width: 1225px)': {
+      right: '60px',
+      bottom: '-300px'
+    }
     // backdropFilter: 'blur(10px)'
 
   }
@@ -38,7 +44,7 @@ const back = {
 
   props: {
     position: 'absolute',
-    top: '65px',
+    top: '50px',
     left: '10px',
     href: '#apartments',
     color: 'cream',
@@ -54,8 +60,10 @@ const back = {
     letterSpacing: '0px',
     '@media only screen and (max-width: 1225px)': {
       left: '30px',
-      fontSize: '12.5px'
-    }
+      fontSize: '12.5px',
+      top: '160px'
+    },
+    '@media only screen and (max-width: 768px)': { top: '90px' }
   },
   class: {
     show: (element, state) => state.activeTab
@@ -75,6 +83,7 @@ const back = {
   },
   text: 'apartments'
 }
+
 const Room = {
   proto: Box,
   props: {
@@ -84,20 +93,25 @@ const Room = {
     show: (element, state) => state.activeTab === element.key
       ? {
         height: `${700 / 16}em`,
+        transition: 'all 1s ease-in-out',
+        opacity: 1,
+        paddingTop: `${80 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
           transition: 'all .1s ease-in-out',
           display: 'block',
-          height: `${600 / 16}em`
+          height: `${600 / 16}em`,
+          paddingTop: `${200 / 16}em`
         },
         '@media only screen and (max-width: 768px)': {
-          height: `${500 / 16}em`
+          height: `${500 / 16}em`,
+          paddingTop: `${130 / 16}em`
         },
         '@media only screen and (max-width: 480px)': {
           height: `${400 / 16}em`
         },
-        transition: 'all 1s ease-in-out',
-        opacity: 1,
-        paddingTop: `${100 / 16}em`
+        '@media only screen and (max-height: 650px)': {
+          height: `${300 / 16}em`
+        }
       }
 
       : {
@@ -125,13 +139,16 @@ const Room = {
   navButton2: {
     proto: navButtons2,
     style: {
-      top: '65%',
-      '@media only screen and (max-width: 768px)': {
-        top: '70%'
+      '@media only screen and (max-width: 1225px)': {
+        bottom: '100px'
+      },
+      '@media only screen and (max-height: 650px)': {
+        bottom: '0px'
       }
     },
     ...[
       {
+        style: { marginLeft: '-3px' },
         on: {
           click: (event, element, state) => {
             const { activeImage } = state
@@ -155,7 +172,8 @@ const Room = {
               state.update({ activeImage: 8 })
             }
           }
-        }
+        },
+        style: { marginRight: '-3px' }
       }
     ]
   },
@@ -207,245 +225,3 @@ export const roomRetro = {
   navButton: {},
   book: { props: { href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1649552000_jBh%2BzYZTB7v6VHUs' } }
 }
-
-// import { Block, Button, Img, Flex } from '@symbo.ls/symbols'
-
-// import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryRetro, galleryGreenForest, RoomOffers } from '..'
-
-// import { roomsContainer } from '../../animations'
-
-// // import LEFT_ARROW from '../../assets/left.png'
-// // import RIGHT_ARROW from '../../assets/right.png'
-// import UP_ARROW from '../../assets/icons/up-arrow.png'
-// import DOWN_ARROW from '../../assets/icons/down-arrow.png'
-
-// import style from './style'
-// import { galleryImgs } from '../Gallery/galleryBallerina'
-
-// const navButtons = {
-//   tag: 'span',
-//   proto: Block,
-//   props: {
-//     flexAlign: 'center center',
-//     flexFlow: 'column',
-//     // gap: 'C'
-//     padding: 'A W'
-//   },
-
-//   childProto: {
-//     proto: Button,
-//     arrow: { proto: Img }
-//   },
-//   ...[
-//     {
-//       arrow: { props: { src: UP_ARROW } },
-//       on: {
-//         click: (event, element, state) => {
-//           const { activeImage } = state
-//           state.update({
-//             activeImage: (galleryImgs - 1) < activeImage ? 0 : activeImage + 1
-//           })
-//         }
-//       }
-//     },
-
-//     {
-//       arrow: { props: { src: DOWN_ARROW } },
-
-//       on: {
-//         click: (event, element, state) => {
-//           console.log(event)
-//           console.log(element)
-//           console.log(state)
-//           const { activeImage } = state
-//           state.update({
-//             activeImage: activeImage < (galleryImgs.length + 1) ? 0 : activeImage - 1
-//           })
-//           // if (activeImage === element.parent.gallery.length) {
-//           //   state.update({
-//           //     activeImage: activeImage === element.parent.gallery.length - 2
-//           //   })
-//           // }
-//         }
-//       }
-//     }
-//   ]
-// }
-
-// const room = {
-//   proto: [Block, Flex],
-//   style,
-//   // class: {
-//   //   show: (element, state) => state.activeTab === element.key ? {
-//   //     // animationName: roomsContainer,
-//   //     // animationDuration: '1.5s',
-//   //     // animationTimingFunction: 'ease-in-out',
-//   //     height: '100%',
-//   //     opacity: 1,
-//   //     '> aside': { display: 'grid' }
-//   //   }
-//   //     : {
-//   //       height: 0,
-//   //       opacity: 0
-//   //     }
-//   // },
-//   props: {
-//     // padding: 'E 0 0 0'
-//   },
-
-//   gallery: {},
-//   offer: { proto: RoomOffers },
-//   navButtons
-// }
-
-// export const roomBallerina = {
-//   proto: room,
-//   attr: { id: 'ballerina' },
-
-//   gallery: { proto: galleryBallerina }
-// }
-
-// export const roomRedBrick = {
-//   proto: room,
-//   attr: { id: 'redBrick' },
-
-//   gallery: { proto: galleryRedBrick }
-// }
-
-// export const roomYellowCouch = {
-//   proto: room,
-//   attr: { id: 'yellowCouch' },
-
-//   gallery: { proto: galleryYellowCouch }
-// }
-
-// export const roomRetro = {
-//   proto: room,
-//   attr: { id: 'retro' },
-
-//   gallery: { proto: galleryRetro }
-// }
-
-// export const roomGreenForest = {
-//   proto: room,
-//   attr: { id: 'greenForest' },
-
-//   gallery: { proto: galleryGreenForest }
-// }
-
-// const room = {
-//   proto: [Block, Flex],
-//   style,
-//   // style: { height: '100%', opacity: 1 },
-
-//   // class: {
-//   //   show: (element, state) => state.activeImage === element.key ? {
-//   //     height: '100%',
-//   //     opacity: 1,
-//   //     transition: 'all 2s ease-in-out',
-//   //     '> div': {
-//   //       opacity: 1
-//   //       // animationName: opacity2,
-//   //       // animationDuration: '1.5s'
-//   //     },
-//   //     '> aside': {
-//   //       background: 'rgba(243, 231, 219, 1)'
-//   //       // height: '300px'
-//   //     },
-//   //     '> aside > div': {
-//   //       // opacity: 1
-//   //     }
-//   //   }
-//   //     : { height: 0, opacity: 0 }
-//   // },
-
-//   gallery: {
-//     style: {
-//       flex: 1,
-//       position: 'relative',
-//       '> span': {
-//         width: '100%',
-//         height: '100%',
-//         position: 'absolute',
-//         top: 0,
-//         left: 0,
-//         filter: 'grayscale(50%) brightness(80%)',
-//         backgroundAttachment: 'fixed'
-//       }
-//     }
-//   },
-
-//   roomDescription: {
-//     proto: RoomDescription
-//   },
-
-//   buttons: {
-//     proto: Block,
-//     props: {
-//       flexFlow: 'column',
-//       gap: '40px'
-//     },
-//     style: {
-//       height: 'fit-content',
-//       position: 'absolute',
-//       zIndex: '50',
-//       right: '120px',
-//       // background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .05))',
-//       background: 'radial-gradient(rgba(243, 231, 219, .2), rgba(243, 231, 219, .1))',
-//       // background: 'rgba(243, 231, 219, .3)',
-//       display: 'flex',
-//       opacity: 1,
-//       top: '45%',
-//       transition: 'all 1s ease-in-out',
-//       transitionDelay: '1s',
-//       padding: '20px 10px',
-//       '> button': {
-//         background: 'transparent',
-//         width: '42px',
-//         height: '20px'
-//       },
-//       '> button > img': {
-//         width: '100%',
-//         height: '100%',
-//         opacity: '.2'
-//       }
-//     },
-//     upArrow: {
-//       proto: Button,
-//       arrowIcon: {
-//         proto: Img,
-//         props: { src: UP_ARROW }
-//       }
-
-//       // on: {
-//       //   click: (event, element, state) => {
-//       //     const { activeImage } = state
-//       //     state.update({
-//       //       activeImage: activeImage > (element.parent.parent.gallery.length - 2) ? 0 : activeImage + 1
-//       //     })
-//       //     // if (activeImage === element.parent.gallery.length) {
-//       //     //   state.update({
-//       //     //     activeImage: activeImage === element.parent.gallery.length - 2
-//       //     //   })
-//       //     // }
-//       //   }
-//       // }
-//     }
-
-//     // downArrow: {
-//     //   proto: Button,
-//     //   arrowIcon: {
-//     //     proto: Img,
-//     //     props: { src: DOWN_ARROW }
-//     //   },
-//     //   on: {
-//     //     click: (event, element, state) => {
-//     //       const { activeImage } = state
-//     //       state.update({
-//     //         activeImage: activeImage === (element.parent.parent.gallery.length + 2) ? 0 : activeImage - 1
-//     //       })
-//     //     }
-//     //   }
-//     // }
-//   }
-// }

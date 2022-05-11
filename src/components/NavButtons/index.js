@@ -5,8 +5,8 @@ import { Box, Img } from '@symbo.ls/symbols'
 // import UP_ARROW_PNG from '../../assets/icons/up-arrowCream.png'
 import UP_ARROW_PNG from '../../assets/icons/up-arrows2.png'
 import DOWN_ARROW_PNG from '../../assets/icons/down-arrow2.png'
-import LEFT_ARROW_PNG from '../../assets/icons/left-arrowCream.png'
-import RIGHT_ARROW_PNG from '../../assets/icons/right-arrowCream.png'
+import LEFT_ARROW_PNG from '../../assets/icons/left-arrows2.png'
+import RIGHT_ARROW_PNG from '../../assets/icons/right-arrows.png'
 
 export const navButtons = {
   proto: Box,
@@ -110,7 +110,7 @@ export const navButtons2 = {
   proto: Box,
   props: {
     position: 'absolute',
-    top: '57%',
+    // top: '50%',
     left: `50%`,
     flexFlow: 'row',
     flexAlign: 'center space-between',
@@ -122,7 +122,7 @@ export const navButtons2 = {
     transform: 'translate(-50%, -50%)',
     display: 'none',
     height: 0,
-    width: '101%',
+    width: '100.5%',
     '@media only screen and (max-width: 1225px)': {
       display: 'flex'
     }
@@ -136,7 +136,7 @@ export const navButtons2 = {
     },
     style: {
       // background: 'radial-gradient( rgba(168, 98, 63, 1), rgba(168, 98, 63, 1))',
-      background: 'radial-gradient(rgba(42, 81, 61, .55),rgba(42, 81, 61, .65))',
+      background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
       backdropFilter: 'blur(0px)',
       cursor: 'pointer'
     },

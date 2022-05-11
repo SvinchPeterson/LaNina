@@ -4,7 +4,11 @@ export const styleHeader = {
   textTransform: 'uppercase',
   // letterSpacing: '.5px',
   height: `${50 / 16}em`,
-  transition: 'height .3s linear'
+  transition: 'height .3s linear',
+  '@media only screen and (max-width: 1225px)': {
+    height: `${60 / 16}em`,
+    '> h5': { fontSize: `${15 / 16}em` }
+  }
 }
 export const styleOffers = {
   display: 'grid',
@@ -15,8 +19,9 @@ export const styleOffers = {
   height: 0,
   '@media only screen and (max-width: 1225px)': {
     gridTemplateColumns: '100%',
-    overflowY: 'auto'
-
+    overflowY: 'auto',
+    rowGap: `${5 / 16}em`,
+    transition: 'min-height .4s ease-in-out, padding-bottom .4s ease-in-out'
   },
 
   '> span': {
@@ -24,8 +29,10 @@ export const styleOffers = {
     // textTransform: 'uppercase',
     // transition: 'height .3s linear, opacity .3s linear .2s',
     fontWeight: 400,
-    '@media only screen and (max-width: 768px)': {
-      fontSize: `${13 / 12.5}em`
+    '@media only screen and (max-width: 1225px)': {
+      fontSize: `${14 / 16}em`,
+      textTransform: 'uppercase',
+      fontWeight: 500
 
     }
   }
@@ -36,21 +43,25 @@ export default {
   minWidth: `${380 / 16}em`,
   borderRadius: '35px',
   backdropFilter: 'blur(5px)',
-  background: 'radial-gradient(rgba(42, 81, 61, .5),rgba(42, 81, 61, .7))',
+  background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
   '@media only screen and (max-width: 1225px)': {
     marginRight: '0px',
     left: '50%',
-    bottom: '-180px',
+    bottom: '-300px',
     transform: 'translate(-50%, 30%)',
-    // borderBottomRightRadius: '30px',
-    // borderBottomLeftRadius: '30px',
     maxHeight: '300px',
     overflow: 'hidden'
   },
-  '@media only screen and (max-width: 1024px)': {
-    fontSize: '13.7px'
+  '@media only screen and (max-width: 768px)': {
+    bottom: '-220px'
   },
   '@media only screen and (max-width: 480px)': {
-    minWidth: `${350 / 16}em`
+    minWidth: `${300 / 16}em`
+  },
+  '@media only screen and (max-width: 330px)': {
+    minWidth: `${270 / 16}em`
+  },
+  '@media only screen and (max-height: 650px)': {
+    bottom: '-150px'
   }
 }

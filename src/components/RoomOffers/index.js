@@ -36,6 +36,10 @@ const header = {
         boxSize: 'B W2',
         background: 'cream 1',
         round: 'Z'
+      },
+      style: {
+        '@media only screen and (max-width: 1225px)': { width: `${30 / 16}em`, height: '3px' }
+
       }
     },
 
@@ -63,6 +67,9 @@ const offers = {
     show: (element, state) => state.offers
       ? {
         minHeight: `${180 / 16}em`,
+        '@media only screen and (max-height: 600px)': {
+          minHeight: `${100 / 16}em`
+        },
         '> span': {
           opacity: 1,
           transition: 'height .4s linear, opacity .5s linear .4s'
@@ -74,7 +81,7 @@ const offers = {
         '> span': {
           height: 0,
           opacity: '0',
-          transition: 'height .2s linear, opacity 0s linear 0s'
+
         }
       }
   },
@@ -120,7 +127,7 @@ export const RoomOffers = {
   class: {
     show: (element, state) => state.offers
       ? {
-        '@media only screen and (min-width: 1225px)': { paddingBottom: '30px' },
+        '@media only screen and (min-width: 1225px)': { paddingBottom: '30px', zIndex: 300 },
         '@media only screen and (max-width: 1225px)': { paddingBottom: '16px' }
       }
       : {}

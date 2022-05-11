@@ -10,11 +10,11 @@ const menuIcon = {
   proto: Box,
   style: {
     cursor: 'pointer',
-    '> div': { transition: 'width .5s ease-in-out' }
+    '> div': { transition: 'width .3s ease-in-out' }
   },
   props: {
     flexFlow: 'column',
-    boxSize: 'B1 A',
+    boxSize: 'B1 A1',
     flexAlign: 'flex-start space-between'
   },
   on: {
@@ -164,7 +164,7 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'A B',
+    padding: 'Z2 B',
     gap: 'E'
   },
 
@@ -176,7 +176,11 @@ const container = {
     borderBottomRightRadius: '31px',
     background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
     boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
-    backdropFilter: 'blur(5px)'
+    backdropFilter: 'blur(5px)',
+    '@media only screen and (max-width: 480px)': {
+      gap: `${90 / 16}em`
+
+    }
   }
 }
 

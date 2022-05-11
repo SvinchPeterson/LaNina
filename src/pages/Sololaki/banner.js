@@ -27,7 +27,7 @@ const image = {
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
     },
     '@media only screen and (max-width: 1225px)': {
-      backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')'
+      backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
     },
     '@media only screen and (max-width: 768px)': {
       backgroundImage: 'url(' + SOLOLAKI_MOBILE_JPG + ')'

@@ -94,21 +94,26 @@ export default {
   style,
   proto: Box,
   props: {
-    padding: 'E 0 G1 0',
+    // padding: 'B 0 D 0',
     flexFlow: 'column'
   },
   line: {
     style: {
       position: 'absolute',
       width: '100%',
-      height: '3px',
+      height: '1.5px',
       background: 'rgba(168, 98, 63, 1)',
+      // opacity: 0,
       zIndex: '50px',
-      top: '35%',
-      transition: 'top 1.2s ease-in-out'
+      top: '50%',
+      transition: 'all 5s ease-in-out',
+      // display: 'none',
+      '@media only screen and (max-width: 1225px)': {
+        background: 'none'
+      }
     },
     class: {
-      show: (element, state) => state.activeTab ? { top: '53%' } : {}
+      show: (element, state) => state.activeTab ? { top: '53%', opacity: 1 } : { opacity: 0 }
     }
   },
 

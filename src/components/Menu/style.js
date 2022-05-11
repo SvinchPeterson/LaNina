@@ -41,10 +41,14 @@ export default {
   background: 'linear-gradient(rgba(42, 81, 61, .55),rgba(42, 81, 61, .65))',
   backdropFilter: 'blur(2px)',
   boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, .5)',
-  transition: 'opacity .5s ease-in-out',
+  transition: 'all .5s ease-in-out',
   zIndex: '400',
   display: 'flex',
   flexFlow: 'column',
+  '@media only screen and (max-width: 1225px)': {
+    transitionDelay: '-1s'
+
+  },
   // borderTopLeftRadius: '300px',
   // borderBottomLeftRadius: '300px',
   '@media only screen and (min-width: 1024px)': {
