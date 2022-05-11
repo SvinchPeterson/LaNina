@@ -48,9 +48,9 @@ export const title = {
   style: {
     textTransform: 'uppercase',
     zIndex: 2,
+    fontWeight: 900,
     '@media only screen and (min-width: 1225px)': {
       transition: 'font-weight .8s ease-in-out, letter-spacing .8s ease-in-out, border .8s ease-in-out',
-      fontWeight: 400,
       fontSize: `${15 / 16}em`,
       letterSpacing: '5px',
       animationName: letterSpacing2,
@@ -58,14 +58,15 @@ export const title = {
       animationTimingFunction: 'ease-in-out'
     },
     '@media only screen and (max-width: 1225px)': {
-      fontSize: '2.2em',
+      fontSize: `${42 / 16}em`,
       color: 'rgba(244, 233, 217, 1)',
-      fontWeight: 700,
       letterSpacing: '-1px'
-    },
-    '@media only screen and (max-width: 768px)': {
-      fontSize: '1.8em'
     }
+    // '@media only screen and (max-width: 768px)': {
+    //   fontSize: `${24 / 16}em`,
+    //   letterSpacing: '10px'
+
+    // }
   }
 }
 const underConstruction = {
@@ -73,32 +74,24 @@ const underConstruction = {
   proto: [Text, Box],
   text: 'under construction',
   props: {
-    color: 'orange2',
+    // color: 'orange2',
     position: 'absolute'
   },
   style: {
+    color: '#FFC99C',
     whiteSpace: 'nowrap',
     display: 'block',
-    letterSpacing: '2px',
-    fontWeight: 400,
+    letterSpacing: '1px',
+    fontWeight: 700,
     '@media only screen and (min-width: 1225px)': {
       fontSize: `${13 / 16}em`,
-      paddingTop: `${3 / 11.5}em`,
+      paddingTop: `${3 / 13}em`,
       opacity: 0
     },
     '@media only screen and (max-width: 1225px)': {
-      letterSpacing: '3.1px',
-      fontSize: '.32em',
-      paddingLeft: '2px',
-      fontWeight: 700,
-      marginTop: '-3px'
-    },
-    '@media only screen and (max-width: 768px)': {
-      fontWeight: 700,
-      textTransform: 'uppercase',
-      letterSpacing: '2.9px !important',
-      paddingLeft: '2px'
-
+      fontSize: `${14 / 42}em`,
+      marginLeft: '2px',
+      letterSpacing: '2.8px'
     }
   }
 }
@@ -115,16 +108,7 @@ const link = {
     animationTimingFunction: 'ease-in-out',
     textDecoration: 'none',
     position: 'relative',
-    '&:before': {
-      content: "''",
-      width: '100%',
-      height: '100%',
-      position: 'absolute',
-      background: 'linear-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .85))',
-      top: 0,
-      left: 0,
-      transition: 'opacity 1s ease-in-out'
-    },
+
     '@media only screen and (min-width: 1225px)': {
       paddingBottom: `${100 / 16}em`,
       transition: 'flex .8s ease-in-out, background-position .8s ease-in-out',
@@ -160,6 +144,16 @@ const sololaki = {
   proto: link,
   props: { href: '/Sololaki' },
   style: {
+    '&:before': {
+      content: "''",
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      background: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, .75))',
+      top: 0,
+      left: 0,
+      transition: 'opacity 1s ease-in-out'
+    },
     '@media only screen and (min-width: 1225px)': {
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
       justifyContent: 'flex-end',
@@ -173,10 +167,10 @@ const sololaki = {
       backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')'
 
     },
-    '@media only screen and (max-width: 1024px)': {
-      '&:before': { background: 'linear-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
+    // '@media only screen and (max-width: 1024px)': {
+    //   '&:before': { background: 'linear-gradient(rgba(42, 81, 61, .25), rgba(42, 81, 61, .65)) !important' }
 
-    },
+    // },
 
     '@media only screen and (max-width: 768px)': {
       backgroundImage: 'url(' + SOLOLAKI_MOBILE_JPG + ')'
@@ -190,6 +184,19 @@ const sololaki = {
 const rustaveli = {
   proto: link,
   style: {
+    '&:before': {
+      content: "''",
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      background: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, .75))',
+      top: 0,
+      left: 0,
+      transition: 'opacity 1s ease-in-out',
+      '@media only screen and (max-width: 1024px)': {
+        background: 'linear-gradient(to top, rgba(42, 81, 61, .35), rgba(42, 81, 61, .75))'
+      }
+    },
     '@media only screen and (min-width: 1225px)': {
       backgroundImage: 'url(' + RUSTAVELI_JPG + ')',
       paddingLeft: `${10 / 16}em`,
