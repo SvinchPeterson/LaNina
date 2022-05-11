@@ -3,7 +3,7 @@ import { Box, Link, Text, Flex } from '@symbo.ls/symbols'
 
 import { Logo, Logo2 } from '../../components'
 
-import { opacity, positionOpacity } from '../../animations'
+import { opacity, positionOpacity, letterSpacing2 } from '../../animations'
 
 import SOLOLAKI_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 import RUSTAVELI_JPG from '../../assets/images/CoverPage/rustaveli.jpg'
@@ -42,7 +42,7 @@ export const title = {
   tag: 'h4',
   proto: [Text, Box],
   props: {
-    color: 'cream .85'
+    color: 'cream 1'
   },
 
   style: {
@@ -50,8 +50,12 @@ export const title = {
     zIndex: 2,
     '@media only screen and (min-width: 1225px)': {
       transition: 'font-weight .8s ease-in-out, letter-spacing .8s ease-in-out, border .8s ease-in-out',
-      fontWeight: 700,
-      fontSize: `${14.5 / 16}em`
+      fontWeight: 400,
+      fontSize: `${15 / 16}em`,
+      letterSpacing: '5px',
+      animationName: letterSpacing2,
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out'
     },
     '@media only screen and (max-width: 1225px)': {
       fontSize: '2.2em',
@@ -76,8 +80,9 @@ const underConstruction = {
     whiteSpace: 'nowrap',
     display: 'block',
     letterSpacing: '2px',
+    fontWeight: 400,
     '@media only screen and (min-width: 1225px)': {
-      fontSize: `${11.5 / 16}em`,
+      fontSize: `${13 / 16}em`,
       paddingTop: `${3 / 11.5}em`,
       opacity: 0
     },
@@ -140,12 +145,7 @@ const link = {
       '&:hover:before': {
         opacity: 0
       },
-      '&:hover': { flex: 8 },
-      '&:hover > h4': {
-        color: 'rgba(244, 233, 217, 1)',
-        fontWeight: 700,
-        letterSpacing: '0px'
-      }
+      '&:hover': { flex: 8 }
     },
     '@media only screen and (max-width: 1225px)': {
       alignItems: 'center',

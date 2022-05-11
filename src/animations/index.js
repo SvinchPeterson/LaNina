@@ -1,6 +1,15 @@
 'use strict'
 import { keyframes } from '@emotion/css'
 
+export const letterSpacing2 = keyframes`
+from {
+ letter-spacing: 7px;
+}
+to {
+  letter-spacing: 5px;
+}
+`
+
 export const opacity = keyframes`
   from {
     opacity: 0;

@@ -3,7 +3,6 @@ import { Box, Text } from '@symbo.ls/symbols'
 
 import { opacity, positionOpacity, letterSpacing } from '../../animations'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
-import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
 import SOLOLAKI_MOBILE_JPG from '../../assets/images/sololaki/sololaki-mobile.jpg'
 
 const image = {

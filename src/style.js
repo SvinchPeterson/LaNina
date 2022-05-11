@@ -16,22 +16,22 @@ export default {
   p: { margin: 0 },
   h6: { margin: 0 },
   fontFamily: 'Helvetica Neue',
-  background: 'black',
-  '@media only screen and (max-width: 1225px)': {
+  background: 'rgba(42, 81, 61, 1)'
+  // '@media only screen and (max-width: 1225px)': {
 
-  },
-  '@media only screen and (min-width: 1480px)': {
-    fontSize: '18px'
-  },
-  '@media only screen and (min-width: 1680px)': {
-    fontSize: '18.5px'
-  },
-  '@media only screen and (min-width: 1920px)': {
-    fontSize: '26px'
-  },
-  '@media only screen and (min-width: 2560px)': {
-    fontSize: '30px'
-  }
+  // },
+  // '@media only screen and (min-width: 1480px)': {
+  //   fontSize: '18px'
+  // },
+  // '@media only screen and (min-width: 1680px)': {
+  //   fontSize: '18.5px'
+  // },
+  // '@media only screen and (min-width: 1920px)': {
+  //   fontSize: '26px'
+  // },
+  // '@media only screen and (min-width: 2560px)': {
+  //   fontSize: '30px'
+  // }
   // fontFamily: 'DejaVu Sans'
   // background: 'rgba(244, 233, 217, 1)'
 }
