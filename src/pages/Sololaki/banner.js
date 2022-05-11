@@ -82,7 +82,7 @@ const heading = {
     props: {
       text: 'SOLOLAKI',
       size: 'B',
-      color: 'orange2'
+      color: 'orange'
     },
     style: {
       fontWeight: 700,

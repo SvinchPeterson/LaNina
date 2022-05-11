@@ -32,14 +32,14 @@ export const styleResidence = {
   },
 
   p: {
-    fontSize: `${14 / 16}em`,
+    fontSize: `${15 / 16}em`,
     letterSpacing: '.9px',
     fontWeight: 400,
     lineHeight: `${21 / 14}em`,
     '@media only screen and (min-width: 1225px)': {
       boxShadow: '0px 0px 75px 0px rgba(244, 233, 217, .55)',
       maxWidth: `100%`,
-      color: 'rgba(0, 0, 0, .2)',
+      color: 'rgba(0, 0, 0, .85)',
       background: 'rgba(244, 233, 217, 1)',
       padding: `${50 / 15}em ${340 / 15}em`,
       paddingBottom: `${100 / 15}em`,
@@ -51,10 +51,12 @@ export const styleResidence = {
       }
     },
     '@media only screen and (max-width: 1225px)': {
+      fontSize: `${18 / 16}em`,
       background: 'transparent',
       color: ' rgba(244, 233, 217, 1)',
-      maxWidth: `${700 / 15}em`,
-      padding: `0 ${100 / 15}em`
+      maxWidth: `${800 / 22}em`,
+      padding: `${50 / 22}em`
+      // backdropFilter: 'blur(5px)'
     },
     '@media only screen and (max-width: 768px)': {
       padding: `0 ${25 / 15}em`,
@@ -65,7 +67,7 @@ export const styleResidence = {
 }
 
 export const styleEntrence = {
-  minHeight: `${700 / 16}em`,
+  minHeight: `${800 / 16}em`,
   backgroundImage: 'url(' + ENTRENCE_JPG + ')',
   display: 'flex',
   boxSizing: 'border-box',
@@ -93,7 +95,7 @@ export const styleEntrence = {
     height: '100%',
     top: 0,
     left: 0,
-    background: 'linear-gradient(rgba(42, 81, 61, 0),rgba(42, 81, 61, .35), rgba(42, 81, 61, .9))'
+    background: 'linear-gradient(rgba(42, 81, 61, 0),rgba(42, 81, 61, .35), rgba(42, 81, 61, 1))'
   },
   '> div': { alignSelf: 'flex-end', zIndex: 100 },
 

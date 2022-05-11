@@ -25,7 +25,6 @@ const entrance = {
       flexFlow: 'column'
     },
     style: {
-      fontSize: `${13 / 16}em`,
       // fontWeight: ,
       '@media only screen and (max-width: 768px)': {
         fontWeight: 500
@@ -36,7 +35,11 @@ const entrance = {
       proto: Box,
       props: {
         flexFlow: 'column',
-        gap: 'Y1'
+        gap: 'A'
+      },
+      style: {
+        '@media only screen and (max-width: 1225px)': { gap: '10px' },
+        '@media only screen and (max-width: 768px)': { gap: '15px' }
       },
       childProto: {
         proto: [Text, Box],
@@ -45,8 +48,9 @@ const entrance = {
           letterSpacing: '0px',
           textTransform: 'uppercase',
           fontWeight: 700,
-          '@media only screen and (max-width: 768px)': {
-            letterSpacing: 0
+          fontSize: `${26 / 16}em`,
+          '@media only screen and (max-width: 1225px)': {
+            fontSize: `${20 / 16}em`
           }
         }
       },
@@ -56,7 +60,7 @@ const entrance = {
           proto: Box,
           props: {
             flexAlign: 'center flex-start',
-            gap: '8px'
+            gap: '12px'
           },
           style: {
             flexWrap: 'wrap',
@@ -76,8 +80,8 @@ const entrance = {
       proto: [Text, Box],
       props: {
         text: `Luggage dropoff allowed for guests' convenience when they have early arrival or late departure`,
-        color: 'orange2 1',
-        padding: 'A 0 Y 0'
+        color: 'orange2',
+        padding: 'B 0 Y 0'
       },
       style: {
         maxWidth: `${450 / 16}em`,
@@ -117,8 +121,8 @@ export default {
     background: 'rgba(244, 233, 217, 1)',
     borderBottom: '1px solid rgba(42, 81, 61, 1)',
     paddingTop: `${100 / 16}em`,
-    '@media only screen and (max-width: 768px)': {
-      gap: `${100 / 16}em`,
+    '@media only screen and (max-width: 1225px)': {
+      gap: 0,
       paddingTop: 0
       // padding: '100px 0'
     }
