@@ -1,10 +1,10 @@
 'use strict'
 
 const styleLocation = {
-  fontSize: `${14 / 16}em`,
+  fontSize: `${18 / 16}em`,
   lineHeight: `${21 / 14}em`,
-  color: 'rgba(168, 98, 63, .35)',
-  fontWeight: 500,
+  color: 'rgba(168, 98, 63, 1)',
+  fontWeight: 700,
   maxWidth: `${500 / 14}em`,
   textAlign: 'center',
   margin: '0 auto'
@@ -27,17 +27,17 @@ const styleAirPort = {
     padding: '0 16px'
   },
   '> p': {
-    fontSize: `${14 / 16}em`,
-    maxWidth: `${400 / 14}em`,
-    color: 'rgba(0, 0, 0, .2)',
+    fontSize: `${16 / 16}em`,
+    maxWidth: `${400 / 16}em`,
+    color: 'rgba(0, 0, 0, .55)',
     letterSpacing: '0px',
-    lineHeight: `${20 / 14}em`,
+    lineHeight: `${22 / 16}em`,
     fontWeight: 500
   },
   '> p > caption': {
     textTransform: 'uppercase',
     letterSpacing: '1px',
-    color: 'rgba(168, 98, 63, .55)',
+    color: 'rgba(168, 98, 63, 1)',
     fontWeight: 700
   }
 
@@ -52,7 +52,8 @@ export default {
     iframe: styleMap,
     div: styleAirPort,
     '@media only screen and (max-width: 1225px)': {
-      flexFlow: 'column'
+      flexFlow: 'column',
+      gap: '100px'
     }
   }
 }

@@ -8,7 +8,7 @@ export const styleSectionLinks = {
     paddingBottom: `${100 / 16}em`
   },
   '@media only screen and (max-width: 1024px)': {
-    fontSize: `${24 / 16}em`,
+    fontSize: `${20 / 16}em`,
     flexFlow: 'column',
     gap: `${40 / 24}em`,
     textAlign: 'center'
@@ -31,7 +31,7 @@ export const styleSocialMedia = {
   },
   '> a': {
     cursor: 'pointer',
-    opacity: '.75'
+    opacity: '.85'
   },
   '> a:hover': { opacity: 1 }
 }

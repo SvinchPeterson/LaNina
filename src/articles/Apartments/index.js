@@ -63,11 +63,6 @@ const roomsTabs = {
     },
     childProto: {
       proto: Box
-      // class: {
-      //   show: (element, state) => state.activeTab === element.key ? { border: '4px solid red' } : {}
-      // }
-      // style: { boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .35)' }
-
     },
     ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
   }
@@ -128,7 +123,14 @@ export default {
       position: 'absolute',
       right: '100px',
       top: '200px',
-      fontWeight: 900
+      fontWeight: 900,
+      '@media only screen and (max-width: 1225px)': { top: '150px' },
+      '@media only screen and (max-width: 768px)': {
+        display: 'none',
+        fontSize: '22px',
+        top: '100px',
+        right: '50px'
+      }
       // textTransform: 'uppercase'
     }
   },

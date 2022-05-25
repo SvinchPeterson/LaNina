@@ -152,7 +152,7 @@ const book = {
   logo: {
     proto: Logo3,
     props: {
-      boxSize: 'B1 B1'
+      boxSize: 'B B'
     }
   }
 }
@@ -165,7 +165,7 @@ const container = {
     top: '0px',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Z1 B',
+    padding: 'Z B Z1 B',
     gap: 'E'
   },
 

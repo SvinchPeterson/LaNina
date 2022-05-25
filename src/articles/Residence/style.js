@@ -39,7 +39,7 @@ export const styleResidence = {
     '@media only screen and (min-width: 1225px)': {
       boxShadow: '0px 0px 75px 0px rgba(244, 233, 217, .55)',
       maxWidth: `100%`,
-      color: 'rgba(0, 0, 0, .85)',
+      color: 'rgba(0, 0, 0, .55)',
       background: 'rgba(244, 233, 217, 1)',
       padding: `${50 / 15}em ${340 / 15}em`,
       paddingBottom: `${100 / 15}em`,

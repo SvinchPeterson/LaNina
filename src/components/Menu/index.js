@@ -16,7 +16,6 @@ const sectionLinks = {
     proto: [Link, Text],
     props: {
       color: 'cream .95'
-      // size: 'Z'
     },
     style: { fontSize: `${14.5 / 16}em` },
     on: {
@@ -29,7 +28,6 @@ const sectionLinks = {
       show: (element, state) => state.activeMenuItem === element.key
         ? { color: 'rgba(168, 98, 63, 1)' }
         : { color: 'rgba(244, 233, 217, 1)' }
-      // show2: (element, state) => state.activeMenu === false ? { color: 'rgba(244, 233, 217, 1)' } : {}
     }
   },
   ...[
@@ -54,7 +52,14 @@ const socialMedia = {
     props: { target: '_blank' },
     icon: {
       proto: [Img, Box],
-      props: { boxSize: 'C' }
+      props: { boxSize: 'B2' },
+      style: {
+        '@media only screen and (max-width: 1024px)': {
+          // width: '30px',
+          // height: '30px'
+
+        }
+      }
     }
   },
   ...[

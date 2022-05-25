@@ -13,11 +13,10 @@ export default {
     backgroundColor: 'rgba(244, 233, 217, 1)',
     minHeight: `${700 / 16}em`,
     '@media only screen and (max-width: 1225px)': {
+      paddingTop: '200px',
       paddingBottom: '100px'
-
     },
     '@media only screen and (max-width: 768px)': {
-      paddingTop: '100px',
       minHeight: `${600 / 16}em`
     }
   },
@@ -49,9 +48,9 @@ export default {
       },
       style: {
         background: 'rgba(244, 233, 217, 1)',
-        color: 'rgba(0, 0, 0, .2)',
+        color: 'rgba(0, 0, 0, .55)',
         flex: 1,
-        fontSize: `${14 / 16}em`,
+        fontSize: `${15 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
           background: 'transparent',
           color: 'rgba(244, 233, 217, 1)'

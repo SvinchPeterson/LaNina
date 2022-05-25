@@ -83,10 +83,7 @@ const roomTab = {
       proto: [Text, Box],
       style: styleParagraph,
       props: {
-        color: 'cream .85',
-        round: 'Z'
-        // padding: 'C1 0 0 0',
-        // size: 'Z'
+        color: 'cream 1'
       },
       class: {
         show: (element, state) => state.activeTab === element.parent.parent.key ? { opacity: 1 } : {}

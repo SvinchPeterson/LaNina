@@ -30,12 +30,7 @@ export const navButtons = {
     },
     style: {
       border: 'none',
-      // background: 'radial-gradient(rgba(42, 81, 61, .15),rgba(42, 81, 61, .25))',
       background: 'radial-gradient(rgba(42, 81, 61, .5),rgba(42, 81, 61, .7))',
-      backdropFilter: 'blur(10px)',
-      // background: 'radial-gradient(rgba(168, 98, 63, .15), rgba(168, 98, 63, .25))',
-      // border: '1.5px solid rgba(168, 98, 63, 1)',
-      // '&:hover': { background: 'radial-gradient(rgba(244, 233, 217, .35), rgba(168, 98, 63, .45))' },
       '> img': { opacity: '1' }
     }
   },
@@ -88,20 +83,6 @@ export const navButtons = {
           }
         }
       }
-
-      // on: {
-      //   click: (event, element, state) => {
-      //     const { activeImage } = state
-      //     state.update({
-      //       activeImage: activeImage === (element.parent.parent.gallery.length + 1) ? 0 : activeImage + 1
-      //     })
-      //     if (activeImage === element.parent.gallery.length) {
-      //       state.update({
-      //         activeImage: activeImage === element.parent.gallery.length - 2
-      //       })
-      //     }
-      //   }
-      // }
     }
   ]
 }
@@ -110,7 +91,6 @@ export const navButtons2 = {
   proto: Box,
   props: {
     position: 'absolute',
-    // top: '50%',
     left: `50%`,
     flexFlow: 'row',
     flexAlign: 'center space-between',

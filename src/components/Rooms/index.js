@@ -1,7 +1,6 @@
 'use strict'
 
 import { Box, Link, Img, Text } from '@symbo.ls/symbols'
-import BACK_PNG from '../../assets/icons/leftCream.png'
 import BACK2_PNG from '../../assets/icons/left-arrow2.png'
 
 import {
@@ -15,13 +14,10 @@ const book = {
   proto: [Link, Text, Box],
   text: 'book',
   props: {
-    size: 'Z',
+    size: 'B',
     color: 'cream',
     position: 'absolute',
-    // right: '80px',
-    // bottom: '0px',
     padding: 'Z A'
-    // background: 'cream'
   },
   attr: { target: '_blank' },
   style: {
@@ -33,10 +29,8 @@ const book = {
     right: '80px',
     '@median only screen and (max-width: 1225px)': {
       right: '60px',
-      bottom: '-300px'
+      bottom: '0px'
     }
-    // backdropFilter: 'blur(10px)'
-
   }
 }
 const back = {
@@ -94,7 +88,7 @@ const Room = {
         height: `${700 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
-        paddingTop: `${80 / 16}em`,
+        paddingTop: `${100 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
           transition: 'all .1s ease-in-out',
           display: 'block',

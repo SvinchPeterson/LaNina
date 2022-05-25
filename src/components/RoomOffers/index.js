@@ -1,8 +1,7 @@
 'use strict'
-import { Box, Text, Button, Img } from '@symbo.ls/symbols'
+import { Box, Text, Button } from '@symbo.ls/symbols'
 
 import style, { styleHeader, styleOffers } from './style'
-import MINUS_ICON from '../../assets/icons/minusCream.png'
 
 const header = {
   tag: 'header',
@@ -23,7 +22,7 @@ const header = {
       text: 'offers',
       color: 'cream 1'
     },
-    style: { fontWeight: 700, fontSize: `${12.7 / 16}em` }
+    style: { fontWeight: 700, fontSize: `${16 / 16}em` }
   },
   minimize: {
     proto: [Button, Box],
@@ -33,7 +32,7 @@ const header = {
     span: {
       proto: [Button, Box],
       props: {
-        boxSize: 'B W2',
+        boxSize: 'B X',
         background: 'cream 1',
         round: 'Z'
       },
@@ -66,7 +65,7 @@ const offers = {
   class: {
     show: (element, state) => state.offers
       ? {
-        minHeight: `${180 / 16}em`,
+        minHeight: `${230 / 16}em`,
         '@media only screen and (max-height: 600px)': {
           minHeight: `${100 / 16}em`
         },
@@ -80,7 +79,7 @@ const offers = {
         paddingBottom: `${0 / 16}em`,
         '> span': {
           height: 0,
-          opacity: '0',
+          opacity: '0'
 
         }
       }
