@@ -1,9 +1,10 @@
 'use strict'
 import { Box, Text } from '@symbo.ls/symbols'
 
-import { opacity, positionOpacity, letterSpacing } from '../../animations'
+import { opacity, positionOpacity2, letterSpacing2 } from '../../animations'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
 import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
+import SOLOLAKI2_JPG from '../../assets/images/CoverPage/sololaki.jpg'
 
 const image = {
   proto: Box,
@@ -16,14 +17,15 @@ const image = {
   style: {
     boxSizing: 'border-box',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    animationName: positionOpacity,
+    // backgroundPosition: 'center',
+    animationName: positionOpacity2,
     animationDuration: '3s',
     animationTimingFunction: 'ease-in-out',
     position: 'relative',
+    backgroundPosition: 'center',
     '@media only screen and (min-width: 1225px)': {
       backgroundAttachment: 'fixed',
-      backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
+      backgroundImage: 'url(' + SOLOLAKI2_JPG + ')'
     },
     '@media only screen and (max-width: 1225px)': {
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
@@ -38,7 +40,8 @@ const image = {
       left: 0,
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(rgba(42, 81, 61, .15), rgba(42, 81, 61, .8))'
+      background: 'linear-gradient(rgba(42, 81, 61, 1), rgba(42, 81, 61, 1))',
+      opacity: '.5'
     }
   }
 
@@ -48,9 +51,10 @@ const heading = {
   proto: Box,
   props: {
     flexFlow: 'column',
-    flexAlign: 'flex-start flex-end',
+    flexAlign: 'flex-start center',
     position: 'absolute',
-    padding: '0 0 D D'
+    padding: '0 0 E E',
+    gap: '0'
   },
   style: {
     '@media only screen and (max-width: 768px)': {
@@ -65,15 +69,15 @@ const heading = {
 
   title: {
     proto: [Text, Box],
-    text: 'BB residence',
+    text: 'BB Residence',
     props: {
-      color: 'cream',
-      size: 'F'
+      color: 'cream 1',
+      size: 'G'
     },
     style: {
-      letterSpacing: '-1px',
-      fontWeight: '700',
-      textTransform: 'uppercase',
+      // fontSize: `${60 / 16}em`,
+      fontWeight: 200,
+      // textTransform: 'uppercase',
       whiteSpace: 'nowrap'
     }
   },
@@ -81,14 +85,15 @@ const heading = {
     proto: [Text, Box],
     props: {
       text: 'SOLOLAKI',
-      size: 'B',
-      color: 'orange'
+      size: 'A',
+      color: 'gold .85',
+      padding: '0 0 0 W2'
     },
     style: {
-      fontWeight: 700,
-      letterSpacing: '10px',
+      fontWeight: 900,
+      letterSpacing: '8px',
       marginTop: '0px',
-      marginLeft: '15px'
+      marginLeft: '0px'
     }
   }
 }
@@ -106,10 +111,10 @@ const paragraph = {
     fontSize: '15px',
     transform: 'translate(-50%, -50%)',
     textTransform: 'uppercase',
-    fontWeight: 400,
+    fontWeight: 900,
     letterSpacing: '5px',
     whiteSpace: 'nowrap',
-    animationName: letterSpacing,
+    animationName: letterSpacing2,
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out',
     '@media only screen and (max-width: 768px)': {

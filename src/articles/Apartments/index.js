@@ -92,38 +92,20 @@ export default {
     padding: '0 0 D 0',
     flexFlow: 'column'
   },
-  line: {
-    style: {
-      position: 'absolute',
-      width: '100%',
-      height: '1.5px',
-      background: 'rgba(168, 98, 63, 1)',
-      // opacity: 0,
-      zIndex: '50px',
-      top: '50%',
-      transition: 'all 5s ease-in-out',
-      // display: 'none',
-      '@media only screen and (max-width: 1225px)': {
-        background: 'none'
-      }
-    },
-    class: {
-      show: (element, state) => state.activeTab ? { top: '53%', opacity: 1 } : { opacity: 0 }
-    }
-  },
 
   title: {
     proto: [Text, Box],
     props: {
-      size: 'F',
-      color: 'orange'
+      size: 'G',
+      color: 'gold .75'
     },
     text: 'apartments',
     style: {
       position: 'absolute',
       right: '100px',
       top: '200px',
-      fontWeight: 900,
+      fontWeight: 200,
+      // display: 'none',
       '@media only screen and (max-width: 1225px)': { top: '150px' },
       '@media only screen and (max-width: 768px)': {
         display: 'none',

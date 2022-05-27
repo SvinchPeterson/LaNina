@@ -4,6 +4,7 @@ export const styleHeader = {
   textTransform: 'uppercase',
   height: `${50 / 16}em`,
   transition: 'height .3s linear',
+  // fontSize: `${15 / 16}em`,
   '@media only screen and (max-width: 1225px)': {
     height: `${60 / 16}em`,
     '> h5': { fontSize: `${15 / 16}em` }
@@ -25,7 +26,7 @@ export const styleOffers = {
   },
 
   '> span': {
-    fontSize: `${15 / 16}em`,
+    fontSize: `${14 / 16}em`,
     // textTransform: 'uppercase',
     // transition: 'height .3s linear, opacity .3s linear .2s',
     fontWeight: 400,
@@ -43,7 +44,8 @@ export default {
   minWidth: `${380 / 16}em`,
   borderRadius: '35px',
   backdropFilter: 'blur(5px)',
-  background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
+  // background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
+  background: 'radial-gradient(rgba(60,84, 72, .7),rgba(60,84, 72, .8))',
   '@media only screen and (max-width: 1225px)': {
     marginRight: '0px',
     left: '50%',

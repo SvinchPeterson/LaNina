@@ -162,10 +162,11 @@ const container = {
   proto: Box,
   props: {
     position: 'fixed',
-    top: '0px',
+    top: '0',
     left: '50%',
     flexAlign: 'center center',
-    padding: 'Z B Z1 B',
+    // padding: 'Z B Z1 B',
+    padding: 'Z A2',
     gap: 'E'
   },
 
@@ -173,9 +174,10 @@ const container = {
     zIndex: 500,
     width: 'fit-content',
     transform: 'translate(-50%, 0%)',
-    borderBottomLeftRadius: '31px',
-    borderBottomRightRadius: '31px',
-    background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
+    borderBottomLeftRadius: '28px',
+    borderBottomRightRadius: '28px',
+    // background: '#3C5448',
+    background: 'radial-gradient(rgba(60,84, 72, .85),rgba(60,84, 72, .95))',
     boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
     backdropFilter: 'blur(5px)',
     '@media only screen and (max-width: 480px)': {

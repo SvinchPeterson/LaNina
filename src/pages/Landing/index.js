@@ -3,23 +3,23 @@ import { Box, Link, Text } from '@symbo.ls/symbols'
 
 import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 
-import { positionOpacity, letterSpacing3, opacity } from '../../animations'
+import { positionOpacity, letterSpacing3, opacity, opacityReverse } from '../../animations'
 
 const heading = {
   tag: 'h1',
   proto: [Text, Box],
   props: {
-    text: 'BB Hospitality'
-    // color: 'orange3 1'
+    text: 'BB Hospitality',
+    color: 'gold .9'
+    // size: 'J'
   },
   style: {
-    fontSize: '70px',
-    fontWeight: '300',
+    fontSize: `${90 / 16}em`,
+    fontWeight: 200,
     animationName: letterSpacing3,
-    animationDuration: '1.8s',
-    animationTimingFunction: 'ease-in-out',
-    letterSpacing: '0px',
-    color: '#DCBB8C'
+    animationDuration: '1.4s',
+    animationTimingFunction: 'ease-in-out'
+    // color: '#DCBB8C'
   }
 }
 
@@ -28,7 +28,7 @@ const links = {
   props: {
     flexAlign: 'center center',
     gap: 'A',
-    padding: '0 B 0 0'
+    padding: '0 C 0 0'
   },
   childProto: {
     proto: [Link, Text, Box],
@@ -43,7 +43,9 @@ const links = {
       // border: '2px solid red',
       textTransform: 'uppercase',
       fontWeight: 900,
-      textDecoration: 'none'
+      textDecoration: 'none',
+      transition: 'background .3s ease-in-out',
+      backdropFilter: 'blur(5px)'
       // color: 'rgba(244, 233, 217, 1)'
     }
   },
@@ -68,7 +70,28 @@ const links = {
           fontWeight: 400,
           textTransform: 'lowercase',
 
-          color: '#EC8551'
+          color: '#FFCEA8',
+          opacity: '.55'
+          // color: '#EC8551'
+        }
+      }
+    },
+    {
+      props: { text: 'car rental' },
+      style: {
+        position: 'relative',
+        '&:before': {
+          content: '"soon"',
+          position: 'absolute',
+          bottom: '-30px',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          fontWeight: 400,
+          textTransform: 'lowercase',
+
+          color: '#FFCEA8',
+          opacity: '.55'
+          // color: '#EC8551'
         }
       }
     }
@@ -80,17 +103,44 @@ const Container = {
   proto: Box,
   props: {
     boxSize: '100% 100%',
-    position: 'relative'
+    position: 'absolute',
+    top: 0,
+    left: 0
   },
   style: {
-    overflowY: 'auto',
     backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     animationName: positionOpacity,
-    animationDuration: '1.8s',
-    animationTimingFunction: 'ease-in-out'
-    // backgroundAttachment: 'fixed'
+    animationDuration: '20s',
+    animationTimingFunction: 'ease-in-out',
+    backgroundAttachment: 'fixed',
+    overflow: 'hidden',
+    '&:before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '120%',
+      height: '100%',
+      background: 'radial-gradient(rgba(42, 81, 61, .5), rgba(42, 81, 61, .8))',
+      opacity: '1'
+      // backdropFilter: 'blur(1px)'
+    },
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      background: 'radial-gradient(rgba(42, 81, 61, 1), rgba(42, 81, 61, 1))',
+      opacity: 0,
+      animationName: opacityReverse,
+      animationDuration: '2.5s',
+      animationTimingFunction: 'ease-in-out',
+      pointerEvents: 'none'
+    }
   },
   content: {
     proto: Box,
@@ -100,12 +150,12 @@ const Container = {
       right: '15%',
       transform: 'translate(-50%, -50%)',
       flexFlow: 'column',
-      gap: 'C',
+      gap: 'C2',
       flexAlign: 'flex-end center'
     },
     style: {
       animationName: opacity,
-      animationDuration: '3s',
+      animationDuration: '.3s',
       animationTimingFunction: 'ease-in-out'
     },
     heading,

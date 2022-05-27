@@ -17,7 +17,7 @@ const sectionLinks = {
     props: {
       color: 'cream .95'
     },
-    style: { fontSize: `${14.5 / 16}em` },
+    style: { fontSize: `${12.5 / 16}em` },
     on: {
       click: (event, element, state) => {
         state.update({ activeMenuItem: element.key, activeMenu: true })
@@ -26,7 +26,7 @@ const sectionLinks = {
 
     class: {
       show: (element, state) => state.activeMenuItem === element.key
-        ? { color: 'rgba(168, 98, 63, 1)' }
+        ? { color: '#DCBB8C' }
         : { color: 'rgba(244, 233, 217, 1)' }
     }
   },
@@ -52,14 +52,7 @@ const socialMedia = {
     props: { target: '_blank' },
     icon: {
       proto: [Img, Box],
-      props: { boxSize: 'B2' },
-      style: {
-        '@media only screen and (max-width: 1024px)': {
-          // width: '30px',
-          // height: '30px'
-
-        }
-      }
+      props: { boxSize: ' B1' }
     }
   },
   ...[

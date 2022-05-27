@@ -30,7 +30,8 @@ export const navButtons = {
     },
     style: {
       border: 'none',
-      background: 'radial-gradient(rgba(42, 81, 61, .5),rgba(42, 81, 61, .7))',
+      background: 'radial-gradient(rgba(60,84, 72, .7),rgba(60,84, 72, .8))',
+      backdropFilter: 'blur(2px)',
       '> img': { opacity: '1' }
     }
   },
@@ -44,7 +45,7 @@ export const navButtons = {
         proto: [Img, Box],
         props: {
           src: UP_ARROW_PNG,
-          boxSize: 'B '
+          boxSize: 'A2 '
         }
       },
       on: {
@@ -69,7 +70,7 @@ export const navButtons = {
         proto: [Img, Box],
         props: {
           src: DOWN_ARROW_PNG,
-          boxSize: 'B '
+          boxSize: 'A2 '
         }
       },
       on: {

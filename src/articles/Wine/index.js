@@ -48,7 +48,7 @@ export default {
       },
       style: {
         background: 'rgba(244, 233, 217, 1)',
-        color: 'rgba(0, 0, 0, .55)',
+        color: 'rgba(0, 0, 0, .35)',
         flex: 1,
         fontSize: `${15 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
@@ -62,7 +62,7 @@ export default {
         props: { padding: 'E D2' },
         style: {
           display: 'block',
-          maxWidth: `${700 / 14}em`,
+          maxWidth: `${650 / 14}em`,
           margin: '0 auto',
           lineHeight: `${21 / 14}em`,
           // fontSize: `${15 / 16}em`,

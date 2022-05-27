@@ -9,20 +9,14 @@ const header = {
   style: styleHeader,
   props: {
     flexAlign: 'center space-between',
-    padding: '0 A 0 B'
+    padding: '0 A2 0 B'
   },
-  // class: {
-  //   show: (element, state) => state.offers
-  //     ? { '@media only screen and (max-width: 1225px)': { height: '100px' } }
-  //     : {}
-  // },
   h5: {
     proto: [Text, Box],
     props: {
       text: 'offers',
       color: 'cream 1'
-    },
-    style: { fontWeight: 700, fontSize: `${16 / 16}em` }
+    }
   },
   minimize: {
     proto: [Button, Box],

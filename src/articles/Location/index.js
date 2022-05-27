@@ -8,7 +8,7 @@ import style from './style'
 const paragraph = {
   tag: 'p',
   proto: [locationText, Box],
-  props: { padding: '0 A E A' }
+  props: { padding: '0 A E A', color: 'black .35' }
 
 }
 

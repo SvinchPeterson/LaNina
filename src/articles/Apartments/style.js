@@ -36,6 +36,15 @@ export default {
   background: 'rgba(244, 233, 217, .4)',
   position: 'relative',
   padding: '100px 0 400px 0',
+  '&:before': {
+    content: '""',
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    background: 'radial-gradient(rgba(244, 233, 217, .1), rgba(60, 84, 72, .85), rgba(42, 81, 61, .85))'
+  },
 
   '@media only screen and (min-width: 1225px)': {
     backgroundAttachment: 'fixed',

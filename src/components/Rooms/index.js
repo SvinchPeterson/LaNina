@@ -38,7 +38,7 @@ const back = {
 
   props: {
     position: 'absolute',
-    top: '50px',
+    top: '65px',
     left: '10px',
     href: '#apartments',
     color: 'cream',

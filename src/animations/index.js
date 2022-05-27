@@ -3,7 +3,7 @@ import { keyframes } from '@emotion/css'
 
 export const letterSpacing2 = keyframes`
 from {
- letter-spacing: 7px;
+ letter-spacing: 6px;
 }
 to {
   letter-spacing: 5px;
@@ -19,7 +19,7 @@ to {
 `
 export const letterSpacing3 = keyframes`
 from {
- letter-spacing: -2px;
+ letter-spacing: 1px;
 }
 to {
   letter-spacing: 0px;
@@ -32,6 +32,14 @@ export const opacity = keyframes`
   }
   to {
     opacity: 1;
+  }
+`
+export const opacityReverse = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 `
 export const letterSpacing = keyframes`
@@ -47,10 +55,20 @@ export const letterSpacing = keyframes`
 export const positionOpacity = keyframes`
   from {
     background-position: center;
-    opacity: 0;
+    // opacity: 0;
   }
   to {
     background-position: top;
+    // opacity: 1;
+  }
+`
+export const positionOpacity2 = keyframes`
+  from {
+    background-position: top;
+    opacity: 0;
+  }
+  to {
+    background-position: center;
     opacity: 1;
   }
 `

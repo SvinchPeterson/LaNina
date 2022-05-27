@@ -26,7 +26,7 @@ const book = {
     flexFlow: 'row',
     position: 'absolute',
     left: '50%',
-    bottom: 'B',
+    bottom: 'A',
     padding: 'Z A1 Z A1',
     gap: 'Y'
   },

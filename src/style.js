@@ -16,7 +16,6 @@ export default {
   p: { margin: 0 },
   h6: { margin: 0 },
   fontFamily: 'Helvetica Neue',
-  background: 'linear-gradient(rgba(42, 81, 61, .8), rgba(42, 81, 61, .9))',
-  // background: 'radial-gradient(rgba(42, 81, 61, .8), rgba(42, 81, 61, .9))',
+  background: 'linear-gradient(rgba(42, 81, 61, .8), rgba(42, 81, 61, .8))',
   '@media only screen and (min-width: 1680px)': { fontSize: '17px' }
 }

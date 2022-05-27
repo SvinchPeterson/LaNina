@@ -5,18 +5,21 @@ export const styleParagraph = {
   pointerEvents: 'none',
   transition: 'opacity .3s ease-in-out',
   transitionDelay: '.4s',
-  lineHeight: `${18 / 15}em`,
+  lineHeight: `${17 / 14}em`,
   letterSpacing: '.5px',
   fontWeight: 400,
+  textAlign: 'left',
+  // border: '1px solid red',
   // backdropFilter: 'blur(7px)',
-  background: '',
+  // background: 'rgba(220, 187, 140, .4)',
   '@media only screen and (min-width: 1225px)': {
-    fontSize: `${15 / 16}em`,
-    width: `${490 / 14}em`,
+    fontSize: `${14 / 16}em`,
+    maxWidth: `370px`,
+    // maxWidth: `${320 / 14}em`
     // width: `${435 / 14}em`,
     // background: 'linear-gradient(rgba(168, 98, 63, .25), rgba(168, 98, 63, .5))',
     // borderBottom: '2px solid rgba(168, 98, 63, 1)',
-    padding: `${27.5 / 15}em 70px`
+    padding: `0 30px 0 45px`
   },
   '@media only screen and (max-width: 1225px)': {
     fontSize: `${17 / 16}em`,
@@ -34,19 +37,19 @@ export const styleParagraph = {
 export const styleBook = {
   zIndex: 10,
   textTransform: 'uppercase',
-  fontWeight: 700,
+  fontWeight: 900,
   borderRadius: '30px',
-  border: '.7px solid rgba(168, 98, 63, 1)',
+  // border: '.7px solid rgba(220, 187, 140, 1)',
   letterSpacing: '0px',
   backdropFilter: 'blur(2px)',
   // background: 'radial-gradient(rgba(42, 81, 61, .15),rgba(42, 81, 61, .25))',
-  background: 'radial-gradient(rgba(168, 98, 63, .15),rgba(168, 98, 63, .2))',
+  background: 'radial-gradient(rgba(220, 187, 140, .15),rgba(220, 187, 140, .25))',
   textDecoration: 'none',
   // borderBottom: 'none',
   transform: 'translate(-50%, -50%)',
   '&:hover': { opacity: 1 },
   '@media only screen and (max-width: 480px)': { bottom: '5%' },
-  '> span': { fontSize: `${13.5 / 16}em` }
+  '> span': { fontSize: `${13 / 16}em` }
 }
 export const styleRoomTab = {
   height: `${400 / 16}em`,
@@ -60,7 +63,7 @@ export const styleRoomTab = {
   textDecoration: 'none',
   position: 'relative',
   backdropFilter: 'blur(2px)',
-  boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .35)',
+  boxShadow: '0px 0px 2px 0px rgba(0, 0, 0, .35)',
   '> div': {
     overflow: 'hidden'
   },
@@ -78,8 +81,8 @@ export const styleRoomTab = {
   },
   '&:after': {
     content: '""',
-    fontSize: `${15 / 16}em`,
-    fontWeight: '700',
+    fontSize: `${14 / 16}em`,
+    fontWeight: '900',
     position: 'absolute',
     top: '-25px',
     left: '5px',
