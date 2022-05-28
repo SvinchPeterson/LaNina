@@ -20,9 +20,11 @@ to {
 export const letterSpacing3 = keyframes`
 from {
  letter-spacing: 1px;
+ opacity: 0;
 }
 to {
-  letter-spacing: 0px;
+  letter-spacing: 0;
+  opacity: .85;
 }
 `
 
