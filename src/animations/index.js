@@ -54,14 +54,12 @@ export const letterSpacing = keyframes`
     opacity: 1;
   }
 `
-export const positionOpacity = keyframes`
+export const positionCenterTop = keyframes`
   from {
     background-position: center;
-    // opacity: 0;
   }
   to {
     background-position: top;
-    // opacity: 1;
   }
 `
 export const positionOpacity2 = keyframes`

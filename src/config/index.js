@@ -38,6 +38,7 @@ export const COLORS = {
   orange2: '#EC8551',
   orange3: '#FFCEA8',
   green: 'rgba(42, 81, 61, 1)',
+  green2: 'rgba(60,84, 72, 1)',
   black: 'rgba(0, 0, 0, 1)',
   gold: 'rgba(220, 187, 140, 1)'
 }

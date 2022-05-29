@@ -176,8 +176,7 @@ const container = {
     transform: 'translate(-50%, 0%)',
     borderBottomLeftRadius: '28px',
     borderBottomRightRadius: '28px',
-    // background: '#3C5448',
-    background: 'radial-gradient(rgba(60,84, 72, .85),rgba(60,84, 72, .95))',
+    background: 'radial-gradient(rgba(42, 81, 61, .65),rgba(60,84, 72, .75))',
     boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
     backdropFilter: 'blur(5px)',
     '@media only screen and (max-width: 480px)': {

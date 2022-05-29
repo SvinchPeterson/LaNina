@@ -3,7 +3,7 @@ import { Box, Link, Text } from '@symbo.ls/symbols'
 
 import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 
-import { positionOpacity, letterSpacing3, opacity, opacityReverse } from '../../animations'
+import { positionCenterTop, letterSpacing3, opacity, opacityReverse } from '../../animations'
 
 const heading = {
   tag: 'h1',
@@ -133,7 +133,7 @@ const Container = {
     backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    animationName: positionOpacity,
+    animationName: positionCenterTop,
     animationDuration: '20s',
     animationTimingFunction: 'ease-in-out',
     backgroundAttachment: 'fixed',
@@ -167,7 +167,7 @@ const Container = {
       background: 'radial-gradient(rgba(42, 81, 61, 1), rgba(42, 81, 61, 1))',
       opacity: 0,
       animationName: opacityReverse,
-      animationDuration: '5s',
+      animationDuration: '3s',
       animationTimingFunction: 'ease-in-out',
       pointerEvents: 'none'
     }

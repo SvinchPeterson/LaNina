@@ -13,22 +13,25 @@ const sectionLinks = {
   class: [styleSectionLinks],
 
   childProto: {
-    proto: [Link, Text],
+    proto: [Link, Text, Box],
     props: {
-      color: 'cream .95'
+      size: 'Z',
+      color: 'cream .95',
+      round: 'B',
+      background: 'cream .2',
+      padding: 'A B'
     },
-    style: { fontSize: `${12.5 / 16}em` },
     on: {
       click: (event, element, state) => {
         state.update({ activeMenuItem: element.key, activeMenu: true })
       }
-    },
-
-    class: {
-      show: (element, state) => state.activeMenuItem === element.key
-        ? { color: '#DCBB8C' }
-        : { color: 'rgba(244, 233, 217, 1)' }
     }
+
+    // class: {
+    //   show: (element, state) => state.activeMenuItem === element.key
+    //     ? { background: '244, 233, 217, 1' }
+    //     : { }
+    // }
   },
   ...[
     { props: { text: 'residence', href: '#residence' } },
@@ -52,7 +55,7 @@ const socialMedia = {
     props: { target: '_blank' },
     icon: {
       proto: [Img, Box],
-      props: { boxSize: ' B1' }
+      props: { boxSize: ' B' }
     }
   },
   ...[
