@@ -8,9 +8,15 @@ import { styleEntrence } from './style'
 const residence = {
   proto: Box,
   props: {
-    padding: 'G 0',
+    padding: 'G B2',
     flexAlign: 'center center',
     color: 'black .35'
+  },
+  style: {
+    '@media only screen and (max-width: 768px)': {
+      paddingTop: `${150 / 16}em`,
+      paddingBottom: `${150 / 16}em`
+    }
   },
   p: {
     proto: [bbSololaki, Box],
@@ -19,8 +25,10 @@ const residence = {
       maxWidth: `${530 / 15}em`,
       lineHeight: `${23.5 / 15}em`,
       letterSpacing: '.6px',
-      fontWeight: 400
-      // fontSize: `${15 / 16}em`
+      fontWeight: 400,
+      '@media only screen and (max-width: 768px)': {
+        maxWidth: `${400 / 15}em`
+      }
     }
   }
 }
@@ -36,10 +44,13 @@ const entrance = {
       padding: '0 0 E2 E2'
     },
     style: {
+
       // fontWeight: ,
+      '@media only screen and (max-width: 1225px)': {
+        padding: `0 0 ${30 / 16}em ${100 / 16}em`
+      },
       '@media only screen and (max-width: 768px)': {
-        fontWeight: 500
-        // fontSize: `${13 / 14}em`
+        padding: `0 0 ${30 / 16}em ${0 / 16}em`
       }
     },
     entrences: {
@@ -49,8 +60,8 @@ const entrance = {
         gap: 'Z2'
       },
       style: {
-        '@media only screen and (max-width: 1225px)': { gap: '10px' },
-        '@media only screen and (max-width: 768px)': { gap: '15px' }
+        // '@media only screen and (max-width: 1225px)': { gap: '10px' },
+        '@media only screen and (max-width: 480px)': { gap: '5px' }
       },
       childProto: {
         proto: [Text, Box],
@@ -60,8 +71,8 @@ const entrance = {
           textTransform: 'uppercase',
           fontWeight: 900,
           fontSize: `${16 / 16}em`,
-          '@media only screen and (max-width: 1225px)': {
-            fontSize: `${20 / 16}em`
+          '@media only screen and (max-width: 480px)': {
+            fontSize: `${14 / 16}em`
           }
         }
       },

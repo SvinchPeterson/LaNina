@@ -17,17 +17,6 @@ to {
   transform: scale(1);
 }
 `
-export const letterSpacing3 = keyframes`
-from {
- letter-spacing: 1px;
- opacity: 0;
-}
-to {
-  letter-spacing: 0;
-  opacity: .85;
-}
-`
-
 export const opacity = keyframes`
   from {
     opacity: 0;
@@ -65,10 +54,20 @@ export const positionCenterTop = keyframes`
 export const positionOpacity2 = keyframes`
   from {
     background-position: top;
-    opacity: 0;
+    // opacity: 0;
   }
   to {
     background-position: center;
+    // opacity: 1;
+  }
+`
+export const positionOpacity3 = keyframes`
+  from {
+    background-position: top left;
+    opacity: 0;
+  }
+  to {
+    background-position: center left;
     opacity: 1;
   }
 `

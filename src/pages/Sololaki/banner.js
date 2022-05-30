@@ -19,13 +19,17 @@ const image = {
     backgroundSize: 'cover',
     // backgroundPosition: 'center',
     animationName: positionOpacity2,
-    animationDuration: '3s',
+    animationDuration: '2s',
     animationTimingFunction: 'ease-in-out',
     position: 'relative',
     backgroundPosition: 'center',
     '@media only screen and (min-width: 1225px)': {
       backgroundAttachment: 'fixed',
       backgroundImage: 'url(' + SOLOLAKI2_JPG + ')'
+    },
+    '@media only screen and (max-width: 1024px)': {
+      animation: 'none',
+      backgroundPosition: 'left'
     },
     '@media only screen and (max-width: 1225px)': {
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
@@ -115,7 +119,7 @@ const paragraph = {
     letterSpacing: '5px',
     whiteSpace: 'nowrap',
     animationName: letterSpacing2,
-    animationDuration: '2s',
+    animationDuration: '1.5s',
     animationTimingFunction: 'ease-in-out',
     '@media only screen and (max-width: 768px)': {
       display: 'flex',
@@ -144,7 +148,7 @@ const container = {
   style: {
     overflow: 'hidden',
     animationName: opacity,
-    animationDuration: '2s',
+    animationDuration: '3s',
     animationTimingFunction: 'linear',
     margin: '0 auto'
   }
