@@ -72,10 +72,6 @@ const rooms = {
   tag: 'section',
   proto: Box,
   props: { round: 'B' },
-  style: {
-    '@media only screen and (max-width: 768px)': {
-    }
-  },
   ...[
     roomBallerina,
     roomRedBrick,
