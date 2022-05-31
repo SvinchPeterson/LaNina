@@ -9,7 +9,7 @@ export const styleHeader = {
     padding: `${230 / 16}em ${120 / 16}em ${290 / 16}em ${120 / 16}em`
   },
   '@media only screen and (max-width: 768px)': {
-    padding: `${130 / 16}em ${0 / 16}em ${0 / 16}em  ${0 / 16}em`,
+    padding: `${80 / 16}em ${0 / 16}em ${50 / 16}em  ${0 / 16}em`,
     paddingLeft: 0,
     paddingRight: 0
   },
@@ -36,6 +36,8 @@ export default {
   background: 'rgba(244, 233, 217, .4)',
   position: 'relative',
   padding: '100px 0 400px 0',
+  backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+  backgroundSize: 'contain',
   '&:before': {
     content: '""',
     width: '100%',
@@ -47,15 +49,14 @@ export default {
   },
 
   '@media only screen and (min-width: 1225px)': {
-    backgroundAttachment: 'fixed',
-    backgroundImage: 'url(' + ORNAMENT_PNG + ')',
-    backgroundSize: 'contain'
+    backgroundAttachment: 'fixed'
   },
   '@media only screen and (max-width: 1225px)': {
     paddingTop: `${0 / 16}em`,
     paddingBottom: '100px !important'
   },
   '@media only screen and (max-width: 768px)': {
-    paddingBottom: `${50 / 16}em`
+    paddingBottom: `${50 / 16}em`,
+    paddingTop: 0
   }
 }

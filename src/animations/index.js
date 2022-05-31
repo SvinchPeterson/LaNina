@@ -43,6 +43,17 @@ export const letterSpacing = keyframes`
     opacity: 1;
   }
 `
+
+export const letterSpacing3 = keyframes`
+  from {
+    letter-spacing: 1px;
+    opacity: 0;
+  }
+  to {
+    letter-spacing: 0px;
+    opacity: 1;
+  }
+`
 export const positionCenterTop = keyframes`
   from {
     background-position: center;

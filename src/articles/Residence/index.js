@@ -44,8 +44,6 @@ const entrance = {
       padding: '0 0 E2 E2'
     },
     style: {
-
-      // fontWeight: ,
       '@media only screen and (max-width: 1225px)': {
         padding: `0 0 ${30 / 16}em ${100 / 16}em`
       },
@@ -60,7 +58,6 @@ const entrance = {
         gap: 'Z2'
       },
       style: {
-        // '@media only screen and (max-width: 1225px)': { gap: '10px' },
         '@media only screen and (max-width: 480px)': { gap: '5px' }
       },
       childProto: {
@@ -134,20 +131,16 @@ const entrance = {
 export default {
   proto: Box,
   props: {
-    // padding: '0 0',
     flexFlow: 'column',
-    // gap: 'G',
     minMax: '100% 100%'
   },
   attr: { id: 'residence' },
   style: {
     background: 'rgba(244, 233, 217, 1)',
     borderBottom: '1px solid rgba(42, 81, 61, 1)',
-    // paddingTop: `${100 / 16}em`,
     '@media only screen and (max-width: 1225px)': {
       gap: 0,
       paddingTop: 0
-      // padding: '100px 0'
     }
   },
 

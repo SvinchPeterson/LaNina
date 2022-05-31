@@ -19,7 +19,7 @@ const heading = {
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out',
     zIndex: 2,
-    opacity: '.85',
+    opacity: '1',
     '@media only screen and (max-width: 768px)': {
       fontSize: `45px`,
       opacity: 1,
@@ -191,8 +191,6 @@ const Container = {
       '@media only screen and (max-width: 768px)': {
         alignItems: 'center',
         gap: '65px'
-        // paddingLeft: '30px'
-
       }
     },
     heading,

@@ -2,10 +2,8 @@
 
 export const styleSectionLinks = {
   display: 'flex',
-  '@media only screen and (min-width: 1024px)': {
-    gap: `${30 / 18}em`
-  },
-  '@media only screen and (max-width: 1024px)': {
+  gap: `${30 / 18}em`,
+  '@media only screen and (max-width: 768px)': {
     flexFlow: 'column',
     gap: `${40 / 24}em`,
     textAlign: 'center'
@@ -24,15 +22,15 @@ export const styleSectionLinks = {
 }
 
 export const styleSocialMedia = {
-  '@media only screen and (min-width: 1024px)': {
-    paddingRight: `${50 / 16}em`,
-    paddingTop: `${0 / 16}em`
-  },
+  paddingRight: `${50 / 16}em`,
   '> a': {
     cursor: 'pointer',
     opacity: '.85'
   },
-  '> a:hover': { opacity: 1 }
+  '> a:hover': { opacity: 1 },
+  '@media only screen and (max-width: 768px)': {
+    paddingRight: 0
+  }
 }
 
 export default {
@@ -44,26 +42,12 @@ export default {
   display: 'flex',
   flexFlow: 'column',
   gap: `${40 / 16}em`,
-  '@media only screen and (max-width: 1225px)': {
-    transitionDelay: '-1s'
-
-  },
-  '@media only screen and (min-width: 1024px)': {
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    paddingRight: `12%`
-  },
-
-  '@media only screen and (max-width: 1024px)': {
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: `${100 / 16}em`
-  },
-  '@media only screen and (min-height: 1024px)': {
-    gap: `${200 / 16}em`
-  },
+  justifyContent: 'center',
+  alignItems: 'flex-end',
+  paddingRight: `12%`,
   '@media only screen and (max-width: 768px)': {
-    paddingTop: `${100 / 16}em`
-
+    alignItems: 'center',
+    paddingRight: 0,
+    gap: '100px'
   }
 }
