@@ -14,11 +14,12 @@ const heading = {
   },
   style: {
     fontSize: `${90 / 16}em`,
-    fontWeight: 200,
-    animationName: letterSpacing3,
-    animationDuration: '2s',
-    animationTimingFunction: 'ease-in-out',
+    fontWeight: 100,
+    // animationName: letterSpacing3,
+    // animationDuration: '2s',
+    // animationTimingFunction: 'ease-in-out',
     zIndex: 2,
+    letterSpacing: '-1px',
     '@media only screen and (max-width: 768px)': {
       fontSize: `45px`,
       fontWeight: 900,
@@ -35,7 +36,7 @@ const links = {
   proto: Box,
   props: {
     flexAlign: 'center center',
-    gap: 'A',
+    gap: 'B2',
     padding: '0 C 0 0'
   },
   style: {
@@ -54,9 +55,9 @@ const links = {
     proto: [Link, Text, Box],
     props: {
       fontSize: 'Z',
-      padding: 'A B',
-      round: 'B',
-      background: 'cream .1',
+      // padding: 'Z1 B',
+      round: 'D',
+      // background: 'cream .1',
       color: 'cream'
     },
     style: {
@@ -64,7 +65,8 @@ const links = {
       fontWeight: 900,
       textDecoration: 'none',
       transition: 'background .3s ease-in-out',
-      backdropFilter: 'blur(5px)'
+      zIndex: 10
+      // backdropFilter: 'blur(5px)'
     }
   },
   ...[
@@ -74,24 +76,28 @@ const links = {
         href: '/Sololaki'
       },
       style: {
-        '&:hover': { background: 'rgba(244, 233, 217, .25)' }
+        opacity: '.75',
+        '&:hover': {
+          // background: 'rgba(244, 233, 217, .25)',
+          opacity: '1'
+        }
       }
     },
     {
       props: { text: 'travel' },
       style: {
         position: 'relative',
-        opacity: '.65',
+        opacity: '.55',
         '&:before': {
           content: '"soon"',
           position: 'absolute',
-          bottom: '-30px',
+          bottom: '-35px',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          fontWeight: 400,
+          fontWeight: 300,
           textTransform: 'lowercase',
           color: '#FFCEA8',
-          opacity: '.55'
+          opacity: '.7'
         }
       }
     },
@@ -99,17 +105,17 @@ const links = {
       props: { text: 'car rental' },
       style: {
         position: 'relative',
-        opacity: '.65',
+        opacity: '.55',
         '&:before': {
           content: '"soon"',
           position: 'absolute',
-          bottom: '-30px',
+          bottom: '-35px',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          fontWeight: 400,
+          fontWeight: 300,
           textTransform: 'lowercase',
           color: '#FFCEA8',
-          opacity: '.55'
+          opacity: '.7'
         }
       }
     }
@@ -130,8 +136,9 @@ const Container = {
     backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    animationName: positionCenterTop,
-    animationDuration: '25s',
+    // animationName: positionCenterTop,
+    // animationDuration: '25s',
+    backgroundPosition: 'top 50px left -300px',
     animationTimingFunction: 'ease-in-out',
     backgroundAttachment: 'fixed',
     overflow: 'hidden',
@@ -151,7 +158,7 @@ const Container = {
       left: 0,
       width: '100%',
       height: '100%',
-      background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8))',
+      background: 'radial-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .8))',
       opacity: '1'
     },
     '&:after': {
@@ -161,7 +168,7 @@ const Container = {
       left: 0,
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))',
+      // background: 'linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))',
       opacity: 0,
       animationName: opacityReverse,
       animationDuration: '3s',
@@ -173,9 +180,9 @@ const Container = {
     proto: Box,
     props: {
       flexFlow: 'column',
-      gap: 'C2',
+      gap: 'C',
       flexAlign: 'flex-end center',
-      padding: '0 E2 0 0'
+      padding: '0 E2 D 0'
     },
     style: {
       '@media only screen and (max-width: 1024px)': {

@@ -23,7 +23,7 @@ const image = {
     position: 'relative',
     backgroundPosition: 'center',
     '@media only screen and (min-width: 1225px)': {
-      backgroundAttachment: 'fixed',
+      backgroundAttachment: 'fixed !important',
       backgroundImage: 'url(' + SOLOLAKI2_JPG + ')'
     },
     '@media only screen and (max-width: 1024px)': {
