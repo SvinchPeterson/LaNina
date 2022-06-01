@@ -1,8 +1,11 @@
 'use strict'
 
 import DOM from 'domql'
-import App from './src/app'
 import { getCookie, setCookie } from 'domql/packages/cookie'
+import router from 'domql/packages/router'
+
+import App from './src/app'
+import { FastClick } from 'fastclick'
 
 const KEY = '9EC6CB2A5122F61B0A5E4211B6C1F8E5F3708E0276DA2F23159AE7987EE74298'
 const KEY2 = 'F6CC5B085B61387AC2C125BD1289137D02BC58A07AF9A766FA0DE45E0E5066F8'
@@ -59,5 +62,18 @@ const protect = {
 }
 
 const hash = getCookie('hash')
-if (hash === KEY || hash === KEY2) DOM.create(App)
-else DOM.create(protect)
+if (hash === KEY || hash === KEY2) {
+  DOM.create(App)
+
+  if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function () {
+      FastClick.attach(document.body)
+    }, false)
+  }
+} else DOM.create(protect)
+
+window.onpopstate = e => router(App, window.location.pathname, {}, 0, false)
+
+window.addEventListener('load', event => {
+  App.state.update({ isLoaded: true })
+})

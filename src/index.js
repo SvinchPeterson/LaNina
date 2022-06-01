@@ -3,10 +3,6 @@
 import DOM from 'domql'
 import router from 'domql/packages/router'
 
-import './config'
-import './reset'
-import './emotion'
-
 import App from './app'
 import { FastClick } from 'fastclick'
 
@@ -17,5 +13,9 @@ if ('addEventListener' in document) {
     FastClick.attach(document.body)
   }, false)
 }
+
+window.addEventListener('load', event => {
+  App.state.update({ isLoaded: true })
+})
 
 window.onpopstate = e => router(App, window.location.pathname, {}, 0, false)

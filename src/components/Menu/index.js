@@ -24,6 +24,8 @@ const sectionLinks = {
     on: {
       click: (event, element, state) => {
         state.update({ activeMenuItem: element.key, activeMenu: true })
+        console.log(Link)
+        Link.on.click(event, element, state)
       }
     }
 

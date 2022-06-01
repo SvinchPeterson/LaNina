@@ -1,7 +1,12 @@
 'use strict'
 
-import router from 'domql/packages/router'
 import style from './style'
+import router from 'domql/packages/router'
+
+import './config'
+import './reset'
+import './emotion'
+import './components'
 
 import { Block } from '@symbo.ls/symbols'
 import { Landing, Sololaki } from './pages'
@@ -32,9 +37,5 @@ const App = {
     }
   }
 }
-
-window.addEventListener('load', event => {
-  App.state.update({ isLoaded: true })
-})
 
 export default App

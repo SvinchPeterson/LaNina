@@ -1,5 +1,6 @@
 'use strict'
 
+import { Link } from './Link'
 import { Header } from './Header'
 import { RoomOffers } from './RoomOffers'
 import { Menu } from './Menu'
@@ -16,6 +17,8 @@ export {
   Header,
   RoomOffers,
   Menu,
+
+  Link,
 
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
 

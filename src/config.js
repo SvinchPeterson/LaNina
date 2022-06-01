@@ -55,7 +55,8 @@ export const THEMES = {
         color: 'cream 0.85'
       }
     }
-  }
+  },
+  link: {}
 }
 
 export const RESPONSIVE = {
