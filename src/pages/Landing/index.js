@@ -10,7 +10,7 @@ const heading = {
   proto: [Text, Box],
   props: {
     text: 'BB Hospitality',
-    color: 'gold'
+    color: 'gold .8'
   },
   style: {
     fontSize: `${90 / 16}em`,
@@ -151,7 +151,7 @@ const Container = {
       left: 0,
       width: '100%',
       height: '100%',
-      background: 'radial-gradient(rgba(42, 81, 61, .5), rgba(42, 81, 61, .8))',
+      background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8))',
       opacity: '1'
     },
     '&:after': {
@@ -161,7 +161,7 @@ const Container = {
       left: 0,
       width: '100%',
       height: '100%',
-      background: 'radial-gradient(rgba(42, 81, 61, 1), rgba(42, 81, 61, 1))',
+      background: 'linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))',
       opacity: 0,
       animationName: opacityReverse,
       animationDuration: '3s',
