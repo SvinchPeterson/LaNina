@@ -30,7 +30,8 @@ export default {
     activeMenuItem: 0,
     activeTab: 0,
     activeImage: 0,
-    offers: false
+    offers: false,
+    back: true
   },
 
   proto: container,

@@ -38,7 +38,7 @@ const back = {
 
   props: {
     position: 'absolute',
-    top: '65px',
+    top: '50px',
     left: '10px',
     href: '#apartments',
     color: 'cream',
@@ -52,10 +52,15 @@ const back = {
     fontSize: `${11.5 / 16}em`,
     fontWeight: 700,
     letterSpacing: '0px',
+    transform: 'rotate(90deg)',
+    '@media only screen and (min-width: 1225px)': {
+      left: '-50px',
+      top: '120px',
+      transform: 'rotate(90deg)'
+    },
     '@media only screen and (max-width: 1225px)': {
       left: '30px',
       fontSize: '12.5px'
-      // top: '160px'
     }
   },
   class: {
@@ -66,6 +71,11 @@ const back = {
       }
       : { opacity: 0 }
   },
+  // on: {
+  //   click: (event, element, state) => {
+  //     state.back === true ? (state.back === false)
+  //   }
+  // },
 
   icon: {
     proto: [Img, Box],
@@ -92,11 +102,9 @@ const Room = {
           transition: 'all .1s ease-in-out',
           display: 'block',
           height: `${600 / 16}em`
-          // paddingTop: `${200 / 16}em`
         },
         '@media only screen and (max-width: 768px)': {
           height: `${500 / 16}em`
-          // paddingTop: `${130 / 16}em`
         },
         '@media only screen and (max-width: 480px)': {
           height: `${400 / 16}em`
@@ -132,10 +140,10 @@ const Room = {
     proto: navButtons2,
     style: {
       '@media only screen and (max-width: 1225px)': {
-        bottom: '100px'
+        top: '65%'
       },
       '@media only screen and (max-height: 650px)': {
-        bottom: '0px'
+        // bottom: '0px'
       }
     },
     ...[

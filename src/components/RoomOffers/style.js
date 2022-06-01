@@ -4,7 +4,6 @@ export const styleHeader = {
   textTransform: 'uppercase',
   height: `${50 / 16}em`,
   transition: 'height .3s linear',
-  // fontSize: `${15 / 16}em`,
   '@media only screen and (max-width: 1225px)': {
     height: `${60 / 16}em`,
     '> h5': { fontSize: `${15 / 16}em` }

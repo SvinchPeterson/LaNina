@@ -14,7 +14,7 @@ const header = {
   h5: {
     proto: [Text, Box],
     props: {
-      text: 'offers',
+      text: 'amenities',
       color: 'cream 1'
     }
   },

@@ -17,7 +17,6 @@ const image = {
   style: {
     boxSizing: 'border-box',
     backgroundSize: 'cover',
-    // backgroundPosition: 'center',
     animationName: positionOpacity2,
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out',
@@ -67,7 +66,6 @@ const heading = {
     '@media only screen and (max-width: 480px)': {
       padding: `0 0 ${100 / 16}em 0`,
       alignSelf: 'center'
-      // alignItems: 'center'
     }
   },
 
@@ -76,12 +74,10 @@ const heading = {
     text: 'BB Residence',
     props: {
       color: 'cream 1',
-      size: 'G'
+      size: 'F'
     },
     style: {
-      // fontSize: `${60 / 16}em`,
       fontWeight: 200,
-      // textTransform: 'uppercase',
       whiteSpace: 'nowrap'
     }
   },

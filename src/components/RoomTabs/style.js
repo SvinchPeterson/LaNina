@@ -19,11 +19,11 @@ export const styleParagraph = {
     maxWidth: `${500 / 17}em`
   },
   '@media only screen and (max-width: 768px)': {
-    padding: `${50 / 18}em ${15 / 18}em`,
-    minWidth: `${300 / 15}em`
+    padding: `${50 / 18}em ${30 / 18}em`
   },
   '@media only screen and (max-width: 480px)': {
-    fontSize: `${17 / 18}em`
+    fontSize: `${17 / 18}em`,
+    padding: `${50 / 18}em ${50 / 18}em`
   }
 }
 

@@ -28,7 +28,7 @@ import LIVINGROOM3_MOBILE_JPG from '../../assets/images/yellowCouch/mobile/livin
 import BEDROOM_MOBILE_JPG from '../../assets/images/yellowCouch/mobile/bedroom.jpg'
 import BEDROOM2_MOBILE_JPG from '../../assets/images/yellowCouch/mobile/bedroom2.jpg'
 import KITCHEN_MOBILE_JPG from '../../assets/images/yellowCouch/mobile/kitchen.jpg'
-import BATHROOM_MOBILE_JPG from '../../assets/images/yellowCouch/mobile/bathroom.jpg'
+import BATHROOM_MOBILE_JPG from '../../assets/images/yellowCouch/mobile/bathrooms.jpg'
 import CHILL_MOBILE_JPG from '../../assets/images/yellowCouch/mobile/chill.jpg'
 import HOLL_MOBILE_JPG from '../../assets/images/yellowCouch/mobile/holl.jpg'
 
@@ -69,7 +69,7 @@ export const galleryYellowCouch = {
       style: {
         '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM2_JPG + ')' },
         '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM2_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM2_MOBILE_JPG + ')', display: 'none' }
+        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM2_MOBILE_JPG + ')' }
       }
     },
     {

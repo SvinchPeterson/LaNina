@@ -16,7 +16,7 @@ const map = {
   tag: 'iframe',
   proto: Box,
   attr: {
-    src: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAtj5iaocoLdNMIS2JBIymMUQTmds8_nlI&q=Lanina+Residence',
+    src: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAtj5iaocoLdNMIS2JBIymMUQTmds8_nlI&q=BB+Residence',
     allowfullscreen: true
   }
 }
