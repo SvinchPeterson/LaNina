@@ -3,14 +3,14 @@ import { Box, Link, Text } from '@symbo.ls/symbols'
 
 import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 
-import { positionCenterTop, letterSpacing3, opacity, opacityReverse } from '../../animations'
+import { positionCenterTop, letterSpacing3, opacityReverse } from '../../animations'
 
 const heading = {
   tag: 'h1',
   proto: [Text, Box],
   props: {
     text: 'BB Hospitality',
-    color: 'gold 1'
+    color: 'gold'
   },
   style: {
     fontSize: `${90 / 16}em`,
@@ -19,10 +19,8 @@ const heading = {
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out',
     zIndex: 2,
-    opacity: '1',
     '@media only screen and (max-width: 768px)': {
       fontSize: `45px`,
-      opacity: 1,
       fontWeight: 900,
       textTransform: 'uppercase'
     },
@@ -50,7 +48,6 @@ const links = {
         width: `${200 / 16}em`,
         textAlign: 'center'
       }
-      // alignItems: 'center'
     }
   },
   childProto: {
@@ -134,7 +131,7 @@ const Container = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     animationName: positionCenterTop,
-    animationDuration: '20s',
+    animationDuration: '25s',
     animationTimingFunction: 'ease-in-out',
     backgroundAttachment: 'fixed',
     overflow: 'hidden',
@@ -181,9 +178,6 @@ const Container = {
       padding: '0 E2 0 0'
     },
     style: {
-      animationName: opacity,
-      animationDuration: '.3s',
-      animationTimingFunction: 'ease-in-out',
       '@media only screen and (max-width: 1024px)': {
         paddingRight: 0,
         paddingBottom: `${100 / 16}em`

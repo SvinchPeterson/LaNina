@@ -75,14 +75,14 @@ const heading = {
     proto: [Text, Box],
     text: 'BB Residence',
     props: {
-      color: 'cream 1'
+      color: 'cream 1',
+      size: 'G'
     },
     style: {
       // fontSize: `${60 / 16}em`,
       fontWeight: 200,
       // textTransform: 'uppercase',
-      whiteSpace: 'nowrap',
-      border: '2px solid red'
+      whiteSpace: 'nowrap'
     }
   },
   caption: {

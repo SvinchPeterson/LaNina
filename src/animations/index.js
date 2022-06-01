@@ -46,7 +46,7 @@ export const letterSpacing = keyframes`
 
 export const letterSpacing3 = keyframes`
   from {
-    letter-spacing: 1px;
+    letter-spacing: .5px;
     opacity: 0;
   }
   to {
