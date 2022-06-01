@@ -74,10 +74,10 @@ const heading = {
     text: 'BB Residence',
     props: {
       color: 'cream 1',
-      size: 'F'
+      fontWeight: '200',
+      fontSize: 'F'
     },
     style: {
-      fontWeight: 200,
       whiteSpace: 'nowrap'
     }
   },
@@ -85,12 +85,12 @@ const heading = {
     proto: [Text, Box],
     props: {
       text: 'SOLOLAKI',
-      size: 'A',
+      fontSize: 'A',
       color: 'gold .85',
-      padding: '0 0 0 W2'
+      padding: '0 0 0 W2',
+      fontWeight: '900'
     },
     style: {
-      fontWeight: 900,
       letterSpacing: '8px',
       marginTop: '0px',
       marginLeft: '0px'

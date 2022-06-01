@@ -122,7 +122,7 @@ const call = {
     props: {
       text: '+995 571 017 170',
       color: 'orange2',
-      size: 'B',
+      fontSize: 'B',
       position: 'absolute',
       padding: '0 0 0 Z',
       bottom: '-55px'

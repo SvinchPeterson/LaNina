@@ -92,7 +92,7 @@ export default {
   title: {
     proto: [Text, Box],
     props: {
-      size: 'G',
+      fontSize: 'G',
       color: 'gold .75'
     },
     text: 'apartments',

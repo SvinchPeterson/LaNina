@@ -53,7 +53,7 @@ const links = {
   childProto: {
     proto: [Link, Text, Box],
     props: {
-      size: 'Z',
+      fontSize: 'Z',
       padding: 'A B',
       round: 'B',
       background: 'cream .1',

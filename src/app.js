@@ -1,12 +1,9 @@
 'use strict'
 
-import { Block } from '@symbo.ls/symbols'
 import router from 'domql/packages/router'
 import style from './style'
 
-import './config'
-import './define'
-
+import { Block } from '@symbo.ls/symbols'
 import { Landing, Sololaki } from './pages'
 // import { Story } from './sections'
 

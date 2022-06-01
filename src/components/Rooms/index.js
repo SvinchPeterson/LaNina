@@ -14,7 +14,7 @@ const book = {
   proto: [Link, Text, Box],
   text: 'book',
   props: {
-    size: 'B',
+    fontSize: 'B',
     color: 'cream',
     position: 'absolute',
     padding: 'Z A'

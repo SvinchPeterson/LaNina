@@ -15,7 +15,7 @@ const sectionLinks = {
   childProto: {
     proto: [Link, Text, Box],
     props: {
-      size: 'Z',
+      fontSize: 'Z',
       color: 'cream .95',
       round: 'B',
       background: 'cream .2',

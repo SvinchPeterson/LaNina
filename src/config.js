@@ -2,9 +2,9 @@
 
 import { set } from '@symbo.ls/scratch'
 
-import DejavuBold from '../assets/fonts/DejaVuSans-Bold.woff2'
-import Dejavu from '../assets/fonts/DejaVuSans.woff2'
-import Geo from '../assets/fonts/BPGExtraSquareMtavruli.woff2'
+import DejavuBold from './assets/fonts/DejaVuSans-Bold.woff2'
+import Dejavu from './assets/fonts/DejaVuSans.woff2'
+import Geo from './assets/fonts/BPGExtraSquareMtavruli.woff2'
 
 export const FONT = {
   Dejavu: [{
@@ -58,10 +58,25 @@ export const THEMES = {
   }
 }
 
+export const RESPONSIVE = {
+  screenL: '(max-width: 1920px)',
+  screenD: '(max-width: 1680px)',
+  screenS: '(max-width: 1440px)',
+  tabletL: '(max-width: 1366px)',
+  tabletM: '(max-width: 1280px)',
+  tabletS: '(max-width: 1024px)',
+  mobileL: '(max-width: 768px)',
+  mobileM: '(max-width: 560px)',
+  mobileS: '(max-width: 480px)',
+
+  light: '(prefers-color-scheme: light)'
+}
+
 export default set({
   color: COLORS,
   gradient: GRADIENTS,
   theme: THEMES,
   font: FONT,
-  font_family: FONT_FAMILY
+  font_family: FONT_FAMILY,
+  responsive: RESPONSIVE
 })
