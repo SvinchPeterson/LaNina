@@ -34,7 +34,7 @@ const roomsTabs = {
             const { tabsContainer } = element.parent.parent
             tabsContainer.node.scrollBy({
               top: 0,
-              left: -tabsContainer.node.clientWidth - 16 * 1.618,
+              left: -tabsContainer.node.clientWidth - 16.5 * 1.618,
               behavior: 'smooth'
             })
           }
@@ -46,7 +46,7 @@ const roomsTabs = {
             const { tabsContainer } = element.parent.parent
             tabsContainer.node.scrollBy({
               top: 0,
-              left: tabsContainer.node.clientWidth + 16 * 1.618,
+              left: tabsContainer.node.clientWidth + 16.5 * 1.618,
               behavior: 'smooth'
             })
           }
@@ -99,10 +99,9 @@ export default {
     style: {
       position: 'absolute',
       right: '100px',
-      top: '200px',
+      top: '150px',
       fontWeight: 200,
-      // display: 'none',
-      '@media only screen and (max-width: 1225px)': { top: '150px' },
+      '@media only screen and (max-width: 1225px)': { top: '100px' },
       '@media only screen and (max-width: 768px)': {
         display: 'none',
         fontSize: '22px',

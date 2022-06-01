@@ -9,16 +9,9 @@ export const styleParagraph = {
   letterSpacing: '.5px',
   fontWeight: 400,
   textAlign: 'left',
-  // border: '1px solid red',
-  // backdropFilter: 'blur(7px)',
-  // background: 'rgba(220, 187, 140, .4)',
   '@media only screen and (min-width: 1225px)': {
     fontSize: `${14 / 16}em`,
     maxWidth: `370px`,
-    // maxWidth: `${320 / 14}em`
-    // width: `${435 / 14}em`,
-    // background: 'linear-gradient(rgba(168, 98, 63, .25), rgba(168, 98, 63, .5))',
-    // borderBottom: '2px solid rgba(168, 98, 63, 1)',
     padding: `0 30px 0 45px`
   },
   '@media only screen and (max-width: 1225px)': {
@@ -39,13 +32,10 @@ export const styleBook = {
   textTransform: 'uppercase',
   fontWeight: 900,
   borderRadius: '30px',
-  // border: '.7px solid rgba(220, 187, 140, 1)',
   letterSpacing: '0px',
   backdropFilter: 'blur(2px)',
-  // background: 'radial-gradient(rgba(42, 81, 61, .15),rgba(42, 81, 61, .25))',
   background: 'radial-gradient(rgba(220, 187, 140, .15),rgba(220, 187, 140, .25))',
   textDecoration: 'none',
-  // borderBottom: 'none',
   transform: 'translate(-50%, -50%)',
   '&:hover': { opacity: 1 },
   '@media only screen and (max-width: 480px)': { bottom: '5%' },
@@ -88,16 +78,10 @@ export const styleRoomTab = {
     left: '5px',
     color: 'rgba(244, 233, 217, .85)',
     textTransform: 'uppercase',
-    letterSpacing: '0px',
     whiteSpace: 'nowrap',
     '@media only screen and (max-width: 1225px)': {
-      fontSize: `${14.2 / 14}em`,
-      top: '-35px',
-      left: '30px'
-      // letterSpacing: 'px'
-    },
-    '@media only screen and (max-width: 768px)': {
-      fontSize: `${14 / 14.3}em`
+      left: '15px',
+      top: '-30px'
     }
   },
   '@media only screen and (min-width: 1225px)': {
@@ -113,7 +97,7 @@ export const styleRoomTab = {
   },
   '@media only screen and (max-width: 1225px)': {
     minWidth: `100%`,
-    height: `${450 / 16}em`,
+    height: `${500 / 16}em`,
     '> h3': {
       fontSize: `${28 / 16}em`
     }

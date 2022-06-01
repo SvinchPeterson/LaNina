@@ -44,26 +44,15 @@ export default {
   minWidth: `${380 / 16}em`,
   borderRadius: '35px',
   backdropFilter: 'blur(5px)',
-  // background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
   background: 'radial-gradient(rgba(60,84, 72, .7),rgba(60,84, 72, .8))',
   '@media only screen and (max-width: 1225px)': {
-    marginRight: '0px',
+    maxHeight: '400px',
+    overflow: 'hidden',
     left: '50%',
-    bottom: '-300px',
-    transform: 'translate(-50%, 30%)',
-    maxHeight: '300px',
-    overflow: 'hidden'
-  },
-  '@media only screen and (max-width: 768px)': {
-    bottom: '-220px'
+    transform: 'translate(-50%, 50%)',
+    bottom: '-180px'
   },
   '@media only screen and (max-width: 480px)': {
     minWidth: `${300 / 16}em`
-  },
-  '@media only screen and (max-width: 330px)': {
-    minWidth: `${270 / 16}em`
-  },
-  '@media only screen and (max-height: 650px)': {
-    // bottom: '-150px'
   }
 }

@@ -73,9 +73,7 @@ const roomTab = {
       top: '0',
       left: '0',
       flexFlow: 'column',
-      // padding: 'A'
       flexAlign: 'center center'
-      // gap: 'D2'
 
     },
 
@@ -114,7 +112,6 @@ export const tabBallerina = {
   },
   props: { href: '#roomBallerina' },
   content: {
-    h3: { props: { text: 'ballerina' } },
     p: { proto: ballerina },
     book: {
       props: {
@@ -143,7 +140,6 @@ export const tabRedBrick = {
       } : {}
   },
   content: {
-    h3: { props: { text: 'red brick' } },
     p: {
       proto: redBrick,
       style: { width: `${465 / 14}em !important` }
@@ -175,7 +171,6 @@ export const tabYellowCouch = {
       } : {}
   },
   content: {
-    h3: { props: { text: 'yellow couch' } },
     p: { proto: yellowCouch },
     book: {
       props: {
@@ -204,7 +199,6 @@ export const tabGreenForest = {
       } : {}
   },
   content: {
-    h3: { props: { text: 'green forest' } },
     p: { proto: greenForest },
     book: {
       props: {
@@ -233,7 +227,6 @@ export const tabRetro = {
       } : {}
   },
   content: {
-    h3: { props: { text: 'retro' } },
     p: { proto: retro },
     book: {
       props: {

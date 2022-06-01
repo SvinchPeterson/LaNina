@@ -54,10 +54,9 @@ const back = {
     letterSpacing: '0px',
     '@media only screen and (max-width: 1225px)': {
       left: '30px',
-      fontSize: '12.5px',
-      top: '160px'
-    },
-    '@media only screen and (max-width: 768px)': { top: '90px' }
+      fontSize: '12.5px'
+      // top: '160px'
+    }
   },
   class: {
     show: (element, state) => state.activeTab
@@ -88,7 +87,7 @@ const Room = {
         height: `${700 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
-        // paddingTop: `${100 / 16}em`,
+        paddingTop: `${100 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
           transition: 'all .1s ease-in-out',
           display: 'block',

@@ -21,7 +21,10 @@ const header = {
   minimize: {
     proto: [Button, Box],
     props: {
-      padding: 'Y2'
+      padding: 'Z1'
+    },
+    style: {
+      background: 'transparent'
     },
     span: {
       proto: [Button, Box],
@@ -34,10 +37,6 @@ const header = {
         '@media only screen and (max-width: 1225px)': { width: `${30 / 16}em`, height: '3px' }
 
       }
-    },
-
-    style: {
-      background: 'transparent'
     },
 
     on: {
@@ -120,7 +119,7 @@ export const RoomOffers = {
   class: {
     show: (element, state) => state.offers
       ? {
-        '@media only screen and (min-width: 1225px)': { paddingBottom: '30px', zIndex: 300 },
+        '@media only screen and (min-width: 1225px)': { paddingBottom: '30px' },
         '@media only screen and (max-width: 1225px)': { paddingBottom: '16px' }
       }
       : {}
