@@ -13,8 +13,9 @@ export default {
     backgroundColor: 'rgba(244, 233, 217, 1)',
     minHeight: `${700 / 16}em`,
     '@media only screen and (max-width: 1225px)': {
-      // paddingTop: 0,
-      // paddingBottom: 0
+      marginTop: '400px',
+      paddingTop: 0,
+      paddingBottom: 0
     },
     '@media only screen and (max-width: 768px)': {
       minHeight: `${600 / 16}em`

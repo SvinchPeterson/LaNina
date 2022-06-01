@@ -16,10 +16,10 @@ const roomsTabs = {
   props: {
     position: 'relative',
     flexFlow: 'column',
-    flexAlign: 'flex-start center',
-    padding: 'F D1 B D1'
+    flexAlign: 'flex-start center'
+    // padding: 'F D1 B D1'
   },
-  attr: { id: 'apartments' },
+  // attr: { id: 'apartments' },
   class: {
     show: (element, state) => state.activeTab
       ? { }
@@ -85,9 +85,9 @@ export default {
   style,
   proto: Box,
   props: {
-    padding: '0 0 D 0',
     flexFlow: 'column'
   },
+  attr: { id: 'apartments' },
 
   title: {
     proto: [Text, Box],

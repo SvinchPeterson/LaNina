@@ -88,16 +88,16 @@ const Room = {
         height: `${700 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
-        paddingTop: `${100 / 16}em`,
+        // paddingTop: `${100 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
           transition: 'all .1s ease-in-out',
           display: 'block',
-          height: `${600 / 16}em`,
-          paddingTop: `${200 / 16}em`
+          height: `${600 / 16}em`
+          // paddingTop: `${200 / 16}em`
         },
         '@media only screen and (max-width: 768px)': {
-          height: `${500 / 16}em`,
-          paddingTop: `${130 / 16}em`
+          height: `${500 / 16}em`
+          // paddingTop: `${130 / 16}em`
         },
         '@media only screen and (max-width: 480px)': {
           height: `${400 / 16}em`
