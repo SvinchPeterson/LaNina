@@ -23,9 +23,9 @@ const sectionLinks = {
     },
     on: {
       click: (event, element, state) => {
+        // event.preventDefault()
         state.update({ activeMenuItem: element.key, activeMenu: true })
-        console.log(Link)
-        Link.on.click(event, element, state)
+        // Link.on.click(event, element, state)
       }
     }
 

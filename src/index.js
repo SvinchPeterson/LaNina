@@ -18,4 +18,4 @@ window.addEventListener('load', event => {
   App.state.update({ isLoaded: true })
 })
 
-window.onpopstate = e => router(App, window.location.pathname, {}, 0, false)
+// window.onpopstate = e => router(App, window.location.pathname, {}, 0, false)

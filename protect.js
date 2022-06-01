@@ -72,8 +72,8 @@ if (hash === KEY || hash === KEY2) {
   }
 } else DOM.create(protect)
 
-window.onpopstate = e => router(App, window.location.pathname, {}, 0, false)
-
 window.addEventListener('load', event => {
   App.state.update({ isLoaded: true })
 })
+
+// window.onpopstate = e => router(App, window.location.pathname, {}, 0, false)
