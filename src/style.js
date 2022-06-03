@@ -16,7 +16,8 @@ export default {
   p: { margin: 0 },
   h6: { margin: 0 },
   fontFamily: 'Helvetica Neue',
-  // background: 'linear-gradient(rgba(42, 81, 61, .8), rgba(42, 81, 61, .8))',
-  background: 'linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .65))',
+  // background: 'rgba(0, 0, 0, .9)',
+  background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .92))',
+  // background: 'radial-gradient(#212121, #1F1F1F, #1D1D1D, #1B1B1B, #181818, #151515, #111111, #101010)',
   '@media only screen and (min-width: 1680px)': { fontSize: '17px' }
 }

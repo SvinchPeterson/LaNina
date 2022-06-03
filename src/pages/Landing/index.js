@@ -10,25 +10,23 @@ const heading = {
   proto: [Text, Box],
   props: {
     text: 'BB Hospitality',
-    color: 'gold .8'
+    color: 'gold .8',
+    fontSize: 'K',
+    fontWeight: '100',
+    // '@mobileL': { fontSize: 'J' },
+    '@mobileM': {
+      fontSize: 'E',
+      fontWeight: '900',
+      textTransform: 'uppercase'
+    }
   },
   style: {
-    fontSize: `${90 / 16}em`,
-    fontWeight: 100,
+    // fontWeight: 100,
     // animationName: letterSpacing3,
     // animationDuration: '2s',
     // animationTimingFunction: 'ease-in-out',
     zIndex: 2,
-    letterSpacing: '-1px',
-    '@media only screen and (max-width: 768px)': {
-      fontSize: `45px`,
-      fontWeight: 900,
-      textTransform: 'uppercase'
-    },
-    '@media only screen and (max-width: 480px)': {
-
-      fontSize: `30px`
-    }
+    letterSpacing: '-1px'
   }
 }
 
@@ -37,36 +35,43 @@ const links = {
   props: {
     flexAlign: 'center center',
     gap: 'B2',
-    padding: '0 C 0 0'
+    padding: '0 C2 0 0',
+    '@tabletS': { padding: '0 0 0 B' },
+    '@mobileM': { flexFlow: 'column' }
   },
   style: {
-    '@media only screen and (max-width: 768px)': {
-      flexFlow: 'column',
-      gap: '35px',
-      alignItems: 'flex-start',
-      paddingLeft: `${50 / 16}em`,
-      '> a': {
-        width: `${200 / 16}em`,
-        textAlign: 'center'
-      }
-    }
+    // '@media only screen and (max-width: 768px)': {
+    //   flexFlow: 'column',
+    //   gap: '35px',
+    //   alignItems: 'flex-start',
+    //   paddingLeft: `${50 / 16}em`,
+    //   '> a': {
+    //     width: `${200 / 16}em`,
+    //     textAlign: 'center'
+    //   }
+    // }
   },
   childProto: {
     proto: [Link, Text, Box],
     props: {
       fontSize: 'Z',
-      // padding: 'Z1 B',
       round: 'D',
-      // background: 'cream .1',
-      color: 'cream'
+      color: 'cream',
+      '@mobileM': {
+        background: 'cream .15',
+        // boxSize: 'G C2',
+        minWidth: 'F2',
+        padding: 'A 0',
+        flexAlign: 'centr center'
+      }
     },
     style: {
       textTransform: 'uppercase',
       fontWeight: 900,
       textDecoration: 'none',
       transition: 'background .3s ease-in-out',
-      zIndex: 10
-      // backdropFilter: 'blur(5px)'
+      zIndex: 10,
+      backdropFilter: 'blur(5px)'
     }
   },
   ...[
@@ -130,7 +135,8 @@ const Container = {
     position: 'absolute',
     top: 0,
     left: 0,
-    flexAlign: 'center flex-end'
+    flexAlign: 'center flex-end',
+    '@tabletS': { flexAlign: 'center center' }
   },
   style: {
     backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
@@ -138,18 +144,21 @@ const Container = {
     backgroundRepeat: 'no-repeat',
     // animationName: positionCenterTop,
     // animationDuration: '25s',
-    backgroundPosition: 'top 50px left -300px',
+    backgroundPosition: 'top 50px left -425px',
     animationTimingFunction: 'ease-in-out',
     backgroundAttachment: 'fixed',
     overflow: 'hidden',
-    '@media only screen and (max-width: 1024px)': {
-      justifyContent: 'center'
+    '@media only screen and (max-width: 1366px)': {
+      backgroundPosition: 'top 50px left -350px'
     },
-    '@media only screen and (max-width: 768px)': {
-      animation: 'none',
-      backgroundPosition: 'right -30px center',
-      alignItems: 'flex-start',
-      paddingTop: `${135 / 16}em`
+    '@media only screen and (max-width: 1024px)': {
+      backgroundPosition: 'top 50px left -330px'
+    },
+    '@media only screen and (max-width: 560px)': {
+      backgroundPosition: 'top 50px left -300px'
+    },
+    '@media only screen and (max-width: 480px)': {
+      backgroundPosition: 'top 50px left -230px'
     },
     '&:before': {
       content: '""',
@@ -158,8 +167,8 @@ const Container = {
       left: 0,
       width: '100%',
       height: '100%',
-      background: 'radial-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .8))',
-      opacity: '1'
+      background: 'radial-gradient(#212121, #1F1F1F, #1D1D1D, #1B1B1B, #181818, #151515, #111111, #101010)',
+      opacity: '.6'
     },
     '&:after': {
       content: '""',
@@ -168,11 +177,11 @@ const Container = {
       left: 0,
       width: '100%',
       height: '100%',
-      // background: 'linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))',
+      // background: 'red',
       opacity: 0,
       animationName: opacityReverse,
       animationDuration: '3s',
-      animationTimingFunction: 'ease-in-out',
+      animationTimingFunction: 'linear',
       pointerEvents: 'none'
     }
   },
@@ -182,16 +191,15 @@ const Container = {
       flexFlow: 'column',
       gap: 'C',
       flexAlign: 'flex-end center',
-      padding: '0 E2 D 0'
-    },
-    style: {
-      '@media only screen and (max-width: 1024px)': {
-        paddingRight: 0,
-        paddingBottom: `${100 / 16}em`
+      padding: '0 E2 F 0',
+      '@tabletS': {
+        flexAlign: 'flex-start center',
+        padding: '0 0 F1 0'
       },
-      '@media only screen and (max-width: 768px)': {
-        alignItems: 'center',
-        gap: '65px'
+      '@mobileL': {
+        padding: '0 0 E 0',
+        flexAlign: 'flex-start center'
+        // gap: 'D'
       }
     },
     heading,

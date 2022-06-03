@@ -56,10 +56,10 @@ export const letterSpacing3 = keyframes`
 `
 export const positionCenterTop = keyframes`
   from {
-    background-position: center;
+    background-position: center left -425px;
   }
   to {
-    background-position: top;
+    background-position: top 50px left -425px;
   }
 `
 export const positionOpacity2 = keyframes`

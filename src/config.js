@@ -44,7 +44,8 @@ export const COLORS = {
 }
 
 export const GRADIENTS = {
-  gold: 'linear-gradient(rgba(147, 119, 79, 1), rgba(242, 205, 128, 1))'
+  gold: 'linear-gradient(rgba(147, 119, 79, 1), rgba(242, 205, 128, 1))',
+  blackGradient: 'radial-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .8))'
 }
 
 export const THEMES = {
