@@ -54,6 +54,7 @@ export const letterSpacing3 = keyframes`
     opacity: 1;
   }
 `
+
 export const positionCenterTop = keyframes`
   from {
     background-position: center left -425px;
@@ -62,6 +63,39 @@ export const positionCenterTop = keyframes`
     background-position: top 50px left -425px;
   }
 `
+export const positionCenterTop2 = keyframes`
+  from {
+    background-position: center left -350px;
+  }
+  to {
+    background-position: top 50px left -350px;
+  }
+`
+export const positionCenterTop3 = keyframes`
+  from {
+    background-position: center left -330px;
+  }
+  to {
+    background-position: top 50px left -330px;
+  }
+`
+export const positionCenterTop4 = keyframes`
+  from {
+    background-position: center left -300px;
+  }
+  to {
+    background-position: top 50px left -300px;
+  }
+`
+export const positionCenterTop5 = keyframes`
+  from {
+    background-position: center left -230px;
+  }
+  to {
+    background-position: top 50px left -230px;
+  }
+`
+
 export const positionOpacity2 = keyframes`
   from {
     background-position: top;
