@@ -61,7 +61,6 @@ const links = {
       textDecoration: 'none',
       transition: 'background .3s ease-in-out',
       zIndex: 10
-      // '@media only screen and (max-width: 560px)': { backdropFilter: 'blur(0px)' }
     }
   },
   ...[
@@ -121,9 +120,9 @@ const Container = {
   proto: Box,
   props: {
     boxSize: '100% 100%',
-    position: 'absolute',
-    top: 0,
-    left: 0,
+    // position: 'absolute',
+    // top: 0,
+    // left: 0,
     flexAlign: 'center flex-end',
     '@tabletS': { flexAlign: 'center center' }
   },
@@ -206,5 +205,15 @@ const Container = {
   }
 }
 export default {
-  proto: Container
+  proto: Box,
+  props: {
+    boxSize: '100% 100%',
+    position: 'absolute',
+    top: 0,
+    left: 0
+  },
+  style: { background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .92))' },
+  con: {
+    proto: Container
+  }
 }

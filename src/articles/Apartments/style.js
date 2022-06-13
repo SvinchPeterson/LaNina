@@ -22,21 +22,21 @@ export const styleHeader = {
 
 export default {
   scrollBehavior: 'smooth',
-  background: 'rgba(244, 233, 217, .4)',
+  background: 'rgba(244, 233, 217, 1)',
   position: 'relative',
   backgroundImage: 'url(' + ORNAMENT_PNG + ')',
   backgroundSize: 'contain',
   padding: `${300 / 16}em 0`,
   boxSizing: 'border-box',
-  '&:before': {
-    content: '""',
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    background: 'radial-gradient(rgba(244, 233, 217, .1), rgba(60, 84, 72, .85), rgba(42, 81, 61, .85))'
-  },
+  // '&:before': {
+  //   content: '""',
+  //   width: '100%',
+  //   height: '100%',
+  //   position: 'absolute',
+  //   top: 0,
+  //   left: 0,
+  //   background: 'radial-gradient(rgba(244, 233, 217, .1), rgba(60, 84, 72, .85), rgba(42, 81, 61, .85))'
+  // },
 
   '@media only screen and (min-width: 1225px)': {
     backgroundAttachment: 'fixed'

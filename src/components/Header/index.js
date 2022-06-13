@@ -1,6 +1,7 @@
 'use strict'
 import { Text, Box, Img, Link } from '@symbo.ls/symbols'
 import { Logo3 } from '../../components/Logo'
+import { Book } from '../Book'
 
 import PHONE_PNG from '../../assets/icons/phone2.png'
 
@@ -192,4 +193,46 @@ export const Header = {
   menuIcon,
   book,
   call
+}
+
+export const Header2 = {
+  tag: 'nav',
+  proto: Box,
+  props: {
+    position: 'fixed',
+    top: '0',
+    right: '0',
+    flexAlign: 'center space-between',
+    padding: 'B2 D B C2',
+    gap: 'C'
+    // background: 'cream'
+  },
+  style: {
+    zIndex: '100',
+    mixBlendMode: 'difference'
+  },
+  childProto: {
+    proto: [Link, Text, Box],
+    props: {
+      color: 'cream 1',
+      fontSize: 'Z'
+    },
+    style: {
+      textDecoration: 'none',
+      textTransform: 'uppercase',
+      fontWeight: 900,
+      opacity: '.65',
+      '&:hover': {
+        // color: '#FFCEA8',
+        opacity: 1
+      }
+    }
+  },
+  ...[
+    { props: { text: 'residence', href: '#residence' } },
+    { props: { text: 'apartments', href: '#apartments' } },
+    { props: { text: 'wine', href: '#wine' } },
+    { props: { text: 'location', href: '#location' } }
+  ]
+
 }

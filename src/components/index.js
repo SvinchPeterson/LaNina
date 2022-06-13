@@ -1,7 +1,7 @@
 'use strict'
 
 import { Link } from './Link'
-import { Header } from './Header'
+import { Header, Header2 } from './Header'
 import { RoomOffers } from './RoomOffers'
 import { Menu } from './Menu'
 
@@ -9,14 +9,19 @@ import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } f
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from './Gallery/index'
 import { navButtons, navButtons2 } from './NavButtons'
 import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
-import { Logo, Logo2 } from './Logo'
+import { Logo, Logo2, Logo4 } from './Logo'
+import { Book } from './Book'
+import { SocialMedia } from './SocialMedia'
 
 export {
   Logo,
   Logo2,
+  Logo4,
   Header,
+  Header2,
   RoomOffers,
   Menu,
+  Book,
 
   Link,
 
@@ -27,5 +32,6 @@ export {
   navButtons,
   navButtons2,
 
-  roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest
+  roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest,
+  SocialMedia
 }
