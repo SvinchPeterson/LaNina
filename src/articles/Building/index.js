@@ -6,7 +6,8 @@ export default {
   proto: Box,
   props: {
     boxSize: '100% 100%',
-    flexAlign: 'center center'
+    flexAlign: 'center center',
+    maxHeight: `${750 / 16}em`
   },
   p: {
     proto: [bbSololaki, Box],

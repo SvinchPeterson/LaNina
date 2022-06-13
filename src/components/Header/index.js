@@ -205,7 +205,6 @@ export const Header2 = {
     flexAlign: 'center space-between',
     padding: 'B2 D B C2',
     gap: 'C'
-    // background: 'cream'
   },
   style: {
     zIndex: '100',
@@ -214,7 +213,7 @@ export const Header2 = {
   childProto: {
     proto: [Link, Text, Box],
     props: {
-      color: 'cream 1',
+      color: 'cream',
       fontSize: 'Z'
     },
     style: {

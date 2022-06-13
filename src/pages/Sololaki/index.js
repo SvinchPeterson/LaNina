@@ -12,14 +12,15 @@ const container = {
   proto: Box,
   props: {
     position: 'relative',
-    background: 'red'
+    background: 'cream2'
+    // background: 'cream'
   },
   style: {
     flex: 1,
     overflowX: 'hidden',
     overflowY: 'auto',
     scrollBehavior: 'smooth',
-    background: 'rgba(244, 233, 217, 1)',
+    // background: 'rgba(244, 233, 217, 1)',
     // border: '10px solid green',
     margin: '0 auto'
     // background: 'rgba(42, 81, 61, 1)'

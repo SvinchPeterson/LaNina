@@ -180,8 +180,7 @@ const image = {
   props: {
     boxSize: '60% 100%',
     position: 'absolute',
-    margin: '0 auto',
-    bottom: '0',
+    top: '0',
     left: '0'
   },
   style: {
