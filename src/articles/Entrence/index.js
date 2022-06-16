@@ -17,14 +17,15 @@ const yardEntrence = {
     backgroundAttachment: 'fixed',
     marginRight: `${400 / 16}em`,
     zIndex: 2,
-    '&:before': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      display: 'block',
-      background: 'linear-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, .75))'
-      // background: 'linear-gradient(rgba(60,84, 72, .15), rgba(60,84, 72, .75))'
-    }
+    backgroudPosition: 'center'
+    // '&:before': {
+    //   content: '""',
+    //   width: '100%',
+    //   height: '100%',
+    //   display: 'block',
+    //   background: 'linear-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, .75))'
+    //   // background: 'linear-gradient(rgba(60,84, 72, .15), rgba(60,84, 72, .75))'
+    // }
   }
 }
 
@@ -43,15 +44,15 @@ const streetEntrence = {
     backgroundPosition: 'bottom center',
     marginLeft: `${350 / 16}em`,
     marginTop: `${300 / 16}em`,
-    zIndex: 2,
-    '&:before': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      display: 'block',
-      background: 'linear-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, .75))'
-      // background: 'linear-gradient(rgba(60,84, 72, .15), rgba(60,84, 72, .75))'
-    }
+    zIndex: 2
+    // '&:before': {
+    //   content: '""',
+    //   width: '100%',
+    //   height: '100%',
+    //   display: 'block',
+    //   background: 'linear-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, .75))'
+    //   // background: 'linear-gradient(rgba(60,84, 72, .15), rgba(60,84, 72, .75))'
+    // }
   }
 }
 

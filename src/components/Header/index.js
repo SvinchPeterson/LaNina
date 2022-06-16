@@ -200,38 +200,48 @@ export const Header2 = {
   proto: Box,
   props: {
     position: 'fixed',
+    width: '100%',
     top: '0',
-    right: '0',
+    left: '0',
     flexAlign: 'center space-between',
-    padding: 'B2 D B C2',
+    padding: 'B2 D B D',
     gap: 'C'
   },
   style: {
     zIndex: '100',
     mixBlendMode: 'difference'
   },
-  childProto: {
-    proto: [Link, Text, Box],
+  Book,
+  links: {
+    proto: Box,
     props: {
-      color: 'cream',
-      fontSize: 'Z'
+      flexAlign: 'center center',
+      gap: 'C'
     },
-    style: {
-      textDecoration: 'none',
-      textTransform: 'uppercase',
-      fontWeight: 900,
-      opacity: '.65',
-      '&:hover': {
-        // color: '#FFCEA8',
-        opacity: 1
+    childProto: {
+      proto: [Link, Text, Box],
+      props: {
+        color: 'white',
+        fontSize: 'Z'
+      },
+      style: {
+        textDecoration: 'none',
+        textTransform: 'uppercase',
+        fontWeight: 900,
+        opacity: '.7',
+        zIndex: '30',
+        // textShadow: '2px 2px white',
+        '&:hover': {
+          // color: '#FFCEA8',
+          opacity: 1
+        }
       }
-    }
-  },
-  ...[
-    { props: { text: 'residence', href: '#residence' } },
-    { props: { text: 'apartments', href: '#apartments' } },
-    { props: { text: 'wine', href: '#wine' } },
-    { props: { text: 'location', href: '#location' } }
-  ]
-
+    },
+    ...[
+      { props: { text: 'residence', href: '#residence' } },
+      { props: { text: 'apartments', href: '#apartments' } },
+      { props: { text: 'wine', href: '#wine' } },
+      { props: { text: 'location', href: '#location' } }
+    ]
+  }
 }

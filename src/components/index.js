@@ -2,6 +2,7 @@
 
 import { Link } from './Link'
 import { Header, Header2 } from './Header'
+import { Footer } from './Footer'
 import { RoomOffers } from './RoomOffers'
 import { Menu } from './Menu'
 
@@ -14,6 +15,8 @@ import { Book } from './Book'
 import { SocialMedia } from './SocialMedia'
 
 export {
+  Link,
+
   Logo,
   Logo2,
   Logo4,
@@ -23,8 +26,6 @@ export {
   Menu,
   Book,
 
-  Link,
-
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
 
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
@@ -33,5 +34,6 @@ export {
   navButtons2,
 
   roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest,
-  SocialMedia
+  SocialMedia,
+  Footer
 }

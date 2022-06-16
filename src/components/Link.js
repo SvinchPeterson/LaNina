@@ -10,7 +10,7 @@ const RouteLink = {
       const root = element.lookup('app')
       const { href } = element.props
       const firstFour = href.slice(0, 4)
-      if (href && firstFour !== 'http' && firstFour !== 'sket' && firstFour !== 'mail') {
+      if (href && firstFour !== 'http' && firstFour !== 'sket' && firstFour !== 'mail' && href.slice(0, 1) !== '#') {
         router(root, href, {})
         event.preventDefault()
       }
@@ -22,6 +22,5 @@ const RouteLink = {
 }
 
 deepMerge(Link, RouteLink)
-console.log(Link)
 
 export { Link }

@@ -44,7 +44,6 @@ const styleAirPort = {
 }
 
 export default {
-  // background: 'rgba(244, 233, 217, 1)',
 
   '> p': styleLocation,
 

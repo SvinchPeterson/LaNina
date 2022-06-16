@@ -49,7 +49,7 @@ export default {
     maxHeight: `${750 / 16}em`,
     position: 'relative',
     flexAlign: 'center center',
-    margin: 'H 0'
+    margin: 'F2 0'
   },
   image,
   paragraph

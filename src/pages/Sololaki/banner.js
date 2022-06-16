@@ -138,7 +138,7 @@ const heading = {
   props: {
     position: 'absolute',
     top: '40%',
-    right: '10%',
+    right: '15%',
     transform: 'translate(50%, -50%)'
   },
   span: {
@@ -148,8 +148,8 @@ const heading = {
       fontSize: 'A',
       color: 'orange2 .85',
       position: 'absolute',
-      right: 'A2',
-      top: '35px'
+      right: 'A1',
+      top: '32px'
     },
     style: {
       alignSelf: 'flex-end',
@@ -168,9 +168,9 @@ const heading = {
       // fontSize: 'L'
     },
     style: {
-      fontWeight: 100,
+      fontWeight: 110,
       letterSpacing: '-3px',
-      fontSize: `${120 / 16}em`
+      fontSize: `${115 / 16}em`
     }
   }
 }
@@ -188,7 +188,6 @@ const image = {
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    // borderTopRightRadius: '300px',
     '@media only screen and (min-width: 1225px)': {
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')'
     },
@@ -197,7 +196,6 @@ const image = {
       width: '100%',
       height: '100%',
       display: 'block',
-      // background: 'linear-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, .5))'
       background: 'linear-gradient(rgba(60,84, 72, .25), rgba(60,84, 72, 1))'
     }
   }

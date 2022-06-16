@@ -2,19 +2,17 @@
 
 import { Box, Text, Link, Img } from '@symbo.ls/symbols'
 
-import FACEBOOK_PNG from '../../assets/icons/facebook.png'
-import INSTAGRAM_PNG from '../../assets/icons/instagram.png'
-import LINKEDIN_PNG from '../../assets/icons/linkedIn.png'
+import FACEBOOK_PNG from '../../assets/icons/facebook-white.png'
+import INSTAGRAM_PNG from '../../assets/icons/instagram-white.png'
+import LINKEDIN_PNG from '../../assets/icons/linkedIn-white.png'
 
 export const SocialMedia = {
   tag: 'nav',
   proto: Box,
   props: {
-    position: 'fixed',
-    bottom: '50px',
     flexAlign: 'center center',
-    gap: 'C',
-    padding: '0 0 0 D'
+    gap: 'C'
+    // padding: '0 0 0 B2'
   },
   style: { mixBlendMode: 'difference', zIndex: 100 },
   childProto: {
@@ -22,7 +20,7 @@ export const SocialMedia = {
     props: { target: '_blank' },
     icon: {
       proto: [Img, Box],
-      props: { boxSize: ' B1' },
+      props: { boxSize: ' B' },
       style: {
         opacity: '.75',
         '&:hover': { opacity: 1 }

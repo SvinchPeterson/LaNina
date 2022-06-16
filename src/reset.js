@@ -13,7 +13,8 @@ const family = getFontFamily(FONT_FAMILY)
 applyReset({
   html: {
     width: '100%',
-    height: '100%'
+    height: '100%',
+    transform: 'none'
   }
 })
 

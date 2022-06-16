@@ -9,6 +9,7 @@ export default {
     flexAlign: 'center center',
     maxHeight: `${750 / 16}em`
   },
+  attr: { id: 'residence' },
   p: {
     proto: [bbSololaki, Box],
     props: {
