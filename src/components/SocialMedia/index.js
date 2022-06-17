@@ -34,7 +34,10 @@ export const SocialMedia = {
     },
     {
       props: { href: 'https://www.instagram.com/laninaresidence/' },
-      icon: { props: { src: INSTAGRAM_PNG } }
+      icon: {
+        props: { src: INSTAGRAM_PNG },
+        style: { opacity: '.65' }
+      }
     },
     {
       icon: { props: { src: LINKEDIN_PNG } }

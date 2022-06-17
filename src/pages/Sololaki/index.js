@@ -1,7 +1,7 @@
 'use strict'
 import { Box } from '@symbo.ls/symbols'
 import { Header, Menu, Header2, Book, Footer } from '../../components'
-import { Residence, Apartments, Wine, Location, Building, Entrence } from '../../articles'
+import { Residence, Apartments, Wine, Location, Building, Entrence, Contact } from '../../articles'
 import { banner } from './banner'
 
 import SOLOLAKI2_JPG from '../../assets/images/CoverPage/sololaki.jpg'
@@ -51,6 +51,7 @@ export default {
   Residence,
   Apartments,
   Wine,
-  Location
+  Location,
+  Contact
 
 }

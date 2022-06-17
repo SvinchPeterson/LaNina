@@ -9,23 +9,21 @@ const yardEntrence = {
     position: 'absolute'
   },
   style: {
-    width: `${680 / 16}em`,
-    height: `${400 / 16}em`,
+    width: `${850 / 16}em`,
+    height: `${500 / 16}em`,
     backgroundImage: 'url(' + ENTRENCE_JPG + ')',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    marginRight: `${400 / 16}em`,
+    marginRight: `${300 / 16}em`,
     zIndex: 2,
-    backgroudPosition: 'center'
-    // '&:before': {
-    //   content: '""',
-    //   width: '100%',
-    //   height: '100%',
-    //   display: 'block',
-    //   background: 'linear-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, .75))'
-    //   // background: 'linear-gradient(rgba(60,84, 72, .15), rgba(60,84, 72, .75))'
-    // }
+    '&:before': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      display: 'block',
+      background: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .65))'
+    }
   }
 }
 
@@ -37,22 +35,14 @@ const streetEntrence = {
   style: {
     width: `${500 / 16}em`,
     height: `${750 / 16}em`,
-    backgroundImage: 'url(' + STREET_JPG + ')',
-    backgroundSize: 'cover',
+    backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .35)),url(' + STREET_JPG + ')',
+    backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    backgroundPosition: 'bottom center',
-    marginLeft: `${350 / 16}em`,
+    backgroundPosition: 'right 180px bottom 200px',
+    marginLeft: `${550 / 16}em`,
     marginTop: `${300 / 16}em`,
     zIndex: 2
-    // '&:before': {
-    //   content: '""',
-    //   width: '100%',
-    //   height: '100%',
-    //   display: 'block',
-    //   background: 'linear-gradient(rgba(244, 233, 217, 0), rgba(244, 233, 217, .75))'
-    //   // background: 'linear-gradient(rgba(60,84, 72, .15), rgba(60,84, 72, .75))'
-    // }
   }
 }
 
@@ -60,11 +50,11 @@ const texts = {
   proto: Box,
   props: {
     position: 'absolute',
-    bottom: '0'
+    bottom: '-50px'
     // padding: 'F D2 E D2'
   },
   style: {
-    marginRight: `${600 / 16}em`,
+    marginRight: `${550 / 16}em`,
     zIndex: 1
     // background: 'radial-gradient(rgba(60,84, 72, .55), rgba(60,84, 72, .65))'
   },
@@ -79,8 +69,8 @@ const texts = {
       props: { color: 'black .45' },
       style: {
         textTransform: 'uppercase',
-        fontWeight: 700,
-        fontSize: `${14 / 16}em`
+        fontWeight: 900,
+        fontSize: `${13 / 16}em`
       }
     },
     ...[
@@ -114,10 +104,10 @@ const texts = {
       padding: 'B 0 Y 0'
     },
     style: {
-      fontSize: `${15 / 16}em`,
-      maxWidth: `${400 / 15}em`,
+      fontSize: `${13.5 / 16}em`,
+      maxWidth: `${400 / 13.5}em`,
       letterSpacing: '1px',
-      lineHeight: `${20 / 15}em`
+      lineHeight: `${20 / 13.5}em`
     }
   },
   stay: {
@@ -128,7 +118,8 @@ const texts = {
       color: 'black .35'
     },
     style: {
-      // fontWeight: 300,
+      fontSize: `${13.5 / 16}em`,
+      // fontWeight: 500,
       letterSpacing: '1px'
     }
   }

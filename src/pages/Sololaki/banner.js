@@ -137,8 +137,8 @@ const heading = {
   proto: Box,
   props: {
     position: 'absolute',
-    top: '40%',
-    right: '15%',
+    top: '44%',
+    right: '13.5%',
     transform: 'translate(50%, -50%)'
   },
   span: {
@@ -148,7 +148,7 @@ const heading = {
       fontSize: 'A',
       color: 'orange2 .85',
       position: 'absolute',
-      right: 'A1',
+      right: 'A2',
       top: '32px'
     },
     style: {
@@ -170,7 +170,7 @@ const heading = {
     style: {
       fontWeight: 110,
       letterSpacing: '-3px',
-      fontSize: `${115 / 16}em`
+      fontSize: `${120 / 16}em`
     }
   }
 }
@@ -196,7 +196,7 @@ const image = {
       width: '100%',
       height: '100%',
       display: 'block',
-      background: 'linear-gradient(rgba(60,84, 72, .25), rgba(60,84, 72, 1))'
+      background: 'linear-gradient(rgba(60,84, 72, .25), rgba(60,84, 72, .85))'
     }
   }
 }
@@ -216,6 +216,8 @@ const container = {
     // animationTimingFunction: 'linear',
     margin: '0 auto',
     background: 'radial-gradient(rgba(60,84, 72, .8), rgba(60,84, 72, 1))'
+    // backgroundAttachment: 'fixed',
+    // backgroundPosition: 'center bottom 400px'
     // border: '10px solid red'
   }
 }

@@ -4,16 +4,21 @@ import { Box, Text, Link, Img } from '@symbo.ls/symbols'
 
 import { SocialMedia } from '../SocialMedia'
 
-import MAIL_PNG from '../../assets/icons/mail.png'
+import LOGO_PNG from '../../assets/icons/logo-white.png'
 
-const mail = {
+const logo = {
   proto: Box,
   icon: {
     proto: [Img, Box],
     props: {
-      src: MAIL_PNG,
-      boxSize: ' B'
+      src: LOGO_PNG,
+      boxSize: ' B2'
     }
+  },
+
+  style: {
+    opacity: '1',
+    '&:hover': { opacity: 1 }
   }
 }
 
@@ -31,5 +36,5 @@ export const Footer = {
     mixBlendMode: 'difference'
   },
   SocialMedia,
-  mail
+  logo
 }

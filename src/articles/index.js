@@ -5,6 +5,7 @@ import Wine from './Wine'
 import Location from './Location'
 import Building from './Building'
 import Entrence from './Entrence'
+import { Contact } from './Contact'
 
 export {
   Residence,
@@ -12,5 +13,6 @@ export {
   Wine,
   Location,
   Building,
-  Entrence
+  Entrence,
+  Contact
 }
