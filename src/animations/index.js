@@ -122,6 +122,6 @@ export const position = keyframes`
 
   }
   to {
-    background-position: center;
+    background-position: center center;
   }
 `

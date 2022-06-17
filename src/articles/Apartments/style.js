@@ -21,13 +21,13 @@ export const styleHeader = {
 
 export default {
   scrollBehavior: 'smooth',
-  background: 'rgba(248, 241, 227, 1)',
   position: 'relative',
+  backgroundColor: 'rgba(60, 84, 72, )',
   backgroundImage: 'url(' + ORNAMENT_PNG + ')',
-  backgroundSize: 'cover',
-  padding: `${300 / 16}em 0`,
+  backgroundSize: 'contain',
+  padding: `${200 / 16}em 0`,
   boxSizing: 'border-box',
-  // backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
   '&:before': {
     content: '""',
     width: '100%',

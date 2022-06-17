@@ -1,7 +1,7 @@
 'use strict'
 
 import { Box, Link, Img, Text } from '@symbo.ls/symbols'
-import BACK2_PNG from '../../assets/icons/left-arrow2.png'
+import BACK_PNG from '../../assets/icons/up-arrow.png'
 
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
@@ -52,11 +52,12 @@ const back = {
     fontSize: `${11.5 / 16}em`,
     fontWeight: 700,
     letterSpacing: '0px',
-    transform: 'rotate(90deg)',
     '@media only screen and (min-width: 1225px)': {
-      left: '-50px',
-      top: '120px',
-      transform: 'rotate(90deg)'
+      left: '-40px',
+      top: '300px'
+      // opacity: '.45',
+      // '&:hover': { opacity: '1' }
+
     },
     '@media only screen and (max-width: 1225px)': {
       left: '30px',
@@ -66,7 +67,7 @@ const back = {
   class: {
     show: (element, state) => state.activeTab
       ? {
-        opacity: 1,
+        opacity: 0.65,
         transition: 'opacity 2s ease-in-out .5s'
       }
       : { opacity: 0 }
@@ -80,8 +81,8 @@ const back = {
   icon: {
     proto: [Img, Box],
     props: {
-      boxSize: 'B1',
-      src: BACK2_PNG
+      boxSize: 'A',
+      src: BACK_PNG
     }
   }
 }
@@ -94,7 +95,7 @@ const Room = {
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        height: `${700 / 16}em`,
+        height: `${650 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
         paddingTop: `${100 / 16}em`,

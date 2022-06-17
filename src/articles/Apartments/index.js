@@ -71,7 +71,9 @@ const roomsTabs = {
 const rooms = {
   tag: 'section',
   proto: Box,
-  props: { round: 'B' },
+  props: {
+    round: 'B'
+  },
   ...[
     roomBallerina,
     roomRedBrick,
@@ -92,14 +94,14 @@ export default {
   title: {
     proto: [Text, Box],
     props: {
-      fontSize: 'G',
+      fontSize: 'F',
       color: 'gold .75'
     },
-    text: 'apartments',
+    text: 'Apartments',
     style: {
       position: 'absolute',
-      right: '100px',
-      top: '150px',
+      right: '50px',
+      top: '120px',
       fontWeight: 200,
       '@media only screen and (max-width: 1225px)': { top: '100px' },
       '@media only screen and (max-width: 768px)': {

@@ -13,6 +13,7 @@ export const image = {
   },
   tag: 'span',
   style: {
+    boxShadow: ' inset 0px 0px 5px 0px rgba(0, 0, 0, .6)',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',

@@ -38,9 +38,9 @@ export const SocialMedia = {
         props: { src: INSTAGRAM_PNG },
         style: { opacity: '.65' }
       }
-    },
-    {
-      icon: { props: { src: LINKEDIN_PNG } }
     }
+    // {
+    //   icon: { props: { src: LINKEDIN_PNG } }
+    // }
   ]
 }

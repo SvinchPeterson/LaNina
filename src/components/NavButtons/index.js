@@ -13,9 +13,9 @@ export const navButtons = {
   props: {
     position: 'absolute',
     top: '63%',
-    right: `${80 / 16}em`,
+    right: `-${60 / 16}em`,
     flexFlow: 'column',
-    gap: 'W'
+    gap: '0'
   },
   style: {
     transform: 'translate(50%, -50%)',
@@ -29,17 +29,34 @@ export const navButtons = {
       padding: 'A1 Z2'
     },
     style: {
-      border: 'none',
-      background: 'radial-gradient(rgba(60,84, 72, .7),rgba(60,84, 72, .8))',
+      // border: 'none',
+      // background: 'radial-gradient(rgba(60,84, 72, .7),rgba(60,84, 72, .8))',
+      background: 'none',
+      border: '1px solid rgba(245, 245, 245, .35)',
       backdropFilter: 'blur(2px)',
-      '> img': { opacity: '1' }
+      '&:hover > img': { opacity: 1 },
+      '> img': {
+        opacity: '.65'
+      }
     }
   },
   ...[
     {
       style: {
         borderTopLeftRadius: '25px',
-        borderTopRightRadius: '25px'
+        borderTopRightRadius: '25px',
+        borderBottom: 'none !important',
+        position: 'relative',
+        '&:before': {
+          content: '""',
+          position: 'absolute',
+          width: '60%',
+          height: '1px',
+          background: 'rgba(245, 245, 245, .5)',
+          bottom: '-0.5px',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
+        }
       },
       image: {
         proto: [Img, Box],
@@ -64,7 +81,8 @@ export const navButtons = {
     {
       style: {
         borderBottomLeftRadius: '25px',
-        borderBottomRightRadius: '25px'
+        borderBottomRightRadius: '25px',
+        borderTop: 'none !important'
       },
       image: {
         proto: [Img, Box],

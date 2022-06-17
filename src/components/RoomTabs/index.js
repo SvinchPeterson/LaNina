@@ -59,7 +59,7 @@ const roomTab = {
         style: {
           minHeight: `${700 / 16}em`,
           opacity: 1,
-          padding: `0 ${80 / 16}em`,
+          padding: `0 ${200 / 16}em`,
           '@media only screen and (max-width: 1024px)': { padding: 0 }
         }
       })
