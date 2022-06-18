@@ -1,6 +1,6 @@
 'use strict'
 
-import { Box, Text, Link, Img } from '@symbo.ls/symbols'
+import { Box, Img } from '@symbo.ls/symbols'
 
 import { SocialMedia } from '../SocialMedia'
 
@@ -12,7 +12,8 @@ const logo = {
     proto: [Img, Box],
     props: {
       src: LOGO_PNG,
-      boxSize: ' B2'
+      boxSize: ' B2',
+      '@mobileS': { boxSize: ' B1' }
     }
   },
 
@@ -29,11 +30,13 @@ export const Footer = {
     position: 'fixed',
     bottom: '0',
     flexAlign: 'center space-between',
-    padding: 'A C B C',
-    '@mobileL': { padding: 'A B B B' }
+    padding: '0 D C D',
+    '@mobileM': {
+      padding: '0 B B B'
+    }
   },
   style: {
-    zIndex: '100',
+    zIndex: '50',
     mixBlendMode: 'difference'
   },
   SocialMedia,

@@ -71,6 +71,7 @@ export const RESPONSIVE = {
   mobileL: '(max-width: 768px)',
   mobileM: '(max-width: 560px)',
   mobileS: '(max-width: 480px)',
+  mobileXS: '(max-width: 350px)',
 
   light: '(prefers-color-scheme: light)'
 }

@@ -10,20 +10,7 @@ export const styleSectionLinks = {
     cursor: 'pointer',
     fontWeight: 900,
     textDecoration: 'none',
-    // backdropFilter: 'blur(3px)',
     border: '1px solid rgba(248, 241, 227, .4)'
-  }
-}
-
-export const styleSocialMedia = {
-  paddingRight: `${50 / 16}em`,
-  '> a': {
-    cursor: 'pointer',
-    opacity: '.85'
-  },
-  '> a:hover': { opacity: 1 },
-  '@media only screen and (max-width: 768px)': {
-    paddingRight: 0
   }
 }
 

@@ -9,14 +9,25 @@ const yardEntrence = {
     position: 'absolute'
   },
   style: {
-    width: `${850 / 16}em`,
     height: `${500 / 16}em`,
     backgroundImage: 'url(' + ENTRENCE_JPG + ')',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
-    marginRight: `${300 / 16}em`,
     zIndex: 2,
+    '@media only screen and (min-width: 1366px)': {
+      backgroundAttachment: 'fixed',
+      width: `${850 / 16}em`,
+      marginRight: `${300 / 16}em`
+    },
+    '@media only screen and (max-width: 1366px)': {
+      width: '80%'
+    },
+    '@media only screen and (max-width: 768px)': {
+      width: '90%',
+      height: `${400 / 16}em`
+    },
+    '@media only screen and (max-width: 560px)': { width: '100%' },
+    '@media only screen and (max-width: 350px)': { height: `${300 / 16}em` },
     '&:before': {
       content: '""',
       width: '100%',
@@ -33,16 +44,25 @@ const streetEntrence = {
     position: 'absolute'
   },
   style: {
-    width: `${500 / 16}em`,
-    height: `${750 / 16}em`,
     backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .35)),url(' + STREET_JPG + ')',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
-    backgroundPosition: 'right 180px bottom 200px',
-    marginLeft: `${550 / 16}em`,
-    marginTop: `${300 / 16}em`,
-    zIndex: 2
+    zIndex: 2,
+    '@media only screen and (min-width: 1366px)': {
+      width: `${500 / 16}em`,
+      height: `${750 / 16}em`,
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'right 180px bottom 200px',
+      marginLeft: `${550 / 16}em`,
+      marginTop: `${300 / 16}em`
+    },
+    '@media only screen and (max-width: 1366px)': {
+      width: `${400 / 16}em`,
+      height: `${600 / 16}em`,
+      right: `${120 / 16}em`,
+      top: '70%',
+      display: 'none'
+    }
   }
 }
 
@@ -50,12 +70,29 @@ const texts = {
   proto: Box,
   props: {
     position: 'absolute',
-    bottom: '-50px'
-    // padding: 'F D2 E D2'
+    bottom: '-50px',
+    '@tabletL': {
+      left: '0',
+      bottom: '40px',
+      padding: 'D',
+      background: 'cream2'
+    },
+    '@mobileL': {
+      bottom: '100px'
+    },
+    '@mobileM': {
+      padding: 'D B2',
+      bottom: '0'
+    },
+    '@mobileS': { minWidth: '100%' },
+    '@mobileXS': {
+      padding: 'D A2'
+
+    }
   },
   style: {
-    marginRight: `${550 / 16}em`,
-    zIndex: 1
+    '@media only screen and (min-width: 1366px)': { marginRight: `${550 / 16}em` },
+    zIndex: 3
     // background: 'radial-gradient(rgba(60,84, 72, .55), rgba(60,84, 72, .65))'
   },
   entrences: {
@@ -70,7 +107,8 @@ const texts = {
       style: {
         textTransform: 'uppercase',
         fontWeight: 900,
-        fontSize: `${13 / 16}em`
+        fontSize: `${13 / 16}em`,
+        '@media only screen and (max-width: 350px)': { fontSize: `${12 / 16}em` }
       }
     },
     ...[
@@ -102,12 +140,17 @@ const texts = {
       text: `Luggage dropoff allowed for guests' convenience when they have early arrival or late departure`,
       color: 'black .35',
       padding: 'B 0 Y 0'
+      // '@mobileS': { width: '' }
     },
     style: {
       fontSize: `${13.5 / 16}em`,
       maxWidth: `${400 / 13.5}em`,
       letterSpacing: '1px',
-      lineHeight: `${20 / 13.5}em`
+      lineHeight: `${20 / 13.5}em`,
+      '@media only screen and (max-width: 480px)': {
+        width: '280px',
+        paddingBottom: '10px'
+      }
     }
   },
   stay: {
@@ -119,8 +162,10 @@ const texts = {
     },
     style: {
       fontSize: `${13.5 / 16}em`,
-      // fontWeight: 500,
-      letterSpacing: '1px'
+      letterSpacing: '1px',
+      '@media only screen and (max-width: 480px)': {
+        width: '250px'
+      }
     }
   }
 }
@@ -132,10 +177,12 @@ export default {
     flexAlign: 'flex-start center',
     boxSize: '100% 100%',
     maxHeight: `${750 / 16}em`
-
   },
   style: {
-    marginBottom: `${600 / 16}em`
+    marginBottom: `${600 / 16}em`,
+    '@media only screen and (max-width: 1366px)': {
+      marginBottom: `${150 / 16}em`
+    }
     // border: '5px solid red',
     // width: '100%',
     // height: '100%'

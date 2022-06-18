@@ -44,6 +44,7 @@ export default {
   borderRadius: '35px',
   backdropFilter: 'blur(5px)',
   background: 'radial-gradient(rgba(60,84, 72, .7),rgba(60,84, 72, .8))',
+  zIndex: '70',
   '@media only screen and (max-width: 1225px)': {
     maxHeight: '400px',
     overflow: 'hidden',
@@ -52,6 +53,7 @@ export default {
     bottom: '-180px'
   },
   '@media only screen and (max-width: 480px)': {
-    minWidth: `${300 / 16}em`
+    minWidth: `${300 / 16}em`,
+    bottom: '-150px'
   }
 }

@@ -1,10 +1,7 @@
 'use strict'
-import { Text, Box, Img, Link } from '@symbo.ls/symbols'
-import { Logo3 } from '../../components/Logo'
+import { Text, Box, Link } from '@symbo.ls/symbols'
 import { Book } from '../Book'
 import { MenuButton } from '../MenuButton'
-
-import PHONE_PNG from '../../assets/icons/phone2.png'
 
 // const langs = {
 //   proto: Box,
@@ -92,11 +89,14 @@ const container = {
     position: 'fixed',
     top: '0',
     flexAlign: 'center space-between',
-    padding: 'B B',
+    padding: 'C D 0 D',
     gap: 'E',
     display: 'none',
     width: '100%',
-    '@mobileL': { display: 'flex' }
+    '@mobileL': { display: 'flex' },
+    '@mobileM': {
+      padding: 'B B 0 B'
+    }
   },
 
   style: {
@@ -147,6 +147,16 @@ export const Header = {
       props: {
         color: 'white',
         fontSize: 'Z'
+      },
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeMenuItem: element.key, activeMenu: false })
+        }
+      },
+      class: {
+        show: (element, state) => state.activeMenuItem === element.key
+          ? { opacity: 1 }
+          : { }
       },
       style: {
         textDecoration: 'none',

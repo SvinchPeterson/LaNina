@@ -1,5 +1,4 @@
 'use strict'
-import Residence from './Residence'
 import Apartments from './Apartments'
 import Wine from './Wine'
 import Location from './Location'
@@ -8,7 +7,6 @@ import Entrence from './Entrence'
 import { Contact } from './Contact'
 
 export {
-  Residence,
   Apartments,
   Wine,
   Location,
