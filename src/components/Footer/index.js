@@ -29,7 +29,8 @@ export const Footer = {
     position: 'fixed',
     bottom: '0',
     flexAlign: 'center space-between',
-    padding: 'A C B C'
+    padding: 'A C B C',
+    '@mobileL': { padding: 'A B B B' }
   },
   style: {
     zIndex: '100',

@@ -14,7 +14,8 @@ export default {
     proto: [bbSololaki, Box],
     props: {
       maxWidth: 'H2',
-      color: 'black .35'
+      color: 'black .35',
+      padding: '0 C'
     },
     style: {
       fontSize: `${15 / 16}em`,

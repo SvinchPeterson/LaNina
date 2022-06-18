@@ -2,22 +2,16 @@
 
 export const styleSectionLinks = {
   display: 'flex',
-  gap: `${30 / 18}em`,
-  '@media only screen and (max-width: 768px)': {
-    flexFlow: 'column',
-    gap: `${40 / 24}em`,
-    textAlign: 'center'
-  },
+  flexFlow: 'column',
+  gap: `${40 / 24}em`,
+  textAlign: 'center',
   '> a': {
     textTransform: 'uppercase',
     cursor: 'pointer',
     fontWeight: 900,
     textDecoration: 'none',
-    backdropFilter: 'blur(3px)',
-
-    '&:hover': {
-      background: 'rgba(244, 233, 217, .3)'
-    }
+    // backdropFilter: 'blur(3px)',
+    border: '1px solid rgba(248, 241, 227, .4)'
   }
 }
 

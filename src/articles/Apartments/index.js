@@ -95,7 +95,7 @@ export default {
     proto: [Text, Box],
     props: {
       fontSize: 'F',
-      color: 'gold .75'
+      color: 'gold .85'
     },
     text: 'Apartments',
     style: {

@@ -13,7 +13,7 @@ export const navButtons = {
   props: {
     position: 'absolute',
     top: '63%',
-    right: `-${60 / 16}em`,
+    right: `-${50 / 16}em`,
     flexFlow: 'column',
     gap: '0'
   },
@@ -26,14 +26,13 @@ export const navButtons = {
     proto: Box,
     tag: 'button',
     props: {
-      padding: 'A1 Z2'
+      padding: 'A Z'
     },
     style: {
       // border: 'none',
       // background: 'radial-gradient(rgba(60,84, 72, .7),rgba(60,84, 72, .8))',
       background: 'none',
       border: '1px solid rgba(245, 245, 245, .35)',
-      backdropFilter: 'blur(2px)',
       '&:hover > img': { opacity: 1 },
       '> img': {
         opacity: '.65'

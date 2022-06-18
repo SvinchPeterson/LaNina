@@ -14,7 +14,7 @@ const book = {
   proto: [Link, Text, Box],
   text: 'book',
   props: {
-    fontSize: 'B',
+    fontSize: 'A',
     color: 'cream',
     position: 'absolute',
     padding: 'Z A'
@@ -22,10 +22,10 @@ const book = {
   attr: { target: '_blank' },
   style: {
     textTransform: 'uppercase',
-    fontWeight: 700,
+    fontWeight: 900,
     zIndex: '30',
     textDecoration: 'none',
-    bottom: 0,
+    top: '100%',
     right: '80px',
     '@median only screen and (max-width: 1225px)': {
       right: '60px',
@@ -39,7 +39,7 @@ const back = {
   props: {
     position: 'absolute',
     top: '50px',
-    left: '10px',
+    left: '0px',
     href: '#apartments',
     color: 'cream',
     flexAlign: 'center center',
@@ -55,8 +55,6 @@ const back = {
     '@media only screen and (min-width: 1225px)': {
       left: '-40px',
       top: '300px'
-      // opacity: '.45',
-      // '&:hover': { opacity: '1' }
 
     },
     '@media only screen and (max-width: 1225px)': {

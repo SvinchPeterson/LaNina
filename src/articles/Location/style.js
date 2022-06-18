@@ -29,10 +29,10 @@ const styleAirPort = {
   '> p': {
     fontSize: `${15 / 16}em`,
     maxWidth: `${400 / 15}em`,
-    color: 'rgba(0, 0, 0, .35)',
+    color: 'rgba(0, 0, 0, .45)',
     letterSpacing: '0px',
     lineHeight: `${22 / 16}em`,
-    fontWeight: 400
+    fontWeight: 500
   },
   '> p > caption': {
     textTransform: 'uppercase',

@@ -6,7 +6,7 @@ export const styleHeader = {
   transition: 'height .3s linear',
   '@media only screen and (max-width: 1225px)': {
     height: `${60 / 16}em`,
-    '> h5': { fontSize: `${15 / 16}em` }
+    '> h5': { fontWeight: '900' }
   }
 }
 export const styleOffers = {

@@ -1,10 +1,11 @@
 'use strict'
 
 import { Link } from './Link'
-import { Header, Header2 } from './Header'
+import { HeaderMobile, Header } from './Header'
 import { Footer } from './Footer'
 import { RoomOffers } from './RoomOffers'
 import { Menu } from './Menu'
+import { MenuButton } from './MenuButton'
 
 import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs'
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from './Gallery/index'
@@ -20,11 +21,12 @@ export {
   Logo,
   Logo2,
   Logo4,
+  HeaderMobile,
   Header,
-  Header2,
   RoomOffers,
   Menu,
   Book,
+  MenuButton,
 
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
 

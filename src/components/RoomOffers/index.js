@@ -15,7 +15,8 @@ const header = {
     proto: [Text, Box],
     props: {
       text: 'amenities',
-      color: 'cream 1'
+      color: 'cream2 .65',
+      fontSize: 'Z'
     }
   },
   minimize: {

@@ -27,7 +27,7 @@ const book = {
     position: 'absolute',
     left: '50%',
     bottom: 'A',
-    padding: 'Z A1 Z A1',
+    padding: 'Y1 A Y1 A',
     gap: 'Y'
   },
   style: { pointerEvents: 'pointed !important' },

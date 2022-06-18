@@ -8,12 +8,12 @@ export const Contact = {
     flexAlign: 'flex-start center',
     padding: 'F 0',
     gap: 'Y',
-    color: 'black .75'
+    color: 'black .55'
   },
   childProto: {
     proto: Text,
     style: {
-      fontWeight: '500',
+      fontWeight: '900',
       textAlign: 'right',
       margin: '0 auto'
     }

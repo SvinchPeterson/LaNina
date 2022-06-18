@@ -10,15 +10,13 @@ export const Book = {
     target: '_blank'
   },
   style: {
-    // background: 'radial-gradient(rgba(60,84, 72, .55), rgba(60,84, 72, .65))',
     border: '1px solid rgba(245, 245, 245, .5)',
     textDecoration: 'none',
     zIndex: 100,
     fontWeight: '900',
-    // backdropFilter: 'blur(20px)',
-    // mixBlendMode: 'difference',
-    // opacity: '.7',
-    '&:hover > span': { opacity: '.9' }
+    '@media only screen and (min-width: 1366px)': {
+      '&:hover > span': { opacity: '.9' }
+    }
   },
   span: {
     proto: Box,
@@ -27,7 +25,10 @@ export const Book = {
       fontSize: 'Z'
     },
     style: {
-      opacity: '.7'
+      '@media only screen and (min-width: 1366px)': {
+        opacity: '.7'
+      }
+
     }
   }
 }

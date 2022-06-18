@@ -23,8 +23,8 @@ const image = {
       bottom: '100%',
       left: 0,
       width: '600px',
-      height: '3px',
-      background: 'rgba(168, 98, 63, 1)'
+      height: '3px'
+      // background: 'rgba(168, 98, 63, 1)'
     }
   }
 }
@@ -63,7 +63,7 @@ export default {
     maxHeight: `${750 / 16}em`,
     position: 'relative',
     flexAlign: 'center center',
-    margin: 'G2 0 G2 0'
+    margin: 'G2 0 G 0'
   },
   attr: { id: 'wine' },
   image,

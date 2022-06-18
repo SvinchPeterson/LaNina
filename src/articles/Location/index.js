@@ -8,7 +8,7 @@ import style from './style'
 const paragraph = {
   tag: 'p',
   proto: [locationText, Box],
-  props: { padding: '0 A E A', color: 'black .35' }
+  props: { padding: '0 D D D', color: 'black .35' }
 
 }
 
@@ -60,7 +60,7 @@ export default {
   props: {
     flexFlow: 'column',
     gap: '0',
-    padding: 'D2 0 0 0'
+    padding: 'D 0 0 0'
   },
   attr: {
     id: 'location'

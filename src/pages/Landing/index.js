@@ -14,7 +14,7 @@ const heading = {
   proto: [Text, Box],
   props: {
     text: 'BB Hospitality',
-    color: 'gold .8',
+    color: 'gold .65',
     fontSize: 'K',
     fontWeight: '100',
     '@mobileM': {
@@ -160,7 +160,7 @@ const Container = {
       width: '100%',
       height: '100%',
       background: 'radial-gradient(#212121, #1F1F1F, #1D1D1D, #1B1B1B, #181818, #151515, #111111, #101010)',
-      opacity: '.75'
+      opacity: '.85'
     },
     '&:after': {
       content: '""',

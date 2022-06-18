@@ -25,7 +25,7 @@ export default {
   backgroundColor: 'rgba(60, 84, 72, )',
   backgroundImage: 'url(' + ORNAMENT_PNG + ')',
   backgroundSize: 'contain',
-  padding: `${200 / 16}em 0`,
+  padding: `${200 / 16}em 0 ${300 / 16}em 0`,
   boxSizing: 'border-box',
   backgroundPosition: 'center',
   '&:before': {

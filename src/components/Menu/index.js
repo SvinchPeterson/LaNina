@@ -16,15 +16,16 @@ const sectionLinks = {
     proto: [Link, Text, Box],
     props: {
       fontSize: 'Z',
-      color: 'cream .95',
-      round: 'B',
-      background: 'cream .2',
-      padding: 'A B'
+      color: 'cream2 .95',
+      round: 'D',
+      // background: 'cream2 .2',
+      padding: 'Z2 0',
+      width: 'F'
     },
     on: {
       click: (event, element, state) => {
         // event.preventDefault()
-        state.update({ activeMenuItem: element.key, activeMenu: true })
+        state.update({ activeMenuItem: element.key, activeMenu: false })
         // Link.on.click(event, element, state)
       }
     }
@@ -81,8 +82,8 @@ export const Menu = {
   style,
   class: {
     show: (element, state) => state.activeMenu
-      ? { opacity: 0, pointerEvents: 'none' }
-      : { opacity: 1 }
+      ? { opacity: 1 }
+      : { opacity: 0, pointerEvents: 'none' }
   },
   props: {
     boxSize: '100% 100%',
@@ -91,6 +92,5 @@ export const Menu = {
     left: '0'
   },
 
-  sectionLinks,
-  socialMedia
+  sectionLinks
 }
