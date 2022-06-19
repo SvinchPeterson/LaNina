@@ -5,27 +5,26 @@ import { position } from '../../animations'
 
 export const image = {
   proto: Box,
-  props: {
-    position: 'absolute',
-    boxSize: '100% ',
-    top: '0',
-    left: '0'
-  },
   tag: 'span',
+
+  props: {
+    width: '100%',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    '@tabletL': {
+      width: '100%',
+      height: '100%'
+    }
+  },
+
   style: {
-    boxShadow: ' inset 0px 0px 5px 0px rgba(0, 0, 0, .6)',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
+    boxShadow: ' inset 0px 0px 5px 0px rgba(0, 0, 0, .6)',
     '@media only screen and (min-width: 1225px)': {
-      backgroundAttachment: 'fixed',
-      transition: 'height .7s ease-in-out, opacity .7s ease-in-out, background-position 3s ease-in-out',
-      width: '100%'
-    },
-    '@media only screen and (max-width: 1225px)': {
-      width: '100%',
-      height: '100%',
-      transition: 'opacity .7s ease-in-out'
+      transition: 'height .7s ease-in-out, opacity .7s ease-in-out, background-position 3s ease-in-out'
     }
   },
 
@@ -39,10 +38,9 @@ export const image = {
           animationDuration: '1s',
           animationTimingFunction: 'ease-in-out'
         },
-        '@media only screen and (max-width: 1225px)': {
-          opacity: 1
-        }
+        '@media only screen and (max-width: 1225px)': { opacity: 1 }
       }
+
       : {
         backgroundPosition: 'center center',
         '@media only screen and (min-width: 1225px)': {

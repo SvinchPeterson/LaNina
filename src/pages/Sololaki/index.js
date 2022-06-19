@@ -35,15 +35,15 @@ export default {
 
   proto: container,
 
-  // banner,
-  // Header,
-  // HeaderMobile,
-  // Menu,
-  // Building,
-  // Entrence,
-  Apartments
-  // Wine,
-  // Location,
-  // Contact,
-  // Footer
+  banner,
+  Header,
+  HeaderMobile,
+  Menu,
+  Building,
+  Entrence,
+  Apartments,
+  Wine,
+  Location,
+  Contact,
+  Footer
 }

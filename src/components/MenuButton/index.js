@@ -32,16 +32,14 @@ export const MenuButton = {
       transition: 'all .3s ease-in-out'
     }
   },
+
   ...[
     {
       props: { top: `${3 / 16}em` },
-      style: {
-        transform: 'translate(-50%, -50%)'
-      },
+      style: { transform: 'translate(-50%, -50%)' },
       class: {
         show: (element, state) => state.activeMenu
-          ? { top: '50%', transform: 'translate(-50%, -50%) rotate(-45deg)' }
-          : { }
+          ? { top: '50%', transform: 'translate(-50%, -50%) rotate(-45deg)' } : { }
       }
     },
 
@@ -50,8 +48,7 @@ export const MenuButton = {
       style: { transform: 'translate(-50%, -50%)' },
       class: {
         show: (element, state) => state.activeMenu
-          ? { opacity: 0 }
-          : { opacity: 1, transition: 'opacity .4s ease-in-out' }
+          ? { opacity: 0 } : { opacity: 1, transition: 'opacity .4s ease-in-out' }
       }
     },
 

@@ -30,9 +30,11 @@ const links = {
     flexAlign: 'center center',
     gap: 'C'
   },
+
   childProto: {
     proto: Link,
     props: { target: '_blank' },
+
     icon: {
       proto: [Img, Box],
       props: { boxSize: ' B' },
@@ -42,11 +44,13 @@ const links = {
       }
     }
   },
+
   ...[
     {
       props: { href: `https://www.facebook.com/laninaresidence` },
       icon: { props: { src: FACEBOOK_PNG } }
     },
+
     {
       props: { href: 'https://www.instagram.com/laninaresidence/' },
       icon: {
@@ -65,9 +69,7 @@ export const Footer = {
     bottom: '0',
     flexAlign: 'center space-between',
     padding: '0 D C D',
-    '@mobileM': {
-      padding: '0 B B B'
-    }
+    '@mobileM': { padding: '0 B B B' }
   },
   style: {
     zIndex: '50',

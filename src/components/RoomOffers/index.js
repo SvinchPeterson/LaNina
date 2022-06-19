@@ -1,16 +1,20 @@
 'use strict'
-import { Box, Text, Button } from '@symbo.ls/symbols'
-
-import style, { styleHeader, styleOffers } from './style'
+import { Box, Text, Button, Grid } from '@symbo.ls/symbols'
 
 const header = {
   tag: 'header',
   proto: Box,
-  style: styleHeader,
   props: {
+    height: 'C1',
     flexAlign: 'center space-between',
     padding: '0 A2 0 B'
   },
+  style: {
+    textTransform: 'uppercase',
+    transition: 'height .3s linear',
+    fontWeight: 900
+  },
+
   h5: {
     proto: [Text, Box],
     props: {
@@ -19,24 +23,17 @@ const header = {
       fontSize: 'Z'
     }
   },
+
   minimize: {
     proto: [Button, Box],
-    props: {
-      padding: 'Z1'
-    },
-    style: {
-      background: 'transparent'
-    },
+    props: { padding: 'Z1' },
+    style: { background: 'transparent' },
     span: {
       proto: [Button, Box],
       props: {
         boxSize: 'B X',
-        background: 'cream 1',
+        background: 'cream2 .8',
         round: 'Z'
-      },
-      style: {
-        '@media only screen and (max-width: 1225px)': { width: `${30 / 16}em`, height: '3px' }
-
       }
     },
 
@@ -51,13 +48,26 @@ const header = {
 }
 
 const offers = {
-  proto: Box,
-  style: styleOffers,
+  proto: [Grid, Box],
   props: {
-    padding: '0 C2 0 C2'
+    height: '0',
+    padding: '0 C2 0 C2',
+    columns: 'repeat(2, 1fr)',
+    columnGap: 'C',
+    rowGap: 'X1',
+    '@tabletL': { columns: '100%' }
+  },
+  style: {
+    letterSpacing: '1px',
+    transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out',
+    '@media only screen and (max-width: 1225px)': {
+      overflowY: 'auto',
+      transition: 'min-height .4s ease-in-out, padding-bottom .4s ease-in-out'
+    }
   },
   class: {
     show: (element, state) => state.offers
+
       ? {
         minHeight: `${230 / 16}em`,
         '@media only screen and (max-height: 600px)': {
@@ -68,21 +78,27 @@ const offers = {
           transition: 'height .4s linear, opacity .5s linear .4s'
         }
       }
+
       : {
         minHeight: `${0 / 16}em`,
         paddingBottom: `${0 / 16}em`,
         '> span': {
           height: 0,
           opacity: '0'
-
         }
       }
   },
+
   childProto: {
     tag: 'span',
     proto: [Box, Text],
     props: {
-      color: 'cream .85'
+      color: 'cream .85',
+      fontSize: 'Z'
+    },
+    style: {
+      fontWeight: 500,
+      textTransform: 'uppercase'
     }
   },
   ...[
@@ -110,18 +126,39 @@ const offers = {
 export const RoomOffers = {
   tag: 'aside',
   proto: Box,
-  style,
   props: {
+    miWidth: 'G1',
+    background: 'green2 .65',
     position: 'absolute',
     left: '50px',
     bottom: '-50px',
-    flexFlow: 'column'
+    flexFlow: 'column',
+    round: 'C',
+    '@tabletL': {
+      maxHeight: 'G3',
+      left: '50%',
+      bottom: '-F'
+    },
+    '@mobileS': {
+      maxWidth: 'G',
+      bottom: 'E2'
+    }
   },
+  style: {
+    transition: 'all 1s ease-in-out',
+    backdropFilter: 'blur(5px)',
+    zIndex: '70',
+    '@media only screen and (max-width: 1225px)': {
+      overflow: 'hidden',
+      transform: 'translate(-50%, 50%)'
+    }
+  },
+
   class: {
     show: (element, state) => state.offers
       ? {
-        '@media only screen and (min-width: 1225px)': { paddingBottom: '30px' },
-        '@media only screen and (max-width: 1225px)': { paddingBottom: '16px' }
+        '@media only screen and (min-width: 1225px)': { paddingBottom: `${30 / 16}em` },
+        '@media only screen and (max-width: 1225px)': { paddingBottom: `${16 / 16}em` }
       }
       : {}
   },

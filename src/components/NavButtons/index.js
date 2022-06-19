@@ -13,7 +13,7 @@ export const navButtons = {
   props: {
     position: 'absolute',
     top: '63%',
-    right: `-${50 / 16}em`,
+    right: `-C1`,
     flexFlow: 'column',
     gap: '0'
   },
@@ -25,25 +25,19 @@ export const navButtons = {
   childProto: {
     proto: Box,
     tag: 'button',
-    props: {
-      padding: 'A Z'
-    },
+    props: { padding: 'A Z' },
     style: {
-      // border: 'none',
-      // background: 'radial-gradient(rgba(60,84, 72, .7),rgba(60,84, 72, .8))',
-      background: 'none',
       border: '1px solid rgba(245, 245, 245, .35)',
+      background: 'none',
       '&:hover > img': { opacity: 1 },
-      '> img': {
-        opacity: '.65'
-      }
+      '> img': { opacity: '.65' }
     }
   },
   ...[
     {
       style: {
-        borderTopLeftRadius: '25px',
-        borderTopRightRadius: '25px',
+        borderTopLeftRadius: `${25 / 16}em`,
+        borderTopRightRadius: `${25 / 16}em`,
         borderBottom: 'none !important',
         position: 'relative',
         '&:before': {
@@ -52,6 +46,7 @@ export const navButtons = {
           width: '60%',
           height: '1px',
           background: 'rgba(245, 245, 245, .5)',
+          // background: ' rgba(168, 98, 63, 1)',
           bottom: '-0.5px',
           left: '50%',
           transform: 'translate(-50%, -50%)'
@@ -79,8 +74,8 @@ export const navButtons = {
 
     {
       style: {
-        borderBottomLeftRadius: '25px',
-        borderBottomRightRadius: '25px',
+        borderBottomLeftRadius: `${25 / 16}em`,
+        borderBottomRightRadius: `${25 / 16}em`,
         borderTop: 'none !important'
       },
       image: {
@@ -108,34 +103,31 @@ export const navButtons = {
 export const navButtons2 = {
   proto: Box,
   props: {
+    width: '100.5%',
+    height: '0',
     position: 'absolute',
     left: `50%`,
     flexFlow: 'row',
     flexAlign: 'center space-between',
-    gap: 'B',
-    padding: ''
+    gap: 'B'
   },
   style: {
+    display: 'none',
     zIndex: '200',
     transform: 'translate(-50%, -50%)',
-    display: 'none',
-    height: 0,
-    width: '100.5%',
-    '@media only screen and (max-width: 1225px)': {
-      display: 'flex'
-    }
+    '@media only screen and (max-width: 1366px)': { display: 'flex' }
   },
 
   childProto: {
     proto: Box,
     tag: 'button',
     props: {
-      flexAlign: 'center center'
+      flexAlign: 'center center',
+      background: 'green2 .8'
     },
     style: {
-      // background: 'radial-gradient( rgba(168, 98, 63, 1), rgba(168, 98, 63, 1))',
-      background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
-      backdropFilter: 'blur(0px)',
+      // background: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
+      backdropFilter: 'blur(.5px)',
       cursor: 'pointer'
     },
     image: {
@@ -150,8 +142,6 @@ export const navButtons2 = {
         borderTopRightRadius: '70px',
         borderBottomRightRadius: '70px',
         border: 'none'
-        // border: '1.5px solid rgba(168, 98, 63, 1)',
-        // borderLeft: 'none'
       },
       image: {
         proto: [Img, Box],
