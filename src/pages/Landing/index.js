@@ -119,9 +119,6 @@ const Container = {
   proto: Box,
   props: {
     boxSize: '100% 100%',
-    // position: 'absolute',
-    // top: 0,
-    // left: 0,
     flexAlign: 'center flex-end',
     '@tabletS': { flexAlign: 'center center' }
   },
@@ -191,7 +188,6 @@ const Container = {
       '@mobileL': {
         padding: '0 0 E 0',
         flexAlign: 'flex-start center'
-        // gap: 'D'
       }
     },
     style: {
@@ -211,8 +207,8 @@ export default {
     top: 0,
     left: 0
   },
-  style: { background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .92))' },
-  con: {
-    proto: Container
-  }
+  style: {
+    background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .92))'
+  },
+  container: { proto: Container }
 }
