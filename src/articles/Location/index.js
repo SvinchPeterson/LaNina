@@ -3,8 +3,6 @@ import { Box } from '@symbo.ls/symbols'
 
 import { locationText, distanceText, transferText } from '../../texts'
 
-import style from './style'
-
 const paragraph = {
   tag: 'p',
   proto: [locationText, Box],
@@ -95,7 +93,6 @@ export default {
     padding: 'D 0 0 0'
   },
   attr: { id: 'location' },
-  style,
 
   paragraph,
   location: {
@@ -103,7 +100,11 @@ export default {
     proto: Box,
     props: {
       flexAlign: 'center center',
-      gap: 'D'
+      gap: 'D',
+      '@tabletL': {
+        flexFlow: 'column',
+        gap: 'D2'
+      }
     },
 
     map,
