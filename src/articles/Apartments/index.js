@@ -19,12 +19,6 @@ const roomsTabs = {
     padding: '0 6%',
     '@tabletL': { padding: '0' }
   },
-  style: { '@media only screen and (max-width: 1225px)': { overflowX: 'hidden' } },
-  class: {
-    show: (element, state) => state.activeTab
-      ? { }
-      : {}
-  },
 
   buttons: {
     proto: navButtons2,
@@ -55,6 +49,7 @@ const roomsTabs = {
       }
     ]
   },
+
   tabsContainer: {
     tag: 'nav',
     proto: Box,
@@ -75,9 +70,8 @@ const roomsTabs = {
 const rooms = {
   tag: 'section',
   proto: Box,
-  props: {
-    round: 'B'
-  },
+  props: { round: 'B' },
+
   ...[
     roomBallerina,
     roomRedBrick,
@@ -88,7 +82,6 @@ const rooms = {
 }
 
 export default {
-  // style,
   proto: Box,
   props: {
     flexFlow: 'column',
@@ -120,27 +113,17 @@ export default {
   title: {
     proto: [Text, Box],
     props: {
+      text: 'Apartments',
       fontSize: 'F',
-      color: 'gold .85'
-    },
-    text: 'Apartments',
-    style: {
+      color: 'gold .85',
       position: 'absolute',
-      right: '50px',
-      top: '120px',
-      fontWeight: 200,
-      '@media only screen and (max-width: 1225px)': { top: '100px' },
-      '@media only screen and (max-width: 768px)': {
-        display: 'none',
-        fontSize: '22px',
-        top: '100px',
-        right: '50px'
-      }
-      // textTransform: 'uppercase'
-    }
+      top: 'D',
+      right: 'B',
+      '@tabletL': { top: 'C1' },
+      '@mobileL': { display: 'none' }
+    },
+    style: { fontWeight: 200 }
   },
-
   roomsTabs,
   rooms
-
 }
