@@ -1,7 +1,7 @@
 'use strict'
 import { Box } from '@symbo.ls/symbols'
 import { HeaderMobile, Menu, Header, Footer } from '../../components'
-import { Apartments, Wine, Location, Building, Entrence, Contact } from '../../articles'
+import { Building, Entrence, Apartments, Wine, Location, Contact } from '../../articles'
 import { banner } from './banner'
 
 import { opacity } from '../../animations'
@@ -34,6 +34,7 @@ export default {
   },
 
   proto: container,
+
   banner,
   Header,
   HeaderMobile,
@@ -45,5 +46,4 @@ export default {
   Location,
   Contact,
   Footer
-
 }

@@ -25,9 +25,14 @@ const heading = {
       text: 'sololaki',
       color: 'orange2 .85',
       position: 'absolute',
-      right: '0',
+      right: 'Z',
+      top: 'A',
+      '@tabletS': {
+        top: 'Z',
+        right: '0'
+      },
       '@mobileL': {
-        top: 'initial',
+        top: 'auto',
         right: 'C',
         color: 'orange2',
         bottom: '-B1'
