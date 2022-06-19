@@ -38,13 +38,17 @@ const back = {
 
   props: {
     position: 'absolute',
-    top: '50px',
-    left: '0px',
+    top: '300px',
+    left: '-40px',
     href: '#apartments',
     color: 'cream',
     flexAlign: 'center center',
     gap: 'Y2',
-    padding: 'Z'
+    padding: 'Z',
+    '@tabletL': {
+      left: '40px',
+      top: '122%'
+    }
   },
   style: {
     textDecoration: 'none',
@@ -52,14 +56,15 @@ const back = {
     fontSize: `${11.5 / 16}em`,
     fontWeight: 700,
     letterSpacing: '0px',
-    '@media only screen and (min-width: 1225px)': {
-      left: '-40px',
-      top: '300px'
-
-    },
-    '@media only screen and (max-width: 1225px)': {
+    '@media only screen and (max-width: 1366px)': {
       left: '30px',
-      fontSize: '12.5px'
+      fontSize: '12.5px',
+      transform: 'rotate(-90deg)'
+    },
+    '@media only screen and (max-width: 560px)': {
+      transform: 'rotate(0deg)',
+      left: '10px',
+      top: '135%'
     }
   },
   class: {

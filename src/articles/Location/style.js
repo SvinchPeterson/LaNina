@@ -1,9 +1,7 @@
 'use strict'
 
 const styleLocation = {
-  // fontSize: `${18 / 16}em`,
   lineHeight: `${21 / 14}em`,
-  // color: 'rgba(168, 98, 63, 1)',
   fontWeight: 400,
   maxWidth: `${500 / 14}em`,
   textAlign: 'center',
