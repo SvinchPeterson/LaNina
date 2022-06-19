@@ -21,9 +21,6 @@ const container = {
     animationName: opacity,
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out'
-
-    // flexFlow: 'column',
-    // flexAlign: 'center flex-start',
   }
 }
 export default {

@@ -3,85 +3,6 @@ import { Text, Box, Link } from '@symbo.ls/symbols'
 import { Book } from '../Book'
 import { MenuButton } from '../MenuButton'
 
-// const langs = {
-//   proto: Box,
-//   class: [styleLangs],
-//   props: {
-//     flexAlign: 'center center',
-//     gap: 'A'
-//   },
-//   style: {
-//     textTransform: 'uppercase',
-//     width: `${200 / 16}em`,
-//     '> div': { cursor: 'pointer' },
-//     '> div:hover': { opacity: 1, fontWeight: 700 }
-//   },
-//   childProto: {
-//     proto: [Text, Box],
-//     on: {
-//       click: (event, element, state) => {
-//         state.update({ activeLang: element.key })
-//         console.log(state.activeLang, element.key)
-//       }
-//     },
-
-//     class: {
-//       show: (element, state) => state.activeLang === element.key
-//         ? { color: 'rgba(244, 233, 217, 1)', fontWeight: 700 }
-//         : { color: 'rgba(244, 233, 217, .85)', fontWeight: 500 }
-//     }
-//   },
-//   ...[
-//     { props: { text: 'geo' } },
-//     { props: { text: 'eng' } },
-//     { props: { text: 'rus' } }
-//   ]
-// }
-
-// const call = {
-//   proto: [Link, Box],
-//   props: {
-//     flexAlign: 'center center',
-//     position: 'relative',
-//     href: 'tel:571017170'
-//   },
-//   image: {
-//     proto: [Img, Box],
-//     props: {
-//       src: PHONE_PNG,
-//       boxSize: 'A2 A2'
-//     },
-//     style: {
-//       width: '100%',
-//       height: '100%'
-//     }
-//   },
-//   numb: {
-//     tag: 'span',
-//     proto: [Text, Box],
-//     props: {
-//       text: '+995 571 017 170',
-//       color: 'orange2',
-//       fontSize: 'B',
-//       position: 'absolute',
-//       padding: '0 0 0 Z',
-//       bottom: '-55px'
-//     },
-//     style: {
-//       opacity: 0,
-//       whiteSpace: 'nowrap',
-//       '@media only screen and (max-width: 768px)': {
-//         right: 0,
-//         fontSize: '16px'
-//       }
-//     }
-//   },
-//   style: {
-//     cursor: 'pointer',
-//     '&:hover > span': { opacity: 1 }
-//   }
-// }
-
 const container = {
   tag: 'header',
   proto: Box,
@@ -101,7 +22,6 @@ const container = {
 
   style: {
     zIndex: 500,
-    boxShadow: '0px 0px 3px px rgba(0, 0, 0, .5)',
     mixBlendMode: 'difference',
     '@media only screen and (max-width: 480px)': {
       gap: `${95 / 16}em`
@@ -117,7 +37,7 @@ export const HeaderMobile = {
 }
 
 export const Header = {
-  tag: 'nav',
+  tag: 'header',
   proto: Box,
   props: {
     position: 'fixed',
