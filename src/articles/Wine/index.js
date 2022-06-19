@@ -66,8 +66,8 @@ const paragraph = {
 
   span: {
     proto: [wineText, Box],
+    style: { fontSize: `${15 / 16}em` },
     props: {
-      fontSize: 'Z',
       maxWidth: 'G1',
       color: 'black .35',
       '@tabletL': { maxWidth: 'H3' }
