@@ -38,12 +38,12 @@ export default {
   Header,
   HeaderMobile,
   Menu,
-  Footer,
   Building,
   Entrence,
   Apartments,
   Wine,
   Location,
-  Contact
+  Contact,
+  Footer
 
 }

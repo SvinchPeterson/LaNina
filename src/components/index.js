@@ -13,7 +13,6 @@ import { navButtons, navButtons2 } from './NavButtons'
 import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'
 import { Logo, Logo2, Logo4 } from './Logo'
 import { Book } from './Book'
-import { SocialMedia } from './SocialMedia'
 
 export {
   Link,
@@ -36,6 +35,5 @@ export {
   navButtons2,
 
   roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest,
-  SocialMedia,
   Footer
 }
