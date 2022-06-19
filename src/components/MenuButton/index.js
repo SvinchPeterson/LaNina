@@ -4,9 +4,7 @@ import { Box } from '@symbo.ls/all'
 
 export const MenuButton = {
   proto: Box,
-  style: {
-    cursor: 'pointer'
-  },
+  style: { cursor: 'pointer' },
   props: {
     width: 'C',
     height: 'B',
@@ -33,11 +31,10 @@ export const MenuButton = {
       height: '2px',
       transition: 'all .3s ease-in-out'
     }
-
   },
   ...[
     {
-      props: { top: '3px' },
+      props: { top: `${3 / 16}em` },
       style: {
         transform: 'translate(-50%, -50%)'
       },
@@ -47,6 +44,7 @@ export const MenuButton = {
           : { }
       }
     },
+
     {
       props: { top: '50%' },
       style: { transform: 'translate(-50%, -50%)' },
@@ -56,8 +54,9 @@ export const MenuButton = {
           : { opacity: 1, transition: 'opacity .4s ease-in-out' }
       }
     },
+
     {
-      props: { bottom: '1px' },
+      props: { bottom: `${1 / 16}em` },
       style: {
         transform: 'translate(-50%, -50%)'
       },

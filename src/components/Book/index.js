@@ -1,4 +1,4 @@
-import { Text, Box, Img, Link } from '@symbo.ls/symbols'
+import { Box, Link } from '@symbo.ls/symbols'
 
 export const Book = {
   proto: [Link, Box],
@@ -14,21 +14,15 @@ export const Book = {
     textDecoration: 'none',
     zIndex: 100,
     fontWeight: '900',
-    '@media only screen and (min-width: 1366px)': {
-      '&:hover > span': { opacity: '.9' }
-    }
+    '@media only screen and (min-width: 1366px)': { '&:hover > span': { opacity: '.9' } }
   },
+
   span: {
     proto: Box,
     props: {
       text: 'BOOK',
       fontSize: 'Z'
     },
-    style: {
-      '@media only screen and (min-width: 1366px)': {
-        opacity: '.7'
-      }
-
-    }
+    style: { '@media only screen and (min-width: 1366px)': { opacity: '.7' } }
   }
 }
