@@ -8,7 +8,11 @@ import style from './style'
 const paragraph = {
   tag: 'p',
   proto: [locationText, Box],
-  props: { padding: '0 D D D', color: 'black .35' }
+  props: {
+    padding: '0 D D D',
+    color: 'black .35',
+    '@mobileM': { padding: '0 B D B' }
+  }
 
 }
 
@@ -45,10 +49,12 @@ const airPort = {
       },
 
       caption: {
-        proto: Text,
+        proto: [Text, Box],
         props: {
-          text: 'transfer'
-        }
+          text: 'transfer',
+          color: 'black .55'
+        },
+        style: { fontWeight: 900 }
       }
     }
   ]
