@@ -49,7 +49,6 @@ const links = {
       color: 'cream',
       '@mobileM': {
         background: 'cream .15',
-        // boxSize: 'G C2',
         minWidth: 'F2',
         padding: 'A 0',
         flexAlign: 'centr center'
@@ -84,7 +83,7 @@ const links = {
         '&:before': {
           content: '"soon"',
           position: 'absolute',
-          bottom: '-35px',
+          bottom: `-${35 / 16}em`,
           left: '50%',
           transform: 'translate(-50%, -50%)',
           fontWeight: 300,
@@ -102,7 +101,7 @@ const links = {
         '&:before': {
           content: '"soon"',
           position: 'absolute',
-          bottom: '-35px',
+          bottom: `-${35 / 16}em`,
           left: '50%',
           transform: 'translate(-50%, -50%)',
           fontWeight: 300,
