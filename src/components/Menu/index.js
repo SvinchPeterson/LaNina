@@ -1,15 +1,18 @@
 'use strict'
-import { Box, Text, Link } from '@symbo.ls/symbols'
-
-import style, { styleSectionLinks } from './style'
+import { Box, Link } from '@symbo.ls/symbols'
 
 const sectionLinks = {
   tag: 'nav',
   proto: Box,
-  class: [styleSectionLinks],
+  props: {
+    flexFlow: 'column',
+    flexAlign: 'center center',
+    gap: 'B'
+  },
+  style: { textAlign: 'center' },
 
   childProto: {
-    proto: [Link, Text, Box],
+    proto: [Link, Box],
     props: {
       fontSize: 'Z',
       color: 'cream2 .95',
@@ -17,20 +20,20 @@ const sectionLinks = {
       padding: 'Z2 0',
       width: 'F'
     },
+    style: {
+      textTransform: 'uppercase',
+      cursor: 'pointer',
+      fontWeight: 900,
+      textDecoration: 'none',
+      border: '1px solid rgba(248, 241, 227, .4)'
+    },
     on: {
       click: (event, element, state) => {
-        // event.preventDefault()
         state.update({ activeMenuItem: element.key, activeMenu: false })
-        // Link.on.click(event, element, state)
       }
     }
-
-    // class: {
-    //   show: (element, state) => state.activeMenuItem === element.key
-    //     ? { background: '244, 233, 217, 1' }
-    //     : { }
-    // }
   },
+
   ...[
     { props: { text: 'residence', href: '#residence' } },
     { props: { text: 'apartments', href: '#apartments' } },
@@ -38,20 +41,28 @@ const sectionLinks = {
     { props: { text: 'location', href: '#location' } }
   ]
 }
+
 export const Menu = {
   tag: 'aside',
   proto: Box,
-  style,
-  class: {
-    show: (element, state) => state.activeMenu
-      ? { opacity: 1 }
-      : { opacity: 0, pointerEvents: 'none' }
-  },
   props: {
     boxSize: '100% 100%',
     position: 'fixed',
     top: '0',
-    left: '0'
+    left: '0',
+    flexAlign: 'center center',
+    background: 'green2 .85'
+  },
+  style: {
+    boxSizing: 'border-box',
+    backdropFilter: 'blur(1px)',
+    transition: 'all .5s ease-in-out',
+    zIndex: '400'
+  },
+  class: {
+    show: (element, state) => state.activeMenu
+      ? { opacity: 1 }
+      : { opacity: 0, pointerEvents: 'none' }
   },
 
   sectionLinks
