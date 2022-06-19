@@ -7,24 +7,25 @@ import {
   navButtons2
 } from '../../components'
 
-import style, { styleHeader } from './style'
+import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
 const roomsTabs = {
   tag: 'header',
   proto: Box,
-  style: styleHeader,
   props: {
     position: 'relative',
     flexFlow: 'column',
-    flexAlign: 'flex-start center'
-    // padding: 'F D1 B D1'
+    flexAlign: 'flex-start center',
+    padding: '0 6%',
+    '@tabletL': { padding: '0' }
   },
-  // attr: { id: 'apartments' },
+  style: { '@media only screen and (max-width: 1225px)': { overflowX: 'hidden' } },
   class: {
     show: (element, state) => state.activeTab
       ? { }
       : {}
   },
+
   buttons: {
     proto: navButtons2,
     ...[
@@ -59,8 +60,11 @@ const roomsTabs = {
     proto: Box,
     props: {
       flexAlign: 'center flex-start',
-      gap: 'B'
+      gap: 'B',
+      width: '100%',
+      padding: 'B2 0 0 0'
     },
+    style: { '@media only screen and (max-width: 1366px)': { overflowX: 'auto' } },
     childProto: {
       proto: Box
     },
@@ -84,10 +88,32 @@ const rooms = {
 }
 
 export default {
-  style,
+  // style,
   proto: Box,
   props: {
-    flexFlow: 'column'
+    flexFlow: 'column',
+    position: 'relative',
+    padding: `F 0 G 0`,
+    '@tabletL': { padding: 'F3 0' },
+    '@mobileL': { padding: 'F 0' },
+    '@mobileS': { padding: 'E1 0' }
+  },
+  style: {
+    scrollBehavior: 'smooth',
+    backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
+    boxSizing: 'border-box',
+    '&:before': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      background: 'radial-gradient(rgba(248, 241, 227, .1), rgba(60, 84, 72, .85), rgba(42, 81, 61, .85))',
+      backgroundAttachment: 'fixed'
+    }
   },
   attr: { id: 'apartments' },
 

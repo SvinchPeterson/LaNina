@@ -56,21 +56,23 @@ const texts = {
   proto: Box,
   props: {
     position: 'absolute',
-    bottom: '-50px',
+    bottom: '0',
     margin: '0 H1 0 0',
     '@tabletL': {
       margin: '0',
       left: '0',
-      bottom: '40px',
+      bottom: 'D2',
       padding: 'D',
       background: 'cream2'
     },
-    '@mobileL': { bottom: '100px' },
+    '@mobileL': {
+      bottom: 'D2',
+      minWidth: '100%'
+    },
     '@mobileM': {
-      padding: 'D B2',
+      padding: 'D B',
       bottom: '0'
     },
-    '@mobileS': { minWidth: '100%' },
     '@mobileXS': { padding: 'D A2' }
   },
   style: { zIndex: 3 },
