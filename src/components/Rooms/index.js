@@ -14,58 +14,48 @@ const book = {
   proto: [Link, Text, Box],
   text: 'book',
   props: {
-    fontSize: 'A',
-    color: 'cream',
+    color: 'cream2',
     position: 'absolute',
-    padding: 'Z A'
+    padding: 'Z A',
+    top: '100%',
+    right: 'D1',
+    '@tabletL': {
+      right: 'C2',
+      bottom: '0'
+    }
   },
   attr: { target: '_blank' },
   style: {
     textTransform: 'uppercase',
     fontWeight: 900,
     zIndex: '30',
-    textDecoration: 'none',
-    top: '100%',
-    right: '80px',
-    '@median only screen and (max-width: 1225px)': {
-      right: '60px',
-      bottom: '0px'
-    }
+    textDecoration: 'none'
   }
 }
+
 const back = {
   proto: [Link, Box, Text],
 
   props: {
     position: 'absolute',
-    top: '300px',
-    left: '-40px',
+    top: 'G',
+    left: '-C',
     href: '#apartments',
-    color: 'cream',
+    color: 'cream2',
     flexAlign: 'center center',
-    gap: 'Y2',
     padding: 'Z',
     '@tabletL': {
-      left: '40px',
+      left: 'C',
       top: '122%'
+    },
+    '@mobileM': {
+      left: 'Z',
+      top: '135%'
     }
   },
   style: {
-    textDecoration: 'none',
-    textTransform: 'uppercase',
-    fontSize: `${11.5 / 16}em`,
-    fontWeight: 700,
-    letterSpacing: '0px',
-    '@media only screen and (max-width: 1366px)': {
-      left: '30px',
-      fontSize: '12.5px',
-      transform: 'rotate(-90deg)'
-    },
-    '@media only screen and (max-width: 560px)': {
-      transform: 'rotate(0deg)',
-      left: '10px',
-      top: '135%'
-    }
+    '@media only screen and (max-width: 1366px)': { transform: 'rotate(-90deg)' },
+    '@media only screen and (max-width: 560px)': { transform: 'rotate(0deg)' }
   },
   class: {
     show: (element, state) => state.activeTab
@@ -75,16 +65,11 @@ const back = {
       }
       : { opacity: 0 }
   },
-  // on: {
-  //   click: (event, element, state) => {
-  //     state.back === true ? (state.back === false)
-  //   }
-  // },
 
   icon: {
     proto: [Img, Box],
     props: {
-      boxSize: 'A',
+      boxSize: ' B',
       src: BACK_PNG
     }
   }
@@ -92,9 +77,7 @@ const back = {
 
 const Room = {
   proto: Box,
-  props: {
-    position: 'relative'
-  },
+  props: { position: 'relative' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -119,40 +102,23 @@ const Room = {
       }
 
       : {
-        '@media only screen and (max-width: 1225px)': {
-          display: 'none'
-        },
-        height: '0',
+        '@media only screen and (max-width: 1225px)': { display: 'none' },
+        height: 0,
         opacity: 0,
         button: { opacity: 0 },
         '> aside': { display: 'none' }
       }
   },
 
-  gallery: { },
+  gallery: {},
   RoomOffers,
-  navButton: {
-    proto: navButtons,
-
-    style: {
-      '@media only screen and (max-width: 1225px)': {
-        display: 'none'
-      }
-    }
-  },
+  navButton: { proto: navButtons },
   navButton2: {
     proto: navButtons2,
-    style: {
-      '@media only screen and (max-width: 1225px)': {
-        top: '65%'
-      },
-      '@media only screen and (max-height: 650px)': {
-        // bottom: '0px'
-      }
-    },
+    props: { '@tabletL': { top: '65%' } },
+
     ...[
       {
-        style: { marginLeft: '-3px' },
         on: {
           click: (event, element, state) => {
             const { activeImage } = state
@@ -165,6 +131,7 @@ const Room = {
           }
         }
       },
+
       {
         on: {
           click: (event, element, state) => {
@@ -181,6 +148,7 @@ const Room = {
       }
     ]
   },
+
   book: { proto: book },
   back: { proto: back }
 }
