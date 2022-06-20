@@ -10,15 +10,13 @@ const yardEntrence = {
     position: 'absolute',
     margin: '0 G 0 0',
     '@tabletL': {
-      boxSize: `80% ${450 / 16}em`,
-      margin: '0'
-    },
-    '@mobileL': { boxSize: `90% G3` },
-    '@mobileM': { width: '100%' },
-    '@mobileXS': { height: 'G' }
+      margin: '0',
+      boxSize: `60% ${400 / 16}em`
+
+    }
   },
   style: {
-    // border: '4px solid red',
+    // border: '4px solid green',
     // border: '5px solid rgba(248, 241, 227, 1)',
     boxShadow: 'inset 0 0 35px 1px rgba(0, 0, 0, .8)',
     backgroundAttachment: 'fixed',
@@ -60,16 +58,8 @@ const texts = {
   props: {
     position: 'absolute',
     margin: 'I1 H -D 0',
-    padding: '',
     '@tabletL': {
-      margin: '0 0 0 0',
-      background: 'cream2',
-      padding: '0 C C2 F',
-      left: '0'
-    },
-    '@mobileL': {
-      left: '0'
-      // padding: 'D 0 0 D'
+      margin: '0 0 0 0'
     }
   },
   style: {
@@ -83,10 +73,7 @@ const texts = {
     proto: Box,
     props: {
       flexFlow: 'column',
-      gap: 'Z',
-      '@tabletL': {
-        padding: 'D 0 0 0'
-      }
+      gap: 'Z'
     },
     childProto: {
       proto: [Text, Box],
@@ -166,12 +153,10 @@ export default {
     maxHeight: 'I',
     margin: '0 0 H 0',
     '@tabletL': {
-      margin: '0 0 E2 0',
-      flexAlign: 'flex-start center',
-      boxSize: `100% ${670 / 16}em`
+      // flexAlign: 'center flex-start'
     }
   },
-  // style: { border: '7px solid green' },
+  // style: { border: '7px solid red' },
 
   yardEntrence,
   streetEntrence,

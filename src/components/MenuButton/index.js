@@ -1,6 +1,6 @@
 'use strict'
 
-import { Box } from '@symbo.ls/all'
+import { Box } from '@symbo.ls/symbols'
 
 export const MenuButton = {
   proto: Box,
