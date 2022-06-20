@@ -5,16 +5,15 @@ import { bbSololaki } from '../../texts'
 export default {
   proto: Box,
   props: {
-    boxSize: '100% 100%',
-    flexAlign: 'center center',
-    maxHeight: `${750 / 16}em`
+    padding: 'G 0 0 0',
+    flexAlign: 'center center'
   },
   attr: { id: 'residence' },
 
   p: {
     proto: [bbSololaki, Box],
     props: {
-      maxWidth: 'H2',
+      maxWidth: `${750 / 15}em`,
       color: 'black .35',
       padding: '0 C'
     },

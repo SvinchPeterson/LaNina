@@ -10,7 +10,7 @@ const heading = {
   props: {
     position: 'absolute',
     top: '45%',
-    right: '13.5%',
+    right: '17.5%',
     '@mobileL': {
       right: 'auto',
       top: '40%',
@@ -22,10 +22,11 @@ const heading = {
   span: {
     proto: [Text, Box],
     props: {
+      fontSize: 'A',
       text: 'sololaki',
       color: 'orange2 .85',
       position: 'absolute',
-      right: 'Z',
+      right: 'A2',
       top: 'A',
       '@tabletS': {
         top: 'Z',
@@ -45,13 +46,15 @@ const heading = {
     style: {
       textTransform: 'uppercase',
       fontWeight: 900,
-      letterSpacing: `${12 / 16}em`,
+      letterSpacing: `${10 / 16}em`,
       animationName: letterSpacing,
-      animationDuration: '2.5s',
-      animationTimingFunction: 'ease-in-out',
+      animationDuration: '2.3s',
+      // animationTimingFunction: 'ease-in-out',
+      animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
       '@media only screen and (max-width: 768px)': {
         letterSpacing: `${8 / 16}em`,
-        animationName: letterSpacing2
+        animationName: letterSpacing2,
+        animationDuration: '8s'
       }
     }
   },
@@ -64,13 +67,17 @@ const heading = {
       margin: '0'
     },
     style: {
-      fontSize: `${130 / 16}em`,
+      fontSize: `${100 / 16}em`,
+      paddingRight: '15px',
       overflow: 'hidden',
       animationName: height,
-      animationDuration: '2s',
-      animationTimingFunction: 'ease-in-out',
+      animationDuration: '2.5s',
+      animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
+      // animationTimingFunction: 'ease-in-out',
       fontWeight: 100,
-      letterSpacing: `${-5 / 120}em`,
+      letterSpacing: `${-3 / 120}em`,
+
+      textShadow: '0px 0px 20px rgba(0, 0, 0, .35)',
       '@media only screen and (max-width: 1024px)': {
         fontSize: `${100 / 16}em`
       },
@@ -100,6 +107,7 @@ const image = {
     '@mobileL': { boxSize: '100% 100%' }
   },
   style: {
+    boxShadow: 'inset 0px 0px 5px 0px black',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
@@ -108,7 +116,7 @@ const image = {
       backgroundAttachment: 'fixed',
       animationName: position,
       animationDuration: '3s',
-      animationTimingFunction: 'ease-in-out'
+      animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
     },
     '@media only screen and (max-width: 1366px)': {
       backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')',

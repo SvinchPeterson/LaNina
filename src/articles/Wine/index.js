@@ -8,8 +8,8 @@ const image = {
 
   props: {
     boxSize: `H H2`,
-    position: 'absolute',
-    margin: '0 G 0 0',
+    // position: 'absolute',
+    // margin: '0 G 0 0',
     '@tabletL': {
       width: '80%',
       margin: '0'
@@ -19,7 +19,7 @@ const image = {
   style: {
     backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .35)),url(' + WINE_JPG + ')',
     backgroundSize: 'contain',
-    backgroundPosition: 'left 300px bottom 150px',
+    backgroundPosition: 'center bottom 100px',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     zIndex: 2,
@@ -34,10 +34,10 @@ const image = {
 const paragraph = {
   proto: Box,
   props: {
-    height: `${800 / 16}em`,
     position: 'absolute',
-    padding: '0 D 0 E',
-    margin: '0 0 0 H1',
+    padding: 'D2 B',
+    background: 'cream2',
+    // margin: 'F 0 0 F',
     flexAlign: 'center flex-end',
     '@tabletL': {
       height: 'fit-content',
@@ -53,8 +53,9 @@ const paragraph = {
   },
   style: {
     borderTop: 'none',
+    zIndex: '10',
     '@media only screen and (min-width: 1366px)': {
-      background: 'linear-gradient(rgba(248, 241, 227, 0), rgba(248, 241, 227, 0),rgba(42, 81, 61, .35))',
+      // background: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, .35),rgba(42, 81, 61, .35))',
       backgroundAttachment: 'fixed',
       backgroundPosition: 'bottom 200px center'
     },
@@ -68,7 +69,8 @@ const paragraph = {
     proto: [wineText, Box],
     style: { fontSize: `${15 / 16}em` },
     props: {
-      maxWidth: 'G1',
+      maxWidth: 'H',
+      padding: '0 C',
       color: 'black .35',
       '@tabletL': { maxWidth: 'H3' }
     }
@@ -82,7 +84,7 @@ export default {
     maxHeight: `${750 / 16}em`,
     position: 'relative',
     flexAlign: 'center center',
-    margin: 'G2 0 G 0',
+    margin: 'G 0 F2 0',
     '@mobileL': { margin: 'F 0 G 0' },
     '@mobileS': { margin: 'D 0 F 0' }
   },

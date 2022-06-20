@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Text } from '@symbo.ls/symbols'
+import { Box } from '@symbo.ls/symbols'
 
 import {
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
@@ -8,7 +8,6 @@ import {
 } from '../../components'
 
 import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
-import { height2 } from '../../animations'
 
 const roomsTabs = {
   tag: 'header',

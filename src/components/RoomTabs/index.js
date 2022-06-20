@@ -2,8 +2,6 @@
 
 import { Box, Link, Img, Text } from '@symbo.ls/symbols'
 
-import DRESS_PNG from '../../assets/icons/dress.png'
-
 const icon = {
   proto: Box,
   props: {
@@ -13,14 +11,12 @@ const icon = {
     bottom: '0'
   },
   style: {
-    zIndex: '20'
+    zIndex: '20',
+    opacity: '.75'
   },
   img: {
     proto: [Img, Box],
-    props: {
-      boxSize: 'A1 A1'
-      // src: DRESS_PNG
-    }
+    props: { boxSize: 'A1 A1' }
   }
 }
 
@@ -109,7 +105,6 @@ export const RoomTab = {
       fontWeight: 700,
       position: 'absolute',
       width: '125px',
-      // letterSpacing: '1px',
       padding: '12px 0',
       top: `${0 / 10}em`,
       left: `${0 / 10}em`,
@@ -117,18 +112,9 @@ export const RoomTab = {
       background: 'rgba(60,84, 72, .45)',
       textAlign: 'center',
       borderBottomRightRadius: '4px',
-      // borderTopRightRadius: '4px',
-      // padding: '10px 20px',
       color: 'rgba(248, 241, 227, 1)',
-      // color: '#FFCEA8',
-      // color: 'rgba(220, 187, 140, 1)',
       textTransform: 'uppercase',
-      // textTransform: 'capitalize',
-      whiteSpace: 'nowrap',
-      '@media only screen and (max-width: 1225px)': {
-        left: `${15 / 14}em`,
-        top: `${30 / 14}em`
-      }
+      whiteSpace: 'nowrap'
     },
 
     '@media only screen and (min-width: 1225px)': {

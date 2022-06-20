@@ -37,11 +37,11 @@ export const opacityReverse = keyframes`
 `
 export const letterSpacing = keyframes`
   from {
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     opacity: 0;
   }
   to {
-    letter-spacing: 12px;
+    letter-spacing: 10px;
     opacity: 1;
   }
 `
@@ -131,18 +131,22 @@ export const position = keyframes`
 export const height = keyframes`
   from {
     height: 0;
+    opacity: 0;
 
   }
   to {
    height: 150px;
+   opacity: 1;
   }
 `
 export const height2 = keyframes`
   from {
     height: 0;
+    opacity: 0;
 
   }
   to {
    height: 100px;
+   opacity: 1;
   }
 `

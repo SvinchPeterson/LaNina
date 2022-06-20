@@ -28,7 +28,6 @@ export const navButtons = {
     props: { padding: 'A Z' },
     style: {
       border: 'none',
-      // border: '.5px solid rgba(245, 245, 245, .25)',
       background: 'none',
       '> img': { opacity: '.7' },
       '&:hover > img': { opacity: '1' }
@@ -46,9 +45,7 @@ export const navButtons = {
           position: 'absolute',
           width: '40%',
           height: '1px',
-          // background: '#FFCEA8',
           background: 'rgba(245, 245, 245, .5)',
-          // background: ' rgba(168, 98, 63, 1)',
           bottom: '-7px',
           left: '50%',
           transform: 'translate(-50%, -50%)'
