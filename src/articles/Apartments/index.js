@@ -98,6 +98,7 @@ export default {
     backgroundPosition: 'center',
     boxSizing: 'border-box',
     backgroundAttachment: 'fixed',
+    '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' },
     '&:before': {
       content: '""',
       width: '100%',
@@ -106,7 +107,8 @@ export default {
       top: 0,
       left: 0,
       background: 'radial-gradient(rgba(248, 241, 227, 0),rgba(60, 84, 72, .75),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
-      backgroundAttachment: 'fixed'
+      backgroundAttachment: 'fixed',
+      '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
     }
   },
   attr: { id: 'apartments' },

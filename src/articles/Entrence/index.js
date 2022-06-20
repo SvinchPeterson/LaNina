@@ -10,10 +10,16 @@ const yardEntrence = {
     position: 'absolute',
     margin: '0 G 0 0',
     '@tabletL': {
-      margin: '0',
-      boxSize: `60% ${400 / 16}em`
-
+      margin: '0 0 0 0',
+      boxSize: `80% ${400 / 16}em`
+    },
+    '@mobileL': {
+      boxSize: `85% ${400 / 16}em`
+    },
+    '@mobileM': {
+      boxSize: `100% ${400 / 16}em`
     }
+
   },
   style: {
     // border: '4px solid green',
@@ -59,7 +65,18 @@ const texts = {
     position: 'absolute',
     margin: 'I1 H -D 0',
     '@tabletL': {
-      margin: '0 0 0 0'
+      margin: '0 0 0 0',
+      bottom: '-B'
+    },
+    '@mobileM': {
+      padding: '0 B1',
+      bottom: '-C'
+    },
+    '@mobileS': {
+      bottom: '-C2'
+    },
+    '@mobileXS': {
+      padding: '0 A'
     }
   },
   style: {
@@ -84,7 +101,7 @@ const texts = {
         textTransform: 'uppercase',
         fontWeight: 900,
         fontSize: `${13 / 16}em`,
-        '@media only screen and (max-width: 350px)': { fontSize: `${12 / 16}em` }
+        '@media only screen and (max-width: 480px)': { fontSize: `${12.5 / 16}em` }
       }
     },
     ...[
@@ -123,8 +140,7 @@ const texts = {
       letterSpacing: '1px',
       lineHeight: `${20 / 13.5}em`,
       '@media only screen and (max-width: 480px)': {
-        width: `${280 / 13.5}em`,
-        paddingBottom: `${10 / 13.5}em`
+        width: `${270 / 13.5}em`
       }
     }
   },
@@ -139,7 +155,10 @@ const texts = {
     style: {
       fontSize: `${13.5 / 16}em`,
       letterSpacing: '1px',
-      '@media only screen and (max-width: 480px)': { width: `${250 / 13.5}em` }
+      '@media only screen and (max-width: 480px)': {
+        width: `${270 / 13.5}em`
+      }
+      // '@media only screen and (max-width: 480px)': { width: `${250 / 13.5}em` }
     }
   }
 }
@@ -152,9 +171,7 @@ export default {
     boxSize: `100% ${800 / 16}em`,
     maxHeight: 'I',
     margin: '0 0 H 0',
-    '@tabletL': {
-      // flexAlign: 'center flex-start'
-    }
+    '@tabletL': { margin: '0 0 F1 0' }
   },
   // style: { border: '7px solid red' },
 

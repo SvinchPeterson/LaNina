@@ -49,7 +49,6 @@ const heading = {
       letterSpacing: `${10 / 16}em`,
       animationName: letterSpacing,
       animationDuration: '2.3s',
-      // animationTimingFunction: 'ease-in-out',
       animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
       '@media only screen and (max-width: 768px)': {
         letterSpacing: `${8 / 16}em`,
