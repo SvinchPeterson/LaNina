@@ -5,9 +5,9 @@ const header = {
   tag: 'header',
   proto: Box,
   props: {
-    height: 'C1',
+    // height: 'D',
     flexAlign: 'center space-between',
-    padding: '0 A2 0 B'
+    padding: 'Z2 A2 Z2 B'
   },
   style: {
     textTransform: 'uppercase',
@@ -27,12 +27,17 @@ const header = {
   minimize: {
     proto: [Button, Box],
     props: { padding: 'Z1' },
-    style: { background: 'transparent' },
+    style: {
+      background: 'transparent',
+      '> button': { opacity: '.7' },
+      '&:hover > button': { opacity: '1' }
+
+    },
     span: {
       proto: [Button, Box],
       props: {
-        boxSize: 'B X',
-        background: 'cream2 .8',
+        boxSize: 'B V',
+        background: 'cream2',
         round: 'Z'
       }
     },
@@ -53,8 +58,9 @@ const offers = {
     height: '0',
     padding: '0 C2 0 C2',
     columns: 'repeat(2, 1fr)',
-    columnGap: 'C',
-    rowGap: 'X1',
+    columnGap: '0',
+    rowGap: '0',
+    // alignContent: 'center',
     '@tabletL': { columns: '100%' }
   },
   style: {
@@ -69,7 +75,7 @@ const offers = {
     show: (element, state) => state.offers
 
       ? {
-        minHeight: `${230 / 16}em`,
+        minHeight: `${200 / 16}em`,
         '@media only screen and (max-height: 600px)': {
           minHeight: `${100 / 16}em`
         },
@@ -94,11 +100,13 @@ const offers = {
     proto: [Box, Text],
     props: {
       color: 'cream .85',
-      fontSize: 'Z'
+      fontSize: 'Y',
+      flexAlign: 'center flex-start'
     },
     style: {
       fontWeight: 500,
       textTransform: 'uppercase'
+      // border: '2px solid red'
     }
   },
   ...[
@@ -128,12 +136,12 @@ export const RoomOffers = {
   proto: Box,
   props: {
     miWidth: 'G1',
-    background: 'green2 .65',
+    // background: 'green2 .65',
     position: 'absolute',
-    left: '50px',
-    bottom: '-50px',
+    left: '8%',
+    bottom: '-F',
     flexFlow: 'column',
-    round: 'C',
+    round: 'B',
     '@tabletL': {
       maxHeight: 'G3',
       left: '50%',
@@ -148,6 +156,9 @@ export const RoomOffers = {
     transition: 'all 1s ease-in-out',
     backdropFilter: 'blur(5px)',
     zIndex: '70',
+    background: 'linear-gradient(rgba(60,84, 72, 1), rgba(60,84, 72, 1))',
+    // border: '.5px solid rgba(245, 245, 245, .25)',
+    transform: 'translate(50%, 50%)',
     '@media only screen and (max-width: 1225px)': {
       overflow: 'hidden',
       transform: 'translate(-50%, 50%)'
@@ -157,7 +168,7 @@ export const RoomOffers = {
   class: {
     show: (element, state) => state.offers
       ? {
-        '@media only screen and (min-width: 1225px)': { paddingBottom: `${30 / 16}em` },
+        '@media only screen and (min-width: 1225px)': { paddingBottom: `${40 / 16}em`, marginBottom: '100px' },
         '@media only screen and (max-width: 1225px)': { paddingBottom: `${16 / 16}em` }
       }
       : {}

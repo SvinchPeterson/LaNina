@@ -2,50 +2,63 @@
 
 import { Box, Link, Img, Text } from '@symbo.ls/symbols'
 
-const book = {
-  proto: [Link, Box],
+import DRESS_PNG from '../../assets/icons/dress.png'
+
+const icon = {
+  proto: Box,
   props: {
-    flexAlign: 'center center',
-    flexFlow: 'row',
+    padding: 'B',
     position: 'absolute',
-    left: '50%',
-    bottom: 'A',
-    padding: 'Y1 A Y1 A',
-    gap: 'Y',
-    round: 'B1'
+    right: '0',
+    bottom: '0'
   },
   style: {
-    pointerEvents: 'pointed !important',
-    zIndex: 10,
-    textTransform: 'uppercase',
-    fontWeight: 900,
-    letterSpacing: '0px',
-    backdropFilter: 'blur(2px)',
-    border: '1px solid rgba(248, 241, 227, .5)',
-    textDecoration: 'none',
-    transform: 'translate(-50%, -50%)',
-    '&:hover': { opacity: 1 },
-    '@media only screen and (max-width: 480px)': { bottom: '5%' },
-    '> span': { fontSize: `${13 / 16}em` }
+    zIndex: '20'
   },
-
-  icon: {
+  img: {
     proto: [Img, Box],
-    props: { boxSize: 'Z1 Z1' }
-  },
-  span: {
-    proto: [Text, Box],
     props: {
-      text: 'book',
-      color: 'cream'
+      boxSize: 'A1 A1'
+      // src: DRESS_PNG
     }
   }
+}
+
+const tabParagraph = {
+  proto: [Text, Box],
+  props: {
+    color: 'cream 1',
+    fontSize: 'Z',
+    maxWidth: 'G2',
+    padding: `0 B2 0 C1`,
+    '@tabletL': {
+      fontSize: 'A',
+      maxWidth: 'H'
+    },
+    '@mobileL': { padding: 'C1 B1' },
+    '@mobileS': { padding: 'C1' }
+  },
+  style: {
+    zIndex: 10,
+    opacity: 0,
+    pointerEvents: 'none',
+    transition: 'opacity .3s ease-in-out',
+    transitionDelay: '.4s',
+    lineHeight: `${17 / 14}em`,
+    letterSpacing: '.5px',
+    fontWeight: 400,
+    textAlign: 'left'
+  },
+  class: {
+    show: (element, state) => state.activeTab === element.parent.parent.key ? { opacity: 1 } : {}
+  }
+
 }
 
 export const RoomTab = {
   proto: [Link, Box],
   props: {
-    height: 'G3',
+    height: 'G1',
     padding: 'B',
     position: 'relative',
     round: 'X',
@@ -73,6 +86,11 @@ export const RoomTab = {
     position: 'relative',
     backdropFilter: 'blur(2px)',
     boxShadow: '0px 0px 2px 0px rgba(0, 0, 0, .35)',
+    // overflow: 'hidden',
+    // '&:hover:after': {
+    //   color: '#FFCEA8',
+    //   opacity: '.85'
+    // },
     '&:before': {
       content: '""',
       position: 'absolute',
@@ -81,19 +99,31 @@ export const RoomTab = {
       top: 0,
       left: 0,
       background: 'linear-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, .9))',
-      opacity: '.5',
+      opacity: '.35',
       transition: 'opacity .7s ease-in-out',
       cursor: 'pointer'
     },
     '&:after': {
       content: '""',
-      fontSize: `${14 / 16}em`,
-      fontWeight: '900',
+      fontSize: `${10 / 14}em`,
+      fontWeight: 700,
       position: 'absolute',
-      top: `${25 / 14}em`,
-      left: `${5 / 14}em`,
-      color: 'rgba(244, 233, 217, .85)',
+      width: '125px',
+      // letterSpacing: '1px',
+      padding: '12px 0',
+      top: `${0 / 10}em`,
+      left: `${0 / 10}em`,
+      backdropFilter: 'blur(10px)',
+      background: 'rgba(60,84, 72, .45)',
+      textAlign: 'center',
+      borderBottomRightRadius: '4px',
+      // borderTopRightRadius: '4px',
+      // padding: '10px 20px',
+      color: 'rgba(248, 241, 227, 1)',
+      // color: '#FFCEA8',
+      // color: 'rgba(220, 187, 140, 1)',
       textTransform: 'uppercase',
+      // textTransform: 'capitalize',
       whiteSpace: 'nowrap',
       '@media only screen and (max-width: 1225px)': {
         left: `${15 / 14}em`,
@@ -116,7 +146,8 @@ export const RoomTab = {
       state.update({ activeTab: element.key })
       element.parent.parent.parent.rooms.update({
         style: {
-          minHeight: `${700 / 16}em`,
+          minHeight: `${500 / 16}em`,
+
           opacity: 1,
           padding: `0 ${200 / 16}em`,
           '@media only screen and (max-width: 1366px)': { padding: '0' }
@@ -137,36 +168,8 @@ export const RoomTab = {
     },
     style: { overflow: 'hidden' },
 
-    p: {
-      proto: [Text, Box],
-      props: {
-        color: 'cream 1',
-        fontSize: 'Z',
-        maxWidth: 'G2',
-        padding: `0 B2 0 C1`,
-        '@tabletL': {
-          fontSize: 'A',
-          maxWidth: 'H'
-        },
-        '@mobileL': { padding: 'C1 B1' },
-        '@mobileS': { padding: 'C1' }
-      },
-      style: {
-        zIndex: 10,
-        opacity: 0,
-        pointerEvents: 'none',
-        transition: 'opacity .3s ease-in-out',
-        transitionDelay: '.4s',
-        lineHeight: `${17 / 14}em`,
-        letterSpacing: '.5px',
-        fontWeight: 400,
-        textAlign: 'left'
-      },
-      class: {
-        show: (element, state) => state.activeTab === element.parent.parent.key ? { opacity: 1 } : {}
-      }
-    },
+    p: { proto: tabParagraph },
 
-    book: { proto: book }
+    icon: { proto: icon }
   }
 }

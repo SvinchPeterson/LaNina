@@ -13,9 +13,9 @@ export const navButtons = {
   props: {
     position: 'absolute',
     top: '63%',
-    right: `-C1`,
+    right: `-B2`,
     flexFlow: 'column',
-    gap: '0'
+    gap: 'Z2'
   },
   style: {
     transform: 'translate(50%, -50%)',
@@ -27,10 +27,11 @@ export const navButtons = {
     tag: 'button',
     props: { padding: 'A Z' },
     style: {
-      border: '1px solid rgba(245, 245, 245, .35)',
+      border: 'none',
+      // border: '.5px solid rgba(245, 245, 245, .25)',
       background: 'none',
-      '&:hover > img': { opacity: 1 },
-      '> img': { opacity: '.65' }
+      '> img': { opacity: '.7' },
+      '&:hover > img': { opacity: '1' }
     }
   },
   ...[
@@ -43,11 +44,12 @@ export const navButtons = {
         '&:before': {
           content: '""',
           position: 'absolute',
-          width: '60%',
+          width: '40%',
           height: '1px',
+          // background: '#FFCEA8',
           background: 'rgba(245, 245, 245, .5)',
           // background: ' rgba(168, 98, 63, 1)',
-          bottom: '-0.5px',
+          bottom: '-7px',
           left: '50%',
           transform: 'translate(-50%, -50%)'
         }
@@ -57,7 +59,8 @@ export const navButtons = {
         props: {
           src: UP_ARROW_PNG,
           boxSize: 'A2 '
-        }
+        },
+        style: { transition: 'opacity .15s ease-in-out' }
       },
       on: {
         click: (event, element, state) => {
@@ -83,7 +86,8 @@ export const navButtons = {
         props: {
           src: DOWN_ARROW_PNG,
           boxSize: 'A2 '
-        }
+        },
+        style: { transition: 'opacity .15s ease-in-out' }
       },
       on: {
         click: (event, element, state) => {

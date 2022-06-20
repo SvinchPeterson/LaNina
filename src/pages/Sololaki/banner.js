@@ -9,7 +9,7 @@ const heading = {
   proto: Box,
   props: {
     position: 'absolute',
-    top: '35%',
+    top: '45%',
     right: '13.5%',
     '@mobileL': {
       right: 'auto',
@@ -47,7 +47,7 @@ const heading = {
       fontWeight: 900,
       letterSpacing: `${12 / 16}em`,
       animationName: letterSpacing,
-      animationDuration: '2s',
+      animationDuration: '2.5s',
       animationTimingFunction: 'ease-in-out',
       '@media only screen and (max-width: 768px)': {
         letterSpacing: `${8 / 16}em`,
@@ -64,13 +64,13 @@ const heading = {
       margin: '0'
     },
     style: {
-      fontSize: `${120 / 16}em`,
+      fontSize: `${130 / 16}em`,
       overflow: 'hidden',
       animationName: height,
       animationDuration: '2s',
       animationTimingFunction: 'ease-in-out',
       fontWeight: 100,
-      letterSpacing: `${-3 / 120}em`,
+      letterSpacing: `${-5 / 120}em`,
       '@media only screen and (max-width: 1024px)': {
         fontSize: `${100 / 16}em`
       },

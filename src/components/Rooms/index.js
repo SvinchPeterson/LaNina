@@ -12,13 +12,13 @@ import {
 
 const book = {
   proto: [Link, Text, Box],
-  text: 'book',
   props: {
     color: 'cream2',
     position: 'absolute',
     padding: 'Z A',
-    top: '100%',
-    right: 'D1',
+    fontSize: 'Z',
+    bottom: '0',
+    left: '-D',
     '@tabletL': {
       right: 'C2',
       bottom: '0'
@@ -29,7 +29,29 @@ const book = {
     textTransform: 'uppercase',
     fontWeight: 900,
     zIndex: '30',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    textOrientation: 'upright',
+    writingMode: 'vertical-rl',
+    '&:hover > span': { opacity: 1 }
+  },
+  class: {
+    show: (element, state) => state.activeTab
+      ? {
+        opacity: 1,
+        transition: 'opacity 1.5s ease-in-out .5s'
+      }
+      : { opacity: 0 }
+  },
+
+  span: {
+    proto: Box,
+    text: 'BOOK',
+    props: {
+    },
+    style: {
+      opacity: '.7',
+      transition: 'opacity .1s ease-in-out'
+    }
   }
 }
 
@@ -37,9 +59,11 @@ const back = {
   proto: [Link, Box, Text],
 
   props: {
+    flexFlow: 'column',
+    gap: 'Z',
     position: 'absolute',
     top: 'G',
-    left: '-C',
+    left: '-C2',
     href: '#apartments',
     color: 'cream2',
     flexAlign: 'center center',
@@ -54,14 +78,18 @@ const back = {
     }
   },
   style: {
+    textDecoration: 'none',
+    '&:hover > span': { opacity: '1' },
+    '&:hover > img': { opacity: '1' },
+    // border: '1px solid red',
     '@media only screen and (max-width: 1366px)': { transform: 'rotate(-90deg)' },
     '@media only screen and (max-width: 560px)': { transform: 'rotate(0deg)' }
   },
   class: {
     show: (element, state) => state.activeTab
       ? {
-        opacity: 0.65,
-        transition: 'opacity 2s ease-in-out .5s'
+        opacity: 1,
+        transition: 'opacity 1.8s ease-in-out .8s'
       }
       : { opacity: 0 }
   },
@@ -71,6 +99,25 @@ const back = {
     props: {
       boxSize: ' B',
       src: BACK_PNG
+    },
+    style: {
+      opacity: '.65',
+      transition: 'opacity .1s ease-in-out'
+    }
+  },
+  span: {
+    proto: Box,
+    props: {
+      text: 'UP',
+      fontSize: 'Z'
+    },
+    style: {
+      textOrientation: 'upright',
+      writingMode: 'vertical-rl',
+      letterSpacing: '0',
+      opacity: '.7',
+      transition: 'opacity .15s ease-in-out'
+
     }
   }
 }
@@ -81,10 +128,10 @@ const Room = {
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        height: `${650 / 16}em`,
+        height: `${600 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
-        paddingTop: `${100 / 16}em`,
+        paddingTop: `${130 / 16}em`,
         '@media only screen and (max-width: 1225px)': {
           transition: 'all .1s ease-in-out',
           display: 'block',

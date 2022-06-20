@@ -35,14 +35,7 @@ export const tabBallerina = {
   props: { href: '#roomBallerina' },
   content: {
     p: { proto: ballerina },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: DRESS_PNG } }
-    }
+    icon: { img: { props: { src: DRESS_PNG } } }
   }
 }
 
@@ -66,14 +59,7 @@ export const tabRedBrick = {
       proto: redBrick,
       style: { width: `${465 / 14}em !important` }
     },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1649549944_%2BCos1t1uD845OoWN',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: BRICKS_PNG } }
-    }
+    icon: { img: { props: { src: BRICKS_PNG } } }
   }
 }
 
@@ -94,14 +80,7 @@ export const tabYellowCouch = {
   },
   content: {
     p: { proto: yellowCouch },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1649549947_6qVLP%2BHZyXqY%2BvrL',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: SOFA_PNG } }
-    }
+    icon: { img: { props: { src: SOFA_PNG } } }
   }
 }
 
@@ -122,14 +101,7 @@ export const tabGreenForest = {
   },
   content: {
     p: { proto: greenForest },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1649549949_GCS4Ixi%2FrxMbApfW',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: LEAF_PNG } }
-    }
+    icon: { img: { props: { src: LEAF_PNG } } }
   }
 }
 
@@ -150,13 +122,6 @@ export const tabRetro = {
   },
   content: {
     p: { proto: retro },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1649552000_jBh%2BzYZTB7v6VHUs',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: VINYL_PNG } }
-    }
+    icon: { img: { props: { src: VINYL_PNG } } }
   }
 }

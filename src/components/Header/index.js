@@ -8,7 +8,7 @@ const links = {
   proto: Box,
   props: {
     flexAlign: 'center center',
-    gap: 'C'
+    gap: 'B'
   },
   childProto: {
     proto: [Link, Text, Box],
@@ -54,8 +54,7 @@ export const Header = {
     top: '0',
     left: '0',
     flexAlign: 'center space-between',
-    padding: 'B2 D B D',
-    gap: 'C'
+    padding: 'C D2 B D'
   },
   style: {
     zIndex: '100',

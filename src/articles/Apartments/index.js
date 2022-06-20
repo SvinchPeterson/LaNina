@@ -8,6 +8,7 @@ import {
 } from '../../components'
 
 import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
+import { height2 } from '../../animations'
 
 const roomsTabs = {
   tag: 'header',
@@ -16,7 +17,7 @@ const roomsTabs = {
     position: 'relative',
     flexFlow: 'column',
     flexAlign: 'flex-start center',
-    padding: '0 6%',
+    padding: '0 10%',
     '@tabletL': { padding: '0' }
   },
 
@@ -86,10 +87,10 @@ export default {
   props: {
     flexFlow: 'column',
     position: 'relative',
-    padding: `F 0 G 0`,
-    '@tabletL': { padding: 'F3 0' },
-    '@mobileL': { padding: 'F 0' },
-    '@mobileS': { padding: 'E1 0' }
+    padding: `F2 0 G 0`
+    // '@tabletL': { padding: 'F3 0' },
+    // '@mobileL': { padding: 'F 0' },
+    // '@mobileS': { padding: 'E1 0' }
   },
   style: {
     scrollBehavior: 'smooth',
@@ -97,6 +98,7 @@ export default {
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     boxSizing: 'border-box',
+    backgroundAttachment: 'fixed',
     '&:before': {
       content: '""',
       width: '100%',
@@ -104,26 +106,11 @@ export default {
       position: 'absolute',
       top: 0,
       left: 0,
-      background: 'radial-gradient(rgba(248, 241, 227, .1), rgba(60, 84, 72, .85), rgba(42, 81, 61, .85))',
+      background: 'radial-gradient(rgba(248, 241, 227, 0),rgba(60, 84, 72, .75),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
       backgroundAttachment: 'fixed'
     }
   },
   attr: { id: 'apartments' },
-
-  title: {
-    proto: [Text, Box],
-    props: {
-      text: 'Apartments',
-      fontSize: 'F',
-      color: 'gold .85',
-      position: 'absolute',
-      top: 'C',
-      right: 'B',
-      '@tabletL': { top: 'C1' },
-      '@mobileL': { display: 'none' }
-    },
-    style: { fontWeight: 200 }
-  },
   roomsTabs,
   rooms
 }
