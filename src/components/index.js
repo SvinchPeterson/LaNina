@@ -7,7 +7,7 @@ import { RoomOffers } from './RoomOffers'
 import { Menu } from './Menu'
 import { MenuButton } from './MenuButton'
 
-import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs'
+import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './RoomTabs/tabs'
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from './Gallery/index'
 import { navButtons, navButtons2 } from './NavButtons'
 import { roomBallerina, roomRedBrick, roomYellowCouch, roomRetro, roomGreenForest } from './Rooms'

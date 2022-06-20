@@ -2,25 +2,8 @@
 
 import { Box, Link, Img, Text } from '@symbo.ls/symbols'
 
-import { ballerina, redBrick, yellowCouch, greenForest, retro } from '../../texts'
-
-import BALLERINA_JPG from '../../assets/images/ballerina/ballerinaTab.jpg'
-import REDBRICK_JPG from '../../assets/images/redBrick/redbrickTab.jpg'
-import YELLOWCOUCH_JPG from '../../assets/images/yellowCouch/yellowcouchTab.jpg'
-import GREENFOREST_JPG from '../../assets/images/greenForest/greenforestTab.jpg'
-import RETRO_JPG from '../../assets/images/retro/retroTab.jpg'
-
-import DRESS_PNG from '../../assets/icons/dress.png'
-import BRICKS_PNG from '../../assets/icons/bricks.png'
-import SOFA_PNG from '../../assets/icons/sofa.png'
-import LEAF_PNG from '../../assets/icons/leaf.png'
-import VINYL_PNG from '../../assets/icons/vinyl.png'
-
-import { styleRoomTab, styleParagraph, styleBook } from './style'
-
 const book = {
   proto: [Link, Box],
-  class: [styleBook],
   props: {
     flexAlign: 'center center',
     flexFlow: 'row',
@@ -28,9 +11,24 @@ const book = {
     left: '50%',
     bottom: 'A',
     padding: 'Y1 A Y1 A',
-    gap: 'Y'
+    gap: 'Y',
+    round: 'B1'
   },
-  style: { pointerEvents: 'pointed !important' },
+  style: {
+    pointerEvents: 'pointed !important',
+    zIndex: 10,
+    textTransform: 'uppercase',
+    fontWeight: 900,
+    letterSpacing: '0px',
+    backdropFilter: 'blur(2px)',
+    border: '1px solid rgba(248, 241, 227, .5)',
+    textDecoration: 'none',
+    transform: 'translate(-50%, -50%)',
+    '&:hover': { opacity: 1 },
+    '@media only screen and (max-width: 480px)': { bottom: '5%' },
+    '> span': { fontSize: `${13 / 16}em` }
+  },
+
   icon: {
     proto: [Img, Box],
     props: { boxSize: 'Z1 Z1' }
@@ -44,14 +42,75 @@ const book = {
   }
 }
 
-const roomTab = {
+export const RoomTab = {
   proto: [Link, Box],
   props: {
+    height: 'G3',
     padding: 'B',
     position: 'relative',
-    round: 'X'
+    round: 'X',
+    '@tabletL': {
+      minWidth: '100%',
+      height: 'H'
+    },
+    '@mobileL': {
+      minWidth: `100%`,
+      minHeight: '100%',
+      height: 'G3'
+    },
+    '@mobileM': { height: 'G' }
   },
-  style: styleRoomTab,
+
+  style: {
+    flex: 1,
+    cursor: 'pointer',
+    boxSizing: 'border-box',
+    transition: 'all .7s ease-in-out',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    zIndex: 1,
+    textDecoration: 'none',
+    position: 'relative',
+    backdropFilter: 'blur(2px)',
+    boxShadow: '0px 0px 2px 0px rgba(0, 0, 0, .35)',
+    '&:before': {
+      content: '""',
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      background: 'linear-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, .9))',
+      opacity: '.5',
+      transition: 'opacity .7s ease-in-out',
+      cursor: 'pointer'
+    },
+    '&:after': {
+      content: '""',
+      fontSize: `${14 / 16}em`,
+      fontWeight: '900',
+      position: 'absolute',
+      top: `${25 / 14}em`,
+      left: `${5 / 14}em`,
+      color: 'rgba(244, 233, 217, .85)',
+      textTransform: 'uppercase',
+      whiteSpace: 'nowrap',
+      '@media only screen and (max-width: 1225px)': {
+        left: `${15 / 14}em`,
+        top: `${30 / 14}em`
+      }
+    },
+
+    '@media only screen and (min-width: 1225px)': {
+      '&:hover': { flex: 5.5, backdropFilter: 'blur(10px)' },
+      '&:hover > div > p': { opacity: 1 },
+      '&:not(:hover) > div > p': {
+        transitionDelay: '0s',
+        transition: 'opacity 0s ease-in-out'
+      },
+      '&:hover:before': { opacity: 1 }
+    }
+  },
   on: {
     click: (event, element, state) => {
       state.update({ activeTab: element.key })
@@ -65,6 +124,7 @@ const roomTab = {
       })
     }
   },
+
   content: {
     proto: Box,
     props: {
@@ -74,167 +134,39 @@ const roomTab = {
       left: '0',
       flexFlow: 'column',
       flexAlign: 'center center'
-
     },
+    style: { overflow: 'hidden' },
 
     p: {
       proto: [Text, Box],
-      style: styleParagraph,
       props: {
-        color: 'cream 1'
+        color: 'cream 1',
+        fontSize: 'Z',
+        maxWidth: 'G2',
+        padding: `0 B2 0 C1`,
+        '@tabletL': {
+          fontSize: 'A',
+          maxWidth: 'H'
+        },
+        '@mobileL': { padding: 'C1 B1' },
+        '@mobileS': { padding: 'C1' }
+      },
+      style: {
+        zIndex: 10,
+        opacity: 0,
+        pointerEvents: 'none',
+        transition: 'opacity .3s ease-in-out',
+        transitionDelay: '.4s',
+        lineHeight: `${17 / 14}em`,
+        letterSpacing: '.5px',
+        fontWeight: 400,
+        textAlign: 'left'
       },
       class: {
         show: (element, state) => state.activeTab === element.parent.parent.key ? { opacity: 1 } : {}
       }
     },
-    book: {
-      proto: book
-    }
-  }
-}
 
-export const tabBallerina = {
-  proto: roomTab,
-  style: {
-    backgroundImage: 'url(' + BALLERINA_JPG + ')',
-    '&:after': { content: '"ballerina"' }
-  },
-  class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 5.5,
-        pointerEvents: 'none',
-        '&:before': { opacity: 1 },
-        backgroundAttachment: 'fixed',
-        boxShadow: 'none',
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
-  },
-  props: { href: '#roomBallerina' },
-  content: {
-    p: { proto: ballerina },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: DRESS_PNG } }
-    }
-  }
-}
-
-export const tabRedBrick = {
-  proto: roomTab,
-  props: { href: '#roomRedBrick' },
-  style: { backgroundImage: 'url(' + REDBRICK_JPG + ')', '&:after': { content: '"red brick"' } },
-  class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 5.5,
-        backgroundAttachment: 'fixed',
-        pointerEvents: 'none',
-        boxShadow: 'none',
-        '&:before': { opacity: 1 },
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
-  },
-  content: {
-    p: {
-      proto: redBrick,
-      style: { width: `${465 / 14}em !important` }
-    },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1649549944_%2BCos1t1uD845OoWN',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: BRICKS_PNG } }
-    }
-  }
-}
-
-export const tabYellowCouch = {
-  proto: roomTab,
-  props: { href: '#roomYellowCouch' },
-  style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')', '&:after': { content: '"yellow couch"' } },
-  class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 5.5,
-        backgroundAttachment: 'fixed',
-        pointerEvents: 'none',
-        boxShadow: 'none',
-        '&:before': { opacity: 1 },
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
-  },
-  content: {
-    p: { proto: yellowCouch },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1649549947_6qVLP%2BHZyXqY%2BvrL',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: SOFA_PNG } }
-    }
-  }
-}
-
-export const tabGreenForest = {
-  proto: roomTab,
-  props: { href: '#roomGreenForest' },
-  style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')', '&:after': { content: '"green forest"' } },
-  class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 5.5,
-        backgroundAttachment: 'fixed',
-        pointerEvents: 'none',
-        boxShadow: 'none',
-        '&:before': { opacity: 1 },
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
-  },
-  content: {
-    p: { proto: greenForest },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1649549949_GCS4Ixi%2FrxMbApfW',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: LEAF_PNG } }
-    }
-  }
-}
-
-export const tabRetro = {
-  proto: roomTab,
-  props: { href: '#roomRetro' },
-  style: { backgroundImage: 'url(' + RETRO_JPG + ')', '&:after': { content: '"retro"' } },
-  class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 5.5,
-        backgroundAttachment: 'fixed',
-        pointerEvents: 'none',
-        boxShadow: 'none',
-        '&:before': { opacity: 1 },
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
-  },
-  content: {
-    p: { proto: retro },
-    book: {
-      props: {
-        href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1649552000_jBh%2BzYZTB7v6VHUs',
-        target: '_blank'
-      },
-      style: { pointerEvents: 'painted' },
-      icon: { props: { src: VINYL_PNG } }
-    }
+    book: { proto: book }
   }
 }

@@ -117,7 +117,7 @@ export default {
       fontSize: 'F',
       color: 'gold .85',
       position: 'absolute',
-      top: 'D',
+      top: 'C',
       right: 'B',
       '@tabletL': { top: 'C1' },
       '@mobileL': { display: 'none' }
