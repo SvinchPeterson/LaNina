@@ -37,6 +37,14 @@ export const opacity = keyframes`
     opacity: 1;
   }
 `
+export const opacity2 = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .25;
+  }
+`
 export const opacityReverse = keyframes`
   from {
     opacity: 1;

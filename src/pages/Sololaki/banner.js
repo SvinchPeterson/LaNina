@@ -1,7 +1,7 @@
 'use strict'
 import { Box, Text } from '@symbo.ls/symbols'
 
-import { position, height, letterSpacing, letterSpacing4, position2, height2, height3, letterSpacing2 } from '../../animations'
+import { opacity2, position, height, letterSpacing, letterSpacing4, position2, height2, height3, letterSpacing2 } from '../../animations'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
 import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
 
@@ -173,6 +173,20 @@ const container = {
     background: 'radial-gradient(rgba(60,84, 72, .8), rgba(60,84, 72, 1))',
     '@media only screen and (max-width: 1366px)': {
       background: 'linear-gradient( rgba(60,84, 72, .95), rgba(60,84, 72, .85))'
+    },
+    '&:before': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      background: 'rgba(60,84, 72, 1)',
+      opacity: '.25',
+      animationName: opacity2,
+      animationDuration: '3s',
+      animationTimingFunction: 'ease-in-out',
+      top: '0',
+      left: '0',
+      zIndex: 10
     }
   }
 }

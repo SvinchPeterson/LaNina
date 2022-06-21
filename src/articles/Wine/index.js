@@ -40,7 +40,7 @@ const paragraph = {
   proto: Box,
   props: {
     position: 'absolute',
-    padding: 'D B',
+    padding: 'D F',
     background: 'cream2',
     flexAlign: 'center flex-end',
     '@tabletL': {

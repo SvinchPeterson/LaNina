@@ -4,25 +4,38 @@ import { Box, Text } from '@symbo.ls/symbols'
 export const Contact = {
   proto: Box,
   props: {
-    flexFlow: 'column',
-    flexAlign: 'flex-start center',
     padding: 'F 0',
-    gap: 'Y',
-    color: 'black .65'
+    flexAlign: 'center center'
   },
-  childProto: {
-    proto: Text,
-    style: {
-      fontWeight: '700',
-      textAlign: 'right',
-      margin: '0 auto'
-    }
-  },
-  ...[
-    { props: { text: '+995 322 502222' } },
-    { props: { text: '+995593 345158' } },
-    { props: { text: 'info@bbhospitality.ge' } },
-    { props: { text: 'reservations@bbhospitality.ge' } }
-  ]
+  content: {
+    proto: Box,
+    props: {
+      flexFlow: 'column',
+      flexAlign: 'center center',
+      gap: 'X2',
+      color: 'black .65',
+      maxWidth: 'G'
+    },
+    childProto: {
+      proto: Box,
+      style: {
+        fontWeight: '700',
+        textAlign: 'center',
+        fontSize: `${14 / 16}em`
+      }
+    },
+    ...[
+      { props: { text: 'info@bbhospitality.ge' } },
+      { props: { text: 'reservations@bbhospitality.ge' } },
+      {
+        props: {
+          text: '+995 322 502222',
+          padding: 'A 0 0 0'
+        }
+      },
+      { props: { text: '+995593 345158' } }
+    ]
+
+  }
 
 }
