@@ -7,7 +7,7 @@ export default {
   props: {
     padding: 'G 0 0 0',
     flexAlign: 'center center',
-    '@tabletL': { padding: 'G 0 0 0' },
+    '@tabletL': { padding: 'F 0 0 0' },
     '@mobileM': { padding: 'F 0 0 0' }
   },
   attr: { id: 'residence' },

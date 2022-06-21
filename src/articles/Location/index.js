@@ -9,13 +9,21 @@ const paragraph = {
 
   props: {
     maxWidth: 'H1',
-    padding: '0 D D D',
-    color: 'black .35',
-    '@mobileM': { padding: '0 B D B' }
+    padding: 'D D D2 D',
+    color: 'black .55',
+    fontSize: 'Z',
+    '@mobileM': {
+      padding: '0 C D C',
+      color: 'black .55'
+    }
   },
   style: {
     textAlign: 'center',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    fontWeight: '700',
+    '@media only screen and (max-width: 560px)': {
+      fontWeight: '700'
+    }
   }
 }
 
@@ -55,7 +63,11 @@ const airPort = {
     props: {
       fontSize: 'Z',
       maxWidth: 'G3',
-      color: 'black .35'
+      color: 'black .4'
+    },
+    style: {
+      letterSpacing: '1px',
+      fontWeight: 400
     }
   },
   ...[
@@ -90,7 +102,8 @@ export default {
   props: {
     flexFlow: 'column',
     gap: '0',
-    padding: 'D 0 0 0'
+    padding: 'E 0 0 0',
+    '@tabletL': { padding: 'F 0 0 0' }
   },
   attr: { id: 'location' },
 

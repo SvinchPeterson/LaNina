@@ -9,8 +9,7 @@ const image = {
   props: {
     boxSize: `H H2`,
     '@tabletL': {
-      boxSize: '75% H',
-      margin: '0'
+      boxSize: '70% H'
     },
     '@mobileM': {
       boxSize: '100% G3',
@@ -18,6 +17,7 @@ const image = {
     }
   },
   style: {
+    // border: '5px solid red',
     backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .35)),url(' + WINE_JPG + ')',
     backgroundSize: 'contain',
     backgroundPosition: 'center bottom 100px',
@@ -40,15 +40,16 @@ const paragraph = {
   proto: Box,
   props: {
     position: 'absolute',
-    padding: 'D2 B',
+    padding: 'D B',
     background: 'cream2',
     flexAlign: 'center flex-end',
     '@tabletL': {
       height: 'fit-content',
-      padding: '0 E1',
+      minWidth: '70%',
       background: 'cream2',
-      top: '92%',
-      margin: '0'
+      top: '100%',
+      margin: '0 auto',
+      padding: 'C 0 0 0'
     },
     '@mobileL': {
       width: '450px',
@@ -67,6 +68,7 @@ const paragraph = {
   style: {
     borderTop: 'none',
     zIndex: '10',
+    // border: '5px solid blue',
     '@media only screen and (min-width: 1366px)': {
       // background: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, .35),rgba(42, 81, 61, .35))',
       backgroundAttachment: 'fixed',
@@ -75,6 +77,9 @@ const paragraph = {
     '@media only screen and (max-width: 1366px)': {
       zIndex: 4,
       height: 'fit-content'
+    },
+    '@media only screen and (max-width: 1225px)': {
+      // border: '10px solid red'
     }
   },
 
@@ -99,11 +104,19 @@ export default {
     maxHeight: `${750 / 16}em`,
     position: 'relative',
     flexAlign: 'center center',
-    margin: 'G 0 F2 0',
+    margin: 'D 0 F 0',
+    padding: 'F2 0 0 0',
+    '@tabletM': {
+      padding: 'D1 0 0 0'
+
+    },
     '@mobileL': { margin: 'F 0 G 0' },
     '@mobileS': { margin: '0 0 F 0' }
   },
   attr: { id: 'wine' },
+  style: {
+    // border: '5px solid green'
+  },
 
   image,
   paragraph
