@@ -190,7 +190,7 @@ const Room = {
         width: '110%',
         top: '75%'
       },
-      '@mobileM': { width: '100%' }
+      '@mobileM': { width: '101%' }
     },
 
     ...[
