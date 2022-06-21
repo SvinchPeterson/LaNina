@@ -79,7 +79,7 @@ const back = {
       top: '122%'
     },
     '@mobileL': {
-      left: '0',
+      left: 'C',
       top: '135%'
     },
     '@mobileM': {

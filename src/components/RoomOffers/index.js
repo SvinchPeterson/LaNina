@@ -84,7 +84,7 @@ const offers = {
           minHeight: `${150 / 16}em`
         },
         '@media only screen and (max-height: 600px)': {
-          minHeight: `${100 / 16}em`
+          minHeight: `${200 / 16}em`
         },
         '> span': {
           opacity: 1,
