@@ -20,8 +20,14 @@ const book = {
     bottom: '0',
     left: '-D',
     '@tabletL': {
-      right: 'C2',
-      bottom: '0'
+      left: 'auto',
+      right: '-D',
+      bottom: '-E1'
+    },
+    '@mobileL': { right: '-C1' },
+    '@mobileM': {
+      right: 'B',
+      bottom: '-E'
     }
   },
   attr: { target: '_blank' },
@@ -31,7 +37,7 @@ const book = {
     zIndex: '30',
     textDecoration: 'none',
     textOrientation: 'upright',
-    writingMode: 'vertical-rl',
+    '@media only screen and (min-width: 560px)': { writingMode: 'vertical-rl' },
     '&:hover > span': { opacity: 1 }
   },
   class: {
