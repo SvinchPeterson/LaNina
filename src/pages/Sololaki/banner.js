@@ -130,7 +130,7 @@ const image = {
     // style: { '@media only screen and (max-width: 1225px)': { transform: 'translate(-50%, -50%)' } }
   },
   style: {
-    boxShadow: 'inset 0px 0px 5px 0px black',
+    // boxShadow: 'inset 0px 0px 5px 0px black',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
