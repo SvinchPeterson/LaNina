@@ -83,12 +83,12 @@ const back = {
       top: '135%'
     },
     '@mobileM': {
-      left: 'A',
+      left: 'A2',
       top: '136%'
     },
     '@mobileS': {
       top: '138%',
-      left: 'Y'
+      left: 'Y2'
 
     }
   },

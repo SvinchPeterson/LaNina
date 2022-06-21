@@ -17,7 +17,7 @@ const roomsTabs = {
     flexFlow: 'column',
     flexAlign: 'flex-start center',
     padding: '0 10%',
-    '@screenL': { padding: '0 17%' },
+    '@screenL': { padding: '0 16%' },
     '@screenD': { padding: '0 15%' },
     '@screenS': { padding: '0 10%' },
     '@tabletL': { padding: '0 15%' },
