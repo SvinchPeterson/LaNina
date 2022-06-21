@@ -18,8 +18,8 @@ const roomsTabs = {
     flexAlign: 'flex-start center',
     padding: '0 10%',
     '@tabletL': { padding: '0 15%' },
-    '@tabletS': { padding: '0 13%' },
-    '@mobileL': { padding: '0 8%' },
+    '@tabletS': { padding: '0 0' },
+    '@mobileL': { padding: '0 0' },
     '@mobileM': { padding: '0 0' }
 
   },
@@ -28,14 +28,14 @@ const roomsTabs = {
     proto: navButtons2,
     props: {
       width: '95%',
-      '@mobileM': {
-        width: '101%'
+      '@tabletS': {
+        width: '100.5%'
       }
     },
     ...[
       {
         props: {
-          '@mobileM': { padding: 'C B C Z1' }
+          // '@mobileM': { padding: 'C B C Z1' }
         },
         on: {
           click: (event, element, state) => {
@@ -46,12 +46,12 @@ const roomsTabs = {
               // behavior: 'smooth'
             })
           }
-        },
-        image: { props: { '@mobileM': { boxSize: 'A B' } } }
+        }
+        // image: { props: { '@mobileM': { boxSize: 'A B' } } }
       },
       {
         props: {
-          '@mobileM': { padding: 'C Z1 C B' }
+          // '@mobileM': { padding: 'C Z1 C B' }
         },
         on: {
           click: (event, element, state) => {
@@ -62,8 +62,8 @@ const roomsTabs = {
               behavior: 'smooth'
             })
           }
-        },
-        image: { props: { '@mobileM': { boxSize: 'A B' } } }
+        }
+        // image: { props: { '@mobileM': { boxSize: 'A B' } } }
       }
     ]
   },

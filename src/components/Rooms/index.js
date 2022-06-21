@@ -24,7 +24,7 @@ const book = {
       right: '-D',
       bottom: '-E1'
     },
-    '@mobileL': { right: '-C1' },
+    '@tabletS': { right: 'B' },
     '@mobileM': {
       right: 'B',
       bottom: '-E'
@@ -37,7 +37,7 @@ const book = {
     zIndex: '30',
     textDecoration: 'none',
     textOrientation: 'upright',
-    '@media only screen and (min-width: 560px)': { writingMode: 'vertical-rl' },
+    '@media only screen and (min-width: 1024px)': { writingMode: 'vertical-rl' },
     '&:hover > span': { opacity: 1 }
   },
   class: {
@@ -190,12 +190,12 @@ const Room = {
         width: '110%',
         top: '75%'
       },
-      '@mobileM': { width: '101%' }
+      '@tabletS': { width: '101%' }
     },
 
     ...[
       {
-        props: { '@mobileM': { padding: 'C B C Z1' } },
+        // props: { '@mobileM': { padding: 'C B C Z1' } },
         on: {
           click: (event, element, state) => {
             const { activeImage } = state
@@ -206,13 +206,13 @@ const Room = {
               state.update({ activeImage: 0 })
             }
           }
-        },
-        image: { props: { '@mobileM': { boxSize: 'A B' } } }
+        }
+        // image: { props: { '@mobileM': { boxSize: 'A B' } } }
       },
 
       {
         props: {
-          '@mobileM': { padding: 'C Z1 C B' }
+          // '@mobileM': { padding: 'C Z1 C B' }
         },
         on: {
           click: (event, element, state) => {
@@ -225,7 +225,7 @@ const Room = {
             }
           }
         },
-        image: { props: { '@mobileM': { boxSize: 'A B' } } },
+        // image: { props: { '@mobileM': { boxSize: 'A B' } } },
         style: { marginRight: '-3px' }
       }
     ]

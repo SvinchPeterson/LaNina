@@ -139,8 +139,8 @@ export const RoomTab = {
           '@media only screen and (max-width: 1366px)': {
             padding: `${100 / 16}em 13% `
           },
-          '@media only screen and (max-width: 768px)': {
-            padding: `${100 / 16}em 10% `
+          '@media only screen and (max-width: 1024px)': {
+            padding: `${100 / 16}em 0% `
           },
           '@media only screen and (max-width: 560px)': {
             padding: `${100 / 16}em 0% `
