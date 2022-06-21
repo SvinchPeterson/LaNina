@@ -66,8 +66,8 @@ export const RoomTab = {
       minWidth: `100%`,
       minHeight: '100%',
       height: 'G3'
-    },
-    '@mobileM': { height: 'G' }
+    }
+    // '@mobileM': { height: 'G' }
   },
 
   style: {
@@ -136,7 +136,7 @@ export const RoomTab = {
 
           opacity: 1,
           padding: `0 ${200 / 16}em`,
-          '@media only screen and (max-width: 1366px)': { padding: '0' }
+          '@media only screen and (max-width: 1366px)': { padding: '100px 100px' }
         }
       })
     }

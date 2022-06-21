@@ -103,7 +103,8 @@ export default {
     flexFlow: 'column',
     gap: '0',
     padding: 'E 0 0 0',
-    '@tabletL': { padding: 'F 0 0 0' }
+    '@tabletL': { padding: 'E2 0 0 0' },
+    '@tabletM': { padding: 'E 0 0 0' }
   },
   attr: { id: 'location' },
 

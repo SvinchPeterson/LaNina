@@ -56,7 +56,7 @@ const paragraph = {
       padding: '0'
     },
     '@mobileM': {
-      top: '85%'
+      top: '90%'
     },
     '@mobileS': {
       padding: '0 C'

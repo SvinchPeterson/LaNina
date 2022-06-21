@@ -104,7 +104,7 @@ export const navButtons = {
 export const navButtons2 = {
   proto: Box,
   props: {
-    width: '100.5%',
+    width: '95%',
     height: '0',
     position: 'absolute',
     left: `50%`,
@@ -142,7 +142,8 @@ export const navButtons2 = {
       style: {
         borderTopRightRadius: '70px',
         borderBottomRightRadius: '70px',
-        border: 'none'
+        border: 'none',
+        borderRight: '2px solid rgba(245, 245, 245, .25)'
       },
       image: {
         proto: [Img, Box],
@@ -155,9 +156,8 @@ export const navButtons2 = {
       style: {
         borderTopLeftRadius: '70px',
         borderBottomLeftRadius: '70px',
-        // border: '2px solid rgba(168, 98, 63, 1)',
-        // borderRight: 'none'
-        border: 'none'
+        border: 'none',
+        borderLeft: '2px solid rgba(245, 245, 245, .25)'
       },
       image: {
         proto: [Img, Box],

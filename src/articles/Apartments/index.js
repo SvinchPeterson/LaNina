@@ -17,13 +17,25 @@ const roomsTabs = {
     flexFlow: 'column',
     flexAlign: 'flex-start center',
     padding: '0 10%',
-    '@tabletL': { padding: '0' }
+    '@tabletL': { padding: '0 15%' },
+    '@tabletS': { padding: '0 13%' },
+    '@mobileL': { padding: '0 8%' },
+    '@mobileM': { padding: '0 0' }
+
   },
 
   buttons: {
     proto: navButtons2,
+    props: {
+      '@mobileM': {
+        width: '101%'
+      }
+    },
     ...[
       {
+        props: {
+          '@mobileM': { padding: 'C B C Z1' }
+        },
         on: {
           click: (event, element, state) => {
             const { tabsContainer } = element.parent.parent
@@ -33,9 +45,13 @@ const roomsTabs = {
               // behavior: 'smooth'
             })
           }
-        }
+        },
+        image: { props: { '@mobileM': { boxSize: 'A B' } } }
       },
       {
+        props: {
+          '@mobileM': { padding: 'C Z1 C B' }
+        },
         on: {
           click: (event, element, state) => {
             const { tabsContainer } = element.parent.parent
@@ -45,7 +61,8 @@ const roomsTabs = {
               behavior: 'smooth'
             })
           }
-        }
+        },
+        image: { props: { '@mobileM': { boxSize: 'A B' } } }
       }
     ]
   },
@@ -86,8 +103,9 @@ export default {
   props: {
     flexFlow: 'column',
     position: 'relative',
-    padding: `F2 0 G 0`
-    // '@tabletL': { padding: 'F3 0' },
+    padding: `F2 0 G 0`,
+    '@tabletL': { padding: 'F 0 G 0' },
+    '@mobileM': { padding: 'E 0' }
     // '@mobileL': { padding: 'F 0' },
     // '@mobileS': { padding: 'E1 0' }
   },
@@ -106,7 +124,7 @@ export default {
       position: 'absolute',
       top: 0,
       left: 0,
-      background: 'radial-gradient(rgba(248, 241, 227, 0),rgba(60, 84, 72, .75),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
+      background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
       backgroundAttachment: 'fixed',
       '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
     }
