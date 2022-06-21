@@ -130,12 +130,10 @@ export const positionOpacity3 = keyframes`
 `
 export const position = keyframes`
   from {
-    opacity: 0;
     background-position: top left;
 
   }
   to {
-    opacity: 1;
     background-position: center center;
   }
 `
