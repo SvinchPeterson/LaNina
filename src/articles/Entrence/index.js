@@ -158,7 +158,6 @@ const texts = {
       '@media only screen and (max-width: 480px)': {
         width: `${270 / 13.5}em`
       }
-      // '@media only screen and (max-width: 480px)': { width: `${250 / 13.5}em` }
     }
   }
 }
@@ -173,7 +172,6 @@ export default {
     margin: '0 0 H 0',
     '@tabletL': { margin: '0 0 F1 0' }
   },
-  // style: { border: '7px solid red' },
 
   yardEntrence,
   streetEntrence,
