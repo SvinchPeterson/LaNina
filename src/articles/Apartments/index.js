@@ -29,8 +29,8 @@ const roomsTabs = {
             const { tabsContainer } = element.parent.parent
             tabsContainer.node.scrollBy({
               top: 0,
-              left: -tabsContainer.node.clientWidth - 16.5 * 1.618,
-              behavior: 'smooth'
+              left: -tabsContainer.node.clientWidth - 16.5 * 1.618
+              // behavior: 'smooth'
             })
           }
         }

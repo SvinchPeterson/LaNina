@@ -11,9 +11,19 @@ to {
   opacity: 1;
 }
 `
+export const letterSpacing4 = keyframes`
+from {
+ letter-spacing: 7px;
+ opacity: 0;
+}
+to {
+  letter-spacing: 6px;
+  opacity: 1;
+}
+`
 export const scale = keyframes`
 from {
- transform: scale(1.1);
+
 }
 to {
   transform: scale(1);
@@ -37,7 +47,7 @@ export const opacityReverse = keyframes`
 `
 export const letterSpacing = keyframes`
   from {
-    letter-spacing: 8px;
+    letter-spacing: 9px;
     opacity: 0;
   }
   to {
@@ -128,6 +138,16 @@ export const position = keyframes`
   }
 `
 
+export const position2 = keyframes`
+  from {
+    background-position: bottom 50px left;
+
+  }
+  to {
+    background-position: center left;
+  }
+`
+
 export const height = keyframes`
   from {
     height: 0;
@@ -136,6 +156,17 @@ export const height = keyframes`
   }
   to {
    height: 150px;
+   opacity: 1;
+  }
+`
+export const height3 = keyframes`
+  from {
+    height: 0;
+    opacity: 0;
+
+  }
+  to {
+   height: 170px;
    opacity: 1;
   }
 `
