@@ -27,6 +27,7 @@ const roomsTabs = {
   buttons: {
     proto: navButtons2,
     props: {
+      width: '95%',
       '@mobileM': {
         width: '101%'
       }
@@ -105,7 +106,7 @@ export default {
     position: 'relative',
     padding: `F2 0 G 0`,
     '@tabletL': { padding: 'F 0 G 0' },
-    '@mobileM': { padding: 'E 0' }
+    '@mobileM': { padding: 'E2 0' }
     // '@mobileL': { padding: 'F 0' },
     // '@mobileS': { padding: 'E1 0' }
   },

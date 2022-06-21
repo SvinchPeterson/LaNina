@@ -104,7 +104,6 @@ export const navButtons = {
 export const navButtons2 = {
   proto: Box,
   props: {
-    width: '95%',
     height: '0',
     position: 'absolute',
     left: `50%`,

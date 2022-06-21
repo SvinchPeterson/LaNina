@@ -61,7 +61,11 @@ const offers = {
     columnGap: '0',
     rowGap: '0',
     // alignContent: 'center',
-    '@tabletL': { columns: '100%' }
+    '@tabletL': {
+      columns: '100%',
+      rowGap: 'Y2',
+      padding: '0 C2 A1 C2'
+    }
   },
   style: {
     letterSpacing: '1px',
@@ -76,6 +80,9 @@ const offers = {
 
       ? {
         minHeight: `${200 / 16}em`,
+        '@media only screen and (max-width: 1366px)': {
+          minHeight: `${150 / 16}em`
+        },
         '@media only screen and (max-height: 600px)': {
           minHeight: `${100 / 16}em`
         },
@@ -135,28 +142,29 @@ export const RoomOffers = {
   tag: 'aside',
   proto: Box,
   props: {
-    miWidth: 'G1',
-    // background: 'green2 .65',
+    minWidth: 'G1',
+    background: 'green2 .65',
     position: 'absolute',
     left: '8%',
     bottom: '-F',
     flexFlow: 'column',
     round: 'B',
     '@tabletL': {
-      maxHeight: 'G3',
+      maxHeight: 'H',
       left: '50%',
       bottom: '-F'
     },
     '@mobileS': {
-      maxWidth: 'G',
-      bottom: 'E2'
-    }
+      minWidth: 'G',
+      left: '55%'
+    },
+    '@mobileXS': { minWidth: 'F2' }
   },
   style: {
     transition: 'all 1s ease-in-out',
     backdropFilter: 'blur(5px)',
     zIndex: '70',
-    background: 'linear-gradient(rgba(60,84, 72, 1), rgba(60,84, 72, 1))',
+    // background: 'linear-gradient(rgba(60,84, 72, 1), rgba(60,84, 72, 1))',
     // border: '.5px solid rgba(245, 245, 245, .25)',
     transform: 'translate(50%, 50%)',
     '@media only screen and (max-width: 1225px)': {

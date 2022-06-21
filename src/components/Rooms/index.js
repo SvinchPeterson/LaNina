@@ -72,16 +72,24 @@ const back = {
       left: 'C',
       top: '122%'
     },
-    '@mobileM': {
-      left: 'Z',
+    '@mobileL': {
+      left: '0',
       top: '135%'
+    },
+    '@mobileM': {
+      left: 'A',
+      top: '136%'
+    },
+    '@mobileS': {
+      top: '138%',
+      left: 'Y'
+
     }
   },
   style: {
     textDecoration: 'none',
     '&:hover > span': { opacity: '1' },
     '&:hover > img': { opacity: '1' },
-    // border: '1px solid red',
     '@media only screen and (max-width: 1366px)': { transform: 'rotate(-90deg)' },
     '@media only screen and (max-width: 560px)': { transform: 'rotate(0deg)' }
   },
@@ -112,12 +120,16 @@ const back = {
       fontSize: 'Z'
     },
     style: {
-      textOrientation: 'upright',
-      writingMode: 'vertical-rl',
-      letterSpacing: '0',
-      opacity: '.7',
-      transition: 'opacity .15s ease-in-out'
-
+      fontWeight: '500',
+      '@media only screen and (min-width: 1366px)': {
+        textOrientation: 'upright',
+        writingMode: 'vertical-rl',
+        letterSpacing: '0',
+        opacity: '.7',
+        transition: 'opacity .15s ease-in-out'
+      },
+      textDecoration: 'upleft',
+      writingMode: 'vertical-lr'
     }
   }
 }
@@ -132,16 +144,16 @@ const Room = {
         transition: 'all 1s ease-in-out',
         opacity: 1,
         paddingTop: `${130 / 16}em`,
-        '@media only screen and (max-width: 1225px)': {
+        '@media only screen and (max-width: 1366px)': {
           transition: 'all .1s ease-in-out',
           display: 'block',
-          height: `${600 / 16}em`
+          height: `${550 / 16}em`
         },
         '@media only screen and (max-width: 768px)': {
-          height: `${500 / 16}em`
+          height: `${400 / 16}em`
         },
         '@media only screen and (max-width: 480px)': {
-          height: `${400 / 16}em`
+          height: `${350 / 16}em`
         },
         '@media only screen and (max-height: 650px)': {
           height: `${300 / 16}em`
@@ -159,13 +171,25 @@ const Room = {
 
   gallery: {},
   RoomOffers,
-  navButton: { proto: navButtons },
+  navButton: {
+    proto: navButtons,
+    props: { '@tabletL': { display: 'none' } }
+  },
   navButton2: {
     proto: navButtons2,
-    props: { '@tabletL': { top: '65%' } },
+    props: {
+      width: '120%',
+      '@tabletL': { top: '65%' },
+      '@mobileL': {
+        width: '110%',
+        top: '75%'
+      },
+      '@mobileM': { width: '100%' }
+    },
 
     ...[
       {
+        props: { '@mobileM': { padding: 'C B C Z1' } },
         on: {
           click: (event, element, state) => {
             const { activeImage } = state
@@ -176,10 +200,14 @@ const Room = {
               state.update({ activeImage: 0 })
             }
           }
-        }
+        },
+        image: { props: { '@mobileM': { boxSize: 'A B' } } }
       },
 
       {
+        props: {
+          '@mobileM': { padding: 'C Z1 C B' }
+        },
         on: {
           click: (event, element, state) => {
             const { activeImage } = state
@@ -191,6 +219,7 @@ const Room = {
             }
           }
         },
+        image: { props: { '@mobileM': { boxSize: 'A B' } } },
         style: { marginRight: '-3px' }
       }
     ]
