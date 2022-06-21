@@ -28,7 +28,7 @@ const tabParagraph = {
     maxWidth: 'G2',
     padding: `0 B2 0 C1`,
     '@tabletL': {
-      fontSize: 'A',
+      // fontSize: 'A',
       maxWidth: 'H'
     },
     '@mobileL': { padding: 'C1 B1' },
