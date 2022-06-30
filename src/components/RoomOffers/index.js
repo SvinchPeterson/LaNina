@@ -5,7 +5,6 @@ const header = {
   tag: 'header',
   proto: Box,
   props: {
-    // height: 'D',
     flexAlign: 'center space-between',
     padding: 'Z2 A2 Z2 B'
   },

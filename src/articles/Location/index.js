@@ -44,7 +44,8 @@ const map = {
   },
   style: {
     flex: 1,
-    border: 'none'
+    border: '3px solid rgba(168, 98, 63, 1)'
+
   }
 }
 

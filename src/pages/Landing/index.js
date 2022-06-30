@@ -168,7 +168,7 @@ const Container = {
       background: 'black',
       opacity: 0,
       animationName: opacityReverse,
-      animationDuration: '3s',
+      animationDuration: '2s',
       animationTimingFunction: 'linear',
       pointerEvents: 'none'
     }
@@ -192,7 +192,7 @@ const Container = {
     },
     style: {
       animationName: opacity,
-      animationDuration: '3s',
+      animationDuration: '2s',
       animationTimingFunction: 'ease-in-out'
     },
     heading,
@@ -208,6 +208,7 @@ export default {
     left: 0
   },
   style: {
+    fontFamily: 'Helvetica Neue',
     background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .92))'
   },
   container: { proto: Container }

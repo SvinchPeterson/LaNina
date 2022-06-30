@@ -37,25 +37,17 @@ const roomsTabs = {
     },
     ...[
       {
-        props: {
-          // '@mobileM': { padding: 'C B C Z1' }
-        },
         on: {
           click: (event, element, state) => {
             const { tabsContainer } = element.parent.parent
             tabsContainer.node.scrollBy({
               top: 0,
               left: -tabsContainer.node.clientWidth - 16.5 * 1.618
-              // behavior: 'smooth'
             })
           }
         }
-        // image: { props: { '@mobileM': { boxSize: 'A B' } } }
       },
       {
-        props: {
-          // '@mobileM': { padding: 'C Z1 C B' }
-        },
         on: {
           click: (event, element, state) => {
             const { tabsContainer } = element.parent.parent
@@ -66,7 +58,6 @@ const roomsTabs = {
             })
           }
         }
-        // image: { props: { '@mobileM': { boxSize: 'A B' } } }
       }
     ]
   },
@@ -110,8 +101,6 @@ export default {
     padding: `F2 0 G 0`,
     '@tabletL': { padding: 'F 0 G 0' },
     '@mobileM': { padding: 'E2 0' }
-    // '@mobileL': { padding: 'F 0' },
-    // '@mobileS': { padding: 'E1 0' }
   },
   style: {
     scrollBehavior: 'smooth',

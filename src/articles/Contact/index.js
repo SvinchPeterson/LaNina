@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Text } from '@symbo.ls/symbols'
+import { Box } from '@symbo.ls/symbols'
 
 export const Contact = {
   proto: Box,

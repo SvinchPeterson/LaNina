@@ -17,7 +17,6 @@ const image = {
     }
   },
   style: {
-    // border: '5px solid red',
     backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .35)),url(' + WINE_JPG + ')',
     backgroundSize: 'contain',
     backgroundPosition: 'center bottom 100px',
@@ -28,10 +27,6 @@ const image = {
       backgroundPosition: 'center center',
       backgroundSize: 'cover',
       backgroundAttachment: 'initial'
-    },
-    ' @media only screen and (max-width: 560px)': {
-      // border: '2px solid red'
-
     }
   }
 }
@@ -68,18 +63,13 @@ const paragraph = {
   style: {
     borderTop: 'none',
     zIndex: '10',
-    // border: '5px solid blue',
     '@media only screen and (min-width: 1366px)': {
-      // background: 'linear-gradient(rgba(42, 81, 61, .35), rgba(42, 81, 61, .35),rgba(42, 81, 61, .35))',
       backgroundAttachment: 'fixed',
       backgroundPosition: 'bottom 200px center'
     },
     '@media only screen and (max-width: 1366px)': {
       zIndex: 4,
       height: 'fit-content'
-    },
-    '@media only screen and (max-width: 1225px)': {
-      // border: '10px solid red'
     }
   },
 
@@ -114,9 +104,6 @@ export default {
     '@mobileS': { margin: '0 0 F 0' }
   },
   attr: { id: 'wine' },
-  style: {
-    // border: '5px solid green'
-  },
 
   image,
   paragraph

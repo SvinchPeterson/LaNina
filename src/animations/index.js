@@ -42,7 +42,7 @@ export const opacity2 = keyframes`
     opacity: 0;
   }
   to {
-    opacity: .25;
+    opacity: .15;
   }
 `
 export const opacityReverse = keyframes`

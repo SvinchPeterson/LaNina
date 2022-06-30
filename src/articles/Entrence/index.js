@@ -22,8 +22,6 @@ const yardEntrence = {
 
   },
   style: {
-    // border: '4px solid green',
-    // border: '5px solid rgba(248, 241, 227, 1)',
     boxShadow: 'inset 0 0 35px 1px rgba(0, 0, 0, .8)',
     backgroundAttachment: 'fixed',
     backgroundImage: 'url(' + ENTRENCE_JPG + ')',
