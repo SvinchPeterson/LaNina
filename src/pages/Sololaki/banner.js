@@ -61,9 +61,8 @@ const heading = {
       overflow: 'hidden',
       letterSpacing: `${10 / 16}em`,
       animationName: letterSpacing,
-      animationDuration: '2s',
+      animationDuration: '2.5s',
       animationTimingFunction: 'ease-in-out',
-      // animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
       '@media only screen and (max-width: 768px)': {
         letterSpacing: `${8 / 16}em`,
         animationName: letterSpacing2
@@ -91,11 +90,10 @@ const heading = {
       paddingRight: `${15 / 100}em`,
       overflow: 'hidden',
       animationName: height,
-      animationDuration: '2.5s',
-      animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out',
       fontWeight: 100,
       letterSpacing: `${-3 / 120}em`,
-
       textShadow: '0px 0px 20px rgba(0, 0, 0, .35)',
       '@media only screen and (max-width: 768px)': {
         fontSize: `${80 / 16}em`,
