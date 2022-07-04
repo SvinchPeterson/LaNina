@@ -20,7 +20,7 @@ const container = {
     margin: '0 auto',
     animationName: opacity,
     animationDuration: '2s',
-    animationTimingFunction: 'ease-in-out'
+    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
   }
 }
 export default {

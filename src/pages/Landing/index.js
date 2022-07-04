@@ -199,6 +199,7 @@ const Container = {
     links
   }
 }
+
 export default {
   proto: Box,
   props: {

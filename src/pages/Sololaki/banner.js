@@ -11,6 +11,8 @@ const heading = {
     position: 'absolute',
     top: '45%',
     right: '17.5%',
+    flexFlow: 'column',
+    flexAlign: 'flex-start flex-start',
     '@tabletL': {
       right: '5.5%'
     },
@@ -34,11 +36,11 @@ const heading = {
       text: 'sololaki',
       color: 'orange2 .85',
       position: 'absolute',
-      right: 'A2',
-      top: 'A',
+      top: '0',
+      right: 'A',
       '@tabletL': {
         top: '0',
-        right: 'B'
+        right: '0'
       },
       '@mobileL': {
         top: 'auto',
@@ -53,12 +55,15 @@ const heading = {
       }
     },
     style: {
+      width: 'fit-content',
       textTransform: 'uppercase',
       fontWeight: 900,
+      overflow: 'hidden',
       letterSpacing: `${10 / 16}em`,
       animationName: letterSpacing,
-      animationDuration: '2.3s',
+      animationDuration: '2s',
       animationTimingFunction: 'ease-in-out',
+      // animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
       '@media only screen and (max-width: 768px)': {
         letterSpacing: `${8 / 16}em`,
         animationName: letterSpacing2
@@ -67,7 +72,6 @@ const heading = {
         letterSpacing: `${5 / 16}em`,
         animationName: letterSpacing4
       }
-
     }
   },
 
@@ -126,15 +130,13 @@ const image = {
     '@mobileM': {
       boxSize: '100% 105%'
     }
-    // style: { '@media only screen and (max-width: 1225px)': { transform: 'translate(-50%, -50%)' } }
   },
   style: {
-    // boxShadow: 'inset 0px 0px 5px 0px black',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
     animationName: position,
-    animationDuration: '3s',
+    animationDuration: '10s',
     animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
     '@media only screen and (min-width: 1366px)': {
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
@@ -173,20 +175,6 @@ const container = {
     '@media only screen and (max-width: 1366px)': {
       background: 'linear-gradient( rgba(60,84, 72, .95), rgba(60,84, 72, .85))'
     }
-    // '&:before': {
-    //   content: '""',
-    //   width: '100%',
-    //   height: '100%',
-    //   position: 'absolute',
-    //   background: 'rgba(60,84, 72, 1)',
-    //   opacity: '.15',
-    //   animationName: opacity2,
-    //   animationDuration: '10s',
-    //   animationTimingFunction: 'ease-in-out',
-    //   top: '0',
-    //   left: '0',
-    //   zIndex: 10
-    // }
   }
 }
 
