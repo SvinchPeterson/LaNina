@@ -6,38 +6,65 @@ import LOCATION_PNG from '../../assets/icons/location.png'
 import DOOR_HANGER_PNG from '../../assets/icons/door-hanger.png'
 import CLOCK_PNG from '../../assets/icons/clock.png'
 import BUBBLE_PNG from '../../assets/icons/bubble.png'
-import APRON_PNG from '../../assets/icons/apron.png'
+import APRON_PNG from '../../assets/icons/frying-pan.png'
 import DOCUMENT_PNG from '../../assets/icons/document.png'
 import PLAY_PNG from '../../assets/icons/play.png'
-import WINE_COFFEE from '../../assets/icons/wine-coffe.png'
+import WINE_COFFEE from '../../assets/icons/wine-coffee.png'
+import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
 const placeFeature = {
-  proto: Grid,
+  proto: [Grid, Box],
   props: {
     columns: 'repeat(4, 1fr)',
-
+    rowGap: 'D',
+    columnGap: 'D',
+    padding: 'E D',
+    margin: '0 -E'
   },
   style: {
-    border: '2px solid red'
+    // border: '2px solid red',
+    backgroundAttachment: 'fixed',
+    backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
+    // backgroundImage: 'radial-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, .8))',
+    '> div': {
+      // border: '2px  solid red'
+    }
+
   },
   childProto: {
     proto: Box,
     props: {
-      flexAlign: 'center flex-start',
-      gap: 'Y'
+      flexAlign: 'flex-start flex-start',
+      gap: 'Z'
     },
     icon: {
       proto: [Img, Box],
-      props: { boxSize: ' B2' }
+      props: { boxSize: ' B1', margin: 'X 0 0 0' }
     },
     paragraph: {
+      proto: Box,
+      props: {
+        fontSize: 'Z',
+        flexFlow: 'column',
+        gap: 'X',
+        flexAlign: 'flex-start flex-start'
+      },
       title: {
         tag: 'caption',
         proto: Box,
-        style: { whiteSpace: 'nowrap' }
+        props: {
+          fontWeight: '700'
+        },
+        style: {
+          whiteSpace: 'nowrap',
+          textTransform: 'uppercase'
+        }
       },
       p: {
-        proto: Box
+        proto: Box,
+        props: { maxWidth: 'F1' }
       }
     }
   },
@@ -135,7 +162,7 @@ export default {
     flexFlow: 'column',
     padding: 'G2 0 E2 0',
     flexAlign: 'center flex-start',
-    gap: 'E',
+    gap: 'E2',
     '@tabletL': { padding: 'F 0 0 0' },
     '@mobileM': { padding: 'F 0 0 0' }
   },

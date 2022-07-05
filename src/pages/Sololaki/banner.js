@@ -1,7 +1,7 @@
 'use strict'
 import { Box, Text } from '@symbo.ls/symbols'
 
-import { position, height, letterSpacing, letterSpacing4, position2, height2, height3, letterSpacing2 } from '../../animations'
+import { position, height, letterSpacing, letterSpacing4, position2, height2, height3, letterSpacing2, opacity2, opacity7 } from '../../animations'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
 import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
 
@@ -130,12 +130,14 @@ const image = {
     }
   },
   style: {
+
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
+    backgroundPosition: 'bottom left',
     animationName: position,
-    animationDuration: '10s',
-    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
+    animationDuration: '5s',
+    animationTimingFunction: 'ease-in-out',
+    // animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
     '@media only screen and (min-width: 1366px)': {
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
       backgroundAttachment: 'fixed'
@@ -154,7 +156,8 @@ const image = {
       width: '100%',
       height: '100%',
       display: 'block',
-      background: 'linear-gradient(rgba(60,84, 72, .25), rgba(60,84, 72, .85))',
+      background: 'linear-gradient(rgba(60,84, 72, .4), rgba(60,84, 72, 1))',
+      animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
       '@media only screen and (max-width: 560px)': {
         background: 'linear-gradient(rgba(60,84, 72, .65), rgba(60,84, 72, .85))'
       }
@@ -172,6 +175,18 @@ const container = {
     background: 'radial-gradient(rgba(60,84, 72, .8), rgba(60,84, 72, 1))',
     '@media only screen and (max-width: 1366px)': {
       background: 'linear-gradient( rgba(60,84, 72, .95), rgba(60,84, 72, .85))'
+    },
+    '&:after': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      background: 'linear-gradient(rgba(60,84, 72, 1), rgba(60,84, 72, 1))',
+      opacity: '0',
+      position: 'absolute',
+      animationName: opacity7,
+      animationDuration: '2s',
+      animationTimingFunction: 'ease-in-out'
+
     }
   }
 }
