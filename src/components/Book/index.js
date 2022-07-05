@@ -5,7 +5,7 @@ export const Book = {
   props: {
     padding: 'Y2 B',
     color: 'white',
-    round: 'D',
+    round: 'W2',
     href: 'https://www.airbnb.com/users/show/404104381',
     target: '_blank'
   },

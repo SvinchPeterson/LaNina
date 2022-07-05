@@ -30,10 +30,6 @@ export const vision = {
 export const BuildingHistory = {
   tag: 'p',
   proto: [Text, Box],
-  props: {
-    flexFlow: 'column',
-    gap: 'Z'
-  },
   ...[
     {
       text: `Situated in one of the most picturesque districts of Old Tbilisi, within walking distance from Liberty square and most famous sights, "BB Residence“ Sololaki offers a choice of fully furnished apartments, having everything for confortable living.`

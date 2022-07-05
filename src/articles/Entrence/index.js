@@ -167,7 +167,7 @@ export default {
     flexAlign: 'center center',
     boxSize: `100% ${800 / 16}em`,
     maxHeight: 'I',
-    margin: '0 0 H 0',
+    margin: 'D 0 H 0',
     '@tabletL': { margin: '0 0 F1 0' }
   },
 

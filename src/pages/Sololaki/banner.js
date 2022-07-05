@@ -34,7 +34,7 @@ const heading = {
     props: {
       fontSize: 'A',
       text: 'sololaki',
-      color: 'orange2 .85',
+      color: 'orange2 .55',
       position: 'absolute',
       top: '0',
       right: 'A',
@@ -78,7 +78,7 @@ const heading = {
     proto: [Text, Box],
     props: {
       text: 'BB Residence',
-      color: 'gold',
+      color: 'gold .75',
       margin: '0',
       '@mobileM': {
         maxWidth: 'D1',
@@ -135,9 +135,9 @@ const image = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'bottom left',
     animationName: position,
-    animationDuration: '5s',
-    animationTimingFunction: 'ease-in-out',
-    // animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
+    animationDuration: '7s',
+    // animationTimingFunction: 'ease-in-out',
+    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
     '@media only screen and (min-width: 1366px)': {
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
       backgroundAttachment: 'fixed'
@@ -156,7 +156,7 @@ const image = {
       width: '100%',
       height: '100%',
       display: 'block',
-      background: 'linear-gradient(rgba(60,84, 72, .4), rgba(60,84, 72, 1))',
+      background: 'linear-gradient(rgba(60,84, 72, .1), rgba(60,84, 72, 1))',
       animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
       '@media only screen and (max-width: 560px)': {
         background: 'linear-gradient(rgba(60,84, 72, .65), rgba(60,84, 72, .85))'
