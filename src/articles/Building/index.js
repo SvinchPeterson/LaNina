@@ -17,8 +17,8 @@ const placeFeature = {
   proto: [Grid, Box],
   props: {
     columns: 'repeat(4, 270px)',
-    rowGap: 'A',
-    columnGap: 'A',
+    gap: 'A2',
+    rowGap: 'A2',
     padding: 'F1 0',
     position: 'relative'
   },
@@ -50,22 +50,22 @@ const placeFeature = {
     proto: Box,
     props: {
       flexAlign: 'center flex-start',
-      gap: 'Z',
-      padding: 'A A1 A A',
-      background: 'cream .15',
+      padding: 'A A2 A A',
+      // background: 'cream2 .15',
       round: 'Y'
     },
     style: {
       zIndex: 10,
       backdropFilter: 'blur(2px)',
       border: '1px solid rgba(220, 187, 140, .1)',
-      background: 'radial-gradient(rgba(248, 241, 227, .65), rgba(248, 241, 227, .75))'
+      background: 'radial-gradient(rgba(248, 241, 227, .75), rgba(248, 241, 227, .85))'
     },
-    icon: {
-      proto: [Img, Box],
-      props: { boxSize: ' B', margin: '0 0 0 0' },
-      style: { opacity: '.65' }
-    },
+    // icon: {
+    //   proto: [Img, Box],
+    //   props: { boxSize: ' B', margin: '0 0 0 0' },
+    //   style: { opacity: '.65' }
+    // },
+    icon: null,
     paragraph: {
       proto: Box,
       props: {
@@ -78,21 +78,23 @@ const placeFeature = {
         tag: 'caption',
         proto: Box,
         props: {
-          fontWeight: '900',
-          color: 'black .65'
+          fontWeight: '700',
+          color: 'black .75'
         },
         style: {
           whiteSpace: 'nowrap',
           textTransform: 'uppercase',
-          fontSize: '12.5px'
+          fontSize: '12.5px',
+          letterSpacing: '.3px'
         }
       },
       p: {
         proto: Box,
         props: {
-          padding: '0 0 0 V',
+          padding: '0 0 0 U',
           color: 'black .65'
-        }
+        },
+        style: { letterSpacing: '.1px' }
       }
     }
   },
@@ -169,8 +171,8 @@ const buildingHistory = {
   props: {
     flexFlow: 'column',
     gap: 'B',
-    maxWidth: `${720 / 15}em`,
-    color: 'black .55',
+    maxWidth: `${650 / 14.3}em`,
+    color: 'black .75',
     padding: '0 D1',
     // fontWeight: '500',
     fontFamily: 'Dejavu',
@@ -183,10 +185,11 @@ const buildingHistory = {
   style: {
     // border: '2px solid red',
     textAlign: 'justify',
-    fontSize: `${15 / 16}em`,
-    lineHeight: `${25 / 15}em`,
+    wordSpacing: '-1px',
+    fontSize: `${14.3 / 16}em`,
+    lineHeight: `${21 / 14.3}em`,
     '@media only screen and (max-width: 480px)': { fontSize: `${14 / 16}em` },
-    '> div': { lineHeight: '25px', letterSpacing: '.9px' }
+    '> div': { lineHeight: '25px', letterSpacing: '.8px' }
   }
 }
 

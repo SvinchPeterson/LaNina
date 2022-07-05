@@ -81,35 +81,35 @@ export const wineText = {
 export const ballerina = {
   proto: [Text, Box],
   props: {
-    text: `"Ballerina" is a cozy and quiet two-bedroom apartment of 72m2 on high first floor with open terrace, composed of living room with comfortable sofa bed for 1 person and 2 bedrooms with King size bed and 2 single beds, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 5 people`
+    text: `The two-bedroom apartment of 72m2 on high first floor with open terrace, composed of living room with comfortable sofa bed for 1 person and 2 bedrooms  with King size bed and 2 single beds, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 5 people.`
   }
 }
 
 export const redBrick = {
   proto: [Text, Box],
   props: {
-    text: ` "Red Brick" is a cozy and quiet one bedroom apartment of 55m2 , combining Georgian old style and modern interior elements, located on the ground floor, just few steps downstairs, composed of living area with comfortable sofa bed for 1 person and sleeping area with 1 Queen bed, private bathroom with shower, kitchen dining table, making the apartment comfortable for 3 people.`
+    text: `Studio apartment of 55m2 located on the ground floor, just few steps downstairs, composed of living area with comfortable sofa bed for 1 person and sleeping area with 1 Queen bed, private bathroom with shower, kitchen dining table, making the apartment comfortable for 3 people.`
   }
 }
 
 export const yellowCouch = {
   proto: [Text, Box],
   props: {
-    text: `"Yellow Couch " is a cozy and quiet one bedroom apartment of 50 m2 with open terrace, located on high first floor and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
+    text: `Cozy and quiet one bedroom apartment of 50 m2 with open terrace, located on high first floor and  composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
   }
 }
 
 export const greenForest = {
   proto: [Text, Box],
   props: {
-    text: `"Green Forest " is a cozy and quiet one bedroom apartment of 51 m2 with open terrace, located on high first floor and composed of living room and bedroom with 1 King bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 2 people.`
+    text: `One bedroom apartment of 51 m2 with open terrace, located on high first floor and  composed of living room and bedroom with 1 King bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 2 people.`
   }
 }
 
 export const retro = {
   proto: [Text, Box],
   props: {
-    text: `"Retro " is a cozy and quiet one bedroom apartment of 44 m2 with open terrace, located on high first floor and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
+    text: `Cozy and quiet one bedroom apartment of 44 m2 with open terrace, located on high first floor and  composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
   }
 }
 

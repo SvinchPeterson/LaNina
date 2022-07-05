@@ -61,7 +61,11 @@ const texts = {
   proto: Box,
   props: {
     position: 'absolute',
-    margin: 'I1 H -D 0',
+    flexFlow: 'column',
+    fontSize: 'Z',
+    gap: 'A1',
+    // fontWeight: '900',
+    // fontSize: 'Y',
     '@tabletL': {
       margin: '0 0 0 0',
       bottom: '-B'
@@ -80,84 +84,22 @@ const texts = {
   style: {
     zIndex: 3,
     alignSelf: 'flex-end',
-    boxSizing: 'border-box'
-    // border: '5px solid blue'
+    boxSizing: 'border-box',
+    // border: '5px solid blue',
+    textTransform: 'uppercase',
+    margin: '0 430px -200px 0',
+    padding: '100px 0 0 0',
+    letterSpacing: '1px',
+    fontWeight: ''
   },
 
-  entrences: {
-    proto: Box,
-    props: {
-      flexFlow: 'column',
-      gap: 'Z'
-    },
-    childProto: {
-      proto: [Text, Box],
-      props: {
-        color: 'black .45'
-      },
-      style: {
-        textTransform: 'uppercase',
-        fontWeight: 900,
-        fontSize: `${13 / 16}em`,
-        '@media only screen and (max-width: 480px)': { fontSize: `${12.5 / 16}em` }
-      }
-    },
-    ...[
-      { props: { text: 'private entrance' } },
-      {
-        proto: Box,
-        props: {
-          flexAlign: 'center flex-start',
-          gap: '12px'
-        },
-        style: {
-          flexWrap: 'wrap',
-          lineHeight: `${10 / 13}em`
-        },
-        ...[
-          { text: 'separate street' },
-          { text: 'or', style: { textTransform: 'initial' } },
-          { text: 'building entrance' }
-        ]
-      },
-      { props: { text: 'free parking on premises' } }
-    ]
-  },
-
-  luggage: {
-    tag: 'p',
-    proto: [Text, Box],
-    props: {
-      text: `Luggage dropoff allowed for guests' convenience when they have early arrival or late departure`,
-      color: 'black .35',
-      padding: 'B 0 Y 0'
-    },
-    style: {
-      fontSize: `${13.5 / 16}em`,
-      maxWidth: `${400 / 13.5}em`,
-      letterSpacing: '1px',
-      lineHeight: `${20 / 13.5}em`,
-      '@media only screen and (max-width: 480px)': {
-        width: `${270 / 13.5}em`
-      }
-    }
-  },
-
-  stay: {
-    tag: 'p',
-    proto: [Text, Box],
-    props: {
-      text: 'Long term stays allow for 28 days or more',
-      color: 'black .35'
-    },
-    style: {
-      fontSize: `${13.5 / 16}em`,
-      letterSpacing: '1px',
-      '@media only screen and (max-width: 480px)': {
-        width: `${270 / 13.5}em`
-      }
-    }
-  }
+  ...[
+    { text: 'central location' },
+    { text: 'free on site parking' },
+    { text: 'free wifi' },
+    { text: '24/7 customer service' },
+    { tex: 'complimentary services' }
+  ]
 }
 
 export default {

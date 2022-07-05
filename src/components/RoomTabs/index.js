@@ -11,22 +11,21 @@ const icon = {
     bottom: '0'
   },
   style: {
-    zIndex: '20',
-    opacity: '.75'
+    zIndex: '20'
   },
   img: {
     proto: [Img, Box],
-    props: { boxSize: 'A1 A1' }
+    props: { boxSize: 'A1 A1' },
+    style: { opacity: '.75' }
   }
 }
 
 const tabParagraph = {
   proto: [Text, Box],
   props: {
-    color: 'cream 1',
+    color: 'cream2',
     fontSize: 'Z',
-    maxWidth: 'G2',
-    padding: `0 B2 0 C1`,
+    padding: `0 Z1 0 Z1`,
     '@tabletL': {
       // fontSize: 'A',
       maxWidth: 'H'
@@ -35,15 +34,22 @@ const tabParagraph = {
     '@mobileS': { padding: 'C1' }
   },
   style: {
+    // maxWidth: '700px',
+
+    // border: '4px solid red',
     zIndex: 10,
     opacity: 0,
+    maxWidth: '340px',
+    textAlign: 'justify',
+    boxSizing: 'border-box',
     pointerEvents: 'none',
-    transition: 'opacity .3s ease-in-out',
+    transition: 'opacity .6s ease-in-out',
     transitionDelay: '.4s',
-    lineHeight: `${17 / 14}em`,
+    lineHeight: `${19 / 14}em`,
     letterSpacing: '.5px',
-    fontWeight: 400,
-    textAlign: 'left'
+    wordSpacing: '-1.5px',
+    fontWeight: 400
+    // border: '2px solid red'
   },
   class: {
     show: (element, state) => state.activeTab === element.parent.parent.key ? { opacity: 1 } : {}
@@ -81,7 +87,9 @@ export const RoomTab = {
     textDecoration: 'none',
     position: 'relative',
     backdropFilter: 'blur(2px)',
-    boxShadow: '0px 0px 2px 0px rgba(0, 0, 0, .35)',
+    // filter: 'grayscale(100%)',
+
+    // boxShadow: '0px 0px 2px 0px rgba(0, 0, 0, .35)',
     // overflow: 'hidden',
     // '&:hover:after': {
     //   color: '#FFCEA8',
@@ -94,8 +102,8 @@ export const RoomTab = {
       height: '100%',
       top: 0,
       left: 0,
-      background: 'linear-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, .9))',
-      opacity: '.35',
+      background: 'linear-gradient(rgba(60,84, 72, .5), rgba(60,84, 72, 1))',
+      opacity: '.45',
       transition: 'opacity .7s ease-in-out',
       cursor: 'pointer'
     },
@@ -109,7 +117,7 @@ export const RoomTab = {
       top: `${0 / 10}em`,
       left: `${0 / 10}em`,
       backdropFilter: 'blur(10px)',
-      background: 'rgba(60,84, 72, .45)',
+      background: 'rgba(60,84, 72, .75)',
       textAlign: 'center',
       borderBottomRightRadius: '4px',
       color: 'rgba(248, 241, 227, 1)',
@@ -124,7 +132,8 @@ export const RoomTab = {
         transitionDelay: '0s',
         transition: 'opacity 0s ease-in-out'
       },
-      '&:hover:before': { opacity: 1 }
+      '&:hover:before': { opacity: 1 },
+      '&:hover img': { opacity: 1 }
     }
   },
   on: {

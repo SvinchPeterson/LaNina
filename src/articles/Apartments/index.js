@@ -99,6 +99,7 @@ export default {
     flexFlow: 'column',
     position: 'relative',
     padding: `F2 0 G 0`,
+    margin: 'E 0 E 0',
     '@tabletL': { padding: 'F 0 G 0' },
     '@mobileM': { padding: 'E2 0' }
   },

@@ -54,7 +54,8 @@ export const Header = {
     top: '0',
     left: '0',
     flexAlign: 'center space-between',
-    padding: 'C1 E B E'
+    padding: '0 C2 0 C2',
+    margin: 'C1 0'
   },
   style: {
     zIndex: '100',

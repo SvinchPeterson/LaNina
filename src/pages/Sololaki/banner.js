@@ -156,7 +156,7 @@ const image = {
       width: '100%',
       height: '100%',
       display: 'block',
-      background: 'linear-gradient(rgba(60,84, 72, .1), rgba(60,84, 72, 1))',
+      background: 'radial-gradient(rgba(60,84, 72, .45), rgba(60,84, 72, .8))',
       animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
       '@media only screen and (max-width: 560px)': {
         background: 'linear-gradient(rgba(60,84, 72, .65), rgba(60,84, 72, .85))'
