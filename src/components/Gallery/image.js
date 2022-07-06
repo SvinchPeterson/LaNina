@@ -39,10 +39,10 @@ export const image = {
       ? {
         '@media only screen and (min-width: 1225px)': {
           height: '100%',
-          opacity: 1,
-          animationName: position,
-          animationDuration: '1s',
-          animationTimingFunction: 'ease-in-out'
+          opacity: 1
+          // animationName: position,
+          // animationDuration: '1s',
+          // animationTimingFunction: 'ease-in-out'
         },
         '@media only screen and (max-width: 1225px)': { opacity: 1 }
       }

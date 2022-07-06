@@ -6,7 +6,7 @@ const header = {
   proto: Box,
   props: {
     flexAlign: 'center space-between',
-    padding: 'Z2 A2 Z2 B'
+    padding: 'A2 A2 Z2 B'
   },
   style: {
     textTransform: 'uppercase',
@@ -18,9 +18,11 @@ const header = {
     proto: [Text, Box],
     props: {
       text: 'amenities',
-      color: 'cream2 .65',
-      fontSize: 'Z'
-    }
+      color: 'cream2 .75',
+      fontSize: 'Z',
+      fontWeight: '900'
+    },
+    style: { letterSpacing: '1px' }
   },
 
   minimize: {
@@ -105,7 +107,7 @@ const offers = {
     tag: 'span',
     proto: [Box, Text],
     props: {
-      color: 'cream .85',
+      color: 'cream 1',
       fontSize: 'Y',
       flexAlign: 'center flex-start'
     },
@@ -142,12 +144,12 @@ export const RoomOffers = {
   proto: Box,
   props: {
     minWidth: 'G1',
-    background: 'green2 .65',
+    background: 'green2 1',
     position: 'absolute',
     left: '8%',
     bottom: '-F',
     flexFlow: 'column',
-    round: 'B',
+    round: 'Y',
     '@tabletL': {
       maxHeight: 'H',
       left: '50%',

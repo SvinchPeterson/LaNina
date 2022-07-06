@@ -37,92 +37,78 @@ const map = {
 
   props: {
     display: 'block',
-    maxWidth: 'H3',
-    minHeight: 'H',
+    maxWidth: '100%',
+    position: 'relative',
     '@tabletL': { minWidth: '80%' },
     '@mobileL': { minWidth: '100%' }
   },
   style: {
     flex: 1,
-    border: '3px solid rgba(168, 98, 63, 1)'
-
+    border: 'none',
+    margin: '0 auto',
+    // padding: '100px',
+    minHeight: '500px'
   }
 }
 
-const airPort = {
-  proto: Box,
-  props: {
-    flexFlow: 'column',
-    flexAlign: 'center center',
-    gap: 'C',
-    '@mobileS': { padding: '0 B' }
-  },
-
-  childProto: {
-    tag: 'p',
-    proto: Box,
-    props: {
-      fontSize: 'Z',
-      maxWidth: 'G3',
-      color: 'black .4'
-    },
-    style: {
-      letterSpacing: '1px',
-      fontWeight: 400
-    }
-  },
-  ...[
-    { proto: distanceText },
-
-    {
-      proto: transferText,
-      props: {
-        flexFlow: 'column',
-        flexAlign: 'flex-start flex-start',
-        gap: 'Y'
-      },
-
-      caption: {
-        proto: Box,
-        props: {
-          text: 'transfer',
-          color: 'black .55'
-        },
-        style: {
-          fontWeight: 900,
-          textTransform: 'uppercase'
-        }
-      }
-    }
-  ]
-}
+// const airPort = {
+//   proto: distanceText,
+//   props: {
+//     flexFlow: 'column',
+//     '@mobileS': { padding: '0 B' }
+//   }
+// }
 
 export default {
   tag: 'article',
   proto: Box,
   props: {
     flexFlow: 'column',
-    gap: '0',
-    padding: 'E 0 0 0',
+    flexAlign: 'center center',
+    padding: 'G2 0 0 0',
     '@tabletL': { padding: 'E2 0 0 0' },
     '@tabletM': { padding: 'E 0 0 0' }
   },
   attr: { id: 'location' },
-
-  paragraph,
-  location: {
-    tag: 'section',
+  // airPort,
+  content: {
     proto: Box,
     props: {
-      flexAlign: 'center center',
-      gap: 'D',
-      '@tabletL': {
-        flexFlow: 'column',
-        gap: 'D2'
-      }
+      flexAlign: 'centet center',
+      minWidth: '60%',
+      padding: 'B1 0 0 0',
+      position: 'relative'
     },
-
-    map,
-    airPort
+    style: {
+      borderTop: '.8px solid rgba(0, 0, 0, .65)',
+      // borderBottom: '2px solid rgba(0, 0, 0, .75)',
+      // boxShadow: 'inset -2px -2px 6px 0px rgba(0, 0, 0, .35)',
+      '&:before': {
+        content: '"Distance to Tbilisi International airport is 20 km. Central railway station is 11 km away."',
+        position: 'absolute',
+        maxWidth: '350px',
+        background: 'rgba(248, 241, 227, 1)',
+        color: 'rgba(0, 0, 0, .85)',
+        top: '-60px',
+        right: '5px',
+        zIndex: '20',
+        fontSize: '13px',
+        textAlign: 'right',
+        fontWeight: '500',
+        letterSpacing: '.7px'
+      }
+      // '&:after': {
+      //   content: '""',
+      //   position: 'absolute',
+      //   width: '100%',
+      //   height: '50px',
+      //   background: 'rgba(248, 241, 227, 1)',
+      //   top: '0',
+      //   left: '0',
+      //   zIndex: '20'
+      // }
+      // border: '10px solid red'
+    },
+    map
   }
 }

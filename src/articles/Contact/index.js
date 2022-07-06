@@ -4,37 +4,84 @@ import { Box } from '@symbo.ls/symbols'
 export const Contact = {
   proto: Box,
   props: {
-    padding: 'F 0',
-    flexAlign: 'center center'
+    padding: 'B B F B',
+    flexAlign: 'center flex-start'
   },
   content: {
     proto: Box,
     props: {
-      flexFlow: 'column',
-      flexAlign: 'center center',
-      gap: 'X2',
-      color: 'black .65',
-      maxWidth: 'G'
+      flexAlign: 'flex-start space-between',
+      gap: '0',
+      color: 'black .9',
+      // maxWidth: 'G',
+      width: '60%'
     },
-    childProto: {
+    style: {
+      letterSpacing: '1px',
+      fontWeight: '500',
+      // border: '2px solid red',
+      margin: '0 auto'
+    },
+    mails: {
       proto: Box,
-      style: {
-        fontWeight: '700',
-        textAlign: 'center',
-        fontSize: `${14 / 16}em`
-      }
-    },
-    ...[
-      { props: { text: 'info@bbhospitality.ge' } },
-      { props: { text: 'reservations@bbhospitality.ge' } },
-      {
-        props: {
-          text: '+995 322 502222',
-          padding: 'A 0 0 0'
-        }
+      props: {
+        flexAlign: 'center flex-start',
+        gap: 'Z2',
+        fontSize: '13px'
       },
-      { props: { text: '+995593 345158' } }
-    ]
+      ...[
+        {
+          proto: Box,
+          props: { padding: '0 Z2 0 0' },
+          text: 'info@bbhospitality.ge',
+          style: { borderRight: '.8px solid rgba(0, 0, 0, .65)' }
+        },
+        { text: 'reservations@bbhospitality.ge' }
+      ]
+    },
+    numbers: {
+      proto: Box,
+
+      props: {
+        flexAlign: 'center flex-start',
+        gap: 'Z2',
+        fontSize: '13px'
+      },
+      ...[
+        {
+          proto: Box,
+          props: { padding: '0 Z2 0 0' },
+          style: { borderRight: '.8px solid rgba(0, 0, 0, .65)' },
+          text: '995 322 502 222'
+        },
+        { text: '995 593 345 158' }
+      ]
+    }
+    // childProto: {
+    //   proto: Box,
+    //   style: {
+    //     fontWeight: '500',
+    //     textAlign: 'center',
+    //     fontSize: `${13.5 / 16}em`,
+    //     letterSpacing: '.9px'
+    //   },
+    //   ...[
+    //     {},
+    //     {}
+    //   ]
+
+    // },
+    // ...[
+    //   { ...[{ props: { text: 'info@bbhospitality.ge' } }] },
+    //   { ...[{ props: { text: 'reservations@bbhospitality.ge' } }] },
+    //   {
+    //     props: {
+    //       text: '995 322 502 222',
+    //       padding: 'A2 0 0 0'
+    //     }
+    //   },
+    //   { props: { text: '995 593 345 158' } }
+    // ]
 
   }
 

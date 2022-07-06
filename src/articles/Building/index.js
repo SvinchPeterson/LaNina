@@ -50,7 +50,7 @@ const placeFeature = {
     proto: Box,
     props: {
       flexAlign: 'center flex-start',
-      padding: 'A A2 A A',
+      padding: 'A A2 A A1',
       // background: 'cream2 .15',
       round: 'Y'
     },

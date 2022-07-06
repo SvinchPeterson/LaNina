@@ -22,7 +22,7 @@ const yardEntrence = {
 
   },
   style: {
-    boxShadow: 'inset 0 0 35px 1px rgba(0, 0, 0, .8)',
+    // boxShadow: 'inset 0 0 35px 1px rgba(0, 0, 0, .8)',
     backgroundAttachment: 'fixed',
     backgroundImage: 'url(' + ENTRENCE_JPG + ')',
     backgroundSize: 'cover',
@@ -63,8 +63,8 @@ const texts = {
     position: 'absolute',
     flexFlow: 'column',
     fontSize: 'Z',
-    gap: 'A1',
-    // fontWeight: '900',
+    gap: 'A',
+    fontWeight: '500',
     // fontSize: 'Y',
     '@tabletL': {
       margin: '0 0 0 0',

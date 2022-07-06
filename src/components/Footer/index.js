@@ -67,7 +67,7 @@ export const Footer = {
     width: '100%',
     position: 'fixed',
     bottom: '0',
-    flexAlign: 'center space-between',
+    flexAlign: 'flex-start space-between',
     padding: '0 C2 C C2',
     '@mobileM': { padding: '0 B B B' }
   },
