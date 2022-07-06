@@ -60,33 +60,17 @@ const offers = {
     padding: '0 C2 0 C2',
     columns: 'repeat(2, 1fr)',
     columnGap: '0',
-    rowGap: '0',
-    // alignContent: 'center',
-    '@tabletL': {
-      columns: '100%',
-      rowGap: 'Y2',
-      padding: '0 C2 A1 C2'
-    }
+    rowGap: '0'
   },
   style: {
     letterSpacing: '1px',
-    transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out',
-    '@media only screen and (max-width: 1225px)': {
-      overflowY: 'auto',
-      transition: 'min-height .4s ease-in-out, padding-bottom .4s ease-in-out'
-    }
+    transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out'
   },
   class: {
     show: (element, state) => state.offers
 
       ? {
         minHeight: `${200 / 16}em`,
-        '@media only screen and (max-width: 1366px)': {
-          minHeight: `${150 / 16}em`
-        },
-        '@media only screen and (max-height: 600px)': {
-          minHeight: `${200 / 16}em`
-        },
         '> span': {
           opacity: 1,
           transition: 'height .4s linear, opacity .5s linear .4s'
@@ -114,7 +98,6 @@ const offers = {
     style: {
       fontWeight: 500,
       textTransform: 'uppercase'
-      // border: '2px solid red'
     }
   },
   ...[
@@ -149,36 +132,19 @@ export const RoomOffers = {
     left: '8%',
     bottom: '-F',
     flexFlow: 'column',
-    round: 'Y',
-    '@tabletL': {
-      maxHeight: 'H',
-      left: '50%',
-      bottom: '-F'
-    },
-    '@mobileS': {
-      minWidth: 'G',
-      left: '55%'
-    },
-    '@mobileXS': { minWidth: 'F2' }
+    round: 'Y'
   },
   style: {
     transition: 'all 1s ease-in-out',
     backdropFilter: 'blur(5px)',
     zIndex: '70',
-    // background: 'linear-gradient(rgba(60,84, 72, 1), rgba(60,84, 72, 1))',
-    // border: '.5px solid rgba(245, 245, 245, .25)',
-    transform: 'translate(50%, 50%)',
-    '@media only screen and (max-width: 1225px)': {
-      overflow: 'hidden',
-      transform: 'translate(-50%, 50%)'
-    }
+    transform: 'translate(50%, 50%)'
   },
 
   class: {
     show: (element, state) => state.offers
       ? {
-        '@media only screen and (min-width: 1225px)': { paddingBottom: `${40 / 16}em`, marginBottom: '100px' },
-        '@media only screen and (max-width: 1225px)': { paddingBottom: `${16 / 16}em` }
+        paddingBottom: `${40 / 16}em`, marginBottom: '100px'
       }
       : {}
   },
