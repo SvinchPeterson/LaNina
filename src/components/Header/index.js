@@ -80,16 +80,11 @@ export const HeaderMobile = {
     gap: 'E',
     display: 'none',
     width: '100%',
-    '@mobileL': { display: 'flex' },
-    '@mobileM': {
-      padding: 'B B 0 B'
-    }
+    '@mobileL': { display: 'flex' }
   },
   style: {
     zIndex: 500,
-    mixBlendMode: 'difference',
-    '@media only screen and (max-width: 480px)': { gap: `${95 / 16}em` },
-    '@media only screen and (max-width: 330px)': { gap: `${85 / 16}em` }
+    mixBlendMode: 'difference'
   },
 
   Book,

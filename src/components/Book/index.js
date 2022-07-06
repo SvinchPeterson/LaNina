@@ -14,7 +14,7 @@ export const Book = {
     textDecoration: 'none',
     zIndex: 100,
     fontWeight: '900',
-    '@media only screen and (min-width: 1366px)': { '&:hover > span': { opacity: '.9' } }
+    '&:hover > span': { opacity: '.9' }
   },
 
   span: {
@@ -23,6 +23,6 @@ export const Book = {
       text: 'BOOK',
       fontSize: 'Z'
     },
-    style: { '@media only screen and (min-width: 1366px)': { opacity: '.7' } }
+    style: { opacity: '.7' }
   }
 }

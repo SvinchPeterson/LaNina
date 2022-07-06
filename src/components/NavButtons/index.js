@@ -46,7 +46,7 @@ export const navButtons = {
           width: '40%',
           height: '1px',
           background: 'rgba(245, 245, 245, .5)',
-          bottom: '-7px',
+          bottom: `${-7 / 16}em`,
           left: '50%',
           transform: 'translate(-50%, -50%)'
         }
@@ -114,8 +114,7 @@ export const navButtons2 = {
   style: {
     display: 'none',
     zIndex: '200',
-    transform: 'translate(-50%, -50%)',
-    '@media only screen and (max-width: 1366px)': { display: 'flex' }
+    transform: 'translate(-50%, -50%)'
   },
 
   childProto: {
@@ -139,8 +138,8 @@ export const navButtons2 = {
     {
       props: { padding: 'C2 C C2 A' },
       style: {
-        borderTopRightRadius: '70px',
-        borderBottomRightRadius: '70px',
+        borderTopRightRadius: `${70 / 16}em`,
+        borderBottomRightRadius: `${70 / 16}em`,
         border: 'none',
         borderRight: '2px solid rgba(245, 245, 245, .25)'
       },
@@ -153,8 +152,8 @@ export const navButtons2 = {
     {
       props: { padding: 'C2 A C2 C' },
       style: {
-        borderTopLeftRadius: '70px',
-        borderBottomLeftRadius: '70px',
+        borderTopLeftRadius: `${70 / 16}em`,
+        borderBottomLeftRadius: `${70 / 16}em`,
         border: 'none',
         borderLeft: '2px solid rgba(245, 245, 245, .25)'
       },

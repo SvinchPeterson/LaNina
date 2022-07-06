@@ -24,21 +24,21 @@ const tabParagraph = {
   proto: [Text, Box],
   props: {
     color: 'cream2',
-    fontSize: 'Z',
-    padding: `0 Z1 0 Z1`
+    fontSize: 'A',
+    padding: `0 Z 0 Z`
   },
   style: {
     zIndex: 10,
     opacity: 0,
-    maxWidth: `${330 / 14}em`,
+    maxWidth: `${270 / 16}em`,
     textAlign: 'justify',
     boxSizing: 'border-box',
     pointerEvents: 'none',
-    transition: 'opacity .6s ease-in-out',
+    transition: 'opacity .3s ease-in-out',
     transitionDelay: '.4s',
-    lineHeight: `${20 / 14}em`,
-    letterSpacing: '.5px',
-    wordSpacing: '-1.5px',
+    lineHeight: `${17 / 14}em`,
+    letterSpacing: '.8px',
+    wordSpacing: '-5px',
     fontWeight: 400
   },
   class: {
@@ -67,6 +67,14 @@ export const RoomTab = {
     textDecoration: 'none',
     position: 'relative',
     backdropFilter: 'blur(2px)',
+    '&:hover': { flex: 5.5, backdropFilter: 'blur(10px)' },
+    '&:hover > div > p': { opacity: 1 },
+    '&:not(:hover) > div > p': {
+      transitionDelay: '0s',
+      transition: 'opacity 0s ease-in-out'
+    },
+    '&:hover:before': { opacity: 1 },
+    '&:hover img': { opacity: 1 },
     '&:before': {
       content: '""',
       position: 'absolute',
@@ -84,8 +92,8 @@ export const RoomTab = {
       fontSize: `${10 / 14}em`,
       fontWeight: 700,
       position: 'absolute',
-      width: `${125 / 16}em`,
-      padding: `${12 / 16}em 0`,
+      width: '125px',
+      padding: '12px 0',
       top: `${0 / 10}em`,
       left: `${0 / 10}em`,
       backdropFilter: 'blur(10px)',
@@ -102,7 +110,7 @@ export const RoomTab = {
       state.update({ activeTab: element.key })
       element.parent.parent.parent.rooms.update({
         style: {
-          minHeight: `100%`,
+          minHeight: `${500 / 16}em`,
 
           opacity: 1,
           padding: `0 ${200 / 16}em`

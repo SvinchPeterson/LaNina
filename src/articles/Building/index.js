@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Grid, Img } from '@symbo.ls/symbols'
+import { Box } from '@symbo.ls/symbols'
 import { BuildingHistory } from '../../texts'
 
 const buildingHistory = {
