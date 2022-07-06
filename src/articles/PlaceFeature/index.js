@@ -74,11 +74,6 @@ export const placeFeature = {
         // border: '1px solid rgba(220, 187, 140, .1)',
         background: 'radial-gradient(rgba(248, 241, 227, .75), rgba(248, 241, 227, .85))'
       },
-      // icon: {
-      //   proto: [Img, Box],
-      //   props: { boxSize: ' B', margin: '0 0 0 0' },
-      //   style: { opacity: '.65' }
-      // },
       icon: null,
       paragraph: {
         proto: Box,
@@ -115,7 +110,6 @@ export const placeFeature = {
 
     ...[
       {
-        icon: { props: { src: LOCATION_PNG } },
         paragraph: {
           title: { text: 'City center' },
           p: { text: '7 min from Liberty square' }
@@ -123,7 +117,6 @@ export const placeFeature = {
       },
 
       {
-        icon: { props: { src: DOOR_HANGER_PNG } },
         paragraph: {
           title: { text: 'Personal service' },
           p: { text: 'Feel yourself at home' }
@@ -131,7 +124,6 @@ export const placeFeature = {
       },
 
       {
-        icon: { props: { src: CLOCK_PNG } },
         paragraph: {
           title: { text: 'We work round the clock' },
           p: { text: 'Check-in possible 24 hours' }
@@ -139,7 +131,6 @@ export const placeFeature = {
       },
 
       {
-        icon: { props: { src: BUBBLE_PNG } },
         paragraph: {
           title: { text: 'Housekeeping' },
           p: { text: 'Weekly housekeeping' }
@@ -147,7 +138,6 @@ export const placeFeature = {
       },
 
       {
-        icon: { props: { src: APRON_PNG } },
         paragraph: {
           title: { text: 'Kitchen inside' },
           p: { text: 'Cook at home' }
@@ -155,7 +145,6 @@ export const placeFeature = {
       },
 
       {
-        icon: { props: { src: DOCUMENT_PNG } },
         paragraph: {
           title: { text: 'Accounting documents' },
           p: { text: 'Complete kit of accounting' }
@@ -163,7 +152,6 @@ export const placeFeature = {
       },
 
       {
-        icon: { props: { src: PLAY_PNG } },
         paragraph: {
           title: { text: 'Mutimediea' },
           p: { text: 'Vinyl player, Streaming' }
@@ -171,7 +159,6 @@ export const placeFeature = {
       },
 
       {
-        icon: { props: { src: WINE_COFFEE, boxSize: ' B2' } },
         paragraph: {
           title: { text: 'with compliments' },
           p: { text: 'Georgian wine, Coffee & Tea' }

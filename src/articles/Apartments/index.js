@@ -17,24 +17,14 @@ const roomsTabs = {
     flexFlow: 'column',
     flexAlign: 'flex-start center',
     padding: '0 10%',
-    miHeight: '100%',
-    '@screenL': { padding: '0 16%' },
-    '@screenD': { padding: '0 15%' },
-    '@screenS': { padding: '0 10%' },
-    '@tabletL': { padding: '0 15%' },
-    '@tabletS': { padding: '0 0' },
-    '@mobileL': { padding: '0 0' },
-    '@mobileM': { padding: '0 0' }
+    miHeight: '100%'
 
   },
 
   buttons: {
     proto: navButtons2,
     props: {
-      width: '95%',
-      '@tabletS': {
-        width: '100.5%'
-      }
+      width: '95%'
     },
     ...[
       {
@@ -72,7 +62,6 @@ const roomsTabs = {
       width: '100%',
       padding: 'B2 0 0 0'
     },
-    style: { '@media only screen and (max-width: 1366px)': { overflowX: 'auto' } },
     childProto: {
       proto: Box
     },
@@ -103,9 +92,7 @@ export default {
     flexFlow: 'column',
     position: 'relative',
     padding: `F2 0 G 0`,
-    margin: '0 0 0 0',
-    '@tabletL': { padding: 'F 0 G 0' },
-    '@mobileM': { padding: 'E2 0' }
+    margin: '0 0 0 0'
   },
   style: {
     scrollBehavior: 'smooth',
@@ -114,7 +101,6 @@ export default {
     backgroundPosition: 'center',
     boxSizing: 'border-box',
     backgroundAttachment: 'fixed',
-    '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' },
     '&:before': {
       content: '""',
       width: '100%',
@@ -123,8 +109,7 @@ export default {
       top: 0,
       left: 0,
       background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
-      backgroundAttachment: 'fixed',
-      '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
+      backgroundAttachment: 'fixed'
     }
   },
   attr: { id: 'apartments' },
