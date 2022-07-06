@@ -7,7 +7,7 @@ const yardEntrence = {
   proto: Box,
   props: {
     minWidth: `${900 / 16}em`,
-    minHeight: ` ${800 / 16}em`
+    padding: 'F 0'
   },
   style: {
     flex: '1',
@@ -35,7 +35,7 @@ const streetEntrence = {
   },
   style: {
     flex: '1',
-    marginTop: `${100 / 16}em`,
+    marginTop: `${50 / 16}em`,
     marginRight: `${-400 / 16}em`,
     backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .35)),url(' + STREET_JPG + ')',
     backgroundSize: 'contain',
@@ -51,7 +51,7 @@ const texts = {
   props: {
     position: 'absolute',
     flexFlow: 'column',
-    bottom: '-E',
+    bottom: '-E2',
     margin: '0 0 0 -H1',
     gap: 'A1',
     minHeight: 'fit-content'
@@ -87,8 +87,8 @@ export default {
     gap: 'Z'
   },
   style: {
-    marginBottom: `${450 / 16}em`,
-    marginTop: `${350 / 16}em`
+    marginBottom: `${400 / 16}em`,
+    marginTop: `${300 / 16}em`
   },
 
   yardEntrence,

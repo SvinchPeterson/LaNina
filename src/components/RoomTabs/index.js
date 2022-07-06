@@ -24,21 +24,21 @@ const tabParagraph = {
   proto: [Text, Box],
   props: {
     color: 'cream2',
-    fontSize: 'A',
-    padding: `0 Z 0 Z`
+    fontSize: 'Z',
+    padding: `0 0 0 0`
   },
   style: {
     zIndex: 10,
     opacity: 0,
-    maxWidth: `${270 / 16}em`,
+    maxWidth: `${300 / 14}em`,
     textAlign: 'justify',
     boxSizing: 'border-box',
     pointerEvents: 'none',
     transition: 'opacity .3s ease-in-out',
     transitionDelay: '.4s',
     lineHeight: `${17 / 14}em`,
-    letterSpacing: '.8px',
-    wordSpacing: '-5px',
+    letterSpacing: '.5px',
+    wordSpacing: '-7px',
     fontWeight: 400
   },
   class: {
