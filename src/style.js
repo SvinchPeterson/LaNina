@@ -17,6 +17,7 @@ export default {
   h5: { margin: 0 },
   p: { margin: 0 },
   h6: { margin: 0 },
+  // border: '10px solid red',
   background: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))',
   '@media only screen and (min-width: 1680px)': { fontSize: '19px' }
 }

@@ -167,7 +167,8 @@ const image = {
 const container = {
   proto: Box,
   props: {
-    boxSize: '100% 100%',
+    minWidth: '100%',
+    minHeight: '100%',
     position: 'relative'
   },
   style: {

@@ -1,5 +1,6 @@
 'use strict'
 import { Box } from '@symbo.ls/symbols'
+import { Contact } from '../Contact'
 
 import { locationText, distanceText, transferText } from '../../texts'
 
@@ -9,7 +10,7 @@ const paragraph = {
 
   props: {
     maxWidth: 'H1',
-    padding: 'D D D2 D',
+    // padding: 'D D D2 D',
     color: 'black .55',
     fontSize: 'Z',
     '@mobileM': {
@@ -37,7 +38,7 @@ const map = {
 
   props: {
     display: 'block',
-    maxWidth: '100%',
+    minWidth: '100%',
     position: 'relative',
     '@tabletL': { minWidth: '80%' },
     '@mobileL': { minWidth: '100%' }
@@ -65,18 +66,22 @@ export default {
   props: {
     flexFlow: 'column',
     flexAlign: 'center center',
-    padding: 'G2 0 0 0',
-    '@tabletL': { padding: 'E2 0 0 0' },
-    '@tabletM': { padding: 'E 0 0 0' }
+    minHeight: '100%'
+
+    // padding: 'G2 0 0 0',
+    // '@tabletL': { padding: 'E2 0 0 0' },
+    // '@tabletM': { padding: 'E 0 0 0' }
   },
   attr: { id: 'location' },
   // airPort,
   content: {
     proto: Box,
     props: {
-      flexAlign: 'centet center',
+      flexFlow: 'column',
+      flexAlign: 'flex-start flex-start',
       minWidth: '60%',
-      padding: 'B1 0 0 0',
+      margin: 'F2 0 0 0',
+      padding: 'A2 0 0 0',
       position: 'relative'
     },
     style: {
@@ -109,6 +114,10 @@ export default {
       // }
       // border: '10px solid red'
     },
-    map
+    map,
+    contact: {
+      style: { alignSelf: 'flex-start' },
+      proto: Contact
+    }
   }
 }

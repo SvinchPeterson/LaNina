@@ -17,6 +17,7 @@ const roomsTabs = {
     flexFlow: 'column',
     flexAlign: 'flex-start center',
     padding: '0 10%',
+    miHeight: '100%',
     '@screenL': { padding: '0 16%' },
     '@screenD': { padding: '0 15%' },
     '@screenS': { padding: '0 10%' },
@@ -82,7 +83,10 @@ const roomsTabs = {
 const rooms = {
   tag: 'section',
   proto: Box,
-  props: { round: 'B' },
+  props: {
+    round: 'B',
+    minheight: '100%'
+  },
 
   ...[
     roomBallerina,
@@ -99,7 +103,7 @@ export default {
     flexFlow: 'column',
     position: 'relative',
     padding: `F2 0 G 0`,
-    margin: 'E 0 E 0',
+    margin: '0 0 0 0',
     '@tabletL': { padding: 'F 0 G 0' },
     '@mobileM': { padding: 'E2 0' }
   },

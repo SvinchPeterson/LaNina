@@ -41,7 +41,7 @@ const paragraph = {
     flexAlign: 'center flex-start',
     width: 'fit-content',
     color: 'black .75',
-    margin: '0 -F 0 0',
+    margin: '-D -E2 0 0',
     '@tabletL': {
       height: 'fit-content',
       minWidth: '70%',
@@ -103,18 +103,14 @@ const paragraph = {
 export default {
   proto: Box,
   props: {
-    boxSize: '100% 100%',
-    maxHeight: `${750 / 16}em`,
+    minHeight: '100%',
     position: 'relative',
-    flexAlign: 'Flex-start center',
-    margin: 'F2 0 F2 0',
-    padding: 'F2 0 0 0',
-    '@tabletM': {
-      padding: 'D1 0 0 0'
-
-    },
-    '@mobileL': { margin: 'F 0 G 0' },
-    '@mobileS': { margin: '0 0 F 0' }
+    flexAlign: 'center center',
+    margin: 'F2 0 E2 0'
+    // padding: 'G2 0'
+  },
+  style: {
+    // border: '10px solid black'
   },
   attr: { id: 'wine' },
 

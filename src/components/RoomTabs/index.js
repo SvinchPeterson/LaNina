@@ -141,19 +141,10 @@ export const RoomTab = {
       state.update({ activeTab: element.key })
       element.parent.parent.parent.rooms.update({
         style: {
-          minHeight: `${500 / 16}em`,
+          minHeight: `100%`,
 
           opacity: 1,
-          padding: `0 ${200 / 16}em`,
-          '@media only screen and (max-width: 1366px)': {
-            padding: `${100 / 16}em 13% `
-          },
-          '@media only screen and (max-width: 1024px)': {
-            padding: `${100 / 16}em 0% `
-          },
-          '@media only screen and (max-width: 560px)': {
-            padding: `${100 / 16}em 0% `
-          }
+          padding: `0 ${200 / 16}em`
         }
       })
     }

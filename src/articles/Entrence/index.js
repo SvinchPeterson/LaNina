@@ -6,22 +6,15 @@ import STREET_JPG from '../../assets/images/sololaki/street.jpg'
 const yardEntrence = {
   proto: Box,
   props: {
-    boxSize: `${650 / 16}em ${400 / 16}em`,
-    position: 'absolute',
-    margin: '0 G 0 0',
-    '@tabletL': {
-      margin: '0 0 0 0',
-      boxSize: `80% ${400 / 16}em`
-    },
-    '@mobileL': {
-      boxSize: `85% ${400 / 16}em`
-    },
-    '@mobileM': {
-      boxSize: `100% ${400 / 16}em`
-    }
+    minWidth: `${900 / 16}em`,
+    minHeight: ` ${800 / 16}em`
+    // boxSize: `${650 / 16}em ${400 / 16}em`,
+    // position: 'absolute',
+    // margin: '0 G 0 0',
 
   },
   style: {
+    flex: '1',
     // boxShadow: 'inset 0 0 35px 1px rgba(0, 0, 0, .8)',
     backgroundAttachment: 'fixed',
     backgroundImage: 'url(' + ENTRENCE_JPG + ')',
@@ -42,18 +35,26 @@ const yardEntrence = {
 const streetEntrence = {
   proto: Box,
   props: {
-    position: 'absolute',
-    boxSize: `${400 / 16}em ${500 / 16}em`,
-    margin: 'H 0 0 H1',
+    // position: 'absolute',
+    // xSize: `${400 / 16}em ${500 / 16}em`,
+    flex: '.4',
+    minWidth: `${500 / 16}em`,
+    minHeight: `${500 / 16}em`,
+    // margin: 'H 0 0 H1',
     '@tabletL': { display: 'none' }
   },
   style: {
+    // border: '3px solid red',
+    flex: '1',
+    marginTop: '-100px',
+    marginRight: '-400px',
     backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .35)),url(' + STREET_JPG + ')',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     zIndex: 2,
     backgroundAttachment: 'fixed',
-    backgroundPosition: 'right 170px bottom 200px'
+    backgroundPosition: 'right 250px bottom 200px'
+    // backgroundPosition: 'right 170px bottom 200px'
   }
 }
 
@@ -62,34 +63,25 @@ const texts = {
   props: {
     position: 'absolute',
     flexFlow: 'column',
-    fontSize: 'Z',
-    gap: 'A',
-    fontWeight: '500',
+    // left: '0',
+    bottom: '-E',
+    margin: '0 0 0 -H1',
+    gap: 'A1',
+    minHeight: 'fit-content'
+    // margin: 'H 0 0 0',
+    // top: 'H'
+    // fontWeight: '900',
     // fontSize: 'Y',
-    '@tabletL': {
-      margin: '0 0 0 0',
-      bottom: '-B'
-    },
-    '@mobileM': {
-      padding: '0 B1',
-      bottom: '-C'
-    },
-    '@mobileS': {
-      bottom: '-C2'
-    },
-    '@mobileXS': {
-      padding: '0 A'
-    }
   },
   style: {
     zIndex: 3,
-    alignSelf: 'flex-end',
+    alignSelf: 'center',
     boxSizing: 'border-box',
     // border: '5px solid blue',
     textTransform: 'uppercase',
-    margin: '0 430px -200px 0',
-    padding: '100px 0 0 0',
+    // padding: '100px 0 0 0',
     letterSpacing: '1px',
+
     fontWeight: ''
   },
 
@@ -105,12 +97,18 @@ const texts = {
 export default {
   proto: Box,
   props: {
+    flexFlow: 'column',
     position: 'relative',
     flexAlign: 'center center',
-    boxSize: `100% ${800 / 16}em`,
+    minHeight: '100%',
+    maxWidth: '1440px',
+    margin: '0 auto',
     maxHeight: 'I',
-    margin: 'D 0 H 0',
-    '@tabletL': { margin: '0 0 F1 0' }
+    gap: 'Z'
+  },
+  style: {
+    marginBottom: '450px',
+    marginTop: '300px'
   },
 
   yardEntrence,

@@ -5,7 +5,8 @@ export const Contact = {
   proto: Box,
   props: {
     padding: 'B B F B',
-    flexAlign: 'center flex-start'
+    flexAlign: 'flex-start space-between',
+    minWidth: '100%'
   },
   content: {
     proto: Box,
@@ -14,13 +15,11 @@ export const Contact = {
       gap: '0',
       color: 'black .9',
       // maxWidth: 'G',
-      width: '60%'
+      width: '100%'
     },
     style: {
       letterSpacing: '1px',
-      fontWeight: '500',
-      // border: '2px solid red',
-      margin: '0 auto'
+      fontWeight: '500'
     },
     mails: {
       proto: Box,
@@ -47,6 +46,7 @@ export const Contact = {
         gap: 'Z2',
         fontSize: '13px'
       },
+      style: { marginLeft: 'auto' },
       ...[
         {
           proto: Box,
