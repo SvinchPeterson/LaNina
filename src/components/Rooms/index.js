@@ -18,17 +18,7 @@ const book = {
     padding: 'Z A',
     fontSize: 'Z',
     bottom: '0',
-    left: '-D',
-    '@tabletL': {
-      left: 'auto',
-      right: '-D',
-      bottom: '-E1'
-    },
-    '@tabletS': { right: 'B' },
-    '@mobileM': {
-      right: 'B',
-      bottom: '-E'
-    }
+    left: '-D'
   },
   attr: { target: '_blank' },
   style: {
@@ -37,7 +27,7 @@ const book = {
     zIndex: '30',
     textDecoration: 'none',
     textOrientation: 'upright',
-    '@media only screen and (min-width: 1024px)': { writingMode: 'vertical-rl' },
+    writingMode: 'vertical-rl',
     '&:hover > span': { opacity: 1 }
   },
   class: {
@@ -73,31 +63,12 @@ const back = {
     href: '#apartments',
     color: 'cream2',
     flexAlign: 'center center',
-    padding: 'Z',
-    '@tabletL': {
-      left: 'C',
-      top: '122%'
-    },
-    '@mobileL': {
-      left: 'C',
-      top: '135%'
-    },
-    '@mobileM': {
-      left: 'A2',
-      top: '136%'
-    },
-    '@mobileS': {
-      top: '138%',
-      left: 'Y2'
-
-    }
+    padding: 'Z'
   },
   style: {
     textDecoration: 'none',
     '&:hover > span': { opacity: '1' },
-    '&:hover > img': { opacity: '1' },
-    '@media only screen and (max-width: 1366px)': { transform: 'rotate(-90deg)' },
-    '@media only screen and (max-width: 560px)': { transform: 'rotate(0deg)' }
+    '&:hover > img': { opacity: '1' }
   },
   class: {
     show: (element, state) => state.activeTab
@@ -127,15 +98,11 @@ const back = {
     },
     style: {
       fontWeight: '500',
-      '@media only screen and (min-width: 1366px)': {
-        textOrientation: 'upright',
-        writingMode: 'vertical-rl',
-        letterSpacing: '0',
-        opacity: '.7',
-        transition: 'opacity .15s ease-in-out'
-      },
-      textDecoration: 'upleft',
-      writingMode: 'vertical-lr'
+      textOrientation: 'upright',
+      writingMode: 'vertical-rl',
+      letterSpacing: '0',
+      opacity: '.7',
+      transition: 'opacity .15s ease-in-out'
     }
   }
 }
@@ -149,25 +116,10 @@ const Room = {
         height: `${600 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
-        paddingTop: `${130 / 16}em`,
-        '@media only screen and (max-width: 1366px)': {
-          transition: 'all .1s ease-in-out',
-          display: 'block',
-          height: `${550 / 16}em`
-        },
-        '@media only screen and (max-width: 768px)': {
-          height: `${400 / 16}em`
-        },
-        '@media only screen and (max-width: 480px)': {
-          height: `${350 / 16}em`
-        },
-        '@media only screen and (max-height: 650px)': {
-          height: `${300 / 16}em`
-        }
+        paddingTop: `${130 / 16}em`
       }
 
       : {
-        '@media only screen and (max-width: 1225px)': { display: 'none' },
         height: 0,
         opacity: 0,
         button: { opacity: 0 },
@@ -184,18 +136,11 @@ const Room = {
   navButton2: {
     proto: navButtons2,
     props: {
-      width: '120%',
-      '@tabletL': { top: '65%' },
-      '@mobileL': {
-        width: '110%',
-        top: '75%'
-      },
-      '@tabletS': { width: '101%' }
+      width: '120%'
     },
 
     ...[
       {
-        // props: { '@mobileM': { padding: 'C B C Z1' } },
         on: {
           click: (event, element, state) => {
             const { activeImage } = state
@@ -207,13 +152,9 @@ const Room = {
             }
           }
         }
-        // image: { props: { '@mobileM': { boxSize: 'A B' } } }
       },
 
       {
-        props: {
-          // '@mobileM': { padding: 'C Z1 C B' }
-        },
         on: {
           click: (event, element, state) => {
             const { activeImage } = state
@@ -225,7 +166,6 @@ const Room = {
             }
           }
         },
-        // image: { props: { '@mobileM': { boxSize: 'A B' } } },
         style: { marginRight: '-3px' }
       }
     ]
