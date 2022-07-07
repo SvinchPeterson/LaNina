@@ -44,7 +44,8 @@ export const placeFeature = {
         position: 'absolute',
         top: 0,
         left: 0,
-        background: 'linear-gradient(rgba(60, 84, 72, .35), rgba(60, 84, 72, .65))',
+        background: 'radial-gradient(rgba(60, 84, 72, .45), rgba(60, 84, 72, .75))',
+        // background: 'radial-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .45))',
         // background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, .5))',
         zIndex: 5
         // backgroundAttachment: 'fixed'

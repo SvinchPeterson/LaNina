@@ -18,7 +18,6 @@ const image = {
     }
   },
   style: {
-    // borderRight: '3px solid red',
     backgroundImage: 'linear-gradient(rgba(60,84, 72, .25), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
     backgroundSize: 'contain',
     backgroundPosition: 'center bottom 100px',
@@ -75,8 +74,7 @@ const paragraph = {
       wordSpacing: '-1px',
       fontSize: `${14.3 / 16}em`,
       lineHeight: `${23.5 / 14.3}em`,
-      letterSpacing: '.8px',
-      boxShadow: '0px 0px 70px 20px rgba(248, 241, 227, .35)'
+      letterSpacing: '.8px'
     }
   }
 }

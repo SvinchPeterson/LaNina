@@ -68,7 +68,11 @@ export const RoomTab = {
     position: 'relative',
     backdropFilter: 'blur(2px)',
     boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, .15)',
-    '&:hover': { flex: 5.5, backdropFilter: 'blur(10px)' },
+    '&:hover': {
+      flex: 5.5,
+      backdropFilter: 'blur(10px)',
+      boxShadow: '0px 0px 0px 0px rgba(0, 0, 0, 0)'
+    },
     '&:hover > div > p': { opacity: 1 },
     '&:not(:hover) > div > p': {
       transitionDelay: '0s',

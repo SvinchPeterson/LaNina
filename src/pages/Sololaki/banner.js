@@ -2,7 +2,7 @@
 import { Box, Text } from '@symbo.ls/symbols'
 
 import { position, height, letterSpacing, letterSpacing4, position2, height2, height3, letterSpacing2, opacity2, opacity7 } from '../../animations'
-import SOLOLAKI_JPG from '../../assets/images/sololaki/sololaki.jpg'
+import SOLOLAKI_JPG from '../../assets/images/sololaki/entrence2.jpg'
 import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
 
 const heading = {
@@ -15,37 +15,38 @@ const heading = {
     flexAlign: 'flex-start flex-start'
   },
 
-  span: {
-    proto: [Text, Box],
-    props: {
-      fontSize: 'A',
-      text: 'sololaki',
-      color: 'orange2 .55',
-      position: 'absolute',
-      top: '0',
-      right: 'A'
-    },
-    style: {
-      width: 'fit-content',
-      textTransform: 'uppercase',
-      fontWeight: 900,
-      overflow: 'hidden',
-      letterSpacing: `${10 / 16}em`,
-      animationName: letterSpacing,
-      animationDuration: '2.5s',
-      animationTimingFunction: 'ease-in-out'
-    }
-  },
+  // span: {
+  //   proto: [Text, Box],
+  //   props: {
+  //     fontSize: 'A',
+  //     text: 'sololaki',
+  //     // color: 'gold .85',
+  //     color: 'cream2 .5',
+  //     position: 'absolute',
+  //     top: '0',
+  //     right: 'A'
+  //   },
+  //   style: {
+  //     width: 'fit-content',
+  //     textTransform: 'uppercase',
+  //     fontWeight: 900,
+  //     overflow: 'hidden',
+  //     letterSpacing: `${10 / 16}em`,
+  //     animationName: letterSpacing,
+  //     animationDuration: '2.5s',
+  //     animationTimingFunction: 'ease-in-out'
+  //   }
+  // },
 
   h1: {
     proto: [Text, Box],
     props: {
       text: 'BB Residence',
-      color: 'gold .75',
+      color: 'gold .9',
       margin: '0'
     },
     style: {
-      fontSize: `${100 / 16}em`,
+      fontSize: `${70 / 16}em`,
       paddingRight: `${15 / 100}em`,
       overflow: 'hidden',
       animationName: height,
@@ -61,7 +62,7 @@ const heading = {
 const image = {
   proto: Box,
   props: {
-    boxSize: '60% 100%',
+    boxSize: '100% 100%',
     position: 'absolute',
     top: '0',
     left: '0'
@@ -82,7 +83,8 @@ const image = {
       width: '100%',
       height: '100%',
       display: 'block',
-      background: 'radial-gradient(rgba(60,84, 72, .45), rgba(60,84, 72, .8))',
+      // background: 'linear-gradient(rgba(60,84, 72, .3), rgba(60,84, 72, .9))',
+      background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8))',
       animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
     }
   }
@@ -96,12 +98,12 @@ const container = {
   },
   style: {
     overflow: 'hidden',
-    background: 'radial-gradient(rgba(60,84, 72, .8), rgba(60,84, 72, 1))',
+    background: 'radial-gradient(rgba(60,84, 72, .8), rgba(60,84, 72, .95))',
     '&:after': {
       content: '""',
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(rgba(60,84, 72, 1), rgba(60,84, 72, 1))',
+      background: 'linear-gradient(rgba(0 , 0, 0, 1), rgba(0, 0, 0, 1))',
       opacity: '0',
       position: 'absolute',
       animationName: opacity7,
