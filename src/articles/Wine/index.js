@@ -41,40 +41,13 @@ const paragraph = {
     flexAlign: 'center flex-start',
     width: 'fit-content',
     color: 'black .75',
-    margin: '-D -E2 0 0',
-    '@tabletL': {
-      height: 'fit-content',
-      minWidth: '70%',
-      background: 'cream2',
-      top: '100%',
-      margin: '0 auto',
-      padding: 'C 0 0 0'
-    },
-    '@mobileL': {
-      width: '450px',
-      padding: '0'
-    },
-    '@mobileM': {
-      top: '90%'
-    },
-    '@mobileS': {
-      padding: '0 C'
-    },
-    '@mobileXS': {
-      padding: '0 D'
-    }
+    margin: '-D -E2 0 0'
   },
   style: {
     borderTop: 'none',
     zIndex: '10',
-    '@media only screen and (min-width: 1366px)': {
-      backgroundAttachment: 'fixed',
-      backgroundPosition: 'bottom 200px center'
-    },
-    '@media only screen and (max-width: 1366px)': {
-      zIndex: 4,
-      height: 'fit-content'
-    }
+    backgroundAttachment: 'fixed',
+    backgroundPosition: 'bottom 200px center'
   },
 
   span: {
@@ -83,10 +56,7 @@ const paragraph = {
       maxWidth: `${450 / 14.3}em`,
       margin: '0 auto',
       color: 'black .75',
-      padding: 'F1 0 F1 E1',
-      '@tabletL': { maxWidth: 'H3' },
-      '@mobileM': { padding: '0 B2' },
-      '@mobileXS': { padding: '0 B1' }
+      padding: 'F1 0 F1 E1'
     },
     style: {
       textAlign: 'justify',

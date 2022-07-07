@@ -6,6 +6,7 @@ import Building from './Building'
 import Entrence from './Entrence'
 import { Contact } from './Contact'
 import { placeFeature } from './PlaceFeature'
+import { feedBacks } from './FeedBacks'
 
 export {
   Apartments,
@@ -14,5 +15,6 @@ export {
   Building,
   Entrence,
   Contact,
-  placeFeature
+  placeFeature,
+  feedBacks
 }

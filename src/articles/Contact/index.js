@@ -31,9 +31,24 @@ export const Contact = {
       ...[
         {
           proto: Box,
-          props: { padding: '0 Z2 0 0' },
+          props: {
+            padding: '0 Z2 0 0',
+            position: 'relative',
+            flexAlign: 'center flex-start'
+          },
           text: 'info@bbhospitality.ge',
-          style: { borderRight: '.8px solid rgba(0, 0, 0, .65)' }
+          style: {
+            '&:before': {
+              content: '""',
+              position: 'absolute',
+              right: '0',
+              width: '2.5px',
+              height: '2.5px',
+              background: 'rgba(0, 0, 0, .85)',
+              borderRadius: '100%'
+
+            }
+          }
         },
         { text: 'reservations@bbhospitality.ge' }
       ]
@@ -50,10 +65,27 @@ export const Contact = {
       ...[
         {
           proto: Box,
-          props: { padding: '0 Z2 0 0' },
-          style: { borderRight: '.8px solid rgba(0, 0, 0, .65)' },
-          text: '995 322 502 222'
+          props: {
+            padding: '0 Z2 0 0',
+            position: 'relative',
+            flexAlign: 'center flex-start'
+          },
+          text: '995 322 502 222',
+
+          style: {
+            '&:before': {
+              content: '""',
+              position: 'absolute',
+              right: '0',
+              width: '2.5px',
+              height: '2.5px',
+              background: 'rgba(0, 0, 0, .85)',
+              borderRadius: '100%'
+
+            }
+          }
         },
+
         { text: '995 593 345 158' }
       ]
     }

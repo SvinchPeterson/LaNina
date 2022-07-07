@@ -40,6 +40,7 @@ const map = {
     display: 'block',
     minWidth: '100%',
     position: 'relative',
+    round: 'Z',
     '@tabletL': { minWidth: '80%' },
     '@mobileL': { minWidth: '100%' }
   },
@@ -47,6 +48,7 @@ const map = {
     flex: 1,
     border: 'none',
     margin: '0 auto',
+    boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .1)',
     // padding: '100px',
     minHeight: '500px'
   }
@@ -81,11 +83,11 @@ export default {
       flexAlign: 'flex-start flex-start',
       minWidth: '60%',
       margin: 'F2 0 0 0',
-      padding: 'A2 0 0 0',
+      padding: 'B 0 0 0',
       position: 'relative'
     },
     style: {
-      borderTop: '.8px solid rgba(0, 0, 0, .65)',
+      // borderTop: '.8px solid rgba(0, 0, 0, .65)',
       // borderBottom: '2px solid rgba(0, 0, 0, .75)',
       // boxShadow: 'inset -2px -2px 6px 0px rgba(0, 0, 0, .35)',
       '&:before': {
@@ -94,13 +96,14 @@ export default {
         maxWidth: '350px',
         background: 'rgba(248, 241, 227, 1)',
         color: 'rgba(0, 0, 0, .85)',
-        top: '-60px',
+        top: '-120px',
         right: '5px',
         zIndex: '20',
         fontSize: '13px',
         textAlign: 'right',
         fontWeight: '500',
-        letterSpacing: '.7px'
+        letterSpacing: '.7px',
+        lineHeight: '22px'
       }
       // '&:after': {
       //   content: '""',
@@ -116,7 +119,11 @@ export default {
     },
     map,
     contact: {
-      style: { alignSelf: 'flex-start' },
+      props: { margin: 'E 0 0 0' },
+      style: {
+        alignSelf: 'flex-start',
+        borderTop: '.8px solid rgba(0, 0, 0, .65)'
+      },
       proto: Contact
     }
   }

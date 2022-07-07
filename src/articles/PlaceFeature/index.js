@@ -66,7 +66,7 @@ export const placeFeature = {
         padding: 'A A2 A A1',
         // height: 'D',
         // background: 'cream2 .15',
-        round: 'Y'
+        round: 'Z'
       },
       style: {
         zIndex: 10,

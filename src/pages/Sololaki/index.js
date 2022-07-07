@@ -1,7 +1,7 @@
 'use strict'
 import { Box } from '@symbo.ls/symbols'
 import { HeaderMobile, Menu, Header, Footer } from '../../components'
-import { Building, Entrence, Apartments, Wine, Location, Contact, placeFeature } from '../../articles'
+import { Building, Entrence, Apartments, Wine, Location, placeFeature, feedBacks } from '../../articles'
 import { banner } from './banner'
 
 import { opacity } from '../../animations'
@@ -52,6 +52,7 @@ export default {
   Entrence,
   Apartments,
   Wine,
+  feedBacks,
   Location,
   Footer
 }

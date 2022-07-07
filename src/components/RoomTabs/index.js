@@ -53,10 +53,11 @@ export const RoomTab = {
     height: 'G1',
     padding: 'B',
     position: 'relative',
-    round: 'X'
+    round: 'Z'
   },
 
   style: {
+    overflow: 'hidden',
     flex: 1,
     cursor: 'pointer',
     boxSizing: 'border-box',
@@ -99,7 +100,7 @@ export const RoomTab = {
       backdropFilter: 'blur(10px)',
       background: 'rgba(60,84, 72, .75)',
       textAlign: 'center',
-      borderBottomRightRadius: '4px',
+      borderBottomRightRadius: '10px',
       color: 'rgba(248, 241, 227, 1)',
       textTransform: 'uppercase',
       whiteSpace: 'nowrap'
