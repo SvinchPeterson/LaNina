@@ -16,8 +16,7 @@ const buildingHistory = {
     textAlign: 'justify',
     wordSpacing: '-1px',
     fontSize: `${14.3 / 16}em`,
-    lineHeight: `${21 / 14.3}em`,
-    '> div': { lineHeight: `${25 / 14.3}em`, letterSpacing: `${0.8 / 14.3}em` }
+    '> div': { lineHeight: `${23.5 / 14.3}em`, letterSpacing: `${0.8 / 14.3}em` }
   }
 }
 

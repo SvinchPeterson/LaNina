@@ -12,17 +12,10 @@ const yardEntrence = {
   style: {
     flex: '1',
     backgroundAttachment: 'fixed',
-    backgroundImage: 'url(' + ENTRENCE_JPG + ')',
+    backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .45)), url(' + ENTRENCE_JPG + ')',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    zIndex: 2,
-    '&:before': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      display: 'block',
-      background: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .45))'
-    }
+    zIndex: 2
   }
 }
 
@@ -37,7 +30,7 @@ const streetEntrence = {
     flex: '1',
     marginTop: `${50 / 16}em`,
     marginRight: `${-400 / 16}em`,
-    backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .35)),url(' + STREET_JPG + ')',
+    backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .45)),url(' + STREET_JPG + ')',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     zIndex: 2,
@@ -61,8 +54,8 @@ const texts = {
     alignSelf: 'center',
     boxSizing: 'border-box',
     textTransform: 'uppercase',
-    letterSpacing: '1px',
-    fontWeight: ''
+    letterSpacing: '1px'
+
   },
 
   ...[

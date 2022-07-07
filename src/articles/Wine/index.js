@@ -41,7 +41,7 @@ const paragraph = {
     flexAlign: 'center flex-start',
     width: 'fit-content',
     color: 'black .75',
-    margin: '-D -E2 0 0'
+    margin: '-D2 -E1 0 0'
   },
   style: {
     borderTop: 'none',
@@ -50,23 +50,34 @@ const paragraph = {
     backgroundPosition: 'bottom 200px center'
   },
 
-  span: {
-    proto: [wineText, Box],
+  texts: {
+    proto: Box,
+    ...[
+      {
+        text: `Georgians are very proud of their rich and historic winemaking culture, and as traditional methods enjoy a renaissance,
+      the Qvevri (an earthenware vessel used to store and age wine for thousands of years).`
+      },
+      {
+        text: `Georgia is generally considered the ‘cradle of wine’,
+        as archaeologists have traced the world’s first known wine creation back to the people of the South Caucasus in 6,000BC.`
+      }
+    ],
     props: {
       maxWidth: `${450 / 14.3}em`,
       margin: '0 auto',
       color: 'black .75',
-      padding: 'F1 0 F1 E1'
+      padding: 'F1 0 F1 E1',
+      flexFlow: 'column',
+      gap: 'A'
     },
     style: {
       textAlign: 'justify',
       wordSpacing: '-1px',
-      fontSize: `${14 / 16}em`,
-      lineHeight: `${21.5 / 14.1}em`,
+      fontSize: `${14.3 / 16}em`,
+      lineHeight: `${23.5 / 14.3}em`,
       letterSpacing: '.8px',
       boxShadow: '0px 0px 70px 20px rgba(248, 241, 227, .35)'
     }
-
   }
 }
 

@@ -7,14 +7,14 @@ import RIGHT_ARROW_PNG from '../../assets/icons/arrow-right.png'
 const feedBackParagraph = {
   proto: Box,
   props: {
-    padding: 'B2 C',
+    padding: 'B2 B2',
     flexFlow: 'column',
     flexAlign: 'flex-start flex-start',
     background: 'black .05',
     maxHeight: 'G',
     minWidth: 'H',
     position: 'relative',
-    round: 'A'
+    round: 'Y2'
   },
   style: {
     background: 'linear-gradient(rgba(0, 0, 0, .03), rgba(0, 0, 0, .08))',
@@ -29,7 +29,7 @@ const feedBackParagraph = {
     props: {
       margin: '0',
       fontWeight: '900',
-      padding: '0 0 B2 B',
+      padding: '0 0 B B',
       color: 'black .85'
     },
     style: {
@@ -43,16 +43,16 @@ const feedBackParagraph = {
     proto: Box,
     text: `This a must stay n worth every penny. The host was great, the place was great, great ambience, a quiet place but just few minutes walk to all the central points. The hospitality was great and the host was very helpful and accessible for all my needs. Special thanks to Gaia and Tato who actually received me like family and came in person while i was saying my bye too. I would really want to come back for a longer stay. Love the place and love u guys.`,
     props: {
-      color: 'black .5',
+      color: 'black .6',
       fontWeight: '400',
       padding: '0 B'
     },
     style: {
       textAlign: 'justify',
-      fontSize: `${14 / 16}em`,
-      letterSpacing: '.5px',
-      wordSpacing: '-1px',
-      lineHeight: `${21.7 / 14}em`
+      fontSize: `${14.3 / 16}em`,
+      letterSpacing: '.8px',
+      wordSpacing: '-1.45px',
+      lineHeight: `${22 / 14.3}em`
     }
   },
 
@@ -65,7 +65,7 @@ const feedBackParagraph = {
       padding: '0 Y2 0 0',
       position: 'absolute',
       right: 'D',
-      bottom: 'C',
+      bottom: 'B2',
       color: 'black .55'
     },
     style: {

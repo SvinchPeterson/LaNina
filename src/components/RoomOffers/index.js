@@ -132,7 +132,7 @@ export const RoomOffers = {
     left: '8%',
     bottom: '-F',
     flexFlow: 'column',
-    round: 'Y'
+    round: 'Z'
   },
   style: {
     transition: 'all 1s ease-in-out',

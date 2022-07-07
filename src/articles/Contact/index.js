@@ -4,9 +4,13 @@ import { Box } from '@symbo.ls/symbols'
 export const Contact = {
   proto: Box,
   props: {
-    padding: 'B B F B',
+    padding: 'B W F W',
     flexAlign: 'flex-start space-between',
-    minWidth: '100%'
+    minWidth: '85%'
+  },
+  style: {
+    margin: '0 auto',
+    marginTop: `${100 / 16}em`
   },
   content: {
     proto: Box,
@@ -18,7 +22,7 @@ export const Contact = {
       width: '100%'
     },
     style: {
-      letterSpacing: '1px',
+      letterSpacing: '.9px',
       fontWeight: '500'
     },
     mails: {

@@ -25,7 +25,7 @@ export const placeFeature = {
       columns: 'repeat(4, 270px)',
       gap: 'A2',
       rowGap: 'A2',
-      padding: 'F1 0',
+      padding: 'E2 0',
       position: 'relative'
     },
     style: {
@@ -54,47 +54,51 @@ export const placeFeature = {
       proto: Box,
       props: {
         flexAlign: 'center flex-start',
-        padding: 'A A2 A A1',
+        padding: 'C2 B1',
         // height: 'D',
         // background: 'cream2 .15',
-        round: 'Z'
+        round: 'Y'
       },
       style: {
+        boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .15)',
         zIndex: 10,
         backdropFilter: 'blur(2px)',
         // border: '1px solid rgba(220, 187, 140, .1)',
-        background: 'radial-gradient(rgba(248, 241, 227, .85), rgba(248, 241, 227, .95))'
+        background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, 1))'
       },
-      icon: null,
       paragraph: {
         proto: Box,
         props: {
-          fontSize: 'Z',
           flexFlow: 'column',
-          gap: '0',
+          gap: 'W',
           flexAlign: 'flex-start flex-start'
         },
         title: {
           tag: 'caption',
           proto: Box,
           props: {
-            fontWeight: '700',
-            color: 'black .75'
+            fontWeight: '900',
+            color: 'black .85'
           },
           style: {
             whiteSpace: 'nowrap',
             textTransform: 'uppercase',
-            fontSize: '12.5px',
-            letterSpacing: '.3px'
+            fontSize: `${12.3 / 16}em`,
+            letterSpacing: '.6px'
           }
         },
         p: {
           proto: Box,
           props: {
             padding: '0 0 0 U',
-            color: 'black .65'
+            color: 'black .6'
+            // fontSize: 'A'
           },
-          style: { letterSpacing: '.1px' }
+          style: {
+            letterSpacing: '.1px',
+            // fontWeight: 500,
+            fontSize: `${14.4 / 16}em`
+          }
         }
       }
     },

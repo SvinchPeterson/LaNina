@@ -3,14 +3,14 @@ import { Box, Link } from '@symbo.ls/symbols'
 export const Book = {
   proto: [Link, Box],
   props: {
-    padding: 'Y1 W2 Y2 B',
-    color: 'cream2',
+    padding: 'Y2 W2 0 B',
+    color: 'white',
     // round: 'W2',
     href: 'https://www.airbnb.com/users/show/404104381',
     target: '_blank'
   },
   style: {
-    borderTopLeftRadius: '10px',
+    borderTopLeftRadius: '8px',
     // borderBottomLeftRadius: '20px',
     // borderRight: '1px solid rgba(245, 245, 245, .5)',
     // borderBottom: '1px solid rgba(245, 245, 245, .5)',

@@ -14,7 +14,7 @@ const map = {
     display: 'block',
     minWidth: '100%',
     position: 'relative',
-    round: 'Z',
+    round: 'Y2',
     '@tabletL': { minWidth: '80%' },
     '@mobileL': { minWidth: '100%' }
   },
@@ -93,7 +93,6 @@ export default {
     },
     map,
     contact: {
-      props: { margin: 'E 0 0 0' },
       style: {
         alignSelf: 'flex-start',
         borderTop: '.8px solid rgba(0, 0, 0, .65)'

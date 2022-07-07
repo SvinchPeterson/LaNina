@@ -13,7 +13,7 @@ const links = {
   childProto: {
     proto: [Link, Text, Box],
     props: {
-      color: 'cream2',
+      color: 'white',
       fontSize: 'Z'
     },
     on: {

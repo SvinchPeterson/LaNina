@@ -24,22 +24,21 @@ const tabParagraph = {
   proto: [Text, Box],
   props: {
     color: 'cream2',
-    fontSize: 'Z',
-    padding: `0 0 0 0`
+    padding: `0 B`
   },
   style: {
+    fontSize: `${14.1 / 16}em`,
     zIndex: 10,
     opacity: 0,
-    maxWidth: `${300 / 14}em`,
+    maxWidth: `${300 / 14.1}em`,
     textAlign: 'justify',
     boxSizing: 'border-box',
     pointerEvents: 'none',
     transition: 'opacity .3s ease-in-out',
     transitionDelay: '.4s',
-    lineHeight: `${17 / 14}em`,
-    letterSpacing: '.5px',
-    wordSpacing: '-7px',
-    fontWeight: 400
+    lineHeight: `${21 / 14.1}em`,
+    letterSpacing: '.8px',
+    wordSpacing: '-1.3px'
   },
   class: {
     show: (element, state) => state.activeTab === element.parent.parent.key ? { opacity: 1 } : {}
@@ -53,7 +52,7 @@ export const RoomTab = {
     height: 'G1',
     padding: 'B',
     position: 'relative',
-    round: 'Z'
+    round: 'Y2'
   },
 
   style: {
@@ -68,6 +67,7 @@ export const RoomTab = {
     textDecoration: 'none',
     position: 'relative',
     backdropFilter: 'blur(2px)',
+    boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, .15)',
     '&:hover': { flex: 5.5, backdropFilter: 'blur(10px)' },
     '&:hover > div > p': { opacity: 1 },
     '&:not(:hover) > div > p': {
@@ -90,18 +90,19 @@ export const RoomTab = {
     },
     '&:after': {
       content: '""',
-      fontSize: `${10 / 14}em`,
-      fontWeight: 700,
+      fontSize: `${9.8 / 14}em`,
+      fontWeight: 500,
       position: 'absolute',
-      width: '125px',
-      padding: '12px 0',
-      top: `${0 / 10}em`,
-      left: `${0 / 10}em`,
+      width: '120px',
+      padding: '12px 0 12px 8.2px',
+      top: 0,
+      left: 0,
+      letterSpacing: '.5px',
       backdropFilter: 'blur(10px)',
-      background: 'rgba(60,84, 72, .75)',
-      textAlign: 'center',
-      borderBottomRightRadius: '10px',
-      color: 'rgba(248, 241, 227, 1)',
+      background: 'rgba(60,84, 72, .85)',
+      boxSizing: 'border-box',
+      borderBottomRightRadius: '8px',
+      color: 'rgba(248, 241, 227, .85)',
       textTransform: 'uppercase',
       whiteSpace: 'nowrap'
     }

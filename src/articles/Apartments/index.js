@@ -110,6 +110,7 @@ export default {
       left: 0,
       background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
       backgroundAttachment: 'fixed'
+
     }
   },
   attr: { id: 'apartments' },
