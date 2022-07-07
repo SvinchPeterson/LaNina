@@ -13,7 +13,7 @@ const links = {
   childProto: {
     proto: [Link, Text, Box],
     props: {
-      color: 'white',
+      color: 'cream2',
       fontSize: 'Z'
     },
     on: {
@@ -30,7 +30,7 @@ const links = {
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontWeight: 900,
-      opacity: '.7',
+      opacity: '.8',
       zIndex: '30',
       '&:hover': {
         opacity: 1

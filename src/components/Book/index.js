@@ -4,7 +4,7 @@ export const Book = {
   proto: [Link, Box],
   props: {
     padding: 'Y1 W2 Y2 B',
-    color: 'white',
+    color: 'cream2',
     // round: 'W2',
     href: 'https://www.airbnb.com/users/show/404104381',
     target: '_blank'
@@ -15,12 +15,12 @@ export const Book = {
     // borderRight: '1px solid rgba(245, 245, 245, .5)',
     // borderBottom: '1px solid rgba(245, 245, 245, .5)',
 
-    borderLeft: '1px solid rgba(245, 245, 245, .5)',
-    borderTop: '1px solid rgba(245, 245, 245, .5)',
+    borderLeft: '1.5px solid rgba(245, 245, 245, .75)',
+    borderTop: '1.5px solid rgba(245, 245, 245, .75)',
     textDecoration: 'none',
     zIndex: 100,
     fontWeight: '900',
-    '&:hover > span': { opacity: '.9' }
+    '&:hover > span': { opacity: '1' }
   },
 
   span: {
@@ -29,6 +29,6 @@ export const Book = {
       text: 'BOOK',
       fontSize: 'Z'
     },
-    style: { opacity: '.7' }
+    style: { opacity: '.8' }
   }
 }

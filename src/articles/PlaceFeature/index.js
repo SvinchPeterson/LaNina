@@ -1,14 +1,5 @@
 'use strict'
-import { Box, Grid, Img } from '@symbo.ls/symbols'
-import LOCATION_PNG from '../../assets/icons/location.png'
-import DOOR_HANGER_PNG from '../../assets/icons/door-hanger.png'
-import CLOCK_PNG from '../../assets/icons/clock.png'
-import BUBBLE_PNG from '../../assets/icons/bubble.png'
-import APRON_PNG from '../../assets/icons/frying-pan.png'
-import DOCUMENT_PNG from '../../assets/icons/document.png'
-import PLAY_PNG from '../../assets/icons/play.png'
-import WINE_COFFEE from '../../assets/icons/wine-coffee.png'
-import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
+import { Box, Grid } from '@symbo.ls/symbols'
 import SHELF_JPG from '../../assets/images/sololaki/shelf.jpg'
 
 export const placeFeature = {
@@ -72,7 +63,7 @@ export const placeFeature = {
         zIndex: 10,
         backdropFilter: 'blur(2px)',
         // border: '1px solid rgba(220, 187, 140, .1)',
-        background: 'radial-gradient(rgba(248, 241, 227, .75), rgba(248, 241, 227, .85))'
+        background: 'radial-gradient(rgba(248, 241, 227, .85), rgba(248, 241, 227, .95))'
       },
       icon: null,
       paragraph: {

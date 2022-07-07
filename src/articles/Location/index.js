@@ -2,32 +2,6 @@
 import { Box } from '@symbo.ls/symbols'
 import { Contact } from '../Contact'
 
-import { locationText, distanceText, transferText } from '../../texts'
-
-const paragraph = {
-  tag: 'p',
-  proto: [locationText, Box],
-
-  props: {
-    maxWidth: 'H1',
-    // padding: 'D D D2 D',
-    color: 'black .55',
-    fontSize: 'Z',
-    '@mobileM': {
-      padding: '0 C D C',
-      color: 'black .55'
-    }
-  },
-  style: {
-    textAlign: 'center',
-    alignSelf: 'center',
-    fontWeight: '700',
-    '@media only screen and (max-width: 560px)': {
-      fontWeight: '700'
-    }
-  }
-}
-
 const map = {
   tag: 'iframe',
   proto: Box,
