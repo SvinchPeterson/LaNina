@@ -42,11 +42,11 @@ const heading = {
     proto: [Text, Box],
     props: {
       text: 'BB Residence',
-      color: 'gold .9',
+      color: 'orange3 1',
       margin: '0'
     },
     style: {
-      fontSize: `${70 / 16}em`,
+      fontSize: `${65 / 16}em`,
       paddingRight: `${15 / 100}em`,
       overflow: 'hidden',
       animationName: height,
