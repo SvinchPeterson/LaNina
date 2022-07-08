@@ -57,7 +57,7 @@ export const opacityReverse = keyframes`
 `
 export const letterSpacing = keyframes`
   from {
-    letter-spacing: 8px;
+    letter-spacing: 9px;
     opacity: 0;
   }
   to {

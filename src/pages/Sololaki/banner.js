@@ -12,7 +12,8 @@ const heading = {
     top: '45%',
     right: '20.5%',
     flexFlow: 'column',
-    flexAlign: 'flex-end flex-start'
+    flexAlign: 'flex-end flex-start',
+    height: '100px'
   },
 
   h1: {
@@ -23,11 +24,12 @@ const heading = {
       margin: '0'
     },
     style: {
-      fontSize: `${65 / 16}em`,
+      fontSize: `${60 / 16}em`,
       overflow: 'hidden',
       animationName: height,
-      animationDuration: '5s',
+      animationDuration: '3s',
       animationTimingFunction: 'ease-in-out',
+      animationDelay: '.4s',
       fontWeight: 100,
       letterSpacing: `${-3 / 120}em`
     }
@@ -38,19 +40,21 @@ const heading = {
     props: {
       text: 'sololaki',
       // color: 'gold .85',
-      color: 'cream2 .85'
-      // position: 'absolute',
-      // bottom: '-10px',
+      color: 'cream2 .85',
+      position: 'absolute',
+      bottom: '-10px'
       // right: 'A'
     },
     style: {
+      fontSize: '14px',
       // width: 'fit-content',
       textTransform: 'uppercase',
-      fontWeight: 700,
+      fontWeight: 500,
       overflow: 'hidden',
       letterSpacing: `${10 / 16}em`,
       animationName: letterSpacing,
-      animationDuration: '3.5s',
+      animationDuration: '6s',
+      animationDelay: '.3s',
       animationTimingFunction: 'ease-in-out'
     }
   }
@@ -70,6 +74,7 @@ const image = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'bottom left',
     animationName: position,
+    animationDelay: '.1s',
     animationDuration: '6s',
     // animationTimingFunction: 'ease-in-out',
     animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
@@ -104,9 +109,8 @@ const container = {
       opacity: '0',
       position: 'absolute',
       animationName: opacity7,
-      animationDuration: '2s',
+      animationDuration: '3s',
       animationTimingFunction: 'ease-in-out'
-
     }
   }
 }

@@ -9,7 +9,7 @@ import LOGO_PNG from '../../assets/icons/logo-white.png'
 const logo = {
   proto: Box,
   style: {
-    opacity: '1',
+    opacity: '.8',
     '&:hover': { opacity: 1 }
   },
 
@@ -38,7 +38,7 @@ const links = {
       proto: [Img, Box],
       props: { boxSize: ' B' },
       style: {
-        opacity: '.75',
+        opacity: '.8',
         '&:hover': { opacity: 1 }
       }
     }

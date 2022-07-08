@@ -2,6 +2,7 @@
 import { Text, Box, Link } from '@symbo.ls/symbols'
 import { Book } from '../Book'
 import { MenuButton } from '../MenuButton'
+import { opacity } from '../../animations'
 
 const links = {
   tag: 'nav',
@@ -60,6 +61,9 @@ export const Header = {
   style: {
     zIndex: '100',
     mixBlendMode: 'difference',
+    animationName: opacity,
+    animationDuration: '3s',
+    animationTimingFunction: 'ease-in-out',
     '@media only screen and (max-width: 768px)': {
       display: 'none'
     }
