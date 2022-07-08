@@ -28,7 +28,8 @@ const heading = {
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out',
     zIndex: 2,
-    letterSpacing: '0px'
+    letterSpacing: '0px',
+    opacity: 1
   }
 }
 
@@ -168,8 +169,8 @@ const Container = {
       background: 'black',
       opacity: 0,
       animationName: opacityReverse,
-      animationDuration: '2s',
-      animationTimingFunction: 'linear',
+      animationDuration: '3s',
+      animationTimingFunction: 'ease-in-out',
       pointerEvents: 'none'
     }
   },

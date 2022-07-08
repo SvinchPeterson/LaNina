@@ -76,8 +76,8 @@ const image = {
     animationName: position,
     animationDelay: '.1s',
     animationDuration: '6s',
-    // animationTimingFunction: 'ease-in-out',
-    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
+    animationTimingFunction: 'ease-in-out',
+    // animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
     backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
     backgroundAttachment: 'fixed',
     '&:before': {
