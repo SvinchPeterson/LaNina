@@ -57,7 +57,7 @@ export const opacityReverse = keyframes`
 `
 export const letterSpacing = keyframes`
   from {
-    letter-spacing: 9px;
+    letter-spacing: 8px;
     opacity: 0;
   }
   to {
@@ -184,7 +184,7 @@ export const height = keyframes`
 
   }
   to {
-   height: 150px;
+   height: 100px;
    opacity: 1;
   }
 `

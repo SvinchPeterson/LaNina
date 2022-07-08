@@ -14,7 +14,7 @@ const heading = {
   proto: [Text, Box],
   props: {
     text: 'BB Hospitality',
-    color: 'gold .65',
+    color: 'gold .55',
     fontSize: 'K',
     fontWeight: '100',
     '@mobileM': {

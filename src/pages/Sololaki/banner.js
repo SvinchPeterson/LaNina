@@ -10,51 +10,48 @@ const heading = {
   props: {
     position: 'absolute',
     top: '45%',
-    right: '17.5%',
+    right: '20.5%',
     flexFlow: 'column',
-    flexAlign: 'flex-start flex-start'
+    flexAlign: 'flex-end flex-start'
   },
-
-  // span: {
-  //   proto: [Text, Box],
-  //   props: {
-  //     fontSize: 'A',
-  //     text: 'sololaki',
-  //     // color: 'gold .85',
-  //     color: 'cream2 .5',
-  //     position: 'absolute',
-  //     top: '0',
-  //     right: 'A'
-  //   },
-  //   style: {
-  //     width: 'fit-content',
-  //     textTransform: 'uppercase',
-  //     fontWeight: 900,
-  //     overflow: 'hidden',
-  //     letterSpacing: `${10 / 16}em`,
-  //     animationName: letterSpacing,
-  //     animationDuration: '2.5s',
-  //     animationTimingFunction: 'ease-in-out'
-  //   }
-  // },
 
   h1: {
     proto: [Text, Box],
     props: {
       text: 'BB Residence',
-      color: 'orange3 1',
+      color: 'gold .85',
       margin: '0'
     },
     style: {
       fontSize: `${65 / 16}em`,
-      paddingRight: `${15 / 100}em`,
       overflow: 'hidden',
       animationName: height,
-      animationDuration: '2s',
+      animationDuration: '5s',
       animationTimingFunction: 'ease-in-out',
       fontWeight: 100,
-      letterSpacing: `${-3 / 120}em`,
-      textShadow: '0px 0px 20px rgba(0, 0, 0, .35)'
+      letterSpacing: `${-3 / 120}em`
+    }
+  },
+
+  span: {
+    proto: [Text, Box],
+    props: {
+      text: 'sololaki',
+      // color: 'gold .85',
+      color: 'cream2 .85'
+      // position: 'absolute',
+      // bottom: '-10px',
+      // right: 'A'
+    },
+    style: {
+      // width: 'fit-content',
+      textTransform: 'uppercase',
+      fontWeight: 700,
+      overflow: 'hidden',
+      letterSpacing: `${10 / 16}em`,
+      animationName: letterSpacing,
+      animationDuration: '3.5s',
+      animationTimingFunction: 'ease-in-out'
     }
   }
 }
@@ -73,7 +70,7 @@ const image = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'bottom left',
     animationName: position,
-    animationDuration: '7s',
+    animationDuration: '6s',
     // animationTimingFunction: 'ease-in-out',
     animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
     backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
@@ -84,7 +81,7 @@ const image = {
       height: '100%',
       display: 'block',
       // background: 'linear-gradient(rgba(60,84, 72, .3), rgba(60,84, 72, .9))',
-      background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8))',
+      background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .85))',
       animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
     }
   }
@@ -98,7 +95,7 @@ const container = {
   },
   style: {
     overflow: 'hidden',
-    background: 'radial-gradient(rgba(60,84, 72, .8), rgba(60,84, 72, .95))',
+    background: 'radial-gradient(rgba(0 ,0 , 0, .8), rgba(0 , 0, 0, .95))',
     '&:after': {
       content: '""',
       width: '100%',

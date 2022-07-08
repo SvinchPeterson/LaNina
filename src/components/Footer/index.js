@@ -17,7 +17,7 @@ const logo = {
     proto: [Img, Box],
     props: {
       src: LOGO_PNG,
-      boxSize: ' B1'
+      boxSize: ' B'
     }
   }
 }
@@ -67,7 +67,7 @@ export const Footer = {
     position: 'fixed',
     bottom: '0',
     flexAlign: 'flex-start space-between',
-    padding: '0 C2 C C2'
+    padding: '0 D2 C1 D2'
   },
   style: {
     zIndex: '50',
