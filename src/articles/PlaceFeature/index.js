@@ -65,9 +65,10 @@ export const placeFeature = {
       style: {
         boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .15)',
         zIndex: 10,
-        backdropFilter: 'blur(2px)',
+        backdropFilter: 'blur(5px)',
         // border: '1px solid rgba(220, 187, 140, .1)',
-        background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, 1))'
+        background: 'radial-gradient(rgba(248, 241, 227, .55), rgba(248, 241, 227, .65))'
+        // background: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3))'
       },
       paragraph: {
         proto: Box,
@@ -87,7 +88,7 @@ export const placeFeature = {
             whiteSpace: 'nowrap',
             textTransform: 'uppercase',
             fontSize: `${12.3 / 16}em`,
-            letterSpacing: '.6px'
+            letterSpacing: '.3px'
           }
         },
         p: {

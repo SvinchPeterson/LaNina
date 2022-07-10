@@ -1,6 +1,5 @@
 'use strict'
 import { Box } from '@symbo.ls/symbols'
-import { wineText } from '../../texts'
 import WINE_JPG from '../../assets/images/sololaki/wine.jpg'
 
 const image = {
@@ -40,7 +39,7 @@ const paragraph = {
     flexAlign: 'center flex-start',
     width: 'fit-content',
     color: 'black .75',
-    margin: '-D -G 0 0'
+    margin: '-E2 -G 0 0'
   },
   style: {
     borderTop: 'none',

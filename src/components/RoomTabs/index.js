@@ -24,13 +24,13 @@ const tabParagraph = {
   proto: [Text, Box],
   props: {
     color: 'cream2',
-    padding: `0 B`
+    padding: `0 A`
   },
   style: {
     fontSize: `${14.1 / 16}em`,
     zIndex: 10,
     opacity: 0,
-    maxWidth: `${300 / 14.1}em`,
+    maxWidth: `${320 / 14.1}em`,
     textAlign: 'justify',
     boxSizing: 'border-box',
     pointerEvents: 'none',
