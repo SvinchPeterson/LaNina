@@ -12,7 +12,7 @@ const feedBackParagraph = {
     flexAlign: 'flex-start flex-start',
     background: 'black .05',
     maxHeight: 'G',
-    minWidth: 'H',
+    minWidth: 'H2',
     position: 'relative',
     round: 'Y2'
   },
@@ -115,12 +115,21 @@ const heading = {
 export const feedBacks = {
   proto: Box,
   props: {
-    minHeight: '100%',
+    minHeight: 'H',
+
     flexFlow: 'column',
-    flexAlign: 'fle-start center',
-    padding: '0 F'
+    flexAlign: 'flex-start center',
+    minWidth: '500px',
+    maxWidth: '500px',
+    borderTop: '1px solid rgba(0, 0, 0, .75)'
+
   },
-  style: { overflow: 'hidden' },
+  style: {
+    overflow: 'hidden',
+    margin: '0 auto',
+    marginTop: `${200 / 16}em`,
+    marginBottom: `${200 / 16}em`
+  },
   heading,
   content: {
     proto: Box,
@@ -130,12 +139,15 @@ export const feedBacks = {
       padding: 'D 0 0 0'
     },
     style: {
+      overflowY: 'auto',
       scrollBehavior: 'smooth',
       borderTop: '1px solid rgba(0, 0, 0, .75)',
       overflowX: 'auto',
+      // border: '4px solid orange',
+      // minWidth: '100%',
+      alignSelf: 'center',
       '&::-webkit-scrollbar': { display: 'none' }
     },
-    // proto: 'Box',
     childProto: {
       proto: feedBackParagraph
     },
@@ -144,8 +156,8 @@ export const feedBacks = {
         name: { text: 'Dilfusa' },
         p: {
           text: `
-          Fue una estancia muy agradable! Hospitalidad, atención excelente! Ubicación y facilidades son perfectas. Muchas gracias a los dueños, me ayudaron en todo, presentaron mucho más de lo prometido)))
-          `
+              Fue una estancia muy agradable! Hospitalidad, atención excelente! Ubicación y facilidades son perfectas. Muchas gracias a los dueños, me ayudaron en todo, presentaron mucho más de lo prometido)))
+              `
         },
         date: { text: 'December | 2021' }
       },
@@ -154,9 +166,9 @@ export const feedBacks = {
         name: { text: 'Katie' },
         p: {
           text: `
-          Highly recommend to stay here! We really enjoyed La Niña Residence- Red Brick (also the other rooms look really cool too! )
-It’s in a great area, shops and bars nearby and also walking distance to lots of attractions and less than 10min walk to Freedom Square.
-          `
+              Highly recommend to stay here! We really enjoyed La Niña Residence- Red Brick (also the other rooms look really cool too! )
+    It’s in a great area, shops and bars nearby and also walking distance to lots of attractions and less than 10min walk to Freedom Square.
+              `
         },
         date: { text: 'Febryary | 2022' }
       },
@@ -165,8 +177,8 @@ It’s in a great area, shops and bars nearby and also walking distance to lots 
         name: { text: 'Cameron' },
         p: {
           text: `
-          A lovely apartment in excellent location, perfect walking distance to sights, comfortable and cosy. Great hosts, they even brought me a cake and bottle of wine on my birthday! Would recommend
-          `
+              A lovely apartment in excellent location, perfect walking distance to sights, comfortable and cosy. Great hosts, they even brought me a cake and bottle of wine on my birthday! Would recommend
+              `
         },
         date: { text: 'April | 2022' }
       },
@@ -175,8 +187,8 @@ It’s in a great area, shops and bars nearby and also walking distance to lots 
         name: { text: 'Alexsandr' },
         p: {
           text: `
-          BB Residence is a great cozy apartments near Liberty Square. It’s good to stay there and discover Tbilisi for yourself. Hope we will stay there again.
-          `
+              BB Residence is a great cozy apartments near Liberty Square. It’s good to stay there and discover Tbilisi for yourself. Hope we will stay there again.
+              `
         },
         date: { text: 'March | 2022' }
       }

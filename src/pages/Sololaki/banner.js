@@ -51,7 +51,7 @@ const heading = {
       textTransform: 'uppercase',
       fontWeight: 500,
       overflow: 'hidden',
-      letterSpacing: `${10 / 16}em`,
+      letterSpacing: `${10 / 14}em`,
       animationName: letterSpacing,
       animationDuration: '6s',
       animationDelay: '.3s',
@@ -85,8 +85,7 @@ const image = {
       width: '100%',
       height: '100%',
       display: 'block',
-      // background: 'linear-gradient(rgba(60,84, 72, .3), rgba(60,84, 72, .9))',
-      background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .85))',
+      background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8))',
       animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
     }
   }

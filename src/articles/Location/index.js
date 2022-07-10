@@ -41,13 +41,14 @@ export default {
   proto: Box,
   props: {
     flexFlow: 'column',
-    flexAlign: 'center center',
-    minHeight: '100%'
+    flexAlign: 'center center'
+    // minHeight: '100%'
 
     // padding: 'G2 0 0 0',
     // '@tabletL': { padding: 'E2 0 0 0' },
     // '@tabletM': { padding: 'E 0 0 0' }
   },
+  // style: { border: '3px solid red' },
   attr: { id: 'location' },
   // airPort,
   content: {
@@ -56,7 +57,7 @@ export default {
       flexFlow: 'column',
       flexAlign: 'flex-start flex-start',
       minWidth: '60%',
-      margin: 'F2 0 0 0',
+      margin: '0 0 0 0',
       padding: 'B 0 0 0',
       position: 'relative'
     },

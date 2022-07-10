@@ -12,7 +12,9 @@ const container = {
     position: 'relative',
     background: 'cream2',
     flexFlow: 'column',
-    gap: 'C2'
+    gap: '0',
+    width: '100%',
+    height: '100%'
   },
   style: {
     flex: 1,
@@ -24,8 +26,9 @@ const container = {
     animationDuration: '2s',
     animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
     // border: '5px solid green',
+    // maxWidth: '1440px',
     '> *': {
-      // border: '10px solid black',
+      // border: '5px solid black'
       // boxSizing: 'border-box'
       // height: '100%'
     }

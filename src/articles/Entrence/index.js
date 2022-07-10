@@ -1,90 +1,114 @@
 'use strict'
 import { Box, Text } from '@symbo.ls/symbols'
-import ENTRENCE_JPG from '../../assets/images/sololaki/entrance.jpg'
+import ENTRENCE_JPG from '../../assets/images/sololaki/balcony2.jpg'
 import STREET_JPG from '../../assets/images/sololaki/street.jpg'
 
 const yardEntrence = {
   proto: Box,
   props: {
-    minWidth: `${900 / 16}em`,
-    padding: 'F 0'
+    minWidth: `${600 / 16}em`,
+    position: 'relative',
+    minHeight: '500px',
+    padding: '0'
   },
   style: {
     flex: '1',
     backgroundAttachment: 'fixed',
-    backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .45)), url(' + ENTRENCE_JPG + ')',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    zIndex: 2
-  }
-}
-
-const streetEntrence = {
-  proto: Box,
-  props: {
-    flex: '.4',
-    minWidth: `${500 / 16}em`,
-    minHeight: `${500 / 16}em`
-  },
-  style: {
-    flex: '1',
-    marginTop: `${50 / 16}em`,
-    marginRight: `${-400 / 16}em`,
-    backgroundImage: 'linear-gradient(rgba(60,84, 72, .2), rgba(60,84, 72, .45)),url(' + STREET_JPG + ')',
+    backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .8)), url(' + ENTRENCE_JPG + ')',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     zIndex: 2,
-    backgroundAttachment: 'fixed',
-    backgroundPosition: 'right 250px bottom 200px'
+    backgroundPosition: 'bottom 200px center',
+    height: '500px',
+    maxHeight: '500px',
+    overflow: 'hidden',
+    '&:before': {
+      content: '""',
+      position: 'absolute',
+      left: '0',
+      width: '100%',
+      height: '100%',
+      // background: 'radial-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55))',
+      zIndex: '30'
+    }
   }
 }
+
+// const texts = {
+//   proto: Box,
+//   props: {
+//     position: 'absolute',
+//     flexFlow: 'column',
+//     bottom: '-E2',
+//     margin: '0 0 0 -H1',
+//     gap: 'A1',
+//     minHeight: 'fit-content'
+//   },
+//   style: {
+//     zIndex: 3,
+//     alignSelf: 'center',
+//     boxSizing: 'border-box',
+//     textTransform: 'uppercase',
+//     letterSpacing: '1px'
+
+//   },
+
+//   ...[
+//     { text: 'central location' },
+//     { text: 'free on site parking' },
+//     { text: 'free wifi' },
+//     { text: '24/7 customer service' },
+//     { tex: 'complimentary services' }
+//   ]
+// }
 
 const texts = {
   proto: Box,
   props: {
-    position: 'absolute',
+    margin: 'E 0 0 0',
+    fontWeight: '400',
     flexFlow: 'column',
-    bottom: '-E2',
-    margin: '0 0 0 -H1',
-    gap: 'A1',
-    minHeight: 'fit-content'
+    gap: 'Z'
   },
   style: {
-    zIndex: 3,
-    alignSelf: 'center',
-    boxSizing: 'border-box',
-    textTransform: 'uppercase',
-    letterSpacing: '1px'
-
+    textAlign: 'center',
+    letterSpacing: '.7px',
+    wordSpacing: '3px',
+    fontSize: '13.5px'
   },
-
   ...[
-    { text: 'central location' },
-    { text: 'free on site parking' },
-    { text: 'free wifi' },
-    { text: '24/7 customer service' },
-    { tex: 'complimentary services' }
+    { text: 'apartments are designed to match your mood' },
+    { text: 'create own atmosphere in any kind of trip' },
+    {
+      proto: Box,
+      props: { margin: 'A2 0 0 0' },
+      text: 'you are special for us'
+    }
   ]
 }
 
 export default {
   proto: Box,
   props: {
+    width: '100%',
     flexFlow: 'column',
     position: 'relative',
-    flexAlign: 'center center',
-    minHeight: '100%',
-    maxWidth: `${1440 / 16}em`,
+    flexAlign: 'center flex-start',
     margin: '0 auto',
-    maxHeight: 'I',
     gap: 'Z'
   },
   style: {
-    marginBottom: `${400 / 16}em`,
-    marginTop: `${300 / 16}em`
+    // border: '2px solid green',
+    fontSize: '22px',
+    marginTop: `${200 / 16}em`,
+    marginBottom: `${200 / 16}em`,
+    fontWeight: '300',
+    textTransform: 'uppercase'
+    // marginBottom: `${0 / 16}em`
+    // border: '2px solid red'
+    // marginTop: `${300 / 16}em`
   },
 
   yardEntrence,
-  streetEntrence,
   texts
 }

@@ -16,8 +16,8 @@ const roomsTabs = {
     position: 'relative',
     flexFlow: 'column',
     flexAlign: 'flex-start center',
-    padding: '0 10%',
-    miHeight: '100%'
+    padding: '0 10%'
+    // miHeight: '100%'
 
   },
 
@@ -92,7 +92,7 @@ export default {
     flexFlow: 'column',
     position: 'relative',
     padding: `F2 0 G 0`,
-    margin: '0 0 0 0'
+    margin: '0 0 G 0'
   },
   style: {
     scrollBehavior: 'smooth',

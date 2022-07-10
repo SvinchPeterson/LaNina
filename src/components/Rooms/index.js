@@ -1,7 +1,7 @@
 'use strict'
 
 import { Box, Link, Img, Text } from '@symbo.ls/symbols'
-import BACK_PNG from '../../assets/icons/up-arrow.png'
+import BACK_PNG from '../../assets/icons/arrowBack.png'
 
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
@@ -55,11 +55,11 @@ const back = {
   proto: [Link, Box, Text],
 
   props: {
-    flexFlow: 'column',
+    // flexFlow: 'column',
     gap: 'Z',
     position: 'absolute',
-    top: 'G',
-    left: '-C2',
+    top: 'D1',
+    left: '0',
     href: '#apartments',
     color: 'cream2',
     flexAlign: 'center center',
@@ -82,7 +82,7 @@ const back = {
   icon: {
     proto: [Img, Box],
     props: {
-      boxSize: ' B',
+      boxSize: 'A2',
       src: BACK_PNG
     },
     style: {
@@ -93,14 +93,14 @@ const back = {
   span: {
     proto: Box,
     props: {
-      text: 'UP',
-      fontSize: 'Z'
+      text: 'APARTMENTS',
+      fontSize: 'Y'
     },
     style: {
-      fontWeight: '500',
-      textOrientation: 'upright',
-      writingMode: 'vertical-rl',
-      letterSpacing: '0',
+      fontWeight: '900',
+      // textOrientation: 'upright',
+      // writingMode: 'vertical-rl',
+      letterSpacing: '1px',
       opacity: '.7',
       transition: 'opacity .15s ease-in-out'
     }

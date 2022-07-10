@@ -14,7 +14,7 @@ const image = {
     },
     '@mobileM': {
       boxSize: '100% G3',
-      margin: '-D 0 0 0'
+      margin: '-A 0 0 0'
     }
   },
   style: {
@@ -40,7 +40,7 @@ const paragraph = {
     flexAlign: 'center flex-start',
     width: 'fit-content',
     color: 'black .75',
-    margin: '-D2 -E1 0 0'
+    margin: '-D -G 0 0'
   },
   style: {
     borderTop: 'none',
@@ -62,10 +62,10 @@ const paragraph = {
       }
     ],
     props: {
-      maxWidth: `${450 / 14.3}em`,
+      maxWidth: `${500 / 14.3}em`,
       margin: '0 auto',
       color: 'black .75',
-      padding: 'F1 0 F1 E1',
+      padding: 'F1 E E2 E',
       flexFlow: 'column',
       gap: 'A'
     },
@@ -82,14 +82,13 @@ const paragraph = {
 export default {
   proto: Box,
   props: {
-    minHeight: '100%',
     position: 'relative',
     flexAlign: 'center center',
-    margin: 'F2 0 E2 0'
+    padding: 'D2 0'
     // padding: 'G2 0'
   },
   style: {
-    // border: '10px solid black'
+    // border: '3px solid black'
   },
   attr: { id: 'wine' },
 

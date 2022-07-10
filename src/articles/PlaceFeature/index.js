@@ -5,11 +5,12 @@ import SHELF_JPG from '../../assets/images/sololaki/shelf.jpg'
 export const placeFeature = {
   proto: [Box],
   props: {
-    minHeight: '100%',
+    margin: 'F2 0',
     flexAlign: 'center center'
   },
   style: {
     width: '100%'
+    // border: '4px solid purple'
     // backgroundAttachment: 'fixed',
     // backgroundImage: 'url(' + SHELF_JPG + ')',
     // backgroundSize: 'cover',
@@ -25,7 +26,8 @@ export const placeFeature = {
       columns: 'repeat(4, 270px)',
       gap: 'A2',
       rowGap: 'A2',
-      padding: 'E2 0',
+      padding: 'F 0',
+      // maxHeight: 'h2',
       position: 'relative'
     },
     style: {
@@ -44,8 +46,8 @@ export const placeFeature = {
         position: 'absolute',
         top: 0,
         left: 0,
-        background: 'radial-gradient(rgba(60, 84, 72, .45), rgba(60, 84, 72, .75))',
-        // background: 'radial-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .45))',
+        // background: 'radial-gradient(rgba(60, 84, 72, .35), rgba(60, 84, 72, .45))',
+        background: 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .3))',
         // background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, .5))',
         zIndex: 5
         // backgroundAttachment: 'fixed'
@@ -55,7 +57,7 @@ export const placeFeature = {
       proto: Box,
       props: {
         flexAlign: 'center flex-start',
-        padding: 'C2 B1',
+        padding: 'C B1',
         // height: 'D',
         // background: 'cream2 .15',
         round: 'Y'

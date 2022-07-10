@@ -28,7 +28,8 @@ const heading = {
     animationDuration: '2s',
     animationTimingFunction: 'ease-in-out',
     zIndex: 2,
-    letterSpacing: '0px',
+    letterSpacing3: '',
+    // letterSpacing: '0px',
     opacity: 1
   }
 }
