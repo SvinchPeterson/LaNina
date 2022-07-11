@@ -13,7 +13,7 @@ const buildingHistory = {
     padding: 'G2 0 G 0',
     // margin: 'D 0',
     '@tabletL': {
-      padding: 'G D G D'
+      padding: 'G D E D'
     },
     '@mobileL': {
       padding: 'G D1 G D1'

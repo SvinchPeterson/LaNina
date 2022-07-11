@@ -28,7 +28,13 @@ export const placeFeature = {
       rowGap: 'A2',
       padding: 'F 0',
       // maxHeight: 'h2',
-      position: 'relative'
+      position: 'relative',
+      '@tabletL': {
+        columns: 'repeat(2, 270px)'
+      },
+      '@mobileM': {
+        columns: 'repeat(1, 290px)'
+      }
     },
     style: {
       width: '100%',
@@ -38,7 +44,10 @@ export const placeFeature = {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       justifyContent: 'center',
-      // height: '70%',
+      '@media only screen and (max-width: 1366px)': {
+        backgroundAttachment: 'initial',
+        backgroundImage: 'none'
+      },
       '&:before': {
         content: '""',
         width: '100%',
@@ -46,11 +55,11 @@ export const placeFeature = {
         position: 'absolute',
         top: 0,
         left: 0,
-        // background: 'radial-gradient(rgba(60, 84, 72, .35), rgba(60, 84, 72, .45))',
         background: 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .3))',
-        // background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, .5))',
-        zIndex: 5
-        // backgroundAttachment: 'fixed'
+        zIndex: 5,
+        '@media only screen and (max-width: 1366px)': {
+          background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .15))'
+        }
       }
     },
     childProto: {
@@ -67,7 +76,10 @@ export const placeFeature = {
         zIndex: 10,
         backdropFilter: 'blur(5px)',
         // border: '1px solid rgba(220, 187, 140, .1)',
-        background: 'radial-gradient(rgba(248, 241, 227, .55), rgba(248, 241, 227, .65))'
+        background: 'radial-gradient(rgba(248, 241, 227, .55), rgba(248, 241, 227, .65))',
+        '@media only screen and (max-width: 1366px)': {
+          boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .05)'
+        }
         // background: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3))'
       },
       paragraph: {
