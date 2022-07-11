@@ -157,6 +157,15 @@ export const position = keyframes`
   }
 `
 
+export const zoom = keyframes`
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+`
+
 export const position2 = keyframes`
   from {
     background-position: bottom 50px left;

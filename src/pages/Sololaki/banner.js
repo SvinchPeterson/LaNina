@@ -1,7 +1,7 @@
 'use strict'
 import { Box, Text } from '@symbo.ls/symbols'
 
-import { position, height, letterSpacing, letterSpacing4, position2, height2, height3, letterSpacing2, opacity2, opacity7 } from '../../animations'
+import { position, height, letterSpacing, letterSpacing4, position2, height2, height3, letterSpacing2, opacity2, opacity7, zoom } from '../../animations'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/entrence2.jpg'
 import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
 
@@ -9,18 +9,33 @@ const heading = {
   proto: Box,
   props: {
     position: 'absolute',
-    top: '45%',
+    top: '35%',
     right: '20.5%',
     flexFlow: 'column',
     flexAlign: 'flex-end flex-start',
-    height: '100px'
+    height: '100px',
+    '@mobileL': {
+      flexAlign: 'center flex-start',
+      right: '0',
+      left: '50%'
+      // height: '200px'
+    },
+    '@mobileS': {
+      top: '40%'
+    }
+  },
+  style: {
+    whiteSpace: 'nowrap',
+    '@media only screen and (max-width: 768px)': {
+      transform: 'translate(-50%, -50%)'
+    }
   },
 
   h1: {
     proto: [Text, Box],
     props: {
       text: 'BB Residence',
-      color: 'gold .85',
+      color: 'gold 1',
       margin: '0'
     },
     style: {
@@ -30,8 +45,14 @@ const heading = {
       animationDuration: '3s',
       animationTimingFunction: 'ease-in-out',
       animationDelay: '.4s',
-      fontWeight: 100,
-      letterSpacing: `${-3 / 120}em`
+      fontWeight: 200,
+      letterSpacing: `${-3 / 120}em`,
+      '@media only screen and (max-width: 480px)': {
+        fontSize: `${42.5 / 16}em`,
+        // fontWeight: 900,
+        textTransform: 'uppercase'
+
+      }
     }
   },
 
@@ -39,14 +60,21 @@ const heading = {
     proto: [Text, Box],
     props: {
       text: 'sololaki',
+      fontSize: 'Z',
       // color: 'gold .85',
-      color: 'cream2 .85',
+      color: 'cream2 .9',
       position: 'absolute',
-      bottom: '-10px'
-      // right: 'A'
+      bottom: '-10px',
+      '@mobileL': {
+        bottom: '-100px',
+        fontSize: `B`
+      },
+      '@mobileS': {
+        bottom: '-50px'
+      }
     },
     style: {
-      fontSize: '14px',
+      // fontSize: '14px',
       // width: 'fit-content',
       textTransform: 'uppercase',
       fontWeight: 500,
@@ -55,7 +83,10 @@ const heading = {
       animationName: letterSpacing,
       animationDuration: '6s',
       animationDelay: '.3s',
-      animationTimingFunction: 'ease-in-out'
+      animationTimingFunction: 'ease-in-out',
+      '@media only screen and (max-width: 768px)': {
+        letterSpacing: `10px`
+      }
     }
   }
 }
@@ -80,6 +111,12 @@ const image = {
     // animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
     backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
     backgroundAttachment: 'fixed',
+    '@media only screen and (max-width: 1366px)': {
+      backgroundAttachment: 'initial',
+      animationName: zoom,
+      animationDelay: '-1s',
+      animationDuration: '8s'
+    },
     '&:before': {
       content: '""',
       width: '100%',

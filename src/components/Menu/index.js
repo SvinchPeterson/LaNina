@@ -6,26 +6,31 @@ const sectionLinks = {
   proto: Box,
   props: {
     flexFlow: 'column',
-    flexAlign: 'center center',
-    gap: 'B'
+    flexAlign: 'flex-start center',
+    gap: '0'
   },
-  style: { textAlign: 'center' },
+  style: {
+    // border: '2px solid red',
+    width: 'fit-content'
+    // textAlign: 'center'
+  },
 
   childProto: {
     proto: [Link, Box],
     props: {
-      fontSize: 'Z',
+      fontSize: 'C',
       color: 'cream2 .95',
-      round: 'D',
-      padding: 'Z2 0',
-      width: 'F'
+      round: 'Z',
+      padding: 'Z2 0'
+      // width: 'F'
     },
     style: {
       textTransform: 'uppercase',
       cursor: 'pointer',
       fontWeight: 900,
-      textDecoration: 'none',
-      border: '1px solid rgba(248, 241, 227, .4)'
+      textDecoration: 'none'
+      // textAlign: 'left'
+      // border: '1px solid rgba(248, 241, 227, .4)'
     },
     on: {
       click: (event, element, state) => {
@@ -51,7 +56,7 @@ export const Menu = {
     top: '0',
     left: '0',
     flexAlign: 'center center',
-    background: 'green2 .85'
+    background: 'black .75'
   },
   style: {
     boxSizing: 'border-box',

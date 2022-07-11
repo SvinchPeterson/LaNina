@@ -84,7 +84,9 @@ export const HeaderMobile = {
     gap: 'E',
     display: 'none',
     width: '100%',
-    '@mobileL': { display: 'flex' }
+    '@mobileL': { display: 'flex' },
+    '@mobileM': { padding: 'C C 0 C' },
+    '@mobileS': { padding: 'C B 0 B' }
   },
   style: {
     zIndex: 500,
