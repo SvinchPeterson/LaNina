@@ -6,11 +6,16 @@ export const placeFeature = {
   proto: [Box],
   props: {
     margin: 'F2 0',
-    flexAlign: 'center center'
+    flexAlign: 'center center',
+    '@mobileL': {
+      margin: 'E 0 F 0'
+    },
+    '@mobileM': {
+      margin: 'E 0 E 0'
+    }
   },
   style: {
     width: '100%'
-    // border: '4px solid purple'
     // backgroundAttachment: 'fixed',
     // backgroundImage: 'url(' + SHELF_JPG + ')',
     // backgroundSize: 'cover',
@@ -30,10 +35,20 @@ export const placeFeature = {
       // maxHeight: 'h2',
       position: 'relative',
       '@tabletL': {
-        columns: 'repeat(2, 270px)'
+        columns: 'repeat(2, 340px)'
+      },
+      '@mobileL': {
+        flexFlow: 'column',
+        columns: 'repeat(1, 340px)',
+        maxHeight: `${500 / 16}em`
       },
       '@mobileM': {
-        columns: 'repeat(1, 290px)'
+        padding: 'D 0',
+        columns: 'repeat(1, 300px)',
+        maxHeight: `${400 / 16}em`
+      },
+      '@mobileXS': {
+        columns: 'repeat(1, 270px)'
       }
     },
     style: {
@@ -48,6 +63,10 @@ export const placeFeature = {
         backgroundAttachment: 'initial',
         backgroundImage: 'none'
       },
+      '@media only screen and (max-width: 768px)': {
+        overflowY: 'auto',
+        background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .15))'
+      },
       '&:before': {
         content: '""',
         width: '100%',
@@ -59,6 +78,9 @@ export const placeFeature = {
         zIndex: 5,
         '@media only screen and (max-width: 1366px)': {
           background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .15))'
+        },
+        '@media only screen and (max-width: 768px)': {
+          background: 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))'
         }
       }
     },

@@ -8,8 +8,16 @@ const yardEntrence = {
   props: {
     minWidth: `${600 / 16}em`,
     position: 'relative',
-    minHeight: '500px',
-    padding: '0'
+    minHeight: `${400 / 16}em`,
+    padding: '0',
+    '@mobileL': {
+      minWidth: `${400 / 16}em`,
+      minHeight: `${300 / 16}em`
+    }
+    // '@mobileS': {
+    //   minWidth: `${400 / 16}em`,
+    //   minHeight: `${300 / 16}em`
+    // }
   },
   style: {
     flex: '1',
@@ -19,9 +27,13 @@ const yardEntrence = {
     backgroundRepeat: 'no-repeat',
     zIndex: 2,
     backgroundPosition: 'bottom 200px center',
-    height: '500px',
-    maxHeight: '500px',
     overflow: 'hidden',
+    '@media only screen and (max-width: 1366px)': {
+      backgroundAttachment: 'initial',
+      backgroundPosition: 'bottom 0px center',
+      backgroundSize: 'cover',
+      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .55)), url(' + ENTRENCE_JPG + ')'
+    },
     '&:before': {
       content: '""',
       position: 'absolute',
@@ -68,13 +80,21 @@ const texts = {
     margin: 'E 0 0 0',
     fontWeight: '400',
     flexFlow: 'column',
-    gap: 'Z'
+    gap: 'Z',
+    '@mobileS': {
+      padding: '0 D1 0 D1',
+      gap: 'A2'
+    }
   },
   style: {
     textAlign: 'center',
     letterSpacing: '.7px',
     wordSpacing: '3px',
-    fontSize: '13.5px'
+    fontSize: '13.5px',
+    '@media media only screen and (max-width: 480px)': {
+      fontSize: '12.7px',
+      textAlign: 'left'
+    }
   },
   ...[
     { text: 'apartments are designed to match your mood' },
@@ -103,7 +123,10 @@ export default {
     marginTop: `${200 / 16}em`,
     marginBottom: `${200 / 16}em`,
     fontWeight: '300',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    '@media only screen and (max-width: 1366px)': {
+      marginTop: `${75 / 16}em`
+    }
     // marginBottom: `${0 / 16}em`
     // border: '2px solid red'
     // marginTop: `${300 / 16}em`
