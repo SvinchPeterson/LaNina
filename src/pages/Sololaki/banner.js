@@ -1,9 +1,8 @@
 'use strict'
 import { Box, Text } from '@symbo.ls/symbols'
 
-import { position, height, letterSpacing, letterSpacing4, position2, height2, height3, letterSpacing2, opacity2, opacity7, zoom } from '../../animations'
+import { position, height, letterSpacing, opacity7, zoom } from '../../animations'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/entrence2.jpg'
-import SOLOLAKI_TABLET_JPG from '../../assets/images/sololaki/sololaki-tablet.jpg'
 
 const heading = {
   proto: Box,
@@ -45,11 +44,11 @@ const heading = {
       animationDuration: '3s',
       animationTimingFunction: 'ease-in-out',
       animationDelay: '.4s',
-      fontWeight: 200,
+      fontWeight: 100,
       letterSpacing: `${-3 / 120}em`,
       '@media only screen and (max-width: 480px)': {
         fontSize: `${42.5 / 16}em`,
-        // fontWeight: 900,
+        fontWeight: 200,
         textTransform: 'uppercase'
 
       }
