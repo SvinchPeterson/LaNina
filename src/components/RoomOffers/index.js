@@ -6,7 +6,7 @@ const header = {
   proto: Box,
   props: {
     flexAlign: 'center space-between',
-    padding: 'A2 A2 Z2 B'
+    padding: 'B B B B'
   },
   style: {
     textTransform: 'uppercase',

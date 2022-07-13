@@ -25,7 +25,7 @@ const roomsTabs = {
     }
   },
   style: {
-    overflow: 'hidden'
+    // overflow: 'hidden'
     // border: '10px solid red'
   },
 
@@ -60,6 +60,58 @@ const roomsTabs = {
   //     }
   //   ]
   // },
+
+  buttons: {
+    proto: navButtons2,
+    props: {
+      '@mobileM': {
+        bottom: '-50px',
+        maxWidth: '85px'
+      }
+    },
+
+    style: {
+      '@media only screen and (max-width: 1366px)': {
+        display: 'flex',
+        zIndex: '10'
+      },
+      '@media only screen and (max-width: 560px)': {
+        '> button': {
+          border: 'none',
+          opacity: '.75'
+        }
+      }
+    },
+
+    ...[
+      {
+        props: { '@mobileM': { padding: '0' } },
+        on: {
+          click: (event, element, state) => {
+            const { tabsContainer } = element.parent.parent
+            tabsContainer.node.scrollBy({
+              top: 0,
+              left: -tabsContainer.node.clientWidth - 16.5 * 1.618
+            })
+          }
+        }
+      },
+
+      {
+        props: { '@mobileM': { padding: '0 0 0 0' } },
+        on: {
+          click: (event, element, state) => {
+            const { tabsContainer } = element.parent.parent
+            tabsContainer.node.scrollBy({
+              top: 0,
+              left: tabsContainer.node.clientWidth + 16.5 * 1.618,
+              behavior: 'smooth'
+            })
+          }
+        }
+      }
+    ]
+  },
 
   tabsContainer: {
     tag: 'nav',
@@ -108,7 +160,7 @@ export default {
     padding: `F2 0 G 0`,
     margin: '0 0 G 0',
     '@mobileM': {
-      padding: `E 0 G 0`
+      padding: `D1 0 G 0`
     }
   },
   style: {
