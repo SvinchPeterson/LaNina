@@ -52,7 +52,14 @@ export const RoomTab = {
     height: 'G1',
     padding: 'B',
     position: 'relative',
-    round: 'Y2'
+    round: 'Y2',
+    '@tabletL': {
+      minWidth: '100%',
+      height: 'H'
+    },
+    '@mobileL': {
+      height: 'G'
+    }
   },
 
   style: {

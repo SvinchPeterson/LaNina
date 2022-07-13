@@ -1,7 +1,6 @@
 'use strict'
-import { Box, Text } from '@symbo.ls/symbols'
+import { Box } from '@symbo.ls/symbols'
 import ENTRENCE_JPG from '../../assets/images/sololaki/balcony2.jpg'
-import STREET_JPG from '../../assets/images/sololaki/street.jpg'
 
 const yardEntrence = {
   proto: Box,
@@ -14,10 +13,6 @@ const yardEntrence = {
       minWidth: `${400 / 16}em`,
       minHeight: `${300 / 16}em`
     }
-    // '@mobileS': {
-    //   minWidth: `${400 / 16}em`,
-    //   minHeight: `${300 / 16}em`
-    // }
   },
   style: {
     flex: '1',
@@ -40,39 +35,10 @@ const yardEntrence = {
       left: '0',
       width: '100%',
       height: '100%',
-      // background: 'radial-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55))',
       zIndex: '30'
     }
   }
 }
-
-// const texts = {
-//   proto: Box,
-//   props: {
-//     position: 'absolute',
-//     flexFlow: 'column',
-//     bottom: '-E2',
-//     margin: '0 0 0 -H1',
-//     gap: 'A1',
-//     minHeight: 'fit-content'
-//   },
-//   style: {
-//     zIndex: 3,
-//     alignSelf: 'center',
-//     boxSizing: 'border-box',
-//     textTransform: 'uppercase',
-//     letterSpacing: '1px'
-
-//   },
-
-//   ...[
-//     { text: 'central location' },
-//     { text: 'free on site parking' },
-//     { text: 'free wifi' },
-//     { text: '24/7 customer service' },
-//     { tex: 'complimentary services' }
-//   ]
-// }
 
 const texts = {
   proto: Box,
@@ -118,7 +84,6 @@ export default {
     gap: 'Z'
   },
   style: {
-    // border: '2px solid green',
     fontSize: '22px',
     marginTop: `${200 / 16}em`,
     marginBottom: `${200 / 16}em`,
@@ -127,9 +92,6 @@ export default {
     '@media only screen and (max-width: 1366px)': {
       marginTop: `${75 / 16}em`
     }
-    // marginBottom: `${0 / 16}em`
-    // border: '2px solid red'
-    // marginTop: `${300 / 16}em`
   },
 
   yardEntrence,

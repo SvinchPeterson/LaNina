@@ -96,7 +96,7 @@ const links = {
       }
     },
     {
-      props: { text: 'car rental' },
+      props: { text: 'rental' },
       style: {
         position: 'relative',
         opacity: '.55',

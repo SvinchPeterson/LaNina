@@ -16,42 +16,50 @@ const roomsTabs = {
     position: 'relative',
     flexFlow: 'column',
     flexAlign: 'flex-start center',
-    padding: '0 10%'
-    // miHeight: '100%'
-
-  },
-
-  buttons: {
-    proto: navButtons2,
-    props: {
-      width: '95%'
+    padding: '0 10%',
+    '@tabletL': {
+      padding: '0 15%'
     },
-    ...[
-      {
-        on: {
-          click: (event, element, state) => {
-            const { tabsContainer } = element.parent.parent
-            tabsContainer.node.scrollBy({
-              top: 0,
-              left: -tabsContainer.node.clientWidth - 16.5 * 1.618
-            })
-          }
-        }
-      },
-      {
-        on: {
-          click: (event, element, state) => {
-            const { tabsContainer } = element.parent.parent
-            tabsContainer.node.scrollBy({
-              top: 0,
-              left: tabsContainer.node.clientWidth + 16.5 * 1.618,
-              behavior: 'smooth'
-            })
-          }
-        }
-      }
-    ]
+    '@mobileM': {
+      padding: '0 5%'
+    }
   },
+  style: {
+    overflow: 'hidden'
+    // border: '10px solid red'
+  },
+
+  // buttons: {
+  //   proto: navButtons2,
+  //   props: {
+  //     width: '95%'
+  //   },
+  //   ...[
+  //     {
+  //       on: {
+  //         click: (event, element, state) => {
+  //           const { tabsContainer } = element.parent.parent
+  //           tabsContainer.node.scrollBy({
+  //             top: 0,
+  //             left: -tabsContainer.node.clientWidth - 16.5 * 1.618
+  //           })
+  //         }
+  //       }
+  //     },
+  //     {
+  //       on: {
+  //         click: (event, element, state) => {
+  //           const { tabsContainer } = element.parent.parent
+  //           tabsContainer.node.scrollBy({
+  //             top: 0,
+  //             left: tabsContainer.node.clientWidth + 16.5 * 1.618,
+  //             behavior: 'smooth'
+  //           })
+  //         }
+  //       }
+  //     }
+  //   ]
+  // },
 
   tabsContainer: {
     tag: 'nav',
@@ -62,8 +70,14 @@ const roomsTabs = {
       width: '100%',
       padding: 'B2 0 0 0'
     },
+    style: {
+      // border: '5px solid orange',
+      '@media only screen and (max-width: 1366px)': { overflowY: 'auto' }
+    },
     childProto: {
-      proto: Box
+      proto: Box,
+      props: {
+      }
     },
     ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
   }
@@ -92,7 +106,10 @@ export default {
     flexFlow: 'column',
     position: 'relative',
     padding: `F2 0 G 0`,
-    margin: '0 0 G 0'
+    margin: '0 0 G 0',
+    '@mobileM': {
+      padding: `E 0 G 0`
+    }
   },
   style: {
     scrollBehavior: 'smooth',
@@ -101,6 +118,9 @@ export default {
     backgroundPosition: 'center',
     boxSizing: 'border-box',
     backgroundAttachment: 'fixed',
+    '@media only screen and (max-width: 1366px)': {
+      backgroundImage: 'none'
+    },
     '&:before': {
       content: '""',
       width: '100%',
@@ -109,7 +129,10 @@ export default {
       top: 0,
       left: 0,
       background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
-      backgroundAttachment: 'fixed'
+      backgroundAttachment: 'fixed',
+      '@media only screen and (max-width: 1366px)': {
+        background: 'radial-gradient(rgba(60, 84, 72, .9), rgba(60, 84, 72, .95))'
+      }
 
     }
   },

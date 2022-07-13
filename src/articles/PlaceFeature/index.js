@@ -16,14 +16,6 @@ export const placeFeature = {
   },
   style: {
     width: '100%'
-    // backgroundAttachment: 'fixed',
-    // backgroundImage: 'url(' + SHELF_JPG + ')',
-    // backgroundSize: 'cover',
-    // backgroundPosition: 'center',
-    // backgroundRepeat: 'no-repeat',
-    // justifyContent: 'center',
-
-    // backgroundImage: 'radial-gradient(rgba(42, 81, 61, .4), rgba(42, 81, 61, .8))',
   },
   content: {
     proto: [Grid, Box],
@@ -32,7 +24,6 @@ export const placeFeature = {
       gap: 'A2',
       rowGap: 'A2',
       padding: 'F 0',
-      // maxHeight: 'h2',
       position: 'relative',
       '@tabletL': {
         columns: 'repeat(2, 340px)'
@@ -89,20 +80,16 @@ export const placeFeature = {
       props: {
         flexAlign: 'center flex-start',
         padding: 'C B1',
-        // height: 'D',
-        // background: 'cream2 .15',
         round: 'Y'
       },
       style: {
         boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .15)',
         zIndex: 10,
         backdropFilter: 'blur(5px)',
-        // border: '1px solid rgba(220, 187, 140, .1)',
         background: 'radial-gradient(rgba(248, 241, 227, .55), rgba(248, 241, 227, .65))',
         '@media only screen and (max-width: 1366px)': {
           boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .05)'
         }
-        // background: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .3))'
       },
       paragraph: {
         proto: Box,
@@ -130,11 +117,9 @@ export const placeFeature = {
           props: {
             padding: '0 0 0 U',
             color: 'black .6'
-            // fontSize: 'A'
           },
           style: {
             letterSpacing: '.1px',
-            // fontWeight: 500,
             fontSize: `${14.4 / 16}em`
           }
         }
