@@ -160,7 +160,8 @@ export default {
     padding: `F2 0 G 0`,
     margin: '0 0 G 0',
     '@mobileM': {
-      padding: `D1 0 G 0`
+      padding: `D1 0 G 0`,
+      margin: '0 0 E 0'
     }
   },
   style: {
