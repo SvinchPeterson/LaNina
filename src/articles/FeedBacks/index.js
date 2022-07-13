@@ -147,7 +147,10 @@ const heading = {
   props: {
     padding: '0 D2 0 D2',
     margin: '0 0 C 0',
-    flexAlign: 'center space-between'
+    flexAlign: 'center space-between',
+    '@tabletL': {
+      padding: '0 B 0 B'
+    }
   },
   title: {
     proto: Box,
@@ -170,22 +173,22 @@ export const feedBacks = {
   proto: Box,
   props: {
     maxWidth: '1440px',
-    minWidth: '1440px',
     minHeight: 'H',
-    padding: '0 E'
-    // flexFlow: 'column',
-    // flexAlign: 'flex-start flex-start',
-    // minWidth: '500px',
-    // maxWidth: '600px'
-    // borderTop: '1px solid rgba(0, 0, 0, .75)'
+    padding: '0 E',
+    '@tabletL': {
+      padding: '0 D1'
+    }
   },
 
   style: {
     overflowX: 'hidden',
     margin: '0 auto',
     marginTop: `${300 / 16}em`,
-    marginBottom: `${300 / 16}em`
-    // border: '1px solid red'
+    marginBottom: `${300 / 16}em`,
+    '@media only screen and (max-width: 1366px)': {
+      marginLeft: '0',
+      marginRight: '0'
+    }
   },
 
   heading: { proto: heading },
@@ -217,7 +220,6 @@ export const feedBacks = {
         boxShadow: '0px 0px 80px 60px rgba(248, 241, 227, 1)',
         background: 'rgba(248, 241, 227, .5)',
         zIndex: 3
-        // boxShadow: '20px 0px -80px 60px rgba(248, 241, 227, 1)'
       }
     },
 
@@ -229,10 +231,8 @@ export const feedBacks = {
       },
       style: {
         scrollBehavior: 'smooth',
-        // borderTop: '1px solid rgba(0, 0, 0, .75)',
         overflowX: 'auto',
-        // border: '4px solid orange',
-        // minWidth: '100%',
+        maxWidth: '100%',
         alignSelf: 'center',
         '&::-webkit-scrollbar': { display: 'none' }
       },
