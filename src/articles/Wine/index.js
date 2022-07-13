@@ -7,14 +7,14 @@ const image = {
 
   props: {
     boxSize: `H H3`,
-    padding: 'D 0 0 0',
-    '@tabletL': {
-      boxSize: '70% H'
-    },
-    '@mobileM': {
-      boxSize: '100% G3',
-      margin: '-A 0 0 0'
-    }
+    padding: 'D 0 0 0'
+    // '@tabletL': {
+    //   boxSize: '70% H'
+    // },
+    // '@mobileM': {
+    //   boxSize: '100% G3',
+    //   margin: '-A 0 0 0'
+    // }
   },
   style: {
     backgroundImage: 'linear-gradient(rgba(60,84, 72, .25), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
@@ -40,6 +40,7 @@ const paragraph = {
     width: 'fit-content',
     color: 'black .75',
     margin: '-E2 -G 0 0'
+    // '@tabletL': { margin: '0' }
   },
   style: {
     borderTop: 'none',
