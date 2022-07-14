@@ -15,10 +15,22 @@ const feedBackParagraph = {
     background: 'black .05',
     maxHeight: 'G',
     position: 'relative',
-    round: 'Y2'
+    round: 'Y2',
+    minWidth: 'H1',
+    '@tabletL': {
+      minWidth: '100%'
+    },
+    '@mobileM': {
+      padding: 'C A B A'
+    }
+
+    // '@mobileM': {
+    //   minWidth: '100%'
+    // }
+
   },
   style: {
-    minWidth: `${550 / 16}em`,
+    // minWidth: `${550 / 16}em`,
     boxSizing: 'border-box',
     background: 'linear-gradient(rgba(0, 0, 0, .03), rgba(0, 0, 0, .035))',
     height: '500px',
@@ -55,7 +67,11 @@ const feedBackParagraph = {
       fontSize: `${14.3 / 16}em`,
       letterSpacing: '.8px',
       wordSpacing: '-1.45px',
-      lineHeight: `${22 / 14.3}em`
+      lineHeight: `${22 / 14.3}em`,
+      maxwidth: `${590 / 14.3}em`,
+      '@media only screen and (max-width: 560px)': {
+        fontSize: `${13 / 16}em`
+      }
     }
   },
 
@@ -91,7 +107,7 @@ const navArrows = {
     tag: 'button',
     props: {
       // boxSize: ' A',
-      boxSize: 'B1 B1'
+      // boxSize: 'B1 B1'
     },
     style: {
       cursor: 'pointer',
@@ -104,8 +120,8 @@ const navArrows = {
     arrow: {
       proto: [Img, Box],
       props: {
-        boxSize: '100%',
-        padding: 'W'
+        boxSize: ' A1'
+        // padding: 'W'
       }
     }
   },
@@ -117,7 +133,7 @@ const navArrows = {
           const { feedbacks } = element.parent.parent.parent.content
           feedbacks.node.scrollBy({
             top: 0,
-            left: -feedbacks.node.clientWidth - 30
+            left: -feedbacks.node.clientWidth - 16.5 * 1.618
           })
         }
       },
@@ -131,7 +147,7 @@ const navArrows = {
           const { feedbacks } = element.parent.parent.parent.content
           feedbacks.node.scrollBy({
             top: 0,
-            left: feedbacks.node.clientWidth + (-80)
+            left: feedbacks.node.clientWidth + 16.5 * 1.618
           })
         }
       },
@@ -145,12 +161,16 @@ const navArrows = {
 const heading = {
   proto: Box,
   props: {
-    padding: '0 D2 0 D2',
-    margin: '0 0 C 0',
     flexAlign: 'center space-between',
+    width: '100%',
+    padding: '0',
     '@tabletL': {
-      padding: '0 B 0 B'
+      padding: '0'
     }
+  },
+  style: {
+    zIndex: '20',
+    boxSizing: 'border-box'
   },
   title: {
     proto: Box,
@@ -166,7 +186,9 @@ const heading = {
       opacity: '.8'
     }
   },
-  arrows: { proto: navArrows }
+  arrows: {
+    proto: navArrows
+  }
 }
 
 export const feedBacks = {
@@ -175,14 +197,16 @@ export const feedBacks = {
     maxWidth: '1440px',
     minHeight: 'H',
     padding: '0 E',
-    '@tabletL': {
-      padding: '0 D1'
-    }
+    '@tabletL': { padding: '0 F1' },
+    '@tabletM': { padding: '0 D' },
+    '@mobileM': { padding: '0 Z' }
   },
 
   style: {
+    // border: '3px solid red',
     overflowX: 'hidden',
     margin: '0 auto',
+    boxSizing: 'border-box',
     marginTop: `${300 / 16}em`,
     marginBottom: `${300 / 16}em`,
     '@media only screen and (max-width: 1366px)': {
@@ -195,7 +219,9 @@ export const feedBacks = {
   content: {
     proto: Box,
     props: {
-      position: 'relative'
+      position: 'relative',
+      margin: 'C2 0 0 0'
+
     },
     style: {
       '&:after': {
@@ -206,8 +232,10 @@ export const feedBacks = {
         right: '0px',
         top: 0,
         background: 'rgba(248, 241, 227, .5)',
-        boxShadow: '0px 0px 80px 60px rgba(248, 241, 227, 1)'
-        // border: '1px solid black'
+        boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .95)'
+        // '@media only screen and (max-width: 1366px)': {
+        //   boxShadow: '0px 0px 80px 60px rgba(248, 241, 227, 1)',
+        // }
       },
       '&:before': {
         content: '""',
@@ -217,7 +245,7 @@ export const feedBacks = {
         position: 'absolute',
         left: '0',
         top: 0,
-        boxShadow: '0px 0px 80px 60px rgba(248, 241, 227, 1)',
+        boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .95)',
         background: 'rgba(248, 241, 227, .5)',
         zIndex: 3
       }
@@ -279,6 +307,16 @@ export const feedBacks = {
               `
           },
           date: { text: 'March | 2022' }
+        },
+
+        {
+          name: { text: 'Cameron' },
+          p: {
+            text: `
+          A lovely apartment in excellent location, perfect walking distance to sights, comfortable and cosy. Great hosts, they even brought me a cake and bottle of wine on my birthday! Would recommend
+              `
+          },
+          date: { text: 'April | 2022' }
         },
 
         {
