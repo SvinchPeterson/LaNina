@@ -5,22 +5,29 @@ export const Contact = {
   proto: Box,
   props: {
     padding: 'B W D W',
-    flexAlign: 'flex-start space-between',
-    minWidth: '85%'
+    minWidth: '85%',
+    '@tabletL': {
+      flexFlow: 'column'
+    }
   },
   style: {
     margin: '0 auto',
     marginTop: `${50 / 16}em`
-    // border: '5px solid red'
   },
   content: {
     proto: Box,
     props: {
       flexAlign: 'flex-start space-between',
-      gap: '0',
       color: 'black .9',
-      // maxWidth: 'G',
-      width: '100%'
+      width: '100%',
+      '@tabletL': {
+        flexFlow: 'column',
+        flexAlign: 'flex-start flex-start',
+        gap: 'A'
+      },
+      '@mobileM': {
+        gap: 'C'
+      }
     },
     style: {
       letterSpacing: '.9px',
@@ -31,7 +38,11 @@ export const Contact = {
       props: {
         flexAlign: 'center flex-start',
         gap: 'Z2',
-        fontSize: '13px'
+        fontSize: '13px',
+        '@mobileM': {
+          flexFlow: 'column',
+          flexAlign: 'flex-start flex-start'
+        }
       },
       ...[
         {
@@ -50,7 +61,10 @@ export const Contact = {
               width: '2.5px',
               height: '2.5px',
               background: 'rgba(0, 0, 0, .85)',
-              borderRadius: '100%'
+              borderRadius: '100%',
+              '@media only screen and (max-width: 560px)': {
+                display: 'none'
+              }
 
             }
           }
@@ -64,9 +78,18 @@ export const Contact = {
       props: {
         flexAlign: 'center flex-start',
         gap: 'Z2',
-        fontSize: '13px'
+        fontSize: '13px',
+        '@mobileM': {
+          flexFlow: 'column',
+          flexAlign: 'flex-start flex-start'
+        }
       },
-      style: { marginLeft: 'auto' },
+      style: {
+        marginLeft: 'auto',
+        '@media only screen and (max-width: 1366px)': {
+          marginLeft: '0'
+        }
+      },
       ...[
         {
           proto: Box,
@@ -85,8 +108,10 @@ export const Contact = {
               width: '2.5px',
               height: '2.5px',
               background: 'rgba(0, 0, 0, .85)',
-              borderRadius: '100%'
-
+              borderRadius: '100%',
+              '@media only screen and (max-width: 560px)': {
+                display: 'none'
+              }
             }
           }
         },

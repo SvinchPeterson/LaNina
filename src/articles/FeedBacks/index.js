@@ -70,7 +70,7 @@ const feedBackParagraph = {
       lineHeight: `${22 / 14.3}em`,
       maxwidth: `${590 / 14.3}em`,
       '@media only screen and (max-width: 560px)': {
-        fontSize: `${13 / 16}em`
+        fontSize: `${13.5 / 16}em`
       }
     }
   },
@@ -85,7 +85,11 @@ const feedBackParagraph = {
       position: 'absolute',
       right: 'D2',
       bottom: 'C',
-      color: 'black .55'
+      color: 'black .55',
+      '@mobileM': {
+        right: 'B2',
+        bottom: 'B'
+      }
     },
     style: {
       fontWeight: '500',
@@ -197,7 +201,7 @@ export const feedBacks = {
     maxWidth: '1440px',
     minHeight: 'H',
     padding: '0 E',
-    '@tabletL': { padding: '0 F1' },
+    // '@tabletL': { padding: '0 H' },
     '@tabletM': { padding: '0 D' },
     '@mobileM': { padding: '0 Z' }
   },
@@ -212,6 +216,9 @@ export const feedBacks = {
     '@media only screen and (max-width: 1366px)': {
       marginLeft: '0',
       marginRight: '0'
+    },
+    '@media only screen and (max-width: 560px)': {
+      marginTop: `${150 / 16}em`
     }
   },
 

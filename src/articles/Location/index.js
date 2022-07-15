@@ -14,9 +14,9 @@ const map = {
     display: 'block',
     minWidth: '100%',
     position: 'relative',
-    round: 'Y2',
-    '@tabletL': { minWidth: '80%' },
-    '@mobileL': { minWidth: '100%' }
+    round: 'Y2'
+    // '@tabletL': { minWidth: '80%' },
+    // '@mobileL': { minWidth: '100%' }
   },
   style: {
     flex: 1,
@@ -24,7 +24,11 @@ const map = {
     margin: '0 auto',
     boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .1)',
     // padding: '100px',
-    minHeight: '500px'
+    minHeight: `${500 / 16}em`,
+    '@media only screen and (max-width: 560px)': {
+      minHeight: `${300 / 16}em`,
+      marginTop: `${50 / 16}em`
+    }
   }
 }
 
@@ -59,7 +63,14 @@ export default {
       minWidth: '60%',
       margin: '0 0 0 0',
       padding: 'B 0 0 0',
-      position: 'relative'
+      position: 'relative',
+      '@tabletL': {
+        minWidth: '85%',
+        padding: 'D 0 E1 0'
+      },
+      '@mobileM': {
+        padding: 'D 0 C 0'
+      }
     },
     style: {
       // borderTop: '.8px solid rgba(0, 0, 0, .65)',
