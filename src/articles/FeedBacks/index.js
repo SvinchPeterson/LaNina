@@ -20,8 +20,12 @@ const feedBackParagraph = {
     '@tabletL': {
       minWidth: '100%'
     },
-    '@mobileM': {
-      padding: 'C A B A'
+    '@mobileL': {
+      padding: 'C2 A B1 A',
+      maxHeight: 'G'
+    },
+    '@mobileS': {
+      maxHeight: 'G1'
     }
 
     // '@mobileM': {
@@ -34,7 +38,11 @@ const feedBackParagraph = {
     boxSizing: 'border-box',
     background: 'linear-gradient(rgba(0, 0, 0, .03), rgba(0, 0, 0, .035))',
     height: '500px',
-    maxWidth: 'fit-content'
+    maxWidth: 'fit-content',
+    '@media only screen and (max-height: 600px)': {
+      maxHeight: '250px',
+      padding: '15px 0 15px 0'
+    }
     // border: '5px solid red'
   },
   name: {
@@ -50,7 +58,10 @@ const feedBackParagraph = {
     style: {
       textTransform: 'uppercase',
       letterSpacing: '1.5px',
-      fontSize: `${12.5 / 16}em`
+      fontSize: `${12.5 / 16}em`,
+      '@media only screen and (max-height: 600px)': {
+        padding: '0 0 10px 22px'
+      }
     }
   },
 
@@ -88,14 +99,17 @@ const feedBackParagraph = {
       color: 'black .55',
       '@mobileM': {
         right: 'B2',
-        bottom: 'B'
+        bottom: 'C2'
       }
     },
     style: {
       fontWeight: '500',
       alignSelf: 'flex-end',
       wordSpacing: '3px',
-      fontSize: `${14 / 16}em`
+      fontSize: `${14 / 16}em`,
+      '@media only screen and (max-height: 600px)': {
+        bottom: '15px'
+      }
     }
   }
 }
@@ -110,8 +124,7 @@ const navArrows = {
     proto: Box,
     tag: 'button',
     props: {
-      // boxSize: ' A',
-      // boxSize: 'B1 B1'
+      padding: 'Y1'
     },
     style: {
       cursor: 'pointer',
@@ -166,15 +179,12 @@ const heading = {
   proto: Box,
   props: {
     flexAlign: 'center space-between',
-    width: '100%',
-    padding: '0',
-    '@mobileM': {
-      padding: '0 B'
-    }
+    width: '85%'
   },
   style: {
     zIndex: '20',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    margin: '0 auto'
   },
   title: {
     proto: Box,
@@ -200,23 +210,30 @@ export const feedBacks = {
   props: {
     maxWidth: '1440px',
     minHeight: 'H',
-    padding: '0 E',
-    // '@tabletL': { padding: '0 H' },
-    '@tabletM': { padding: '0 D' },
-    '@mobileM': { padding: '0 Z' }
+    padding: '0 F',
+    '@tabletL': {
+      maxWidth: '75%',
+      padding: '0 D'
+    },
+    '@tabletM': {
+      maxWidth: '100%'
+    },
+    '@mobileM': {
+      padding: '0 A'
+    }
   },
 
   style: {
-    // border: '3px solid red',
+    // border: '2px solid red',
     overflowX: 'hidden',
     margin: '0 auto',
     boxSizing: 'border-box',
     marginTop: `${300 / 16}em`,
     marginBottom: `${300 / 16}em`,
-    '@media only screen and (max-width: 1366px)': {
-      marginLeft: '0',
-      marginRight: '0'
-    },
+    // '@media only screen and (max-width: 1366px)': {
+    //   marginLeft: '0',
+    //   marginRight: '0'
+    // },
     '@media only screen and (max-width: 560px)': {
       marginTop: `${150 / 16}em`
     }
@@ -227,11 +244,13 @@ export const feedBacks = {
     proto: Box,
     props: {
       position: 'relative',
-      margin: 'C2 0 0 0',
-      '@tabletL': { margin: 'B 0 0 0' }
-
+      width: '85%'
     },
     style: {
+      // border: '3px solid green',
+      margin: '0 auto',
+      marginTop: `${50 / 16}em`,
+      '@media only screen and (max-width: 560px)': { marginTop: `${30 / 16}em` },
       '&:after': {
         content: '""',
         width: '0px',
@@ -240,10 +259,10 @@ export const feedBacks = {
         right: '0px',
         top: 0,
         background: 'rgba(248, 241, 227, .5)',
-        boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .95)'
-        // '@media only screen and (max-width: 1366px)': {
-        //   boxShadow: '0px 0px 80px 60px rgba(248, 241, 227, 1)',
-        // }
+        boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .87)',
+        '@media only screen and (max-width: 560px)': {
+          boxShadow: '0px 0px 20px 20px rgba(248, 241, 227, 1)'
+        }
       },
       '&:before': {
         content: '""',
@@ -253,7 +272,10 @@ export const feedBacks = {
         position: 'absolute',
         left: '0',
         top: 0,
-        boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .95)',
+        boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .87)',
+        '@media only screen and (max-width: 560px)': {
+          boxShadow: '0px 0px 20px 20px rgba(248, 241, 227, 1)'
+        },
         background: 'rgba(248, 241, 227, .5)',
         zIndex: 3
       }
@@ -268,7 +290,7 @@ export const feedBacks = {
       style: {
         scrollBehavior: 'smooth',
         overflowX: 'auto',
-        maxWidth: '100%',
+        minWidth: '100%',
         alignSelf: 'center',
         '&::-webkit-scrollbar': { display: 'none' }
       },
