@@ -164,8 +164,8 @@ const heading = {
     flexAlign: 'center space-between',
     width: '100%',
     padding: '0',
-    '@tabletL': {
-      padding: '0'
+    '@mobileM': {
+      padding: '0 B'
     }
   },
   style: {
@@ -220,7 +220,8 @@ export const feedBacks = {
     proto: Box,
     props: {
       position: 'relative',
-      margin: 'C2 0 0 0'
+      margin: 'C2 0 0 0',
+      '@tabletL': { margin: 'B 0 0 0' }
 
     },
     style: {

@@ -119,8 +119,7 @@ const roomsTabs = {
     props: {
       flexAlign: 'center flex-start',
       gap: 'B',
-      width: '100%',
-      padding: 'B2 0 0 0'
+      width: '100%'
     },
     style: {
       // border: '5px solid orange',
@@ -157,10 +156,11 @@ export default {
   props: {
     flexFlow: 'column',
     position: 'relative',
-    padding: `F2 0 G 0`,
+    padding: `G1 0`,
     margin: '0 0 G 0',
     '@mobileM': {
-      padding: `D1 0 G 0`,
+      padding: `F 0 G 0`,
+      // padding: `D1 0 G 0`,
       margin: '0 0 E 0'
     }
   },
@@ -173,6 +173,9 @@ export default {
     backgroundAttachment: 'fixed',
     '@media only screen and (max-width: 1366px)': {
       backgroundImage: 'none'
+    },
+    '@media only screen and (max-height: 670px)': {
+      paddingTop: `${130 / 16}em`
     },
     '&:before': {
       content: '""',
