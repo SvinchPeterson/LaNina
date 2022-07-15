@@ -57,8 +57,11 @@ const texts = {
     letterSpacing: '.7px',
     wordSpacing: '3px',
     fontSize: '13.5px',
+    '> div': {
+      lineHeight: '25px'
+    },
     '@media media only screen and (max-width: 480px)': {
-      fontSize: '12.7px',
+      fontSize: '12.5px',
       textAlign: 'left'
     }
   },

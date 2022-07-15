@@ -156,7 +156,7 @@ export default {
   props: {
     flexFlow: 'column',
     position: 'relative',
-    padding: `G1 0`,
+    padding: `G 0`,
     margin: '0 0 G 0',
     '@mobileM': {
       padding: `F 0 G 0`,
