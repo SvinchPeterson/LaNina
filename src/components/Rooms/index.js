@@ -63,7 +63,11 @@ const back = {
     href: '#apartments',
     color: 'cream2',
     flexAlign: 'center center',
-    padding: 'Z'
+    padding: 'Z',
+    '@tabletL': {
+      left: '10%',
+      top: ''
+    }
   },
   style: {
     textDecoration: 'none',
@@ -116,7 +120,13 @@ const Room = {
         height: `${600 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
-        paddingTop: `${130 / 16}em`
+        paddingTop: `${120 / 16}em`,
+        '@media only screen and (max-width: 1366px)': {
+          height: `${500 / 16}em`
+        },
+        '@media only screen and (max-width: 1225px)': {
+          // height: `${400 / 16}em`
+        }
       }
 
       : {
@@ -126,17 +136,31 @@ const Room = {
         '> aside': { display: 'none' }
       }
   },
-
+  // style: { border: '5px solid purple' },
   gallery: {},
   RoomOffers,
   navButton: {
-    proto: navButtons,
-    props: { '@tabletL': { display: 'none' } }
+    proto: navButtons
+    // props: { '@tabletL': { display: 'none' } }
   },
   navButton2: {
     proto: navButtons2,
     props: {
-      width: '120%'
+
+    },
+    style: {
+      display: 'none',
+      '@media only screen and (max-width: 1366px)': {
+        // display: 'flex',
+        top: '60%',
+        width: '115%',
+        '> button': {
+          // background: 'rgba(60, 84, 72, .95)',
+          '&:first-child': {
+            // marginLeft: '-50px'
+          }
+        }
+      }
     },
 
     ...[

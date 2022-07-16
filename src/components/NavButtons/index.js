@@ -113,7 +113,7 @@ export const navButtons2 = {
   },
   style: {
     width: '100%',
-    display: 'none',
+    // display: 'none',
     zIndex: '200',
     transform: 'translate(-50%, -50%)'
   },
@@ -132,7 +132,7 @@ export const navButtons2 = {
     },
     image: {
       proto: [Img, Box],
-      props: { boxSize: 'A1' }
+      props: { boxSize: 'A ' }
     }
   },
   ...[
@@ -141,8 +141,8 @@ export const navButtons2 = {
       style: {
         borderTopRightRadius: `${80 / 16}em`,
         borderBottomRightRadius: `${80 / 16}em`,
-        border: 'none',
-        borderRight: '1px solid rgba(245, 245, 245, .25)'
+        border: 'none'
+        // borderRight: '1px solid rgba(245, 245, 245, .25)'
       },
       image: {
         proto: [Img, Box],
@@ -155,8 +155,8 @@ export const navButtons2 = {
       style: {
         borderTopLeftRadius: `${80 / 16}em`,
         borderBottomLeftRadius: `${80 / 16}em`,
-        border: 'none',
-        borderLeft: '1px solid rgba(245, 245, 245, .25)'
+        border: 'none'
+        // borderLeft: '1px solid rgba(245, 245, 245, .25)'
       },
       image: {
         proto: [Img, Box],

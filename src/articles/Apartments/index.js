@@ -25,6 +25,7 @@ const roomsTabs = {
     }
   },
   style: {
+    // border: '5px solid blue'
     // overflow: 'hidden'
     // border: '10px solid red'
   },
@@ -65,19 +66,21 @@ const roomsTabs = {
     proto: navButtons2,
     props: {
       '@mobileM': {
-        bottom: '-50px',
+        bottom: '-100px',
         maxWidth: '85px'
       }
     },
 
     style: {
+      display: 'none',
       '@media only screen and (max-width: 1366px)': {
         display: 'flex',
-        zIndex: '10'
+        zIndex: '10',
+        width: '85%'
       },
       '@media only screen and (max-width: 560px)': {
         '> button': {
-          border: 'none',
+          // border: 'none',
           opacity: '.75'
         }
       }
@@ -141,6 +144,7 @@ const rooms = {
     round: 'B',
     minheight: '100%'
   },
+  // style: { border: '5px solid blue' },
 
   ...[
     roomBallerina,
@@ -158,6 +162,7 @@ export default {
     position: 'relative',
     padding: `G 0`,
     margin: '0 0 G 0',
+    '@tabletL': { padding: 'F1 0 G 0' },
     '@mobileM': {
       padding: `F 0 G 0`,
       // padding: `D1 0 G 0`,
@@ -165,6 +170,7 @@ export default {
     }
   },
   style: {
+    // border: '5px solid red',
     scrollBehavior: 'smooth',
     backgroundImage: 'url(' + ORNAMENT_PNG + ')',
     backgroundSize: 'contain',
@@ -187,7 +193,8 @@ export default {
       background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
       backgroundAttachment: 'fixed',
       '@media only screen and (max-width: 1366px)': {
-        background: 'radial-gradient(rgba(60, 84, 72, .9), rgba(60, 84, 72, .95))'
+        backgroundAttachment: 'initial',
+        background: 'rgba(60, 84, 72, .95)'
       }
 
     }

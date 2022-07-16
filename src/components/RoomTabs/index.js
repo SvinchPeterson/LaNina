@@ -124,9 +124,18 @@ export const RoomTab = {
       element.parent.parent.parent.rooms.update({
         style: {
           minHeight: `${500 / 16}em`,
-
           opacity: 1,
-          padding: `0 ${200 / 16}em`
+          padding: `0 ${200 / 16}em`,
+          '@media only screen and (max-width: 1366px)': {
+            padding: `0 ${150 / 16}em`
+          },
+          '@media only screen and (max-width: 1225px)': {
+            padding: `0 ${100 / 16}em`
+          },
+          '@media only screen and (max-width: 650px)': {
+            padding: `0`
+          }
+
         }
       })
     }

@@ -59,12 +59,17 @@ const offers = {
     height: '0',
     padding: '0 C2 0 C2',
     columns: 'repeat(2, 1fr)',
-    columnGap: '0',
-    rowGap: '0'
+    columnGap: 'C',
+    rowGap: '0',
+    '@tabletL': {
+      columns: 'repeat(1, 1fr)',
+      rowGap: '10px'
+    }
   },
   style: {
     letterSpacing: '1px',
     transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out'
+    // '@media only screen and (max-width: 1366px)': { overflowY: 'hidden' }
   },
   class: {
     show: (element, state) => state.offers
@@ -82,7 +87,8 @@ const offers = {
         paddingBottom: `${0 / 16}em`,
         '> span': {
           height: 0,
-          opacity: '0'
+          opacity: '0',
+          transition: 'height .4s linear, opacity .3s linear 0s'
         }
       }
   },
@@ -127,24 +133,30 @@ export const RoomOffers = {
   proto: Box,
   props: {
     minWidth: 'G1',
-    background: 'green2 1',
     position: 'absolute',
-    left: '8%',
+    // left: '8%',
     bottom: '-F',
     flexFlow: 'column',
-    round: 'Z'
+    round: 'Z',
+    '@tabletL': {
+      // bottom: '-F',
+      left: '-E'
+    }
   },
   style: {
     transition: 'all 1s ease-in-out',
     backdropFilter: 'blur(5px)',
     zIndex: '70',
-    transform: 'translate(50%, 50%)'
+    transform: 'translate(50%, 50%)',
+    overflow: 'hidden'
   },
 
   class: {
     show: (element, state) => state.offers
       ? {
-        paddingBottom: `${40 / 16}em`, marginBottom: '100px'
+        paddingBottom: `${40 / 16}em`,
+        marginBottom: '100px',
+        background: 'rgba(60,84, 72, .7)'
       }
       : {}
   },
