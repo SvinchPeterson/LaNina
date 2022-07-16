@@ -194,7 +194,7 @@ export default {
       backgroundAttachment: 'fixed',
       '@media only screen and (max-width: 1366px)': {
         backgroundAttachment: 'initial',
-        background: 'rgba(60, 84, 72, .95)'
+        background: 'rgba(60, 84, 72, 1)'
       }
 
     }

@@ -120,12 +120,10 @@ const Room = {
         height: `${600 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
-        paddingTop: `${120 / 16}em`,
+        paddingTop: `${125 / 16}em`,
         '@media only screen and (max-width: 1366px)': {
-          height: `${500 / 16}em`
-        },
-        '@media only screen and (max-width: 1225px)': {
-          // height: `${400 / 16}em`
+          height: `${500 / 16}em`,
+          display: 'block'
         }
       }
 
@@ -133,7 +131,10 @@ const Room = {
         height: 0,
         opacity: 0,
         button: { opacity: 0 },
-        '> aside': { display: 'none' }
+        '> aside': { display: 'none' },
+        '@media only screen and (max-width: 1366px)': {
+          display: 'none'
+        }
       }
   },
   // style: { border: '5px solid purple' },

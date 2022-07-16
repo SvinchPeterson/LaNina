@@ -6,7 +6,8 @@ const header = {
   proto: Box,
   props: {
     flexAlign: 'center space-between',
-    padding: 'B B B B'
+    padding: 'A B A B',
+    position: 'relative'
   },
   style: {
     textTransform: 'uppercase',
@@ -22,7 +23,18 @@ const header = {
       fontSize: 'Z',
       fontWeight: '900'
     },
-    style: { letterSpacing: '1px' }
+    style: {
+      letterSpacing: '1px',
+      cursor: 'pointer'
+    },
+
+    on: {
+      click: (event, element, state) => {
+        state.offers
+          ? state.update({ offers: false })
+          : state.update({ offers: true })
+      }
+    }
   },
 
   minimize: {
@@ -54,78 +66,128 @@ const header = {
 }
 
 const offers = {
-  proto: [Grid, Box],
-  props: {
-    height: '0',
-    padding: '0 C2 0 C2',
-    columns: 'repeat(2, 1fr)',
-    columnGap: 'C',
-    rowGap: '0',
-    '@tabletL': {
-      columns: 'repeat(1, 1fr)',
-      rowGap: '10px'
+  proto: Box,
+  style: {
+    // border: '5px solid red',
+    position: 'relative',
+    transition: 'all .5s ease-in-out',
+    '&:before': {
+      content: '""',
+      width: '100%',
+      height: '0px',
+      background: 'linear-gradient(rgba(60,84, 72, .7), rgba(60,84, 72, 1))',
+      boxShadow: '0px 0px 40px 15px rgba(60,84, 72, 0)',
+      position: 'absolute',
+      top: '0px',
+      left: 0,
+      zIndex: 100
+    },
+    '&:after': {
+      content: '""',
+      width: '100%',
+      height: '0px',
+      boxShadow: '0px 0px 40px 40px rgba(60,84, 72, 0)',
+      position: 'absolute',
+      bottom: '-1px',
+      left: 0,
+      zIndex: 100
     }
   },
-  style: {
-    letterSpacing: '1px',
-    transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out'
-    // '@media only screen and (max-width: 1366px)': { overflowY: 'hidden' }
-  },
+
   class: {
     show: (element, state) => state.offers
 
       ? {
-        minHeight: `${200 / 16}em`,
-        '> span': {
-          opacity: 1,
-          transition: 'height .4s linear, opacity .5s linear .4s'
-        }
+        '&:before': { boxShadow: '0px 0px 40px 15px rgba(60,84, 72, 1)' },
+        '&:after': { boxShadow: '0px 0px 40px 40px rgba(60,84, 72, 1)' }
       }
 
       : {
-        minHeight: `${0 / 16}em`,
-        paddingBottom: `${0 / 16}em`,
-        '> span': {
-          height: 0,
-          opacity: '0',
-          transition: 'height .4s linear, opacity .3s linear 0s'
-        }
+
       }
   },
 
-  childProto: {
-    tag: 'span',
-    proto: [Box, Text],
+  content: {
+    proto: [Grid, Box],
     props: {
-      color: 'cream 1',
-      fontSize: 'Y',
-      flexAlign: 'center flex-start'
+      padding: 'A C2 A C2',
+      columns: 'repeat(2, 1fr)',
+      columnGap: 'C',
+      // rowGap: 'Z',
+      height: '0',
+      '@tabletL': {
+        columns: 'repeat(1, 1fr)'
+        // rowGap: '10px'
+      }
     },
     style: {
-      fontWeight: 500,
-      textTransform: 'uppercase'
-    }
-  },
-  ...[
-    { props: { text: 'Wifi' } },
-    { props: { text: 'Open terrace' } },
-    { props: { text: 'Private entrance' } },
-    { props: { text: 'Air conditioning (Portable)' } },
-    { props: { text: 'Heating' } },
-    { props: { text: 'Ironing facilities' } },
-    { props: { text: 'Drying rack' } },
-    { props: { text: 'Mosquito net' } },
-    { props: { text: 'Carbon monoxide alarm' } },
-    { props: { text: 'Smoke alarm' } },
-    { props: { text: 'Vinyl Media Player' } },
-    { props: { text: 'Smart TV' } },
-    { props: { text: 'Bed linens' } },
-    { props: { text: 'Clothing storage' } },
-    { props: { text: 'Hangers' } },
-    { props: { text: 'Extra pillows and blankets' } },
-    { props: { text: 'Robes & Slippers' } },
-    { props: { text: 'Books and journals' } }
-  ]
+      // border: '4px solid red',
+      letterSpacing: '1px',
+      transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out',
+      overflowY: 'auto',
+      position: 'relative',
+      scrollbarWidth: 'none'
+      // '@media only screen and (max-width: 1366px)': { overflowY: 'hidden' }
+    },
+    class: {
+      show: (element, state) => state.offers
+
+        ? {
+          minHeight: `${150 / 16}em`,
+          maxHeight: `${180 / 16}em`,
+          // rowGap: '10px',
+          '> span': {
+            height: '30px',
+            opacity: 1,
+            transition: 'height .4s linear, opacity .5s linear .4s'
+          }
+        }
+
+        : {
+          minHeight: `${0 / 16}em`,
+          paddingBottom: `${0 / 16}em`,
+          '> span': {
+            height: 0,
+            opacity: '0',
+            transition: 'height .4s linear, opacity .3s linear 0s'
+          }
+        }
+    },
+
+    childProto: {
+      tag: 'span',
+      proto: [Box, Text],
+      props: {
+        color: 'cream 1',
+        fontSize: 'Y',
+        flexAlign: 'center flex-start'
+      },
+      style: {
+        fontWeight: 500,
+        textTransform: 'uppercase'
+      }
+    },
+    ...[
+      { props: { text: 'Wifi' } },
+      { props: { text: 'Open terrace' } },
+      { props: { text: 'Private entrance' } },
+      { props: { text: 'Air conditioning (Portable)' } },
+      { props: { text: 'Heating' } },
+      { props: { text: 'Ironing facilities' } },
+      { props: { text: 'Drying rack' } },
+      { props: { text: 'Mosquito net' } },
+      { props: { text: 'Carbon monoxide alarm' } },
+      { props: { text: 'Smoke alarm' } },
+      { props: { text: 'Vinyl Media Player' } },
+      { props: { text: 'Smart TV' } },
+      { props: { text: 'Bed linens' } },
+      { props: { text: 'Clothing storage' } },
+      { props: { text: 'Hangers' } },
+      { props: { text: 'Extra pillows and blankets' } },
+      { props: { text: 'Robes & Slippers' } },
+      { props: { text: 'Books and journals' } }
+    ]
+  }
 }
 
 export const RoomOffers = {
@@ -135,7 +197,7 @@ export const RoomOffers = {
     minWidth: 'G1',
     position: 'absolute',
     // left: '8%',
-    bottom: '-F',
+    bottom: '-F1',
     flexFlow: 'column',
     round: 'Z',
     '@tabletL': {
@@ -145,10 +207,20 @@ export const RoomOffers = {
   },
   style: {
     transition: 'all 1s ease-in-out',
-    backdropFilter: 'blur(5px)',
+    // backdropFilter: 'blur(5px)',
     zIndex: '70',
     transform: 'translate(50%, 50%)',
     overflow: 'hidden'
+    // '&:before': {
+    //   content: '""',
+    //   position: 'absolute',
+    //   width: '100%',
+    //   height: '0',
+    //   bottom: 'D',
+    //   left: '0',
+    //   boxShadow: '0px -10px 70px 20px red',
+    //   zIndex: '30'
+    // }
   },
 
   class: {
@@ -156,7 +228,7 @@ export const RoomOffers = {
       ? {
         paddingBottom: `${40 / 16}em`,
         marginBottom: '100px',
-        background: 'rgba(60,84, 72, .7)'
+        background: 'rgba(60,84, 72, 1)'
       }
       : {}
   },
