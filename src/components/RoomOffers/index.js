@@ -85,7 +85,8 @@ const offers = {
       position: 'absolute',
       top: '0px',
       left: 0,
-      zIndex: 100
+      zIndex: 100,
+      transition: 'all 1s ease-in-out'
     },
     '&:after': {
       content: '""',
@@ -95,7 +96,8 @@ const offers = {
       position: 'absolute',
       bottom: '-1px',
       left: 0,
-      zIndex: 100
+      zIndex: 100,
+      transition: 'all 1s ease-in-out'
     }
   },
 
@@ -115,7 +117,7 @@ const offers = {
   content: {
     proto: [Grid, Box],
     props: {
-      padding: 'A C2 A C2',
+      padding: 'A1 C2 A C2',
       columns: 'repeat(2, 1fr)',
       columnGap: 'C',
       // rowGap: 'Z',
@@ -207,25 +209,31 @@ export const RoomOffers = {
   props: {
     minWidth: 'G1',
     position: 'absolute',
-    // left: '8%',
-    bottom: '-F',
+    bottom: '-F2',
+    right: 'D',
     flexFlow: 'column',
     round: 'Z',
-    '@tabletL': {
-      bottom: '-F1',
-      left: '-E'
-    },
     '@mobileS': {
-      left: '-D1',
-      minWidth: 'F2'
+      minWidth: 'F2',
+      right: 'C'
     },
-    '@mobileXS': { left: '-D2' }
+    '@mobileXS': {
+      right: 'B'
+    }
   },
   style: {
     transition: 'all 1s ease-in-out',
-    // backdropFilter: 'blur(5px)',
     zIndex: '70',
-    transform: 'translate(50%, 50%)',
+    '@media only screen and (max-height: 650px)': {
+      bottom: '-180px !important'
+    },
+    // borderTopRightRadius: 0,
+    // borderBottompRightRadius: 0,
+
+    '@media only screen and (max-width: 1366px)': {
+      bottom: '-250px'
+    },
+    // transform: 'translate(50%, 50%)',
     overflow: 'hidden'
     // '&:before': {
     //   content: '""',

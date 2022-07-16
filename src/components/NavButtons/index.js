@@ -137,7 +137,7 @@ export const navButtons2 = {
   },
   ...[
     {
-      props: { padding: 'C2 C C2 A1' },
+      props: { padding: 'B1 B B1 Z1' },
       style: {
         borderTopRightRadius: `${80 / 16}em`,
         borderBottomRightRadius: `${80 / 16}em`,
@@ -151,7 +151,7 @@ export const navButtons2 = {
     },
 
     {
-      props: { padding: 'C2 A1 C2 C' },
+      props: { padding: 'B1 Z1 B1 B' },
       style: {
         borderTopLeftRadius: `${80 / 16}em`,
         borderBottomLeftRadius: `${80 / 16}em`,

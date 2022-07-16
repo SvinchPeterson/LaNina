@@ -18,8 +18,7 @@ const book = {
     padding: 'Z A',
     fontSize: 'Z',
     '@mobileL': {
-      left: '',
-      right: 'A2',
+      left: 'A2',
       bottom: '-E'
     }
   },
@@ -35,6 +34,9 @@ const book = {
       writingMode: 'vertical-rl',
       bottom: '0',
       left: '-50px'
+    },
+    '@media only screen and (max-height: 650px)': {
+      bottom: '-50px'
     },
     '&:hover > span': { opacity: 1 }
   },
@@ -71,20 +73,24 @@ const back = {
     gap: 'Z',
     position: 'absolute',
     top: 'D1',
-    left: '0',
+    left: 'D',
     href: '#apartments',
     color: 'cream2',
     flexAlign: 'center center',
     padding: 'Z',
     '@tabletL': {
-      left: '10%',
-      top: 'D2'
+      top: 'E'
     }
   },
   style: {
     textDecoration: 'none',
     '&:hover > span': { opacity: '1' },
-    '&:hover > img': { opacity: '1' }
+    '&:hover > img': { opacity: '1' },
+    '@media only screen and (max-height: 650px)': {
+      top: '50px',
+      left: '120px',
+      '> span': { opacity: 1 }
+    }
   },
   class: {
     show: (element, state) => state.activeTab
@@ -98,7 +104,7 @@ const back = {
   icon: {
     proto: [Img, Box],
     props: {
-      boxSize: 'A2',
+      boxSize: 'A1 ',
       src: BACK_PNG
     },
     style: {
@@ -139,6 +145,9 @@ const Room = {
           height: `${500 / 16}em`,
           display: 'block'
         },
+        '@media only screen and (max-height: 650px)': {
+          paddingTop: `${90 / 16}em`
+        },
         '@media only screen and (max-width: 560px)': {
           height: `${350 / 16}em`
         },
@@ -158,7 +167,6 @@ const Room = {
         }
       }
   },
-  // style: { border: '5px solid purple' },
   gallery: {},
   RoomOffers,
   navButton: {
@@ -185,7 +193,9 @@ const Room = {
       },
       '@media only screen and (max-width: 560px)': {
         top: '85%'
-
+      },
+      '@media only screen and (max-height: 650px)': {
+        top: '70%'
       }
     },
 
