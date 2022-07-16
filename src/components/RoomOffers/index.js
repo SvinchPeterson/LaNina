@@ -75,7 +75,6 @@ const offers = {
       content: '""',
       width: '100%',
       height: '0px',
-      background: 'linear-gradient(rgba(60,84, 72, .7), rgba(60,84, 72, 1))',
       boxShadow: '0px 0px 40px 15px rgba(60,84, 72, 0)',
       position: 'absolute',
       top: '0px',
@@ -98,7 +97,7 @@ const offers = {
     show: (element, state) => state.offers
 
       ? {
-        '&:before': { boxShadow: '0px 0px 40px 15px rgba(60,84, 72, 1)' },
+        '&:before': { boxShadow: '0px 0px 40px 15px rgba(60,84, 72, .85)' },
         '&:after': { boxShadow: '0px 0px 40px 40px rgba(60,84, 72, 1)' }
       }
 
@@ -160,7 +159,8 @@ const offers = {
       props: {
         color: 'cream 1',
         fontSize: 'Y',
-        flexAlign: 'center flex-start'
+        flexAlign: 'center flex-start',
+        '@tabletL': { fontSize: 'Z' }
       },
       style: {
         fontWeight: 500,
