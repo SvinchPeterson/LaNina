@@ -86,7 +86,7 @@ export const HeaderMobile = {
     width: '100%',
     '@mobileL': { display: 'flex' },
     '@mobileM': { padding: 'B2 C 0 C' },
-    '@mobileS': { padding: 'B2 B 0 B' }
+    '@mobileS': { padding: 'B A1 0 A1' }
   },
   style: {
     zIndex: 500,

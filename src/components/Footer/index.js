@@ -69,7 +69,7 @@ export const Footer = {
     flexAlign: 'flex-start space-between',
     padding: '0 D2 C1 D2',
     '@mobileM': { padding: '0 C B1 C' },
-    '@mobileS': { padding: '0 B1 B1 B1' }
+    '@mobileS': { padding: '0 A1 A1 A1' }
   },
   style: {
     zIndex: '50',

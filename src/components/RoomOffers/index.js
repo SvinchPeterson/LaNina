@@ -7,7 +7,10 @@ const header = {
   props: {
     flexAlign: 'center space-between',
     padding: 'A B A B',
-    position: 'relative'
+    position: 'relative',
+    '@mobileS': {
+      padding: 'A A A A'
+    }
   },
   style: {
     textTransform: 'uppercase',
@@ -21,7 +24,10 @@ const header = {
       text: 'amenities',
       color: 'cream2 .75',
       fontSize: 'Z',
-      fontWeight: '900'
+      fontWeight: '900',
+      '@mobileS': {
+        fontSize: 'Y'
+      }
     },
     style: {
       letterSpacing: '1px',
@@ -115,8 +121,12 @@ const offers = {
       // rowGap: 'Z',
       height: '0',
       '@tabletL': {
-        columns: 'repeat(1, 1fr)'
+        columns: 'repeat(1, 1fr)',
+        columnGap: '0'
         // rowGap: '10px'
+      },
+      '@mobileS': {
+        padding: 'A B1 A B1'
       }
     },
     style: {
@@ -160,7 +170,8 @@ const offers = {
         color: 'cream 1',
         fontSize: 'Y',
         flexAlign: 'center flex-start',
-        '@tabletL': { fontSize: 'Z' }
+        '@tabletL': { fontSize: 'Z' },
+        '@mobileS': { fontSize: 'Y' }
       },
       style: {
         fontWeight: 500,
@@ -197,13 +208,18 @@ export const RoomOffers = {
     minWidth: 'G1',
     position: 'absolute',
     // left: '8%',
-    bottom: '-F1',
+    bottom: '-F',
     flexFlow: 'column',
     round: 'Z',
     '@tabletL': {
-      // bottom: '-F',
+      bottom: '-F1',
       left: '-E'
-    }
+    },
+    '@mobileS': {
+      left: '-D1',
+      minWidth: 'F2'
+    },
+    '@mobileXS': { left: '-D2' }
   },
   style: {
     transition: 'all 1s ease-in-out',
@@ -228,7 +244,8 @@ export const RoomOffers = {
       ? {
         paddingBottom: `${40 / 16}em`,
         marginBottom: '100px',
-        background: 'rgba(60,84, 72, 1)'
+        background: 'rgba(60,84, 72, 1)',
+        '@media only screen and (max-width: 480px)': { marginBottom: '0' }
       }
       : {}
   },

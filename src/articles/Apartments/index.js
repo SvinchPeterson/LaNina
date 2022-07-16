@@ -66,7 +66,7 @@ const roomsTabs = {
     proto: navButtons2,
     props: {
       '@mobileM': {
-        bottom: '-100px',
+        bottom: '-50px',
         maxWidth: '85px'
       }
     },

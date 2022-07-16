@@ -24,6 +24,9 @@ export const image = {
     transition: 'height .7s ease-in-out, opacity .7s ease-in-out, background-position 3s ease-in-out',
     '@media only screen and (max-width: 1366px)': {
       backgroundAttachment: 'initial'
+    },
+    '@media only screen and (max-width: 768px)': {
+      borderRadius: '0'
     }
   },
 

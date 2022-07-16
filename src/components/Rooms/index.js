@@ -17,8 +17,11 @@ const book = {
     position: 'absolute',
     padding: 'Z A',
     fontSize: 'Z',
-    bottom: '0',
-    left: '-D'
+    '@mobileL': {
+      left: '',
+      right: 'A2',
+      bottom: '-E'
+    }
   },
   attr: { target: '_blank' },
   style: {
@@ -26,8 +29,13 @@ const book = {
     fontWeight: 900,
     zIndex: '30',
     textDecoration: 'none',
-    textOrientation: 'upright',
-    writingMode: 'vertical-rl',
+    width: 'fit-content',
+    '@media only screen and (min-width: 768px)': {
+      textOrientation: 'upright',
+      writingMode: 'vertical-rl',
+      bottom: '0',
+      left: '-50px'
+    },
     '&:hover > span': { opacity: 1 }
   },
   class: {
@@ -46,7 +54,11 @@ const book = {
     },
     style: {
       opacity: '.7',
-      transition: 'opacity .1s ease-in-out'
+      transition: 'opacity .1s ease-in-out',
+      '@media only screen and (max-width: 768px)': {
+        opacity: 1
+      }
+
     }
   }
 }
@@ -58,7 +70,7 @@ const back = {
     // flexFlow: 'column',
     gap: 'Z',
     position: 'absolute',
-    top: 'D2',
+    top: 'D1',
     left: '0',
     href: '#apartments',
     color: 'cream2',
@@ -66,7 +78,7 @@ const back = {
     padding: 'Z',
     '@tabletL': {
       left: '10%',
-      top: ''
+      top: 'D2'
     }
   },
   style: {
@@ -120,11 +132,18 @@ const Room = {
         height: `${600 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
-        paddingTop: `${140 / 16}em`,
-        marginTop: `${125 / 16}em`,
+        paddingTop: `${120 / 16}em`,
         '@media only screen and (max-width: 1366px)': {
+          marginTop: `${125 / 16}em`,
+          paddingTop: `${145 / 16}em`,
           height: `${500 / 16}em`,
           display: 'block'
+        },
+        '@media only screen and (max-width: 560px)': {
+          height: `${350 / 16}em`
+        },
+        '@media only screen and (max-width: 350px)': {
+          height: `${300 / 16}em`
         }
       }
 
@@ -143,26 +162,30 @@ const Room = {
   gallery: {},
   RoomOffers,
   navButton: {
-    proto: navButtons
-    // props: { '@tabletL': { display: 'none' } }
+    proto: navButtons,
+    props: { '@mobileL': { display: 'none' } }
   },
   navButton2: {
     proto: navButtons2,
-    props: {
-
-    },
     style: {
       display: 'none',
-      '@media only screen and (max-width: 1366px)': {
-        // display: 'flex',
-        top: '60%',
-        width: '115%',
+      '@media only screen and (max-width: 768px)': {
+        display: 'flex',
+        top: '70%',
+        // width: '101%',
         '> button': {
-          // background: 'rgba(60, 84, 72, .95)',
+          background: 'rgba(60, 84, 72, .95)',
           '&:first-child': {
-            // marginLeft: '-50px'
+            marginLeft: '-2px'
+          },
+          '&:last-child': {
+            marginRight: '-2px'
           }
         }
+      },
+      '@media only screen and (max-width: 560px)': {
+        top: '85%'
+
       }
     },
 
