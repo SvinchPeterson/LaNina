@@ -117,7 +117,7 @@ const offers = {
   content: {
     proto: [Grid, Box],
     props: {
-      padding: 'A1 C2 A C2',
+      padding: 'Z1 C2 Z1 C2',
       columns: 'repeat(2, 1fr)',
       columnGap: 'C',
       // rowGap: 'Z',
@@ -128,17 +128,15 @@ const offers = {
         // rowGap: '10px'
       },
       '@mobileS': {
-        padding: 'A B1 A B1'
+        padding: 'Y B1 Z B1'
       }
     },
     style: {
-      // border: '4px solid red',
       letterSpacing: '1px',
       transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out',
       overflowY: 'auto',
       position: 'relative',
       scrollbarWidth: 'none'
-      // '@media only screen and (max-width: 1366px)': { overflowY: 'hidden' }
     },
     class: {
       show: (element, state) => state.offers
