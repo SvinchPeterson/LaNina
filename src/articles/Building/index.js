@@ -26,13 +26,8 @@ const buildingHistory = {
     textAlign: 'justify',
     wordSpacing: '-1px',
     fontSize: `${14.3 / 16}em`,
-    '@media only screen and (max-width: 1366px)': {
-      fontSize: `${16 / 16}em`
-    },
-    '@media only screen and (max-width: 560px)': {
-      fontSize: `${14 / 16}em`
-    },
-    // border: '4px solid blue',
+    '@media only screen and (max-width: 1366px)': { fontSize: `${16 / 16}em` },
+    '@media only screen and (max-width: 560px)': { fontSize: `${14 / 16}em` },
     '> div': { lineHeight: `${23.5 / 14.3}em`, letterSpacing: `${0.8 / 14.3}em` }
   }
 }
@@ -40,8 +35,6 @@ const buildingHistory = {
 export default {
   proto: Box,
   props: {
-    // minHeight: '100%',
-    // height: '100%',
     flexAlign: 'center center',
     padding: '0 0'
   },

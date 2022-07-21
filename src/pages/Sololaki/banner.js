@@ -12,12 +12,12 @@ const heading = {
     right: '20.5%',
     flexFlow: 'column',
     flexAlign: 'flex-end flex-start',
-    height: '100px',
+    height: `${100 / 16}em`,
     '@mobileL': {
       flexAlign: 'center flex-start',
       right: '0',
       left: '50%'
-      // height: '200px'
+
     },
     '@mobileS': {
       top: '40%'
@@ -60,21 +60,17 @@ const heading = {
     props: {
       text: 'sololaki',
       fontSize: 'Z',
-      // color: 'gold .85',
       color: 'cream2 .9',
       position: 'absolute',
-      bottom: '-10px',
+      bottom: `${-10 / 14}em`,
       '@mobileL': {
-        bottom: '-100px',
-        fontSize: `B`
+        fontSize: `B`,
+        bottom: `${-100 / 18}em`
       },
-      '@mobileS': {
-        bottom: '-50px'
-      }
+      '@mobileS': { bottom: `${-50 / 18}em` }
     },
+
     style: {
-      // fontSize: '14px',
-      // width: 'fit-content',
       textTransform: 'uppercase',
       fontWeight: 500,
       overflow: 'hidden',
@@ -82,10 +78,7 @@ const heading = {
       animationName: letterSpacing,
       animationDuration: '6s',
       animationDelay: '.3s',
-      animationTimingFunction: 'ease-in-out',
-      '@media only screen and (max-width: 768px)': {
-        letterSpacing: `10px`
-      }
+      animationTimingFunction: 'ease-in-out'
     }
   }
 }
@@ -107,7 +100,6 @@ const image = {
     animationDelay: '.1s',
     animationDuration: '6s',
     animationTimingFunction: 'ease-in-out',
-    // animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
     backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
     backgroundAttachment: 'fixed',
     '@media only screen and (max-width: 1366px)': {

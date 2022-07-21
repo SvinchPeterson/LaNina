@@ -24,50 +24,13 @@ const roomsTabs = {
       padding: '0 5%'
     }
   },
-  style: {
-    // border: '5px solid blue'
-    // overflow: 'hidden'
-    // border: '10px solid red'
-  },
-
-  // buttons: {
-  //   proto: navButtons2,
-  //   props: {
-  //     width: '95%'
-  //   },
-  //   ...[
-  //     {
-  //       on: {
-  //         click: (event, element, state) => {
-  //           const { tabsContainer } = element.parent.parent
-  //           tabsContainer.node.scrollBy({
-  //             top: 0,
-  //             left: -tabsContainer.node.clientWidth - 16.5 * 1.618
-  //           })
-  //         }
-  //       }
-  //     },
-  //     {
-  //       on: {
-  //         click: (event, element, state) => {
-  //           const { tabsContainer } = element.parent.parent
-  //           tabsContainer.node.scrollBy({
-  //             top: 0,
-  //             left: tabsContainer.node.clientWidth + 16.5 * 1.618,
-  //             behavior: 'smooth'
-  //           })
-  //         }
-  //       }
-  //     }
-  //   ]
-  // },
 
   buttons: {
     proto: navButtons2,
     props: {
       '@mobileM': {
-        bottom: '-50px',
-        maxWidth: '85px'
+        bottom: `${-50 / 16}em`,
+        maxWidth: `${85 / 16}em`
       }
     },
 
@@ -78,12 +41,7 @@ const roomsTabs = {
         zIndex: '10',
         width: '85%'
       },
-      '@media only screen and (max-width: 560px)': {
-        '> button': {
-          // border: 'none',
-          opacity: '.75'
-        }
-      }
+      '@media only screen and (max-width: 560px)': { '> button': { opacity: '.75' } }
     },
 
     ...[
@@ -124,10 +82,8 @@ const roomsTabs = {
       gap: 'B',
       width: '100%'
     },
-    style: {
-      // border: '5px solid orange',
-      '@media only screen and (max-width: 1366px)': { overflowY: 'auto' }
-    },
+    style: { '@media only screen and (max-width: 1366px)': { overflowY: 'auto' } },
+
     childProto: {
       proto: Box,
       props: {
@@ -144,7 +100,6 @@ const rooms = {
     round: 'B',
     minheight: '100%'
   },
-  // style: { border: '5px solid blue' },
 
   ...[
     roomBallerina,
@@ -165,24 +120,18 @@ export default {
     '@tabletL': { padding: 'F1 0 G 0' },
     '@mobileM': {
       padding: `F 0 G 0`,
-      // padding: `D1 0 G 0`,
       margin: '0 0 E 0'
     }
   },
   style: {
-    // border: '5px solid red',
     scrollBehavior: 'smooth',
     backgroundImage: 'url(' + ORNAMENT_PNG + ')',
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     boxSizing: 'border-box',
     backgroundAttachment: 'fixed',
-    '@media only screen and (max-width: 1366px)': {
-      backgroundImage: 'none'
-    },
-    '@media only screen and (max-height: 670px)': {
-      paddingTop: `${130 / 16}em`
-    },
+    '@media only screen and (max-width: 1366px)': { backgroundImage: 'none' },
+    '@media only screen and (max-height: 670px)': { paddingTop: `${130 / 16}em` },
     '&:before': {
       content: '""',
       width: '100%',

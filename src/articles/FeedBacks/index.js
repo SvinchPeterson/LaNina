@@ -27,23 +27,16 @@ const feedBackParagraph = {
     '@mobileS': {
       maxHeight: 'G1'
     }
-
-    // '@mobileM': {
-    //   minWidth: '100%'
-    // }
-
   },
   style: {
-    // minWidth: `${550 / 16}em`,
     boxSizing: 'border-box',
     background: 'linear-gradient(rgba(0, 0, 0, .03), rgba(0, 0, 0, .035))',
-    height: '500px',
+    height: `${500 / 16}em`,
     maxWidth: 'fit-content',
     '@media only screen and (max-height: 600px)': {
-      maxHeight: '250px',
-      padding: '15px 0 15px 0'
+      maxHeight: `${250 / 16}em`,
+      padding: `${15 / 16}em 0`
     }
-    // border: '5px solid red'
   },
   name: {
     tag: 'caption',
@@ -59,9 +52,7 @@ const feedBackParagraph = {
       textTransform: 'uppercase',
       letterSpacing: '1.5px',
       fontSize: `${12.5 / 16}em`,
-      '@media only screen and (max-height: 600px)': {
-        padding: '0 0 10px 22px'
-      }
+      '@media only screen and (max-height: 600px)': { padding: `0 0 ${10 / 12.5}em ${22 / 12.5}em` }
     }
   },
 
@@ -107,9 +98,7 @@ const feedBackParagraph = {
       alignSelf: 'flex-end',
       wordSpacing: '3px',
       fontSize: `${14 / 16}em`,
-      '@media only screen and (max-height: 600px)': {
-        bottom: '15px'
-      }
+      '@media only screen and (max-height: 600px)': { bottom: `${15 / 14}em` }
     }
   }
 }
@@ -224,19 +213,12 @@ export const feedBacks = {
   },
 
   style: {
-    // border: '2px solid red',
     overflowX: 'hidden',
     margin: '0 auto',
     boxSizing: 'border-box',
     marginTop: `${300 / 16}em`,
     marginBottom: `${300 / 16}em`,
-    // '@media only screen and (max-width: 1366px)': {
-    //   marginLeft: '0',
-    //   marginRight: '0'
-    // },
-    '@media only screen and (max-width: 560px)': {
-      marginTop: `${150 / 16}em`
-    }
+    '@media only screen and (max-width: 560px)': { marginTop: `${150 / 16}em` }
   },
 
   heading: { proto: heading },
@@ -247,7 +229,6 @@ export const feedBacks = {
       width: '85%'
     },
     style: {
-      // border: '3px solid green',
       margin: '0 auto',
       marginTop: `${50 / 16}em`,
       '@media only screen and (max-width: 560px)': { marginTop: `${30 / 16}em` },
@@ -267,7 +248,6 @@ export const feedBacks = {
       '&:before': {
         content: '""',
         width: '0px',
-        // border: '1px solid red',
         height: '100%',
         position: 'absolute',
         left: '0',

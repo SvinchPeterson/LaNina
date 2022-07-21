@@ -38,7 +38,7 @@ export const Contact = {
       props: {
         flexAlign: 'center flex-start',
         gap: 'Z2',
-        fontSize: '13px',
+        fontSize: `${13 / 16}em`,
         '@mobileM': {
           flexFlow: 'column',
           flexAlign: 'flex-start flex-start'
@@ -58,14 +58,11 @@ export const Contact = {
               content: '""',
               position: 'absolute',
               right: '0',
-              width: '2.5px',
-              height: '2.5px',
+              width: `${2.5 / 13}em`,
+              height: `${2.5 / 13}em`,
               background: 'rgba(0, 0, 0, .85)',
               borderRadius: '100%',
-              '@media only screen and (max-width: 560px)': {
-                display: 'none'
-              }
-
+              '@media only screen and (max-width: 560px)': { display: 'none' }
             }
           }
         },
@@ -78,7 +75,7 @@ export const Contact = {
       props: {
         flexAlign: 'center flex-start',
         gap: 'Z2',
-        fontSize: '13px',
+        fontSize: `${13 / 16}em`,
         '@mobileM': {
           flexFlow: 'column',
           flexAlign: 'flex-start flex-start'
@@ -86,9 +83,7 @@ export const Contact = {
       },
       style: {
         marginLeft: 'auto',
-        '@media only screen and (max-width: 1366px)': {
-          marginLeft: '0'
-        }
+        '@media only screen and (max-width: 1366px)': { marginLeft: '0' }
       },
       ...[
         {
@@ -105,13 +100,11 @@ export const Contact = {
               content: '""',
               position: 'absolute',
               right: '0',
-              width: '2.5px',
-              height: '2.5px',
+              width: `${2.5 / 13}em`,
+              height: `${2.5 / 13}em`,
               background: 'rgba(0, 0, 0, .85)',
               borderRadius: '100%',
-              '@media only screen and (max-width: 560px)': {
-                display: 'none'
-              }
+              '@media only screen and (max-width: 560px)': { display: 'none' }
             }
           }
         },
@@ -119,32 +112,6 @@ export const Contact = {
         { text: '995 593 345 158' }
       ]
     }
-    // childProto: {
-    //   proto: Box,
-    //   style: {
-    //     fontWeight: '500',
-    //     textAlign: 'center',
-    //     fontSize: `${13.5 / 16}em`,
-    //     letterSpacing: '.9px'
-    //   },
-    //   ...[
-    //     {},
-    //     {}
-    //   ]
-
-    // },
-    // ...[
-    //   { ...[{ props: { text: 'info@bbhospitality.ge' } }] },
-    //   { ...[{ props: { text: 'reservations@bbhospitality.ge' } }] },
-    //   {
-    //     props: {
-    //       text: '995 322 502 222',
-    //       padding: 'A2 0 0 0'
-    //     }
-    //   },
-    //   { props: { text: '995 593 345 158' } }
-    // ]
-
   }
 
 }

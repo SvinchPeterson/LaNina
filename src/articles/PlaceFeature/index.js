@@ -7,16 +7,10 @@ export const placeFeature = {
   props: {
     margin: 'F2 0',
     flexAlign: 'center center',
-    '@mobileL': {
-      margin: 'E 0 F 0'
-    },
-    '@mobileM': {
-      margin: 'E 0 E 0'
-    }
+    '@mobileL': { margin: 'E 0 F 0' },
+    '@mobileM': { margin: 'E 0 E 0' }
   },
-  style: {
-    width: '100%'
-  },
+  style: { width: '100%' },
   content: {
     proto: [Grid, Box],
     props: {
@@ -25,9 +19,7 @@ export const placeFeature = {
       rowGap: 'A2',
       padding: 'F 0',
       position: 'relative',
-      '@tabletL': {
-        columns: 'repeat(2, 340px)'
-      },
+      '@tabletL': { columns: 'repeat(2, 340px)' },
       '@mobileL': {
         flexFlow: 'column',
         columns: 'repeat(1, 340px)',
@@ -38,9 +30,7 @@ export const placeFeature = {
         columns: 'repeat(1, 300px)',
         maxHeight: `${400 / 16}em`
       },
-      '@mobileXS': {
-        columns: 'repeat(1, 270px)'
-      }
+      '@mobileXS': { columns: 'repeat(1, 270px)' }
     },
     style: {
       width: '100%',

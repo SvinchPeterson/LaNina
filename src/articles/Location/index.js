@@ -21,7 +21,6 @@ const map = {
     border: 'none',
     margin: '0 auto',
     boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .1)',
-    // padding: '100px',
     minHeight: `${500 / 16}em`,
     '@media only screen and (max-width: 560px)': {
       minHeight: `${300 / 16}em`,
@@ -51,28 +50,24 @@ export default {
         minWidth: '85%',
         padding: 'D 0 E1 0'
       },
-      '@mobileM': {
-        padding: 'D 0 C 0'
-      }
+      '@mobileM': { padding: 'D 0 C 0' }
     },
     style: {
       '&:before': {
         content: '"Distance to Tbilisi International airport is 20 km. Central railway station is 11 km away."',
+        fontSize: `${13 / 16}em`,
         position: 'absolute',
-        maxWidth: '350px',
+        maxWidth: `${350 / 13}em`,
         background: 'rgba(248, 241, 227, 1)',
         color: 'rgba(0, 0, 0, .85)',
-        top: '-120px',
-        right: '5px',
+        top: `${-120 / 13}em`,
+        right: `${5 / 13}em`,
         zIndex: '20',
-        fontSize: '13px',
         textAlign: 'right',
         fontWeight: '500',
         letterSpacing: '.7px',
-        lineHeight: '22px',
-        '@media only screen and (max-width: 1366px)': {
-          top: '-50px'
-        }
+        lineHeight: `${22 / 13}em`,
+        '@media only screen and (max-width: 1366px)': { top: `${-50 / 13}em` }
       }
     },
     map,

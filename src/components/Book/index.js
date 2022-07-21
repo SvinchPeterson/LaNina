@@ -11,10 +11,6 @@ export const Book = {
   },
   style: {
     borderTopLeftRadius: '8px',
-    // borderBottomLeftRadius: '20px',
-    // borderRight: '1px solid rgba(245, 245, 245, .5)',
-    // borderBottom: '1px solid rgba(245, 245, 245, .5)',
-
     borderLeft: '1.5px solid rgba(245, 245, 245, .75)',
     borderTop: '1.5px solid rgba(245, 245, 245, .75)',
     textDecoration: 'none',

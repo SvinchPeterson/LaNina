@@ -74,7 +74,6 @@ const header = {
 const offers = {
   proto: Box,
   style: {
-    // border: '5px solid red',
     position: 'relative',
     transition: 'all .5s ease-in-out',
     '&:before': {
@@ -120,12 +119,10 @@ const offers = {
       padding: 'Z1 C2 Z1 C2',
       columns: 'repeat(2, 1fr)',
       columnGap: 'C',
-      // rowGap: 'Z',
       height: '0',
       '@tabletL': {
         columns: 'repeat(1, 1fr)',
         columnGap: '0'
-        // rowGap: '10px'
       },
       '@mobileS': {
         padding: 'Y B1 Z B1'
@@ -144,9 +141,8 @@ const offers = {
         ? {
           minHeight: `${150 / 16}em`,
           maxHeight: `${180 / 16}em`,
-          // rowGap: '10px',
           '> span': {
-            height: '30px',
+            height: `${30 / 16}em`,
             opacity: 1,
             transition: 'height .4s linear, opacity .5s linear .4s'
           }
@@ -215,41 +211,26 @@ export const RoomOffers = {
       minWidth: 'F2',
       right: 'C'
     },
-    '@mobileXS': {
-      right: 'B'
-    }
+    '@mobileXS': { right: 'B' }
   },
   style: {
     transition: 'all 1s ease-in-out',
     zIndex: '70',
     '@media only screen and (max-height: 650px)': {
-      bottom: '-180px !important'
+      bottom: `${-180 / 16}em !important`
     },
-    // borderTopRightRadius: 0,
-    // borderBottompRightRadius: 0,
 
     '@media only screen and (max-width: 1366px)': {
-      bottom: '-250px'
+      bottom: `${-250 / 16}em`
     },
-    // transform: 'translate(50%, 50%)',
     overflow: 'hidden'
-    // '&:before': {
-    //   content: '""',
-    //   position: 'absolute',
-    //   width: '100%',
-    //   height: '0',
-    //   bottom: 'D',
-    //   left: '0',
-    //   boxShadow: '0px -10px 70px 20px red',
-    //   zIndex: '30'
-    // }
   },
 
   class: {
     show: (element, state) => state.offers
       ? {
         paddingBottom: `${40 / 16}em`,
-        marginBottom: '100px',
+        marginBottom: `${100 / 16}em`,
         background: 'rgba(60,84, 72, 1)',
         '@media only screen and (max-width: 480px)': { marginBottom: '0' }
       }

@@ -9,11 +9,7 @@ const sectionLinks = {
     flexAlign: 'flex-start center',
     gap: '0'
   },
-  style: {
-    // border: '2px solid red',
-    width: 'fit-content'
-    // textAlign: 'center'
-  },
+  style: { width: 'fit-content' },
 
   childProto: {
     proto: [Link, Box],
@@ -22,15 +18,12 @@ const sectionLinks = {
       color: 'cream2 .95',
       round: 'Z',
       padding: 'Z2 0'
-      // width: 'F'
     },
     style: {
       textTransform: 'uppercase',
       cursor: 'pointer',
       fontWeight: 900,
       textDecoration: 'none'
-      // textAlign: 'left'
-      // border: '1px solid rgba(248, 241, 227, .4)'
     },
     on: {
       click: (event, element, state) => {

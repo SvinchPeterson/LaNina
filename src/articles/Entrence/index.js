@@ -56,12 +56,12 @@ const texts = {
     textAlign: 'center',
     letterSpacing: '.7px',
     wordSpacing: '3px',
-    fontSize: '13.5px',
+    fontSize: `${13.5 / 16}em`,
     '> div': {
-      lineHeight: '25px'
+      lineHeight: `${25 / 13.5}em`
     },
     '@media media only screen and (max-width: 480px)': {
-      fontSize: '12.5px',
+      fontSize: `${12.5 / 16}em`,
       textAlign: 'left'
     }
   },
@@ -87,7 +87,6 @@ export default {
     gap: 'Z'
   },
   style: {
-    fontSize: '22px',
     marginTop: `${200 / 16}em`,
     marginBottom: `${200 / 16}em`,
     fontWeight: '300',

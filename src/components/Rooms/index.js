@@ -33,10 +33,10 @@ const book = {
       textOrientation: 'upright',
       writingMode: 'vertical-rl',
       bottom: '0',
-      left: '-50px'
+      left: `${-50 / 14}em`
     },
     '@media only screen and (max-height: 650px)': {
-      bottom: '-50px'
+      bottom: `${-50 / 14}em`
     },
     '&:hover > span': { opacity: 1 }
   },
@@ -87,8 +87,8 @@ const back = {
     '&:hover > span': { opacity: '1' },
     '&:hover > img': { opacity: '1' },
     '@media only screen and (max-height: 650px)': {
-      top: '50px',
-      left: '120px',
+      top: `${50 / 16}em`,
+      left: `${120 / 16}em`,
       '> span': { opacity: 1 }
     }
   },
@@ -180,14 +180,13 @@ const Room = {
       '@media only screen and (max-width: 768px)': {
         display: 'flex',
         top: '70%',
-        // width: '101%',
         '> button': {
           background: 'rgba(60, 84, 72, .95)',
           '&:first-child': {
-            marginLeft: '-2px'
+            marginLeft: `${-2 / 16}em`
           },
           '&:last-child': {
-            marginRight: '-2px'
+            marginRight: `${-2 / 16}em`
           }
         }
       },
@@ -226,7 +225,7 @@ const Room = {
             }
           }
         },
-        style: { marginRight: '-3px' }
+        style: { marginRight: `${-3 / 16}em` }
       }
     ]
   },

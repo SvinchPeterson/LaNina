@@ -24,14 +24,7 @@ const container = {
     margin: '0 auto',
     animationName: opacity,
     animationDuration: '2s',
-    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
-    // border: '5px solid green',
-    // maxWidth: '1440px',
-    '> *': {
-      // border: '5px solid black'
-      // boxSizing: 'border-box'
-      // height: '100%'
-    }
+    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
   }
 }
 export default {
