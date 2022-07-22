@@ -1,7 +1,7 @@
 'use strict'
 import { RoomTab } from './index'
 
-import { ballerina, redBrick, yellowCouch, greenForest, retro } from '../../texts'
+import { ballerinaParagraph, redBrickParagrap, yellowCouchParagraph, greenForestParagraph, retroParagraph } from '../../texts'
 
 import BALLERINA_JPG from '../../assets/images/ballerina/ballerinaTab.jpg'
 import REDBRICK_JPG from '../../assets/images/redBrick/redbrickTab.jpg'
@@ -34,7 +34,7 @@ export const tabBallerina = {
   },
   props: { href: '#roomBallerina' },
   content: {
-    p: { proto: ballerina },
+    paragraph: { proto: ballerinaParagraph },
     icon: { img: { props: { src: DRESS_PNG } } }
   }
 }
@@ -55,9 +55,9 @@ export const tabRedBrick = {
       } : {}
   },
   content: {
-    p: {
-      proto: redBrick,
-      style: { width: `${465 / 14}em !important` }
+    paragraph: {
+      proto: redBrickParagrap
+      // style: { width: `${465 / 14}em !important` }
     },
     icon: { img: { props: { src: BRICKS_PNG } } }
   }
@@ -79,7 +79,7 @@ export const tabYellowCouch = {
       } : {}
   },
   content: {
-    p: { proto: yellowCouch },
+    paragraph: { proto: yellowCouchParagraph },
     icon: { img: { props: { src: SOFA_PNG } } }
   }
 }
@@ -100,7 +100,7 @@ export const tabGreenForest = {
       } : {}
   },
   content: {
-    p: { proto: greenForest },
+    paragraph: { proto: greenForestParagraph },
     icon: { img: { props: { src: LEAF_PNG } } }
   }
 }
@@ -121,7 +121,12 @@ export const tabRetro = {
       } : {}
   },
   content: {
-    p: { proto: retro },
+    paragraph: {
+      proto: retroParagraph,
+      style: {
+        width: `${388 / 14}em`
+      }
+    },
     icon: { img: { props: { src: VINYL_PNG } } }
   }
 }

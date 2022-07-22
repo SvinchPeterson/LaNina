@@ -16,14 +16,15 @@ const roomsTabs = {
     position: 'relative',
     flexFlow: 'column',
     flexAlign: 'flex-start center',
-    padding: '0 10%',
+    padding: '0 7%',
     maxWidth: `${1440 / 16}em`,
     width: `${1440 / 16}em`,
     '@tabletL': {
+      width: '100%',
       padding: '0 15%'
     },
     '@mobileM': {
-      padding: '0 5%'
+      padding: '0 0%'
     }
   },
   style: { boxSizing: 'border-box', margin: '0 auto' },
@@ -32,8 +33,8 @@ const roomsTabs = {
     proto: navButtons2,
     props: {
       '@mobileM': {
-        bottom: `${-50 / 16}em`,
-        maxWidth: `${85 / 16}em`
+        bottom: `${-70 / 16}em`,
+        maxWidth: `${120 / 16}em`
       }
     },
 
@@ -42,7 +43,10 @@ const roomsTabs = {
       '@media only screen and (max-width: 1366px)': {
         display: 'flex',
         zIndex: '10',
-        width: '85%'
+        width: '88%'
+      },
+      '@media only screen and (max-width: 768px)': {
+        width: '90%'
       },
       '@media only screen and (max-width: 560px)': { '> button': { opacity: '.75' } }
     },
@@ -82,8 +86,11 @@ const roomsTabs = {
     proto: Box,
     props: {
       flexAlign: 'center flex-start',
-      gap: 'B',
-      width: '100%'
+      gap: 'C',
+      width: '100%',
+      '@tabletL': {
+        gap: 'B'
+      }
     },
     style: { '@media only screen and (max-width: 1366px)': { overflowY: 'auto' } },
 

@@ -39,16 +39,16 @@ export default {
 
   proto: container,
 
-  banner,
-  Header,
-  HeaderMobile,
-  Menu,
-  Building,
-  placeFeature,
-  Entrence,
-  Apartments,
-  Wine,
-  feedBacks,
-  Location,
-  Footer
+  // banner,
+  // Header,
+  // HeaderMobile,
+  // Menu,
+  // Building,
+  // placeFeature,
+  // Entrence,
+  Apartments
+  // Wine,
+  // feedBacks,
+  // Location,
+  // Footer
 }

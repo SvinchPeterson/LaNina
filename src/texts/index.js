@@ -77,39 +77,105 @@ export const wineText = {
     // with grape designs and evidence of wine-drinking paraphernalia found at ruins and burial sites..`
   }
 }
-
-export const ballerina = {
-  proto: [Text, Box],
-  props: {
-    text: `The two-bedroom apartment of 72m2 on high first floor with open terrace, composed of living room with comfortable sofa bed for 1 person and 2 bedrooms  with King size bed and 2 single beds, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 5 people.`
+const roomParagraph = {
+  proto: Box,
+  heading: {
+    proto: [Text, Box],
+    props: {
+      color: 'gold',
+      padding: '0 0 Y2 0',
+      '@mobileL': { padding: '0 0 Y1 0' }
+    },
+    style: {
+      fontWeight: '500'
+    }
+  },
+  p: {
+    proto: [Text, Box],
+    props: { color: 'cream2 1' }
+  }
+}
+export const ballerinaParagraph = {
+  proto: roomParagraph,
+  heading: {
+    props: {
+      text: 'Enjoy special atmosphere, delicate and airy as ballerina’s dressing interior.'
+    }
+  },
+  p: {
+    props: {
+      text: `The two-bedroom apartment of 72m2 on high first floor with open terrace, composed of living room with comfortable sofa bed for 1 person and 2 bedrooms  with King size bed and 2 single beds, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 5 people.`
+    }
   }
 }
 
-export const redBrick = {
-  proto: [Text, Box],
-  props: {
-    text: `Studio apartment of 55m2 located on the ground floor, just few steps downstairs, composed of living area with comfortable sofa bed for 1 person and sleeping area with 1 Queen bed, private bathroom with shower, kitchen dining table, making the apartment comfortable for 3 people.`
+export const redBrickParagrap = {
+  proto: roomParagraph,
+  heading: {
+    props: {
+      maxWidth: `${270 / 14}em`,
+      text: 'Where traditional Georgian old style meets modernity!'
+    },
+    style: {
+      '@media only screen and (max-width: 1366px)': {
+        maxWidth: `fit-content`
+      }
+    }
+  },
+  p: {
+    props: {
+      text: `Studio apartment of 55m2 located on the ground floor, just few steps downstairs, composed of living area with comfortable sofa bed for 1 person and sleeping area with 1 Queen bed, private bathroom with shower, kitchen dining table, making the apartment comfortable for 3 people.`
+    }
   }
 }
 
-export const yellowCouch = {
-  proto: [Text, Box],
-  props: {
-    text: `Cozy and quiet one bedroom apartment of 50 m2 with open terrace, located on high first floor and  composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
+export const yellowCouchParagraph = {
+  proto: roomParagraph,
+  heading: {
+    props: {
+      maxWidth: `${270 / 14}em`,
+      text: 'Make yourself comfortable on your yellow couch!'
+    },
+    style: {
+      '@media only screen and (max-width: 1366px)': {
+        maxWidth: `fit-content`
+      }
+    }
+  },
+  p: {
+    props: {
+      text: `Cozy and quiet one bedroom apartment of 50 m2 with open terrace, located on high first floor and  composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
+    }
+
   }
 }
 
-export const greenForest = {
-  proto: [Text, Box],
-  props: {
-    text: `One bedroom apartment of 51 m2 with open terrace, located on high first floor and  composed of living room and bedroom with 1 King bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 2 people.`
+export const greenForestParagraph = {
+  proto: roomParagraph,
+  heading: {
+    props: { text: 'Timeless and elegant, yet modern and fresh, green is your choice!' },
+    style: {
+      '@media only screen and (max-width: 1366px)': {
+        maxWidth: `${420 / 16}em`
+      }
+    }
+  },
+  p: {
+    props: {
+      text: `One bedroom apartment of 51 m2 with open terrace, located on high first floor and  composed of living room and bedroom with 1 King bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 2 people.`
+    }
   }
 }
 
-export const retro = {
-  proto: [Text, Box],
-  props: {
-    text: `Cozy and quiet one bedroom apartment of 44 m2 with open terrace, located on high first floor and  composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
+export const retroParagraph = {
+  proto: roomParagraph,
+  heading: {
+    props: { text: 'Where contemporary design and  trendy elements are combined with traditional architecture.' }
+  },
+  p: {
+    props: {
+      text: `Cozy and quiet one bedroom apartment of 44 m2 with open terrace, located on high first floor and  composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
+    }
   }
 }
 

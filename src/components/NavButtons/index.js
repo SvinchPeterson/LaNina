@@ -129,7 +129,10 @@ export const navButtons2 = {
     },
     image: {
       proto: [Img, Box],
-      props: { boxSize: 'A ' }
+      props: {
+        boxSize: 'A ',
+        '@tabletL': { boxSize: 'B ' }
+      }
     }
   },
   ...[
