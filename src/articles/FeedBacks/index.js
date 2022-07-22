@@ -20,8 +20,8 @@ const feedBackParagraph = {
     '@tabletL': {
       minWidth: '100%'
     },
-    '@mobileL': {
-      padding: 'C2 A B1 A',
+    '@mobileM': {
+      padding: 'B1 0 B1 0',
       maxHeight: 'G'
     },
     '@mobileS': {
@@ -65,14 +65,15 @@ const feedBackParagraph = {
       padding: '0 B'
     },
     style: {
-      textAlign: 'justify',
+      textAlign: 'left',
       fontSize: `${14.3 / 16}em`,
       letterSpacing: '.8px',
-      wordSpacing: '-1.45px',
+      // wordSpacing: '-1.45px',
       lineHeight: `${22 / 14.3}em`,
-      maxwidth: `${590 / 14.3}em`,
+      maxwidth: `${550 / 14.3}em`,
       '@media only screen and (max-width: 560px)': {
-        fontSize: `${13.5 / 16}em`
+        // fontSize: `${13.5 / 16}em`,
+        // lineHeight: `${25 / 13.5}em`
       }
     }
   },
@@ -82,15 +83,14 @@ const feedBackParagraph = {
     proto: Box,
     text: 'January | 2022',
     props: {
-      // margin: '0 0 0 auto',
       padding: '0 Y2 0 0',
       position: 'absolute',
       right: 'D2',
       bottom: 'C',
       color: 'black .55',
-      '@mobileM': {
+      '@mobileL': {
         right: 'B2',
-        bottom: 'C2'
+        bottom: 'B1'
       }
     },
     style: {
@@ -199,7 +199,7 @@ export const feedBacks = {
   props: {
     maxWidth: '1440px',
     minHeight: 'H',
-    padding: '0 F',
+    padding: '0 0',
     '@tabletL': {
       maxWidth: '75%',
       padding: '0 D'
@@ -226,7 +226,10 @@ export const feedBacks = {
     proto: Box,
     props: {
       position: 'relative',
-      width: '85%'
+      width: '85%',
+      '@mobileM': {
+        width: '100%'
+      }
     },
     style: {
       margin: '0 auto',
@@ -242,7 +245,7 @@ export const feedBacks = {
         background: 'rgba(248, 241, 227, .5)',
         boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .87)',
         '@media only screen and (max-width: 560px)': {
-          boxShadow: '0px 0px 20px 20px rgba(248, 241, 227, 1)'
+          boxShadow: '0px 0px 20px 15px rgba(248, 241, 227, 1)'
         }
       },
       '&:before': {
@@ -254,7 +257,7 @@ export const feedBacks = {
         top: 0,
         boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .87)',
         '@media only screen and (max-width: 560px)': {
-          boxShadow: '0px 0px 20px 20px rgba(248, 241, 227, 1)'
+          boxShadow: '0px 0px 20px 15px rgba(248, 241, 227, 1)'
         },
         background: 'rgba(248, 241, 227, .5)',
         zIndex: 3
@@ -278,16 +281,6 @@ export const feedBacks = {
         proto: feedBackParagraph
       },
       ...[
-        {
-          name: { text: 'Dilfusa' },
-          p: {
-            text: `
-          Fue una estancia muy agradable! Hospitalidad, atención excelente! Ubicación y facilidades son perfectas. Muchas gracias a los dueños, me ayudaron en todo, presentaron mucho más de lo prometido)))
-              `
-          },
-          date: { text: 'December | 2021' }
-        },
-
         {
           name: { text: 'Katie' },
           p: {
@@ -337,6 +330,16 @@ export const feedBacks = {
               `
           },
           date: { text: 'April | 2022' }
+        },
+
+        {
+          name: { text: 'Dilfusa' },
+          p: {
+            text: `
+          Fue una estancia muy agradable! Hospitalidad, atención excelente! Ubicación y facilidades son perfectas. Muchas gracias a los dueños, me ayudaron en todo, presentaron mucho más de lo prometido)))
+              `
+          },
+          date: { text: 'December | 2021' }
         }
       ]
     }
