@@ -17,6 +17,8 @@ const roomsTabs = {
     flexFlow: 'column',
     flexAlign: 'flex-start center',
     padding: '0 10%',
+    maxWidth: `${1440 / 16}em`,
+    width: `${1440 / 16}em`,
     '@tabletL': {
       padding: '0 15%'
     },
@@ -24,6 +26,7 @@ const roomsTabs = {
       padding: '0 5%'
     }
   },
+  style: { boxSizing: 'border-box', margin: '0 auto' },
 
   buttons: {
     proto: navButtons2,
@@ -145,7 +148,6 @@ export default {
         backgroundAttachment: 'initial',
         background: 'rgba(60, 84, 72, 1)'
       }
-
     }
   },
   attr: { id: 'apartments' },

@@ -7,8 +7,8 @@ const icon = {
   props: {
     padding: 'B',
     position: 'absolute',
-    right: '0',
-    bottom: '0'
+    left: '0',
+    top: '0'
   },
   style: {
     zIndex: '20'
@@ -95,22 +95,21 @@ export const RoomTab = {
       top: 0,
       left: 0,
       background: 'linear-gradient(rgba(60,84, 72, .5), rgba(60,84, 72, 1))',
-      opacity: '.45',
+      opacity: '.65',
       transition: 'opacity .7s ease-in-out',
       cursor: 'pointer'
     },
     '&:after': {
       content: '""',
-      fontSize: `${9.8 / 14}em`,
-      fontWeight: 500,
+      fontSize: `12px`,
+      fontWeight: 900,
       position: 'absolute',
       width: `${120 / 14}em`,
-      padding: `${12 / 14}em 0 ${12 / 14}em ${8.2 / 14}em`,
-      top: 0,
-      left: 0,
+      // padding: `${16 / 14}em 0 ${12 / 14}em ${16 / 14}em`,
+      bottom: '30px',
       letterSpacing: '.5px',
-      backdropFilter: 'blur(10px)',
-      background: 'rgba(60,84, 72, .85)',
+      // backdropFilter: 'blur(1px)',
+      // background: 'rgba(60,84, 72, .85)',
       boxSizing: 'border-box',
       borderBottomRightRadius: '8px',
       color: 'rgba(248, 241, 227, .85)',
