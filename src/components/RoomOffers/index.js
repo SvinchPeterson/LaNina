@@ -25,8 +25,9 @@ const header = {
       color: 'cream2 .75',
       fontSize: 'Z',
       fontWeight: '900',
+      '@tabletL': { color: 'cream2' },
       '@mobileS': {
-        fontSize: 'Y'
+        // fontSize: 'Y'
       }
     },
     style: {
@@ -55,7 +56,7 @@ const header = {
     span: {
       proto: [Button, Box],
       props: {
-        boxSize: 'B V2',
+        boxSize: 'B X',
         background: 'cream2',
         round: 'Z'
       }
@@ -116,7 +117,7 @@ const offers = {
   content: {
     proto: [Grid, Box],
     props: {
-      padding: 'Z1 C2 Z1 C2',
+      padding: '0 C2 C C2',
       columns: 'repeat(2, 1fr)',
       columnGap: 'C',
       height: '0',
@@ -142,7 +143,7 @@ const offers = {
           minHeight: `${150 / 16}em`,
           maxHeight: `${180 / 16}em`,
           '> span': {
-            height: `${30 / 16}em`,
+            height: `${35 / 16}em`,
             opacity: 1,
             transition: 'height .4s linear, opacity .5s linear .4s'
           }
@@ -166,8 +167,8 @@ const offers = {
         color: 'cream 1',
         fontSize: 'Y',
         flexAlign: 'center flex-start',
-        '@tabletL': { fontSize: 'Z' },
-        '@mobileS': { fontSize: 'Y' }
+        '@tabletL': { fontSize: 'Z' }
+        // '@mobileS': { fontSize: 'Y' }
       },
       style: {
         fontWeight: 500,
@@ -214,14 +215,16 @@ export const RoomOffers = {
     '@mobileXS': { right: 'B' }
   },
   style: {
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
     transition: 'all 1s ease-in-out',
     zIndex: '70',
     '@media only screen and (max-height: 650px)': {
-      bottom: `${-180 / 16}em !important`
+      bottom: `${-160 / 16}em !important`
     },
 
     '@media only screen and (max-width: 1366px)': {
-      bottom: `${-250 / 16}em`
+      bottom: `${-270 / 16}em`
     },
     overflow: 'hidden'
   },

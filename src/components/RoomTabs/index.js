@@ -1,6 +1,6 @@
 'use strict'
 
-import { Box, Link, Img, Text } from '@symbo.ls/symbols'
+import { Box, Link, Img } from '@symbo.ls/symbols'
 
 const icon = {
   proto: Box,
@@ -68,7 +68,8 @@ const tabParagraph = {
       lineHeight: `${18 / 13.5}em`
     },
     '@media only screen and (max-width: 350px)': {
-      fontSize: `${12.8 / 16}em`
+      fontSize: `${12.8 / 16}em`,
+      width: `${310 / 12.8}em`
     }
   },
   class: {
@@ -133,8 +134,8 @@ export const RoomTab = {
       fontWeight: 900,
       position: 'absolute',
       textShadow: '2px 2px 30px 1px rgba(0, 0, 0, .4)',
-      bottom: `${50 / 13}em`,
-      right: `${50 / 13}em`,
+      bottom: `${35 / 13}em`,
+      right: `${35 / 13}em`,
       letterSpacing: '.4px',
       wordSpacing: '.35px',
       boxSizing: 'border-box',

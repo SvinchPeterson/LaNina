@@ -18,7 +18,7 @@ const book = {
     padding: 'Z A',
     fontSize: 'Z',
     '@mobileL': {
-      left: 'A2',
+      // left: 'A2',
       bottom: '-E'
     }
   },
@@ -29,11 +29,15 @@ const book = {
     zIndex: '30',
     textDecoration: 'none',
     width: 'fit-content',
+    left: `${-60 / 14}em`,
+    '@media only screen and (max-width: 1366px)': {
+      left: `${-75 / 14}em`
+
+    },
     '@media only screen and (min-width: 768px)': {
       textOrientation: 'upright',
       writingMode: 'vertical-rl',
-      bottom: '0',
-      left: `${-50 / 14}em`
+      bottom: '0'
     },
     '@media only screen and (max-height: 650px)': {
       bottom: `${-50 / 14}em`
@@ -57,7 +61,7 @@ const book = {
     style: {
       opacity: '.7',
       transition: 'opacity .1s ease-in-out',
-      '@media only screen and (max-width: 768px)': {
+      '@media only screen and (max-width: 1366px)': {
         opacity: 1
       }
 
@@ -109,14 +113,20 @@ const back = {
     },
     style: {
       opacity: '.65',
-      transition: 'opacity .1s ease-in-out'
+      transition: 'opacity .1s ease-in-out',
+      '@media only screen and (max-width: 1366px)': {
+        opacity: 1
+      }
     }
   },
   span: {
     proto: Box,
     props: {
       text: 'APARTMENTS',
-      fontSize: 'Y'
+      fontSize: 'Y',
+      '@tabletL': {
+        fontSize: 'Z'
+      }
     },
     style: {
       fontWeight: '900',
@@ -124,7 +134,10 @@ const back = {
       // writingMode: 'vertical-rl',
       letterSpacing: '1px',
       opacity: '.7',
-      transition: 'opacity .15s ease-in-out'
+      transition: 'opacity .15s ease-in-out',
+      '@media only screen and (max-width: 1366px)': {
+        opacity: 1
+      }
     }
   }
 }
@@ -138,10 +151,10 @@ const Room = {
         height: `${600 / 16}em`,
         transition: 'all 1s ease-in-out',
         opacity: 1,
-        paddingTop: `${120 / 16}em`,
+        paddingTop: `${130 / 16}em`,
         '@media only screen and (max-width: 1366px)': {
           marginTop: `${125 / 16}em`,
-          paddingTop: `${145 / 16}em`,
+          paddingTop: `${160 / 16}em`,
           height: `${500 / 16}em`,
           display: 'block'
         },

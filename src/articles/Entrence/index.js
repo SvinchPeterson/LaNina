@@ -5,7 +5,7 @@ import ENTRENCE_JPG from '../../assets/images/sololaki/balcony2.jpg'
 const yardEntrence = {
   proto: Box,
   props: {
-    minWidth: `${600 / 16}em`,
+    minWidth: `${700 / 16}em`,
     position: 'relative',
     minHeight: `${400 / 16}em`,
     padding: '0',
@@ -46,6 +46,7 @@ const texts = {
     margin: 'E 0 0 0',
     fontWeight: '400',
     flexFlow: 'column',
+    maxWidth: `${750 / 16}em`,
     gap: 'Z',
     '@mobileS': {
       padding: '0 D1 0 D1',
@@ -56,7 +57,8 @@ const texts = {
     textAlign: 'center',
     letterSpacing: '.7px',
     wordSpacing: '3px',
-    fontSize: `${13.5 / 16}em`,
+    fontSize: `${13 / 16}em`,
+    lineHeight: `${25 / 13.5}em`,
     '> div': {
       lineHeight: `${25 / 13.5}em`
     },
@@ -65,14 +67,23 @@ const texts = {
       textAlign: 'left'
     }
   },
+  // text: `Each of our guests is valued and special.
+  // if you’re looking for a comfortable vacation rental, regardless of why you are visiting Tbilisi - for a short leisure trip, sightseeing holidays, an extended stay or business trip, - book now with us!`
   ...[
     { text: 'apartments are designed to match your mood' },
-    { text: 'create own atmosphere in any kind of trip' },
+    { text: 'create own atmosphere regardless of trip reason' },
     {
       proto: Box,
       props: { margin: 'A2 0 0 0' },
       text: 'you are special for us'
     }
+    // { text: 'apartments are designed to match your mood' },
+    // { text: 'create own atmosphere in any kind of trip' },
+    // {
+    //   proto: Box,
+    //   props: { margin: 'A2 0 0 0' },
+    //   text: 'you are special for us'
+    // }
   ]
 }
 

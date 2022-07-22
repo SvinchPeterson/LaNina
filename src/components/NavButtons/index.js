@@ -14,7 +14,8 @@ export const navButtons = {
     top: '63%',
     right: `-B2`,
     flexFlow: 'column',
-    gap: 'Z2'
+    gap: 'Z2',
+    '@tabletL': { right: '-C' }
   },
   style: {
     transform: 'translate(50%, -50%)',
@@ -28,7 +29,10 @@ export const navButtons = {
     style: {
       border: 'none',
       background: 'none',
-      '> img': { opacity: '.7' },
+      '> img': {
+        opacity: '.7',
+        '@media only screen and (max-width: 1366px)': { opacity: 1 }
+      },
       '&:hover > img': { opacity: '1' }
     }
   },
@@ -43,9 +47,9 @@ export const navButtons = {
           content: '""',
           position: 'absolute',
           width: '40%',
-          height: '1px',
+          height: '1.5px',
           background: 'rgba(245, 245, 245, .5)',
-          bottom: `${-7 / 16}em`,
+          bottom: `${-10 / 16}em`,
           left: '50%',
           transform: 'translate(-50%, -50%)'
         }
@@ -54,7 +58,8 @@ export const navButtons = {
         proto: [Img, Box],
         props: {
           src: UP_ARROW_PNG,
-          boxSize: 'A2 '
+          boxSize: 'A2 ',
+          '@tabletL': { boxSize: 'B2 ' }
         },
         style: { transition: 'opacity .15s ease-in-out' }
       },
@@ -81,7 +86,8 @@ export const navButtons = {
         proto: [Img, Box],
         props: {
           src: DOWN_ARROW_PNG,
-          boxSize: 'A2 '
+          boxSize: 'A2 ',
+          '@tabletL': { boxSize: 'B2 ' }
         },
         style: { transition: 'opacity .15s ease-in-out' }
       },
@@ -131,13 +137,14 @@ export const navButtons2 = {
       proto: [Img, Box],
       props: {
         boxSize: 'A ',
-        '@tabletL': { boxSize: 'B ' }
+        '@tabletL': { boxSize: 'B ' },
+        '@mobileL': { boxSize: 'A2 ' }
       }
     }
   },
   ...[
     {
-      props: { padding: 'B1 B B1 Z1' },
+      props: { padding: 'C B1 C A' },
       style: {
         borderTopRightRadius: `${80 / 16}em`,
         borderBottomRightRadius: `${80 / 16}em`,
@@ -150,7 +157,7 @@ export const navButtons2 = {
     },
 
     {
-      props: { padding: 'B1 Z1 B1 B' },
+      props: { padding: 'C A C B1' },
       style: {
         borderTopLeftRadius: `${80 / 16}em`,
         borderBottomLeftRadius: `${80 / 16}em`,

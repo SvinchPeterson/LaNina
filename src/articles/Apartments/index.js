@@ -45,6 +45,9 @@ const roomsTabs = {
         zIndex: '10',
         width: '88%'
       },
+      '@media only screen and (max-height: 650px)': {
+        bottom: `${-50 / 16}em`
+      },
       '@media only screen and (max-width: 768px)': {
         width: '90%'
       },
