@@ -54,18 +54,18 @@ const tabParagraph = {
     pointerEvents: 'none',
     transition: 'opacity .3s ease-in-out',
     transitionDelay: '.4s',
-    letterSpacing: '.8px',
-    wordSpacing: '-1.3px',
+    letterSpacing: `${0.8 / 14}em`,
+    wordSpacing: `${-1.3 / 14}em`,
     '> p': { textAlign: 'justify' },
     '@media only screen and (max-width: 1366px)': {
       fontSize: `${15 / 16}em`,
       width: `${500 / 15}em`,
-      lineHeight: '21px'
+      lineHeight: `${21 / 15}em`
     },
     '@media only screen and (max-width: 768px)': {
       fontSize: `${13.5 / 16}em`,
-      width: `${380 / 15}em`,
-      lineHeight: '18px'
+      width: `${380 / 13.5}em`,
+      lineHeight: `${18 / 13.5}em`
     },
     '@media only screen and (max-width: 350px)': {
       fontSize: `${12.8 / 16}em`
@@ -133,8 +133,8 @@ export const RoomTab = {
       fontWeight: 900,
       position: 'absolute',
       textShadow: '2px 2px 30px 1px rgba(0, 0, 0, .4)',
-      bottom: '30px',
-      right: '30px',
+      bottom: `${50 / 13}em`,
+      right: `${50 / 13}em`,
       letterSpacing: '.4px',
       wordSpacing: '.35px',
       boxSizing: 'border-box',
@@ -144,17 +144,16 @@ export const RoomTab = {
       whiteSpace: 'nowrap',
       '@media only screen and (max-width: 1366px)': {
         fontSize: `${16 / 16}em`,
-        bottom: '40px',
-        right: '40px'
+        bottom: `${40 / 16}em`,
+        right: `${40 / 16}em`
       },
       '@media only screen and (max-width: 768px)': {
         fontSize: `${14 / 16}em`,
-        bottom: '20px',
-        right: '20px'
+        bottom: `${20 / 14}em`,
+        right: `${20 / 14}em`
       },
       '@media only screen and (max-width: 350px)': {
-        bottom: '10px'
-
+        bottom: `${10 / 14}em`
       }
       // '@media only screen and (max-width: 1024px)': {
       //   fontSize: `${16 / 16}em`,
