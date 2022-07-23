@@ -121,10 +121,11 @@ export const RoomTab = {
       position: 'absolute',
       width: '100%',
       height: '100%',
-      top: 0,
+      top: '0',
       left: 0,
       background: 'linear-gradient(rgba(60,84, 72, .5), rgba(60,84, 72, 1))',
-      opacity: '.55',
+      // background: 'red',
+      opacity: '.4',
       transition: 'opacity .7s ease-in-out',
       cursor: 'pointer'
     },
@@ -165,20 +166,27 @@ export const RoomTab = {
   },
   on: {
     click: (event, element, state) => {
-      state.update({ activeTab: element.key })
+      state.update({ activeTab: element.key, back: true })
       element.parent.parent.parent.rooms.update({
         style: {
           minHeight: `${500 / 16}em`,
           opacity: 1,
           padding: `0 ${200 / 16}em`,
+          alignSelf: 'center',
+          minWidth: `${1440 / 16}em`,
           '@media only screen and (max-width: 1366px)': {
-            padding: `0 ${150 / 16}em`
+            padding: `0 ${150 / 16}em`,
+            minWidth: `${1000 / 16}em`
           },
           '@media only screen and (max-width: 1225px)': {
             padding: `0 ${100 / 16}em`
           },
+          '@media only screen and (max-width: 1024px)': {
+            minWidth: `${850 / 16}em`
+          },
           '@media only screen and (max-width: 768px)': {
-            padding: `0`
+            padding: `0`,
+            minWidth: `100%`
           }
 
         }

@@ -39,6 +39,9 @@ const book = {
       writingMode: 'vertical-rl',
       bottom: '0'
     },
+    '@media only screen and (max-width: 768px)': {
+      left: `${85 / 14}em`
+    },
     '@media only screen and (max-height: 650px)': {
       bottom: `${-50 / 14}em`
     },
@@ -102,7 +105,18 @@ const back = {
         opacity: 1,
         transition: 'opacity 1.8s ease-in-out .8s'
       }
-      : { opacity: 0 }
+      : { opacity: 0 },
+    show2: (element, state) => state.back
+      ? {
+        visibility: 'visible'
+      }
+      : { visibility: 'hidden' }
+  },
+
+  on: {
+    click: (event, element, state) => {
+      state.update({ back: false })
+    }
   },
 
   icon: {

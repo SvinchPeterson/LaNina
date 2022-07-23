@@ -35,6 +35,7 @@ const roomsTabs = {
       '@mobileM': {
         bottom: `${-70 / 16}em`,
         maxWidth: `${120 / 16}em`
+
       }
     },
 
@@ -42,7 +43,7 @@ const roomsTabs = {
       display: 'none',
       '@media only screen and (max-width: 1366px)': {
         display: 'flex',
-        zIndex: '10',
+        zIndex: '50',
         width: '88%'
       },
       '@media only screen and (max-height: 650px)': {
@@ -111,7 +112,13 @@ const rooms = {
   proto: Box,
   props: {
     round: 'B',
-    minheight: '100%'
+    minheight: '100%',
+    maxWidth: `${1440 / 16}em`
+  },
+  style: {
+    border: '2px solid red',
+    alignSelf: 'center',
+    margin: '0 auto'
   },
 
   ...[
