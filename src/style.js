@@ -16,7 +16,7 @@ export default {
   h3: { margin: 0 },
   h5: { margin: 0 },
   p: { margin: 0 },
-  h6: { margin: 0 }
-  // background: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))'
+  h6: { margin: 0 },
+  background: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))'
 
 }
