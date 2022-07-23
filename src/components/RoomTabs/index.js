@@ -210,6 +210,6 @@ export const RoomTab = {
       proto: tabParagraph
     },
 
-    icon: { proto: icon }
+    icons: { proto: icon }
   }
 }

@@ -19,7 +19,7 @@ export const image = {
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    boxShadow: ' inset 0px 0px 5px 0px rgba(0, 0, 0, .6)',
+    // boxShadow: ' inset 0px 0px 5px 0px rgba(0, 0, 0, .6)',
     borderRadius: '10px',
     transition: 'height .7s ease-in-out, opacity .7s ease-in-out, background-position 3s ease-in-out',
     '@media only screen and (max-width: 1366px)': {
