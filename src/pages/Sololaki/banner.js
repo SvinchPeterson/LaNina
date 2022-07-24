@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Text } from '@symbo.ls/symbols'
+import { Box, Text } from 'smbls'
 
 import { position, height, letterSpacing, opacity7, zoom } from '../../animations'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/entrence2.jpg'

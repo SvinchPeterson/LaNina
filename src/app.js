@@ -8,7 +8,7 @@ import './reset'
 import './emotion'
 import './components'
 
-import { Block } from '@symbo.ls/symbols'
+import { Block } from 'smbls'
 import { Landing, Sololaki } from './pages'
 // import { Story } from './sections'
 

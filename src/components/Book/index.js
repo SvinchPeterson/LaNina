@@ -1,4 +1,4 @@
-import { Box, Link } from '@symbo.ls/symbols'
+import { Box, Link } from 'smbls'
 
 export const Book = {
   proto: [Link, Box],

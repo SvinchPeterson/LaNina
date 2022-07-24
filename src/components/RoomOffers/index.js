@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Text, Button, Grid } from '@symbo.ls/symbols'
+import { Box, Text, Button, Grid } from 'smbls'
 
 const header = {
   tag: 'header',

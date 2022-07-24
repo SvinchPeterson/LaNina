@@ -1,6 +1,6 @@
 'use strict'
 
-import { Box, Link, Img } from '@symbo.ls/symbols'
+import { Box, Link, Img } from 'smbls'
 
 const icon = {
   proto: Box,

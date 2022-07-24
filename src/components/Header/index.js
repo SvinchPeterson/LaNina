@@ -1,5 +1,5 @@
 'use strict'
-import { Text, Box, Link } from '@symbo.ls/symbols'
+import { Text, Box, Link } from 'smbls'
 import { Book } from '../Book'
 import { MenuButton } from '../MenuButton'
 import { opacity } from '../../animations'

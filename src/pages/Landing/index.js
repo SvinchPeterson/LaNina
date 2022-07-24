@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Link, Text } from '@symbo.ls/symbols'
+import { Box, Link, Text } from 'smbls'
 
 import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 

@@ -1,4 +1,4 @@
-import { Box } from '@symbo.ls/symbols'
+import { Box } from 'smbls'
 
 export const Gallery = {
   proto: Box,

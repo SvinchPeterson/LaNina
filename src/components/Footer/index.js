@@ -1,6 +1,6 @@
 'use strict'
 
-import { Box, Img, Link } from '@symbo.ls/symbols'
+import { Box, Img, Link } from 'smbls'
 
 import FACEBOOK_PNG from '../../assets/icons/facebook-white.png'
 import INSTAGRAM_PNG from '../../assets/icons/instagram-white.png'

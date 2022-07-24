@@ -1,6 +1,6 @@
 'use strict'
 
-import { set, opacify, THEME } from '@symbo.ls/symbols'
+import { set, opacify, THEME } from 'smbls'
 
 set('theme', {
   name: 'primary',

@@ -2,7 +2,7 @@
 
 import { deepMerge } from 'domql/src/utils'
 import router from 'domql/packages/router'
-import { Link } from '@symbo.ls/symbols'
+import { Link } from 'smbls'
 
 const RouteLink = {
   on: {

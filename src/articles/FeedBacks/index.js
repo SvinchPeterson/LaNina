@@ -1,6 +1,6 @@
 'use strict'
 
-import { Box, Img } from '@symbo.ls/symbols'
+import { Box, Img } from 'smbls'
 
 // import RIGHT_ARROW_PNG from '../../assets/icons/arrow-right.png'
 import LEFT_ARROW_PNG from '../../assets/icons/leftBlack.png'

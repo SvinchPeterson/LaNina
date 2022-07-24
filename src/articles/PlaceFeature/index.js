@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Grid } from '@symbo.ls/symbols'
+import { Box, Grid } from 'smbls'
 import SHELF_JPG from '../../assets/images/sololaki/shelf.jpg'
 
 export const placeFeature = {

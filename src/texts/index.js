@@ -1,4 +1,4 @@
-import { Text, Box } from '@symbo.ls/symbols'
+import { Text, Box } from 'smbls'
 
 export const origin = {
   proto: Text,

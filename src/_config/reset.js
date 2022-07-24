@@ -1,7 +1,7 @@
 'use strict'
 
 import { injectGlobal } from '@emotion/css'
-import { RESET } from '@symbo.ls/symbols'
+import { RESET } from 'smbls'
 
 import DOCUMENT from './document'
 

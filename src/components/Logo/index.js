@@ -1,5 +1,5 @@
 'use strict'
-import { SVG, Box, Img } from '@symbo.ls/symbols'
+import { SVG, Box, Img } from 'smbls'
 
 import LOGO_SVG from '../../assets/icons/logo.svg'
 import LOGO2_SVG from '../../assets/icons/logo3.svg'

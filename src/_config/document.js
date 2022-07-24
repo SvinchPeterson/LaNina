@@ -1,6 +1,6 @@
 'use strict'
 
-import { DOCUMENT } from '@symbo.ls/symbols'
+import { DOCUMENT } from 'smbls'
 
 export default {
   theme: {

@@ -1,6 +1,6 @@
 'use strict'
 
-import { Box, Img } from '@symbo.ls/symbols'
+import { Box, Img } from 'smbls'
 
 import UP_ARROW_PNG from '../../assets/icons/up-arrows2.png'
 import DOWN_ARROW_PNG from '../../assets/icons/down-arrow2.png'

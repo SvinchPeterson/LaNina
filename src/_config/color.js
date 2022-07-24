@@ -1,6 +1,6 @@
 'use strict'
 
-import { set } from '@symbo.ls/symbols'
+import { set } from 'smbls'
 
 set('color', {
   name: 'green',

@@ -1,5 +1,5 @@
 'use strict'
-import { Box } from '@symbo.ls/symbols'
+import { Box } from 'smbls'
 import ENTRENCE_JPG from '../../assets/images/sololaki/balcony2.jpg'
 
 const yardEntrence = {

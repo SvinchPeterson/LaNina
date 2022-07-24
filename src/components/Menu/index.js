@@ -1,5 +1,5 @@
 'use strict'
-import { Box, Link } from '@symbo.ls/symbols'
+import { Box, Link } from 'smbls'
 
 const sectionLinks = {
   tag: 'nav',
