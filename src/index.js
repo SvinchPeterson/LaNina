@@ -6,7 +6,13 @@ import DOM from 'domql'
 import App from './app'
 import { FastClick } from 'fastclick'
 
-export default DOM.create(App)
+import * as smbls from 'smbls'
+import * as components from './components'
+
+export default DOM.create(App, undefined, undefined, {
+  proto: [smbls.Box],
+  components: { ...smbls, ...components }
+})
 
 if ('addEventListener' in document) {
   document.addEventListener('DOMContentLoaded', function () {

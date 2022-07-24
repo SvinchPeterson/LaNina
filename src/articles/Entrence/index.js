@@ -3,7 +3,6 @@ import { Box } from 'smbls'
 import ENTRENCE_JPG from '../../assets/images/sololaki/balcony2.jpg'
 
 const yardEntrence = {
-  proto: Box,
   props: {
     minWidth: `${700 / 16}em`,
     position: 'relative',

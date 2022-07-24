@@ -1,9 +1,9 @@
 'use strict'
+
 import { Box, Text, Button, Grid } from 'smbls'
 
 const header = {
   tag: 'header',
-  proto: Box,
   props: {
     flexAlign: 'center space-between',
     padding: 'A B A B',
@@ -19,7 +19,6 @@ const header = {
   },
 
   h5: {
-    proto: [Text, Box],
     props: {
       text: 'amenities',
       color: 'cream2 .75',
@@ -45,16 +44,15 @@ const header = {
   },
 
   minimize: {
-    proto: [Button, Box],
+    proto: Button,
     props: { padding: 'Z1' },
     style: {
       background: 'transparent',
       '> button': { opacity: '.7' },
       '&:hover > button': { opacity: '1' }
-
     },
     span: {
-      proto: [Button, Box],
+      // proto: Button,
       props: {
         boxSize: 'B X',
         background: 'cream2',
@@ -200,7 +198,6 @@ const offers = {
 
 export const RoomOffers = {
   tag: 'aside',
-  proto: Box,
   props: {
     minWidth: 'G1',
     position: 'absolute',
@@ -214,6 +211,7 @@ export const RoomOffers = {
     },
     '@mobileXS': { right: 'B' }
   },
+
   style: {
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,

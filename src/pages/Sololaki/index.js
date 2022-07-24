@@ -1,5 +1,4 @@
 'use strict'
-import { Box } from 'smbls'
 import { HeaderMobile, Menu, Header, Footer } from '../../components'
 import { Building, Entrence, Apartments, Wine, Location, placeFeature, feedBacks } from '../../articles'
 import { banner } from './banner'
@@ -7,7 +6,6 @@ import { banner } from './banner'
 import { opacity } from '../../animations'
 
 const container = {
-  proto: Box,
   props: {
     position: 'relative',
     background: 'cream2',

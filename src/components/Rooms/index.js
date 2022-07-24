@@ -11,7 +11,7 @@ import {
 } from '..'
 
 const book = {
-  proto: [Link, Text, Box],
+  proto: [Link],
   props: {
     color: 'cream2',
     position: 'absolute',
@@ -73,7 +73,7 @@ const book = {
 }
 
 const back = {
-  proto: [Link, Box, Text],
+  proto: [Link],
 
   props: {
     // flexFlow: 'column',
@@ -120,7 +120,7 @@ const back = {
   },
 
   icon: {
-    proto: [Img, Box],
+    proto: [Img],
     props: {
       boxSize: 'A1 ',
       src: BACK_PNG
@@ -134,7 +134,6 @@ const back = {
     }
   },
   span: {
-    proto: Box,
     props: {
       text: 'APARTMENTS',
       fontSize: 'Y',
@@ -157,7 +156,6 @@ const back = {
 }
 
 const Room = {
-  proto: Box,
   props: { position: 'relative' },
   class: {
     show: (element, state) => state.activeTab === element.key

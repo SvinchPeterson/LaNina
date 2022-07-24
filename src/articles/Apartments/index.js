@@ -11,7 +11,6 @@ import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
 const roomsTabs = {
   tag: 'header',
-  proto: Box,
   props: {
     position: 'relative',
     flexFlow: 'column',
@@ -104,25 +103,20 @@ const roomsTabs = {
     },
     style: { '@media only screen and (max-width: 1366px)': { overflowY: 'auto' } },
 
-    childProto: {
-      proto: Box,
-      props: {
-      }
-    },
+    childProto: {},
     ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
   }
 }
 
 const rooms = {
   tag: 'section',
-  proto: Box,
   props: {
     round: 'B',
     minheight: '100%',
     maxWidth: `${1440 / 16}em`
   },
+
   style: {
-    // border: '2px solid red',
     alignSelf: 'center',
     margin: '0 auto'
   },
@@ -137,7 +131,6 @@ const rooms = {
 }
 
 export default {
-  proto: Box,
   props: {
     flexFlow: 'column',
     position: 'relative',

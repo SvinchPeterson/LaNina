@@ -7,7 +7,6 @@ import LEFT_ARROW_PNG from '../../assets/icons/leftBlack.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/rightBlack.png'
 
 const feedBackParagraph = {
-  proto: Box,
   props: {
     padding: 'C2 C C C',
     flexFlow: 'column',
