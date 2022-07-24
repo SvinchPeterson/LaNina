@@ -161,7 +161,7 @@ const Room = {
     show: (element, state) => state.activeTab === element.key
       ? {
         height: `${600 / 16}em`,
-        transition: 'all 2s ease-in-out',
+        transition: 'all 1s ease-in-out',
         opacity: 1,
         paddingTop: `${130 / 16}em`,
         '@media only screen and (max-width: 1366px)': {
