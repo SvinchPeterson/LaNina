@@ -210,10 +210,10 @@ const Room = {
         '> button': {
           background: 'rgba(60, 84, 72, .95)',
           '&:first-child': {
-            marginLeft: `${-2 / 16}em`
+            marginLeft: `${-1.5 / 16}em`
           },
           '&:last-child': {
-            marginRight: `${-2 / 16}em`
+            marginRight: `${-1.5 / 16}em`
           }
         }
       },

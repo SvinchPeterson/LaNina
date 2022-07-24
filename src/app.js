@@ -20,14 +20,11 @@ const App = {
   state: {
     isLoaded: false
   },
-  props: {
-    // flexAlign: 'flex-start center'
-  },
 
   define: { routes: param => param },
   routes: {
     '/': Landing,
-    '/Sololaki': Sololaki
+    '/Sololaki': Landing
     // '/story': Story
   },
 

@@ -138,7 +138,7 @@ export const navButtons2 = {
       props: {
         boxSize: 'A ',
         '@tabletL': { boxSize: 'B ' },
-        '@mobileL': { boxSize: 'A2 ' }
+        '@mobileL': { boxSize: 'A1 ' }
       }
     }
   },
