@@ -1,7 +1,7 @@
 'use strict'
 
 import DOM from 'domql'
-import router from 'domql/packages/router'
+// import router from 'domql/packages/router'
 
 import App from './app'
 import { FastClick } from 'fastclick'

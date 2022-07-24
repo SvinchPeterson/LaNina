@@ -24,8 +24,7 @@ const App = {
   define: { routes: param => param },
   routes: {
     '/': Landing,
-    '/Sololaki': Landing
-    // '/story': Story
+    '/Sololaki': Sololaki
   },
 
   on: {
