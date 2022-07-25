@@ -1,13 +1,14 @@
 'use strict'
 
-import { Box, Link, Img, Text } from 'smbls'
+import { Box, Link, Img } from 'smbls'
+
 import BACK_PNG from '../../assets/icons/arrowBack.png'
 
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro,
   RoomOffers,
-  navButtons,
-  navButtons2
+  NavButtons,
+  NavButtons2
 } from '..'
 
 const book = {
@@ -195,16 +196,17 @@ const Room = {
   gallery: {},
   RoomOffers,
   navButton: {
-    proto: navButtons,
+    proto: NavButtons,
     props: { '@mobileL': { display: 'none' } }
   },
   navButton2: {
-    proto: navButtons2,
+    proto: NavButtons2,
     style: {
       display: 'none',
       '@media only screen and (max-width: 768px)': {
         display: 'flex',
         top: '70%',
+        width: '100%',
         '> button': {
           background: 'rgba(60, 84, 72, .95)',
           '&:first-child': {

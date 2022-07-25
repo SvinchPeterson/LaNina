@@ -5,6 +5,7 @@ import { set } from '@symbo.ls/scratch'
 import DejavuBold from './assets/fonts/DejaVuSans-Bold.woff2'
 import Dejavu from './assets/fonts/DejaVuSans.woff2'
 import Geo from './assets/fonts/BPGExtraSquareMtavruli.woff2'
+import Helvetica from './assets/fonts/HelveticaNeueLTGEOCaps-45Light.ttf'
 
 export const FONT = {
   Dejavu: [{
@@ -14,6 +15,7 @@ export const FONT = {
     url: DejavuBold,
     fontWeight: 700
   }],
+
   Geo: [{
     url: Geo,
     fontWeight: 400

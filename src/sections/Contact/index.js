@@ -1,19 +1,19 @@
 'use strict'
 import { Box } from 'smbls'
 
-export const Contact = {
-  proto: Box,
-  props: {
-    padding: 'B W D W',
-    minWidth: '85%',
-    '@tabletL': {
-      flexFlow: 'column'
-    }
-  },
-  style: {
+const props = {
+  padding: 'B W D W',
+  minWidth: '85%',
+  css: {
     margin: '0 auto',
     marginTop: `${50 / 16}em`
   },
+  '@tabletL': { flexFlow: 'column' }
+}
+
+export const Contact = {
+  proto: Box,
+  props,
   content: {
     proto: Box,
     props: {

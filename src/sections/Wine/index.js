@@ -91,7 +91,7 @@ const paragraph = {
   }
 }
 
-export default {
+export const Wine = {
   proto: Box,
   props: {
     position: 'relative',

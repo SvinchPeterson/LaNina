@@ -86,7 +86,7 @@ const texts = {
   ]
 }
 
-export default {
+export const Entrence = {
   proto: Box,
   props: {
     width: '100%',

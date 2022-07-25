@@ -7,7 +7,7 @@ import DOWN_ARROW_PNG from '../../assets/icons/down-arrow2.png'
 import LEFT_ARROW_PNG from '../../assets/icons/left-arrows2.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/right-arrows.png'
 
-export const navButtons = {
+export const NavButtons = {
   proto: Box,
   props: {
     position: 'absolute',
@@ -106,7 +106,7 @@ export const navButtons = {
   ]
 }
 
-export const navButtons2 = {
+export const NavButtons2 = {
   proto: Box,
   props: {
     height: '0',
@@ -117,7 +117,7 @@ export const navButtons2 = {
     gap: 'B'
   },
   style: {
-    width: '100%',
+    // width: '100%',
     zIndex: '200',
     transform: 'translate(-50%, -50%)'
   },

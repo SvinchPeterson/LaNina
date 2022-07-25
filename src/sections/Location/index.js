@@ -29,9 +29,8 @@ const map = {
   }
 }
 
-export default {
-  tag: 'article',
-  proto: Box,
+export const Location = {
+  tag: 'section',
   props: {
     flexFlow: 'column',
     flexAlign: 'center center'

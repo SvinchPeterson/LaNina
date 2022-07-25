@@ -1,6 +1,6 @@
 'use strict'
 import { HeaderMobile, Menu, Header, Footer } from '../../components'
-import { Building, Entrence, Apartments, Wine, Location, placeFeature, feedBacks } from '../../articles'
+import { Building, Entrence, Apartments, Wine, Location, placeFeature, feedBacks } from '../../sections'
 import { banner } from './banner'
 
 import { opacity } from '../../animations'
@@ -12,7 +12,6 @@ const state = {
   activeImage: 0,
   offers: false,
   back: true
-
 }
 
 const props = {
