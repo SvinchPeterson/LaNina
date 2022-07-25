@@ -5,16 +5,24 @@ import { banner } from './banner'
 
 import { opacity } from '../../animations'
 
-const container = {
-  props: {
-    position: 'relative',
-    background: 'cream2',
-    flexFlow: 'column',
-    gap: '0',
-    width: '100%',
-    height: '100%'
-  },
-  style: {
+const state = {
+  activeMenu: false,
+  activeMenuItem: 0,
+  activeTab: 0,
+  activeImage: 0,
+  offers: false,
+  back: true
+
+}
+
+const props = {
+  position: 'relative',
+  background: 'cream2',
+  flexFlow: 'column',
+  gap: '0',
+  width: '100%',
+  height: '100%',
+  css: {
     flex: 1,
     overflowX: 'hidden',
     overflowY: 'auto',
@@ -22,20 +30,14 @@ const container = {
     margin: '0 auto',
     animationName: opacity,
     animationDuration: '2s',
-    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
+    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
+    fontFamily: 'Helvetica Neue'
   }
 }
-export default {
-  state: {
-    activeMenu: false,
-    activeMenuItem: 0,
-    activeTab: 0,
-    activeImage: 0,
-    offers: false,
-    back: true
-  },
 
-  proto: container,
+export default {
+  state,
+  props,
 
   banner,
   Header,

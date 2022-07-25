@@ -1,6 +1,6 @@
 'use strict'
 
-export * from './BBheading'
+export * from './Title'
 export * from './Navbar'
 export * from './Link'
 export * from './Header'

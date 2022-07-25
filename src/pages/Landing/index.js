@@ -1,20 +1,21 @@
 'use strict'
 
-import { BBheading, Navbar } from '../../components'
+import { Title, Navbar } from '../../components'
 
 import {
-  animBBHeading, animContainer, animContainer2, animContainer3,
+  animContainer, animContainer2, animContainer3, animTitle,
   animContainer4, animContainer5, animAfter, animContent
 } from './animations'
 
 import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 
-const heading = {
-  proto: BBheading,
+const title = {
+  proto: Title,
   props: {
     fontSize: 'K',
+    color: 'gold .75',
     css: {
-      animationName: animBBHeading,
+      animationName: animTitle,
       animationDuration: '2s',
       animationTimingFunction: 'ease-in-out',
       zIndex: 2,
@@ -169,5 +170,5 @@ const props = {
 
 export default {
   props,
-  container: { content: { heading, navBar } }
+  container: { content: { title, navBar } }
 }

@@ -1,7 +1,7 @@
 'use strict'
 import { keyframes } from '@emotion/css'
 
-export const animBBHeading = keyframes`
+export const animTitle = keyframes`
   from {
     letter-spacing: .5px;
     opacity: 0;

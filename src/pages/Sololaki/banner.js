@@ -1,133 +1,154 @@
 'use strict'
-import { Box, Text } from 'smbls'
+import { keyframes } from '@emotion/css'
 
-import { position, height, letterSpacing, opacity7, zoom } from '../../animations'
+import { TitleCaption } from '../../components'
 import SOLOLAKI_JPG from '../../assets/images/sololaki/entrence2.jpg'
 
-const heading = {
-  proto: Box,
+export const animTitle = keyframes`
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+   height: 100px;
+   opacity: 1;
+  }
+`
+
+export const animCaption = keyframes`
+  from {
+    letter-spacing: 9px;
+    opacity: 0;
+  }
+  to {
+    letter-spacing: 10px;
+    opacity: 1;
+  }
+`
+
+export const animImage = keyframes`
+  from {
+    background-position: top left;,
+    opacity: 0;
+
+  }
+  to {
+    background-position: bottom left;
+    opacity: 1;
+  }
+`
+
+export const animImage2 = keyframes`
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+`
+
+export const animAfter = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`
+const title = {
+  proto: TitleCaption,
   props: {
     position: 'absolute',
     top: '35%',
     right: '20.5%',
-    flexFlow: 'column',
-    flexAlign: 'flex-end flex-start',
-    height: `${100 / 16}em`,
-    '@mobileL': {
-      flexAlign: 'center flex-start',
+    height: `${120 / 16}em`,
+    '@mobileM': {
+      top: '40%',
       right: '0',
       left: '50%'
-
     },
-    '@mobileS': {
-      top: '40%'
-    }
-  },
-  style: {
-    whiteSpace: 'nowrap',
-    '@media only screen and (max-width: 768px)': {
-      transform: 'translate(-50%, -50%)'
-    }
-  },
-
-  h1: {
-    proto: [Text, Box],
-    props: {
-      text: 'BB Residence',
-      color: 'gold 1',
-      margin: '0'
+    css: {
+      whiteSpace: 'nowrap',
+      minWidth: 'fit-content',
+      '@media only screen and (max-width: 560px)': { transform: 'translate(-50%, -50%)' }
     },
-    style: {
-      fontSize: `${60 / 16}em`,
-      overflow: 'hidden',
-      animationName: height,
-      animationDuration: '3s',
-      animationTimingFunction: 'ease-in-out',
-      animationDelay: '.4s',
-      fontWeight: 100,
-      letterSpacing: `${-3 / 120}em`,
-      '@media only screen and (max-width: 480px)': {
-        fontSize: `${42.5 / 16}em`,
-        fontWeight: 200,
-        textTransform: 'uppercase'
 
-      }
-    }
-  },
-
-  span: {
-    proto: [Text, Box],
-    props: {
-      text: 'sololaki',
-      fontSize: 'Z',
-      color: 'cream2 .9',
-      position: 'absolute',
-      bottom: `${-10 / 14}em`,
-      '@mobileL': {
-        fontSize: `B`,
-        bottom: `${-100 / 18}em`
+    title: {
+      css: {
+        overflow: 'hidden',
+        animationName: animTitle,
+        animationDuration: '3s',
+        animationTimingFunction: 'ease-in-out',
+        animationDelay: '.4s',
+        '@media only screen and (max-width: 560px)': { textTransform: 'uppercase' }
       },
-      '@mobileS': { bottom: `${-50 / 18}em` }
+      '@mobileM': {
+        fontSize: 'F',
+        fontWeight: '200'
+      }
     },
 
-    style: {
-      textTransform: 'uppercase',
-      fontWeight: 500,
-      overflow: 'hidden',
-      letterSpacing: `${10 / 14}em`,
-      animationName: letterSpacing,
-      animationDuration: '6s',
-      animationDelay: '.3s',
-      animationTimingFunction: 'ease-in-out'
+    caption: {
+      padding: '0 B 0 0',
+      '@mobileM': {
+        padding: '0 0 0 0',
+        margin: 'auto 0 -D2 0'
+      },
+      css: {
+        animationName: animCaption,
+        animationDuration: '6s',
+        animationDelay: '.4s',
+        animationTimingFunction: 'ease-in-out',
+        marginTop: 'auto',
+        '@media only screen and (max-width: 560px)': {
+          alignSelf: 'center'
+        }
+      }
     }
   }
 }
 
 const image = {
-  proto: Box,
   props: {
     boxSize: '100% 100%',
     position: 'absolute',
     top: '0',
-    left: '0'
-  },
-  style: {
-
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'bottom left',
-    animationName: position,
-    animationDelay: '.1s',
-    animationDuration: '6s',
-    animationTimingFunction: 'ease-in-out',
-    backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
-    backgroundAttachment: 'fixed',
-    '@media only screen and (max-width: 1366px)': {
-      backgroundAttachment: 'initial',
-      animationName: zoom,
-      animationDelay: '-1s',
-      animationDuration: '8s'
-    },
-    '&:before': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      display: 'block',
-      background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8))',
-      animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
+    left: '0',
+    css: {
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom left',
+      animationName: animImage,
+      animationDelay: '.1s',
+      animationDuration: '5s',
+      animationTimingFunction: 'ease-in-out',
+      backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
+      backgroundAttachment: 'fixed',
+      '&:before': {
+        content: '""',
+        width: '100%',
+        height: '100%',
+        display: 'block',
+        background: 'radial-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .9))',
+        animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
+      },
+      '@media only screen and (max-width: 1366px)': {
+        backgroundAttachment: 'initial',
+        animationName: animImage2,
+        animationDelay: '-1s',
+        animationDuration: '8s'
+      }
     }
   }
 }
-const container = {
-  proto: Box,
-  props: {
-    minWidth: '100%',
-    minHeight: '100%',
-    position: 'relative'
-  },
-  style: {
+
+const props = {
+  minWidth: '100%',
+  minHeight: '100%',
+  position: 'relative',
+  background: 'radial-gradient(rgba(0 ,0 , 0, .8), rgba(0 , 0, 0, .95))',
+  css: {
     overflow: 'hidden',
-    background: 'radial-gradient(rgba(0 ,0 , 0, .8), rgba(0 , 0, 0, .95))',
     '&:after': {
       content: '""',
       width: '100%',
@@ -135,7 +156,7 @@ const container = {
       background: 'linear-gradient(rgba(0 , 0, 0, 1), rgba(0, 0, 0, 1))',
       opacity: '0',
       position: 'absolute',
-      animationName: opacity7,
+      animationName: animAfter,
       animationDuration: '3s',
       animationTimingFunction: 'ease-in-out'
     }
@@ -143,8 +164,8 @@ const container = {
 }
 
 export const banner = {
-  proto: container,
+  props,
 
   image,
-  heading
+  title
 }

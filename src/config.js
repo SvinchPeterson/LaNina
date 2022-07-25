@@ -22,7 +22,7 @@ export const FONT = {
 
 export const FONT_FAMILY = {
   Dejavu: {
-    default: true,
+    // default: true,
     value: ['"Dejavu"'],
     type: 'serif'
   },
