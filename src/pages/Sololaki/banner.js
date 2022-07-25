@@ -165,6 +165,7 @@ const props = {
 
 export const banner = {
   props,
+  attr: { id: 'banner' },
 
   image,
   title
