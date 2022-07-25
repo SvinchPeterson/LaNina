@@ -1,9 +1,8 @@
 'use strict'
-import { Link } from 'smbls'
 
 import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 
-import { BBheading } from '../../components'
+import { BBheading, Navbar } from '../../components'
 
 import { animBBHeading } from './animations'
 
@@ -14,13 +13,11 @@ import {
 } from '../../animations'
 
 const heading = {
-  tag: 'h1',
   proto: BBheading,
-
   props: {
     fontSize: 'K',
     css: {
-      animationName: animBBHeading,
+      // animationName: animBBHeading,
       animationDuration: '2s',
       animationTimingFunction: 'ease-in-out',
       zIndex: 2,
@@ -34,45 +31,45 @@ const heading = {
   }
 }
 
-const links = {
+const navBar = {
+  proto: Navbar,
   props: {
-    flexAlign: 'center center',
-    gap: 'B2',
     padding: '0 C2 0 0',
     '@tabletS': { padding: '0 0 0 B' },
-    '@mobileM': { flexFlow: 'column' }
+    '@mobileM': { flexFlow: 'column' },
+    css: {
+      '> a:first-child': {
+        opacity: '.75',
+        '&:hover': { opacity: 1 }
+      },
+      '> a:not(:first-child)': {
+        opacity: '.55'
+      },
+      '> a:not(:first-child):after': {
+        content: '"soon"',
+        position: 'absolute',
+        bottom: `-${35 / 16}em`,
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        fontWeight: 300,
+        textTransform: 'lowercase',
+        color: '#FFCEA8',
+        opacity: '.8'
+      }
+    }
   },
 
   childProto: {
-    proto: Link,
     props: {
-      fontSize: 'Z',
-      round: 'D',
-      color: 'cream2',
       position: 'relative',
+      transition: 'background .3s ease-in-out',
+      css: { zIndex: 10 },
       '@mobileM': {
-        background: 'cream .15',
+        background: 'cream2 .15',
         minWidth: 'F2',
         padding: 'A 0',
-        flexAlign: 'centr center'
-      },
-      css: {
-        textTransform: 'uppercase',
-        fontWeight: 900,
-        textDecoration: 'none',
-        transition: 'background .3s ease-in-out',
-        zIndex: 10,
-        '&:before': {
-          content: '"soon"',
-          position: 'absolute',
-          bottom: `-${35 / 16}em`,
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontWeight: 300,
-          textTransform: 'lowercase',
-          color: '#FFCEA8',
-          opacity: '.8'
-        }
+        flexAlign: 'centr center',
+        round: 'D'
       }
     }
   },
@@ -80,28 +77,12 @@ const links = {
     {
       props: {
         text: 'residence',
-        href: '/Sololaki',
-        opacity: '.75',
-        css: {
-          '&:hover': { opacity: '1' },
-          '&:before': { display: 'none' }
-        }
+        href: '/Sololaki'
       }
     },
-    {
-      props: {
-        text: 'travel',
-        opacity: '.55'
-      }
-    },
-    {
-      props: {
-        text: 'rental',
-        opacity: '.55'
-      }
-    }
+    { props: { text: 'travel' } },
+    { props: { text: 'rental' } }
   ]
-
 }
 
 const Container = {
@@ -115,27 +96,27 @@ const Container = {
       backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      animationName: positionCenterTop,
+      // animationName: positionCenterTop,
       animationDuration: '20s',
       backgroundPosition: 'top 50px left -425px',
       animationTimingFunction: 'ease-in-out',
       backgroundAttachment: 'fixed',
       overflow: 'hidden',
       '@media only screen and (max-width: 1366px)': {
-        backgroundPosition: 'top 50px left -350px',
-        animationName: positionCenterTop2
+        backgroundPosition: 'top 50px left -350px'
+        // animationName: positionCenterTop2
       },
       '@media only screen and (max-width: 1024px)': {
-        backgroundPosition: 'top 50px left -330px',
-        animationName: positionCenterTop3
+        backgroundPosition: 'top 50px left -330px'
+        // animationName: positionCenterTop3
       },
       '@media only screen and (max-width: 560px)': {
-        backgroundPosition: 'top 50px left -300px',
-        animationName: positionCenterTop4
+        backgroundPosition: 'top 50px left -300px'
+        // animationName: positionCenterTop4
       },
       '@media only screen and (max-width: 480px)': {
-        backgroundPosition: 'top 50px left -230px',
-        animationName: positionCenterTop5
+        backgroundPosition: 'top 50px left -230px'
+        // animationName: positionCenterTop5
       },
       '&:before': {
         content: '""',
@@ -156,7 +137,7 @@ const Container = {
         height: '100%',
         background: 'black',
         opacity: 0,
-        animationName: opacityReverse,
+        // animationName: opacityReverse,
         animationDuration: '3s',
         animationTimingFunction: 'ease-in-out',
         pointerEvents: 'none'
@@ -171,7 +152,7 @@ const Container = {
       flexAlign: 'flex-end center',
       padding: '0 E2 F 0',
       css: {
-        animationName: opacity,
+        // animationName: opacity,
         animationDuration: '2s',
         animationTimingFunction: 'ease-in-out'
       },
@@ -186,7 +167,7 @@ const Container = {
       }
     },
     heading,
-    links
+    navBar
   }
 }
 
@@ -202,4 +183,5 @@ export default {
     background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .92))'
   },
   container: { proto: Container }
+
 }
