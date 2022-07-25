@@ -3,30 +3,33 @@ import { Link } from 'smbls'
 
 import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 
+import { BBheading } from '../../components'
+
+import { animBBHeading } from './animations'
+
 import {
-  positionCenterTop, letterSpacing3, opacityReverse,
+  positionCenterTop, opacityReverse,
   positionCenterTop2, positionCenterTop3, positionCenterTop4,
   positionCenterTop5, opacity
 } from '../../animations'
 
 const heading = {
   tag: 'h1',
+  proto: BBheading,
+
   props: {
-    text: 'BB Hospitality',
-    color: 'gold .55',
     fontSize: 'K',
-    fontWeight: '100',
-    '@mobileM': {
-      fontSize: 'E',
-      fontWeight: '900',
-      textTransform: 'uppercase'
-    },
     css: {
-      animationName: letterSpacing3,
+      animationName: animBBHeading,
       animationDuration: '2s',
       animationTimingFunction: 'ease-in-out',
       zIndex: 2,
       opacity: 1
+    },
+    '@mobileM': {
+      fontSize: 'E',
+      fontWeight: '900',
+      textTransform: 'uppercase'
     }
   }
 }

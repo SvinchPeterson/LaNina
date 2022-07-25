@@ -1,5 +1,6 @@
 'use strict'
 
+export * from './BBheading'
 export * from './Link'
 export * from './Header'
 export * from './Footer'
