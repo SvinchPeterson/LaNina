@@ -1,5 +1,5 @@
 'use strict'
-import { RoomTab } from './index'
+import { RoomTab } from './RoomTab'
 
 import { ballerinaParagraph, redBrickParagrap, yellowCouchParagraph, greenForestParagraph, retroParagraph } from '../../texts'
 
