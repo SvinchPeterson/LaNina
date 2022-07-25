@@ -5,11 +5,12 @@ const link = {
   proto: Link,
   props: {
     color: 'cream2',
-    fontWeight: '900',
+    fontWeight: '700',
     fontSize: 'Z',
     css: {
       textTransform: 'uppercase',
-      textDecoration: 'none'
+      textDecoration: 'none',
+      letterSpacing: '.3px'
     }
   }
 }
