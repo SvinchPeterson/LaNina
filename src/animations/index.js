@@ -47,14 +47,6 @@ to {
 }
 `
 
-export const opacityReverse = keyframes`
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-`
 export const letterSpacing = keyframes`
   from {
     letter-spacing: 9px;
@@ -83,38 +75,6 @@ export const positionCenterTop = keyframes`
   }
   to {
     background-position: top 50px left -425px;
-  }
-`
-export const positionCenterTop2 = keyframes`
-  from {
-    background-position: center left -350px;
-  }
-  to {
-    background-position: top 50px left -350px;
-  }
-`
-export const positionCenterTop3 = keyframes`
-  from {
-    background-position: center left -330px;
-  }
-  to {
-    background-position: top 50px left -330px;
-  }
-`
-export const positionCenterTop4 = keyframes`
-  from {
-    background-position: center left -300px;
-  }
-  to {
-    background-position: top 50px left -300px;
-  }
-`
-export const positionCenterTop5 = keyframes`
-  from {
-    background-position: center left -230px;
-  }
-  to {
-    background-position: top 50px left -230px;
   }
 `
 export const opacity7 = keyframes`
