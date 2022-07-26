@@ -65,7 +65,7 @@ export const THEMES = {
   link: {}
 }
 
-export const RESPONSIVE = {
+export const MEDIA = {
   screenL: '(max-width: 1920px)',
   screenD: '(max-width: 1680px)',
   screenS: '(max-width: 1440px)',
@@ -85,6 +85,9 @@ export default set({
   gradient: GRADIENTS,
   theme: THEMES,
   font: FONT,
+  spacing: {
+    range: [-6, 20]
+  },
   font_family: FONT_FAMILY,
-  responsive: RESPONSIVE
+  media: MEDIA
 })
