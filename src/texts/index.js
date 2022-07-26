@@ -79,14 +79,15 @@ export const wineText = {
 const roomParagraph = {
   proto: Box,
   heading: {
-    proto: [Text, Box],
     props: {
       color: 'gold',
       padding: '0 0 Y2 0',
-      '@mobileL': { padding: '0 0 Y1 0' }
-    },
-    style: {
-      fontWeight: '500'
+      '@mobileL': { padding: '0 0 Y1 0' },
+      css: {
+        fontWeight: '500',
+        lineHeight: '0'
+
+      }
     }
   },
   p: {
