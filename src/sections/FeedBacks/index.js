@@ -186,8 +186,7 @@ export const feedBacks = {
           name: { text: 'Katie' },
           p: {
             text: `
-              Highly recommend to stay here! We really enjoyed La Niña Residence- Red Brick (also the other rooms look really cool too! )
-    It’s in a great area, shops and bars nearby and also walking distance to lots of attractions and less than 10min walk to Freedom Square.
+              Highly recommend to stay here! We really enjoyed BB Residence - Red Brick (also the other rooms look really cool too! ) It’s in a great area, shops and bars nearby and also walking distance to lots of attractions and less than 10min walk to Freedom Square.
               `
           },
           date: { text: 'Febryary | 2022' }
@@ -207,7 +206,7 @@ export const feedBacks = {
           name: { text: 'Alexsandr' },
           p: {
             text: `
-              BB Residence is a great cozy apartments near Liberty Square. It’s good to stay there and discover Tbilisi for yourself. Hope we will stay there again.
+              BB Residence is a great cozy apartments near Liberty Square. Its good to stay there and discover Tbilisi for yourself. Hope we will stay there again.
               `
           },
           date: { text: 'March | 2022' }
@@ -237,7 +236,7 @@ export const feedBacks = {
           name: { text: 'Dilfusa' },
           p: {
             text: `
-          Fue una estancia muy agradable! Hospitalidad, atención excelente! Ubicación y facilidades son perfectas. Muchas gracias a los dueños, me ayudaron en todo, presentaron mucho más de lo prometido)))
+          Fue una estancia muy agradable! Hospitalidad, atencion excelente! Ubicacion y facilidades son perfectas. Muchas gracias a los duenos, me ayudaron en todo, presentaron mucho mas de lo prometido)))
               `
           },
           date: { text: 'December | 2021' }
