@@ -1,38 +1,36 @@
 'use strict'
-import { Box, Grid } from 'smbls'
+import { Grid } from 'smbls'
+
+import { Feature } from '../../components'
 import SHELF_JPG from '../../assets/images/sololaki/shelf.jpg'
 
-export const placeFeature = {
-  proto: [Box],
-  props: {
-    margin: 'F2 0',
-    flexAlign: 'center center',
-    '@mobileL': { margin: 'E 0 F 0' },
-    '@mobileM': { margin: 'E 0 E 0' }
-  },
-  style: { width: '100%' },
+const props = {
+  margin: 'F2 0',
+  flexAlign: 'center center',
+  '@mobileL': { margin: 'E 0 F 0' },
+  '@mobileM': { margin: 'E 0 E 0' },
+  css: { width: '100%' },
+
   content: {
-    proto: [Grid, Box],
-    props: {
-      columns: 'repeat(4, 270px)',
-      gap: 'A2',
-      rowGap: 'A2',
-      padding: 'F 0',
-      position: 'relative',
-      '@tabletL': { columns: 'repeat(2, 340px)' },
-      '@mobileL': {
-        flexFlow: 'column',
-        columns: 'repeat(1, 340px)',
-        maxHeight: `${500 / 16}em`
-      },
-      '@mobileM': {
-        padding: 'D 0',
-        columns: 'repeat(1, 300px)',
-        maxHeight: `${400 / 16}em`
-      },
-      '@mobileXS': { columns: 'repeat(1, 270px)' }
+    columns: 'repeat(4, 270px)',
+    gap: 'A2',
+    rowGap: 'A2',
+    padding: 'F 0',
+    position: 'relative',
+    '@tabletL': { columns: 'repeat(2, 340px)' },
+    '@mobileL': {
+      flexFlow: 'column',
+      columns: 'repeat(1, 340px)',
+      maxHeight: `${500 / 16}em`
     },
-    style: {
+    '@mobileM': {
+      padding: 'D 0',
+      columns: 'repeat(1, 300px)',
+      maxHeight: `${400 / 16}em`
+    },
+    '@mobileXS': { columns: 'repeat(1, 270px)' },
+
+    css: {
       width: '100%',
       backgroundAttachment: 'fixed',
       backgroundImage: 'url(' + SHELF_JPG + ')',
@@ -64,56 +62,17 @@ export const placeFeature = {
           background: 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))'
         }
       }
-    },
+    }
+  }
+}
+
+export const placeFeature = {
+  props,
+  content: {
+    proto: Grid,
     childProto: {
-      proto: Box,
-      props: {
-        flexAlign: 'center flex-start',
-        padding: 'C B1',
-        round: 'Y'
-      },
-      style: {
-        boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .15)',
-        zIndex: 10,
-        backdropFilter: 'blur(5px)',
-        background: 'radial-gradient(rgba(248, 241, 227, .55), rgba(248, 241, 227, .65))',
-        '@media only screen and (max-width: 1366px)': {
-          boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .05)'
-        }
-      },
-      paragraph: {
-        proto: Box,
-        props: {
-          flexFlow: 'column',
-          gap: 'W',
-          flexAlign: 'flex-start flex-start'
-        },
-        title: {
-          tag: 'caption',
-          proto: Box,
-          props: {
-            fontWeight: '900',
-            color: 'black .85'
-          },
-          style: {
-            whiteSpace: 'nowrap',
-            textTransform: 'uppercase',
-            fontSize: `${12.3 / 16}em`,
-            letterSpacing: '.3px'
-          }
-        },
-        p: {
-          proto: Box,
-          props: {
-            padding: '0 0 0 U',
-            color: 'black .6'
-          },
-          style: {
-            letterSpacing: '.1px',
-            fontSize: `${14.4 / 16}em`
-          }
-        }
-      }
+      proto: Feature
+
     },
 
     ...[

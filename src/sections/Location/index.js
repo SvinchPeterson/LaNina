@@ -81,6 +81,9 @@ const contacts = {
 const props = {
   width: `${1440 / 16}em`,
   padding: '0 0 E 0',
+  '@mobileS': {
+    padding: 'C 0 C 0'
+  },
   css: { alignSelf: 'center' },
 
   content: {
@@ -88,6 +91,9 @@ const props = {
     gap: 'B',
     maxWidth: '65%',
     position: 'relative',
+    css: {
+      margin: 'auto'
+    },
     '@tabletS': { maxWidth: `${730 / 16}em` },
     '@mobileL': {
       maxWidth: `${550 / 16}em`,
@@ -101,24 +107,7 @@ const props = {
       padding: '0 0 C1 0'
     },
     '@mobileXS': {
-      maxWidth: `${320 / 16}em`
-    },
-    css: {
-      margin: 'auto'
-      // '&:before': {
-      //   content: '"Distance to Tbilisi International airport is 20 km. Central railway station is 11 km away."',
-      //   fontSize: `${14 / 16}em`,
-      //   position: 'absolute',
-      //   maxWidth: `${370 / 14}em`,
-      //   letterSpacing: '.2px',
-      //   right: `${50 / 14}em`,
-      //   top: `${-150 / 14}em`,
-      //   textAlign: 'right',
-      //   '@medi only screen and (max-width: 480px)': {
-      //     maxWidth: `${250 / 14}em`,
-      //     right: `${15 / 14}em`
-      //   }
-      // }
+      maxWidth: `${310 / 16}em`
     },
 
     contacts: {
