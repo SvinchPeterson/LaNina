@@ -8,29 +8,30 @@ const image = {
   props: {
     boxSize: `H H3`,
     padding: 'D 0 0 0',
-    '@tabletL': { boxSize: '100% H' }
-  },
-  style: {
-    backgroundImage: 'linear-gradient(rgba(60,84, 72, .35), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
-    backgroundSize: 'contain',
-    backgroundPosition: 'center bottom 100px',
-    backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
-    zIndex: 2,
-    '@media only screen and (max-width: 1366px)': {
-      backgroundPosition: 'center center',
-      backgroundSize: 'cover',
-      backgroundAttachment: 'initial',
-      position: 'relative',
-      '&:before': {
-        content: '""',
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        background: 'rgba(0, 0, 0, .3)'
+    '@tabletL': { boxSize: '100% H' },
+    css: {
+      backgroundImage: 'linear-gradient(rgba(60,84, 72, .35), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
+      backgroundSize: 'contain',
+      backgroundPosition: 'center bottom 100px',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+      zIndex: 2,
+      '@media only screen and (max-width: 1366px)': {
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        backgroundAttachment: 'initial',
+        position: 'relative',
+        '&:before': {
+          content: '""',
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          background: 'rgba(0, 0, 0, .3)'
+        }
       }
+
     }
   }
 }
@@ -47,18 +48,18 @@ const paragraph = {
       margin: '0 0 0 0',
       background: 'cream2 0'
     },
-    '@mobileM': { width: '100%' }
-  },
-  style: {
-    borderTop: 'none',
-    zIndex: '10',
-    backgroundAttachment: 'fixed'
+    '@mobileM': { width: '100%' },
+    css: {
+      borderTop: 'none',
+      zIndex: '10',
+      backgroundAttachment: 'fixed'
+    }
   },
 
   texts: {
     proto: Box,
     props: {
-      maxWidth: `${500 / 14.3}em`,
+      maxWidth: `${550 / 14.3}em`,
       margin: '0 auto',
       color: 'black .75',
       padding: 'F1 E E2 E',
@@ -67,15 +68,12 @@ const paragraph = {
       '@tabletL': { color: 'cream 1' },
       '@mobileM': {
         maxWidth: `100%`,
-        padding: '0 D'
+        padding: '0 A1'
+      },
+      css: {
+        fontSize: `${14.3 / 16}em`,
+        letterSpacing: '.3px'
       }
-    },
-    style: {
-      textAlign: 'justify',
-      wordSpacing: '-1px',
-      fontSize: `${14.3 / 16}em`,
-      lineHeight: `${23.5 / 14.3}em`,
-      letterSpacing: '.8px'
     },
 
     ...[
@@ -91,19 +89,21 @@ const paragraph = {
   }
 }
 
+const props = {
+  position: 'relative',
+  flexAlign: 'center center',
+  padding: 'D2 0',
+  '@tabletL': {
+    flexFlow: 'column',
+    flexAlign: 'flex-end center',
+    padding: 'E2 0 D2 0'
+  },
+  '@mobileM': { padding: 'E 0 D2 0' }
+}
+
 export const Wine = {
   proto: Box,
-  props: {
-    position: 'relative',
-    flexAlign: 'center center',
-    padding: 'D2 0',
-    '@tabletL': {
-      flexFlow: 'column',
-      flexAlign: 'flex-end center',
-      padding: 'E2 0 D2 0'
-    },
-    '@mobileM': { padding: 'E 0 D2 0' }
-  },
+  props,
   attr: { id: 'wine' },
 
   image,
