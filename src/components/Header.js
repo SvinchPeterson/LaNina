@@ -3,7 +3,7 @@ import { keyframes } from '@emotion/css'
 
 import { Navbar } from './Navbar'
 
-import { Book } from './Book'
+import { Book } from './Books'
 import { MenuButton } from './MenuButton'
 
 export const opacity = keyframes`

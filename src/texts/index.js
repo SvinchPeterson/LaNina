@@ -85,7 +85,7 @@ const roomParagraph = {
       '@mobileL': { padding: '0 0 Y1 0' },
       css: {
         fontWeight: '500',
-        lineHeight: '0'
+        lineHeight: '20px'
 
       }
     }
