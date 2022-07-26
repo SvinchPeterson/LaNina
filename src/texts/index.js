@@ -91,7 +91,10 @@ const roomParagraph = {
   },
   p: {
     proto: [Text, Box],
-    props: { color: 'cream2 1' }
+    props: {
+      color: 'cream2 1',
+      fontWeight: '400'
+    }
   }
 }
 export const ballerinaParagraph = {

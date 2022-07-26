@@ -13,89 +13,70 @@ const icon = {
       padding: 'B2'
     },
     '@mobileL': { padding: 'A2' },
-    '@mobileS': { padding: 'Z2' }
+    '@mobileS': { padding: 'Z2' },
+    css: { zIndex: '20' }
+  },
 
-    // '@tabletS': { padding: 'B2' }
-  },
-  style: {
-    zIndex: '20'
-  },
   img: {
     proto: [Img, Box],
     props: {
       boxSize: 'A1 A1',
-      '@tabletL': {
-        boxSize: 'B B'
-      },
-      '@mobileL': {
-        boxSize: 'A1 A1'
+      '@tabletL': { boxSize: 'B B' },
+      '@mobileL': { boxSize: 'A1 A1' },
+      css: {
+        opacity: '.85',
+        '@media only screen and (max-width: 1366px)': { opacity: 1 }
       }
-    },
-    style: {
-      opacity: '.85',
-      '@media only screen and (max-width: 1366px)': { opacity: 1 }
     }
   }
 }
 
 const tabParagraph = {
-  proto: Box,
   props: {
     color: 'cream2',
     padding: `0 A2`,
-    fontSize: `${14 / 16}em`
-  },
-  style: {
-    // fontSize: `${14.1 / 16}em`,
-    zIndex: 10,
-    opacity: 0,
-    width: `${375 / 14}em`,
-    boxSizing: 'border-box',
-    pointerEvents: 'none',
-    transition: 'opacity .3s ease-in-out',
-    transitionDelay: '.4s',
-    letterSpacing: `${0.8 / 14}em`,
-    wordSpacing: `${-1.3 / 14}em`,
-    '> p': { textAlign: 'justify' },
-    '@media only screen and (max-width: 1366px)': {
-      fontSize: `${15 / 16}em`,
-      width: `${500 / 15}em`,
-      lineHeight: `${21 / 15}em`
-    },
-    '@media only screen and (max-width: 768px)': {
-      fontSize: `${13.5 / 16}em`,
-      width: `${380 / 13.5}em`,
-      lineHeight: `${18 / 13.5}em`
-    },
-    '@media only screen and (max-width: 350px)': {
-      fontSize: `${12.8 / 16}em`,
-      width: `${310 / 12.8}em`
+    fontSize: `${14 / 16}em`,
+    css: {
+      zIndex: 10,
+      opacity: 0,
+      width: `${360 / 14}em`,
+      boxSizing: 'border-box',
+      pointerEvents: 'none',
+      transition: 'opacity .3s ease-in-out',
+      transitionDelay: '.4s',
+      letterSpacing: `${0.15 / 14}em`,
+      '@media only screen and (max-width: 1366px)': {
+        fontSize: `${15 / 16}em`,
+        width: `${500 / 15}em`
+      },
+      '@media only screen and (max-width: 768px)': {
+        fontSize: `${13.5 / 16}em`,
+        width: `${380 / 13.5}em`
+      },
+      '@media only screen and (max-width: 350px)': {
+        fontSize: `${12.8 / 16}em`,
+        width: `${310 / 12.8}em`
+      }
     }
   },
+
   class: {
     show: (element, state) => state.activeTab === element.parent.parent.key ? { opacity: 1 } : {}
   }
-
 }
 
-export const RoomTab = {
-  proto: [Link, Box],
-  props: {
-    height: 'G1',
-    padding: 'B',
-    position: 'relative',
-    round: 'Y2',
-    '@tabletL': {
-      minWidth: '100%',
-      height: 'H'
-    },
-    '@mobileL': {
-      height: 'G'
-    },
-    '@mobileM': { round: '0' }
+export const props = {
+  height: 'G1',
+  padding: 'B',
+  position: 'relative',
+  round: 'Y2',
+  '@tabletL': {
+    minWidth: '100%',
+    height: 'H'
   },
-
-  style: {
+  '@mobileL': { height: 'G' },
+  '@mobileM': { round: '0' },
+  css: {
     overflow: 'hidden',
     flex: 1,
     cursor: 'pointer',
@@ -154,16 +135,25 @@ export const RoomTab = {
         bottom: `${20 / 14}em`,
         right: `${20 / 14}em`
       },
-      '@media only screen and (max-width: 350px)': {
-        bottom: `${10 / 14}em`
-      }
-      // '@media only screen and (max-width: 1024px)': {
-      //   fontSize: `${16 / 16}em`,
-      //   bottom: '30px',
-      //   right: '30px'
-      // }
+      '@media only screen and (max-width: 350px)': { bottom: `${10 / 14}em` }
     }
   },
+
+  content: {
+    position: 'absolute',
+    boxSize: '100% 100%',
+    top: '0',
+    left: '0',
+    flexFlow: 'column',
+    flexAlign: 'center center',
+    css: { overflow: 'hidden' }
+  }
+}
+
+export const RoomTab = {
+  proto: Link,
+  props,
+
   on: {
     click: (event, element, state) => {
       state.update({ activeTab: element.key, back: true })
@@ -195,21 +185,7 @@ export const RoomTab = {
   },
 
   content: {
-    proto: Box,
-    props: {
-      position: 'absolute',
-      boxSize: '100% 100%',
-      top: '0',
-      left: '0',
-      flexFlow: 'column',
-      flexAlign: 'center center'
-    },
-    style: { overflow: 'hidden' },
-
-    paragraph: {
-      proto: tabParagraph
-    },
-
+    paragraph: { proto: tabParagraph },
     icon: { proto: icon }
   }
 }

@@ -2,105 +2,11 @@
 
 import { Box, Img } from 'smbls'
 
+import { FeedBack } from '../../components'
+
 // import RIGHT_ARROW_PNG from '../../assets/icons/arrow-right.png'
 import LEFT_ARROW_PNG from '../../assets/icons/leftBlack.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/rightBlack.png'
-
-const feedBackParagraph = {
-  props: {
-    padding: 'C2 C C C',
-    flexFlow: 'column',
-    flexAlign: 'flex-start flex-start',
-    background: 'black .05',
-    maxHeight: 'G',
-    position: 'relative',
-    round: 'Y2',
-    minWidth: 'H1',
-    '@tabletL': {
-      minWidth: '100%'
-    },
-    '@mobileM': {
-      padding: 'B1 0 B1 0',
-      maxHeight: 'G'
-    },
-    '@mobileS': {
-      maxHeight: 'G1'
-    }
-  },
-  style: {
-    boxSizing: 'border-box',
-    background: 'linear-gradient(rgba(0, 0, 0, .03), rgba(0, 0, 0, .035))',
-    height: `${500 / 16}em`,
-    maxWidth: 'fit-content',
-    '@media only screen and (max-height: 600px)': {
-      maxHeight: `${250 / 16}em`,
-      padding: `${15 / 16}em 0`
-    }
-  },
-  name: {
-    tag: 'caption',
-    proto: Box,
-    text: 'Ashitha',
-    props: {
-      margin: '0',
-      fontWeight: '900',
-      padding: '0 0 B B',
-      color: 'black .85'
-    },
-    style: {
-      textTransform: 'uppercase',
-      letterSpacing: '1.5px',
-      fontSize: `${12.5 / 16}em`,
-      '@media only screen and (max-height: 600px)': { padding: `0 0 ${10 / 12.5}em ${22 / 12.5}em` }
-    }
-  },
-
-  p: {
-    proto: Box,
-    text: `This a must stay n worth every penny. The host was great, the place was great, great ambience, a quiet place but just few minutes walk to all the central points. The hospitality was great and the host was very helpful and accessible for all my needs. Special thanks to Gaia and Tato who actually received me like family and came in person while i was saying my bye too. I would really want to come back for a longer stay. Love the place and love u guys.`,
-    props: {
-      color: 'black .6',
-      fontWeight: '400',
-      padding: '0 B'
-    },
-    style: {
-      textAlign: 'left',
-      fontSize: `${14.3 / 16}em`,
-      letterSpacing: '.8px',
-      // wordSpacing: '-1.45px',
-      lineHeight: `${22 / 14.3}em`,
-      maxwidth: `${550 / 14.3}em`,
-      '@media only screen and (max-width: 560px)': {
-        // fontSize: `${13.5 / 16}em`,
-        // lineHeight: `${25 / 13.5}em`
-      }
-    }
-  },
-
-  date: {
-    tag: 'h5',
-    proto: Box,
-    text: 'January | 2022',
-    props: {
-      padding: '0 Y2 0 0',
-      position: 'absolute',
-      right: 'D2',
-      bottom: 'C',
-      color: 'black .55',
-      '@mobileL': {
-        right: 'B2',
-        bottom: 'B1'
-      }
-    },
-    style: {
-      fontWeight: '500',
-      alignSelf: 'flex-end',
-      wordSpacing: '3px',
-      fontSize: `${14 / 16}em`,
-      '@media only screen and (max-height: 600px)': { bottom: `${15 / 14}em` }
-    }
-  }
-}
 
 const navArrows = {
   proto: Box,
@@ -112,15 +18,15 @@ const navArrows = {
     proto: Box,
     tag: 'button',
     props: {
-      padding: 'Y1'
-    },
-    style: {
-      cursor: 'pointer',
-      background: 'none',
-      outline: 'none',
-      border: 'none',
-      opacity: '.8',
-      '&:hover': { opacity: '1' }
+      padding: 'Y1',
+      css: {
+        cursor: 'pointer',
+        background: 'none',
+        outline: 'none',
+        border: 'none',
+        opacity: '.8',
+        '&:hover': { opacity: '1' }
+      }
     },
     arrow: {
       proto: [Img, Box],
@@ -167,7 +73,8 @@ const heading = {
   proto: Box,
   props: {
     flexAlign: 'center space-between',
-    width: '85%'
+    width: '70%',
+    '@mobileL': { width: '85%' }
   },
   style: {
     zIndex: '20',
@@ -179,13 +86,13 @@ const heading = {
     tag: 'caption',
     text: 'feedbacks',
     props: {
-      fontWeight: '700'
-    },
-    style: {
-      whiteSpace: 'nowrap',
-      letterSpacing: '.3px',
-      zIndex: '100',
-      opacity: '.8'
+      fontWeight: '700',
+      css: {
+        whiteSpace: 'nowrap',
+        letterSpacing: '.3px',
+        zIndex: '100',
+        opacity: '.8'
+      }
     }
   },
   arrows: {
@@ -193,25 +100,17 @@ const heading = {
   }
 }
 
-export const feedBacks = {
-  proto: Box,
-  props: {
-    maxWidth: '1440px',
-    minHeight: 'H',
-    padding: '0 0',
-    '@tabletL': {
-      maxWidth: '75%',
-      padding: '0 D'
-    },
-    '@tabletM': {
-      maxWidth: '100%'
-    },
-    '@mobileM': {
-      padding: '0 A'
-    }
+const props = {
+  maxWidth: '1440px',
+  minHeight: 'H',
+  '@tabletL': {
+    maxWidth: '75%',
+    padding: '0 D'
   },
-
-  style: {
+  '@tabletM': { maxWidth: '100%' },
+  '@mobileL': { padding: '0 C' },
+  '@mobileM': { padding: '0 A' },
+  css: {
     overflowX: 'hidden',
     margin: '0 auto',
     boxSizing: 'border-box',
@@ -220,17 +119,13 @@ export const feedBacks = {
     '@media only screen and (max-width: 560px)': { marginTop: `${150 / 16}em` }
   },
 
-  heading: { proto: heading },
   content: {
-    proto: Box,
-    props: {
-      position: 'relative',
-      width: '85%',
-      '@mobileM': {
-        width: '100%'
-      }
+    position: 'relative',
+    width: '85%',
+    '@mobileM': {
+      width: '100%'
     },
-    style: {
+    css: {
       margin: '0 auto',
       marginTop: `${50 / 16}em`,
       '@media only screen and (max-width: 560px)': { marginTop: `${30 / 16}em` },
@@ -262,22 +157,29 @@ export const feedBacks = {
         zIndex: 3
       }
     },
-
     feedbacks: {
-      proto: Box,
-      props: {
-        flexAlign: 'flex-start flex-start',
-        gap: 'B'
-      },
-      style: {
+      flexAlign: 'flex-start flex-start',
+      gap: 'B',
+      css: {
         scrollBehavior: 'smooth',
         overflowX: 'auto',
         minWidth: '100%',
         alignSelf: 'center',
         '&::-webkit-scrollbar': { display: 'none' }
-      },
+      }
+    }
+  }
+
+}
+
+export const feedBacks = {
+  props,
+
+  heading: { proto: heading },
+  content: {
+    feedbacks: {
       childProto: {
-        proto: feedBackParagraph
+        proto: FeedBack
       },
       ...[
         {
