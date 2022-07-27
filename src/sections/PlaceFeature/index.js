@@ -12,23 +12,23 @@ const props = {
   css: { width: '100%' },
 
   content: {
-    columns: 'repeat(4, 270px)',
+    columns: `repeat(4, ${270 / 16}em)`,
     gap: 'A2',
     rowGap: 'A2',
-    padding: 'F 0',
+    padding: 'F E',
     position: 'relative',
-    '@tabletL': { columns: 'repeat(2, 340px)' },
+    '@tabletL': { columns: `repeat(2, ${340 / 16}em)` },
     '@mobileL': {
       flexFlow: 'column',
-      columns: 'repeat(1, 340px)',
+      columns: `repeat(1, ${340 / 16}em)`,
       maxHeight: `${500 / 16}em`
     },
     '@mobileM': {
       padding: 'D 0',
-      columns: 'repeat(1, 300px)',
+      columns: `repeat(1, ${340 / 16}em)`,
       maxHeight: `${400 / 16}em`
     },
-    '@mobileXS': { columns: 'repeat(1, 270px)' },
+    '@mobileXS': { columns: `repeat(1, ${340 / 16}em)` },
 
     css: {
       width: '100%',

@@ -18,6 +18,6 @@ export default {
   p: { margin: 0 },
   h6: { margin: 0 },
   background: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))',
-  '@media only screen and (min-width: 1680px)': { fontSize: '20px' }
+  '@media only screen and (min-width: 1680px)': { fontSize: '17px' }
 
 }

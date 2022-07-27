@@ -25,11 +25,17 @@ const props = {
         whiteSpace: 'nowrap',
         textTransform: 'uppercase',
         fontSize: `${12.3 / 16}em`,
-        letterSpacing: '.3px'
+        letterSpacing: '.1px'
       }
-
+    },
+    p: {
+      padding: '0 0 0 U',
+      color: 'black .6',
+      fontSize: 'Z',
+      css: {
+        letterSpacing: '.1px'
+      }
     }
-
   }
 
 }
@@ -38,16 +44,6 @@ export const Feature = {
 
   paragraph: {
     title: { tag: 'caption' },
-    p: {
-      props: {
-        padding: '0 0 0 U',
-        color: 'black .6'
-      },
-      style: {
-        letterSpacing: '.1px',
-        fontSize: `${14.4 / 16}em`
-      }
-    }
+    p: {}
   }
-
 }
