@@ -1,10 +1,31 @@
 'use strict'
+import { Img, Link } from 'smbls'
 import { keyframes } from '@emotion/css'
 
 import { Navbar } from './Navbar'
+import LOGO_PNG from '../assets/icons/logo-white.png'
 
 import { Book } from './Book'
 import { MenuButton } from './MenuButton'
+
+const logo = {
+  proto: Link,
+  props: {
+    href: '#banner',
+    css: {
+      opacity: '.8',
+      '&:hover': { opacity: 1 }
+    }
+  },
+
+  icon: {
+    proto: Img,
+    props: {
+      src: LOGO_PNG,
+      boxSize: ' B1'
+    }
+  }
+}
 
 export const opacity = keyframes`
   from {
@@ -47,7 +68,7 @@ export const Header = {
     }
   },
 
-  Book,
+  logo,
   navBar
 }
 
@@ -69,7 +90,5 @@ export const HeaderMobile = {
     '@mobileM': { padding: 'B2 C 0 C' },
     '@mobileS': { padding: 'B A1 0 A1' }
   },
-
-  Book,
   MenuButton
 }

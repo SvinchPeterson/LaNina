@@ -3,9 +3,8 @@ import { Link } from 'smbls'
 export const Book = {
   proto: Link,
   props: {
-    padding: 'Z B1',
+    padding: 'Y2 B',
     round: 'B',
-    // padding: 'Y2 W2 0 B',
     color: 'white',
     href: 'https://www.airbnb.com/users/show/404104381',
     target: '_blank',
@@ -14,7 +13,6 @@ export const Book = {
       border: '1px solid rgba(245, 245, 245, .5)',
       textDecoration: 'none',
       zIndex: 100,
-      // fontWeight: '900',
       '&:hover > span': { opacity: '1' }
     }
   },

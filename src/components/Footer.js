@@ -5,6 +5,7 @@ import { Img, Link } from 'smbls'
 import FACEBOOK_PNG from '../assets/icons/facebook-white.png'
 import INSTAGRAM_PNG from '../assets/icons/instagram-white.png'
 import LOGO_PNG from '../assets/icons/logo-white.png'
+import { Book } from './Book'
 
 const logo = {
   proto: Link,
@@ -81,5 +82,5 @@ export const Footer = {
   },
 
   socialLinks,
-  logo
+  Book
 }

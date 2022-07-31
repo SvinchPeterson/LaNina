@@ -5,7 +5,7 @@ const link = {
   proto: Link,
   props: {
     color: 'cream2',
-    fontWeight: '900',
+    fontWeight: '700',
     fontSize: 'Z',
     css: {
       textTransform: 'uppercase',
