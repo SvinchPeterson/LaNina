@@ -23,7 +23,7 @@ const socialLinks = {
       props: {
         boxSize: ' B',
         css: {
-          opacity: '.85',
+          // opacity: '.9',
           '&:hover': { opacity: 1 }
         }
       }
@@ -40,7 +40,7 @@ const socialLinks = {
       props: { href: 'https://www.instagram.com/laninaresidence/' },
       icon: {
         props: { src: INSTAGRAM_PNG },
-        style: { opacity: '.85' }
+        style: { opacity: '.9' }
       }
     }
   ]

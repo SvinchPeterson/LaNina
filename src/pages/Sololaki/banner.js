@@ -129,7 +129,7 @@ const image = {
         width: '100%',
         height: '100%',
         display: 'block',
-        background: 'radial-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .9))',
+        background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .85))',
         animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
       },
       '@media only screen and (max-width: 1366px)': {
