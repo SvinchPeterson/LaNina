@@ -4,13 +4,15 @@ import { Link } from 'smbls'
 const link = {
   proto: Link,
   props: {
-    color: 'cream2',
+    color: 'white',
     fontWeight: '700',
     fontSize: 'Z',
     css: {
       textTransform: 'uppercase',
       textDecoration: 'none',
-      letterSpacing: '.3px'
+      letterSpacing: '.3px',
+      opacity: '.9',
+      '&:hover': { opacity: 1 }
     }
   }
 }

@@ -4,27 +4,7 @@ import { Img, Link } from 'smbls'
 
 import FACEBOOK_PNG from '../assets/icons/facebook-white.png'
 import INSTAGRAM_PNG from '../assets/icons/instagram-white.png'
-import LOGO_PNG from '../assets/icons/logo-white.png'
 import { Book } from './Book'
-
-const logo = {
-  proto: Link,
-  props: {
-    href: '#banner',
-    css: {
-      opacity: '.8',
-      '&:hover': { opacity: 1 }
-    }
-  },
-
-  icon: {
-    proto: Img,
-    props: {
-      src: LOGO_PNG,
-      boxSize: ' B'
-    }
-  }
-}
 
 const socialLinks = {
   tag: 'nav',
@@ -43,7 +23,7 @@ const socialLinks = {
       props: {
         boxSize: ' B',
         css: {
-          opacity: '.8',
+          opacity: '.85',
           '&:hover': { opacity: 1 }
         }
       }
@@ -60,7 +40,7 @@ const socialLinks = {
       props: { href: 'https://www.instagram.com/laninaresidence/' },
       icon: {
         props: { src: INSTAGRAM_PNG },
-        style: { opacity: '.65' }
+        style: { opacity: '.85' }
       }
     }
   ]
@@ -72,7 +52,7 @@ export const Footer = {
     position: 'fixed',
     bottom: '0',
     flexAlign: 'flex-start space-between',
-    padding: '0 D2 C1 D2',
+    padding: '0 C1 B C1',
     css: {
       zIndex: '50',
       mixBlendMode: 'difference'

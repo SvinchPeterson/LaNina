@@ -10,7 +10,7 @@ export const Book = {
     target: '_blank',
 
     css: {
-      border: '1px solid rgba(245, 245, 245, .5)',
+      border: '1px solid rgba(245, 245, 245, .75)',
       textDecoration: 'none',
       zIndex: 100,
       '&:hover > span': { opacity: '1' }
@@ -21,7 +21,7 @@ export const Book = {
     props: {
       text: 'BOOK',
       fontSize: 'Z',
-      css: { opacity: '.8' }
+      css: { opacity: '.9' }
     }
   }
 }

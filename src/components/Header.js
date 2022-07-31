@@ -4,8 +4,6 @@ import { keyframes } from '@emotion/css'
 
 import { Navbar } from './Navbar'
 import LOGO_PNG from '../assets/icons/logo-white.png'
-
-import { Book } from './Book'
 import { MenuButton } from './MenuButton'
 
 const logo = {
@@ -13,7 +11,6 @@ const logo = {
   props: {
     href: '#banner',
     css: {
-      opacity: '.8',
       '&:hover': { opacity: 1 }
     }
   },
@@ -56,8 +53,8 @@ export const Header = {
     top: '0',
     left: '0',
     flexAlign: 'center space-between',
-    padding: '0 D2 0 D2',
-    margin: 'C1 0',
+    padding: 'B C1 B C1',
+    margin: '0 0 0 0',
     '@mobileL': { display: 'none' },
     css: {
       zIndex: '100',
