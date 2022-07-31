@@ -1,6 +1,6 @@
 'use strict'
 import { HeaderMobile, Menu, Header, Footer } from '../../components'
-import { Building, Entrence, Apartments, Wine, Location, placeFeature, feedBacks } from '../../sections'
+import { Residence, Entrence, Apartments, Wine, Location, placeFeature, feedBacks } from '../../sections'
 import { banner } from './banner'
 
 import { opacity } from '../../animations'
@@ -29,8 +29,8 @@ const props = {
     margin: '0 auto',
     animationName: opacity,
     animationDuration: '2s',
-    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)',
-    fontFamily: 'Helvetica Neue'
+    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
+    // fontFamily: 'Helvetica Neue'
   }
 }
 
@@ -42,7 +42,7 @@ export default {
   Header,
   HeaderMobile,
   Menu,
-  Building,
+  Residence,
   placeFeature,
   Entrence,
   Apartments,

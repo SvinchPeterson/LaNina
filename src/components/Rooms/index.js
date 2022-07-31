@@ -26,7 +26,7 @@ const book = {
   attr: { target: '_blank' },
   style: {
     textTransform: 'uppercase',
-    fontWeight: 900,
+    // fontWeight: 900,
     zIndex: '30',
     textDecoration: 'none',
     width: 'fit-content',
@@ -143,7 +143,7 @@ const back = {
       }
     },
     style: {
-      fontWeight: '900',
+      // fontWeight: '900',
       // textOrientation: 'upright',
       // writingMode: 'vertical-rl',
       letterSpacing: '1px',

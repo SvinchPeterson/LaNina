@@ -23,7 +23,7 @@ const title = {
     },
     '@mobileM': {
       fontSize: 'E',
-      fontWeight: '900',
+      // fontWeight: '900',
       textTransform: 'uppercase'
     }
   }

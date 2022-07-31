@@ -113,7 +113,7 @@ export const props = {
     '&:after': {
       content: '""',
       fontSize: `${13 / 16}em`,
-      fontWeight: 900,
+      // fontWeight: 900,
       position: 'absolute',
       textShadow: '2px 2px 30px 1px rgba(0, 0, 0, .4)',
       bottom: `${35 / 13}em`,

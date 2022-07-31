@@ -35,7 +35,7 @@ const itemProps = {
   fontSize: `${14 / 16}em`,
   position: 'relative',
   flexAlign: 'center flex-end',
-  fontWeight: '500',
+  // fontWeight: '500',
   color: 'black',
   letterSpacing: '.8px'
 }

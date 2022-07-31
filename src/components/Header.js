@@ -3,7 +3,7 @@ import { keyframes } from '@emotion/css'
 
 import { Navbar } from './Navbar'
 
-import { Book } from './Books'
+import { Book } from './Book'
 import { MenuButton } from './MenuButton'
 
 export const opacity = keyframes`
@@ -20,7 +20,7 @@ const navBar = {
   props: { gap: 'C1' },
 
   ...[
-    { props: { text: 'story', href: '#residence' } },
+    { props: { text: 'residence', href: '#residence' } },
     { props: { text: 'apartments', href: '#apartments' } },
     { props: { text: 'wine', href: '#wine' } },
     { props: { text: 'location', href: '#location' } }

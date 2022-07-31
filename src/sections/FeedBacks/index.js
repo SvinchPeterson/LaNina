@@ -86,7 +86,7 @@ const heading = {
     tag: 'caption',
     text: 'feedbacks',
     props: {
-      fontWeight: '700',
+      // fontWeight: '700',
       css: {
         whiteSpace: 'nowrap',
         letterSpacing: '.3px',

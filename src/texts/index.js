@@ -27,7 +27,7 @@ export const vision = {
   }
 }
 
-export const BuildingHistory = {
+export const ResidenceText = {
   tag: 'p',
   ...[
     {
@@ -84,7 +84,7 @@ const roomParagraph = {
       padding: '0 0 Y2 0',
       '@mobileL': { padding: '0 0 Y1 0' },
       css: {
-        fontWeight: '500',
+        // fontWeight: '500',
         lineHeight: '20px'
 
       }
@@ -93,8 +93,8 @@ const roomParagraph = {
   p: {
     proto: [Text, Box],
     props: {
-      color: 'cream2 1',
-      fontWeight: '400'
+      color: 'cream2 1'
+      // fontWeight: '400'
     }
   }
 }

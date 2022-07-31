@@ -14,8 +14,8 @@ const header = {
   },
   style: {
     textTransform: 'uppercase',
-    transition: 'height .3s linear',
-    fontWeight: 900
+    transition: 'height .3s linear'
+    // fontWeight: 900
   },
 
   h5: {
@@ -23,7 +23,7 @@ const header = {
       text: 'amenities',
       color: 'cream2 .75',
       fontSize: 'Z',
-      fontWeight: '900',
+      // fontWeight: '900',
       '@tabletL': { color: 'cream2' },
       '@mobileS': {
         // fontSize: 'Y'
@@ -169,7 +169,7 @@ const offers = {
         // '@mobileS': { fontSize: 'Y' }
       },
       style: {
-        fontWeight: 500,
+        // fontWeight: 500,
         textTransform: 'uppercase'
       }
     },

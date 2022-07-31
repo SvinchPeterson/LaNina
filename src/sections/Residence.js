@@ -1,8 +1,14 @@
 'use strict'
-import { BuildingHistory } from '../texts'
+import { ResidenceText } from '../texts'
 
-const buildingHistory = {
-  proto: BuildingHistory,
+import { SectionTitle } from '../components'
+
+const title = {
+  proto: SectionTitle
+}
+
+const paragraph = {
+  proto: ResidenceText,
   props: {
     fontSize: `${15 / 16}em`,
     flexFlow: 'column',
@@ -23,9 +29,11 @@ const buildingHistory = {
   }
 }
 
-export const Building = {
-  props: { flexAlign: 'center center' },
+export const Residence = {
+  props: {
+    flexAlign: 'center center'
+  },
   attr: { id: 'residence' },
 
-  buildingHistory
+  paragraph
 }

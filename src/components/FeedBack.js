@@ -30,7 +30,7 @@ const props = {
 
   name: {
     margin: '0',
-    fontWeight: '900',
+    // fontWeight: '900',
     color: 'black .85',
     css: {
       textTransform: 'uppercase',
@@ -43,7 +43,7 @@ const props = {
   p: {
     text: `This a must stay n worth every penny. The host was great, the place was great, great ambience, a quiet place but just few minutes walk to all the central points. The hospitality was great and the host was very helpful and accessible for all my needs. Special thanks to Gaia and Tato who actually received me like family and came in person while i was saying my bye too. I would really want to come back for a longer stay. Love the place and love u guys.`,
     color: 'black .6',
-    fontWeight: '400',
+    // fontWeight: '400',
     css: {
       fontSize: `${14.3 / 16}em`,
       letterSpacing: '.8px',
@@ -64,7 +64,7 @@ const props = {
       right: 'B1'
     },
     css: {
-      fontWeight: '500',
+      // fontWeight: '500',
       alignSelf: 'flex-end',
       fontSize: `${14 / 16}em`,
       '@media only screen and (max-height: 600px)': { bottom: `${15 / 14}em` }

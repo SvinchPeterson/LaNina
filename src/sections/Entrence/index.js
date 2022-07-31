@@ -45,7 +45,7 @@ const texts = {
   proto: Box,
   props: {
     margin: 'E 0 0 0',
-    fontWeight: '400',
+    // fontWeight: '400',
     flexFlow: 'column',
     maxWidth: `${750 / 16}em`,
     fontSize: 'A',
@@ -77,7 +77,7 @@ const props = {
   flexAlign: 'center flex-start',
   margin: '0 auto',
   gap: 'Z',
-  fontWeight: '300',
+  // fontWeight: '300',
   css: {
     marginTop: `${200 / 16}em`,
     marginBottom: `${200 / 16}em`,

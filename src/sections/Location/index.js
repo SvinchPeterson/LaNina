@@ -48,7 +48,7 @@ const contacts = {
         flexAlign: 'flex-end flex-end',
         padding: '0 0 0 0'
       },
-      '@mobileXS': { fontWeight: '400' },
+      // '@mobileXS': { fontWeight: '400' },
       css: {
         '@media only screen and (max-width: 768px)': {
           display: 'grid',

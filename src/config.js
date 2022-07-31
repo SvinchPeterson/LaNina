@@ -2,36 +2,67 @@
 
 import { set } from '@symbo.ls/scratch'
 
-import DejavuBold from './assets/fonts/DejaVuSans-Bold.woff2'
+// import DejavuBold from './assets/fonts/DejaVuSans-Bold.woff2'
 import Dejavu from './assets/fonts/DejaVuSans.woff2'
-import Geo from './assets/fonts/BPGExtraSquareMtavruli.woff2'
-import Helvetica from './assets/fonts/HelveticaNeueLTGEOCaps-45Light.ttf'
+// import Geo from './assets/fonts/BPGExtraSquareMtavruli.woff2'
+// import HelveticaLight from './assets/fonts/HelveticaNeueLTGEOCaps-45Light.ttf'
+// import HelveticaNormal from './assets/fonts/HelveticaNeueLTGEOCaps-55Roman-4.ttf'
+// import HelveticaBold from './assets/fonts/HelveticaNeueLTGEOCaps-75Bold.ttf'
+// import HelveticaExtraLight from './assets/fonts/HelveticaNeueUltraLight.ttf'
+import Helvetica from './assets/fonts/otherFonts/Helvetica Neue UltraLight.ttf'
 
 export const FONT = {
-  Dejavu: [{
-    url: Dejavu,
-    fontWeight: 400
-  }, {
-    url: DejavuBold,
-    fontWeight: 700
-  }],
+  Helvetica: [
+    {
+      url: Helvetica
+    }
+  ],
 
-  Geo: [{
-    url: Geo,
-    fontWeight: 400
-  }]
+  Dejavu: [
+    {
+      url: Dejavu
+    }
+  ]
 }
 
+// export const FONT = {
+//   Dejavu: [{
+//     url: Dejavu,
+//     fontWeight: 400
+//   }
+//   // {
+//   //   url: DejavuBold,
+//   //   fontWeight: 700
+//   // }
+//   ]
+
+//   // Geo: [{
+//   //   url: Geo,
+//   //   fontWeight: 400
+//   // }],
+
+//   // Helvetica: [{
+//   //   url: HelveticaExtraLight
+//   // }]
+// }
+
 export const FONT_FAMILY = {
-  Dejavu: {
-    // default: true,
-    value: ['"Dejavu"'],
-    type: 'serif'
+  Helvetica: {
+    default: true,
+    value: ['"Helvetica Neue"']
+    // type: 'serif'
   },
-  Geo: {
-    value: ['"Geo"'],
-    type: 'serif'
+  Dejavu: {
+    value: ['"Dejavu"']
   }
+  // Geo: {
+  //   value: ['"Geo"'],
+  //   type: 'serif'
+  // },
+  // Helvetica: {
+  //   value: ['"Helvetica"'],
+  //   type: 'serif'
+  // }
 }
 
 export const COLORS = {

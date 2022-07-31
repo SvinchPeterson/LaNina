@@ -22,7 +22,7 @@ const sectionLinks = {
     style: {
       textTransform: 'uppercase',
       cursor: 'pointer',
-      fontWeight: 900,
+      // fontWeight: 900,
       textDecoration: 'none'
     },
     on: {

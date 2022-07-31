@@ -83,8 +83,8 @@ const title = {
         '@media only screen and (max-width: 560px)': { textTransform: 'uppercase' }
       },
       '@mobileM': {
-        fontSize: 'F',
-        fontWeight: '200'
+        fontSize: 'F'
+        // fontWeight: '200'
       }
     },
 

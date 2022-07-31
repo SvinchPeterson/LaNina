@@ -3,7 +3,6 @@
 export default {
   width: '100%',
   height: '100%',
-  fontFamily: 'Helvetica Neue',
   fontSize: '16px',
   display: 'flex',
   position: 'relative',
