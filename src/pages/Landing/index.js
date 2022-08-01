@@ -95,6 +95,7 @@ const props = {
     flexAlign: 'center flex-end',
     '@tabletS': { flexAlign: 'center center' },
     css: {
+      zIndex: '100',
       backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
