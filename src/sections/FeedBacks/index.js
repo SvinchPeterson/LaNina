@@ -86,12 +86,12 @@ const heading = {
     tag: 'caption',
     text: 'feedbacks',
     props: {
-      // fontWeight: '700',
+      fontWeight: '700',
       css: {
         whiteSpace: 'nowrap',
         letterSpacing: '.3px',
         zIndex: '100',
-        opacity: '.8'
+        opacity: '.85'
       }
     }
   },
@@ -213,21 +213,21 @@ export const feedBacks = {
         },
 
         {
-          name: { text: 'Cameron' },
+          name: { text: 'Daria' },
           p: {
             text: `
-          A lovely apartment in excellent location, perfect walking distance to sights, comfortable and cosy. Great hosts, they even brought me a cake and bottle of wine on my birthday! Would recommend
+            The apartment is very cozy, clean, light, spacious. Very warm welcome, the location is great too, cute courtyard, in the evening it is very pleasant to spend time, plus parking in the yard, which is very convenient. We only have pleasant emotions and memories.
               `
           },
           date: { text: 'April | 2022' }
         },
 
         {
-          name: { text: 'Cameron' },
+          name: { text: 'Stanislav' },
           p: {
             text: `
-          A lovely apartment in excellent location, perfect walking distance to sights, comfortable and cosy. Great hosts, they even brought me a cake and bottle of wine on my birthday! Would recommend
-              `
+            Very nice and spacious place! An amazingly responsive and helpful host! Would definitely book again!
+            Stanislav User Profile`
           },
           date: { text: 'April | 2022' }
         },

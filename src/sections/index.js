@@ -1,4 +1,5 @@
 'use strict'
+
 export * from './Residence'
 export * from './PlaceFeature'
 export * from './Entrence'

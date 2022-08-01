@@ -1,12 +1,23 @@
 'use strict'
 import { Grid } from 'smbls'
 
-import { Feature } from '../../components'
+import { Feature, SectionTitle } from '../../components'
 import SHELF_JPG from '../../assets/images/sololaki/shelf.jpg'
+
+const title = {
+  proto: SectionTitle,
+  props: {
+    text: 'Features',
+    padding: '0 0 0 D2',
+    css: { alignSelf: 'flex-start' }
+  }
+}
 
 const props = {
   margin: 'F2 0',
   flexAlign: 'center center',
+  flexFlow: 'column',
+  gap: 'B',
   '@mobileL': { margin: 'E 0 F 0' },
   '@mobileM': { margin: 'E 0 E 0' },
   css: { width: '100%' },
@@ -68,6 +79,7 @@ const props = {
 
 export const placeFeature = {
   props,
+  title,
   content: {
     proto: Grid,
     childProto: {

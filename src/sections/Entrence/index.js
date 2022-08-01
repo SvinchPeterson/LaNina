@@ -1,12 +1,12 @@
 'use strict'
 import { Box } from 'smbls'
-import ENTRENCE_JPG from '../../assets/images/sololaki/balcony2.jpg'
+import ENTRENCE_JPG from '../../assets/images/sololaki/entrance.jpg'
 
 const image = {
   props: {
     minWidth: `${800 / 16}em`,
     position: 'relative',
-    minHeight: `${400 / 16}em`,
+    minHeight: `${500 / 16}em`,
     padding: '0',
     '@mobileL': {
       // minWidth: `${400 / 16}em`,
@@ -80,7 +80,7 @@ const props = {
   // fontWeight: '300',
   css: {
     marginTop: `${200 / 16}em`,
-    marginBottom: `${200 / 16}em`,
+    marginBottom: `${350 / 16}em`,
     // textTransform: 'uppercase',
     '@media only screen and (max-width: 1366px)': { marginTop: `${75 / 16}em` }
   }
@@ -88,6 +88,6 @@ const props = {
 export const Entrence = {
   props,
 
-  image,
-  texts
+  image
+  // texts
 }

@@ -1,8 +1,19 @@
 'use strict'
 import { tabs } from './tabs'
 import { rooms } from './rooms'
-
+import { SectionTitle } from '../../components'
 import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
+
+const title = {
+  proto: SectionTitle,
+  props: {
+    text: 'apartments',
+    padding: '0 0 0 D2',
+    position: 'absolute',
+    top: '-C',
+    css: { alignSelf: 'flex-start' }
+  }
+}
 
 const props = {
   flexFlow: 'column',
@@ -44,7 +55,7 @@ const props = {
 export const Apartments = {
   props,
   attr: { id: 'apartments' },
-
+  title,
   tabs,
   rooms
 }

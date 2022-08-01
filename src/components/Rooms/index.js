@@ -18,36 +18,31 @@ const book = {
     position: 'absolute',
     padding: 'Z A',
     fontSize: 'Z',
+    width: 'fit-content',
+    left: `${-60 / 14}em`,
+    css: {
+      zIndex: '30',
+      textDecoration: 'none',
+      textTransform: 'uppercase',
+      '@media only screen and (min-width: 768px)': {
+        textOrientation: 'upright',
+        writingMode: 'vertical-rl',
+        bottom: '0'
+      },
+      '@media only screen and (max-height: 650px)': {
+        bottom: `${-50 / 14}em`
+      },
+      '&:hover > span': { opacity: 1 }
+    },
+    '@tabletL': {
+      left: `${-75 / 14}em`
+    },
     '@mobileL': {
-      // left: 'A2',
-      bottom: '-E'
+      bottom: '-E',
+      left: `${85 / 14}em`
     }
   },
   attr: { target: '_blank' },
-  style: {
-    textTransform: 'uppercase',
-    // fontWeight: 900,
-    zIndex: '30',
-    textDecoration: 'none',
-    width: 'fit-content',
-    left: `${-60 / 14}em`,
-    '@media only screen and (max-width: 1366px)': {
-      left: `${-75 / 14}em`
-
-    },
-    '@media only screen and (min-width: 768px)': {
-      textOrientation: 'upright',
-      writingMode: 'vertical-rl',
-      bottom: '0'
-    },
-    '@media only screen and (max-width: 768px)': {
-      left: `${85 / 14}em`
-    },
-    '@media only screen and (max-height: 650px)': {
-      bottom: `${-50 / 14}em`
-    },
-    '&:hover > span': { opacity: 1 }
-  },
   class: {
     show: (element, state) => state.activeTab
       ? {
@@ -61,14 +56,13 @@ const book = {
     proto: Box,
     text: 'BOOK',
     props: {
-    },
-    style: {
-      opacity: '.7',
-      transition: 'opacity .1s ease-in-out',
-      '@media only screen and (max-width: 1366px)': {
-        opacity: 1
+      css: {
+        opacity: '.7',
+        transition: 'opacity .1s ease-in-out',
+        '@media only screen and (max-width: 1366px)': {
+          opacity: 1
+        }
       }
-
     }
   }
 }
@@ -77,7 +71,6 @@ const back = {
   proto: [Link],
 
   props: {
-    // flexFlow: 'column',
     gap: 'Z',
     position: 'absolute',
     top: 'D1',
@@ -88,18 +81,19 @@ const back = {
     padding: 'Z',
     '@tabletL': {
       top: 'E'
+    },
+    css: {
+      textDecoration: 'none',
+      '&:hover > span': { opacity: '1' },
+      '&:hover > img': { opacity: '1' },
+      '@media only screen and (max-height: 650px)': {
+        top: `${50 / 16}em`,
+        left: `${120 / 16}em`,
+        '> span': { opacity: 1 }
+      }
     }
   },
-  style: {
-    textDecoration: 'none',
-    '&:hover > span': { opacity: '1' },
-    '&:hover > img': { opacity: '1' },
-    '@media only screen and (max-height: 650px)': {
-      top: `${50 / 16}em`,
-      left: `${120 / 16}em`,
-      '> span': { opacity: 1 }
-    }
-  },
+
   class: {
     show: (element, state) => state.activeTab
       ? {
@@ -124,13 +118,13 @@ const back = {
     proto: [Img],
     props: {
       boxSize: 'A1 ',
-      src: BACK_PNG
-    },
-    style: {
-      opacity: '.65',
-      transition: 'opacity .1s ease-in-out',
-      '@media only screen and (max-width: 1366px)': {
-        opacity: 1
+      src: BACK_PNG,
+      css: {
+        opacity: '.65',
+        transition: 'opacity .1s ease-in-out',
+        '@media only screen and (max-width: 1366px)': {
+          opacity: 1
+        }
       }
     }
   },
@@ -140,17 +134,14 @@ const back = {
       fontSize: 'Y',
       '@tabletL': {
         fontSize: 'Z'
-      }
-    },
-    style: {
-      // fontWeight: '900',
-      // textOrientation: 'upright',
-      // writingMode: 'vertical-rl',
-      letterSpacing: '1px',
-      opacity: '.7',
-      transition: 'opacity .15s ease-in-out',
-      '@media only screen and (max-width: 1366px)': {
-        opacity: 1
+      },
+      css: {
+        letterSpacing: '1px',
+        opacity: '.7',
+        transition: 'opacity .15s ease-in-out',
+        '@media only screen and (max-width: 1366px)': {
+          opacity: 1
+        }
       }
     }
   }
@@ -162,7 +153,7 @@ const Room = {
     show: (element, state) => state.activeTab === element.key
       ? {
         height: `${600 / 16}em`,
-        transition: 'all 1s ease-in-out',
+        transition: 'all 1.1s ease-in-out',
         opacity: 1,
         paddingTop: `${130 / 16}em`,
         '@media only screen and (max-width: 1366px)': {
@@ -183,7 +174,7 @@ const Room = {
       }
 
       : {
-        height: 0,
+        height: `0`,
         opacity: 0,
         button: { opacity: 0 },
         '> aside': { display: 'none' },

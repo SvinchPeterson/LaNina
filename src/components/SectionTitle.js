@@ -2,5 +2,12 @@
 
 export const SectionTitle = {
   tag: 'h3',
-  text: 'rfergreg'
+  props: {
+    text: 'residence',
+    fontSize: 'A',
+    fontWeight: '500',
+    css: {
+      textTransform: 'capitalize'
+    }
+  }
 }

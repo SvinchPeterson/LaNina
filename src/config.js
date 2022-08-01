@@ -1,14 +1,15 @@
 'use strict'
 
-import { set } from '@symbo.ls/scratch'
+import { init } from '@symbo.ls/init'
 
 // import DejavuBold from './assets/fonts/DejaVuSans-Bold.woff2'
-import Dejavu from './assets/fonts/DejaVuSans.woff2'
 // import Geo from './assets/fonts/BPGExtraSquareMtavruli.woff2'
 // import HelveticaLight from './assets/fonts/HelveticaNeueLTGEOCaps-45Light.ttf'
 // import HelveticaNormal from './assets/fonts/HelveticaNeueLTGEOCaps-55Roman-4.ttf'
 // import HelveticaBold from './assets/fonts/HelveticaNeueLTGEOCaps-75Bold.ttf'
 // import HelveticaExtraLight from './assets/fonts/HelveticaNeueUltraLight.ttf'
+
+import Dejavu from './assets/fonts/DejaVuSans.woff2'
 import Helvetica from './assets/fonts/otherFonts/Helvetica Neue UltraLight.ttf'
 
 export const FONT = {
@@ -48,12 +49,13 @@ export const FONT = {
 
 export const FONT_FAMILY = {
   Helvetica: {
-    default: true,
-    value: ['"Helvetica Neue"']
-    // type: 'serif'
+    isDefault: true,
+    value: ['"Helvetica Neue"'],
+    type: 'serif'
   },
   Dejavu: {
-    value: ['"Dejavu"']
+    value: ['"Dejavu"'],
+    type: 'serif'
   }
   // Geo: {
   //   value: ['"Geo"'],
@@ -81,7 +83,8 @@ export const COLORS = {
 export const GRADIENTS = {
   gold: 'linear-gradient(rgba(147, 119, 79, 1), rgba(242, 205, 128, 1))',
   blackGradient: 'radial-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .8))',
-  green: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))'
+  green: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
+  radial: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))'
 }
 
 export const THEMES = {
@@ -111,7 +114,7 @@ export const MEDIA = {
   light: '(prefers-color-scheme: light)'
 }
 
-export default set({
+export default init({
   color: COLORS,
   gradient: GRADIENTS,
   theme: THEMES,
@@ -120,5 +123,25 @@ export default set({
     range: [-6, 20]
   },
   font_family: FONT_FAMILY,
-  media: MEDIA
+  media: MEDIA,
+  reset: {
+    html: {
+      width: '100%',
+      height: '100%',
+      fontSize: '16px',
+      display: 'flex',
+      position: 'relative',
+      top: 0,
+      left: 0,
+      overflow: 'hidden',
+      boxSizing: 'border-box',
+      transform: 'none'
+    },
+    h4: { margin: 0 },
+    h1: { margin: 0 },
+    h3: { margin: 0 },
+    h5: { margin: 0 },
+    p: { margin: 0 },
+    h6: { margin: 0 }
+  }
 })

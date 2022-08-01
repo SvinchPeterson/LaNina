@@ -15,7 +15,7 @@ const paragraph = {
     gap: 'B',
     maxWidth: `${650 / 15}em`,
     color: 'black .75',
-    padding: 'G2 0 G 0',
+    // padding: 'G2 0 G 0',
     '@tabletL': {
       fontSize: 'A',
       padding: 'G D E D'
@@ -31,9 +31,13 @@ const paragraph = {
 
 export const Residence = {
   props: {
-    flexAlign: 'center center'
+    flexFlow: 'column',
+    flexAlign: 'center flex-start',
+    padding: 'G 0 G 0',
+    gap: 'C1'
   },
   attr: { id: 'residence' },
 
+  title,
   paragraph
 }

@@ -1,6 +1,17 @@
 'use strict'
 
-import { ContactItems, Map } from '../../components'
+import { ContactItems, Map, SectionTitle } from '../../components'
+const title = {
+  proto: SectionTitle,
+  props: {
+    text: 'location',
+    padding: '0 0 B2 0',
+    css: {
+      // border: '2px solid red',
+      textAlign: 'center'
+    }
+  }
+}
 
 const paragraph = {
   props: {
@@ -141,8 +152,9 @@ export const Location = {
   tag: 'section',
   attr: { id: 'location' },
 
+  title,
   content: {
-    paragraph,
+    // paragraph,
     map,
     contacts
   }

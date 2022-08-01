@@ -19,7 +19,7 @@ const props = {
     gap: 'W',
     flexAlign: 'flex-start flex-start',
     title: {
-      // fontWeight: '900',
+      fontWeight: '900',
       color: 'black .85',
       css: {
         whiteSpace: 'nowrap',
@@ -30,7 +30,7 @@ const props = {
     },
     p: {
       padding: '0 0 0 U',
-      color: 'black .6',
+      color: 'black .85',
       fontSize: 'Z',
       css: {
         letterSpacing: '.1px'

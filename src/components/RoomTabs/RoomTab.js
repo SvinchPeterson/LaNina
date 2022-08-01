@@ -37,6 +37,7 @@ const tabParagraph = {
     padding: `0 A2`,
     fontSize: `${14 / 16}em`,
     css: {
+      textAlign: 'justify',
       zIndex: 10,
       opacity: 0,
       width: `${360 / 14}em`,
@@ -45,6 +46,8 @@ const tabParagraph = {
       transition: 'opacity .3s ease-in-out',
       transitionDelay: '.4s',
       letterSpacing: `${0.15 / 14}em`,
+      fontWeight: '400',
+      wordSpacing: '-2px',
       '@media only screen and (max-width: 1366px)': {
         fontSize: `${15 / 16}em`,
         width: `${500 / 15}em`

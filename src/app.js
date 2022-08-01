@@ -1,21 +1,22 @@
 'use strict'
 
-import style from './style'
 import router from 'domql/packages/router'
 
 import './config'
-import './reset'
 import './emotion'
 import './components'
 
-import { Block } from 'smbls'
 import { Landing, Sololaki } from './pages'
+// import { DevFocus } from './focus'
 // import { Story } from './sections'
 
 const App = {
+  // proto: DevFocus,
+
   key: 'app',
-  proto: Block,
-  style,
+  props: {
+    background: 'radial'
+  },
 
   state: {
     isLoaded: false

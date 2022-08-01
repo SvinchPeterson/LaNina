@@ -7,7 +7,7 @@ const props = {
   background: 'black .05',
   maxHeight: 'G',
   round: 'Y2',
-  minWidth: 'H1',
+  minWidth: `${500 / 16}em`,
   gap: 'A',
   position: 'relative',
   '@tabletL': { minWidth: '100%' },
@@ -30,11 +30,11 @@ const props = {
 
   name: {
     margin: '0',
-    // fontWeight: '900',
+    fontWeight: '700',
     color: 'black .85',
     css: {
       textTransform: 'uppercase',
-      letterSpacing: '1.5px',
+      letterSpacing: '.5px',
       fontSize: `${12.5 / 16}em`,
       '@media only screen and (max-height: 600px)': { padding: `0 0 ${10 / 12.5}em ${22 / 12.5}em` }
     }
@@ -80,5 +80,8 @@ export const FeedBack = {
     text: 'Ashitha'
   },
   p: {},
-  date: { tag: 'h5' }
+  date: {
+    tag: 'h5',
+    props: { fontWeight: '500' }
+  }
 }

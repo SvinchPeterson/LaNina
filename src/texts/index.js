@@ -82,6 +82,7 @@ const roomParagraph = {
     props: {
       color: 'gold',
       padding: '0 0 Y2 0',
+      maxWidth: 'G1',
       '@mobileL': { padding: '0 0 Y1 0' },
       css: {
         // fontWeight: '500',
