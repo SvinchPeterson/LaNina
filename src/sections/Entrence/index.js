@@ -11,7 +11,7 @@ const image = {
     '@mobileL': {
       // minWidth: `${400 / 16}em`,
       minHeight: `${300 / 16}em`,
-      minWidth: '90%'
+      minWidth: '100%'
     },
     '@mobileS': { minWidth: '100%' },
     css: {
@@ -82,7 +82,7 @@ const props = {
     marginTop: `${200 / 16}em`,
     marginBottom: `${350 / 16}em`,
     // textTransform: 'uppercase',
-    '@media only screen and (max-width: 1366px)': { marginTop: `${75 / 16}em` }
+    '@media only screen and (max-width: 1366px)': { marginTop: `${75 / 16}em`, marginBottom: `${250 / 16}em` }
   }
 }
 export const Entrence = {

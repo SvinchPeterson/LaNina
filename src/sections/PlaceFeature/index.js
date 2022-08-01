@@ -14,34 +14,72 @@ const title = {
 }
 
 const props = {
-  margin: 'F2 0',
+  margin: 'B 0 E 0',
   flexAlign: 'center center',
   flexFlow: 'column',
+  position: 'relative',
   gap: 'B',
-  '@mobileL': { margin: 'E 0 F 0' },
-  '@mobileM': { margin: 'E 0 E 0' },
-  css: { width: '100%' },
+  // '@mobileL': { margin: 'E 0 F 0' },
+  // '@mobileM': { margin: 'E 0 E 0' },
+  css: {
+    width: '100%',
+    '&:after': {
+      content: '"scroll"',
+      position: 'absolute',
+      left: '60px',
+      writingMode: 'vertical-rl',
+      textOrientation: 'upright',
+      fontWeight: '900',
+      textTransform: 'uppercase',
+      fontSize: `${12 / 16}em`,
+      display: 'none',
+      top: '45%',
+      '@media only screen and (max-width: 768px)': {
+        display: 'block'
+      },
+      '@media only screen and (max-width: 560px)': {
+        display: 'block',
+        left: '20px'
+      },
+      '@media only screen and (max-width: 350px)': {
+        left: '10px'
+      }
+    },
+    '&:before': {
+      content: '""',
+      position: 'absolute',
+      width: '100%',
+      height: '0px',
+      bottom: '0',
+      zIndex: '100',
+      '@media only screen and (max-width: 768px)': {
+        boxShadow: '0px 0px 50px 30px rgba(248, 241, 227, 1)'
+
+      }
+    }
+  },
 
   content: {
     columns: `repeat(4, ${270 / 16}em)`,
     gap: 'A2',
     rowGap: 'A2',
-    padding: 'F E',
+    padding: 'G E',
     position: 'relative',
     '@tabletL': { columns: `repeat(2, ${340 / 16}em)` },
     '@mobileL': {
       flexFlow: 'column',
-      columns: `repeat(1, ${340 / 16}em)`,
-      maxHeight: `${500 / 16}em`
+      maxHeight: `${500 / 16}em`,
+      padding: 'D1 E1'
     },
     '@mobileM': {
-      padding: 'D 0',
-      columns: `repeat(1, ${340 / 16}em)`,
-      maxHeight: `${400 / 16}em`
+      maxHeight: `${400 / 16}em`,
+      padding: 'D1 C2'
     },
-    '@mobileXS': { columns: `repeat(1, ${340 / 16}em)` },
+    '@mobileXS': { padding: 'D1 C' },
+    // '@mobileXS': { columns: `repeat(1, ${340 / 16}em)` },
 
     css: {
+      boxSizing: 'border-box',
       width: '100%',
       backgroundAttachment: 'fixed',
       backgroundImage: 'url(' + SHELF_JPG + ')',
@@ -55,7 +93,10 @@ const props = {
       },
       '@media only screen and (max-width: 768px)': {
         overflowY: 'auto',
-        background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .15))'
+        justifyContent: 'flex-start',
+        background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .15))',
+        borderTop: '1px solid rgba(248, 241, 227, .3)'
+        // '> div': { border: '2px solid red' }
       },
       '&:before': {
         content: '""',
@@ -77,8 +118,15 @@ const props = {
   }
 }
 
+const more = {
+  props: {
+    text: 'more'
+  }
+}
+
 export const placeFeature = {
   props,
+
   title,
   content: {
     proto: Grid,
@@ -144,7 +192,7 @@ export const placeFeature = {
         }
       }
     ]
-
   }
+  // more
 
 }

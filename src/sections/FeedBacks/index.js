@@ -116,6 +116,9 @@ const props = {
     boxSizing: 'border-box',
     marginTop: `${300 / 16}em`,
     marginBottom: `${300 / 16}em`,
+    '@media only screen and (max-width: 768px)': {
+      marginBottom: `${0 / 16}em`
+    },
     '@media only screen and (max-width: 560px)': { marginTop: `${150 / 16}em` }
   },
 
