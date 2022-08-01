@@ -53,7 +53,7 @@ export const Header = {
     top: '0',
     left: '0',
     flexAlign: 'center space-between',
-    padding: 'B C1 B C1',
+    padding: 'B2 C1',
     margin: '0 0 0 0',
     '@mobileL': { display: 'none' },
     css: {
@@ -87,5 +87,6 @@ export const HeaderMobile = {
     '@mobileM': { padding: 'B2 C 0 C' },
     '@mobileS': { padding: 'B A1 0 A1' }
   },
+  logo,
   MenuButton
 }

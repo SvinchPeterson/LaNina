@@ -80,10 +80,11 @@ const title = {
         animationDuration: '3s',
         animationTimingFunction: 'ease-in-out',
         animationDelay: '.4s',
-        '@media only screen and (max-width: 560px)': { textTransform: 'uppercase' }
+        '@media only screen and (max-width: 560px)': { textTransform: '' }
       },
       '@mobileM': {
-        fontSize: 'F'
+        fontSize: 'F',
+        fontWeight: '900'
         // fontWeight: '200'
       }
     },
@@ -92,7 +93,7 @@ const title = {
       padding: '0 B 0 0',
       '@mobileM': {
         padding: '0 0 0 0',
-        margin: 'auto 0 -D2 0'
+        margin: 'auto 0 0 0'
       },
       css: {
         animationName: animCaption,

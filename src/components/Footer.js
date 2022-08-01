@@ -52,7 +52,7 @@ export const Footer = {
     position: 'fixed',
     bottom: '0',
     flexAlign: 'flex-start space-between',
-    padding: '0 C1 B C1',
+    padding: 'B2 C1',
     css: {
       zIndex: '50',
       mixBlendMode: 'difference'
