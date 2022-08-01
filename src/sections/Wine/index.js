@@ -6,9 +6,9 @@ const image = {
   proto: Box,
 
   props: {
-    boxSize: `H H3`,
+    boxSize: `H3 H`,
     padding: 'D 0 0 0',
-    '@tabletL': { boxSize: '100% H' },
+    '@tabletL': { boxSize: 'H 100%' },
     css: {
       backgroundImage: 'linear-gradient(rgba(60,84, 72, .35), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
       backgroundSize: 'contain',

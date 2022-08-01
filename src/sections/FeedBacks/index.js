@@ -31,7 +31,7 @@ const navArrows = {
     arrow: {
       proto: [Img, Box],
       props: {
-        boxSize: ' A1'
+        boxSize: 'A1 -'
         // padding: 'W'
       }
     }

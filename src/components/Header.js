@@ -19,7 +19,7 @@ const logo = {
     proto: Img,
     props: {
       src: LOGO_PNG,
-      boxSize: ' B1'
+      boxSize: 'B1 -'
     }
   }
 }

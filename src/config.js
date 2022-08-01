@@ -137,6 +137,9 @@ export default init({
       boxSizing: 'border-box',
       transform: 'none'
     },
+    body: {
+      width: '100%'
+    },
     h4: { margin: 0 },
     h1: { margin: 0 },
     h3: { margin: 0 },

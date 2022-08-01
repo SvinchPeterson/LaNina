@@ -117,7 +117,7 @@ const back = {
   icon: {
     proto: [Img],
     props: {
-      boxSize: 'A1 ',
+      boxSize: '- A1',
       src: BACK_PNG,
       css: {
         opacity: '.65',

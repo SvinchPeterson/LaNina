@@ -7,11 +7,9 @@ import './emotion'
 import './components'
 
 import { Landing, Sololaki } from './pages'
-// import { DevFocus } from './focus'
 // import { Story } from './sections'
 
 const App = {
-  // proto: DevFocus,
 
   key: 'app',
   props: {

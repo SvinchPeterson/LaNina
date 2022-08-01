@@ -21,7 +21,7 @@ const socialLinks = {
     icon: {
       proto: Img,
       props: {
-        boxSize: ' B',
+        boxSize: 'B -',
         css: {
           // opacity: '.9',
           '&:hover': { opacity: 1 }

@@ -58,8 +58,8 @@ export const NavButtons = {
         proto: [Img, Box],
         props: {
           src: UP_ARROW_PNG,
-          boxSize: 'A2 ',
-          '@tabletL': { boxSize: 'B2 ' }
+          boxSize: '- A2',
+          '@tabletL': { boxSize: '- B2' }
         },
         style: { transition: 'opacity .15s ease-in-out' }
       },
@@ -86,8 +86,8 @@ export const NavButtons = {
         proto: [Img, Box],
         props: {
           src: DOWN_ARROW_PNG,
-          boxSize: 'A2 ',
-          '@tabletL': { boxSize: 'B2 ' }
+          boxSize: '- A2',
+          '@tabletL': { boxSize: '- B2' }
         },
         style: { transition: 'opacity .15s ease-in-out' }
       },
@@ -136,9 +136,9 @@ export const NavButtons2 = {
     image: {
       proto: [Img, Box],
       props: {
-        boxSize: 'A ',
-        '@tabletL': { boxSize: 'B ' },
-        '@mobileL': { boxSize: 'A1 ' }
+        boxSize: '- A',
+        '@tabletL': { boxSize: '- B' },
+        '@mobileL': { boxSize: '- A1' }
       }
     }
   },

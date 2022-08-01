@@ -54,7 +54,7 @@ const header = {
     span: {
       // proto: Button,
       props: {
-        boxSize: 'B X',
+        boxSize: 'X B',
         background: 'cream2',
         round: 'Z'
       }
