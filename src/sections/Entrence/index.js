@@ -4,9 +4,9 @@ import ENTRENCE_JPG from '../../assets/images/sololaki/entrance.jpg'
 
 const image = {
   props: {
-    minWidth: `${800 / 16}em`,
+    minWidth: `${950 / 16}em`,
     position: 'relative',
-    minHeight: `${500 / 16}em`,
+    minHeight: `${550 / 16}em`,
     padding: '0',
     '@mobileL': {
       // minWidth: `${400 / 16}em`,

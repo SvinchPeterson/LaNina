@@ -137,7 +137,7 @@ export default init({
       boxSizing: 'border-box',
       transform: 'none',
       background: 'radial-gradient(rgba(0, 0, 0, .83), rgba(0, 0, 0, .9))',
-      '@media only screen and (min-width: 1680px)': { fontSize: '20px' }
+      '@media only screen and (min-width: 1680px)': { fontSize: '18px' }
     },
     body: {
       width: '100%'
