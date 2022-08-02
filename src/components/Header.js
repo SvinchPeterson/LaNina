@@ -53,7 +53,7 @@ export const Header = {
     top: '0',
     left: '0',
     flexAlign: 'center space-between',
-    padding: 'B2 C1',
+    padding: 'B2 C1 0 C1',
     margin: '0 0 0 0',
     '@mobileL': { display: 'none' },
     css: {

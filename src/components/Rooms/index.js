@@ -82,13 +82,15 @@ const back = {
     '@tabletL': {
       top: 'E'
     },
+    // '@mobileS': { top: 'C1' },
     css: {
       textDecoration: 'none',
       '&:hover > span': { opacity: '1' },
       '&:hover > img': { opacity: '1' },
       '@media only screen and (max-height: 650px)': {
-        top: `${50 / 16}em`,
+        top: `${-100 / 16}em`,
         left: `${120 / 16}em`,
+        // border: '3px solid red',
         '> span': { opacity: 1 }
       }
     }
@@ -168,7 +170,7 @@ const Room = {
         '@media only screen and (max-width: 560px)': {
           height: `${350 / 16}em`
         },
-        '@media only screen and (max-width: 350px)': {
+        '@media only screen and (max-width: 480px)': {
           height: `${300 / 16}em`
         }
       }

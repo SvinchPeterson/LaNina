@@ -14,7 +14,7 @@ export const NavButtons = {
     top: '63%',
     right: `-B2`,
     flexFlow: 'column',
-    gap: 'Z2',
+    gap: 'A',
     '@tabletL': { right: '-C' }
   },
   style: {

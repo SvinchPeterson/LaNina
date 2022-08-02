@@ -22,7 +22,7 @@ const props = {
   margin: '0 0 G 0',
   '@tabletL': { padding: 'F1 0 G 0' },
   '@mobileM': {
-    padding: `F 0 G 0`,
+    padding: `E1 0 G 0`,
     margin: '0 0 E 0'
   },
 
@@ -34,7 +34,6 @@ const props = {
     boxSizing: 'border-box',
     backgroundAttachment: 'fixed',
     '@media only screen and (max-width: 1366px)': { backgroundImage: 'none' },
-    '@media only screen and (max-height: 670px)': { paddingTop: `${130 / 16}em` },
     '&:before': {
       content: '""',
       width: '100%',

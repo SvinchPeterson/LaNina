@@ -19,8 +19,6 @@ const props = {
   flexFlow: 'column',
   position: 'relative',
   gap: 'B',
-  // '@mobileL': { margin: 'E 0 F 0' },
-  // '@mobileM': { margin: 'E 0 E 0' },
   css: {
     width: '100%',
     '&:after': {

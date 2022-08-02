@@ -136,7 +136,7 @@ export default init({
       overflow: 'hidden',
       boxSizing: 'border-box',
       transform: 'none',
-      background: 'radial-gradient(rgba(0, 0, 0, .83), rgba(0, 0, 0, .9))',
+      background: 'black',
       '@media only screen and (min-width: 1680px)': { fontSize: '18px' }
     },
     body: {

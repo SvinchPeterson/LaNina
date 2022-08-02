@@ -22,7 +22,7 @@ export const MenuButton = {
   content: {
     props: {
       position: 'relative',
-      boxSize: 'B1 B2'
+      boxSize: 'C C1'
     },
     childProto: {
       props: {
