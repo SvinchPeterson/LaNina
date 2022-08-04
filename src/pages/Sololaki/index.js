@@ -30,7 +30,6 @@ const props = {
     animationName: opacity,
     animationDuration: '2s',
     animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
-    // fontFamily: 'Helvetica Neue'
   }
 }
 

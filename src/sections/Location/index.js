@@ -148,8 +148,8 @@ const props = {
 }
 
 export const Location = {
-  props,
   tag: 'section',
+  props,
   attr: { id: 'location' },
 
   title,

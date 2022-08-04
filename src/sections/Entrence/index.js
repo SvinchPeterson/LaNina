@@ -86,6 +86,7 @@ const props = {
   }
 }
 export const Entrence = {
+  tag: 'section',
   props,
 
   image

@@ -172,10 +172,10 @@ const props = {
       }
     }
   }
-
 }
 
 export const feedBacks = {
+  tag: 'section',
   props,
 
   heading: { proto: heading },

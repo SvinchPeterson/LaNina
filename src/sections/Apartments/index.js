@@ -52,6 +52,7 @@ const props = {
 }
 
 export const Apartments = {
+  tag: 'section',
   props,
   attr: { id: 'apartments' },
   title,

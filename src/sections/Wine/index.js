@@ -102,6 +102,7 @@ const props = {
 }
 
 export const Wine = {
+  tag: 'section',
   proto: Box,
   props,
   attr: { id: 'wine' },

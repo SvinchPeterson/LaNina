@@ -29,6 +29,7 @@ const paragraph = {
 }
 
 export const Residence = {
+  tag: 'section',
   props: {
     flexFlow: 'column',
     flexAlign: 'center flex-start',

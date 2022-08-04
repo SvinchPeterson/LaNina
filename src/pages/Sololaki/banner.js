@@ -165,6 +165,7 @@ const props = {
 }
 
 export const banner = {
+  tag: 'section',
   props,
   attr: { id: 'banner' },
 

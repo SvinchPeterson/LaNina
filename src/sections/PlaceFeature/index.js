@@ -123,6 +123,7 @@ const more = {
 }
 
 export const placeFeature = {
+  tag: 'section',
   props,
 
   title,

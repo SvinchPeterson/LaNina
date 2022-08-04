@@ -14,8 +14,13 @@ export const origin = {
 export const mission = {
   proto: Text,
   props: {
-    text: `Providing remarkable lodging facilities and services to our guests.
-    Emphasizing on customer service and creating an unforgettable in-home experience.`
+    text: `Providing remarkable lodging facilities and services to our guests. Emphasizing on customer service and creating an unforgettable in-home experience.`
+  }
+}
+
+export const aroundArea = {
+  props: {
+    text: `If you’re ready to step out and explore the area, our apartments are conveniently located, within walking distance of a variety of popular local attractions: Liberty square, Botanical Garden, Sulfur bathes, bars, restaurants, shopping center.`
   }
 }
 
