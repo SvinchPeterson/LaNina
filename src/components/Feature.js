@@ -24,14 +24,14 @@ const props = {
       css: {
         whiteSpace: 'nowrap',
         textTransform: 'uppercase',
-        fontSize: `${12.2 / 16}em`,
+        fontSize: `${12 / 16}em`,
         letterSpacing: '.1px'
       }
     },
     p: {
       padding: '0 0 0 U',
       color: 'black .85',
-      fontSize: `${14.5 / 16}em`,
+      fontSize: `${14 / 16}em`,
       css: {
         letterSpacing: '.1px'
       }

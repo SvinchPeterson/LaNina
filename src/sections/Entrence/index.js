@@ -54,15 +54,15 @@ const missions = {
 
     title: {
       text: 'mission',
-      padding: '0 0 Z1 0',
+      padding: '0 0 A 0',
       fontSize: `${13 / 16}em`,
       fontWeight: '900',
       css: { textTransform: 'uppercase' },
-      '@mobileM': { padding: '0 0 Z2 0' }
+      '@mobileM': { padding: '0 0 A 0' }
     },
     p: {
-      // flexFlow: 'column',
-      // gap: 'X',
+      flexFlow: 'column',
+      gap: 'Y',
       fontSize: `${14.5 / 16}em`,
       color: 'black .8',
       '@mobileM': {

@@ -1,8 +1,9 @@
 'use strict'
-import { Grid } from 'smbls'
+import { Grid, Img } from 'smbls'
 
 import { Feature, SectionTitle } from '../../components'
 import SHELF_JPG from '../../assets/images/sololaki/shelf.jpg'
+import SCROLL_PNG from '../../assets/icons/scroll.png'
 
 const title = {
   proto: SectionTitle,
@@ -10,6 +11,45 @@ const title = {
     text: 'Features',
     padding: '0 0 0 D2',
     css: { alignSelf: 'flex-start' }
+  }
+}
+
+const scroll = {
+  props: {
+    position: 'absolute',
+    left: '60px',
+    fontWeight: '900',
+    fontSize: `${12 / 16}em`,
+    top: '45%',
+    display: 'none',
+    flexFlow: 'column',
+    flexAlign: 'center center',
+    css: {
+      writingMode: 'vertical-rl',
+      textOrientation: 'upright',
+      textTransform: 'uppercase'
+    },
+    '@mobileL': { display: 'block' },
+    '@mobileM': { left: '20px' },
+    '@mobileXS': { left: '10px' },
+
+    caption: { text: 'scroll' }
+  },
+
+  caption: {},
+  icon: {
+    proto: Img,
+    props: {
+      src: SCROLL_PNG,
+      boxSize: 'A A',
+      display: 'block',
+      position: 'absolute',
+      bottom: '-30px',
+      left: '50%',
+      css: {
+        transform: 'translate(-50%, -50%)'
+      }
+    }
   }
 }
 
@@ -21,28 +61,28 @@ const props = {
   gap: 'B',
   css: {
     width: '100%',
-    '&:after': {
-      content: '"scroll"',
-      position: 'absolute',
-      left: '60px',
-      writingMode: 'vertical-rl',
-      textOrientation: 'upright',
-      fontWeight: '900',
-      textTransform: 'uppercase',
-      fontSize: `${12 / 16}em`,
-      display: 'none',
-      top: '45%',
-      '@media only screen and (max-width: 768px)': {
-        display: 'block'
-      },
-      '@media only screen and (max-width: 560px)': {
-        display: 'block',
-        left: '20px'
-      },
-      '@media only screen and (max-width: 350px)': {
-        left: '10px'
-      }
-    },
+    // '&:after': {
+    //   content: '"scroll"',
+    //   position: 'absolute',
+    //   left: '60px',
+    //   writingMode: 'vertical-rl',
+    //   textOrientation: 'upright',
+    //   fontWeight: '900',
+    //   textTransform: 'uppercase',
+    //   fontSize: `${12 / 16}em`,
+    //   display: 'none',
+    //   top: '45%',
+    //   '@media only screen and (max-width: 768px)': {
+    //     display: 'block'
+    //   },
+    //   '@media only screen and (max-width: 560px)': {
+    //     display: 'block',
+    //     left: '20px'
+    //   },
+    //   '@media only screen and (max-width: 350px)': {
+    //     left: '10px'
+    //   }
+    // },
     '&:before': {
       content: '""',
       position: 'absolute',
@@ -116,17 +156,12 @@ const props = {
   }
 }
 
-const more = {
-  props: {
-    text: 'more'
-  }
-}
-
 export const placeFeature = {
   tag: 'section',
   props,
 
   title,
+  scroll,
   content: {
     proto: Grid,
     childProto: {

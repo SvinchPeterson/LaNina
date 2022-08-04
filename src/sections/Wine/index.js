@@ -5,7 +5,11 @@ import WINE_JPG from '../../assets/images/sololaki/wine.jpg'
 
 const title = {
   proto: SectionTitle,
-  props: { text: 'Wine' }
+  props: {
+    text: 'Wine',
+    '@tabletL': { color: 'cream2' },
+    '@mobileM': { padding: '0 0 A 0' }
+  }
 }
 
 const image = {
@@ -57,7 +61,11 @@ const paragraph = {
       margin: '0 0 0 0',
       background: 'cream2 0'
     },
-    '@mobileM': { width: '100%' },
+    '@mobileM': {
+      width: '100%',
+      padding: '0 C'
+    },
+    '@mobileS': { padding: '0 B1' },
     css: {
       borderTop: 'none',
       zIndex: '10',
@@ -81,8 +89,8 @@ const paragraph = {
         padding: '0 A1'
       },
       css: {
-        fontSize: `${14.3 / 16}em`,
-        letterSpacing: '.3px'
+        fontSize: `${14.3 / 16}em`
+        // letterSpacing: '.3px'
       }
     },
 
@@ -92,8 +100,8 @@ const paragraph = {
       the Qvevri (an earthenware vessel used to store and age wine for thousands of years).`
       },
       {
-        text: `Georgia is generally considered the ‘cradle of wine’,
-        as archaeologists have traced the world’s first known wine creation back to the people of the South Caucasus in 6,000BC.`
+        text: `Georgia is generally considered the 'cradle of wine',
+        as archaeologists have traced the world's first known wine creation back to the people of the South Caucasus in 6,000BC.`
       }
     ]
   }

@@ -38,7 +38,7 @@ const paragraph = {
     '@mobileXS': { padding: 'C A2 E2 A2' }
   },
   ...[
-    'If you’re ready to step out and explore the area, our apartments are conveniently located, within walking distance of a variety of popular local attractions: ',
+    `If you're ready to step out and explore the area, our apartments are conveniently located, within walking distance of a variety of popular local attractions: `,
     {
       tag: 'span',
       props: {

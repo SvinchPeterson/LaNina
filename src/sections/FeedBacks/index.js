@@ -195,7 +195,7 @@ export const feedBacks = {
           name: { text: 'Katie' },
           p: {
             text: `
-              Highly recommend to stay here! We really enjoyed BB Residence - Red Brick (also the other rooms look really cool too! ) It’s in a great area, shops and bars nearby and also walking distance to lots of attractions and less than 10min walk to Freedom Square.
+              Highly recommend to stay here! We really enjoyed BB Residence - Red Brick (also the other rooms look really cool too! ) It's in a great area, shops and bars nearby and also walking distance to lots of attractions and less than 10min walk to Freedom Square.
               `
           },
           date: { text: 'Febryary | 2022' }

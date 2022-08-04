@@ -8,6 +8,12 @@ const title = {
     padding: '0 0 B Z',
     maxWidth: '65%',
     margin: '0 auto',
+    '@tabletS': { maxWidth: `${730 / 16}em` },
+    '@mobileL': { maxWidth: `${550 / 16}em` },
+    '@mobileM': {
+      maxWidth: `${470 / 16}em`
+    },
+    '@mobileS': { maxWidth: `${350 / 16}em` },
     css: {
       // border: '2px solid red',
       textAlign: 'left'
@@ -20,8 +26,8 @@ const map = {
   props: {
     width: '100%',
     '@mobileM': {
-      minHeight: 'G',
-      margin: 'C1 0 0 0'
+      minHeight: 'G'
+      // margin: 'C1 0 0 0'
     },
     css: {
       flex: 1,

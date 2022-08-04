@@ -164,6 +164,15 @@ const Room = {
           height: `${500 / 16}em`,
           display: 'block'
         },
+        '@media only screen and (max-height: 1000px)': {
+          height: `${500 / 16}em`
+        },
+        '@media only screen and (max-height: 788px)': {
+          height: `${450 / 16}em`
+        },
+        // '@media only screen and (max-height: 722px)': {
+        //   height: `${400 / 16}em`
+        // },
         '@media only screen and (max-height: 650px)': {
           paddingTop: `${90 / 16}em`
         },
