@@ -88,7 +88,7 @@ const back = {
       '&:hover > span': { opacity: '1' },
       '&:hover > img': { opacity: '1' },
       '@media only screen and (max-height: 650px)': {
-        top: `${-100 / 16}em`,
+        top: `${45 / 16}em`,
         left: `${120 / 16}em`,
         // border: '3px solid red',
         '> span': { opacity: 1 }

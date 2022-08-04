@@ -96,6 +96,9 @@ export const props = {
     position: 'relative',
     backdropFilter: 'blur(2px)',
     boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, .15)',
+    '@media only screen and (max-height: 673px)': {
+      height: '350px !important'
+    },
     '&:hover': {
       flex: 5.5,
       backdropFilter: 'blur(10px)',

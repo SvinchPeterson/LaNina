@@ -61,7 +61,11 @@ export const Header = {
       mixBlendMode: 'difference',
       animationName: opacity,
       animationDuration: '3s',
-      animationTimingFunction: 'ease-in-out'
+      animationTimingFunction: 'ease-in-out',
+      '@media only screen and (max-height: 650px)': {
+        paddingTop: '30px !important',
+        paddingBottom: '0px !important'
+      }
     }
   },
 

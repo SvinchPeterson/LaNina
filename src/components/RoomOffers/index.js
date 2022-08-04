@@ -218,7 +218,7 @@ export const RoomOffers = {
     transition: 'all 1s ease-in-out',
     zIndex: '70',
     '@media only screen and (max-height: 650px)': {
-      bottom: `${-160 / 16}em !important`
+      bottom: `${-200 / 16}em !important`
     },
 
     '@media only screen and (max-width: 1366px)': {

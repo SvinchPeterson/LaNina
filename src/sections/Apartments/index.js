@@ -34,6 +34,9 @@ const props = {
     boxSizing: 'border-box',
     backgroundAttachment: 'fixed',
     '@media only screen and (max-width: 1366px)': { backgroundImage: 'none' },
+    '@media only screen and (max-height: 768px)': {
+      paddingTop: '150px !important'
+    },
     '&:before': {
       content: '""',
       width: '100%',
