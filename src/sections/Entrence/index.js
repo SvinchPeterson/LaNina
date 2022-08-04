@@ -1,6 +1,4 @@
 'use strict'
-import { Box } from 'smbls'
-import { mission } from '../../texts'
 import { SectionTitle } from '../../components'
 import VERANDA_JPG from '../../assets/images/sololaki/veranda.jpg'
 
@@ -16,7 +14,6 @@ const image = {
     },
     '@mobileS': { minWidth: '100%' },
     css: {
-      // border: '3px solid red',
       flex: '1',
       backgroundAttachment: 'fixed',
       backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .8)), url(' + VERANDA_JPG + ')',
@@ -48,18 +45,12 @@ const missions = {
     padding: 'D A A C',
     minWidth: `${950 / 16}em`,
     margin: '0 auto',
-    css: {
-      // border: '3px solid red',
-      alignSelf: 'flex-start'
-    },
+    css: { alignSelf: 'flex-start' },
     '@mobileM': {
       minWidth: 'fit-content',
       margin: '0 auto 0 0'
     },
-    '@mobileS': {
-      padding: 'D A A B1'
-    },
-    // '@mobileXS': { padding: 'D A A 0' },
+    '@mobileS': { padding: 'D A A B1' },
 
     title: {
       text: 'mission',
@@ -67,10 +58,7 @@ const missions = {
       fontSize: `${13 / 16}em`,
       fontWeight: '900',
       css: { textTransform: 'uppercase' },
-      '@mobileM': {
-        padding: '0 0 Z2 0'
-
-      }
+      '@mobileM': { padding: '0 0 Z2 0' }
     },
     p: {
       flexFlow: 'column',
@@ -81,9 +69,7 @@ const missions = {
         maxWidth: 'G2',
         gap: 'X2'
       },
-      '@mobileS': {
-        maxWidth: 'G1'
-      }
+      '@mobileS': { maxWidth: 'G1' }
     }
   },
 

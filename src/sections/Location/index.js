@@ -13,24 +13,6 @@ const title = {
   }
 }
 
-const paragraph = {
-  props: {
-    css: {
-      alignSelf: 'flex-end',
-      textAlign: 'right',
-      fontSize: `${14 / 16}em`,
-      letterSpacing: '.2px',
-      position: 'absolute',
-      top: `${-150 / 14}em`,
-      right: `${10 / 14}em`
-    }
-  },
-  ...[
-    { props: { text: 'Distance to Tbilisi International airport is 20 km.' } },
-    { props: { text: 'Central railway station is 11 km away.' } }
-  ]
-}
-
 const map = {
   proto: Map,
   props: {
