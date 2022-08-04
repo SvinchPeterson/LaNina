@@ -90,7 +90,7 @@ const roomParagraph = {
       maxWidth: 'G1',
       '@mobileL': { padding: '0 0 Y1 0' },
       css: {
-        // fontWeight: '500',
+        fontWeight: '500',
         lineHeight: '20px'
 
       }
@@ -107,9 +107,10 @@ const roomParagraph = {
 export const ballerinaParagraph = {
   proto: roomParagraph,
   heading: {
-    props: {
-      text: 'Enjoy special atmosphere, delicate and airy as ballerina’s dressing interior.'
-    }
+    ...[
+      'Enjoy special atmosphere, delicate and airy',
+      { text: 'as ballerina’s dressing interior.' }
+    ]
   },
   p: {
     props: {
@@ -121,10 +122,11 @@ export const ballerinaParagraph = {
 export const redBrickParagrap = {
   proto: roomParagraph,
   heading: {
-    props: {
-      maxWidth: `${270 / 14}em`,
-      text: 'Where traditional Georgian old style meets modernity!'
-    },
+    ...[
+      'Where traditional Georgian old style',
+      { text: 'meets modernity!' }
+
+    ],
     style: {
       '@media only screen and (max-width: 1366px)': {
         maxWidth: `fit-content`
@@ -141,10 +143,10 @@ export const redBrickParagrap = {
 export const yellowCouchParagraph = {
   proto: roomParagraph,
   heading: {
-    props: {
-      maxWidth: `${270 / 14}em`,
-      text: 'Make yourself comfortable on your yellow couch!'
-    },
+    ...[
+      'Make yourself comfortable on',
+      { text: 'yellow couch' }
+    ],
     style: {
       '@media only screen and (max-width: 1366px)': {
         maxWidth: `fit-content`
@@ -179,7 +181,10 @@ export const greenForestParagraph = {
 export const retroParagraph = {
   proto: roomParagraph,
   heading: {
-    props: { text: 'Where contemporary design and  trendy elements are combined with traditional architecture.' }
+    ...[
+      'Where contemporary design combine',
+      { text: 'with traditional architecture.' }
+    ]
   },
   p: {
     props: {

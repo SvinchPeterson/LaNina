@@ -1,6 +1,12 @@
 'use strict'
 import { Box } from 'smbls'
+import { SectionTitle } from '../../components'
 import WINE_JPG from '../../assets/images/sololaki/wine.jpg'
+
+const title = {
+  proto: SectionTitle,
+  props: { text: 'Wine' }
+}
 
 const image = {
   proto: Box,
@@ -41,9 +47,12 @@ const paragraph = {
   props: {
     position: 'absolute',
     background: 'cream2',
-    flexAlign: 'center flex-start',
+    flexAlign: 'center center',
+    flexFlow: 'column',
     width: 'fit-content',
     margin: '-E2 -G 0 0',
+    padding: 'E2 0 0 0',
+
     '@tabletL': {
       margin: '0 0 0 0',
       background: 'cream2 0'
@@ -56,13 +65,14 @@ const paragraph = {
     }
   },
 
+  title,
   texts: {
     proto: Box,
     props: {
       maxWidth: `${550 / 14.3}em`,
       margin: '0 auto',
       color: 'black .75',
-      padding: 'F1 E E2 E',
+      padding: 'A2 E E2 E',
       flexFlow: 'column',
       gap: 'A',
       '@tabletL': { color: 'cream 1' },

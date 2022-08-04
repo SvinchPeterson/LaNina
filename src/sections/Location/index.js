@@ -5,10 +5,12 @@ const title = {
   proto: SectionTitle,
   props: {
     text: 'location',
-    padding: '0 0 B2 0',
+    padding: '0 0 B Z',
+    maxWidth: '65%',
+    margin: '0 auto',
     css: {
       // border: '2px solid red',
-      textAlign: 'center'
+      textAlign: 'left'
     }
   }
 }
@@ -25,7 +27,7 @@ const map = {
       flex: 1,
       border: 'none',
       margin: '0 auto',
-      boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .1)',
+      boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .05)',
       minHeight: `${500 / 16}em`,
       backgroundAttachment: 'fixed'
     }

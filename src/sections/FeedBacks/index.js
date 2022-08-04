@@ -12,26 +12,30 @@ const navArrows = {
   proto: Box,
   props: {
     flexAlign: 'center flex-start',
-    gap: 'B'
+    width: 'D',
+    position: 'relative'
   },
   childProto: {
     proto: Box,
     tag: 'button',
     props: {
       padding: 'Y1',
+      position: 'absolute',
       css: {
         cursor: 'pointer',
         background: 'none',
         outline: 'none',
         border: 'none',
         opacity: '.8',
+        zIndex: '20',
         '&:hover': { opacity: '1' }
       }
     },
     arrow: {
       proto: [Img, Box],
       props: {
-        boxSize: 'A1 -'
+        boxSize: 'A1 -',
+        '@tabletL': { boxSize: 'A2 -' }
         // padding: 'W'
       }
     }
@@ -39,6 +43,7 @@ const navArrows = {
 
   ...[
     {
+      props: { left: '0' },
       on: {
         click: (event, element, state) => {
           const { feedbacks } = element.parent.parent.parent.content
@@ -53,6 +58,7 @@ const navArrows = {
     },
 
     {
+      props: { right: '0' },
       on: {
         click: (event, element, state) => {
           const { feedbacks } = element.parent.parent.parent.content
@@ -73,7 +79,7 @@ const heading = {
   proto: Box,
   props: {
     flexAlign: 'center space-between',
-    width: '70%',
+    width: '83%',
     '@mobileL': { width: '85%' }
   },
   style: {
@@ -103,8 +109,8 @@ const heading = {
 const props = {
   maxWidth: '1440px',
   minHeight: 'H',
-  '@tabletL': {
-    maxWidth: '75%',
+  '@tabletS': {
+    // maxWidth: '75%',
     padding: '0 D'
   },
   '@tabletM': { maxWidth: '100%' },
@@ -130,7 +136,7 @@ const props = {
     },
     css: {
       margin: '0 auto',
-      marginTop: `${50 / 16}em`,
+      marginTop: `${25 / 16}em`,
       '@media only screen and (max-width: 560px)': { marginTop: `${30 / 16}em` },
       '&:after': {
         content: '""',

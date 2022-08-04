@@ -61,13 +61,12 @@ const missions = {
       '@mobileM': { padding: '0 0 Z2 0' }
     },
     p: {
-      flexFlow: 'column',
-      gap: 'X',
+      // flexFlow: 'column',
+      // gap: 'X',
       fontSize: `${14.5 / 16}em`,
       color: 'black .8',
       '@mobileM': {
-        maxWidth: 'G2',
-        gap: 'X2'
+        maxWidth: 'G2'
       },
       '@mobileS': { maxWidth: 'G1' }
     }

@@ -36,29 +36,33 @@ const tabParagraph = {
     color: 'cream2',
     padding: `0 A2`,
     fontSize: `${14 / 16}em`,
+    '@mobileS': { padding: `0 A` },
     css: {
-      textAlign: 'justify',
       zIndex: 10,
       opacity: 0,
-      width: `${360 / 14}em`,
+      width: `${350 / 14}em`,
       boxSizing: 'border-box',
       pointerEvents: 'none',
       transition: 'opacity .3s ease-in-out',
       transitionDelay: '.4s',
-      letterSpacing: `${0.15 / 14}em`,
+      // letterSpacing: `${0.15 / 14}em`,
       fontWeight: '400',
-      wordSpacing: '-2px',
+      // wordSpacing: '-1.5px',
+      '> p': {
+        textAlign: 'justify',
+        wordSpacing: '-2px'
+      },
       '@media only screen and (max-width: 1366px)': {
         fontSize: `${15 / 16}em`,
         width: `${500 / 15}em`
       },
       '@media only screen and (max-width: 768px)': {
         fontSize: `${13.5 / 16}em`,
-        width: `${380 / 13.5}em`
+        width: `${300 / 13.5}em`
       },
       '@media only screen and (max-width: 350px)': {
         fontSize: `${12.8 / 16}em`,
-        width: `${310 / 12.8}em`
+        width: `${250 / 12.8}em`
       }
     }
   },
@@ -77,8 +81,8 @@ export const props = {
     minWidth: '100%',
     height: 'H'
   },
-  '@mobileL': { height: 'G' },
-  '@mobileM': { round: '0' },
+  '@mobileL': { height: 'G1' },
+  // '@mobileM': { round: '0' },
   css: {
     overflow: 'hidden',
     flex: 1,
@@ -91,7 +95,7 @@ export const props = {
     textDecoration: 'none',
     position: 'relative',
     backdropFilter: 'blur(2px)',
-    boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .35)',
+    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, .15)',
     '&:hover': {
       flex: 5.5,
       backdropFilter: 'blur(10px)',

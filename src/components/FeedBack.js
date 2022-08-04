@@ -1,22 +1,20 @@
 'use strict'
 
 const props = {
-  padding: 'C',
+  padding: 'C1',
   flexFlow: 'column',
   flexAlign: 'flex-start flex-start',
   background: 'black .05',
   maxHeight: 'G',
   round: 'Y2',
   minWidth: `${500 / 16}em`,
-  gap: 'A',
+  gap: 'A1',
   position: 'relative',
-  '@tabletL': { minWidth: '100%' },
-  '@mobileL': { padding: 'B1 B1 C B1' },
+  '@tabletS': { minWidth: '100%' },
   '@mobileM': {
-    padding: 'B1 B1 B1 B1',
+    padding: 'B',
     maxHeight: 'G'
   },
-  '@mobileS': { padding: 'B' },
   css: {
     boxSizing: 'border-box',
     background: 'linear-gradient(rgba(0, 0, 0, .03), rgba(0, 0, 0, .035))',
@@ -42,13 +40,13 @@ const props = {
 
   p: {
     text: `This a must stay n worth every penny. The host was great, the place was great, great ambience, a quiet place but just few minutes walk to all the central points. The hospitality was great and the host was very helpful and accessible for all my needs. Special thanks to Gaia and Tato who actually received me like family and came in person while i was saying my bye too. I would really want to come back for a longer stay. Love the place and love u guys.`,
-    color: 'black .6',
+    color: 'black .7',
     // fontWeight: '400',
     css: {
       fontSize: `${14.3 / 16}em`,
-      letterSpacing: '.8px',
+      // letterSpacing: '.8px',
       '@media only screen and (max-width: 480px)': {
-        fontSize: `${13.8 / 16}em`
+        // fontSize: `${13.8 / 16}em`
       }
     }
   },
@@ -57,8 +55,8 @@ const props = {
     text: 'January | 2022',
     color: 'black .75',
     position: 'absolute',
-    bottom: 'C',
-    right: 'C',
+    bottom: 'C1',
+    right: 'C1',
     '@mobileS': {
       bottom: 'B',
       right: 'B1'

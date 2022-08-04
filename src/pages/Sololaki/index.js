@@ -22,15 +22,9 @@ const paragraph = {
     padding: '0 E1 E2 0',
     margin: '0 0 0 auto',
     color: 'black .8',
-    lineHeight: `${23 / 14.5}em`,
+    // lineHeight: `${23 / 14.5}em`,
     css: {
-      textAlign: 'right',
-      '@media only screen and (max-width: 1024px)': {
-        textAlign: 'left'
-      },
-      '@media only screen and (max-width: 560px)': {
-        // textAlign: 'justify'
-      }
+      '@media only screen and (max-width: 1024px)': { textAlign: 'left' }
     },
     '@tabletS': {
       padding: '0 0 E2 0',
@@ -39,23 +33,20 @@ const paragraph = {
     },
     '@mobileL': { padding: 'F 0 E2 0' },
     '@mobileM': {
-      padding: 'C B1 E2 B1',
-      maxWidth: `${400 / 14.5}em`
+      padding: 'C B2 E2 B2'
     },
-    '@mobileXS': { padding: 'C A2 E2 A2'  }
+    '@mobileXS': { padding: 'C A2 E2 A2' }
   },
   ...[
     'If you’re ready to step out and explore the area, our apartments are conveniently located, within walking distance of a variety of popular local attractions: ',
     {
       tag: 'span',
       props: {
-        // color: 'black 1',
         fontWeight: '500',
         css: {
           span: { color: 'rgba(0, 0, 0, .8)', fontWeight: '400' }
         }
       },
-      // text: ' Liberty square, Botanical Garden, Sulfur bathes, bars, restaurants, shopping center.',
       ...[
         'Liberty square',
         { tag: 'span', text: ', ' },

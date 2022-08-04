@@ -44,7 +44,7 @@ const props = {
   position: 'relative',
   flexFlow: 'column',
   flexAlign: 'flex-start center',
-  padding: '0 7%',
+  padding: '0 8%',
   maxWidth: `${1440 / 16}em`,
   width: `${1440 / 16}em`,
   css: {
@@ -55,12 +55,12 @@ const props = {
     width: '100%',
     padding: '0 15%'
   },
-  '@mobileM': { padding: '0 0' },
+  '@mobileM': { padding: '0 5%' },
 
   buttons: {
     '@mobileM': {
-      bottom: `${-70 / 16}em`,
-      maxWidth: `${120 / 16}em`
+      bottom: `${-60 / 16}em`,
+      maxWidth: `70%`
     },
     css: {
       display: 'none',
