@@ -1,6 +1,8 @@
 'use strict'
 import { Box } from 'smbls'
-import ENTRENCE_JPG from '../../assets/images/sololaki/entrance.jpg'
+import { mission } from '../../texts'
+import { SectionTitle } from '../../components'
+import VERANDA_JPG from '../../assets/images/sololaki/veranda.jpg'
 
 const image = {
   props: {
@@ -9,15 +11,15 @@ const image = {
     minHeight: `${550 / 16}em`,
     padding: '0',
     '@mobileL': {
-      // minWidth: `${400 / 16}em`,
-      minHeight: `${300 / 16}em`,
+      minHeight: `${450 / 16}em`,
       minWidth: '100%'
     },
     '@mobileS': { minWidth: '100%' },
     css: {
+      // border: '3px solid red',
       flex: '1',
       backgroundAttachment: 'fixed',
-      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .8)), url(' + ENTRENCE_JPG + ')',
+      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .8)), url(' + VERANDA_JPG + ')',
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       zIndex: 2,
@@ -27,7 +29,7 @@ const image = {
         backgroundAttachment: 'initial',
         backgroundPosition: 'bottom 0px center',
         backgroundSize: 'cover',
-        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .55)), url(' + ENTRENCE_JPG + ')'
+        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .55)), url(' + VERANDA_JPG + ')'
       },
       '&:before': {
         content: '""',
@@ -41,33 +43,64 @@ const image = {
   }
 }
 
-const texts = {
-  proto: Box,
+const missions = {
   props: {
-    margin: 'E 0 0 0',
-    // fontWeight: '400',
-    flexFlow: 'column',
-    maxWidth: `${750 / 16}em`,
-    fontSize: 'A',
-    '@mobileS': {
-      padding: '0 D1 0 D1',
-      gap: 'Y2',
-      width: `${430 / 16}em`
-    },
+    padding: 'D A A C',
+    minWidth: `${950 / 16}em`,
+    margin: '0 auto',
     css: {
-      textAlign: 'center',
-      letterSpacing: '.2px'
+      // border: '3px solid red',
+      alignSelf: 'flex-start'
+    },
+    '@mobileM': {
+      minWidth: 'fit-content',
+      margin: '0 auto 0 0'
+    },
+    '@mobileS': {
+      padding: 'D A A B1'
+    },
+    // '@mobileXS': { padding: 'D A A 0' },
+
+    title: {
+      text: 'mission',
+      padding: '0 0 Z1 0',
+      fontSize: `${13 / 16}em`,
+      fontWeight: '900',
+      css: { textTransform: 'uppercase' },
+      '@mobileM': {
+        padding: '0 0 Z2 0'
+
+      }
+    },
+    p: {
+      flexFlow: 'column',
+      gap: 'X',
+      fontSize: `${14.5 / 16}em`,
+      color: 'black .8',
+      '@mobileM': {
+        maxWidth: 'G2',
+        gap: 'X2'
+      },
+      '@mobileS': {
+        maxWidth: 'G1'
+      }
     }
   },
-  ...[
-    { text: 'apartments are designed to match your mood' },
-    { text: 'create own atmosphere regardless of trip reason' },
-    {
-      proto: Box,
-      props: { margin: 'A2 0 0 0' },
-      text: 'you are special for us'
-    }
-  ]
+
+  title: {
+    proto: SectionTitle,
+    props: 'match'
+  },
+  p: {
+    tag: 'p',
+    ...[
+      'Providing remarkable lodging facilities and services to our guests.',
+      {
+        text: 'Emphasizing on customer service and creating an unforgettable in-home experience.',
+        props: { maxWidth: `${460 / 16}em` }
+      }
+    ]
+  }
 }
 
 const props = {
@@ -89,6 +122,7 @@ export const Entrence = {
   tag: 'section',
   props,
 
-  image
+  image,
+  missions
   // texts
 }
