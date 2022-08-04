@@ -82,7 +82,7 @@ export const props = {
     height: 'H'
   },
   '@mobileL': { height: 'G1' },
-  // '@mobileM': { round: '0' },
+  '@mobileS': { height: 'F2' },
   css: {
     overflow: 'hidden',
     flex: 1,
