@@ -76,12 +76,12 @@ export const props = {
   height: 'G1',
   padding: 'B',
   position: 'relative',
-  round: 'Y2',
+  round: 'Y',
   '@tabletL': {
     minWidth: '100%',
     height: 'H'
   },
-  '@mobileL': { height: 'G1' },
+  '@mobileL': { height: 'G' },
   '@mobileS': { height: 'F2' },
   css: {
     overflow: 'hidden',
@@ -118,7 +118,10 @@ export const props = {
       // background: 'red',
       opacity: '.4',
       transition: 'opacity .7s ease-in-out',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      '@media only screen and (max-width: 1366px)': {
+        padding: '20px'
+      }
     },
     '&:after': {
       content: '""',

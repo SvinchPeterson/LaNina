@@ -9,8 +9,9 @@ const title = {
   proto: SectionTitle,
   props: {
     text: 'Features',
-    padding: '0 0 0 D2',
-    css: { alignSelf: 'flex-start' }
+    padding: '0 0 0 0',
+    position: 'absolute',
+    css: { alignSelf: 'flex-start', background: 'red' }
   }
 }
 
@@ -54,11 +55,11 @@ const scroll = {
 }
 
 const props = {
-  margin: 'B 0 E 0',
+  margin: '0 0 0 0',
   flexAlign: 'center center',
   flexFlow: 'column',
   position: 'relative',
-  gap: 'B',
+  gap: '0',
   css: {
     width: '100%',
     // '&:after': {

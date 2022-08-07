@@ -1,7 +1,6 @@
 'use strict'
 
 import { Gallery } from './gallery'
-import { position } from '../../animations'
 import { image } from './image'
 
 import LIVINGROOM_JPG from '../../assets/images/ballerina/livingroom.jpg'
