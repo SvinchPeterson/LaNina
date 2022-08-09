@@ -37,7 +37,7 @@ export const tabBallerina = {
     paragraph: {
       ...[
         'Enjoy special atmosphere, delicate and airy',
-        { text: 'as ballerina’s dressing interior.' }
+        { text: `as ballerina's dressing interior.` }
       ]
     },
     icon: { img: { props: { src: DRESS_PNG } } }
