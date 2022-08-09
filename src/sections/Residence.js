@@ -19,14 +19,24 @@ const paragraph = {
   proto: ResidenceText,
   props: {
     flexFlow: 'column',
-    gap: 'B',
+    gap: 'A',
     maxWidth: `${650 / 16}em`,
     color: 'cream 2',
     textAlign: 'center',
     position: 'relative',
     css: {
       zIndex: '2',
-      boxSizing: 'content-box'
+      boxSizing: 'content-box',
+      '@media only screen and (max-width: 480px)': {
+        textAlign: 'left',
+        fontSize: `${15 / 16}em`
+      }
+    },
+    '@mobileL': {
+      padding: '0 B2'
+    },
+    '@mobileXS': {
+      padding: '0 B'
     }
   }
 }
@@ -43,6 +53,7 @@ const props = {
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center center',
+    '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' },
     '&:before': {
       content: '""',
       width: '100%',
@@ -53,9 +64,6 @@ const props = {
       backdropFilter: 'blur(.5px)',
       background: 'radial-gradient(rgba(0, 0, 0, .87), rgba(0, 0, 0, .65))'
     }
-  },
-  '@mobileL': {
-    padding: 'E2 0'
   }
 }
 

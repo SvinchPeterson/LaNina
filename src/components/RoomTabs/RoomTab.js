@@ -35,35 +35,16 @@ const tabParagraph = {
   props: {
     color: 'cream2',
     padding: `0 A2`,
-    fontSize: `${14 / 16}em`,
-    '@mobileS': { padding: `0 A` },
+    width: 'H',
+    fontWeight: '400',
     css: {
       zIndex: 10,
       opacity: 0,
-      width: `${350 / 14}em`,
       boxSizing: 'border-box',
       pointerEvents: 'none',
       transition: 'opacity .3s ease-in-out',
       transitionDelay: '.4s',
-      // letterSpacing: `${0.15 / 14}em`,
-      fontWeight: '400',
-      // wordSpacing: '-1.5px',
-      '> p': {
-        textAlign: 'justify',
-        wordSpacing: '-2px'
-      },
-      '@media only screen and (max-width: 1366px)': {
-        fontSize: `${15 / 16}em`,
-        width: `${500 / 15}em`
-      },
-      '@media only screen and (max-width: 768px)': {
-        fontSize: `${13.5 / 16}em`,
-        width: `${300 / 13.5}em`
-      },
-      '@media only screen and (max-width: 350px)': {
-        fontSize: `${12.8 / 16}em`,
-        width: `${250 / 12.8}em`
-      }
+      textAlign: 'center'
     }
   },
 
@@ -170,30 +151,59 @@ export const RoomTab = {
   on: {
     click: (event, element, state) => {
       state.update({ activeTab: element.key, back: true })
-      element.parent.parent.parent.rooms.update({
-        style: {
-          minHeight: `${500 / 16}em`,
-          opacity: 1,
-          padding: `0 ${200 / 16}em`,
-          alignSelf: 'center',
-          minWidth: `${1440 / 16}em`,
-          '@media only screen and (max-width: 1366px)': {
-            padding: `0 ${150 / 16}em`,
-            minWidth: `${1000 / 16}em`
-          },
-          '@media only screen and (max-width: 1225px)': {
-            padding: `0 ${100 / 16}em`
-          },
-          '@media only screen and (max-width: 1024px)': {
-            minWidth: `${850 / 16}em`
-          },
-          '@media only screen and (max-width: 768px)': {
-            padding: `0`,
-            minWidth: `100%`
-          }
 
-        }
-      })
+      // element.parent.parent.update({
+      //   minWidth: '0',
+      //   opacity: 0
+      // })
+
+      // element.parent.parent.parent.rooms.update({
+      //   style: {
+      //     minWidth: '100%'
+      //     // minHeight: '100%'
+      //   }
+
+      // })
+      // element.parent.parent.update({
+      //   style: {
+      //     minWidth: '0 !important',
+      //     width: '0 !important',
+      //     padding: '0'
+      //     // transition: 'all .5s ease-in-out'
+      //   }
+      // })
+
+      // element.parent.update({
+      //   // style: { display: 'none !important' }
+      // })
+
+      // element.parent.parent.parent.rooms.update({
+      //   style: {
+      //     minWidth: `100%`,
+      //     transition: 'all 5s ease-in-out',
+      //     transformOrigin: 'left',
+      //     opacity: 1,
+      //     flex: 3,
+      //     // padding: `0 ${200 / 16}em`,
+      //     // alignSelf: 'center',
+      //     // minWidth: `100%`,
+      //     '@media only screen and (max-width: 1366px)': {
+      //       padding: `0 ${150 / 16}em`,
+      //       minWidth: `${1000 / 16}em`
+      //     },
+      //     '@media only screen and (max-width: 1225px)': {
+      //       padding: `0 ${100 / 16}em`
+      //     },
+      //     '@media only screen and (max-width: 1024px)': {
+      //       minWidth: `${850 / 16}em`
+      //     },
+      //     '@media only screen and (max-width: 768px)': {
+      //       padding: `0`,
+      //       minWidth: `100%`
+      //     }
+
+      //   }
+      // })
     }
   },
 

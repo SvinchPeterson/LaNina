@@ -16,10 +16,12 @@ const title = {
 }
 
 const props = {
-  flexFlow: 'column',
+  height: '100%',
+  width: '100%',
+  minHeight: '100%',
+  // overflow: 'hidden',
+  flexAlign: 'center center',
   position: 'relative',
-  padding: `G 0`,
-  margin: '0 0 G 0',
   '@tabletL': { padding: 'F1 0 G 0' },
   '@mobileM': {
     padding: `E1 0 G 0`,
@@ -51,14 +53,28 @@ const props = {
         background: 'rgba(60, 84, 72, 1)'
       }
     }
+  },
+
+  content: {
+
   }
 }
 
 export const Apartments = {
   tag: 'section',
   props,
+  class: {
+    show: (element, state) => state.activeTab
+      ? {
+        justifyContent: 'flex-start'
+      }
+      : {}
+  },
+
   attr: { id: 'apartments' },
   title,
+
   tabs,
   rooms
+
 }

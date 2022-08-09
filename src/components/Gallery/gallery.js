@@ -4,8 +4,9 @@ export const Gallery = {
   proto: Box,
 
   props: {
-    position: 'absolute',
-    boxSize: '100% 100%',
-    left: '0'
+    position: 'relative',
+    boxSize: 'H I',
+    margin: '0 D 0 auto',
+    css: { alignSelf: 'center' }
   }
 }

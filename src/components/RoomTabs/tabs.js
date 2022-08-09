@@ -34,7 +34,12 @@ export const tabBallerina = {
   },
   props: { href: '#roomBallerina' },
   content: {
-    paragraph: { proto: ballerinaParagraph },
+    paragraph: {
+      ...[
+        'Enjoy special atmosphere, delicate and airy',
+        { text: 'as ballerina’s dressing interior.' }
+      ]
+    },
     icon: { img: { props: { src: DRESS_PNG } } }
   }
 }
@@ -56,8 +61,10 @@ export const tabRedBrick = {
   },
   content: {
     paragraph: {
-      proto: redBrickParagrap
-      // style: { width: `${465 / 14}em !important` }
+      ...[
+        'Where traditional Georgian old style',
+        { text: 'meets modernity!' }
+      ]
     },
     icon: { img: { props: { src: BRICKS_PNG } } }
   }
@@ -79,7 +86,12 @@ export const tabYellowCouch = {
       } : {}
   },
   content: {
-    paragraph: { proto: yellowCouchParagraph },
+    paragraph: {
+      ...[
+        'Make yourself comfortable on',
+        { text: 'yellow couch' }
+      ]
+    },
     icon: { img: { props: { src: SOFA_PNG } } }
   }
 }
@@ -100,7 +112,12 @@ export const tabGreenForest = {
       } : {}
   },
   content: {
-    paragraph: { proto: greenForestParagraph },
+    paragraph: {
+      ...[
+        'Timeless and elegant, yet modern and fresh,',
+        { text: 'green is your choice!' }
+      ]
+    },
     icon: { img: { props: { src: LEAF_PNG } } }
   }
 }
@@ -122,10 +139,11 @@ export const tabRetro = {
   },
   content: {
     paragraph: {
-      proto: retroParagraph,
-      style: {
-        width: `${388 / 14}em`
-      }
+      ...[
+        'Where contemporary design combine with',
+        { text: 'traditional architecture.' }
+
+      ]
     },
     icon: { img: { props: { src: VINYL_PNG } } }
   }

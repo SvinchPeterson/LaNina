@@ -9,9 +9,18 @@ const title = {
   proto: SectionTitle,
   props: {
     text: 'Features',
-    padding: '0 0 0 0',
-    position: 'absolute',
-    css: { alignSelf: 'flex-start', background: 'red' }
+    padding: 'G2 0 Z E',
+    fontSize: 'Z',
+    fontWeight: '700',
+    top: '0',
+    css: {
+      alignSelf: 'flex-start',
+      zIndex: '10',
+      textTransform: 'uppercase'
+    },
+    '@mobileM': {
+      padding: 'D 0 Z B2'
+    }
   }
 }
 
@@ -55,48 +64,14 @@ const scroll = {
 }
 
 const props = {
-  margin: '0 0 0 0',
   flexAlign: 'center center',
   flexFlow: 'column',
   position: 'relative',
   gap: '0',
   css: {
-    width: '100%',
-    // '&:after': {
-    //   content: '"scroll"',
-    //   position: 'absolute',
-    //   left: '60px',
-    //   writingMode: 'vertical-rl',
-    //   textOrientation: 'upright',
-    //   fontWeight: '900',
-    //   textTransform: 'uppercase',
-    //   fontSize: `${12 / 16}em`,
-    //   display: 'none',
-    //   top: '45%',
-    //   '@media only screen and (max-width: 768px)': {
-    //     display: 'block'
-    //   },
-    //   '@media only screen and (max-width: 560px)': {
-    //     display: 'block',
-    //     left: '20px'
-    //   },
-    //   '@media only screen and (max-width: 350px)': {
-    //     left: '10px'
-    //   }
-    // },
-    '&:before': {
-      content: '""',
-      position: 'absolute',
-      width: '100%',
-      height: '0px',
-      bottom: '0',
-      zIndex: '100',
-      '@media only screen and (max-width: 768px)': {
-        boxShadow: '0px 0px 50px 30px rgba(248, 241, 227, 1)'
-
-      }
-    }
+    width: '100%'
   },
+  '@tabletL': { padding: '0 0 D 0' },
 
   content: {
     columns: `repeat(4, ${270 / 16}em)`,
@@ -115,7 +90,6 @@ const props = {
       padding: 'D1 C2'
     },
     '@mobileXS': { padding: 'D1 C' },
-    // '@mobileXS': { columns: `repeat(1, ${340 / 16}em)` },
 
     css: {
       boxSizing: 'border-box',
@@ -135,7 +109,6 @@ const props = {
         justifyContent: 'flex-start',
         background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .15))',
         borderTop: '1px solid rgba(248, 241, 227, .3)'
-        // '> div': { border: '2px solid red' }
       },
       '&:before': {
         content: '""',
@@ -144,7 +117,7 @@ const props = {
         position: 'absolute',
         top: 0,
         left: 0,
-        background: 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .3))',
+        background: 'radial-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .6))',
         zIndex: 5,
         '@media only screen and (max-width: 1366px)': {
           background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .15))'

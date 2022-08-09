@@ -18,7 +18,7 @@ export const image = {
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
+    // backgroundAttachment: 'fixed',
     boxShadow: ' inset 0px 0px 5px 0px rgba(0, 0, 0, .6)',
     borderRadius: '6px',
     transition: 'height .7s ease-in-out, opacity .7s ease-in-out, background-position 3s ease-in-out',

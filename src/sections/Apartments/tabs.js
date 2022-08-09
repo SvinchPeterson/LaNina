@@ -50,6 +50,7 @@ const props = {
   css: {
     boxSizing: 'border-box',
     margin: '0 auto'
+    // border: '5px solid yellow'
   },
   '@tabletL': {
     width: '100%',
@@ -89,12 +90,27 @@ const props = {
     gap: 'C',
     width: '100%',
     '@tabletL': { gap: 'B' },
-    css: { '@media only screen and (max-width: 1366px)': { overflowY: 'auto' } }
+    css: {
+      '@media only screen and (max-width: 1366px)': { overflowY: 'auto' }
+    }
   }
 }
 
 export const tabs = {
   props,
+
+  class: {
+    show: (element, state) => state.activeTab
+      ? {
+        // minWidth: '0',
+        width: 0,
+        overflow: 'hidden',
+        padding: '0',
+        display: 'none'
+        // transition: 'all 3s ease-in-out'
+      }
+      : {}
+  },
 
   buttons,
   tabsContainer

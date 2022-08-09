@@ -1,6 +1,6 @@
 'use strict'
 
-import { Box, Link, Img } from 'smbls'
+import { Box, Link, Img, Flex } from 'smbls'
 
 import BACK_PNG from '../../assets/icons/arrowBack.png'
 
@@ -10,6 +10,8 @@ import {
   NavButtons,
   NavButtons2
 } from '..'
+
+import { RoomDescription } from '../RoomDescription'
 
 const book = {
   proto: [Link],
@@ -150,126 +152,144 @@ const back = {
 }
 
 const Room = {
-  props: { position: 'relative' },
+  props: {
+    boxSize: '100% 100%',
+    flexAlign: 'center spance-between',
+    css: {
+      border: '5px solid pink',
+      zIndex: 10,
+      alignSelf: 'center'
+    }
+  },
+
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
-        height: `${600 / 16}em`,
-        transition: 'all 1.1s ease-in-out',
-        opacity: 1,
-        paddingTop: `${130 / 16}em`,
-        '@media only screen and (max-width: 1366px)': {
-          marginTop: `${125 / 16}em`,
-          paddingTop: `${160 / 16}em`,
-          height: `${500 / 16}em`,
-          display: 'block'
-        },
-        '@media only screen and (max-height: 800px)': {
-          height: `${500 / 16}em`
-        },
-        '@media only screen and (max-height: 788px)': {
-          height: `${450 / 16}em`
-        },
-        '@media only screen and (max-height: 722px)': {
-          height: `${400 / 16}em`
-        },
-        '@media only screen and (max-height: 650px)': {
-          paddingTop: `${90 / 16}em`
-        },
-        '@media only screen and (max-width: 560px)': {
-          height: `${350 / 16}em`
-        },
-        '@media only screen and (max-width: 480px)': {
-          height: `${300 / 16}em`
-        }
+        // minWidth: '100%'
+        // height: '100%'
+        // border: '5px solid purple',
+
+        // transition: 'all 1.1s ease-in-out',
+        // opacity: 1,
+        // // paddingTop: `${130 / 16}em`,
+        // '@media only screen and (max-width: 1366px)': {
+        //   marginTop: `${125 / 16}em`,
+        //   paddingTop: `${160 / 16}em`,
+        //   height: `${500 / 16}em`,
+        //   display: 'block'
+        // },
+        // '@media only screen and (max-height: 800px)': {
+        //   height: `${500 / 16}em`
+        // },
+        // '@media only screen and (max-height: 788px)': {
+        //   height: `${450 / 16}em`
+        // },
+        // '@media only screen and (max-height: 722px)': {
+        //   height: `${400 / 16}em`
+        // },
+        // '@media only screen and (max-height: 650px)': {
+        //   paddingTop: `${90 / 16}em`
+        // },
+        // '@media only screen and (max-width: 560px)': {
+        //   height: `${350 / 16}em`
+        // },
+        // '@media only screen and (max-width: 480px)': {
+        //   height: `${300 / 16}em`
+        // }
       }
 
       : {
-        height: `0`,
-        opacity: 0,
-        button: { opacity: 0 },
-        '> aside': { display: 'none' },
-        '@media only screen and (max-width: 1366px)': {
-          display: 'none',
-          height: `${500 / 16}em`
-        }
+        // height: `0`,
+        // opacity: 0,
+        // button: { opacity: 0 },
+        // '> aside': { display: 'none' },
+        // '@media only screen and (max-width: 1366px)': {
+        //   display: 'none',
+        //   height: `${500 / 16}em`
+        // }
       }
   },
-  gallery: {},
-  RoomOffers,
-  navButton: {
-    proto: NavButtons,
-    props: { '@mobileL': { display: 'none' } }
+
+  article: {
+    props: { css: { border: '4px solid red' } },
+    RoomDescription
   },
-  navButton2: {
-    proto: NavButtons2,
-    style: {
-      display: 'none',
-      '@media only screen and (max-width: 768px)': {
-        display: 'flex',
-        top: '70%',
-        width: '100%',
-        '> button': {
-          background: 'rgba(60, 84, 72, .95)',
-          '&:first-child': {
-            marginLeft: `${-1.5 / 16}em`
-          },
-          '&:last-child': {
-            marginRight: `${-1.5 / 16}em`
-          }
-        }
-      },
-      '@media only screen and (max-width: 560px)': {
-        top: '85%'
-      },
-      '@media only screen and (max-height: 650px)': {
-        top: '70%'
-      }
-    },
+  gallery: {}
+  // RoomOffers,
+  // navButton: {
+  //   proto: NavButtons,
+  //   props: { '@mobileL': { display: 'none' } }
+  // },
+  // navButton2: {
+  //   proto: NavButtons2,
+  //   style: {
+  //     display: 'none',
+  //     '@media only screen and (max-width: 768px)': {
+  //       display: 'flex',
+  //       top: '70%',
+  //       width: '100%',
+  //       '> button': {
+  //         background: 'rgba(60, 84, 72, .95)',
+  //         '&:first-child': {
+  //           marginLeft: `${-1.5 / 16}em`
+  //         },
+  //         '&:last-child': {
+  //           marginRight: `${-1.5 / 16}em`
+  //         }
+  //       }
+  //     },
+  //     '@media only screen and (max-width: 560px)': {
+  //       top: '85%'
+  //     },
+  //     '@media only screen and (max-height: 650px)': {
+  //       top: '70%'
+  //     }
+  //   },
 
-    ...[
-      {
-        on: {
-          click: (event, element, state) => {
-            const { activeImage } = state
-            state.update({
-              activeImage: activeImage + 1
-            })
-            if (activeImage >= 8) {
-              state.update({ activeImage: 0 })
-            }
-          }
-        }
-      },
+  //   ...[
+  //     {
+  //       on: {
+  //         click: (event, element, state) => {
+  //           const { activeImage } = state
+  //           state.update({
+  //             activeImage: activeImage + 1
+  //           })
+  //           if (activeImage >= 8) {
+  //             state.update({ activeImage: 0 })
+  //           }
+  //         }
+  //       }
+  //     },
 
-      {
-        on: {
-          click: (event, element, state) => {
-            const { activeImage } = state
-            state.update({
-              activeImage: activeImage - 1
-            })
-            if (activeImage <= 0) {
-              state.update({ activeImage: 8 })
-            }
-          }
-        },
-        style: { marginRight: `${-3 / 16}em` }
-      }
-    ]
-  },
+  //     {
+  //       on: {
+  //         click: (event, element, state) => {
+  //           const { activeImage } = state
+  //           state.update({
+  //             activeImage: activeImage - 1
+  //           })
+  //           if (activeImage <= 0) {
+  //             state.update({ activeImage: 8 })
+  //           }
+  //         }
+  //       },
+  //       style: { marginRight: `${-3 / 16}em` }
+  //     }
+  //   ]
+  // }
 
-  book: { proto: book },
-  back: { proto: back }
+  // book: { proto: book },
+  // back: { proto: back }
 }
 
 export const roomBallerina = {
   proto: Room,
   attr: { id: 'roomBallerina' },
-  gallery: { proto: galleryBallerina },
-  RoomOffers: {},
-  navButton: {},
-  book: { props: { href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub' } }
+  article: {},
+  gallery: { proto: galleryBallerina }
+  // RoomOffers: {},
+  // navButton: {},
+  // book: { props: { href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub' } }
 }
 
 export const roomRedBrick = {

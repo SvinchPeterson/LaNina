@@ -55,18 +55,22 @@ const missions = {
     title: {
       text: 'mission',
       padding: '0 0 A 0',
-      fontSize: `${13 / 16}em`,
+      fontSize: `${14 / 16}em`,
       fontWeight: '900',
-      css: { textTransform: 'uppercase' },
+      css: {
+        textTransform: 'uppercase',
+        fontStyle: 'italic'
+      },
       '@mobileM': { padding: '0 0 A 0' }
     },
     p: {
       flexFlow: 'column',
-      gap: 'Y',
-      fontSize: `${14.5 / 16}em`,
+      gap: 'X',
       color: 'black .8',
+      css: { fontStyle: 'italic' },
       '@mobileM': {
-        maxWidth: 'G2'
+        maxWidth: 'G2',
+        gap: 'Y'
       },
       '@mobileS': { maxWidth: 'G1' }
     }
@@ -79,9 +83,9 @@ const missions = {
   p: {
     tag: 'p',
     ...[
-      'Providing remarkable lodging facilities and services to our guests.',
+      '"Providing remarkable lodging facilities and services to our guests.',
       {
-        text: 'Emphasizing on customer service and creating an unforgettable in-home experience.',
+        text: 'Emphasizing on customer service and creating an unforgettable in-home experience."',
         props: { maxWidth: `${460 / 16}em` }
       }
     ]
@@ -95,11 +99,9 @@ const props = {
   flexAlign: 'center flex-start',
   margin: '0 auto',
   gap: 'Z',
-  // fontWeight: '300',
   css: {
     marginTop: `${200 / 16}em`,
     marginBottom: `${350 / 16}em`,
-    // textTransform: 'uppercase',
     '@media only screen and (max-width: 1366px)': { marginTop: `${75 / 16}em`, marginBottom: `${250 / 16}em` }
   }
 }

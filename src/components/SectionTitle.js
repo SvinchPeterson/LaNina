@@ -5,7 +5,8 @@ export const SectionTitle = {
   props: {
     text: 'residence',
     fontSize: 'D',
-    fontWeight: '300',
+    fontWeight: '400',
+    '@mobileM': { fontSize: 'C' },
     css: {
       textTransform: 'capitalize'
     }
