@@ -6,9 +6,10 @@ const props = {
   position: 'relative',
   maxWidth: `${1440 / 16}em`,
   margin: '0 auto',
+  // background: 'cream2',
   css: {
     zIndex: '20',
-    border: '7px solid blue',
+    // border: '7px solid blue',
     transition: 'all 3s ease-in-out !important'
   },
 

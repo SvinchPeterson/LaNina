@@ -12,6 +12,7 @@ import {
 } from '..'
 
 import { RoomDescription } from '../RoomDescription'
+import { Amenities } from '../Amenities'
 
 const book = {
   proto: [Link],
@@ -156,9 +157,14 @@ const Room = {
     boxSize: '100% 100%',
     flexAlign: 'center spance-between',
     css: {
-      border: '5px solid pink',
+      // border: '5px solid pink',
       zIndex: 10,
       alignSelf: 'center'
+    },
+    article: {
+      flexFlow: 'column',
+      padding: '0 0 0 D',
+      gap: 'C'
     }
   },
 
@@ -211,8 +217,8 @@ const Room = {
   },
 
   article: {
-    props: { css: { border: '4px solid red' } },
-    RoomDescription
+    RoomDescription,
+    Amenities
   },
   gallery: {}
   // RoomOffers,
