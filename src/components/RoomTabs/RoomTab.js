@@ -57,7 +57,7 @@ export const props = {
   height: 'G1',
   padding: 'B',
   position: 'relative',
-  round: 'Y',
+  round: 'V',
   '@tabletL': {
     minWidth: '100%',
     height: 'H'

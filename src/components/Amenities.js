@@ -6,14 +6,16 @@ const list = {
   props: {
     columns: 'repeat(2, 1fr)',
     color: 'cream2',
-    padding: 'Z2 0 0 Y2',
-    css: { borderTop: '1px solid rgba(248, 241, 227, 1)' }
+    padding: 'Z2 0 0 Y',
+    // columnGap: 'D',
+    css: { borderTop: '1px solid rgba(248, 241, 227, .3)' }
   },
   childProto: {
     props: {
       lineHeight: '25px',
       fontSize: `${14 / 16}em`,
       flexAlign: 'center flex-start',
+      color: 'cream2 .8',
       gap: 'Z1',
       css: {
         '&:before': {
@@ -54,8 +56,8 @@ const props = {
     text: 'amenities',
     fontSize: 'Z',
     fontWeight: '700',
-    color: 'orange3',
-    padding: '0 0 Z2 0',
+    color: 'orange3 .85',
+    padding: '0 0 Y2 0',
     css: {
       textTransform: 'uppercase'
     }

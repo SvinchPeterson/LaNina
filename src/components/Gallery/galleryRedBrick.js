@@ -34,71 +34,74 @@ import BATHROOM2_MOBILE_JPG from '../../assets/images/redBrick/mobile/bathroom2.
 
 export const galleryRedBrick = {
   proto: Gallery,
-  childProto: image,
-  ...[
-    {
-      style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + LIVINGROOM_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + LIVINGROOM_MOBILE_JPG + ')' }
+
+  imageContainer: {
+    childProto: image,
+    ...[
+      {
+        style: {
+          '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + LIVINGROOM_JPG + ')' },
+          '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + LIVINGROOM_TABLET_JPG + ')' },
+          '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + LIVINGROOM_MOBILE_JPG + ')' }
+        }
+      },
+      {
+        style: {
+          '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')' },
+          '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + LIVINGROOM2_TABLET_JPG + ')' },
+          '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + LIVINGROOM2_MOBILE_JPG + ')' }
+        }
+      },
+      {
+        style: {
+          '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM_JPG + ')' },
+          '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM_TABLET_JPG + ')' },
+          '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM_MOBILE_JPG + ')' }
+        }
+      },
+      {
+        style: {
+          '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM2_JPG + ')' },
+          '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM2_TABLET_JPG + ')' },
+          '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM2_MOBILE_JPG + ')' }
+        }
+      },
+      {
+        style: {
+          '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN_JPG + ')' },
+          '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN_TABLET_JPG + ')' },
+          '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + KITCHEN_MOBILE_JPG + ')' }
+        }
+      },
+      {
+        style: {
+          '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN2_JPG + ')' },
+          '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN2_TABLET_JPG + ')' },
+          '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + KITCHEN2_MOBILE_JPG + ')' }
+        }
+      },
+      {
+        style: {
+          '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM3_JPG + ')' },
+          '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM3_TABLET_JPG + ')' },
+          '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM3_MOBILE_JPG + ')' }
+        }
+      },
+      {
+        style: {
+          '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BATHROOM_JPG + ')' },
+          '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BATHROOM_TABLET_JPG + ')' },
+          '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BATHROOM_MOBILE_JPG + ')' }
+        }
+      },
+      {
+        style: {
+          animationDuration: '2s',
+          '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BATHROOM2_JPG + ')' },
+          '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BATHROOM2_TABLET_JPG + ')' },
+          '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BATHROOM2_MOBILE_JPG + ')' }
+        }
       }
-    },
-    {
-      style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + LIVINGROOM2_JPG + ')' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + LIVINGROOM2_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + LIVINGROOM2_MOBILE_JPG + ')' }
-      }
-    },
-    {
-      style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM_JPG + ')' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM_MOBILE_JPG + ')' }
-      }
-    },
-    {
-      style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM2_JPG + ')' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM2_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM2_MOBILE_JPG + ')' }
-      }
-    },
-    {
-      style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN_JPG + ')' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + KITCHEN_MOBILE_JPG + ')' }
-      }
-    },
-    {
-      style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + KITCHEN2_JPG + ')' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + KITCHEN2_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + KITCHEN2_MOBILE_JPG + ')' }
-      }
-    },
-    {
-      style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BEDROOM3_JPG + ')' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BEDROOM3_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BEDROOM3_MOBILE_JPG + ')' }
-      }
-    },
-    {
-      style: {
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BATHROOM_JPG + ')' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BATHROOM_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BATHROOM_MOBILE_JPG + ')' }
-      }
-    },
-    {
-      style: {
-        animationDuration: '2s',
-        '@media only screen and (min-width: 1226px)': { backgroundImage: 'url(' + BATHROOM2_JPG + ')' },
-        '@media only screen and (max-width: 1225px)': { backgroundImage: 'url(' + BATHROOM2_TABLET_JPG + ')' },
-        '@media only screen and (max-width: 768px)': { backgroundImage: 'url(' + BATHROOM2_MOBILE_JPG + ')' }
-      }
-    }
-  ]
+    ]
+  }
 }

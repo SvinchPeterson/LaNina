@@ -12,6 +12,7 @@ export const image = {
     top: '0',
     left: '0',
     height: '100%'
+    // height: '100%'
   },
 
   style: {
@@ -20,7 +21,7 @@ export const image = {
     backgroundRepeat: 'no-repeat',
     // backgroundAttachment: 'fixed',
     boxShadow: ' inset 0px 0px 5px 0px rgba(0, 0, 0, .6)',
-    borderRadius: '6px',
+    // borderRadius: '6px',
     transition: 'height .7s ease-in-out, opacity .7s ease-in-out, background-position 3s ease-in-out',
     '@media only screen and (max-width: 1366px)': {
       backgroundAttachment: 'initial'
@@ -33,22 +34,21 @@ export const image = {
   class: {
     show: (element, state) => state.activeImage === parseInt(element.key)
       ? {
-        opacity: 1,
-        '@media only screen and (min-width: 1366px)': {
-          height: '100%'
-        }
+        opacity: 1
+        // '@media only screen and (min-width: 1366px)': {
+        //   height: '100%'
+        // }
       }
 
       : {
-        backgroundPosition: 'center center',
-        opacity: 0,
-        height: '100%',
-        '@media only screen and (min-width: 1366px)': {
-          height: '0'
-        },
-        '@media only screen and (max-width: 1366px)': {
-          height: '100%'
-        }
+        // backgroundPosition: 'center center',
+        opacity: 0
+        // '@media only screen and (min-width: 1366px)': {
+        //   height: '0'
+        // },
+        // '@media only screen and (max-width: 1366px)': {
+        //   height: '100%'
+        // }
       }
   }
 }

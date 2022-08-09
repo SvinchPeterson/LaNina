@@ -35,10 +35,10 @@ export const rooms = {
   },
   // description: { proto: RoomDescription },
   ...[
-    roomBallerina
-    // roomRedBrick,
-    // roomYellowCouch,
-    // roomGreenForest,
-    // roomRetro
+    roomBallerina,
+    roomRedBrick,
+    roomYellowCouch,
+    roomGreenForest,
+    roomRetro
   ]
 }

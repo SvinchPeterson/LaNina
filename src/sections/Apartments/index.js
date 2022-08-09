@@ -8,9 +8,9 @@ const title = {
   proto: SectionTitle,
   props: {
     text: 'apartments',
-    padding: '0 0 0 D2',
+    left: 'D',
     position: 'absolute',
-    top: '-C',
+    top: '-B2',
     css: { alignSelf: 'flex-start' }
   }
 }
@@ -72,8 +72,8 @@ export const Apartments = {
   },
 
   attr: { id: 'apartments' },
-  title,
 
+  title,
   tabs,
   rooms
 

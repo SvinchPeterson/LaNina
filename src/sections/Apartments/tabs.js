@@ -49,8 +49,8 @@ const props = {
   width: `${1440 / 16}em`,
   css: {
     boxSizing: 'border-box',
-    margin: '0 auto'
-    // border: '5px solid yellow'
+    margin: '0 auto',
+    overflow: 'hidden'
   },
   '@tabletL': {
     width: '100%',
@@ -104,12 +104,15 @@ export const tabs = {
       ? {
         // minWidth: '0',
         width: 0,
-        overflow: 'hidden',
         padding: '0',
         display: 'none'
         // transition: 'all 3s ease-in-out'
       }
-      : {}
+      : {
+        width: `${1440 / 16}em`,
+        padding: '0 8%',
+        display: 'block'
+      }
   },
 
   buttons,

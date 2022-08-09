@@ -5,11 +5,10 @@ const title = { tag: 'h3' }
 const paragraph = { tag: 'p' }
 
 const props = {
-
   title: {
-    fontSize: 'E',
+    fontSize: 'D',
     text: 'Ballerina',
-    fontWeight: '700',
+    fontWeight: '500',
     color: 'orange3',
     padding: '0 0 X 0'
   },
