@@ -22,7 +22,7 @@ const list = {
           content: '""',
           width: '3px',
           height: '3px',
-          background: 'rgba(248, 241, 227, 1)',
+          background: 'rgba(248, 241, 227, .8)',
           borderRadius: '100%',
           display: 'block'
         }
