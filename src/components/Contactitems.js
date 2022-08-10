@@ -54,8 +54,8 @@ const itemProps = {
   color: 'black',
   letterSpacing: '.8px',
   '@mobileS': {
-    width: '260px',
-    height: '45px',
+    width: `${260 / 13}em`,
+    height: `${45 / 13}em`,
     padding: '0',
     fontSize: `${13 / 16}em`,
 

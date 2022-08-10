@@ -26,15 +26,15 @@ const paragraph = {
       zIndex: '2',
       boxSizing: 'content-box',
       '@media only screen and (max-width: 480px)': {
-        textAlign: 'left',
-        fontSize: `${15 / 16}em`
+        textAlign: 'justify',
+        fontSize: `${14.7 / 16}em`
       }
     },
     '@mobileL': {
       padding: '0 C'
     },
-    '@mobileXS': {
-      padding: '0 B'
+    '@mobileS': {
+      padding: '0 B1'
     }
   }
 }
