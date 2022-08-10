@@ -98,7 +98,7 @@ export default {
   Apartments,
   Wine,
   feedBacks,
-  paragraph,
+
   Location,
   Footer
 }

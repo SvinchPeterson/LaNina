@@ -126,11 +126,12 @@ const heading = {
 
 const props = {
   maxWidth: '1440px',
-  minHeight: 'I',
+  minHeight: 'H',
   '@tabletL': {
     margin: '0 auto',
     maxWidth: '75%',
-    padding: 'E 0'
+    padding: 'E 0',
+    minHeight: 'H1'
   },
   '@mobileL': { maxWidth: '85%' },
   '@mobileS': { maxWidth: '90%' },
