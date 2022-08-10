@@ -88,9 +88,6 @@ const props = {
   css: {
     width: '100%',
     minHeight: '100%',
-    '@media only screen and (max-width: 1366px)': {
-      background: 'transparent'
-    },
     '&:before': {
       content: '""',
       position: 'absolute',
@@ -107,7 +104,7 @@ const props = {
     width: '100%',
     position: 'relative',
     '@mobileL': {
-      // width: 'fit-content'
+      width: 'fit-content'
     },
     css: {
       '&:before': {
@@ -115,7 +112,7 @@ const props = {
         position: 'absolute',
         width: '100%',
         // height: '5px',
-        top: '-35px',
+        top: '-20px',
         zIndex: '20',
         // background: 'gray',
         // background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .15))',
@@ -128,7 +125,7 @@ const props = {
         position: 'absolute',
         width: '100%',
         // height: '5px',
-        bottom: '-35px',
+        bottom: '-20px',
         zIndex: '10',
         // background: 'gray',
         // background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .15))',
@@ -153,7 +150,8 @@ const props = {
       '@mobileL': {
         flexFlow: 'column',
         maxHeight: `${370 / 16}em`,
-        flexAlign: 'center flex-start'
+        flexAlign: 'center flex-start',
+        padding: 'Z2 0'
       },
       // '@mobileM': {
       //   maxHeight: `${400 / 16}em`
