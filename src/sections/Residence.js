@@ -1,7 +1,5 @@
 'use strict'
 
-import { Img } from 'smbls'
-
 import { ResidenceText } from '../texts'
 
 import { SectionTitle } from '../components'
@@ -11,12 +9,6 @@ const title = {
   proto: SectionTitle,
   props: {
     color: 'cream2 .85',
-    // color: 'orange3 .65',
-    // position: 'absolute',
-    // top: '200px',
-    // left: '100px',
-    fontSize: 'D',
-    fontWeight: '900',
     css: { zIndex: '2' }
   }
 }
@@ -26,7 +18,7 @@ const paragraph = {
   props: {
     flexFlow: 'column',
     gap: 'A',
-    maxWidth: `${650 / 16}em`,
+    maxWidth: `${630 / 16}em`,
     color: 'cream2 .7',
     textAlign: 'center',
     position: 'relative',
@@ -39,7 +31,7 @@ const paragraph = {
       }
     },
     '@mobileL': {
-      padding: '0 B2'
+      padding: '0 C'
     },
     '@mobileXS': {
       padding: '0 B'

@@ -64,14 +64,18 @@ export const Footer = {
     position: 'fixed',
     bottom: '0',
     flexAlign: 'center space-between',
-    padding: '0 E D E',
+    padding: '0 E C E',
     css: {
       mixBlendMode: 'difference',
       zIndex: '60',
       animationName: opacity,
       animationDuration: '3s',
-      animationTimingFunction: 'ease-in-out'
+      animationTimingFunction: 'ease-in-out',
+      '@media only screen and (max-height: 800px)': {
+        paddingBottom: `${30 / 16}em !important`
+      }
     },
+    '@tabletS': { padding: '0 C2 D C2' },
     '@mobileM': { padding: '0 C B1 C' },
     '@mobileS': { padding: '0 A1 A1 A1' }
   },

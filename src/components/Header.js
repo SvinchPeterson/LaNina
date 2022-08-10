@@ -40,6 +40,7 @@ const navBar = {
 
   ...[
     { props: { text: 'residence', href: '#residence' } },
+    { props: { text: 'features', href: '#features' } },
     { props: { text: 'apartments', href: '#apartments' } },
     { props: { text: 'wine', href: '#wine' } },
     { props: { text: 'location', href: '#location' } }
@@ -54,8 +55,9 @@ export const Header = {
     top: '0',
     left: '0',
     flexAlign: 'center space-between',
-    padding: 'D E 0 E',
+    padding: 'C E 0 E',
     margin: '0 0 0 0',
+    '@tabletS': { padding: 'C2 C2 0 C2' },
     '@mobileL': { display: 'none' },
     css: {
       zIndex: '100',
@@ -63,7 +65,7 @@ export const Header = {
       animationName: opacity,
       animationDuration: '3s',
       animationTimingFunction: 'ease-in-out',
-      '@media only screen and (max-height: 650px)': {
+      '@media only screen and (max-height: 800px)': {
         paddingTop: `${30 / 16}em !important`,
         paddingBottom: `0 !important`
       }

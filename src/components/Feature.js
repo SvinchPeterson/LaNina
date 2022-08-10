@@ -5,6 +5,12 @@ const props = {
   padding: 'C B1',
   round: 'Y',
   background: 'cream2',
+  '@tabletL': { maxHeight: 'E' },
+  '@mobileL': { width: 'G' },
+  '@mobileS': {
+    padding: 'C A2',
+    width: 'F2'
+  },
   css: {
     boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .15)',
     zIndex: 10,
@@ -20,7 +26,7 @@ const props = {
     flexAlign: 'flex-start flex-start',
     title: {
       fontWeight: '900',
-      color: 'black .8',
+      color: 'black .95',
       css: {
         whiteSpace: 'nowrap',
         textTransform: 'uppercase',
