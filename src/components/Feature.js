@@ -5,8 +5,13 @@ const props = {
   padding: 'C B1',
   round: 'Y',
   background: 'cream2',
-  '@tabletL': { maxHeight: 'E' },
-  '@mobileL': { width: 'G' },
+  '@tabletL': {
+    maxHeight: 'E'
+  },
+  '@mobileL': {
+    width: 'G',
+    maxHeight: 'D2'
+  },
   '@mobileS': {
     padding: 'C A2',
     width: 'F2'
