@@ -18,7 +18,9 @@ const image = {
   props: {
     boxSize: `H1 ${450 / 16}em`,
     padding: '0',
-    '@tabletL': { boxSize: 'H 100%' },
+    '@tabletL': {
+      boxSize: '100% 100%'
+    },
     css: {
       backgroundImage: 'linear-gradient(rgba(60,84, 72, .35), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
       backgroundSize: 'contain',
@@ -114,7 +116,8 @@ const props = {
   '@tabletL': {
     flexFlow: 'column',
     flexAlign: 'flex-end center',
-    padding: 'E2 0 D2 0'
+    padding: '0 0 0 0',
+    margin: '0 0 0 0'
   },
   '@mobileM': { padding: 'E 0 D2 0' }
 }

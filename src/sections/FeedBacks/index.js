@@ -109,9 +109,9 @@ const heading = {
 const props = {
   maxWidth: '1440px',
   minHeight: 'H',
-  '@tabletS': {
+  '@tabletL': {
+    margin: 'F 0 0 0'
     // maxWidth: '75%',
-    padding: '0 D'
   },
   '@tabletM': { maxWidth: '100%' },
   '@mobileL': { padding: '0 C' },
@@ -120,12 +120,13 @@ const props = {
     overflowX: 'hidden',
     margin: '0 auto',
     boxSizing: 'border-box',
-    marginTop: `${300 / 16}em`,
-    marginBottom: `${300 / 16}em`,
-    '@media only screen and (max-width: 768px)': {
+    marginTop: `${150 / 16}em`,
+    marginBottom: `${150 / 16}em`,
+    '@media only screen and (max-width: 1366px)': {
+      marginTop: `${0 / 16}em`,
       marginBottom: `${0 / 16}em`
-    },
-    '@media only screen and (max-width: 560px)': { marginTop: `${150 / 16}em` }
+    }
+    // '@media only screen and (max-width: 560px)': { marginTop: `${150 / 16}em` }
   },
 
   content: {
