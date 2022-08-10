@@ -73,7 +73,8 @@ export const Footer = {
       animationTimingFunction: 'ease-in-out',
       '@media only screen and (max-height: 800px)': {
         paddingBottom: `${30 / 16}em !important`
-      }
+      },
+      '@media only screen and (max-height: 650px)': { paddingBottom: `${20 / 16}em !important` }
     },
     '@tabletS': { padding: '0 C2 D C2' },
     '@mobileM': { padding: '0 C B1 C' },

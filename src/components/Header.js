@@ -88,7 +88,8 @@ export const HeaderMobile = {
     width: '100%',
     css: {
       zIndex: 500,
-      mixBlendMode: 'difference'
+      mixBlendMode: 'difference',
+      '@media only screen and (max-height: 650px)': { paddingTop: `${20 / 16}em !important` }
     },
     '@mobileL': { display: 'flex' },
     '@mobileM': { padding: 'B2 C 0 C' },
