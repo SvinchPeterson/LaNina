@@ -19,7 +19,8 @@ const logo = {
     proto: Img,
     props: {
       src: LOGO_PNG,
-      boxSize: 'B1 -'
+      boxSize: 'B -',
+      '@mobileL': { boxSize: 'B1 -' }
     }
   }
 }
@@ -53,7 +54,7 @@ export const Header = {
     top: '0',
     left: '0',
     flexAlign: 'center space-between',
-    padding: 'B2 C1 0 C1',
+    padding: 'D E 0 E',
     margin: '0 0 0 0',
     '@mobileL': { display: 'none' },
     css: {
@@ -63,8 +64,8 @@ export const Header = {
       animationDuration: '3s',
       animationTimingFunction: 'ease-in-out',
       '@media only screen and (max-height: 650px)': {
-        paddingTop: '30px !important',
-        paddingBottom: '0px !important'
+        paddingTop: `${30 / 16}em !important`,
+        paddingBottom: `0 !important`
       }
     }
   },

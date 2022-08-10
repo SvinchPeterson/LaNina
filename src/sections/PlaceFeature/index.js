@@ -9,7 +9,7 @@ const title = {
   proto: SectionTitle,
   props: {
     text: 'Features',
-    padding: 'G2 0 Z E',
+    padding: '0 0 Z E',
     fontSize: 'Z',
     fontWeight: '700',
     top: '0',
@@ -134,7 +134,7 @@ export const placeFeature = {
   tag: 'section',
   props,
 
-  title,
+  // title,
   scroll,
   content: {
     proto: Grid,

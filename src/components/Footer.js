@@ -4,14 +4,26 @@ import { Img, Link } from 'smbls'
 
 import FACEBOOK_PNG from '../assets/icons/facebook-white.png'
 import INSTAGRAM_PNG from '../assets/icons/instagram-white.png'
+
+import { keyframes } from '@emotion/css'
 import { Book } from './Book'
+
+export const opacity = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
 
 const socialLinks = {
   tag: 'nav',
   proto: Link,
   props: {
     flexAlign: 'center center',
-    gap: 'C'
+    gap: 'C',
+    css: { zIndex: '60' }
   },
 
   childProto: {
@@ -52,10 +64,13 @@ export const Footer = {
     position: 'fixed',
     bottom: '0',
     flexAlign: 'center space-between',
-    padding: 'B2 C1',
+    padding: '0 E D E',
     css: {
-      zIndex: '50',
-      mixBlendMode: 'difference'
+      mixBlendMode: 'difference',
+      zIndex: '60',
+      animationName: opacity,
+      animationDuration: '3s',
+      animationTimingFunction: 'ease-in-out'
     },
     '@mobileM': { padding: '0 C B1 C' },
     '@mobileS': { padding: '0 A1 A1 A1' }

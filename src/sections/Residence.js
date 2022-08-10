@@ -10,7 +10,13 @@ import BB_JPG from '../assets/images/sololaki/b.jpg'
 const title = {
   proto: SectionTitle,
   props: {
-    color: 'orange3 .85',
+    color: 'cream2 .85',
+    // color: 'orange3 .65',
+    // position: 'absolute',
+    // top: '200px',
+    // left: '100px',
+    fontSize: 'D',
+    fontWeight: '900',
     css: { zIndex: '2' }
   }
 }
@@ -21,7 +27,7 @@ const paragraph = {
     flexFlow: 'column',
     gap: 'A',
     maxWidth: `${650 / 16}em`,
-    color: 'cream 2',
+    color: 'cream2 .7',
     textAlign: 'center',
     position: 'relative',
     css: {
