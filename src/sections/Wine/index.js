@@ -16,8 +16,8 @@ const image = {
   proto: Box,
 
   props: {
-    boxSize: `H3 H`,
-    padding: 'D 0 0 0',
+    boxSize: `H1 ${450 / 16}em`,
+    padding: '0',
     '@tabletL': { boxSize: 'H 100%' },
     css: {
       backgroundImage: 'linear-gradient(rgba(60,84, 72, .35), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
@@ -54,8 +54,8 @@ const paragraph = {
     flexAlign: 'center center',
     flexFlow: 'column',
     width: 'fit-content',
-    margin: '-E2 -G 0 0',
-    padding: 'E2 0 0 0',
+    margin: '-F2 -H 0 0',
+    padding: 'E1 0 0 0',
 
     '@tabletL': {
       margin: '0 0 0 0',
@@ -65,7 +65,7 @@ const paragraph = {
       width: '100%',
       padding: '0 C'
     },
-    '@mobileS': { padding: '0 B1' },
+    '@mobileS': { padding: '0 A2' },
     css: {
       borderTop: 'none',
       zIndex: '10',
@@ -82,7 +82,7 @@ const paragraph = {
       color: 'black .75',
       padding: 'A2 E E2 E',
       flexFlow: 'column',
-      gap: 'A',
+      gap: 'Z',
       '@tabletL': { color: 'cream 1' },
       '@mobileM': {
         maxWidth: `100%`,
@@ -90,7 +90,6 @@ const paragraph = {
       },
       css: {
         fontSize: `${14.3 / 16}em`
-        // letterSpacing: '.3px'
       }
     },
 
@@ -110,7 +109,8 @@ const paragraph = {
 const props = {
   position: 'relative',
   flexAlign: 'center center',
-  padding: 'D2 0',
+  minHeight: '100%',
+  margin: 'F 0 0 0',
   '@tabletL': {
     flexFlow: 'column',
     flexAlign: 'flex-end center',

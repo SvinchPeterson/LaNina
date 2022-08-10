@@ -8,6 +8,7 @@ const image = {
     position: 'relative',
     minHeight: `${550 / 16}em`,
     padding: '0',
+    '@tabletL': { minWidth: '100%' },
     '@mobileL': {
       minHeight: `${450 / 16}em`,
       minWidth: '100%'
@@ -102,7 +103,7 @@ const props = {
   css: {
     marginTop: `${200 / 16}em`,
     marginBottom: `${350 / 16}em`,
-    '@media only screen and (max-width: 1366px)': { marginTop: `${75 / 16}em`, marginBottom: `${250 / 16}em` }
+    '@media only screen and (max-width: 1366px)': { marginTop: `${0 / 16}em`, marginBottom: `${250 / 16}em` }
   }
 }
 export const Entrence = {

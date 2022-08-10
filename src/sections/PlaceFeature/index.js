@@ -10,17 +10,6 @@ const title = {
   props: {
     text: 'Features',
     padding: '0 0 Z E',
-    css: {
-      alignSelf: 'flex-start',
-      zIndex: '30',
-      '@media only screen and (max-width: 1366px)': {
-        alignSelf: 'center'
-      },
-      '@media only screen and (max-width: 768px)': {
-        // alignSelf: 'flex-start'
-      }
-    },
-
     '@tabletL': {
       width: `${680 / 19}em`,
       padding: '0 0 Z 0'
@@ -31,7 +20,18 @@ const title = {
     },
     '@mobileS': {
       width: `${360 / 19}em`
+    },
 
+    css: {
+      alignSelf: 'flex-start',
+      zIndex: '30',
+      '@media only screen and (max-width: 1366px)': {
+        alignSelf: 'center'
+      },
+      '@media only screen and (max-height: 600px)': {
+        padding: '0 0 0 50px !important',
+        fontSize: `${14 / 19}em`
+      }
     }
   }
 }
@@ -82,8 +82,10 @@ const props = {
   flexFlow: 'column',
   position: 'relative',
   gap: '0',
+  margin: 'D 0 0 0',
   '@tabletL': {
-    flexAlign: 'center center'
+    flexAlign: 'center center',
+    margin: '0 0 0 0'
   },
   css: {
     width: '100%',
@@ -95,10 +97,9 @@ const props = {
       height: '100%',
       top: '0',
       zIndex: '10',
-      background: 'rgba(0, 0, 0, .1)'
+      '@media only screen and (max-width: 1366px)': { background: 'rgba(0, 0, 0, .05)' }
     }
   },
-  // '@tabletL': { padding: 'F 0 F ' },
 
   content: {
     width: '100%',
@@ -111,26 +112,20 @@ const props = {
         content: '""',
         position: 'absolute',
         width: '100%',
-        // height: '5px',
-        top: '-20px',
+        top: `${-45 / 16}em`,
         zIndex: '20',
-        // background: 'gray',
-        // background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .15))',
         '@media only screen and (max-width: 768px)': {
-          boxShadow: '-30px 0px 70px 40px rgba(248, 241, 227, .95)'
+          boxShadow: '-30px 0px 70px 40px rgba(248, 241, 227, .8)'
         }
       },
       '&:after': {
         content: '""',
         position: 'absolute',
         width: '100%',
-        // height: '5px',
-        bottom: '-20px',
+        bottom: `${-20 / 16}em`,
         zIndex: '10',
-        // background: 'gray',
-        // background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .15))',
         '@media only screen and (max-width: 768px)': {
-          boxShadow: '30px 0px 70px 50px rgba(248, 241, 227, .95)'
+          boxShadow: '30px 0px 70px 50px rgba(248, 241, 227, .8)'
         }
       }
     },
@@ -145,7 +140,6 @@ const props = {
         columns: `repeat(2, ${340 / 16}em)`,
         height: 'fit-content',
         padding: '0 0'
-      // padding: '0 E'
       },
       '@mobileL': {
         flexFlow: 'column',
@@ -153,9 +147,6 @@ const props = {
         flexAlign: 'center flex-start',
         padding: 'Z2 0'
       },
-      // '@mobileM': {
-      //   maxHeight: `${400 / 16}em`
-      // },
 
       css: {
         boxSizing: 'border-box',
@@ -185,16 +176,8 @@ const props = {
           background: 'radial-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .6))',
           '@media only screen and (max-width: 1366px)': {
             display: 'none'
-            // opacity: '0'
           }
 
-        // zIndex: 5,
-        // '@media only screen and (max-width: 1366px)': {
-        //   background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .15))'
-        // },
-        // '@media only screen and (max-width: 768px)': {
-        //   background: 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))'
-        // }
         }
       }
     }
@@ -275,6 +258,4 @@ export const placeFeature = {
     }
 
   }
-  // more
-
 }

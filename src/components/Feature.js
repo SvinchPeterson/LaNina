@@ -21,7 +21,7 @@ const props = {
     zIndex: 10,
     backdropFilter: 'blur(5px)',
     '@media only screen and (max-width: 1366px)': {
-      boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .05)'
+      boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .03)'
     }
   },
 
