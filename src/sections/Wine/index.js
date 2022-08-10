@@ -116,10 +116,8 @@ const props = {
   '@tabletL': {
     flexFlow: 'column',
     flexAlign: 'flex-end center',
-    padding: '0 0 0 0',
     margin: '0 0 0 0'
-  },
-  '@mobileM': { padding: 'E 0 D2 0' }
+  }
 }
 
 export const Wine = {

@@ -11,33 +11,51 @@ import RIGHT_ARROW_PNG from '../../assets/icons/rightBlack.png'
 const navArrows = {
   proto: Box,
   props: {
-    flexAlign: 'center flex-start',
-    width: 'D',
-    position: 'relative'
+    flexAlign: 'center space-between',
+    gap: 'Z',
+    position: 'relative',
+    css: {
+      '&:before': {
+        content: '""',
+        position: 'absolute',
+        width: '2px',
+        height: '60%',
+        background: 'black',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        borderRadius: '100%'
+      }
+    }
   },
   childProto: {
     proto: Box,
     tag: 'button',
     props: {
-      padding: 'Y1',
-      position: 'absolute',
+      width: '45px',
+      height: '45px',
+      // background: 'black .05',
+      // boxSize: 'fit-content',
       css: {
+        borderRadius: '100%',
         cursor: 'pointer',
-        background: 'none',
         outline: 'none',
         border: 'none',
         opacity: '.8',
         zIndex: '20',
+        background: 'transparent',
+        // minWidth: '50px',
+        heigt: '45px',
         '&:hover': { opacity: '1' }
+      },
+      arrow: {
+        boxSize: 'A1 ',
+        alignSelf: 'center'
+        // css: { border: '2px solid yellow' }
       }
     },
     arrow: {
-      proto: [Img, Box],
-      props: {
-        boxSize: 'A1 -',
-        '@tabletL': { boxSize: 'A2 -' }
-        // padding: 'W'
-      }
+      proto: [Img, Box]
     }
   },
 
@@ -84,7 +102,7 @@ const heading = {
   },
   style: {
     zIndex: '20',
-    boxSizing: 'border-box',
+    // boxSizing: 'border-box',
     margin: '0 auto'
   },
   title: {
@@ -108,25 +126,22 @@ const heading = {
 
 const props = {
   maxWidth: '1440px',
-  minHeight: 'H',
+  minHeight: 'I',
   '@tabletL': {
-    margin: 'F 0 0 0'
-    // maxWidth: '75%',
+    margin: '0 auto',
+    maxWidth: '75%',
+    padding: 'E 0'
   },
-  '@tabletM': { maxWidth: '100%' },
-  '@mobileL': { padding: '0 C' },
-  '@mobileM': { padding: '0 A' },
+  '@mobileL': { maxWidth: '85%' },
+  '@mobileS': { maxWidth: '90%' },
+  '@mobileXS': { maxWidth: '98%' },
   css: {
     overflowX: 'hidden',
     margin: '0 auto',
-    boxSizing: 'border-box',
+    // boxSizing: 'border-box',
     marginTop: `${150 / 16}em`,
-    marginBottom: `${150 / 16}em`,
-    '@media only screen and (max-width: 1366px)': {
-      marginTop: `${0 / 16}em`,
-      marginBottom: `${0 / 16}em`
-    }
-    // '@media only screen and (max-width: 560px)': { marginTop: `${150 / 16}em` }
+    marginBottom: `${150 / 16}em`
+
   },
 
   content: {
@@ -138,7 +153,8 @@ const props = {
     css: {
       margin: '0 auto',
       marginTop: `${25 / 16}em`,
-      '@media only screen and (max-width: 560px)': { marginTop: `${30 / 16}em` },
+      '@media only screen and (max-width: 768px)': { marginTop: `${10 / 16}em` },
+      // '@media only screen and (max-width: 560px)': { marginTop: `${0 / 16}em` },
       '&:after': {
         content: '""',
         width: '0px',

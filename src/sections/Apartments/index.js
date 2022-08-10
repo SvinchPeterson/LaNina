@@ -25,7 +25,7 @@ const props = {
   '@tabletL': { padding: 'F1 0 G 0' },
   '@mobileM': {
     padding: `E1 0 G 0`,
-    margin: '0 0 E 0'
+    margin: '0 0 0 0'
   },
 
   css: {

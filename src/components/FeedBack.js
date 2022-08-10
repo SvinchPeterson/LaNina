@@ -1,19 +1,23 @@
 'use strict'
 
 const props = {
-  padding: 'C1',
+  padding: 'C',
   flexFlow: 'column',
   flexAlign: 'flex-start flex-start',
   background: 'black .05',
-  maxHeight: 'G',
+  maxHeight: 'F3',
   round: 'Y2',
   minWidth: `${500 / 16}em`,
   gap: 'A1',
   position: 'relative',
   '@tabletS': { minWidth: '100%' },
-  '@mobileM': {
+  '@mobileL': {
+    padding: 'B1'
+    // maxHeight: 'G'
+  },
+  '@mobileS': {
     padding: 'B',
-    maxHeight: 'G'
+    gap: 'Z2'
   },
   css: {
     boxSizing: 'border-box',
@@ -46,17 +50,18 @@ const props = {
       fontSize: `${14.3 / 16}em`,
       // letterSpacing: '.8px',
       '@media only screen and (max-width: 480px)': {
-        // fontSize: `${13.8 / 16}em`
+        fontSize: `${14 / 16}em`
       }
     }
   },
 
   date: {
     text: 'January | 2022',
-    color: 'black .75',
+    color: 'black .85',
     position: 'absolute',
-    bottom: 'C1',
+    bottom: 'C',
     right: 'C1',
+    fontWeight: '500',
     '@mobileS': {
       bottom: 'B',
       right: 'B1'
@@ -79,7 +84,6 @@ export const FeedBack = {
   },
   p: {},
   date: {
-    tag: 'h5',
-    props: { fontWeight: '500' }
+    tag: 'h5'
   }
 }
