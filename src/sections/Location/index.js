@@ -6,6 +6,7 @@ const title = {
   props: {
     padding: '0 0 Z A',
     minWidth: '60%',
+    text: 'location',
     '@tabletS': {
       minWidth: '50%'
     },

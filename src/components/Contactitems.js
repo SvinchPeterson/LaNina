@@ -3,9 +3,8 @@
 const props = {
   display: 'flex',
   flexAlign: 'center space-between',
-  background: 'black .05',
   round: 'C',
-  padding: 'Y2 A2',
+  padding: 'Y1 A2',
   position: 'relative',
   '@mobileS': {
     flexFlow: 'column',
@@ -16,7 +15,7 @@ const props = {
     gap: 'A'
   },
   css: {
-    border: '.5px solid rgba(0, 0, 0, .08)',
+    border: '.5px solid rgba(0, 0, 0, .7)',
     '@media only screen and (max-width: 480px)': {
       border: 'none'
     },
@@ -58,14 +57,12 @@ const itemProps = {
     height: `${45 / 13}em`,
     padding: '0',
     fontSize: `${13 / 16}em`,
-
-    // boxSize: 'B I',
-    round: 'C',
-    background: 'rgba(0, 0, 0, .05)'
+    round: 'C'
+    // background: 'rgba(0, 0, 0, .05)'
   },
   css: {
     '@media only screen and (max-width: 480px)': {
-      border: '.5px solid rgba(0, 0, 0, .1)'
+      border: '.5px solid rgba(0, 0, 0, .75)'
     }
   }
 }
