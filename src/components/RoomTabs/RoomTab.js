@@ -56,14 +56,13 @@ const tabParagraph = {
 export const props = {
   height: 'G1',
   padding: 'B',
-  position: 'relative',
   round: 'V',
   '@tabletL': {
-    minWidth: '100%',
-    height: 'H'
+    boxSize: '100% 100%',
+    position: 'absolute',
+    top: '0',
+    left: '0'
   },
-  '@mobileL': { height: 'G' },
-  '@mobileS': { height: 'F2' },
   css: {
     // overflow: 'hidden',
     flex: 1,
@@ -77,17 +76,16 @@ export const props = {
     position: 'relative',
     backdropFilter: 'blur(2px)',
     boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, .15)',
-    '@media only screen and (max-height: 673px)': {
-      height: '350px !important'
-    },
     '&:hover': {
-      flex: 5.5,
-      backdropFilter: 'blur(10px)',
-      boxShadow: '0px 0px 0px 0px rgba(0, 0, 0, 0)'
+      '@media only screen and (min-width: 1366px)': {
+        flex: 5.5,
+        backdropFilter: 'blur(10px)',
+        boxShadow: '0px 0px 0px 0px rgba(0, 0, 0, 0)',
+        '> div > div': { opacity: 1 },
+        ':before': { opacity: 1 },
+        img: { opacity: 1 }
+      }
     },
-    '&:hover > div > div': { opacity: 1 },
-    '&:hover:before': { opacity: 1 },
-    '&:hover img': { opacity: 1 },
     '&:before': {
       content: '""',
       position: 'absolute',
@@ -115,6 +113,11 @@ export const props = {
     bottom: 'B',
     fontWeight: '900',
     fontSize: 'A',
+    '@tabletL': {
+      right: 'C',
+      bottom: 'C',
+      fontSize: `${22 / 16}em`
+    },
     css: {
       textTransform: 'uppercase',
       textShadow: '.5px .5px 1px black',
@@ -140,59 +143,6 @@ export const RoomTab = {
   on: {
     click: (event, element, state) => {
       state.update({ activeTab: element.key, back: true })
-
-      // element.parent.parent.update({
-      //   minWidth: '0',
-      //   opacity: 0
-      // })
-
-      // element.parent.parent.parent.rooms.update({
-      //   style: {
-      //     minWidth: '100%'
-      //     // minHeight: '100%'
-      //   }
-
-      // })
-      // element.parent.parent.update({
-      //   style: {
-      //     minWidth: '0 !important',
-      //     width: '0 !important',
-      //     padding: '0'
-      //     // transition: 'all .5s ease-in-out'
-      //   }
-      // })
-
-      // element.parent.update({
-      //   // style: { display: 'none !important' }
-      // })
-
-      // element.parent.parent.parent.rooms.update({
-      //   style: {
-      //     minWidth: `100%`,
-      //     transition: 'all 5s ease-in-out',
-      //     transformOrigin: 'left',
-      //     opacity: 1,
-      //     flex: 3,
-      //     // padding: `0 ${200 / 16}em`,
-      //     // alignSelf: 'center',
-      //     // minWidth: `100%`,
-      //     '@media only screen and (max-width: 1366px)': {
-      //       padding: `0 ${150 / 16}em`,
-      //       minWidth: `${1000 / 16}em`
-      //     },
-      //     '@media only screen and (max-width: 1225px)': {
-      //       padding: `0 ${100 / 16}em`
-      //     },
-      //     '@media only screen and (max-width: 1024px)': {
-      //       minWidth: `${850 / 16}em`
-      //     },
-      //     '@media only screen and (max-width: 768px)': {
-      //       padding: `0`,
-      //       minWidth: `100%`
-      //     }
-
-      //   }
-      // })
     }
   },
 

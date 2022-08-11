@@ -40,7 +40,7 @@ const navBar = {
 
   ...[
     { props: { text: 'residence', href: '#residence' } },
-    { props: { text: 'features', href: '#features' } },
+    { props: { text: 'SERVICES & FACILITIES', href: '#features' } },
     { props: { text: 'apartments', href: '#apartments' } },
     { props: { text: 'wine', href: '#wine' } },
     { props: { text: 'location', href: '#location' } }

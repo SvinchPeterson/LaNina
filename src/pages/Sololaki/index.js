@@ -12,7 +12,8 @@ const state = {
   activeTab: 0,
   activeImage: 0,
   offers: false,
-  back: true
+  back: true,
+  tabs: 0
 }
 
 const paragraph = {
@@ -88,17 +89,17 @@ export default {
   state,
   props,
 
-  banner,
-  Header,
-  HeaderMobile,
-  Menu,
-  Residence,
-  placeFeature,
-  Entrence,
-  Apartments,
-  Wine,
-  feedBacks,
+  // banner,
+  // Header,
+  // HeaderMobile,
+  // Menu,
+  // Residence,
+  // placeFeature,
+  // Entrence,
+  Apartments
+  // Wine,
+  // feedBacks,
 
-  Location,
-  Footer
+  // Location,
+  // Footer
 }

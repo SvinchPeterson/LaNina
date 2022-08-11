@@ -1,6 +1,7 @@
 'use strict'
 
 import { Box, Link, Img } from 'smbls'
+import { keyframes } from '@emotion/css'
 
 import BACK_PNG from '../../assets/icons/arrowBack.png'
 
@@ -11,6 +12,17 @@ import {
 import { RoomDescription } from '../RoomDescription'
 import { Amenities } from '../Amenities'
 
+export const opacities = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(.99);
+  }
+  to {
+   opacity: 1;
+   transform: scale(1);
+  }
+`
+
 const Room = {
   props: {
     boxSize: '100% 100%',
@@ -18,6 +30,18 @@ const Room = {
     css: {
       zIndex: 10,
       alignSelf: 'center'
+      // '&:before': {
+      //   content: '""',
+      //   position: 'absolute',
+      //   width: '100%',
+      //   height: '100%',
+      //   top: '0',
+      //   left: '0',
+      //   background: 'radial-gradient(rgba(60,84, 72, 1), rgba(60,84, 72, 1))',
+      //   zIndex: '30',
+      //   pointerEvents: 'none',
+      //   transition: 'all 3s ease-in-out !important'
+      // }
     },
     article: {
       flexFlow: 'column',
@@ -30,12 +54,16 @@ const Room = {
     show: (element, state) => state.activeTab === element.key
       ? {
         minWidth: '100%',
-        height: '100%'
+        height: '100%',
+        animationName: opacities,
+        animationDuration: '.5s',
+        animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
       }
 
       : {
         height: `0`,
-        opacity: 0
+        opacity: 0,
+        background: 'black'
       }
   },
 

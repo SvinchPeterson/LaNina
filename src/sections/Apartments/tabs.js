@@ -1,21 +1,59 @@
 'use strict'
+import { keyframes } from '@emotion/css'
+import LEFT_ARROW_PNG from '../../assets/icons/left-arrows2.png'
+import RIGHT_ARROW_PNG from '../../assets/icons/right-arrows.png'
 
 import {
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
-  NavButtons2
+  NavigationArrows
 } from '../../components'
 
-const buttons = {
-  proto: NavButtons2,
+export const opacities = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(1.01);
+  }
+  to {
+   opacity: 1;
+   transform: scale(1);
+  }
+`
+
+const navArrow = {
+  proto: NavigationArrows,
+  props: {
+    position: 'absolute',
+    bottom: '0',
+    gap: 'D',
+
+    css: {
+      alignSelf: 'flex-end',
+      margin: '0 auto',
+      display: 'none',
+      '@media only screen and (max-width: 1366px)': { display: 'flex' },
+      '&:before': {
+        background: 'rgba(248, 241, 227, 1)',
+        height: '100%'
+      }
+    }
+  },
+  childProto: {
+    props: { arrow: { boxSize: 'B1' } }
+  },
+
   ...[
     {
+      props: { arrow: { src: LEFT_ARROW_PNG } },
       on: {
         click: (event, element, state) => {
-          const { tabsContainer } = element.parent.parent
-          tabsContainer.node.scrollBy({
-            top: 0,
-            left: -tabsContainer.node.clientWidth - 16.5 * 1.618
+          const { tabs } = state
+          state.update({
+            tabs: tabs - 1
           })
+          if (tabs <= 0) {
+            state.update({ tabs: 4 })
+          }
+          console.log(state.tabs)
         }
       }
     },
@@ -23,40 +61,44 @@ const buttons = {
     {
       on: {
         click: (event, element, state) => {
-          const { tabsContainer } = element.parent.parent
-          tabsContainer.node.scrollBy({
-            top: 0,
-            left: tabsContainer.node.clientWidth + 16.5 * 1.618,
-            behavior: 'smooth'
+          const { tabs } = state
+          state.update({
+            tabs: tabs + 1
           })
+          if (tabs >= 4) {
+            state.update({ tabs: 0 })
+          }
+          console.log(state.tabs)
         }
-      }
+      },
+      props: { arrow: { src: RIGHT_ARROW_PNG } }
     }
   ]
 }
 
 const tabsContainer = {
   tag: 'nav',
+  childProto: {
+    props: {
+    }
+  },
   ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
 }
 
 const props = {
   position: 'relative',
-  flexFlow: 'column',
+  display: 'flex',
   flexAlign: 'flex-start center',
   padding: '0 8%',
   maxWidth: `${1440 / 16}em`,
   width: `${1440 / 16}em`,
   css: {
     boxSizing: 'border-box',
-    margin: '0 auto',
-    overflow: 'hidden'
+    margin: '0 auto'
+    // border: '3px solid red'
+    // overflow: 'hidden'
   },
-  '@tabletL': {
-    width: '100%',
-    padding: '0 15%'
-  },
-  '@mobileM': { padding: '0 5%' },
+  '@tabletL': { width: '100%' },
 
   buttons: {
     '@mobileM': {
@@ -89,10 +131,12 @@ const props = {
     flexAlign: 'center flex-start',
     gap: 'C',
     width: '100%',
-    '@tabletL': { gap: 'B' },
-    css: {
-      '@media only screen and (max-width: 1366px)': { overflowY: 'auto' }
-    }
+    '@tabletL': {
+      gap: 'B',
+      position: 'relative',
+      boxSize: `${400 / 16}em ${600 / 16}em`
+    },
+    '@mobileL': { boxSize: `${300 / 16}em ${500 / 16}em` }
   }
 }
 
@@ -102,19 +146,20 @@ export const tabs = {
   class: {
     show: (element, state) => state.activeTab
       ? {
-        // minWidth: '0',
         width: 0,
         padding: '0',
         display: 'none'
-        // transition: 'all 3s ease-in-out'
       }
       : {
         width: `${1440 / 16}em`,
         padding: '0 8%',
-        display: 'block'
+        display: 'block',
+        animationName: opacities,
+        animationDuration: '.5s',
+        animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
       }
   },
 
-  buttons,
+  // navArrow,
   tabsContainer
 }

@@ -1,5 +1,4 @@
 'use strict'
-import { Grid } from 'smbls'
 
 const list = {
   props: {
@@ -30,7 +29,7 @@ const list = {
             position: 'absolute',
             width: '1.1px',
             borderRadius: '100%',
-            height: '85%',
+            height: '95%',
             top: '50%',
             right: '0',
             transform: 'translate(-50%, -50%)',

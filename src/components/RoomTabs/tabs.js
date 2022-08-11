@@ -20,17 +20,13 @@ export const tabBallerina = {
   style: {
     backgroundImage: 'url(' + BALLERINA_JPG + ')'
   },
+
   class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 5.5,
-        pointerEvents: 'none',
-        '&:before': { opacity: 1 },
-        backgroundAttachment: 'fixed',
-        boxShadow: 'none',
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
+    show: (element, state) => state.tabs === 0
+      ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
+      : { '@media only screen and (max-width: 1366px)': { display: 'none' } }
   },
+
   props: {
     href: '#roomBallerina',
     title: { text: 'ballerina' }
@@ -52,18 +48,12 @@ export const tabRedBrick = {
     href: '#roomRedBrick',
     title: { text: 'red brick' }
   },
-  style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' },
   class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 5.5,
-        backgroundAttachment: 'fixed',
-        pointerEvents: 'none',
-        boxShadow: 'none',
-        '&:before': { opacity: 1 },
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
+    show: (element, state) => state.tabs === 1
+      ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
+      : { '@media only screen and (max-width: 1366px)': { display: 'none' } }
   },
+  style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' },
   content: {
     paragraph: {
       ...[
@@ -81,18 +71,12 @@ export const tabYellowCouch = {
     href: '#roomYellowCouch',
     title: { text: 'yellow couch' }
   },
-  style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')' },
   class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 5.5,
-        backgroundAttachment: 'fixed',
-        pointerEvents: 'none',
-        boxShadow: 'none',
-        '&:before': { opacity: 1 },
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
+    show: (element, state) => state.tabs === 2
+      ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
+      : { '@media only screen and (max-width: 1366px)': { display: 'none' } }
   },
+  style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')' },
   content: {
     paragraph: {
       ...[
@@ -110,18 +94,17 @@ export const tabGreenForest = {
     href: '#roomGreenForest',
     title: { text: 'green forest' }
   },
-  style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')' },
   class: {
-    show: (element, state) => state.activeTab === element.key
+    show: (element, state) => state.tabs === 3
       ? {
-        flex: 5.5,
-        backgroundAttachment: 'fixed',
-        pointerEvents: 'none',
-        boxShadow: 'none',
-        '&:before': { opacity: 1 },
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
+        '@media only screen and (max-width: 1366px)': { display: 'block' }
+
+      }
+      : {
+        '@media only screen and (max-width: 1366px)': { display: 'none' }
+      }
   },
+  style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')' },
   content: {
     paragraph: {
       ...[
@@ -141,15 +124,11 @@ export const tabRetro = {
   },
   style: { backgroundImage: 'url(' + RETRO_JPG + ')' },
   class: {
-    show: (element, state) => state.activeTab === element.key
-      ? {
-        flex: 5.5,
-        backgroundAttachment: 'fixed',
-        pointerEvents: 'none',
-        boxShadow: 'none',
-        '&:before': { opacity: 1 },
-        '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
-      } : {}
+    show: (element, state) => state.tabs === 4
+      ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
+      : {
+        '@media only screen and (max-width: 1366px)': { display: 'none' }
+      }
   },
   content: {
     paragraph: {

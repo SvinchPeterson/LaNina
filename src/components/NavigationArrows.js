@@ -57,7 +57,7 @@ export const NavigationArrows = {
     {
       props: {
         left: '0',
-        src: LEFT_ARROW_PNG
+        arrow: { src: LEFT_ARROW_PNG }
       }
     },
 

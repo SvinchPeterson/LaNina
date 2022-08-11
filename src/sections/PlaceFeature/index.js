@@ -8,7 +8,7 @@ import SCROLL_PNG from '../../assets/icons/scroll.png'
 const title = {
   proto: SectionTitle,
   props: {
-    text: 'Features',
+    text: 'Services & Facilities',
     padding: '0 0 Z E',
     '@tabletL': {
       width: `${680 / 19}em`,

@@ -33,22 +33,6 @@ export const image = {
 
   class: {
     show: (element, state) => state.activeImage === parseInt(element.key)
-      ? {
-        opacity: 1
-        // '@media only screen and (min-width: 1366px)': {
-        //   height: '100%'
-        // }
-      }
-
-      : {
-        // backgroundPosition: 'center center',
-        opacity: 0
-        // '@media only screen and (min-width: 1366px)': {
-        //   height: '0'
-        // },
-        // '@media only screen and (max-width: 1366px)': {
-        //   height: '100%'
-        // }
-      }
+      ? { opacity: 1 } : { opacity: 0 }
   }
 }

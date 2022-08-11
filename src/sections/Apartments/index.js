@@ -8,7 +8,7 @@ const title = {
   proto: SectionTitle,
   props: {
     text: 'apartments',
-    left: 'D',
+    left: 'E',
     position: 'absolute',
     top: '-B2',
     css: { alignSelf: 'flex-start' }
@@ -56,6 +56,7 @@ const props = {
   },
 
   content: {
+    css: { border: '5px solid red' }
 
   }
 }
@@ -66,7 +67,7 @@ export const Apartments = {
   class: {
     show: (element, state) => state.activeTab
       ? {
-        justifyContent: 'flex-start'
+        // justifyContent: 'flex-start'
       }
       : {}
   },

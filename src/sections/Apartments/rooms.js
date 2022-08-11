@@ -2,15 +2,18 @@
 import { roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro } from '../../components'
 
 const props = {
+  width: '100%',
   height: `100%`,
   position: 'relative',
   maxWidth: `${1440 / 16}em`,
-  margin: '0 auto',
+  margin: 'auto',
+
   // background: 'cream2',
   css: {
+    transformOrigin: 'left',
     zIndex: '20',
     // border: '7px solid blue',
-    transition: 'all 3s ease-in-out !important'
+    transition: 'all 1s ease-in-out !important'
   },
 
   roomsContainer: {
@@ -26,8 +29,7 @@ export const rooms = {
   class: {
     show: (element, state) => state.activeTab
       ? {
-        transition: 'all 3s ease-in-out',
-        width: '100%'
+        display: 'block'
       }
       : {
         display: 'none !important'
