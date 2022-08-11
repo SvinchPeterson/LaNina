@@ -34,6 +34,9 @@ import HOLL_MOBILE_JPG from '../../assets/images/yellowCouch/mobile/holl.jpg'
 
 export const galleryYellowCouch = {
   proto: Gallery,
+  back: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1660208391_VsnBORvven2bsOLC' } },
+  navArrows: {},
   imageContainer: {
     childProto: image,
     ...[

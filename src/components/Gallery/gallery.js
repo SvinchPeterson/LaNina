@@ -1,5 +1,6 @@
 import { Box, Link, Img } from 'smbls'
 
+import { NavigationArrows } from '../NavigationArrows'
 import LEFT_ARROW_PNG from '../../assets/icons/left-arrows2.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/right-arrows.png'
 import BACK_PNG from '../../assets/icons/arrowBack.png'
@@ -108,44 +109,21 @@ const book = {
   }
 }
 
-const navButtons = {
+const navArrows = {
+  proto: NavigationArrows,
   props: {
-    flexAlign: 'center flex-start',
-    position: 'absolute',
-    bottom: '-D',
-    left: '50%',
-    gap: 'C1',
+    margin: '0 0 -D 0',
+    gap: 'B',
     css: {
-      zIndex: '10',
-      transform: 'translate(-50%, -50%)',
-      '&:after': {
-        content: '""',
-        position: 'absolute',
-        height: '15px',
-        width: '2px',
-        background: 'rgba(248, 241, 227, .5)',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)'
+      alignSelf: 'flex-end',
+      '&:before': {
+        height: '70%',
+        background: 'radial-gradient(rgba(248, 241, 227, .8), rgba(248, 241, 227, .35))'
       }
     }
   },
-
-  childProto: {
-    tag: 'button',
-    props: {
-      background: 'transparent',
-      border: 'none',
-      css: { cursor: 'pointer' },
-      arrow: { boxSize: 'B ' }
-    },
-    arrow: { proto: Img, props: 'match' }
-  },
-
   ...[
     {
-
-      props: { arrow: { src: LEFT_ARROW_PNG } },
       on: {
         click: (event, element, state) => {
           const { activeImage } = state
@@ -156,11 +134,10 @@ const navButtons = {
             state.update({ activeImage: 0 })
           }
         }
-      }
+      },
+      props: { arrow: { src: LEFT_ARROW_PNG } }
     },
-
     {
-      props: { arrow: { src: RIGHT_ARROW_PNG } },
       on: {
         click: (event, element, state) => {
           const { activeImage } = state
@@ -171,7 +148,8 @@ const navButtons = {
             state.update({ activeImage: 8 })
           }
         }
-      }
+      },
+      props: { arrow: { src: RIGHT_ARROW_PNG } }
     }
   ]
 }
@@ -183,11 +161,12 @@ export const Gallery = {
     position: 'relative',
     boxSize: 'H I',
     margin: '0 D 0 auto',
+    flexAlign: 'flex-start center',
     css: { alignSelf: 'center' }
   },
 
   back,
   book,
-  navButtons,
+  navArrows,
   imageContainer: {}
 }

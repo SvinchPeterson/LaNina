@@ -37,6 +37,9 @@ import CROSLEY_MOBILE_JPG from '../../assets/images/greenForest/mobile/crosley.j
 
 export const galleryGreenForest = {
   proto: Gallery,
+  back: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1660208384_aXrL81DO4CPRWA%2Fy' } },
+  navArrows: {},
   imageContainer: {
     childProto: image,
     ...[

@@ -34,6 +34,9 @@ import BATHROOM2_MOBILE_JPG from '../../assets/images/redBrick/mobile/bathroom2.
 
 export const galleryRedBrick = {
   proto: Gallery,
+  back: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1660208387_zqw2G2%2FuptoiDPHA' } },
+  navArrows: {},
 
   imageContainer: {
     childProto: image,

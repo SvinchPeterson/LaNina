@@ -34,6 +34,9 @@ import APARTMENT_MOBILE_JPG from '../../assets/images/retro/mobile/apartment.jpg
 
 export const galleryRetro = {
   proto: Gallery,
+  back: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1660208381_sb3y9Nc7GIWTW3Cx' } },
+  navArrows: {},
   imageContainer: {
     childProto: image,
     ...[

@@ -35,6 +35,9 @@ import BATHROOM_MOBILE_JPG from '../../assets/images/ballerina/mobile/bathroom.j
 
 export const galleryBallerina = {
   proto: Gallery,
+  back: {},
+  book: { props: { href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1660208389_6BbXYs64bnru3w3i' } },
+  navArrows: {},
   imageContainer: {
     childProto: image,
     ...[

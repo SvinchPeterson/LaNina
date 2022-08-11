@@ -48,19 +48,24 @@ export const NavigationArrows = {
       }
     },
     arrow: {
-      proto: [Img, Box]
+      proto: [Img, Box],
+      props: 'match'
     }
   },
 
   ...[
     {
-      props: { left: '0' },
-      arrow: { props: { src: LEFT_ARROW_PNG } }
+      props: {
+        left: '0',
+        src: LEFT_ARROW_PNG
+      }
     },
 
     {
-      props: { right: '0' },
-      arrow: { props: { src: RIGHT_ARROW_PNG } }
+      props: {
+        right: '0',
+        arrow: { src: RIGHT_ARROW_PNG }
+      }
     }
   ]
 }
