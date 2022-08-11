@@ -26,6 +26,11 @@ const props = {
       position: 'relative',
       marginRight: `${10 / 14}em`,
       paddingRight: `${10 / 14}em`,
+      '@media only screen and (max-width: 480px)': {
+        marginRight: `0`,
+        paddingRight: `0`
+      },
+
       '&:before': {
         content: '""',
         position: 'absolute',
@@ -53,7 +58,7 @@ const itemProps = {
   color: 'black',
   letterSpacing: '.8px',
   '@mobileS': {
-    width: `${260 / 13}em`,
+    width: `${240 / 13}em`,
     height: `${45 / 13}em`,
     padding: '0',
     fontSize: `${13 / 16}em`,

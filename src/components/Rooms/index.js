@@ -31,44 +31,11 @@ const Room = {
       ? {
         minWidth: '100%',
         height: '100%'
-        // border: '5px solid purple',
-        // opacity: 1,
-        // // paddingTop: `${130 / 16}em`,
-        // '@media only screen and (max-width: 1366px)': {
-        //   marginTop: `${125 / 16}em`,
-        //   paddingTop: `${160 / 16}em`,
-        //   height: `${500 / 16}em`,
-        //   display: 'block'
-        // },
-        // '@media only screen and (max-height: 800px)': {
-        //   height: `${500 / 16}em`
-        // },
-        // '@media only screen and (max-height: 788px)': {
-        //   height: `${450 / 16}em`
-        // },
-        // '@media only screen and (max-height: 722px)': {
-        //   height: `${400 / 16}em`
-        // },
-        // '@media only screen and (max-height: 650px)': {
-        //   paddingTop: `${90 / 16}em`
-        // },
-        // '@media only screen and (max-width: 560px)': {
-        //   height: `${350 / 16}em`
-        // },
-        // '@media only screen and (max-width: 480px)': {
-        //   height: `${300 / 16}em`
-        // }
       }
 
       : {
         height: `0`,
         opacity: 0
-        // button: { opacity: 0 },
-        // '> aside': { display: 'none' },
-        // '@media only screen and (max-width: 1366px)': {
-        //   display: 'none',
-        //   height: `${500 / 16}em`
-        // }
       }
   },
 
