@@ -24,8 +24,8 @@ const icon = {
       '@tabletL': { boxSize: 'B B' },
       '@mobileL': { boxSize: 'A1 A1' },
       css: {
-        opacity: '.85',
-        '@media only screen and (max-width: 1366px)': { opacity: 1 }
+        // opacity: '.85',
+        // '@media only screen and (max-width: 1366px)': { opacity: 1 }
       }
     }
   }
@@ -65,7 +65,7 @@ export const props = {
   '@mobileL': { height: 'G' },
   '@mobileS': { height: 'F2' },
   css: {
-    overflow: 'hidden',
+    // overflow: 'hidden',
     flex: 1,
     cursor: 'pointer',
     boxSizing: 'border-box',
@@ -103,33 +103,22 @@ export const props = {
       '@media only screen and (max-width: 1366px)': {
         padding: '20px'
       }
-    },
-    '&:after': {
-      content: '""',
-      fontSize: `${13 / 16}em`,
-      // fontWeight: 900,
-      position: 'absolute',
-      textShadow: '2px 2px 30px 1px rgba(0, 0, 0, .4)',
-      bottom: `${35 / 13}em`,
-      right: `${35 / 13}em`,
-      letterSpacing: '.4px',
-      wordSpacing: '.35px',
-      boxSizing: 'border-box',
-      borderBottomRightRadius: '8px',
-      color: 'rgba(248, 241, 227, 1)',
+    }
+
+  },
+
+  title: {
+    text: 'ballerina',
+    color: 'cream2',
+    position: 'absolute',
+    right: '-A1',
+    bottom: 'B',
+    fontWeight: '900',
+    fontSize: 'A',
+    css: {
       textTransform: 'uppercase',
-      whiteSpace: 'nowrap',
-      '@media only screen and (max-width: 1366px)': {
-        fontSize: `${16 / 16}em`,
-        bottom: `${40 / 16}em`,
-        right: `${40 / 16}em`
-      },
-      '@media only screen and (max-width: 768px)': {
-        fontSize: `${14 / 16}em`,
-        bottom: `${20 / 14}em`,
-        right: `${20 / 14}em`
-      },
-      '@media only screen and (max-width: 350px)': { bottom: `${10 / 14}em` }
+      textShadow: '.5px .5px 1px black',
+      whiteSpace: 'nowrap'
     }
   },
 
@@ -206,6 +195,8 @@ export const RoomTab = {
       // })
     }
   },
+
+  title: { tag: 'caption' },
 
   content: {
     paragraph: { proto: tabParagraph },

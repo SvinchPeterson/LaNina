@@ -2,66 +2,16 @@
 
 import { Box, Img } from 'smbls'
 
-import { FeedBack } from '../../components'
+import { FeedBack, NavigationArrows } from '../../components'
 
 // import RIGHT_ARROW_PNG from '../../assets/icons/arrow-right.png'
 import LEFT_ARROW_PNG from '../../assets/icons/leftBlack.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/rightBlack.png'
 
 const navArrows = {
-  proto: Box,
-  props: {
-    flexAlign: 'center space-between',
-    gap: 'Z',
-    position: 'relative',
-    css: {
-      '&:before': {
-        content: '""',
-        position: 'absolute',
-        width: '2px',
-        height: '60%',
-        background: 'black',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        borderRadius: '100%'
-      }
-    }
-  },
-  childProto: {
-    proto: Box,
-    tag: 'button',
-    props: {
-      width: '45px',
-      height: '45px',
-      // background: 'black .05',
-      // boxSize: 'fit-content',
-      css: {
-        borderRadius: '100%',
-        cursor: 'pointer',
-        outline: 'none',
-        border: 'none',
-        opacity: '.8',
-        zIndex: '20',
-        background: 'transparent',
-        // minWidth: '50px',
-        heigt: '45px',
-        '&:hover': { opacity: '1' }
-      },
-      arrow: {
-        boxSize: 'A1 ',
-        alignSelf: 'center'
-        // css: { border: '2px solid yellow' }
-      }
-    },
-    arrow: {
-      proto: [Img, Box]
-    }
-  },
-
+  proto: NavigationArrows,
   ...[
     {
-      props: { left: '0' },
       on: {
         click: (event, element, state) => {
           const { feedbacks } = element.parent.parent.parent.content
@@ -70,13 +20,9 @@ const navArrows = {
             left: -feedbacks.node.clientWidth - 16.5 * 1.618
           })
         }
-      },
-
-      arrow: { props: { src: LEFT_ARROW_PNG } }
+      }
     },
-
     {
-      props: { right: '0' },
       on: {
         click: (event, element, state) => {
           const { feedbacks } = element.parent.parent.parent.content
@@ -85,12 +31,9 @@ const navArrows = {
             left: feedbacks.node.clientWidth + 16.5 * 1.618
           })
         }
-      },
-
-      arrow: { props: { src: RIGHT_ARROW_PNG } }
+      }
     }
   ]
-
 }
 
 const heading = {
@@ -119,9 +62,7 @@ const heading = {
       }
     }
   },
-  arrows: {
-    proto: navArrows
-  }
+  navArrows
 }
 
 const props = {

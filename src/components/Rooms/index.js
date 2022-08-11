@@ -164,7 +164,7 @@ export const roomGreenForest = {
   article: {
     description: {
       props: {
-        title: { text: 'Green Forest' },
+        title: { text: 'Green Forrest' },
         paragraph: {
           text: `One bedroom apartment of 51 m2 with open terrace, located on high first floor and  composed of living room and bedroom with 1 King bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 2 people.`
         }

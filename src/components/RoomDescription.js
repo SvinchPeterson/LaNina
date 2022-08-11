@@ -6,9 +6,9 @@ const paragraph = { tag: 'p' }
 
 const props = {
   title: {
-    fontSize: 'D',
+    fontSize: 'F',
     text: 'Ballerina',
-    fontWeight: '500',
+    fontWeight: '900',
     color: 'orange3',
     padding: '0 0 X 0'
   },
@@ -18,7 +18,8 @@ const props = {
     fontSize: `${15 / 16}em`,
     maxWidth: `${450 / 15}em`,
     color: 'cream2',
-    fontWeight: '400'
+    fontWeight: '400',
+    padding: '0 0 0 X'
   }
 }
 

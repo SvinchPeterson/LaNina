@@ -18,8 +18,7 @@ import VINYL_PNG from '../../assets/icons/vinyl.png'
 export const tabBallerina = {
   proto: RoomTab,
   style: {
-    backgroundImage: 'url(' + BALLERINA_JPG + ')',
-    '&:after': { content: '"ballerina"' }
+    backgroundImage: 'url(' + BALLERINA_JPG + ')'
   },
   class: {
     show: (element, state) => state.activeTab === element.key
@@ -32,7 +31,10 @@ export const tabBallerina = {
         '@media only screen and (max-width: 1225px)': { backgroundAttachment: 'initial' }
       } : {}
   },
-  props: { href: '#roomBallerina' },
+  props: {
+    href: '#roomBallerina',
+    title: { text: 'ballerina' }
+  },
   content: {
     paragraph: {
       ...[
@@ -46,8 +48,11 @@ export const tabBallerina = {
 
 export const tabRedBrick = {
   proto: RoomTab,
-  props: { href: '#roomRedBrick' },
-  style: { backgroundImage: 'url(' + REDBRICK_JPG + ')', '&:after': { content: '"red brick"' } },
+  props: {
+    href: '#roomRedBrick',
+    title: { text: 'red brick' }
+  },
+  style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -72,8 +77,11 @@ export const tabRedBrick = {
 
 export const tabYellowCouch = {
   proto: RoomTab,
-  props: { href: '#roomYellowCouch' },
-  style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')', '&:after': { content: '"yellow couch"' } },
+  props: {
+    href: '#roomYellowCouch',
+    title: { text: 'yellow couch' }
+  },
+  style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -98,8 +106,11 @@ export const tabYellowCouch = {
 
 export const tabGreenForest = {
   proto: RoomTab,
-  props: { href: '#roomGreenForest' },
-  style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')', '&:after': { content: '"green forest"' } },
+  props: {
+    href: '#roomGreenForest',
+    title: { text: 'green forest' }
+  },
+  style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -124,8 +135,11 @@ export const tabGreenForest = {
 
 export const tabRetro = {
   proto: RoomTab,
-  props: { href: '#roomRetro' },
-  style: { backgroundImage: 'url(' + RETRO_JPG + ')', '&:after': { content: '"retro"' } },
+  props: {
+    href: '#roomRetro',
+    title: { text: 'retro' }
+  },
+  style: { backgroundImage: 'url(' + RETRO_JPG + ')' },
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
