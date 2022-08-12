@@ -112,5 +112,43 @@ export const galleryBallerina = {
         }
       }
     ]
+  },
+  description: {
+    content: {
+      ...[
+        {
+          icon: {},
+          caption: {
+
+            ...[
+              { span: '2 ', text: 'bedroom' },
+              {
+                props: { display: 'flex', gap: 'Y' },
+                ...[{ span: '1 ', text: 'king bed / ' }, { span: ' 2 ', text: 'single beds' }]
+              }
+            ]
+          }
+        },
+        {
+          icon: {},
+          caption: {
+            ...[
+              'comfortable for',
+              { span: '5 ', text: ' persons' }
+            ]
+          }
+        },
+        {
+          icon: {},
+          caption: {
+            ...[
+              { tag: 'span', text: '72 m2' },
+              'high first floor'
+            ]
+
+          }
+        }
+      ]
+    }
   }
 }

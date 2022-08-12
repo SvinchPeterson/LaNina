@@ -71,7 +71,6 @@ const header = {
 }
 
 const offers = {
-  proto: Box,
   style: {
     position: 'relative',
     transition: 'all .5s ease-in-out',
@@ -92,10 +91,11 @@ const offers = {
       height: '0px',
       boxShadow: '0px 0px 40px 40px rgba(60,84, 72, 0)',
       position: 'absolute',
-      bottom: '-1px',
+      bottom: '-10px',
       left: 0,
       zIndex: 100,
       transition: 'all 1s ease-in-out'
+
     }
   },
 
@@ -103,11 +103,15 @@ const offers = {
     show: (element, state) => state.offers
 
       ? {
+        height: '120px',
         '&:before': { boxShadow: '0px 0px 40px 15px rgba(60,84, 72, .85)' },
-        '&:after': { boxShadow: '0px 0px 40px 40px rgba(60,84, 72, 1)' }
+        '&:after': {
+          boxShadow: '30px 0px 30px 25px rgba(60,84, 72, 1)'
+        }
       }
 
       : {
+        height: '0'
 
       }
   },
@@ -128,6 +132,8 @@ const offers = {
       }
     },
     style: {
+      height: '0',
+
       letterSpacing: '1px',
       transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out',
       overflowY: 'auto',
@@ -177,7 +183,7 @@ const offers = {
       { props: { text: 'Wifi' } },
       { props: { text: 'Open terrace' } },
       { props: { text: 'Private entrance' } },
-      { props: { text: 'Air conditioning (Portable)' } },
+      { props: { text: 'Air conditioning' } },
       { props: { text: 'Heating' } },
       { props: { text: 'Ironing facilities' } },
       { props: { text: 'Drying rack' } },
@@ -206,16 +212,24 @@ export const AmenitiesResponsive = {
     background: 'green2',
     round: 'Z',
     bottom: '-E',
+    css: {
+      left: '50%',
+      transform: 'translate(-50%, 0%)'
+    },
+    '@mobileM': {
+      top: '-C2',
+      height: 'fit-content',
+      round: 'A'
+    },
     '@mobileS': {
-      minWidth: 'F2',
-      right: 'C'
+      minWidth: 'G'
     },
     '@mobileXS': { right: 'B' }
   },
 
   style: {
-    borderBottomLeftRadius: 0,
-    borderBottomRightRadius: 0,
+    // borderBottomLeftRadius: 0,
+    // borderBottomRightRadius: 0,
     transition: 'all 1s ease-in-out',
     zIndex: '70',
     overflow: 'hidden'

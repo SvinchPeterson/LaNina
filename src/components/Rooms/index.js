@@ -3,7 +3,7 @@
 import { Box, Link, Img } from 'smbls'
 import { keyframes } from '@emotion/css'
 
-import BACK_PNG from '../../assets/icons/arrowBack.png'
+import { back } from '../Gallery/gallery'
 
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro
@@ -27,6 +27,7 @@ const Room = {
   props: {
     boxSize: '100% 100%',
     flexAlign: 'center spance-between',
+    position: 'relative',
     css: {
       zIndex: 10,
       alignSelf: 'center'
@@ -53,6 +54,20 @@ const Room = {
         opacity: 0,
         background: 'black'
       }
+  },
+
+  back: {
+    proto: back,
+    props: {
+      top: 'C',
+      left: 'C',
+      display: 'none',
+      '@tabletL': { display: 'flex' },
+      '@mobileS': {
+        top: 'B',
+        left: 'B'
+      }
+    }
   },
 
   article: {

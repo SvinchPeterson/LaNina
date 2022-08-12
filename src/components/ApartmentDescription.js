@@ -7,16 +7,26 @@ import USER_PNG from '../assets/icons/user.png'
 
 const iconCaption = {
   props: {
-    flexAlign: 'flex-start flex-start',
-    gap: 'Z1',
+    flexAlign: 'center flex-start',
+    gap: 'Z',
+    '@mobileM': { gap: 'Z2' },
     css: { textAlign: 'left' },
     icon: {
-      boxSize: 'B B',
-      margin: 'Y 0 0 0'
+      boxSize: '27px ',
+      margin: '0 0 0 0',
+      '@mobileM': { boxSize: '35px ' }
     },
     caption: {
       color: 'cream2 .65',
-      fontSize: 'Z',
+      fontSize: `Z`,
+      padding: '0 0 0 0',
+      flexFlow: 'column',
+      lineHeight: '16.8px',
+      '@mobileM': {
+        fontSize: 'B',
+        lineHeight: '25px'
+
+      },
       css: {
         whiteSpace: 'nowrap',
         textAlign: 'left',
@@ -32,78 +42,74 @@ const iconCaption = {
     proto: Img,
     props: 'match'
   },
-  caption: {
-  }
-}
 
-const header = {
-
-  childProto: {
-    proto: iconCaption
-  },
-  ...[
-    {
-      props: {
-        icon: { src: BED_PNG }
-      },
-      icon: {},
-      caption: {
-        ...[
-          { text: '2 bedroom with' },
-          { tag: 'span', text: '1 ' },
-          'king size / ',
-          { tag: 'span', text: '2 ' },
-          'single beds'
-        ]
-      }
-    },
-
-    {
-      props: { icon: { src: USER_PNG } },
-      icon: {},
-      caption: {
-
-        ...[
-          'comfortable for',
-          {
-            props: {
-              flexAlign: 'flex-start flex-start',
-              gap: 'X'
-            },
-            span: '5',
-            text: ' persons'
-          }
-        ]
-      }
-    },
-    {
-      props: { icon: { src: BRACKET_PNG } },
-      icon: {},
-      caption: {
-        ...[
-          {
-            tag: 'span',
-            text: '72 m2'
-          },
-          {
-            text: 'high first floor'
-          }
-        ]
-      }
-    }
-  ]
+  caption: {}
 }
 
 const props = {
-  header: {
+  position: 'relative',
+  height: 'fit-content',
+  css: {
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      width: '100%',
+      height: '0px',
+      bottom: '0',
+      boxShadow: '20px 0px 50px 35px rgba(60,84, 72, 1)',
+      display: 'none',
+      '@media only screen and (max-width: 560px)': {
+        display: 'block'
+      }
+    }
+  },
+  content: {
     flexAlign: 'center flex-start',
-    gap: 'C'
-  }
+    gap: 'D',
+    background: 'green2',
+    '@mobileL': { gap: 'C' },
+    '@mobileM': {
+      margin: 'B1 0 0 0',
+      // left: 'B',
+      flexFlow: 'column',
+      flexAlign: 'flex-start flex-start'
+    },
+    css: {
+      '@media only screen and (max-width: 560px)': {
+        gap: '25px !important',
+        // border: '3px solid red',
+        overflowY: 'auto',
+        height: '110px',
+        position: 'relative',
+        paddingBottom: '50px'
+        // gap: '1px !important'
+      }
 
+    }
+  }
 }
 
 export const ApartmentDescription = {
   props,
-  header
 
+  content: {
+    childProto: iconCaption,
+    ...[
+      {
+        props: {
+          icon: { src: BED_PNG }
+        }
+      },
+      {
+        props: {
+          icon: { src: USER_PNG }
+        }
+      },
+      {
+        props: {
+          icon: { src: BRACKET_PNG }
+        }
+      }
+    ]
+  }
 }

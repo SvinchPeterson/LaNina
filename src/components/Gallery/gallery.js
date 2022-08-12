@@ -32,12 +32,17 @@ const description = {
   proto: ApartmentDescription,
   props: {
     position: 'absolute',
-    top: '-F'
-    // left: '0'
+    top: '-D',
+    display: 'none',
+    '@tabletL': { display: 'flex' },
+    '@mobileM': {
+      top: '100%',
+      bottom: '0'
+    }
   }
 }
 
-const back = {
+export const back = {
   proto: Link,
   props: {
     gap: 'Z',
@@ -102,15 +107,31 @@ const book = {
     padding: 'Z A',
     fontSize: 'Z',
     width: 'fit-content',
-    top: '-C1',
+    top: '40%',
     right: 'B',
+    '@tabletL': {
+      left: '-C1'
+    },
+    '@mobileL': {
+      top: '80%',
+      left: 'B'
+    },
     css: {
       zIndex: '30',
       textDecoration: 'none',
       textTransform: 'uppercase',
-      '&:hover > span': { opacity: 1 }
+      '&:hover > span': { opacity: 1 },
+      '@media only screen and (max-width: 1366px)': {
+        writingMode: 'vertical-rl',
+        textOrientation: 'upright'
+      },
+      '@media only screen and (max-width: 768px)': {
+        writingMode: 'initial',
+        textOrientation: 'initial'
+      }
     }
   },
+
   attr: { target: '_blank' },
   span: {
     proto: Box,
@@ -145,7 +166,8 @@ const navArrows = {
       alignSelf: 'flex-end',
       '&:before': {
         height: '70%',
-        background: 'radial-gradient(rgba(248, 241, 227, .8), rgba(248, 241, 227, .35))'
+        background: 'radial-gradient(rgba(248, 241, 227, .8), rgba(248, 241, 227, .35))',
+        '@media only screen and (max-width: 768px)': { display: 'none' }
       }
     }
   },
@@ -268,7 +290,6 @@ const navVerticalArrows = {
 }
 
 export const Gallery = {
-  proto: Box,
 
   props: {
     position: 'relative',
@@ -276,13 +297,26 @@ export const Gallery = {
     margin: '0 D 0 auto',
     flexAlign: 'flex-start center',
     '@tabletS': {
-      boxSize: 'G1 H1'
+      boxSize: 'G1 H2'
     },
     '@mobileL': { width: '100%' },
-    css: { alignSelf: 'center' }
+    '@mobileS': { boxSize: 'G 100%' },
+    css: {
+      alignSelf: 'center'
+      // '@media only screen and (max-height: 700px)': {
+      //   border: '4px solid red',
+      //   height: '200px'
+      // }
+    }
   },
 
-  back,
+  ba: {
+    proto: back,
+    props: {
+      '@tabletL': { display: 'none' }
+    }
+
+  },
   book,
   navArrows,
   navVerticalArrows,

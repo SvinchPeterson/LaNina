@@ -106,5 +106,43 @@ export const galleryRedBrick = {
         }
       }
     ]
+  },
+  description: {
+    content: {
+      ...[
+        {
+          icon: {},
+          caption: {
+
+            ...[
+              { span: '1 ', text: 'bedroom' },
+              {
+                props: { display: 'flex', gap: 'Y' },
+                ...[{ span: '1 ', text: 'sofa bed / ' }, { span: '1 ', text: 'Queen bed' }]
+              }
+            ]
+          }
+        },
+        {
+          icon: {},
+          caption: {
+            ...[
+              'comfortable for',
+              { span: '3 ', text: ' persons' }
+            ]
+          }
+        },
+        {
+          icon: {},
+          caption: {
+            ...[
+              { tag: 'span', text: '55 m2' },
+              'ground floor'
+            ]
+
+          }
+        }
+      ]
+    }
   }
 }

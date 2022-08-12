@@ -127,5 +127,43 @@ export const galleryGreenForest = {
         }
       }
     ]
+  },
+  description: {
+    content: {
+      ...[
+        {
+          icon: {},
+          caption: {
+
+            ...[
+              { span: '1 ', text: 'bedroom' },
+              {
+                props: { display: 'flex', gap: 'Y' },
+                ...[{ span: '1 ', text: 'king bed' }]
+              }
+            ]
+          }
+        },
+        {
+          icon: {},
+          caption: {
+            ...[
+              'comfortable for',
+              { span: '2 ', text: ' persons' }
+            ]
+          }
+        },
+        {
+          icon: {},
+          caption: {
+            ...[
+              { tag: 'span', text: '51 m2' },
+              'high first floor'
+            ]
+
+          }
+        }
+      ]
+    }
   }
 }

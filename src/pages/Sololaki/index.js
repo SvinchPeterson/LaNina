@@ -89,17 +89,17 @@ export default {
   state,
   props,
 
-  // banner,
-  // Header,
-  // HeaderMobile,
-  // Menu,
-  // Residence,
-  // placeFeature,
-  // Entrence,
-  Apartments
-  // Wine,
-  // feedBacks,
+  banner,
+  Header,
+  HeaderMobile,
+  Menu,
+  Residence,
+  placeFeature,
+  Entrence,
+  Apartments,
+  Wine,
+  feedBacks,
 
-  // Location,
-  // Footer
+  Location,
+  Footer
 }
