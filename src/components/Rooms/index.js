@@ -30,18 +30,6 @@ const Room = {
     css: {
       zIndex: 10,
       alignSelf: 'center'
-      // '&:before': {
-      //   content: '""',
-      //   position: 'absolute',
-      //   width: '100%',
-      //   height: '100%',
-      //   top: '0',
-      //   left: '0',
-      //   background: 'radial-gradient(rgba(60,84, 72, 1), rgba(60,84, 72, 1))',
-      //   zIndex: '30',
-      //   pointerEvents: 'none',
-      //   transition: 'all 3s ease-in-out !important'
-      // }
     },
     article: {
       flexFlow: 'column',
@@ -68,75 +56,20 @@ const Room = {
   },
 
   article: {
+    props: {
+      '@tabletL': {
+        display: 'none'
+      }
+    },
+
     description: { proto: RoomDescription },
     amenities: { proto: Amenities }
   },
-  gallery: {}
-  // RoomOffers,
-  // navButton: {
-  //   proto: NavButtons,
-  //   props: { '@mobileL': { display: 'none' } }
-  // },
-  // navButton2: {
-  //   proto: NavButtons2,
-  //   style: {
-  //     display: 'none',
-  //     '@media only screen and (max-width: 768px)': {
-  //       display: 'flex',
-  //       top: '70%',
-  //       width: '100%',
-  //       '> button': {
-  //         background: 'rgba(60, 84, 72, .95)',
-  //         '&:first-child': {
-  //           marginLeft: `${-1.5 / 16}em`
-  //         },
-  //         '&:last-child': {
-  //           marginRight: `${-1.5 / 16}em`
-  //         }
-  //       }
-  //     },
-  //     '@media only screen and (max-width: 560px)': {
-  //       top: '85%'
-  //     },
-  //     '@media only screen and (max-height: 650px)': {
-  //       top: '70%'
-  //     }
-  //   },
-
-  //   ...[
-  //     {
-  //       on: {
-  //         click: (event, element, state) => {
-  //           const { activeImage } = state
-  //           state.update({
-  //             activeImage: activeImage + 1
-  //           })
-  //           if (activeImage >= 8) {
-  //             state.update({ activeImage: 0 })
-  //           }
-  //         }
-  //       }
-  //     },
-
-  //     {
-  //       on: {
-  //         click: (event, element, state) => {
-  //           const { activeImage } = state
-  //           state.update({
-  //             activeImage: activeImage - 1
-  //           })
-  //           if (activeImage <= 0) {
-  //             state.update({ activeImage: 8 })
-  //           }
-  //         }
-  //       },
-  //       style: { marginRight: `${-3 / 16}em` }
-  //     }
-  //   ]
-  // }
-
-  // book: { proto: book },
-  // back: { proto: back }
+  gallery: {
+    props: {
+      '@tabletL': { margin: 'auto' }
+    }
+  }
 }
 
 export const roomBallerina = {
@@ -145,9 +78,6 @@ export const roomBallerina = {
 
   article: {},
   gallery: { proto: galleryBallerina }
-  // RoomOffers: {},
-  // navButton: {},
-  // book: { props: { href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1649549940_lilV4c5SZhQLXjub' } }
 }
 
 export const roomRedBrick = {
@@ -175,8 +105,7 @@ export const roomRedBrick = {
       }
     }
   },
-  gallery: { proto: galleryRedBrick },
-  book: { props: { href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1649549944_%2BCos1t1uD845OoWN' } }
+  gallery: { proto: galleryRedBrick }
 }
 
 export const roomYellowCouch = {
@@ -204,8 +133,7 @@ export const roomYellowCouch = {
       }
     }
   },
-  gallery: { proto: galleryYellowCouch },
-  book: { props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1649549947_6qVLP%2BHZyXqY%2BvrL' } }
+  gallery: { proto: galleryYellowCouch }
 }
 
 export const roomGreenForest = {
@@ -232,8 +160,7 @@ export const roomGreenForest = {
       }
     }
   },
-  gallery: { proto: galleryGreenForest },
-  book: { props: { href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1649549949_GCS4Ixi%2FrxMbApfW' } }
+  gallery: { proto: galleryGreenForest }
 }
 
 export const roomRetro = {
@@ -260,6 +187,5 @@ export const roomRetro = {
       }
     }
   },
-  gallery: { proto: galleryRetro },
-  book: { props: { href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1649552000_jBh%2BzYZTB7v6VHUs' } }
+  gallery: { proto: galleryRetro }
 }

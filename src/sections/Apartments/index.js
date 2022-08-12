@@ -18,15 +18,10 @@ const title = {
 const props = {
   height: '100%',
   width: '100%',
-  minHeight: '100%',
+  minHeight: '101.5%',
   // overflow: 'hidden',
   flexAlign: 'center center',
   position: 'relative',
-  '@tabletL': { padding: 'F1 0 G 0' },
-  '@mobileM': {
-    padding: `E1 0 G 0`,
-    margin: '0 0 0 0'
-  },
 
   css: {
     scrollBehavior: 'smooth',
@@ -36,9 +31,6 @@ const props = {
     boxSizing: 'border-box',
     backgroundAttachment: 'fixed',
     '@media only screen and (max-width: 1366px)': { backgroundImage: 'none' },
-    '@media only screen and (max-height: 768px)': {
-      paddingTop: '150px !important'
-    },
     '&:before': {
       content: '""',
       width: '100%',

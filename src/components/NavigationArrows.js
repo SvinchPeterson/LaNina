@@ -2,6 +2,8 @@
 import { Box, Img } from 'smbls'
 import LEFT_ARROW_PNG from '../assets/icons/leftBlack.png'
 import RIGHT_ARROW_PNG from '../assets/icons/rightBlack.png'
+import DOWN_ARROW_PNG from '../assets/icons/down-arrowCream.png'
+import UP_ARROW_PNG from '../assets/icons/up-arrowCream.png'
 
 export const NavigationArrows = {
   props: {
@@ -66,6 +68,34 @@ export const NavigationArrows = {
         right: '0',
         arrow: { src: RIGHT_ARROW_PNG }
       }
+    }
+  ]
+}
+
+export const NavigationVerticalArrows = {
+  proto: NavigationArrows,
+  props: {
+    flexFlow: 'column',
+    css: {
+      '&:before': {
+        content: '""',
+        position: 'absolute',
+        width: '50%',
+        height: '2px',
+        background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, .35))',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        borderRadius: '100%'
+      }
+    }
+  },
+  ...[
+    {
+      props: { arrow: { src: UP_ARROW_PNG } }
+    },
+    {
+      props: { arrow: { src: DOWN_ARROW_PNG } }
     }
   ]
 }

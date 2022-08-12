@@ -87,3 +87,7 @@ export const Amenities = {
   title: {},
   list
 }
+
+export const AmenitiesResponsive = {
+  proto: Amenities
+}

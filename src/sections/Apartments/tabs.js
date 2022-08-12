@@ -23,7 +23,7 @@ const navArrow = {
   proto: NavigationArrows,
   props: {
     position: 'absolute',
-    bottom: '0',
+    bottom: '-D2',
     gap: 'D',
 
     css: {
@@ -31,14 +31,15 @@ const navArrow = {
       margin: '0 auto',
       display: 'none',
       '@media only screen and (max-width: 1366px)': { display: 'flex' },
+      '@media only screen and (max-height: 600px)': { bottom: `${-85 / 16}em` },
       '&:before': {
-        background: 'rgba(248, 241, 227, 1)',
+        background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, .25))',
         height: '100%'
       }
     }
   },
   childProto: {
-    props: { arrow: { boxSize: 'B1' } }
+    props: { arrow: { boxSize: 'C ' } }
   },
 
   ...[
@@ -136,7 +137,8 @@ const props = {
       position: 'relative',
       boxSize: `${400 / 16}em ${600 / 16}em`
     },
-    '@mobileL': { boxSize: `${300 / 16}em ${500 / 16}em` }
+    '@mobileL': { boxSize: `${300 / 16}em ${550 / 16}em` },
+    '@mobileS': { boxSize: `${250 / 16}em ${550 / 16}em` }
   }
 }
 
@@ -160,6 +162,6 @@ export const tabs = {
       }
   },
 
-  // navArrow,
+  navArrow,
   tabsContainer
 }

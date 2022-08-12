@@ -196,15 +196,16 @@ const offers = {
   }
 }
 
-export const RoomOffers = {
+export const AmenitiesResponsive = {
   tag: 'aside',
   props: {
     minWidth: 'G1',
     position: 'absolute',
-    bottom: '-F2',
-    right: 'D',
+    top: 0,
     flexFlow: 'column',
+    background: 'green2',
     round: 'Z',
+    bottom: '-E',
     '@mobileS': {
       minWidth: 'F2',
       right: 'C'
@@ -217,13 +218,6 @@ export const RoomOffers = {
     borderBottomRightRadius: 0,
     transition: 'all 1s ease-in-out',
     zIndex: '70',
-    '@media only screen and (max-height: 650px)': {
-      bottom: `${-200 / 16}em !important`
-    },
-
-    '@media only screen and (max-width: 1366px)': {
-      bottom: `${-270 / 16}em`
-    },
     overflow: 'hidden'
   },
 

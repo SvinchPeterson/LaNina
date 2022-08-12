@@ -10,10 +10,11 @@ const icon = {
     left: '0',
     top: '0',
     '@tabletL': {
-      padding: 'B2'
+      padding: 'C'
     },
-    '@mobileL': { padding: 'A2' },
-    '@mobileS': { padding: 'Z2' },
+    '@mobileS': {
+      padding: 'B'
+    },
     css: { zIndex: '20' }
   },
 
@@ -21,8 +22,8 @@ const icon = {
     proto: [Img, Box],
     props: {
       boxSize: 'A1 A1',
-      '@tabletL': { boxSize: 'B B' },
-      '@mobileL': { boxSize: 'A1 A1' },
+      '@tabletL': { boxSize: 'B1 B1' },
+      '@mobileL': { boxSize: 'A2 A2' },
       css: {
         // opacity: '.85',
         // '@media only screen and (max-width: 1366px)': { opacity: 1 }
@@ -37,6 +38,14 @@ const tabParagraph = {
     padding: `0 A2`,
     width: 'H',
     fontWeight: '400',
+    '@tabletL': {
+      position: 'absolute',
+      top: '-D2'
+    },
+    '@mobileS': {
+      fontSize: `${14.5 / 16}em`,
+      top: '-D1'
+    },
     css: {
       zIndex: 10,
       opacity: 0,
@@ -44,7 +53,10 @@ const tabParagraph = {
       pointerEvents: 'none',
       transition: 'opacity .3s ease-in-out',
       transitionDelay: '.4s',
-      textAlign: 'center'
+      textAlign: 'center',
+      '@media only screen and (max-width: 1366px)': {
+        opacity: 1
+      }
     }
   },
 
@@ -61,7 +73,8 @@ export const props = {
     boxSize: '100% 100%',
     position: 'absolute',
     top: '0',
-    left: '0'
+    left: '0',
+    round: 'V2'
   },
   css: {
     // overflow: 'hidden',
@@ -76,6 +89,9 @@ export const props = {
     position: 'relative',
     backdropFilter: 'blur(2px)',
     boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, .15)',
+    '@media only screen and (max-width: 1366px)': {
+      boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, .25)'
+    },
     '&:hover': {
       '@media only screen and (min-width: 1366px)': {
         flex: 5.5,
@@ -114,9 +130,14 @@ export const props = {
     fontWeight: '900',
     fontSize: 'A',
     '@tabletL': {
-      right: 'C',
-      bottom: 'C',
-      fontSize: `${22 / 16}em`
+      right: 'B',
+      bottom: 'B',
+      fontSize: `${26 / 16}em`
+    },
+    '@mobileS': {
+      right: 'B',
+      bottom: 'B',
+      fontSize: `${18 / 16}em`
     },
     css: {
       textTransform: 'uppercase',
@@ -131,8 +152,7 @@ export const props = {
     top: '0',
     left: '0',
     flexFlow: 'column',
-    flexAlign: 'center center',
-    css: { overflow: 'hidden' }
+    flexAlign: 'center center'
   }
 }
 

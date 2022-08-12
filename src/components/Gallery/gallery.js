@@ -1,6 +1,10 @@
 import { Box, Link, Img } from 'smbls'
 import { keyframes } from '@emotion/css'
-import { NavigationArrows } from '../NavigationArrows'
+
+import { NavigationArrows, NavigationVerticalArrows } from '../NavigationArrows'
+import { AmenitiesResponsive } from '../AmenitiesResponsive'
+import { ApartmentDescription } from '../ApartmentDescription'
+
 import LEFT_ARROW_PNG from '../../assets/icons/left-arrows2.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/right-arrows.png'
 import BACK_PNG from '../../assets/icons/arrowBack.png'
@@ -15,6 +19,23 @@ export const opacities = keyframes`
    transform: scale(1);
   }
 `
+
+const amenities = {
+  proto: AmenitiesResponsive,
+  props: {
+    display: 'none',
+    '@tabletL': { display: 'block' }
+  }
+}
+
+const description = {
+  proto: ApartmentDescription,
+  props: {
+    position: 'absolute',
+    top: '-F'
+    // left: '0'
+  }
+}
 
 const back = {
   proto: Link,
@@ -33,20 +54,6 @@ const back = {
       '&:hover > img': { opacity: '1' }
     }
   },
-
-  // class: {
-  //   show: (element, state) => state.activeTab
-  //     ? {
-  //       opacity: 1,
-  //       transition: 'opacity 1.8s ease-in-out .8s'
-  //     }
-  //     : { opacity: 0 },
-  //   show2: (element, state) => state.back
-  //     ? {
-  //       visibility: 'visible'
-  //     }
-  //     : { visibility: 'hidden' }
-  // },
 
   on: {
     click: (event, element, state) => {
@@ -125,12 +132,35 @@ const navArrows = {
   props: {
     margin: '0 0 -D 0',
     gap: 'B',
+    '@tabletL': {
+      display: 'none'
+    },
+    '@mobileL': {
+      display: 'flex',
+      margin: 'auto',
+      width: '100%'
+    },
     css: {
       zIndex: '40',
       alignSelf: 'flex-end',
       '&:before': {
         height: '70%',
         background: 'radial-gradient(rgba(248, 241, 227, .8), rgba(248, 241, 227, .35))'
+      }
+    }
+  },
+  childProto: {
+    props: {
+      '@mobileL': {
+        background: 'green2',
+        flexAlign: 'center center',
+        boxSize: 'E2 D1'
+      },
+      css: {
+        borderRadius: '0px',
+        '@media only screen and (max-width: 768px)': {
+          opacity: 1
+        }
       }
     }
   },
@@ -147,7 +177,20 @@ const navArrows = {
           }
         }
       },
-      props: { arrow: { src: LEFT_ARROW_PNG } }
+      props: {
+
+        arrow: {
+          src: LEFT_ARROW_PNG,
+          '@mobileL': { boxSize: 'B2 ' }
+        }
+      },
+      style: {
+        '@media only screen and (max-width: 1366px)': {
+          borderTopRightRadius: '100px',
+          borderBottomRightRadius: '100px',
+          paddingRight: '20px'
+        }
+      }
     },
 
     {
@@ -162,7 +205,64 @@ const navArrows = {
           }
         }
       },
-      props: { arrow: { src: RIGHT_ARROW_PNG } }
+      props: {
+        arrow: {
+          src: RIGHT_ARROW_PNG,
+          '@mobileL': { boxSize: 'B2 ' }
+        }
+      },
+      style: {
+        '@media only screen and (max-width: 1366px)': {
+          borderTopLeftRadius: '100px',
+          borderBottomLeftRadius: '100px',
+          paddingLeft: '20px'
+        }
+      }
+    }
+  ]
+}
+
+const navVerticalArrows = {
+  proto: NavigationVerticalArrows,
+  props: {
+    display: 'none',
+    '@tabletL': {
+      display: 'flex',
+      position: 'absolute',
+      top: '50%',
+      right: '-D1'
+    },
+    '@mobileL': { display: 'none' },
+    css: {
+      '@media only screen and (max-width: 1366px)': { transform: 'translate(-50%, -50%)' }
+    }
+  },
+  ...[
+    {
+      on: {
+        click: (event, element, state) => {
+          const { activeImage } = state
+          state.update({
+            activeImage: activeImage + 1
+          })
+          if (activeImage >= 8) {
+            state.update({ activeImage: 0 })
+          }
+        }
+      }
+    },
+    {
+      on: {
+        click: (event, element, state) => {
+          const { activeImage } = state
+          state.update({
+            activeImage: activeImage - 1
+          })
+          if (activeImage <= 0) {
+            state.update({ activeImage: 8 })
+          }
+        }
+      }
     }
   ]
 }
@@ -175,12 +275,17 @@ export const Gallery = {
     boxSize: 'H I',
     margin: '0 D 0 auto',
     flexAlign: 'flex-start center',
+    '@tabletS': {
+      boxSize: 'G1 H1'
+    },
+    '@mobileL': { width: '100%' },
     css: { alignSelf: 'center' }
   },
 
   back,
   book,
   navArrows,
+  navVerticalArrows,
   imageContainer: {
     style: { transition: 'all 3s ease-in-out' },
     class: {
@@ -188,9 +293,6 @@ export const Gallery = {
         ? {
           trasform: 'scale(1)',
           opacity: 1
-          // animationName: opacities,
-          // animationDuration: '.6s',
-          // animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
         }
 
         : {
@@ -198,5 +300,7 @@ export const Gallery = {
           opacity: 1
         }
     }
-  }
+  },
+  description,
+  amenities
 }
