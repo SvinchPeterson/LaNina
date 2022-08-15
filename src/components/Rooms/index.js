@@ -66,7 +66,7 @@ const Room = {
       css: { zIndex: '1000' },
       '@tabletL': { display: 'flex' },
       '@mobileS': {
-        top: 'D',
+        top: 'D'
         // left: 'B'
       }
     }

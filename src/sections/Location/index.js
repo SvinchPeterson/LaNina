@@ -37,8 +37,9 @@ const map = {
       '@media only screen and (max-width: 480px)': {
         minHeight: `${250 / 16}em`
       },
-      '@media only screen and (max-height: 700px)': { minHeight: `${200 / 16}em` },
-      '@media only screen and (max-height: 600px)': { minHeight: `${150 / 16}em` }
+      '@media only screen and (max-height: 700px)': { minHeight: `${300 / 16}em` },
+      '@media only screen and (max-height: 600px)': { minHeight: `${300 / 16}em` },
+      '@media only screen and (max-height: 550px)': { minHeight: `${250 / 16}em` }
     }
   }
 }

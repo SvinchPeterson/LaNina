@@ -239,7 +239,7 @@ export const AmenitiesResponsive = {
     show: (element, state) => state.offers
       ? {
         paddingBottom: `${40 / 16}em`,
-        marginBottom: `${0 / 16}em`,
+        marginBottom: `${20 / 16}em`,
         background: 'rgba(60,84, 72, 1)',
         '@media only screen and (max-width: 480px)': { marginBottom: '0' }
       }

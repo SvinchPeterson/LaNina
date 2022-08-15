@@ -115,7 +115,7 @@ const book = {
     top: '-C1',
     right: 'B',
     '@tabletL': {
-      left: '-C1',
+      right: '102%',
       top: '40%'
     },
     '@mobileL': {
