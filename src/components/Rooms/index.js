@@ -60,13 +60,14 @@ const Room = {
   back: {
     proto: back,
     props: {
-      top: 'C',
-      left: 'C',
+      top: 'E',
+      left: 'D',
       display: 'none',
+      css: { zIndex: '1000' },
       '@tabletL': { display: 'flex' },
       '@mobileS': {
-        top: 'B',
-        left: 'B'
+        top: 'D',
+        // left: 'B'
       }
     }
   },

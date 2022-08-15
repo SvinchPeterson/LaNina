@@ -32,12 +32,17 @@ const description = {
   proto: ApartmentDescription,
   props: {
     position: 'absolute',
-    top: '-D',
+    top: '-C2',
     display: 'none',
     '@tabletL': { display: 'flex' },
     '@mobileM': {
       top: '100%',
       bottom: '0'
+    },
+    css: {
+      '@media only screen and (max-height: 800px)': {
+        top: '-60px'
+      }
     }
   }
 }
@@ -107,14 +112,16 @@ const book = {
     padding: 'Z A',
     fontSize: 'Z',
     width: 'fit-content',
-    top: '40%',
+    top: '-C1',
     right: 'B',
     '@tabletL': {
-      left: '-C1'
+      left: '-C1',
+      top: '40%'
     },
     '@mobileL': {
       top: '80%',
-      left: 'B'
+      left: '0',
+      padding: 'A'
     },
     css: {
       zIndex: '30',
@@ -127,7 +134,8 @@ const book = {
       },
       '@media only screen and (max-width: 768px)': {
         writingMode: 'initial',
-        textOrientation: 'initial'
+        textOrientation: 'initial',
+        backdropFilter: 'blur(10px)'
       }
     }
   },
@@ -302,11 +310,10 @@ export const Gallery = {
     '@mobileL': { width: '100%' },
     '@mobileS': { boxSize: 'G 100%' },
     css: {
-      alignSelf: 'center'
-      // '@media only screen and (max-height: 700px)': {
-      //   border: '4px solid red',
-      //   height: '200px'
-      // }
+      alignSelf: 'center',
+      '@media only screen and (max-height: 800px)': {
+        // maxHeight: '250px'
+      }
     }
   },
 

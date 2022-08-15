@@ -33,7 +33,7 @@ const list = {
             top: '50%',
             right: '0',
             transform: 'translate(-50%, -50%)',
-            background: 'radial-gradient(rgba(248, 241, 227, .85), rgba(248, 241, 227, .65))'
+            background: 'radial-gradient(rgba(248, 241, 227, .85), rgba(248, 241, 227, 0))'
           }
         }
       },

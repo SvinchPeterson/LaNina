@@ -211,7 +211,7 @@ export const AmenitiesResponsive = {
     flexFlow: 'column',
     background: 'green2',
     round: 'Z',
-    bottom: '-E',
+    bottom: '-D',
     css: {
       left: '50%',
       transform: 'translate(-50%, 0%)'
@@ -239,7 +239,7 @@ export const AmenitiesResponsive = {
     show: (element, state) => state.offers
       ? {
         paddingBottom: `${40 / 16}em`,
-        marginBottom: `${100 / 16}em`,
+        marginBottom: `${0 / 16}em`,
         background: 'rgba(60,84, 72, 1)',
         '@media only screen and (max-width: 480px)': { marginBottom: '0' }
       }

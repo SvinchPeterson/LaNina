@@ -69,7 +69,7 @@ const props = {
     background: 'green2',
     '@mobileL': { gap: 'C' },
     '@mobileM': {
-      margin: 'B1 0 0 0',
+      margin: 'C 0 0 0',
       // left: 'B',
       flexFlow: 'column',
       flexAlign: 'flex-start flex-start'
