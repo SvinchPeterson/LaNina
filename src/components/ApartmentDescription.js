@@ -12,7 +12,7 @@ const iconCaption = {
     '@mobileM': { gap: 'Z2' },
     css: { textAlign: 'left' },
     icon: {
-      boxSize: '27px ',
+      boxSize: '26px ',
       margin: '0 0 0 0',
       '@mobileM': { boxSize: '35px ' }
     },

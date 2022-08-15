@@ -61,7 +61,7 @@ export const Menu = {
   class: {
     show: (element, state) => state.activeMenu
       ? { opacity: 1 }
-      : { opacity: 0, pointerEvents: 'none' }
+      : { opacity: 0, pointerEvents: 'none', zIndex: '-1' }
   },
 
   sectionLinks
