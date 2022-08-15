@@ -52,7 +52,8 @@ const Room = {
       : {
         height: `0`,
         opacity: 0,
-        background: 'black'
+        background: 'black',
+        pointerEvents: 'none'
       }
   },
 

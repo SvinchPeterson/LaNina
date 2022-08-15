@@ -330,8 +330,7 @@ export const Gallery = {
         }
 
         : {
-          trasform: 'scale(.95)',
-          opacity: 1
+          trasform: 'scale(.95)'
         }
     }
   },
