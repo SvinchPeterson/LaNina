@@ -23,11 +23,7 @@ const icon = {
     props: {
       boxSize: 'A1 A1',
       '@tabletL': { boxSize: 'B1 B1' },
-      '@mobileL': { boxSize: 'A2 A2' },
-      css: {
-        // opacity: '.85',
-        // '@media only screen and (max-width: 1366px)': { opacity: 1 }
-      }
+      '@mobileL': { boxSize: 'A2 A2' }
     }
   }
 }
@@ -77,7 +73,7 @@ export const props = {
     round: 'V2'
   },
   css: {
-    // overflow: 'hidden',
+    overflow: 'hidden',
     flex: 1,
     cursor: 'pointer',
     boxSizing: 'border-box',
@@ -125,7 +121,7 @@ export const props = {
     text: 'ballerina',
     color: 'cream2',
     position: 'absolute',
-    right: '-A1',
+    right: 'B',
     bottom: 'B',
     fontWeight: '900',
     fontSize: 'A',
