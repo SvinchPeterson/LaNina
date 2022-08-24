@@ -43,15 +43,7 @@ const image = {
 
 const missions = {
   props: {
-    padding: 'D A A C',
-    minWidth: `${950 / 16}em`,
-    margin: '0 auto',
-    css: { alignSelf: 'flex-start' },
-    '@mobileM': {
-      minWidth: 'fit-content',
-      margin: '0 auto 0 0'
-    },
-    '@mobileS': { padding: 'D A A B1' },
+    '@mobileS': { padding: '0 A' },
 
     title: {
       text: 'mission',
@@ -73,7 +65,9 @@ const missions = {
         maxWidth: 'G2',
         gap: 'Y'
       },
-      '@mobileS': { maxWidth: 'G1' }
+      '@mobileS': {
+        fontSize: `${14.7 / 16}em`
+      }
     }
   },
 
@@ -99,7 +93,7 @@ const props = {
   position: 'relative',
   flexAlign: 'center flex-start',
   margin: '0 auto',
-  gap: 'Z',
+  gap: 'C2',
   css: {
     marginTop: `${200 / 16}em`,
     marginBottom: `${350 / 16}em`,
@@ -112,5 +106,4 @@ export const Entrence = {
 
   image,
   missions
-  // texts
 }
