@@ -74,9 +74,8 @@ const title = {
   props: {
     position: 'absolute',
     top: '35%',
-    // left: '50%',
     right: '20%',
-    height: `${120 / 16}em`,
+    height: `${135 / 16}em`,
     '@mobileL': {
       top: '40%',
       right: '50%'
@@ -103,8 +102,8 @@ const title = {
     },
 
     title: {
-      fontWeight: '900',
-      fontSize: `${70 / 16}em`,
+      fontWeight: '100',
+      fontSize: `${90 / 16}em`,
       css: {
         textShadow: '1px -1px 1px rgba(0, 0, 0, 1)',
         overflow: 'hidden',

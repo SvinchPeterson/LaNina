@@ -82,7 +82,7 @@ const props = {
   flexFlow: 'column',
   position: 'relative',
   gap: '0',
-  margin: 'D 0 0 0',
+  margin: '0 0 0 0',
   '@tabletL': {
     flexAlign: 'center center',
     margin: '0 0 0 0'
