@@ -57,7 +57,7 @@ export const Header = {
     flexAlign: 'center space-between',
     padding: 'C E 0 E',
     margin: '0 0 0 0',
-    '@tabletS': { padding: 'C2 C2 0 C2' },
+    '@tabletS': { display: 'none' },
     '@mobileL': { display: 'none' },
     css: {
       zIndex: '100',
@@ -91,7 +91,7 @@ export const HeaderMobile = {
       mixBlendMode: 'difference',
       '@media only screen and (max-height: 650px)': { paddingTop: `${20 / 16}em !important` }
     },
-    '@mobileL': { display: 'flex' },
+    '@tabletS': { display: 'flex' },
     '@mobileM': { padding: 'B2 C 0 C' },
     '@mobileS': { padding: 'B A1 0 A1' }
   },
