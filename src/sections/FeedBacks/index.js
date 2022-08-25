@@ -51,7 +51,7 @@ const heading = {
   title: {
     proto: Box,
     tag: 'caption',
-    text: 'feedbacks',
+    text: 'Feedbacks',
     props: {
       fontWeight: '700',
       css: {

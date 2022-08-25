@@ -28,9 +28,8 @@ const title = {
       '@media only screen and (max-width: 1366px)': {
         alignSelf: 'center'
       },
-      '@media only screen and (max-height: 600px)': {
-        padding: '0 0 0 50px !important',
-        fontSize: `${14 / 19}em`
+      '@media only screen and (max-width: 1366px) and (max-height: 750px)': {
+        // fontSize: `${16 / 19}em`
       }
     }
   }
@@ -123,6 +122,12 @@ const props = {
         '@media only screen and (max-width: 768px)': {
           boxShadow: '30px 0px 70px 50px rgba(248, 241, 227, .8)'
         }
+      },
+
+      '@media only screen and (max-width: 1366px) and (max-height: 600px)': {
+        maxHeight: '250px',
+        overflowY: 'auto',
+        padding: '20px 0'
       }
     },
 

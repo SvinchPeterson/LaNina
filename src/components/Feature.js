@@ -22,6 +22,9 @@ const props = {
     backdropFilter: 'blur(5px)',
     '@media only screen and (max-width: 1366px)': {
       boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .03)'
+    },
+    '@media only screen and (max-width: 1366px) and (max-height: 750px)': {
+      padding: `${20 / 16}em ${30 / 16}em`
     }
   },
 
