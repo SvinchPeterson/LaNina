@@ -36,7 +36,7 @@ export const ResidenceText = {
   tag: 'p',
   ...[
     {
-      text: `Situated in one of the most picturesque districts of Old Tbilisi, within walking distance from Liberty square and most famous sights, "BB Residence" Sololaki offers a choice of fully furnished apartments, having everything for comfortable living.`
+      text: `Situated in one of the most picturesque districts of Old Tbilisi, within walking distance from Liberty square and most famous sights, "BB Residence" Sololaki offers a choice of fully furnished apartments, having everything for confortable living.`
     },
     {
       text: `Right in the heart of the capital of Georgia, with plenty of food markets, restaurants, nightclubs and bars nearby, just in a few minutes from busy city life, you will find comfort and relaxation in a peaceful and calm area.`
