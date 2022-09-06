@@ -20,13 +20,13 @@ export const opacities = keyframes`
 `
 
 const navArrow = {
-  proto: NavigationArrows,
+  extend: NavigationArrows,
   props: {
     position: 'absolute',
     bottom: '-D2',
     gap: 'D',
 
-    css: {
+    style: {
       alignSelf: 'flex-end',
       margin: '0 auto',
       display: 'none',
@@ -38,7 +38,7 @@ const navArrow = {
       }
     }
   },
-  childProto: {
+  childExtend: {
     props: { arrow: { boxSize: 'C ' } }
   },
 
@@ -79,7 +79,7 @@ const navArrow = {
 
 const tabsContainer = {
   tag: 'nav',
-  childProto: {
+  childExtend: {
     props: {
     }
   },
@@ -93,7 +93,7 @@ const props = {
   padding: '0 8%',
   maxWidth: `${1440 / 16}em`,
   width: `${1440 / 16}em`,
-  css: {
+  style: {
     boxSizing: 'border-box',
     margin: '0 auto'
     // border: '3px solid red'
@@ -106,7 +106,7 @@ const props = {
       bottom: `${-60 / 16}em`,
       maxWidth: `70%`
     },
-    css: {
+    style: {
       display: 'none',
       '@media only screen and (max-width: 1366px)': {
         display: 'flex',

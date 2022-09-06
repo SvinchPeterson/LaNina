@@ -5,9 +5,9 @@ const list = {
     flexAlign: 'flex-start flex-start',
     color: 'cream2',
     padding: 'Z 0 0 X'
-    // css: { border: '1px solid red' }
+    // style: { border: '1px solid red' }
   },
-  childProto: {
+  childExtend: {
     props: {
       lineHeight: '25px',
       fontSize: `${14 / 16}em`,
@@ -22,7 +22,7 @@ const list = {
         position: 'relative',
         margin: '0 B1 0 0',
         padding: '0 B1 0 0',
-        css: {
+        style: {
           // textAlign: 'right',
           '&:after': {
             content: '""',
@@ -74,7 +74,7 @@ const props = {
     color: 'orange3 .95',
     // padding: '0 0 Y2 0',
     textAlign: 'flex-start',
-    css: {
+    style: {
       textTransform: 'uppercase'
       // border: '1px solid red'
     }
@@ -89,5 +89,5 @@ export const Amenities = {
 }
 
 export const AmenitiesResponsive = {
-  proto: Amenities
+  extend: Amenities
 }

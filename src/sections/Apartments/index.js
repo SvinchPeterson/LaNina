@@ -5,13 +5,13 @@ import { SectionTitle } from '../../components'
 import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
 
 const title = {
-  proto: SectionTitle,
+  extend: SectionTitle,
   props: {
     text: 'apartments',
     left: 'E',
     position: 'absolute',
     top: '-B2',
-    css: { alignSelf: 'flex-start' }
+    style: { alignSelf: 'flex-start' }
   }
 }
 
@@ -23,7 +23,7 @@ const props = {
   flexAlign: 'center center',
   position: 'relative',
 
-  css: {
+  style: {
     scrollBehavior: 'smooth',
     backgroundImage: 'url(' + ORNAMENT_PNG + ')',
     backgroundSize: 'contain',
@@ -48,7 +48,7 @@ const props = {
   },
 
   content: {
-    css: { border: '5px solid red' }
+    style: { border: '5px solid red' }
 
   }
 }

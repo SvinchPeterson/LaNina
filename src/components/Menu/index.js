@@ -3,7 +3,7 @@ import { Box, Link } from 'smbls'
 
 const sectionLinks = {
   tag: 'nav',
-  proto: Box,
+  extend: Box,
   props: {
     flexFlow: 'column',
     flexAlign: 'flex-start center',
@@ -11,8 +11,8 @@ const sectionLinks = {
   },
   style: { width: 'fit-content' },
 
-  childProto: {
-    proto: [Link, Box],
+  childExtend: {
+    extend: [Link, Box],
     props: {
       fontSize: 'C',
       color: 'cream2 .95',
@@ -43,7 +43,7 @@ const sectionLinks = {
 
 export const Menu = {
   tag: 'aside',
-  proto: Box,
+  extend: Box,
   props: {
     boxSize: '100% 100%',
     position: 'fixed',

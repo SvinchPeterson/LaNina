@@ -2,12 +2,12 @@
 import { Link } from 'smbls'
 
 const link = {
-  proto: Link,
+  extend: Link,
   props: {
     color: 'white',
     fontWeight: '700',
     fontSize: 'Z',
-    css: {
+    style: {
       textTransform: 'uppercase',
       textDecoration: 'none',
       letterSpacing: '.3px',
@@ -25,5 +25,5 @@ const props = {
 export const Navbar = {
   tag: 'nav',
   props,
-  childProto: link
+  childExtend: link
 }

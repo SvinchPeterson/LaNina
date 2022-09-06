@@ -2,11 +2,11 @@
 import { Button } from 'smbls'
 
 export const MenuButton = {
-  proto: Button,
+  extend: Button,
   props: {
     background: 'transparent',
     padding: 'Z',
-    css: {
+    style: {
       cursor: 'pointer',
       '> svg': { display: 'none' }
     }
@@ -24,14 +24,14 @@ export const MenuButton = {
       position: 'relative',
       boxSize: 'B2 C'
     },
-    childProto: {
+    childExtend: {
       props: {
         background: 'cream2',
         round: 'C',
         width: '100%',
         position: 'absolute',
         left: '50%',
-        css: {
+        style: {
           height: '2px',
           transition: 'all .3s ease-in-out',
           transform: 'translate(-50%, -50%)'

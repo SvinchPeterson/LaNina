@@ -1,16 +1,15 @@
 'use strict'
 
-import router from 'domql/packages/router'
-
+import 'domql/packages/emotion'
 import './config'
-import './emotion'
 import './components'
+
+import router from 'domql/packages/router'
 
 import { Landing, Sololaki } from './pages'
 // import { Story } from './sections'
 
 const App = {
-
   key: 'app',
   props: {
     background: 'radial'

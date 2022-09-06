@@ -2,7 +2,7 @@
 
 import { ContactItems, Map, SectionTitle } from '../../components'
 const title = {
-  proto: SectionTitle,
+  extend: SectionTitle,
   props: {
     padding: '0 0 Z A',
     minWidth: '60%',
@@ -13,7 +13,7 @@ const title = {
     '@mobileL': { minWidth: '30%' },
     '@mobileM': { minWidth: '23%' },
     '@mobileXS': { minWidth: '20%' },
-    css: {
+    style: {
       alignSelf: 'center',
       '@media only screen and (max-height: 650px)': { fontSize: `${16 / 19}em` }
     }
@@ -21,10 +21,10 @@ const title = {
 }
 
 const map = {
-  proto: Map,
+  extend: Map,
   props: {
     width: '100%',
-    css: {
+    style: {
       flex: 1,
       border: 'none',
       margin: '0 auto',
@@ -45,11 +45,11 @@ const map = {
 }
 
 const contacts = {
-  childProto: {
-    proto: ContactItems,
+  childExtend: {
+    extend: ContactItems,
     props: {
       // '@mobileXS': { fontWeight: '400' },
-      css: {
+      style: {
 
         '@media only screen and (max-width: 480px)': {
           display: 'block',
@@ -76,7 +76,7 @@ const props = {
   minHeight: '100%',
   flexFlow: 'column',
   flexAlign: 'center center',
-  css: {
+  style: {
 
     alignSelf: 'center'
   },
@@ -92,7 +92,7 @@ const props = {
     '@mobileS': {
       padding: '0 G'
     },
-    css: {
+    style: {
       '@media only screen and (max-height: 650px)': { gap: `${10 / 16}em` }
     },
 

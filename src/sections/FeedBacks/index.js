@@ -9,7 +9,7 @@ import LEFT_ARROW_PNG from '../../assets/icons/leftBlack.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/rightBlack.png'
 
 const navArrows = {
-  proto: NavigationArrows,
+  extend: NavigationArrows,
   ...[
     {
       on: {
@@ -37,7 +37,7 @@ const navArrows = {
 }
 
 const heading = {
-  proto: Box,
+  extend: Box,
   props: {
     flexAlign: 'center space-between',
     width: '83%',
@@ -49,12 +49,12 @@ const heading = {
     margin: '0 auto'
   },
   title: {
-    proto: Box,
+    extend: Box,
     tag: 'caption',
     text: 'Feedbacks',
     props: {
       fontWeight: '700',
-      css: {
+      style: {
         whiteSpace: 'nowrap',
         letterSpacing: '.3px',
         zIndex: '100',
@@ -77,7 +77,7 @@ const props = {
   '@mobileL': { maxWidth: '85%' },
   '@mobileS': { maxWidth: '90%' },
   '@mobileXS': { maxWidth: '98%' },
-  css: {
+  style: {
     overflowX: 'hidden',
     margin: '0 auto',
     // boxSizing: 'border-box',
@@ -92,7 +92,7 @@ const props = {
     '@mobileM': {
       width: '100%'
     },
-    css: {
+    style: {
       margin: '0 auto',
       marginTop: `${25 / 16}em`,
       '@media only screen and (max-width: 768px)': { marginTop: `${10 / 16}em` },
@@ -128,7 +128,7 @@ const props = {
     feedbacks: {
       flexAlign: 'flex-start flex-start',
       gap: 'B',
-      css: {
+      style: {
         scrollBehavior: 'smooth',
         overflowX: 'auto',
         minWidth: '100%',
@@ -143,11 +143,11 @@ export const feedBacks = {
   tag: 'section',
   props,
 
-  heading: { proto: heading },
+  heading: { extend: heading },
   content: {
     feedbacks: {
-      childProto: {
-        proto: FeedBack
+      childExtend: {
+        extend: FeedBack
       },
       ...[
         {

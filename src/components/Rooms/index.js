@@ -28,7 +28,7 @@ const Room = {
     boxSize: '100% 100%',
     flexAlign: 'center spance-between',
     position: 'relative',
-    css: {
+    style: {
       zIndex: 10,
       alignSelf: 'center'
     },
@@ -58,12 +58,12 @@ const Room = {
   },
 
   back: {
-    proto: back,
+    extend: back,
     props: {
       top: 'E',
       left: 'D',
       display: 'none',
-      css: { zIndex: '1000' },
+      style: { zIndex: '1000' },
       '@tabletL': { display: 'flex' },
       '@mobileS': {
         top: 'D'
@@ -79,8 +79,8 @@ const Room = {
       }
     },
 
-    description: { proto: RoomDescription },
-    amenities: { proto: Amenities }
+    description: { extend: RoomDescription },
+    amenities: { extend: Amenities }
   },
   gallery: {
     props: {
@@ -90,15 +90,15 @@ const Room = {
 }
 
 export const roomBallerina = {
-  proto: Room,
+  extend: Room,
   attr: { id: 'roomBallerina' },
 
   article: {},
-  gallery: { proto: galleryBallerina }
+  gallery: { extend: galleryBallerina }
 }
 
 export const roomRedBrick = {
-  proto: Room,
+  extend: Room,
   attr: { id: 'roomRedBrick' },
 
   article: {
@@ -122,11 +122,11 @@ export const roomRedBrick = {
       }
     }
   },
-  gallery: { proto: galleryRedBrick }
+  gallery: { extend: galleryRedBrick }
 }
 
 export const roomYellowCouch = {
-  proto: Room,
+  extend: Room,
   attr: { id: 'roomYellowCouch' },
 
   article: {
@@ -150,11 +150,11 @@ export const roomYellowCouch = {
       }
     }
   },
-  gallery: { proto: galleryYellowCouch }
+  gallery: { extend: galleryYellowCouch }
 }
 
 export const roomGreenForest = {
-  proto: Room,
+  extend: Room,
   attr: { id: 'roomGreenForest' },
   article: {
     description: {
@@ -177,11 +177,11 @@ export const roomGreenForest = {
       }
     }
   },
-  gallery: { proto: galleryGreenForest }
+  gallery: { extend: galleryGreenForest }
 }
 
 export const roomRetro = {
-  proto: Room,
+  extend: Room,
   attr: { id: 'roomRetro' },
   article: {
     description: {
@@ -204,5 +204,5 @@ export const roomRetro = {
       }
     }
   },
-  gallery: { proto: galleryRetro }
+  gallery: { extend: galleryRetro }
 }

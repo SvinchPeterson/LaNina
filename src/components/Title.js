@@ -20,7 +20,7 @@ export const TitleCaption = {
       color: 'cream2 .9',
       fontWeight: '900',
       fontSize: 'A',
-      css: {
+      style: {
         textTransform: 'uppercase',
         alignSelf: 'flex-end',
         letterSpacing: '10px'
@@ -29,7 +29,7 @@ export const TitleCaption = {
   },
 
   title: {
-    proto: Title,
+    extend: Title,
     props: 'match'
   },
   caption: {}

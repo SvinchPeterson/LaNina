@@ -19,22 +19,22 @@ export const opacity = keyframes`
 
 const socialLinks = {
   tag: 'nav',
-  proto: Link,
+  extend: Link,
   props: {
     flexAlign: 'center center',
     gap: 'C',
-    css: { zIndex: '60' }
+    style: { zIndex: '60' }
   },
 
-  childProto: {
-    proto: Link,
+  childExtend: {
+    extend: Link,
     props: { target: '_blank' },
 
     icon: {
-      proto: Img,
+      extend: Img,
       props: {
         boxSize: 'B -',
-        css: {
+        style: {
           // opacity: '.9',
           '&:hover': { opacity: 1 }
         }
@@ -65,7 +65,7 @@ export const Footer = {
     bottom: '0',
     flexAlign: 'center space-between',
     padding: '0 E C E',
-    css: {
+    style: {
       mixBlendMode: 'difference',
       zIndex: '60',
       animationName: opacity,

@@ -21,7 +21,7 @@ export const opacities = keyframes`
 `
 
 const amenities = {
-  proto: AmenitiesResponsive,
+  extend: AmenitiesResponsive,
   props: {
     display: 'none',
     '@tabletL': { display: 'block' }
@@ -29,7 +29,7 @@ const amenities = {
 }
 
 const description = {
-  proto: ApartmentDescription,
+  extend: ApartmentDescription,
   props: {
     position: 'absolute',
     top: '-C2',
@@ -39,7 +39,7 @@ const description = {
       top: '100%',
       bottom: '0'
     },
-    css: {
+    style: {
       '@media only screen and (max-height: 800px)': {
         top: '-60px'
       }
@@ -48,7 +48,7 @@ const description = {
 }
 
 export const back = {
-  proto: Link,
+  extend: Link,
   props: {
     gap: 'Z',
     position: 'absolute',
@@ -58,7 +58,7 @@ export const back = {
     color: 'cream2',
     flexAlign: 'center center',
     padding: 'Z',
-    css: {
+    style: {
       textDecoration: 'none',
       '&:hover > span': { opacity: '1' },
       '&:hover > img': { opacity: '1' }
@@ -72,11 +72,11 @@ export const back = {
   },
 
   icon: {
-    proto: Img,
+    extend: Img,
     props: {
       boxSize: '- A1',
       src: BACK_PNG,
-      css: {
+      style: {
         opacity: '.65',
         transition: 'opacity .1s ease-in-out',
         '@media only screen and (max-width: 1366px)': {
@@ -92,7 +92,7 @@ export const back = {
       '@tabletL': {
         fontSize: 'Z'
       },
-      css: {
+      style: {
         letterSpacing: '1px',
         opacity: '.7',
         transition: 'opacity .15s ease-in-out',
@@ -105,7 +105,7 @@ export const back = {
 }
 
 const book = {
-  proto: Link,
+  extend: Link,
   props: {
     color: 'cream2',
     position: 'absolute',
@@ -123,7 +123,7 @@ const book = {
       left: '0',
       padding: 'A'
     },
-    css: {
+    style: {
       zIndex: '30',
       textDecoration: 'none',
       textTransform: 'uppercase',
@@ -142,10 +142,10 @@ const book = {
 
   attr: { target: '_blank' },
   span: {
-    proto: Box,
+    extend: Box,
     text: 'BOOK',
     props: {
-      css: {
+      style: {
         opacity: '.7',
         transition: 'opacity .1s ease-in-out',
         '@media only screen and (max-width: 1366px)': {
@@ -157,7 +157,7 @@ const book = {
 }
 
 const navArrows = {
-  proto: NavigationArrows,
+  extend: NavigationArrows,
   props: {
     margin: '0 0 -D 0',
     gap: 'B',
@@ -169,7 +169,7 @@ const navArrows = {
       margin: 'auto',
       width: '100%'
     },
-    css: {
+    style: {
       zIndex: '40',
       alignSelf: 'flex-end',
       '&:before': {
@@ -179,14 +179,14 @@ const navArrows = {
       }
     }
   },
-  childProto: {
+  childExtend: {
     props: {
       '@mobileL': {
         background: 'green2',
         flexAlign: 'center center',
         boxSize: 'E2 D1'
       },
-      css: {
+      style: {
         borderRadius: '0px',
         '@media only screen and (max-width: 768px)': {
           opacity: 1
@@ -253,7 +253,7 @@ const navArrows = {
 }
 
 const navVerticalArrows = {
-  proto: NavigationVerticalArrows,
+  extend: NavigationVerticalArrows,
   props: {
     display: 'none',
     '@tabletL': {
@@ -263,7 +263,7 @@ const navVerticalArrows = {
       right: '-D1'
     },
     '@mobileL': { display: 'none' },
-    css: {
+    style: {
       '@media only screen and (max-width: 1366px)': { transform: 'translate(-50%, -50%)' }
     }
   },
@@ -309,7 +309,7 @@ export const Gallery = {
     },
     '@mobileL': { width: '100%' },
     '@mobileS': { boxSize: 'G 100%' },
-    css: {
+    style: {
       alignSelf: 'center',
       '@media only screen and (max-height: 800px)': {
         // maxHeight: '250px'
@@ -318,7 +318,7 @@ export const Gallery = {
   },
 
   ba: {
-    proto: back,
+    extend: back,
     props: {
       '@tabletL': { display: 'none' }
     }

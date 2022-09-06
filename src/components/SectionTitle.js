@@ -7,7 +7,7 @@ export const SectionTitle = {
     fontSize: 'B',
     fontWeight: '900',
     // '@mobileM': { fontSize: 'C' },
-    css: {
+    style: {
       textTransform: 'capitalize'
     }
   }

@@ -1,22 +1,21 @@
 'use strict'
+
 import { Img, Link } from 'smbls'
 import { keyframes } from '@emotion/css'
 
 import { Navbar } from './Navbar'
-import LOGO_PNG from '../assets/icons/logo-white.png'
 import { MenuButton } from './MenuButton'
+import LOGO_PNG from '../assets/icons/logo-white.png'
 
 const logo = {
-  proto: Link,
+  extend: Link,
   props: {
     href: '#banner',
-    css: {
-      '&:hover': { opacity: 1 }
-    }
+    ':hover': { opacity: 1 }
   },
 
   icon: {
-    proto: Img,
+    extend: Img,
     props: {
       src: LOGO_PNG,
       boxSize: 'B -',
@@ -35,7 +34,7 @@ export const opacity = keyframes`
 `
 
 const navBar = {
-  proto: Navbar,
+  extend: Navbar,
   props: { gap: 'C1' },
 
   ...[
@@ -59,7 +58,7 @@ export const Header = {
     margin: '0 0 0 0',
     '@tabletS': { display: 'none' },
     '@mobileL': { display: 'none' },
-    css: {
+    style: {
       zIndex: '100',
       mixBlendMode: 'difference',
       animationName: opacity,
@@ -86,7 +85,7 @@ export const HeaderMobile = {
     gap: 'E',
     display: 'none',
     width: '100%',
-    css: {
+    style: {
       zIndex: 500,
       mixBlendMode: 'difference',
       '@media only screen and (max-height: 650px)': { paddingTop: `${20 / 16}em !important` }

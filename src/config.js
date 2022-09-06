@@ -1,6 +1,6 @@
 'use strict'
 
-import { init } from '@symbo.ls/init'
+import { init } from 'smbls'
 
 // import DejavuBold from './assets/fonts/DejaVuSans-Bold.woff2'
 // import Geo from './assets/fonts/BPGExtraSquareMtavruli.woff2'

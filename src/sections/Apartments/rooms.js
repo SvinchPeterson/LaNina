@@ -9,7 +9,7 @@ const props = {
   margin: 'auto',
 
   // background: 'cream2',
-  css: {
+  style: {
     transformOrigin: 'left',
     zIndex: '20',
     // border: '7px solid blue',
@@ -19,7 +19,7 @@ const props = {
   roomsContainer: {
     boxSize: 'fit-content fit-content',
     margin: '0 D 0 auto',
-    css: { alignSelf: 'center' }
+    style: { alignSelf: 'center' }
   }
 }
 
@@ -35,7 +35,7 @@ export const rooms = {
         display: 'none !important'
       }
   },
-  // description: { proto: RoomDescription },
+  // description: { extend: RoomDescription },
   ...[
     roomBallerina,
     roomRedBrick,

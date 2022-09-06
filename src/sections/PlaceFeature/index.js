@@ -6,7 +6,7 @@ import SHELF_JPG from '../../assets/images/sololaki/shelf.jpg'
 import SCROLL_PNG from '../../assets/icons/scroll.png'
 
 const title = {
-  proto: SectionTitle,
+  extend: SectionTitle,
   props: {
     text: 'Services & Facilities',
     padding: '0 0 Z E',
@@ -22,7 +22,7 @@ const title = {
       width: `${360 / 19}em`
     },
 
-    css: {
+    style: {
       alignSelf: 'flex-start',
       zIndex: '30',
       '@media only screen and (max-width: 1366px)': {
@@ -45,7 +45,7 @@ const scroll = {
     display: 'none',
     flexFlow: 'column',
     flexAlign: 'center center',
-    css: {
+    style: {
       writingMode: 'vertical-rl',
       textOrientation: 'upright',
       textTransform: 'uppercase'
@@ -61,7 +61,7 @@ const scroll = {
 
   caption: {},
   icon: {
-    proto: Img,
+    extend: Img,
     props: {
       src: SCROLL_PNG,
       boxSize: 'A A',
@@ -69,7 +69,7 @@ const scroll = {
       position: 'absolute',
       bottom: '-30px',
       left: '50%',
-      css: {
+      style: {
         transform: 'translate(-50%, -50%)'
       }
     }
@@ -82,7 +82,7 @@ const props = {
   position: 'relative',
   gap: '0',
   '@tabletL': { flexAlign: 'center center' },
-  css: {
+  style: {
     width: '100%',
     minHeight: '100%',
     '&:before': {
@@ -102,7 +102,7 @@ const props = {
     '@mobileL': {
       width: 'fit-content'
     },
-    css: {
+    style: {
       '&:before': {
         content: '""',
         position: 'absolute',
@@ -149,7 +149,7 @@ const props = {
         padding: 'Z2 0'
       },
 
-      css: {
+      style: {
         boxSizing: 'border-box',
         width: '100%',
         backgroundAttachment: 'fixed',
@@ -194,9 +194,9 @@ export const placeFeature = {
   scroll,
   content: {
     grid: {
-      proto: Grid,
-      childProto: {
-        proto: Feature
+      extend: Grid,
+      childExtend: {
+        extend: Feature
       },
 
       ...[

@@ -1,16 +1,18 @@
 'use strict'
 
 import DOM from 'domql'
-// import router from 'domql/packages/router'
+import './config'
 
-import App from './app'
-import { FastClick } from 'fastclick'
+import 'domql/packages/emotion'
 
 import * as smbls from 'smbls'
 import * as components from './components'
 
-export default DOM.create(App, undefined, undefined, {
-  proto: [smbls.Box],
+import App from './app'
+import { FastClick } from 'fastclick'
+
+export default DOM.create(App, undefined, 'app', {
+  extend: [smbls.Box],
   components: { ...smbls, ...components }
 })
 

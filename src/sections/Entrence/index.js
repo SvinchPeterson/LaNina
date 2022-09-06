@@ -14,7 +14,7 @@ const image = {
       minWidth: '100%'
     },
     '@mobileS': { minWidth: '100%' },
-    css: {
+    style: {
       flex: '1',
       backgroundAttachment: 'fixed',
       backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .8)), url(' + VERANDA_JPG + ')',
@@ -50,7 +50,7 @@ const missions = {
       padding: '0 0 A 0',
       fontSize: `${14 / 16}em`,
       fontWeight: '900',
-      css: {
+      style: {
         textTransform: 'uppercase',
         fontStyle: 'italic'
       },
@@ -60,7 +60,7 @@ const missions = {
       flexFlow: 'column',
       gap: 'X',
       color: 'black .8',
-      css: { fontStyle: 'italic' },
+      style: { fontStyle: 'italic' },
       '@mobileM': {
         maxWidth: 'G2',
         gap: 'Y'
@@ -72,7 +72,7 @@ const missions = {
   },
 
   title: {
-    proto: SectionTitle,
+    extend: SectionTitle,
     props: 'match'
   },
   p: {
@@ -94,7 +94,7 @@ const props = {
   flexAlign: 'center flex-start',
   margin: '0 auto',
   gap: 'C2',
-  css: {
+  style: {
     marginTop: `${200 / 16}em`,
     marginBottom: `${350 / 16}em`,
     '@media only screen and (max-width: 1366px)': { marginTop: `${0 / 16}em`, marginBottom: `${250 / 16}em` }

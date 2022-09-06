@@ -1,7 +1,9 @@
+'use strict'
+
 import { Text, Box } from 'smbls'
 
 export const origin = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `“La Nina Residence” is a company started by two brothers Giorgi and David,
     the idea started from our grandparents who started investing in real estate in the district of Sololaki and we collectively decided to
@@ -12,7 +14,7 @@ export const origin = {
 }
 
 export const mission = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `Providing remarkable lodging facilities and services to our guests. Emphasizing on customer service and creating an unforgettable in-home experience.`
   }
@@ -25,7 +27,7 @@ export const aroundArea = {
 }
 
 export const vision = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `“Constantly implementing new strategies to help the local community and applying new environmental technologies.
     We strive to be the place to stay in Tbilisi for guests who want to feel at home away from home.”`
@@ -58,7 +60,7 @@ export const ResidenceText = {
 }
 
 export const laninaSololaki = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `“La Nina Residence Sololaki” is located in the heart of Tbilisi in the district of Sololaki,
     Amaghleba street 8/41. The building was originally built in 1898, and represents traditional Georgian housing structure called a so called
@@ -70,7 +72,7 @@ export const laninaSololaki = {
 }
 
 export const wineText = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `Georgians are very proud of their rich and historic winemaking culture, and as traditional methods enjoy a renaissance,
     the Qvevri (an earthenware vessel used to store and age wine for thousands of years). Georgia is generally considered the ‘cradle of wine’,
@@ -82,14 +84,14 @@ export const wineText = {
   }
 }
 const roomParagraph = {
-  proto: Box,
+  extend: Box,
   heading: {
     props: {
       color: 'gold',
       padding: '0 0 Y2 0',
       maxWidth: 'G1',
       '@mobileL': { padding: '0 0 Y1 0' },
-      css: {
+      style: {
         fontWeight: '500',
         lineHeight: '20px'
 
@@ -97,7 +99,7 @@ const roomParagraph = {
     }
   },
   p: {
-    proto: [Text, Box],
+    extend: [Text, Box],
     props: {
       color: 'cream2 1'
       // fontWeight: '400'
@@ -105,7 +107,7 @@ const roomParagraph = {
   }
 }
 export const ballerinaParagraph = {
-  proto: roomParagraph,
+  extend: roomParagraph,
   heading: {
     ...[
       'Enjoy special atmosphere, delicate and airy',
@@ -120,7 +122,7 @@ export const ballerinaParagraph = {
 }
 
 export const redBrickParagrap = {
-  proto: roomParagraph,
+  extend: roomParagraph,
   heading: {
     ...[
       'Where traditional Georgian old style',
@@ -141,7 +143,7 @@ export const redBrickParagrap = {
 }
 
 export const yellowCouchParagraph = {
-  proto: roomParagraph,
+  extend: roomParagraph,
   heading: {
     ...[
       'Make yourself comfortable on',
@@ -162,7 +164,7 @@ export const yellowCouchParagraph = {
 }
 
 export const greenForestParagraph = {
-  proto: roomParagraph,
+  extend: roomParagraph,
   heading: {
     props: { text: 'Timeless and elegant, yet modern and fresh, green is your choice!' },
     style: {
@@ -179,7 +181,7 @@ export const greenForestParagraph = {
 }
 
 export const retroParagraph = {
-  proto: roomParagraph,
+  extend: roomParagraph,
   heading: {
     ...[
       'Where contemporary design combine',
@@ -194,7 +196,7 @@ export const retroParagraph = {
 }
 
 export const distanceText = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `Distance to Tbilisi International airport is 20 km.
     Central railway station is 11 km away.`
@@ -202,14 +204,14 @@ export const distanceText = {
 }
 
 export const locationText = {
-  proto: Text,
+  extend: Text,
   props: {
     text: 'Thanks to our location and proximity to the metro station and bus stops you can easily get to any place in the city.'
   }
 }
 
 export const transferText = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `Airport transfer can be arranged upon request.
     From/To Tbilisi international airport - 20$ per trip
@@ -218,7 +220,7 @@ export const transferText = {
 }
 
 export const locationFeatured = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `Location features
     Private entrance
@@ -229,7 +231,7 @@ export const locationFeatured = {
 }
 
 export const luggageText = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `Luggage dropoff allowed
     for guests' convenience when they have early arrival or late departure`
@@ -237,7 +239,7 @@ export const luggageText = {
 }
 
 export const stayText = {
-  proto: Text,
+  extend: Text,
   props: {
     text: `Long term stays allow for 28 days or more`
   }

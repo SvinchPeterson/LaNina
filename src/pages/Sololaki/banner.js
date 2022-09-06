@@ -70,7 +70,7 @@ export const animAfter = keyframes`
   }
 `
 const title = {
-  proto: TitleCaption,
+  extend: TitleCaption,
   props: {
     position: 'absolute',
     top: '35%',
@@ -83,7 +83,7 @@ const title = {
     '@mobileM': { height: `${90 / 16}em` },
     '@mobileXS': { height: `${80 / 16}em` },
 
-    css: {
+    style: {
       whiteSpace: 'nowrap',
       minWidth: 'fit-content',
       '@media only screen and (max-width: 768px)': { transform: 'translate(50%, -50%)' },
@@ -104,7 +104,7 @@ const title = {
     title: {
       fontWeight: '100',
       fontSize: `${90 / 16}em`,
-      css: {
+      style: {
         textShadow: '1px -1px 1px rgba(0, 0, 0, 1)',
         overflow: 'hidden',
         animationName: animTitle,
@@ -130,7 +130,7 @@ const title = {
         margin: 'auto 0 0 0'
       },
       '@mobileXS': { fontSize: 'A' },
-      css: {
+      style: {
         animationName: animCaption,
         animationDuration: '4s',
         animationTimingFunction: 'cubic-bezier(.17,.67,.83,.67)',
@@ -146,7 +146,7 @@ const image = {
     position: 'absolute',
     top: '0',
     left: '0',
-    css: {
+    style: {
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'bottom left',
@@ -189,7 +189,7 @@ const props = {
   minHeight: '100%',
   position: 'relative',
   background: 'radial-gradient(rgba(0 ,0 , 0, .8), rgba(0 , 0, 0, .95))',
-  css: {
+  style: {
     overflow: 'hidden',
     '&:before': {
       content: '""',

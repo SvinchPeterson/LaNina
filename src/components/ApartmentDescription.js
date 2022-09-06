@@ -10,7 +10,7 @@ const iconCaption = {
     flexAlign: 'center flex-start',
     gap: 'Z',
     '@mobileM': { gap: 'Z2' },
-    css: { textAlign: 'left' },
+    style: { textAlign: 'left' },
     icon: {
       boxSize: '26px ',
       margin: '0 0 0 0',
@@ -27,7 +27,7 @@ const iconCaption = {
         lineHeight: '25px'
 
       },
-      css: {
+      style: {
         whiteSpace: 'nowrap',
         textAlign: 'left',
         span: {
@@ -39,7 +39,7 @@ const iconCaption = {
   },
 
   icon: {
-    proto: Img,
+    extend: Img,
     props: 'match'
   },
 
@@ -49,7 +49,7 @@ const iconCaption = {
 const props = {
   position: 'relative',
   height: 'fit-content',
-  css: {
+  style: {
     '&:after': {
       content: '""',
       position: 'absolute',
@@ -74,7 +74,7 @@ const props = {
       flexFlow: 'column',
       flexAlign: 'flex-start flex-start'
     },
-    css: {
+    style: {
       '@media only screen and (max-width: 560px)': {
         gap: '25px !important',
         // border: '3px solid red',
@@ -93,7 +93,7 @@ export const ApartmentDescription = {
   props,
 
   content: {
-    childProto: iconCaption,
+    childExtend: iconCaption,
     ...[
       {
         props: {

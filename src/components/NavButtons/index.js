@@ -8,7 +8,7 @@ import LEFT_ARROW_PNG from '../../assets/icons/left-arrows2.png'
 import RIGHT_ARROW_PNG from '../../assets/icons/right-arrows.png'
 
 export const NavButtons = {
-  proto: Box,
+  extend: Box,
   props: {
     position: 'absolute',
     top: '63%',
@@ -22,8 +22,8 @@ export const NavButtons = {
     '> button': { cursor: 'pointer' }
   },
 
-  childProto: {
-    proto: Box,
+  childExtend: {
+    extend: Box,
     tag: 'button',
     props: { padding: 'A Z' },
     style: {
@@ -55,7 +55,7 @@ export const NavButtons = {
         }
       },
       image: {
-        proto: [Img, Box],
+        extend: [Img, Box],
         props: {
           src: UP_ARROW_PNG,
           boxSize: '- A2',
@@ -83,7 +83,7 @@ export const NavButtons = {
         borderTop: 'none !important'
       },
       image: {
-        proto: [Img, Box],
+        extend: [Img, Box],
         props: {
           src: DOWN_ARROW_PNG,
           boxSize: '- A2',
@@ -107,7 +107,7 @@ export const NavButtons = {
 }
 
 export const NavButtons2 = {
-  proto: Box,
+  extend: Box,
   props: {
     height: '0',
     position: 'absolute',
@@ -122,8 +122,8 @@ export const NavButtons2 = {
     transform: 'translate(-50%, -50%)'
   },
 
-  childProto: {
-    proto: Box,
+  childExtend: {
+    extend: Box,
     tag: 'button',
     props: {
       flexAlign: 'center center',
@@ -134,7 +134,7 @@ export const NavButtons2 = {
       cursor: 'pointer'
     },
     image: {
-      proto: [Img, Box],
+      extend: [Img, Box],
       props: {
         boxSize: '- A',
         '@tabletL': { boxSize: '- B' },
@@ -151,7 +151,7 @@ export const NavButtons2 = {
         border: 'none'
       },
       image: {
-        proto: [Img, Box],
+        extend: [Img, Box],
         props: { src: LEFT_ARROW_PNG }
       }
     },
@@ -164,7 +164,7 @@ export const NavButtons2 = {
         border: 'none'
       },
       image: {
-        proto: [Img, Box],
+        extend: [Img, Box],
         props: { src: RIGHT_ARROW_PNG }
       }
     }

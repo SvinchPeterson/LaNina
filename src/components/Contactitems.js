@@ -14,7 +14,7 @@ const props = {
     background: 'black 0',
     gap: 'A'
   },
-  css: {
+  style: {
     border: '.5px solid rgba(0, 0, 0, .7)',
     '@media only screen and (max-width: 480px)': {
       border: 'none'
@@ -65,7 +65,7 @@ const itemProps = {
     round: 'C'
     // background: 'rgba(0, 0, 0, .05)'
   },
-  css: {
+  style: {
     '@media only screen and (max-width: 480px)': {
       border: '.5px solid rgba(0, 0, 0, .75)'
     }
@@ -75,7 +75,7 @@ const itemProps = {
 export const ContactItems = {
   props,
 
-  childProto: { props: itemProps },
+  childExtend: { props: itemProps },
   ...[
     { props: { text: 'reservations@bbhospitality.ge' } },
     { props: { text: 'info@bbhospitality.ge' } }

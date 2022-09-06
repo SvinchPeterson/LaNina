@@ -10,11 +10,11 @@ import {
 import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 
 const title = {
-  proto: Title,
+  extend: Title,
   props: {
     fontSize: 'K',
     color: 'gold .75',
-    css: {
+    style: {
       animationName: animTitle,
       animationDuration: '2s',
       animationTimingFunction: 'ease-in-out',
@@ -30,12 +30,12 @@ const title = {
 }
 
 const navBar = {
-  proto: Navbar,
+  extend: Navbar,
   props: {
     padding: '0 C2 0 0',
     '@tabletS': { padding: '0 0 0 B' },
     '@mobileM': { flexFlow: 'column' },
-    css: {
+    style: {
       '> a:first-child': {
         opacity: '.75',
         '&:hover': { opacity: 1 }
@@ -57,11 +57,11 @@ const navBar = {
     }
   },
 
-  childProto: {
+  childExtend: {
     props: {
       position: 'relative',
       transition: 'background .3s ease-in-out',
-      css: { zIndex: 10 },
+      style: { zIndex: 10 },
       '@mobileM': {
         background: 'cream2 .15',
         minWidth: 'F2',
@@ -94,7 +94,7 @@ const props = {
     boxSize: '100% 100%',
     flexAlign: 'center flex-end',
     '@tabletS': { flexAlign: 'center center' },
-    css: {
+    style: {
       zIndex: '100',
       backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
       backgroundSize: 'cover',
@@ -152,7 +152,7 @@ const props = {
       gap: 'C',
       flexAlign: 'flex-end center',
       padding: '0 E2 F 0',
-      css: {
+      style: {
         animationName: animContent,
         animationDuration: '2s',
         animationTimingFunction: 'ease-in-out'

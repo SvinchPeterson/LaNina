@@ -4,7 +4,7 @@ import { SectionTitle } from '../../components'
 import WINE_JPG from '../../assets/images/sololaki/wine.jpg'
 
 const title = {
-  proto: SectionTitle,
+  extend: SectionTitle,
   props: {
     text: 'Wine',
     '@tabletL': { color: 'cream2' },
@@ -13,7 +13,7 @@ const title = {
 }
 
 const image = {
-  proto: Box,
+  extend: Box,
 
   props: {
     boxSize: `H1 ${450 / 16}em`,
@@ -21,7 +21,7 @@ const image = {
     '@tabletL': {
       boxSize: '100% 100%'
     },
-    css: {
+    style: {
       backgroundImage: 'linear-gradient(rgba(60,84, 72, .35), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
       backgroundSize: 'contain',
       backgroundPosition: 'center bottom 100px',
@@ -49,7 +49,7 @@ const image = {
 }
 
 const paragraph = {
-  proto: Box,
+  extend: Box,
   props: {
     position: 'absolute',
     background: 'cream2',
@@ -68,7 +68,7 @@ const paragraph = {
       padding: '0 C'
     },
     '@mobileS': { padding: '0 A2' },
-    css: {
+    style: {
       borderTop: 'none',
       zIndex: '10',
       backgroundAttachment: 'fixed'
@@ -77,7 +77,7 @@ const paragraph = {
 
   title,
   texts: {
-    proto: Box,
+    extend: Box,
     props: {
       maxWidth: `${550 / 14.3}em`,
       margin: '0 auto',
@@ -90,7 +90,7 @@ const paragraph = {
         maxWidth: `100%`,
         padding: '0 A1'
       },
-      css: {
+      style: {
         fontSize: `${14.3 / 16}em`
       }
     },
@@ -122,7 +122,7 @@ const props = {
 
 export const Wine = {
   tag: 'section',
-  proto: Box,
+  extend: Box,
   props,
   attr: { id: 'wine' },
 

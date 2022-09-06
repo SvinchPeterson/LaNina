@@ -34,12 +34,12 @@ import HOLL_MOBILE_JPG from '../../assets/images/ballerina/mobile/holl.jpg'
 import BATHROOM_MOBILE_JPG from '../../assets/images/ballerina/mobile/bathroom.jpg'
 
 export const galleryBallerina = {
-  proto: Gallery,
+  extend: Gallery,
   back: {},
   book: { props: { href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1660208389_6BbXYs64bnru3w3i' } },
   navArrows: {},
   imageContainer: {
-    childProto: image,
+    childExtend: image,
     ...[
       {
         style: {

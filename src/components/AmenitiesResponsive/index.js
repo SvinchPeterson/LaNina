@@ -44,7 +44,7 @@ const header = {
   },
 
   minimize: {
-    proto: Button,
+    extend: Button,
     props: { padding: 'Z1' },
     style: {
       background: 'transparent',
@@ -52,7 +52,7 @@ const header = {
       '&:hover > button': { opacity: '1' }
     },
     span: {
-      // proto: Button,
+      // extend: Button,
       props: {
         boxSize: 'X B',
         background: 'cream2',
@@ -117,7 +117,7 @@ const offers = {
   },
 
   content: {
-    proto: [Grid, Box],
+    extend: [Grid, Box],
     props: {
       padding: '0 C2 C C2',
       columns: 'repeat(2, 1fr)',
@@ -164,9 +164,9 @@ const offers = {
         }
     },
 
-    childProto: {
+    childExtend: {
       tag: 'span',
-      proto: [Box, Text],
+      extend: [Box, Text],
       props: {
         color: 'cream 1',
         fontSize: 'Y',
@@ -212,7 +212,7 @@ export const AmenitiesResponsive = {
     background: 'green2',
     round: 'Z',
     bottom: '-D',
-    css: {
+    style: {
       left: '50%',
       transform: 'translate(-50%, 0%)'
     },

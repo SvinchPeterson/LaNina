@@ -10,7 +10,7 @@ export const NavigationArrows = {
     flexAlign: 'center space-between',
     gap: 'Z',
     position: 'relative',
-    css: {
+    style: {
       '&:before': {
         content: '""',
         position: 'absolute',
@@ -24,15 +24,15 @@ export const NavigationArrows = {
       }
     }
   },
-  childProto: {
-    proto: Box,
+  childExtend: {
+    extend: Box,
     tag: 'button',
     props: {
       width: '45px',
       height: '45px',
       // background: 'black .05',
       // boxSize: 'fit-content',
-      css: {
+      style: {
         borderRadius: '100%',
         cursor: 'pointer',
         outline: 'none',
@@ -50,7 +50,7 @@ export const NavigationArrows = {
       }
     },
     arrow: {
-      proto: [Img, Box],
+      extend: [Img, Box],
       props: 'match'
     }
   },
@@ -73,10 +73,10 @@ export const NavigationArrows = {
 }
 
 export const NavigationVerticalArrows = {
-  proto: NavigationArrows,
+  extend: NavigationArrows,
   props: {
     flexFlow: 'column',
-    css: {
+    style: {
       '&:before': {
         content: '""',
         position: 'absolute',

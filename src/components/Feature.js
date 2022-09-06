@@ -16,7 +16,7 @@ const props = {
     padding: 'C A2',
     width: 'F2'
   },
-  css: {
+  style: {
     boxShadow: '0px 0px 5px 0px rgba(0, 0, 0, .15)',
     zIndex: 10,
     backdropFilter: 'blur(5px)',
@@ -35,7 +35,7 @@ const props = {
     title: {
       fontWeight: '900',
       color: 'black .95',
-      css: {
+      style: {
         whiteSpace: 'nowrap',
         textTransform: 'uppercase',
         fontSize: `${12 / 16}em`,
@@ -46,7 +46,7 @@ const props = {
       padding: '0 0 0 U',
       color: 'black .85',
       fontSize: `${14 / 16}em`,
-      css: {
+      style: {
         letterSpacing: '.1px'
       }
     }

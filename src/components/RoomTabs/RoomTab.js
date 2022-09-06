@@ -3,7 +3,7 @@
 import { Box, Link, Img } from 'smbls'
 
 const icon = {
-  proto: Box,
+  extend: Box,
   props: {
     padding: 'B',
     position: 'absolute',
@@ -15,11 +15,11 @@ const icon = {
     '@mobileS': {
       padding: 'B'
     },
-    css: { zIndex: '20' }
+    style: { zIndex: '20' }
   },
 
   img: {
-    proto: [Img, Box],
+    extend: [Img, Box],
     props: {
       boxSize: 'A1 A1',
       '@tabletL': { boxSize: 'B1 B1' },
@@ -42,7 +42,7 @@ const tabParagraph = {
       fontSize: `${14.5 / 16}em`,
       top: '-D1'
     },
-    css: {
+    style: {
       zIndex: 10,
       opacity: 0,
       boxSizing: 'border-box',
@@ -72,7 +72,7 @@ export const props = {
     left: '0',
     round: 'V2'
   },
-  css: {
+  style: {
     overflow: 'hidden',
     flex: 1,
     cursor: 'pointer',
@@ -135,7 +135,7 @@ export const props = {
       bottom: 'B',
       fontSize: `${18 / 16}em`
     },
-    css: {
+    style: {
       textTransform: 'uppercase',
       textShadow: '.5px .5px 1px black',
       whiteSpace: 'nowrap'
@@ -153,7 +153,7 @@ export const props = {
 }
 
 export const RoomTab = {
-  proto: Link,
+  extend: Link,
   props,
 
   on: {
@@ -165,7 +165,7 @@ export const RoomTab = {
   title: { tag: 'caption' },
 
   content: {
-    paragraph: { proto: tabParagraph },
-    icon: { proto: icon }
+    paragraph: { extend: tabParagraph },
+    icon: { extend: icon }
   }
 }

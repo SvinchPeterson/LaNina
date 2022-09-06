@@ -3,7 +3,7 @@
 import { Box } from 'smbls'
 
 export const image = {
-  proto: Box,
+  extend: Box,
   tag: 'span',
 
   props: {

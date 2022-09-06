@@ -16,7 +16,7 @@ import LEAF_PNG from '../../assets/icons/leaf.png'
 import VINYL_PNG from '../../assets/icons/vinyl.png'
 
 export const tabBallerina = {
-  proto: RoomTab,
+  extend: RoomTab,
   style: {
     backgroundImage: 'url(' + BALLERINA_JPG + ')'
   },
@@ -43,7 +43,7 @@ export const tabBallerina = {
 }
 
 export const tabRedBrick = {
-  proto: RoomTab,
+  extend: RoomTab,
   props: {
     href: '#roomRedBrick',
     title: { text: 'red brick' }
@@ -66,7 +66,7 @@ export const tabRedBrick = {
 }
 
 export const tabYellowCouch = {
-  proto: RoomTab,
+  extend: RoomTab,
   props: {
     href: '#roomYellowCouch',
     title: { text: 'yellow couch' }
@@ -89,7 +89,7 @@ export const tabYellowCouch = {
 }
 
 export const tabGreenForest = {
-  proto: RoomTab,
+  extend: RoomTab,
   props: {
     href: '#roomGreenForest',
     title: { text: 'green forest' }
@@ -117,7 +117,7 @@ export const tabGreenForest = {
 }
 
 export const tabRetro = {
-  proto: RoomTab,
+  extend: RoomTab,
   props: {
     href: '#roomRetro',
     title: { text: 'retro' }
