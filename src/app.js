@@ -1,9 +1,5 @@
 'use strict'
 
-import 'domql/packages/emotion'
-import './config'
-import './components'
-
 import router from 'domql/packages/router'
 
 import { Landing, Sololaki } from './pages'
