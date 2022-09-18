@@ -2,12 +2,10 @@
 
 import { Title, Navbar } from '../../components'
 
-import {
-  animContainer, animContainer2, animContainer3, animTitle,
-  animContainer4, animContainer5, animAfter, animContent
-} from './animations'
+import { animContainer, animContainer2, animTitle, animAfter, animContent } from './animations'
 
 import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
+import { Flex } from 'smbls'
 
 const title = {
   extend: Title,
@@ -33,8 +31,10 @@ const navBar = {
   extend: Navbar,
   props: {
     padding: '0 C2 0 0',
-    '@tabletS': { padding: '0 0 0 B' },
-    '@mobileM': { flexFlow: 'column' },
+    '@mobileM': {
+      flexFlow: 'column',
+      padding: '0'
+    },
     style: {
       '> a:first-child': {
         opacity: '.75',
@@ -58,15 +58,15 @@ const navBar = {
   },
 
   childExtend: {
+    extend: Flex,
     props: {
       position: 'relative',
-      transition: 'background .3s ease-in-out',
       style: { zIndex: 10 },
       '@mobileM': {
         background: 'cream2 .15',
         minWidth: 'F2',
         padding: 'A 0',
-        flexAlign: 'centr center',
+        align: 'centr center',
         round: 'D'
       }
     }
@@ -92,33 +92,22 @@ const props = {
 
   container: {
     boxSize: '100% 100%',
-    flexAlign: 'center flex-end',
-    '@tabletS': { flexAlign: 'center center' },
+    justifyContent: 'flex-end',
+
+    '@tabletS': { justifyContent: 'center' },
     style: {
       zIndex: '100',
       backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
+      backgroundPosition: `top ${50 / 16}em left ${-450 / 16}em`,
       animationName: animContainer,
       animationDuration: '20s',
-      backgroundPosition: 'top 50px left -425px',
       animationTimingFunction: 'ease-in-out',
       overflow: 'hidden',
       '@media only screen and (max-width: 1366px)': {
-        backgroundPosition: 'top 50px left -350px',
+        backgroundPosition: `top ${50 / 16}em left ${-280 / 16}em`,
         animationName: animContainer2
-      },
-      '@media only screen and (max-width: 1024px)': {
-        backgroundPosition: 'top 50px left -330px',
-        animationName: animContainer3
-      },
-      '@media only screen and (max-width: 560px)': {
-        backgroundPosition: 'top 50px left -300px',
-        animationName: animContainer4
-      },
-      '@media only screen and (max-width: 480px)': {
-        backgroundPosition: 'top 50px left -230px',
-        animationName: animContainer5
       },
 
       '&:before': {
@@ -148,22 +137,21 @@ const props = {
     },
 
     content: {
-      flexFlow: 'column',
+      flow: 'column',
       gap: 'C',
-      flexAlign: 'flex-end center',
+      align: 'flex-end center',
       padding: '0 E2 F 0',
+      '@tabletS': { padding: '0 0 F 0' },
+      '@mobileM': {
+        align: 'center center',
+        padding: '0',
+        gap: 'C2'
+      },
+
       style: {
         animationName: animContent,
         animationDuration: '2s',
         animationTimingFunction: 'ease-in-out'
-      },
-      '@tabletS': {
-        flexAlign: 'flex-start center',
-        padding: '0 0 F1 0'
-      },
-      '@mobileL': {
-        padding: '0 0 E 0',
-        flexAlign: 'flex-start center'
       }
     }
   }
@@ -171,5 +159,13 @@ const props = {
 
 export default {
   props,
-  container: { content: { title, navBar } }
+  container: {
+    extend: Flex,
+    content: {
+      extend: Flex,
+
+      title,
+      navBar
+    }
+  }
 }

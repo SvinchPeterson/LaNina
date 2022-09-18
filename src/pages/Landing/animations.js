@@ -23,30 +23,14 @@ export const animContainer = keyframes`
 
 export const animContainer2 = keyframes`
   from {
-    background-position: center left -350px;
+    background-position: center left -280px;
   }
   to {
-    background-position: top 50px left -350px;
-  }
-`
-export const animContainer3 = keyframes`
-  from {
-    background-position: center left -330px;
-  }
-  to {
-    background-position: top 50px left -330px;
-  }
-`
-export const animContainer4 = keyframes`
-  from {
-    background-position: center left -300px;
-  }
-  to {
-    background-position: top 50px left -300px;
+    background-position: top 50px left -280px;
   }
 `
 
-export const animContainer5 = keyframes`
+export const animContainer3 = keyframes`
   from {
     background-position: center left -230px;
   }

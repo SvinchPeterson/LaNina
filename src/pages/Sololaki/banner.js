@@ -155,7 +155,7 @@ const image = {
       animationDuration: '3s',
       animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)',
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
-      backgroundAttachment: 'fixed',
+      backgroundAttachment: 'fixed !important',
       '&:before': {
         content: '""',
         width: '100%',

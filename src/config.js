@@ -2,69 +2,40 @@
 
 import { init } from 'smbls'
 
-// import DejavuBold from './assets/fonts/DejaVuSans-Bold.woff2'
-// import Geo from './assets/fonts/BPGExtraSquareMtavruli.woff2'
-// import HelveticaLight from './assets/fonts/HelveticaNeueLTGEOCaps-45Light.ttf'
-// import HelveticaNormal from './assets/fonts/HelveticaNeueLTGEOCaps-55Roman-4.ttf'
-// import HelveticaBold from './assets/fonts/HelveticaNeueLTGEOCaps-75Bold.ttf'
-// import HelveticaExtraLight from './assets/fonts/HelveticaNeueUltraLight.ttf'
+const S3_BUCKET = 'https://symbols-fonts.s3.us-west-1.amazonaws.com'
 
-import Dejavu from './assets/fonts/DejaVuSans.woff2'
-import Helvetica from './assets/fonts/otherFonts/Helvetica Neue UltraLight.ttf'
+const HelveticaUltraLight = './assets/fonts/HelveticaNeue-UltraLight.woff2'
+const HelveticaNormal = './assets/fonts/HelveticaNeue-Normal.woff2'
+const HelveticaMedium = './assets/fonts/HelveticaNeue-Medium.woff2'
+const HelveticaBold = './assets/fonts/HelveticaNeue-Bold.woff2'
 
 export const FONT = {
-  Helvetica: [
+  helvetica: [
     {
-      url: Helvetica
-    }
-  ],
-
-  Dejavu: [
+      url: S3_BUCKET + HelveticaUltraLight,
+      fontWeight: 100
+    },
     {
-      url: Dejavu
+      url: S3_BUCKET + HelveticaNormal,
+      fontWeight: 400
+    },
+    {
+      url: S3_BUCKET + HelveticaMedium,
+      fontWeight: 500
+    },
+    {
+      url: S3_BUCKET + HelveticaBold,
+      fontWeight: 700
     }
   ]
 }
 
-// export const FONT = {
-//   Dejavu: [{
-//     url: Dejavu,
-//     fontWeight: 400
-//   }
-//   // {
-//   //   url: DejavuBold,
-//   //   fontWeight: 700
-//   // }
-//   ]
-
-//   // Geo: [{
-//   //   url: Geo,
-//   //   fontWeight: 400
-//   // }],
-
-//   // Helvetica: [{
-//   //   url: HelveticaExtraLight
-//   // }]
-// }
-
 export const FONT_FAMILY = {
-  Helvetica: {
+  helveticaNeue: {
     isDefault: true,
     value: ['"Helvetica Neue"'],
     type: 'serif'
-  },
-  Dejavu: {
-    value: ['"Dejavu"'],
-    type: 'serif'
   }
-  // Geo: {
-  //   value: ['"Geo"'],
-  //   type: 'serif'
-  // },
-  // Helvetica: {
-  //   value: ['"Helvetica"'],
-  //   type: 'serif'
-  // }
 }
 
 export const COLORS = {
@@ -119,6 +90,13 @@ export default init({
   gradient: GRADIENTS,
   theme: THEMES,
   font: FONT,
+  typography: {
+    base: 26,
+    '@screenS': {
+      base: 16
+    }
+
+  },
   spacing: {
     range: [-6, 20]
   },
@@ -137,10 +115,12 @@ export default init({
       boxSizing: 'border-box',
       transform: 'none',
       background: 'black',
-      '@media only screen and (min-width: 1680px)': { fontSize: '18px' }
+      fontFamily: 'Helvetica Neue',
+      a: { color: 'white' }
     },
     body: {
-      width: '100%'
+      width: '100%',
+      fontFamily: 'Helvetica Neue'
     },
     h4: { margin: 0 },
     h1: { margin: 0 },
