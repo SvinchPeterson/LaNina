@@ -2,29 +2,32 @@
 
 import { init } from 'smbls'
 
-const S3_BUCKET = 'https://symbols-fonts.s3.us-west-1.amazonaws.com'
+import HelveticaUltraLight from './assets/fonts/HelveticaNeue-UltraLight.woff2'
+import HelveticaNormal from './assets/fonts/HelveticaNeue-Normal.woff2'
+import HelveticaMedium from './assets/fonts/HelveticaNeue-Medium.woff2'
+import HelveticaBold from './assets/fonts/HelveticaNeue-Bold.woff2'
 
-const HelveticaUltraLight = './assets/fonts/HelveticaNeue-UltraLight.woff2'
-const HelveticaNormal = './assets/fonts/HelveticaNeue-Normal.woff2'
-const HelveticaMedium = './assets/fonts/HelveticaNeue-Medium.woff2'
-const HelveticaBold = './assets/fonts/HelveticaNeue-Bold.woff2'
+// const HelveticaUltraLight = './assets/fonts/HelveticaNeue-UltraLight.woff2'
+// const HelveticaNormal = './assets/fonts/HelveticaNeue-Normal.woff2'
+// const HelveticaMedium = './assets/fonts/HelveticaNeue-Medium.woff2'
+// const HelveticaBold = './assets/fonts/HelveticaNeue-Bold.woff2'
 
 export const FONT = {
   helvetica: [
     {
-      url: S3_BUCKET + HelveticaUltraLight,
+      url: HelveticaUltraLight,
       fontWeight: 100
     },
     {
-      url: S3_BUCKET + HelveticaNormal,
+      url: HelveticaNormal,
       fontWeight: 400
     },
     {
-      url: S3_BUCKET + HelveticaMedium,
+      url: HelveticaMedium,
       fontWeight: 500
     },
     {
-      url: S3_BUCKET + HelveticaBold,
+      url: HelveticaBold,
       fontWeight: 700
     }
   ]
