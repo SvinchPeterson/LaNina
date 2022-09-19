@@ -1,12 +1,12 @@
 'use strict'
-import { Box, Link } from 'smbls'
+import { Box, Flex, Link } from 'smbls'
 
 const sectionLinks = {
   tag: 'nav',
-  extend: Box,
+  extend: Flex,
   props: {
-    flexFlow: 'column',
-    flexAlign: 'flex-start center',
+    flow: 'column',
+    align: 'flex-start center',
     gap: '0'
   },
   style: { width: 'fit-content' },
@@ -22,7 +22,7 @@ const sectionLinks = {
     style: {
       textTransform: 'uppercase',
       cursor: 'pointer',
-      // fontWeight: 900,
+      color: 'white !important',
       textDecoration: 'none'
     },
     on: {

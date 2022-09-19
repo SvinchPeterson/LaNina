@@ -9,17 +9,19 @@ const title = {
   extend: SectionTitle,
   props: {
     text: 'Services & Facilities',
-    padding: '0 0 Z E',
+    padding: '0 0 Z D',
     '@tabletL': {
-      width: `${680 / 19}em`,
-      padding: '0 0 Z 0'
+      width: `${690 / 23}em`,
+      padding: '0 0 A 0'
     },
     '@mobileL': {
-      padding: '0 0 A C2',
-      width: `${400 / 19}em`
+      padding: '0 0 A C',
+      width: `${400 / 23}em`
     },
     '@mobileS': {
-      width: `${360 / 19}em`
+      fontSize: 'B',
+      width: `${270 / 23}em`,
+      padding: '0 0 Y 0'
     },
 
     style: {
@@ -27,9 +29,6 @@ const title = {
       zIndex: '30',
       '@media only screen and (max-width: 1366px)': {
         alignSelf: 'center'
-      },
-      '@media only screen and (max-width: 1366px) and (max-height: 750px)': {
-        // fontSize: `${16 / 19}em`
       }
     }
   }
@@ -42,15 +41,16 @@ const scroll = {
     fontWeight: '900',
     fontSize: `${12 / 16}em`,
     top: '45%',
-    display: 'none',
     flexFlow: 'column',
     flexAlign: 'center center',
     style: {
       writingMode: 'vertical-rl',
       textOrientation: 'upright',
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
+      display: 'none',
+      '@media only screen and (max-height: 600px)': { display: 'block' }
     },
-    '@mobileL': { display: 'block' },
+    '@mobileL': { style: { display: 'block' } },
     '@mobileM': { left: `${30 / 12}em` },
     '@mobileXS': {
       left: `${13 / 12}em`
@@ -80,7 +80,6 @@ const props = {
   flexAlign: 'center center',
   flexFlow: 'column',
   position: 'relative',
-  gap: '0',
   '@tabletL': { flexAlign: 'center center' },
   style: {
     width: '100%',
@@ -125,9 +124,9 @@ const props = {
       },
 
       '@media only screen and (max-width: 1366px) and (max-height: 600px)': {
-        maxHeight: '250px',
+        maxHeight: `${250 / 16}em`,
         overflowY: 'auto',
-        padding: '20px 0'
+        padding: `${20 / 16}em 0`
       }
     },
 

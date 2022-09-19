@@ -4,9 +4,8 @@ export const SectionTitle = {
   tag: 'h3',
   props: {
     text: 'residence',
-    fontSize: 'B',
-    fontWeight: '900',
-    // '@mobileM': { fontSize: 'C' },
+    fontSize: 'C',
+    fontWeight: 400,
     style: {
       textTransform: 'capitalize'
     }

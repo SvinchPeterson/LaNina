@@ -78,7 +78,8 @@ const title = {
     height: `${135 / 16}em`,
     '@mobileL': {
       top: '40%',
-      right: '50%'
+      right: '50%',
+      transform: 'translate(50%, -50%)'
     },
     '@mobileM': { height: `${90 / 16}em` },
     '@mobileXS': { height: `${80 / 16}em` },
@@ -86,8 +87,6 @@ const title = {
     style: {
       whiteSpace: 'nowrap',
       minWidth: 'fit-content',
-      '@media only screen and (max-width: 768px)': { transform: 'translate(50%, -50%)' },
-
       '&:after': {
         content: '""',
         width: '0',
@@ -155,7 +154,7 @@ const image = {
       animationDuration: '3s',
       animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)',
       backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
-      backgroundAttachment: 'fixed !important',
+      backgroundAttachment: 'fixed',
       '&:before': {
         content: '""',
         width: '100%',

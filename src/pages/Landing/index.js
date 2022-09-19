@@ -93,7 +93,6 @@ const props = {
   container: {
     boxSize: '100% 100%',
     justifyContent: 'flex-end',
-
     '@tabletS': { justifyContent: 'center' },
     style: {
       zIndex: '100',

@@ -5,14 +5,21 @@ import { ResidenceText } from '../texts'
 import { SectionTitle } from '../components'
 import BB_JPG from '../assets/images/sololaki/b.jpg'
 
-const title = { extend: SectionTitle }
+const title = {
+  extend: SectionTitle,
+  props: {
+    fontSize: 'B',
+    fontWeight: 700,
+    style: { textTransform: 'uppercase' }
+  }
+}
 
 const paragraph = {
   props: {
     color: 'cream2',
     maxWidth: `${650 / 16}em`,
     flexFlow: 'column',
-    gap: 'A',
+    gap: 'C',
     flexAlign: 'center center',
     style: { zIndex: '2' },
 
@@ -39,7 +46,7 @@ const props = {
   flexAlign: 'center center',
   padding: '0 A2',
   margin: 'F2 0 D 0',
-  '@tabletS': { margin: '0 0 0 0' },
+  '@tabletL': { margin: '0 0 0 0' },
   '@mobileXS': { padding: '0 A' },
   style: {
     backgroundImage: 'url(' + BB_JPG + ')',

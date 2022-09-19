@@ -91,7 +91,7 @@ export default init({
   theme: THEMES,
   font: FONT,
   typography: {
-    base: 26,
+    base: 18,
     '@screenS': {
       base: 16
     }

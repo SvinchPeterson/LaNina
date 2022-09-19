@@ -30,15 +30,6 @@ export const animContainer2 = keyframes`
   }
 `
 
-export const animContainer3 = keyframes`
-  from {
-    background-position: center left -230px;
-  }
-  to {
-    background-position: top 50px left -230px;
-  }
-`
-
 export const animAfter = keyframes`
   from {
     opacity: 1;

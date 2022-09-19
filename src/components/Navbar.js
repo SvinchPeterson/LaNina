@@ -12,7 +12,7 @@ const link = {
       textDecoration: 'none',
       letterSpacing: '.3px',
       opacity: '.9',
-      color: 'rgba(248, 241, 227, 1) !important',
+      color: 'white !important',
       '&:hover': { opacity: 1 }
     }
   }
