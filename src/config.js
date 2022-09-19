@@ -151,12 +151,10 @@ export default init({
       boxSizing: 'border-box',
       transform: 'none',
       background: 'black',
-      // fontFamily: 'Helvetica Neue',
       a: { color: 'white' }
     },
     body: {
       width: '100%'
-      // fontFamily: 'Helvetica Neue'
     },
     h4: { margin: 0 },
     h1: { margin: 0 },
