@@ -18,7 +18,7 @@ import HelveticaMediumEot from './assets/fonts/HelveticaNeue-Medium.eot'
 import HelveticaBoldEot from './assets/fonts/HelveticaNeue-Bold.eot'
 
 export const FONT = {
-  helvetica: [
+  helveticaNeue: [
     {
       url: HelveticaUltraLightWoff2,
       fontWeight: 100
@@ -75,8 +75,8 @@ export const FONT = {
 export const FONT_FAMILY = {
   helveticaNeue: {
     isDefault: true,
-    value: ['"Helvetica Neue"'],
-    type: 'sans serif'
+    value: ['"HelveticaNeue"'],
+    type: 'serif'
   }
 }
 
@@ -132,13 +132,7 @@ export default init({
   gradient: GRADIENTS,
   theme: THEMES,
   font: FONT,
-  typography: {
-    base: 18,
-    '@screenS': {
-      base: 16
-    }
-
-  },
+  typography: {},
   spacing: {
     range: [-6, 20]
   },
@@ -157,12 +151,12 @@ export default init({
       boxSizing: 'border-box',
       transform: 'none',
       background: 'black',
-      fontFamily: 'Helvetica Neue',
+      // fontFamily: 'Helvetica Neue',
       a: { color: 'white' }
     },
     body: {
-      width: '100%',
-      fontFamily: 'Helvetica Neue'
+      width: '100%'
+      // fontFamily: 'Helvetica Neue'
     },
     h4: { margin: 0 },
     h1: { margin: 0 },
