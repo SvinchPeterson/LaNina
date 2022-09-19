@@ -1,12 +1,8 @@
 'use strict'
 
-import { Box, Img } from 'smbls'
-
 import { FeedBack, NavigationArrows } from '../../components'
 
 // import RIGHT_ARROW_PNG from '../../assets/icons/arrow-right.png'
-import LEFT_ARROW_PNG from '../../assets/icons/leftBlack.png'
-import RIGHT_ARROW_PNG from '../../assets/icons/rightBlack.png'
 
 const navArrows = {
   extend: NavigationArrows,
@@ -40,7 +36,6 @@ const navArrows = {
 }
 
 const heading = {
-  extend: Box,
   props: {
     flexAlign: 'center space-between',
     width: '83%',
@@ -52,7 +47,6 @@ const heading = {
     margin: '0 auto'
   },
   title: {
-    extend: Box,
     tag: 'caption',
     text: 'Feedbacks',
     props: {
