@@ -10,6 +10,9 @@ import RIGHT_ARROW_PNG from '../../assets/icons/rightBlack.png'
 
 const navArrows = {
   extend: NavigationArrows,
+  props: {
+    gap: 'C'
+  },
   ...[
     {
       on: {

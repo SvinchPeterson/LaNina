@@ -8,13 +8,12 @@ import UP_ARROW_PNG from '../assets/icons/up-arrowCream.png'
 export const NavigationArrows = {
   props: {
     flexAlign: 'center space-between',
-    gap: 'Z',
     position: 'relative',
     style: {
       '&:before': {
         content: '""',
         position: 'absolute',
-        width: '2px',
+        width: '3px',
         height: '60%',
         background: 'black',
         top: '50%',
@@ -25,13 +24,8 @@ export const NavigationArrows = {
     }
   },
   childExtend: {
-    extend: Box,
     tag: 'button',
     props: {
-      width: '45px',
-      height: '45px',
-      // background: 'black .05',
-      // boxSize: 'fit-content',
       style: {
         borderRadius: '100%',
         cursor: 'pointer',
@@ -40,12 +34,13 @@ export const NavigationArrows = {
         opacity: '.8',
         zIndex: '20',
         background: 'transparent',
-        // minWidth: '50px',
-        heigt: '45px',
-        '&:hover': { opacity: '1' }
+        '&:hover': { opacity: '1' },
+        '> img': {
+          width: `${20 / 16}em`,
+          height: `${30 / 16}em`
+        }
       },
       arrow: {
-        boxSize: 'A1 ',
         alignSelf: 'center'
       }
     },
@@ -76,12 +71,13 @@ export const NavigationVerticalArrows = {
   extend: NavigationArrows,
   props: {
     flexFlow: 'column',
+    gap: 'C',
     style: {
       '&:before': {
         content: '""',
         position: 'absolute',
         width: '50%',
-        height: '2px',
+        height: '3px',
         background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, .35))',
         top: '50%',
         left: '50%',
@@ -89,6 +85,9 @@ export const NavigationVerticalArrows = {
         borderRadius: '100%'
       }
     }
+  },
+  childExtend: {
+    props: { style: { '> img': { width: `${30 / 16}em`, height: `${20 / 16}em` } } }
   },
   ...[
     {

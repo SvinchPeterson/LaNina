@@ -73,7 +73,7 @@ const header = {
 const offers = {
   style: {
     position: 'relative',
-    transition: 'all .5s ease-in-out',
+    transition: 'height .5s ease-in-out',
     '&:before': {
       content: '""',
       width: '100%',
@@ -83,7 +83,7 @@ const offers = {
       top: '0px',
       left: 0,
       zIndex: 100,
-      transition: 'all 1s ease-in-out'
+      transition: 'boxShadow 1s ease-in-out'
     },
     '&:after': {
       content: '""',
@@ -91,10 +91,10 @@ const offers = {
       height: '0px',
       boxShadow: '0px 0px 40px 40px rgba(60,84, 72, 0)',
       position: 'absolute',
-      bottom: '-10px',
+      bottom: '-20px',
       left: 0,
       zIndex: 100,
-      transition: 'all 1s ease-in-out'
+      transition: 'boxShadow 1s ease-in-out'
 
     }
   },
@@ -207,7 +207,6 @@ export const AmenitiesResponsive = {
   props: {
     minWidth: 'G1',
     position: 'absolute',
-    top: 0,
     flexFlow: 'column',
     background: 'green2',
     round: 'Z',
@@ -217,7 +216,7 @@ export const AmenitiesResponsive = {
       transform: 'translate(-50%, 0%)'
     },
     '@mobileM': {
-      top: '-C2',
+      top: '-D',
       height: 'fit-content',
       round: 'A'
     },
@@ -230,7 +229,8 @@ export const AmenitiesResponsive = {
   style: {
     // borderBottomLeftRadius: 0,
     // borderBottomRightRadius: 0,
-    transition: 'all 1s ease-in-out',
+    // transition: 'all 1s ease-in-out',
+    transition: 'padding .5s ease-in-out, background .5s ease-in-out',
     zIndex: '70',
     overflow: 'hidden'
   },

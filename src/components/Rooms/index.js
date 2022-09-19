@@ -1,9 +1,7 @@
 'use strict'
 
-import { Box, Link, Img } from 'smbls'
+import { Flex } from 'smbls'
 import { keyframes } from '@emotion/css'
-
-import { back } from '../Gallery/gallery'
 
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro
@@ -24,10 +22,12 @@ export const opacities = keyframes`
 `
 
 const Room = {
+  extend: Flex,
   props: {
     boxSize: '100% 100%',
-    flexAlign: 'center spance-between',
+    align: 'center space-between',
     position: 'relative',
+    gap: 'B',
     style: {
       zIndex: 10,
       alignSelf: 'center'
@@ -55,21 +55,6 @@ const Room = {
         background: 'black',
         pointerEvents: 'none'
       }
-  },
-
-  back: {
-    extend: back,
-    props: {
-      top: 'E',
-      left: 'D',
-      display: 'none',
-      style: { zIndex: '1000' },
-      '@tabletL': { display: 'flex' },
-      '@mobileS': {
-        top: 'D'
-        // left: 'B'
-      }
-    }
   },
 
   article: {

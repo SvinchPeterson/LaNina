@@ -8,7 +8,7 @@ const title = {
   extend: SectionTitle,
   props: {
     text: 'apartments',
-    left: 'E',
+    left: 'D',
     position: 'absolute',
     top: '-B2',
     style: { alignSelf: 'flex-start' }
@@ -48,7 +48,6 @@ const props = {
   },
 
   content: {
-    style: { border: '5px solid red' }
 
   }
 }

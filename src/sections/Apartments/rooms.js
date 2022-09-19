@@ -8,11 +8,9 @@ const props = {
   maxWidth: `${1440 / 16}em`,
   margin: 'auto',
 
-  // background: 'cream2',
   style: {
     transformOrigin: 'left',
     zIndex: '20',
-    // border: '7px solid blue',
     transition: 'all 1s ease-in-out !important'
   },
 

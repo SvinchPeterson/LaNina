@@ -58,8 +58,16 @@ export const back = {
     color: 'cream2',
     flexAlign: 'center center',
     padding: 'Z',
+    '@tabletL': {
+      top: '0',
+      left: '0',
+      background: 'green2',
+      padding: 'Z A'
+    },
     style: {
+      color: 'rgba(248, 241, 227, 1) !important',
       textDecoration: 'none',
+      borderBottomRightRadius: '6px',
       '&:hover > span': { opacity: '1' },
       '&:hover > img': { opacity: '1' }
     }
@@ -89,9 +97,6 @@ export const back = {
     props: {
       text: 'APARTMENTS',
       fontSize: 'Y',
-      '@tabletL': {
-        fontSize: 'Z'
-      },
       style: {
         letterSpacing: '1px',
         opacity: '.7',
@@ -127,6 +132,7 @@ const book = {
       zIndex: '30',
       textDecoration: 'none',
       textTransform: 'uppercase',
+      color: ' rgba(248, 241, 227, 1) !important',
       '&:hover > span': { opacity: 1 },
       '@media only screen and (max-width: 1366px)': {
         writingMode: 'vertical-rl',
@@ -320,7 +326,7 @@ export const Gallery = {
   ba: {
     extend: back,
     props: {
-      '@tabletL': { display: 'none' }
+      // '@tabletL': { display: 'none' }
     }
 
   },
