@@ -72,11 +72,9 @@ const props = {
     fontSize: 'Z',
     fontWeight: '700',
     color: 'orange3 .95',
-    // padding: '0 0 Y2 0',
     textAlign: 'flex-start',
     style: {
       textTransform: 'uppercase'
-      // border: '1px solid red'
     }
   }
 }

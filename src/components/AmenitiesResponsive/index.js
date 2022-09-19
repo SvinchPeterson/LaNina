@@ -73,7 +73,7 @@ const header = {
 const offers = {
   style: {
     position: 'relative',
-    transition: 'height .5s ease-in-out',
+    transition: 'height 1s ease-in-out',
     '&:before': {
       content: '""',
       width: '100%',
@@ -133,7 +133,6 @@ const offers = {
     },
     style: {
       height: '0',
-
       letterSpacing: '1px',
       transition: 'min-height .6s ease-in-out, padding-bottom .6s ease-in-out',
       overflowY: 'auto',
@@ -229,8 +228,7 @@ export const AmenitiesResponsive = {
   style: {
     // borderBottomLeftRadius: 0,
     // borderBottomRightRadius: 0,
-    // transition: 'all 1s ease-in-out',
-    transition: 'padding .5s ease-in-out, background .5s ease-in-out',
+    transition: 'all .5s ease-in-out',
     zIndex: '70',
     overflow: 'hidden'
   },
@@ -238,10 +236,11 @@ export const AmenitiesResponsive = {
   class: {
     show: (element, state) => state.offers
       ? {
-        paddingBottom: `${40 / 16}em`,
-        marginBottom: `${20 / 16}em`,
+        padding: ` 0 0 ${40 / 16}em 0`,
+        margin: ` 0 0 ${20 / 16}em 0`,
         background: 'rgba(60,84, 72, 1)',
-        '@media only screen and (max-width: 480px)': { marginBottom: '0' }
+        transition: 'padding .5s ease-in-out, margin .5s ease-in-out background .5s ease-in-out'
+        // '@media only screen and (max-width: 480px)': { marginBottom: '0' }
       }
       : {}
   },
