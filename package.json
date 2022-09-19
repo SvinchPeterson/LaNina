@@ -15,11 +15,10 @@
     "reinstall": "rm -rf yarn.lock node_modules/@symbo.ls node_modules/domql node_modules/@domql node_modules/smbls dist .cache && yarn"
   },
   "dependencies": {
-    "@domql/utils": "^2.2.1",
-    "@symbo.ls/config": "^1.0.33",
-    "domql": "^1.5.0",
+    "@domql/utils": "latest",
+    "domql": "^1.5.7",
     "fastclick": "^1.0.6",
-    "smbls": "^0.12.0"
+    "smbls": "^0.15.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.5",
