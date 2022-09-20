@@ -4,8 +4,6 @@ import { HeaderMobile, Menu, Header, Footer } from '../../components'
 import { Residence, Entrence, Apartments, Wine, Location, placeFeature, feedBacks } from '../../sections'
 import { banner } from './banner'
 
-import { opacity } from '../../animations'
-
 const state = {
   activeMenu: false,
   activeMenuItem: 0,
@@ -28,10 +26,7 @@ const props = {
     overflowX: 'hidden',
     overflowY: 'auto',
     scrollBehavior: 'smooth',
-    margin: '0 auto',
-    animationName: opacity,
-    animationDuration: '2s',
-    animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
+    margin: '0 auto'
   }
 }
 

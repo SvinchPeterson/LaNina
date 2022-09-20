@@ -112,18 +112,17 @@ const title = {
     caption: {
       padding: '0 C 0 0',
       color: 'cream2',
-
-      '@mobileM': {
-        padding: '0 0 0 0',
-        margin: 'auto 0 0 0'
-      },
-      '@mobileXS': { fontSize: 'A' },
       style: {
         animationName: animCaption,
         animationDuration: '4s',
         animationTimingFunction: 'cubic-bezier(.17,.67,.83,.67)',
         marginTop: 'auto'
-      }
+      },
+      '@mobileM': {
+        padding: '0 0 0 0',
+        margin: 'auto 0 0 0'
+      },
+      '@mobileXS': { fontSize: 'A' }
     }
   }
 }
@@ -134,34 +133,23 @@ const image = {
     position: 'absolute',
     top: '0',
     left: '0',
+    backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
+    backgroundSize: 'cover',
+    backgroundPosition: 'bottom left',
+    ':before': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      display: 'block',
+      background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8))'
+    },
     style: {
-      backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'bottom left',
       animationName: animImage,
       animationDelay: '.1s',
       animationDuration: '3s',
       animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)',
-      backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
       backgroundAttachment: 'fixed',
-      '&:before': {
-        content: '""',
-        width: '100%',
-        height: '100%',
-        display: 'block',
-        background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8))',
-        animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
-      },
-      '&:after': {
-        content: '""',
-        width: `${100 / 16}em`,
-        height: '100%',
-        display: 'block',
-        position: 'absolute',
-        right: '0',
-        top: '0',
-        animationTimingFunction: 'cubic-bezier(.17,.61,.3,.71)'
-      },
       '@media only screen and (max-width: 1366px)': {
         backgroundAttachment: 'initial',
         animationName: animImage2,
@@ -177,19 +165,18 @@ const props = {
   minHeight: '100%',
   position: 'relative',
   background: 'radial-gradient(rgba(0 ,0 , 0, .8), rgba(0 , 0, 0, .95))',
+  ':before': {
+    content: '""',
+    width: '100%',
+    height: '100%',
+    background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45))',
+    position: 'absolute',
+    zIndex: '30',
+    bottom: '0',
+    pointerEvent: 'none'
+  },
   style: {
     overflow: 'hidden',
-    '&:before': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      background: 'radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .5))',
-      position: 'absolute',
-      zIndex: '30',
-      bottom: '0',
-      pointerEvent: 'none'
-
-    },
     '&:after': {
       content: '""',
       width: '100%',
@@ -201,7 +188,7 @@ const props = {
       animationDuration: '3s',
       animationTimingFunction: 'ease-in-out',
       zIndex: '30',
-      pointerEvent: 'none'
+      pointerEvens: 'none'
     }
   }
 }
