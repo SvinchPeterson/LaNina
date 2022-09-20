@@ -51,7 +51,7 @@ const props = {
 }
 
 const itemProps = {
-  fontSize: `${12 / 16}em`,
+  fontSize: `${122 / 16}em`,
   position: 'relative',
   flexAlign: 'center center',
   fontWeight: '500',

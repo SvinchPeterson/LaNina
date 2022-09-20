@@ -44,7 +44,7 @@ const socialLinks = {
 
   ...[
     {
-      props: { href: `https://www.facebook.com/laninaresidence` },
+      props: { href: `https://www.facebook.com/BBResidenceTbilisi` },
       icon: { props: { src: FACEBOOK_PNG } }
     },
 
