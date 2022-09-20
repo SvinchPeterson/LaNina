@@ -26,7 +26,7 @@ const paragraph = {
     p: {
       flexFlow: 'column',
       gap: 'A',
-      color: 'cream2 .8',
+      color: 'cream2',
       textAlign: 'center',
       '@mobileS': {
         fontSize: `${14.7 / 16}em`,
@@ -46,25 +46,25 @@ const props = {
   flexAlign: 'center center',
   padding: '0 A2',
   margin: 'F2 0 D 0',
-  '@tabletL': { margin: '0 0 0 0' },
-  '@mobileXS': { padding: '0 A' },
+  backgroundImage: 'url(' + BB_JPG + ')',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center center',
+  ':before': {
+    content: '""',
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    backdropFilter: 'blur(.5px)',
+    background: 'radial-gradient(rgba(0, 0, 0, .87), rgba(0, 0, 0, .65))'
+  },
   style: {
-    backgroundImage: 'url(' + BB_JPG + ')',
-    backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
-    backgroundPosition: 'center center',
-    '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' },
-    '&:before': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      backdropFilter: 'blur(.5px)',
-      background: 'radial-gradient(rgba(0, 0, 0, .87), rgba(0, 0, 0, .65))'
-    }
-  }
+    '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
+  },
+  '@tabletL': { margin: '0 0 0 0' },
+  '@mobileXS': { padding: '0 A' }
 }
 
 export const Residence = {

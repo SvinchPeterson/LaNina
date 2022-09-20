@@ -22,7 +22,6 @@ const sectionLinks = {
     style: {
       textTransform: 'uppercase',
       cursor: 'pointer',
-      color: 'white !important',
       textDecoration: 'none'
     },
     on: {
@@ -55,7 +54,7 @@ export const Menu = {
   style: {
     boxSizing: 'border-box',
     backdropFilter: 'blur(1px)',
-    transition: 'all .5s ease-in-out',
+    transition: 'opacity .5s ease-in-out',
     zIndex: '400'
   },
   class: {

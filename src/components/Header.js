@@ -7,6 +7,15 @@ import { Navbar } from './Navbar'
 import { MenuButton } from './MenuButton'
 import LOGO_PNG from '../assets/icons/logo-white.png'
 
+export const opacity = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
+
 const logo = {
   extend: Link,
   props: {
@@ -19,19 +28,10 @@ const logo = {
     props: {
       src: LOGO_PNG,
       boxSize: 'B -',
-      '@mobileL': { boxSize: 'B1 -' }
+      '@tabletS': { boxSize: 'B1 -' }
     }
   }
 }
-
-export const opacity = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`
 
 const navBar = {
   extend: Navbar,
@@ -54,7 +54,7 @@ export const Header = {
     top: '0',
     left: '0',
     flexAlign: 'center space-between',
-    padding: 'C E 0 E',
+    padding: 'B1 D 0 D',
     margin: '0 0 0 0',
     '@tabletS': { display: 'none' },
     '@mobileL': { display: 'none' },
@@ -81,7 +81,7 @@ export const HeaderMobile = {
     position: 'fixed',
     top: '0',
     flexAlign: 'center space-between',
-    padding: 'C D 0 D',
+    padding: 'B1 D 0 D',
     gap: 'E',
     display: 'none',
     width: '100%',
@@ -91,7 +91,7 @@ export const HeaderMobile = {
       '@media only screen and (max-height: 650px)': { paddingTop: `${20 / 16}em !important` }
     },
     '@tabletS': { display: 'flex' },
-    '@mobileM': { padding: 'B2 C 0 C' },
+    '@mobileM': { padding: 'B1 C 0 C' },
     '@mobileS': { padding: 'B A1 0 A1' }
   },
   logo,

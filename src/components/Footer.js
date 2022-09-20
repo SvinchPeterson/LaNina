@@ -35,7 +35,6 @@ const socialLinks = {
       props: {
         boxSize: 'B -',
         style: {
-          // opacity: '.9',
           '&:hover': { opacity: 1 }
         }
       }
@@ -64,7 +63,7 @@ export const Footer = {
     position: 'fixed',
     bottom: '0',
     flexAlign: 'center space-between',
-    padding: '0 E C E',
+    padding: '0 D B1 D',
     style: {
       mixBlendMode: 'difference',
       zIndex: '60',
@@ -76,7 +75,6 @@ export const Footer = {
       },
       '@media only screen and (max-height: 650px)': { paddingBottom: `${20 / 16}em !important` }
     },
-    '@tabletS': { padding: '0 C2 D C2' },
     '@mobileM': { padding: '0 C B1 C' },
     '@mobileS': { padding: '0 A1 A1 A1' }
   },
