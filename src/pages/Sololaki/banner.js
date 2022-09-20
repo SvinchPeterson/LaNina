@@ -86,18 +86,7 @@ const title = {
 
     style: {
       whiteSpace: 'nowrap',
-      minWidth: 'fit-content',
-      '&:after': {
-        content: '""',
-        width: '0',
-        height: '100%',
-        position: 'absolute',
-        right: `${10 / 16}em`,
-        top: `${-30 / 16}em`,
-        boxShadow: '0px 0px 150px 40px rgba(0, 0, 0, .75)',
-        transform: 'rotate(35deg)',
-        zIndex: '10'
-      }
+      minWidth: 'fit-content'
     },
 
     title: {
