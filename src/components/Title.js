@@ -18,7 +18,7 @@ export const TitleCaption = {
     caption: {
       text: 'sololaki',
       color: 'cream2 .9',
-      fontWeight: '900',
+      fontWeight: '700',
       fontSize: 'A',
       style: {
         textTransform: 'uppercase',

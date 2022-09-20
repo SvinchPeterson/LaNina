@@ -12,7 +12,6 @@ const link = {
       textDecoration: 'none',
       letterSpacing: '.3px',
       opacity: '.9',
-      color: 'white !important',
       '&:hover': { opacity: 1 }
     }
   }

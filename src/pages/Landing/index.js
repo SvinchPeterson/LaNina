@@ -40,9 +40,7 @@ const navBar = {
         opacity: '.75',
         '&:hover': { opacity: 1 }
       },
-      '> a:not(:first-child)': {
-        opacity: '.55'
-      },
+      '> a:not(:first-child)': { opacity: '.55' },
       '> a:not(:first-child):after': {
         content: '"soon"',
         position: 'absolute',
@@ -93,32 +91,28 @@ const props = {
   container: {
     boxSize: '100% 100%',
     justifyContent: 'flex-end',
+    backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
+    backgroundSize: 'cover',
+    backgroundPosition: `top ${50 / 16}em left ${-450 / 16}em`,
+    ':before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      background: 'radial-gradient(#212121, #1F1F1F, #1D1D1D, #1B1B1B, #181818, #151515, #111111, #101010)',
+      opacity: '.85'
+    },
+    '@tabletL': { backgroundPosition: `top ${50 / 16}em left ${-280 / 16}em` },
     '@tabletS': { justifyContent: 'center' },
     style: {
-      zIndex: '100',
-      backgroundImage: 'url(' + LOGO_BIG_PNG + ')',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: `top ${50 / 16}em left ${-450 / 16}em`,
       animationName: animContainer,
       animationDuration: '20s',
       animationTimingFunction: 'ease-in-out',
+      backgroundRepeat: 'no-repeat',
       overflow: 'hidden',
-      '@media only screen and (max-width: 1366px)': {
-        backgroundPosition: `top ${50 / 16}em left ${-280 / 16}em`,
-        animationName: animContainer2
-      },
-
-      '&:before': {
-        content: '""',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        background: 'radial-gradient(#212121, #1F1F1F, #1D1D1D, #1B1B1B, #181818, #151515, #111111, #101010)',
-        opacity: '.85'
-      },
+      '@media only screen and (max-width: 1366px)': { animationName: animContainer2 },
       '&:after': {
         content: '""',
         position: 'absolute',
@@ -146,7 +140,6 @@ const props = {
         padding: '0',
         gap: 'C2'
       },
-
       style: {
         animationName: animContent,
         animationDuration: '2s',
