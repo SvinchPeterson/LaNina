@@ -1,5 +1,5 @@
 'use strict'
-import { Grid, Img } from 'smbls'
+import { Grid, Img, Flex } from 'smbls'
 
 import { Feature, SectionTitle } from '../../components'
 import SHELF_JPG from '../../assets/images/sololaki/shelf.jpg'
@@ -11,38 +11,32 @@ const title = {
     text: 'Services & Facilities',
     padding: '0 0 Z D',
     '@tabletL': {
-      width: `${690 / 23}em`,
+      width: 'H',
       padding: '0 0 A 0'
     },
     '@mobileL': {
       padding: '0 0 A C',
-      width: `${400 / 23}em`
+      width: 'G'
     },
     '@mobileS': {
       fontSize: 'B',
-      width: `${270 / 23}em`,
+      width: 'F',
       padding: '0 0 Y 0'
-    },
-
-    style: {
-      alignSelf: 'flex-start',
-      zIndex: '30',
-      '@media only screen and (max-width: 1366px)': {
-        alignSelf: 'center'
-      }
     }
   }
 }
 
 const scroll = {
+  extend: Flex,
   props: {
     position: 'absolute',
-    left: `${60 / 12}em`,
-    fontWeight: '900',
-    fontSize: `${12 / 16}em`,
+    left: 'D1',
+    fontWeight: '700',
+    fontSize: 'Y',
     top: '45%',
-    flexFlow: 'column',
-    flexAlign: 'center center',
+    flow: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
     style: {
       writingMode: 'vertical-rl',
       textOrientation: 'upright',
@@ -51,11 +45,8 @@ const scroll = {
       '@media only screen and (max-height: 600px)': { display: 'block' }
     },
     '@mobileL': { style: { display: 'block' } },
-    '@mobileM': { left: `${30 / 12}em` },
-    '@mobileXS': {
-      left: `${13 / 12}em`
-    },
-
+    '@mobileM': { left: 'C' },
+    '@mobileXS': { left: 'A1' },
     caption: { text: 'scroll' }
   },
 
@@ -67,51 +58,28 @@ const scroll = {
       boxSize: 'A A',
       display: 'block',
       position: 'absolute',
-      bottom: '-30px',
+      bottom: '-B1',
       left: '50%',
-      style: {
-        transform: 'translate(-50%, -50%)'
-      }
+      transform: 'translate(-50%, -50%)'
     }
   }
 }
 
 const props = {
-  flexAlign: 'center center',
-  flexFlow: 'column',
+  justifyContent: 'center',
+  flow: 'column',
   position: 'relative',
-  '@tabletL': { flexAlign: 'center center' },
-  style: {
-    width: '100%',
-    minHeight: '100%',
-    '&:before': {
-      content: '""',
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      top: '0',
-      zIndex: '10',
-      '@media only screen and (max-width: 1366px)': { background: 'rgba(0, 0, 0, .05)' }
-    }
+  minHeight: '100%',
+  '@tabletL': {
+    flexAlign: 'center center',
+    background: 'black .05'
   },
 
   content: {
     width: '100%',
     position: 'relative',
-    '@mobileL': {
-      width: 'fit-content'
-    },
+    '@mobileL': { width: 'fit-content' },
     style: {
-      '&:before': {
-        content: '""',
-        position: 'absolute',
-        width: '100%',
-        top: `${-45 / 16}em`,
-        zIndex: '20',
-        '@media only screen and (max-width: 768px)': {
-          boxShadow: '-30px 0px 70px 40px rgba(248, 241, 227, .8)'
-        }
-      },
       '&:after': {
         content: '""',
         position: 'absolute',
@@ -136,6 +104,20 @@ const props = {
       padding: 'D2 0',
       width: '100%',
       position: 'relative',
+      backgroundImage: 'url(' + SHELF_JPG + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      justifyContent: 'center',
+      ':before': {
+        content: '""',
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        background: 'radial-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .6))',
+        '@tabletL': { display: 'none' }
+      },
       '@tabletL': {
         columns: `repeat(2, ${340 / 16}em)`,
         height: 'fit-content',
@@ -145,39 +127,15 @@ const props = {
         flexFlow: 'column',
         maxHeight: `${370 / 16}em`,
         flexAlign: 'center flex-start',
-        padding: 'Z2 0'
+        padding: 'Z2 0',
+        style: { overflowY: 'auto' }
       },
-
       style: {
-        boxSizing: 'border-box',
-        width: '100%',
         backgroundAttachment: 'fixed',
-        backgroundImage: 'url(' + SHELF_JPG + ')',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        justifyContent: 'center',
         '@media only screen and (max-width: 1366px)': {
           backgroundAttachment: 'initial',
-          backgroundImage: 'none',
-          alignContent: 'start'
-        },
-        '@media only screen and (max-width: 768px)': {
-          overflowY: 'auto',
-          justifyContent: 'flex-start'
-        },
-        '&:before': {
-          content: '""',
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          background: 'radial-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .6))',
-          '@media only screen and (max-width: 1366px)': {
-            display: 'none'
-          }
-
+          backgroundImage: 'none'
         }
       }
     }
@@ -186,6 +144,7 @@ const props = {
 
 export const placeFeature = {
   tag: 'section',
+  extend: Flex,
   props,
   attr: { id: 'features' },
 
@@ -256,6 +215,5 @@ export const placeFeature = {
         }
       ]
     }
-
   }
 }

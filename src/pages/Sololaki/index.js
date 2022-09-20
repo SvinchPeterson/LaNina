@@ -1,7 +1,7 @@
 'use strict'
 import { HeaderMobile, Menu, Header, Footer } from '../../components'
 
-import { Residence, Entrence, Apartments, Wine, Location, placeFeature, feedBacks } from '../../sections'
+import { Residence, placeFeature, Entrence, Apartments, Wine, feedBacks, Location } from '../../sections'
 import { banner } from './banner'
 
 const state = {
