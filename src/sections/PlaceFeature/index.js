@@ -118,6 +118,14 @@ const props = {
         background: 'radial-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .6))',
         '@tabletL': { display: 'none' }
       },
+      style: {
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
+        '@media only screen and (max-width: 1366px)': {
+          backgroundAttachment: 'initial',
+          backgroundImage: 'none'
+        }
+      },
       '@tabletL': {
         columns: `repeat(2, ${340 / 16}em)`,
         height: 'fit-content',
@@ -129,14 +137,6 @@ const props = {
         flexAlign: 'center flex-start',
         padding: 'Z2 0',
         style: { overflowY: 'auto' }
-      },
-      style: {
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat',
-        '@media only screen and (max-width: 1366px)': {
-          backgroundAttachment: 'initial',
-          backgroundImage: 'none'
-        }
       }
     }
   }

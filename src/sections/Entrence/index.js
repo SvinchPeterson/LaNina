@@ -4,39 +4,29 @@ import VERANDA_JPG from '../../assets/images/sololaki/veranda.jpg'
 
 const image = {
   props: {
-    minWidth: `${950 / 16}em`,
+    minWidth: `I1`,
+    minHeight: `H1`,
     position: 'relative',
-    minHeight: `${550 / 16}em`,
     padding: '0',
-    '@tabletL': { minWidth: '100%' },
+    background: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .8)), url(' + VERANDA_JPG + ')',
+    backgroundSize: 'contain',
+    backgroundPosition: `bottom ${200 / 16}em center`,
+    '@tabletL': {
+      minWidth: '100%',
+      backgroundSize: 'cover',
+      backgroundPosition: 'bottom 0px center'
+    },
     '@mobileL': {
-      minHeight: `${450 / 16}em`,
+      minHeight: 'H',
       minWidth: '100%'
     },
-    '@mobileS': { minWidth: '100%' },
     style: {
       flex: '1',
       backgroundAttachment: 'fixed',
-      backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .8)), url(' + VERANDA_JPG + ')',
-      backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       zIndex: 2,
-      backgroundPosition: 'bottom 200px center',
       overflow: 'hidden',
-      '@media only screen and (max-width: 1366px)': {
-        backgroundAttachment: 'initial',
-        backgroundPosition: 'bottom 0px center',
-        backgroundSize: 'cover',
-        backgroundImage: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .55)), url(' + VERANDA_JPG + ')'
-      },
-      '&:before': {
-        content: '""',
-        position: 'absolute',
-        left: '0',
-        width: '100%',
-        height: '100%',
-        zIndex: '30'
-      }
+      '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
     }
   }
 }
@@ -44,12 +34,11 @@ const image = {
 const missions = {
   props: {
     '@mobileS': { padding: '0 A' },
-
     title: {
       text: 'mission',
       padding: '0 0 A 0',
-      fontSize: `${14 / 16}em`,
-      fontWeight: '900',
+      fontSize: `Z`,
+      fontWeight: '700',
       style: {
         textTransform: 'uppercase',
         fontStyle: 'italic'
@@ -65,9 +54,7 @@ const missions = {
         maxWidth: 'G2',
         gap: 'Y'
       },
-      '@mobileS': {
-        fontSize: `${14.7 / 16}em`
-      }
+      '@mobileS': { fontSize: 'Z' }
     }
   },
 
@@ -81,7 +68,7 @@ const missions = {
       '"Providing remarkable lodging facilities and services to our guests.',
       {
         text: 'Emphasizing on customer service and creating an unforgettable in-home experience."',
-        props: { maxWidth: `${460 / 16}em` }
+        props: { maxWidth: 'H' }
       }
     ]
   }
@@ -92,13 +79,9 @@ const props = {
   flexFlow: 'column',
   position: 'relative',
   flexAlign: 'center flex-start',
-  margin: '0 auto',
   gap: 'C2',
-  style: {
-    marginTop: `${200 / 16}em`,
-    marginBottom: `${350 / 16}em`,
-    '@media only screen and (max-width: 1366px)': { marginTop: `${0 / 16}em`, marginBottom: `${250 / 16}em` }
-  }
+  margin: 'F1 0 G1 0',
+  '@tabletL': { margin: '0 0 F3 0' }
 }
 export const Entrence = {
   tag: 'section',
