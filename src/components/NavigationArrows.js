@@ -9,20 +9,21 @@ export const NavigationArrows = {
   props: {
     flexAlign: 'center space-between',
     position: 'relative',
-    style: {
-      '&:before': {
-        content: '""',
-        position: 'absolute',
-        width: '3px',
-        height: '60%',
-        background: 'black',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        borderRadius: '100%'
-      }
+    gap: 'C',
+    ':before': {
+      content: '""',
+      position: 'absolute',
+      opacity: '.8',
+      width: '3px',
+      height: '80%',
+      background: 'black',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      borderRadius: '100%'
     }
   },
+
   childExtend: {
     tag: 'button',
     props: {
@@ -34,14 +35,11 @@ export const NavigationArrows = {
         opacity: '.8',
         zIndex: '20',
         background: 'transparent',
-        '&:hover': { opacity: '1' },
-        '> img': {
-          width: `${20 / 16}em`,
-          height: `${30 / 16}em`
-        }
+        '&:hover': { opacity: '1' }
       },
       arrow: {
-        alignSelf: 'center'
+        alignSelf: 'center',
+        boxSize: 'B A'
       }
     },
     arrow: {

@@ -1,14 +1,9 @@
 'use strict'
-
+import { Flex } from 'smbls'
 import { FeedBack, NavigationArrows } from '../../components'
-
-// import RIGHT_ARROW_PNG from '../../assets/icons/arrow-right.png'
 
 const navArrows = {
   extend: NavigationArrows,
-  props: {
-    gap: 'C'
-  },
   ...[
     {
       on: {
@@ -39,13 +34,10 @@ const heading = {
   props: {
     flexAlign: 'center space-between',
     width: '83%',
+    margin: '0 auto',
     '@mobileL': { width: '85%' }
   },
-  style: {
-    zIndex: '20',
-    // boxSizing: 'border-box',
-    margin: '0 auto'
-  },
+  style: { zIndex: '20' },
   title: {
     tag: 'caption',
     text: 'Feedbacks',
@@ -65,35 +57,24 @@ const heading = {
 const props = {
   maxWidth: '1440px',
   minHeight: 'H',
+  margin: 'E2 auto 0 auto',
   '@tabletL': {
     margin: '0 auto',
     maxWidth: '75%',
-    padding: 'E 0',
+    padding: 'E 0 0 0',
     minHeight: 'H1'
   },
   '@mobileL': { maxWidth: '85%' },
   '@mobileS': { maxWidth: '90%' },
   '@mobileXS': { maxWidth: '98%' },
-  style: {
-    overflowX: 'hidden',
-    margin: '0 auto',
-    // boxSizing: 'border-box',
-    marginTop: `${150 / 16}em`,
-    marginBottom: `${150 / 16}em`
-
-  },
 
   content: {
     position: 'relative',
     width: '85%',
-    '@mobileM': {
-      width: '100%'
-    },
+    margin: 'B auto 0 auto',
+    '@mobileM': { width: '100%' },
     style: {
-      margin: '0 auto',
-      marginTop: `${25 / 16}em`,
-      '@media only screen and (max-width: 768px)': { marginTop: `${10 / 16}em` },
-      // '@media only screen and (max-width: 560px)': { marginTop: `${0 / 16}em` },
+      border: '1px solid red',
       '&:after': {
         content: '""',
         width: '0px',
@@ -123,7 +104,6 @@ const props = {
       }
     },
     feedbacks: {
-      flexAlign: 'flex-start flex-start',
       gap: 'B',
       style: {
         scrollBehavior: 'smooth',
@@ -143,6 +123,7 @@ export const feedBacks = {
   heading: { extend: heading },
   content: {
     feedbacks: {
+      extend: Flex,
       childExtend: {
         extend: FeedBack
       },

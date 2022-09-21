@@ -5,29 +5,22 @@ const props = {
   flexFlow: 'column',
   flexAlign: 'flex-start flex-start',
   background: 'black .05',
-  maxHeight: 'F3',
+  minHeight: 'F3',
   round: 'Y2',
-  minWidth: `${500 / 16}em`,
+  minWidth: 'H',
   gap: 'A1',
   position: 'relative',
-  '@tabletS': { minWidth: '100%' },
-  '@mobileL': {
-    padding: 'B1'
-    // maxHeight: 'G'
-  },
-  '@mobileS': {
-    padding: 'B',
-    gap: 'Z2'
-  },
   style: {
-    boxSizing: 'border-box',
-    background: 'linear-gradient(rgba(0, 0, 0, .03), rgba(0, 0, 0, .035))',
-    height: `${500 / 16}em`,
-    maxWidth: 'fit-content',
     '@media only screen and (max-height: 600px)': {
       maxHeight: `${250 / 16}em`,
       padding: `${15 / 16}em 0`
     }
+  },
+  '@tabletS': { minWidth: '100%' },
+  '@mobileL': { padding: 'B1' },
+  '@mobileS': {
+    padding: 'B',
+    gap: 'Z2'
   },
 
   name: {
@@ -45,10 +38,8 @@ const props = {
   p: {
     text: `This a must stay n worth every penny. The host was great, the place was great, great ambience, a quiet place but just few minutes walk to all the central points. The hospitality was great and the host was very helpful and accessible for all my needs. Special thanks to Gaia and Tato who actually received me like family and came in person while i was saying my bye too. I would really want to come back for a longer stay. Love the place and love u guys.`,
     color: 'black .7',
-    // fontWeight: '400',
     style: {
       fontSize: `${14.3 / 16}em`,
-      // letterSpacing: '.8px',
       '@media only screen and (max-width: 480px)': {
         fontSize: `${14 / 16}em`
       }
@@ -61,17 +52,14 @@ const props = {
     position: 'absolute',
     bottom: 'C',
     right: 'C1',
+    fontSize: 'Z',
     fontWeight: '500',
+    alignSelf: 'flex-end',
     '@mobileS': {
       bottom: 'B',
       right: 'B1'
     },
-    style: {
-      // fontWeight: '500',
-      alignSelf: 'flex-end',
-      fontSize: `${14 / 16}em`,
-      '@media only screen and (max-height: 600px)': { bottom: `${15 / 14}em` }
-    }
+    style: { '@media only screen and (max-height: 600px)': { bottom: `${15 / 14}em` } }
   }
 }
 
