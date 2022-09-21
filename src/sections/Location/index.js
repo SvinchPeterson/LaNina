@@ -1,5 +1,7 @@
 'use strict'
 
+import { Flex } from 'smbls'
+
 import { ContactItems, Map, SectionTitle } from '../../components'
 const title = {
   extend: SectionTitle,
@@ -24,19 +26,14 @@ const map = {
   extend: Map,
   props: {
     width: '100%',
+    margin: '0 auto',
+    minHeight: 'G3',
+    '@mobileM': { minHeight: 'G' },
+    '@mobileS': { minHeight: 'F3' },
     style: {
       flex: 1,
       border: 'none',
-      margin: '0 auto',
       boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .05)',
-      minHeight: `${400 / 16}em`,
-      backgroundAttachment: 'fixed',
-      '@media only screen and (max-width: 560px)': {
-        minHeight: `${300 / 16}em`
-      },
-      '@media only screen and (max-width: 480px)': {
-        minHeight: `${250 / 16}em`
-      },
       '@media only screen and (max-height: 700px)': { minHeight: `${300 / 16}em` },
       '@media only screen and (max-height: 600px)': { minHeight: `${300 / 16}em` },
       '@media only screen and (max-height: 550px)': { minHeight: `${250 / 16}em` }
@@ -48,9 +45,7 @@ const contacts = {
   childExtend: {
     extend: ContactItems,
     props: {
-      // '@mobileXS': { fontWeight: '400' },
       style: {
-
         '@media only screen and (max-width: 480px)': {
           display: 'block',
           width: '100%',
@@ -74,13 +69,9 @@ const contacts = {
 const props = {
   width: `${1440 / 16}em`,
   minHeight: '100%',
-  flexFlow: 'column',
-  flexAlign: 'center center',
-  style: {
-
-    alignSelf: 'center'
-  },
-
+  flow: 'column',
+  align: 'center center',
+  alignSelf: 'center',
   content: {
     flexFlow: 'column',
     gap: 'A',
@@ -92,9 +83,7 @@ const props = {
     '@mobileS': {
       padding: '0 G'
     },
-    style: {
-      '@media only screen and (max-height: 650px)': { gap: `${10 / 16}em` }
-    },
+    style: { '@media only screen and (max-height: 650px)': { gap: `${10 / 16}em` } },
 
     contacts: {
       flexAlign: 'center space-between',
@@ -112,12 +101,12 @@ const props = {
 
 export const Location = {
   tag: 'section',
+  extend: Flex,
   props,
   attr: { id: 'location' },
 
   title,
   content: {
-    // paragraph,
     map,
     contacts
   }

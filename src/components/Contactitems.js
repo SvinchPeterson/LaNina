@@ -12,16 +12,12 @@ const props = {
     padding: '0',
     round: '0',
     background: 'black 0',
-    gap: 'A'
+    gap: 'A',
+    border: 'none'
   },
   style: {
     border: '.5px solid rgba(0, 0, 0, .7)',
-    '@media only screen and (max-width: 480px)': {
-      border: 'none'
-    },
-    '@media only screen and (max-height: 650px)': {
-      gap: '10px !important'
-    },
+    '@media only screen and (max-height: 650px)': { gap: '10px !important' },
     '> div:first-child': {
       position: 'relative',
       marginRight: `${10 / 14}em`,
@@ -36,7 +32,7 @@ const props = {
         position: 'absolute',
         width: '1.5px',
         height: '85%',
-        borderRadius: '100%',
+        borderRadius: '20px',
         background: 'rgba(0, 0, 0, .75)',
         top: '50%',
         right: '0',
@@ -46,7 +42,6 @@ const props = {
         }
       }
     }
-
   }
 }
 
@@ -63,7 +58,6 @@ const itemProps = {
     padding: '0',
     fontSize: `${13 / 16}em`,
     round: 'C'
-    // background: 'rgba(0, 0, 0, .05)'
   },
   style: {
     '@media only screen and (max-width: 480px)': {

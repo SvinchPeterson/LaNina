@@ -74,7 +74,6 @@ const props = {
     margin: 'B auto 0 auto',
     '@mobileM': { width: '100%' },
     style: {
-      border: '1px solid red',
       '&:after': {
         content: '""',
         width: '0px',
