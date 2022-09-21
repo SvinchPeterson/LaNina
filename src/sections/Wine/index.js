@@ -16,34 +16,31 @@ const image = {
   extend: Box,
 
   props: {
-    boxSize: `H1 ${450 / 16}em`,
+    boxSize: `H1 H`,
     padding: '0',
-    '@tabletL': {
-      boxSize: '100% 100%'
-    },
+    backgroundSize: 'contain',
+    backgroundPosition: `center bottom ${100 / 16}em`,
     style: {
-      backgroundImage: 'linear-gradient(rgba(60,84, 72, .35), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
-      backgroundSize: 'contain',
-      backgroundPosition: 'center bottom 100px',
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
+      backgroundImage: 'radial-gradient(rgba(60,84, 72, .35), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')',
       zIndex: 2,
-      '@media only screen and (max-width: 1366px)': {
-        backgroundPosition: 'center center',
-        backgroundSize: 'cover',
-        backgroundAttachment: 'initial',
-        position: 'relative',
-        '&:before': {
-          content: '""',
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          top: '0',
-          left: '0',
-          background: 'rgba(0, 0, 0, .3)'
-        }
+      '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
+    },
+    '@tabletL': {
+      boxSize: '100% 100%',
+      backgroundPosition: 'center center',
+      backgroundSize: 'cover',
+      position: 'relative',
+      ':before': {
+        content: '""',
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        background: 'rgba(0, 0, 0, .3)'
       }
-
     }
   }
 }
@@ -58,7 +55,6 @@ const paragraph = {
     width: 'fit-content',
     margin: '-F2 -H 0 0',
     padding: 'E1 0 0 0',
-
     '@tabletL': {
       margin: '0 0 0 0',
       background: 'cream2 0'
@@ -68,18 +64,14 @@ const paragraph = {
       padding: '0 C'
     },
     '@mobileS': { padding: '0 A2' },
-    style: {
-      borderTop: 'none',
-      zIndex: '10',
-      backgroundAttachment: 'fixed'
-    }
+    style: { zIndex: '10' }
   },
 
   title,
   texts: {
-    extend: Box,
     props: {
-      maxWidth: `${550 / 14.3}em`,
+      fontSize: 'Z',
+      maxWidth: 'H3',
       margin: '0 auto',
       color: 'black .75',
       padding: 'A2 E E2 E',
@@ -89,9 +81,6 @@ const paragraph = {
       '@mobileM': {
         maxWidth: `100%`,
         padding: '0 A1'
-      },
-      style: {
-        fontSize: `${14.3 / 16}em`
       }
     },
 
