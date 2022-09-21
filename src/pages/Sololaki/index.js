@@ -18,7 +18,6 @@ const props = {
   position: 'relative',
   background: 'cream2',
   flexFlow: 'column',
-  gap: '0',
   width: '100%',
   height: '100%',
   style: {

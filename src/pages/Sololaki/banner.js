@@ -164,19 +164,20 @@ const props = {
   minWidth: '100%',
   minHeight: '100%',
   position: 'relative',
+  padding: '0 0 F2 0',
   background: 'radial-gradient(rgba(0 ,0 , 0, .8), rgba(0 , 0, 0, .95))',
-  ':before': {
-    content: '""',
-    width: '100%',
-    height: '100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45))',
-    position: 'absolute',
-    zIndex: '30',
-    bottom: '0',
-    pointerEvent: 'none'
-  },
   style: {
     overflow: 'hidden',
+    ':before': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45))',
+      position: 'absolute',
+      zIndex: '30',
+      bottom: '0',
+      pointerEvents: 'none'
+    },
     '&:after': {
       content: '""',
       width: '100%',
@@ -187,7 +188,7 @@ const props = {
       animationName: animAfter,
       animationDuration: '3s',
       animationTimingFunction: 'ease-in-out',
-      zIndex: '30',
+      // zIndex: '30',
       pointerEvens: 'none'
     }
   }
