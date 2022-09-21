@@ -70,18 +70,16 @@ export const NavigationVerticalArrows = {
   props: {
     flexFlow: 'column',
     gap: 'C',
-    style: {
-      '&:before': {
-        content: '""',
-        position: 'absolute',
-        width: '50%',
-        height: '3px',
-        background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, .35))',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        borderRadius: '100%'
-      }
+    ':before': {
+      content: '""',
+      position: 'absolute',
+      width: '50%',
+      height: '3px',
+      background: 'cream2',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      borderRadius: '100%'
     }
   },
   childExtend: {

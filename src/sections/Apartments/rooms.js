@@ -33,7 +33,6 @@ export const rooms = {
         display: 'none !important'
       }
   },
-  // description: { extend: RoomDescription },
   ...[
     roomBallerina,
     roomRedBrick,

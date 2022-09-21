@@ -25,21 +25,15 @@ const navArrow = {
     position: 'absolute',
     bottom: '-D2',
     gap: 'D',
-
-    style: {
-      alignSelf: 'flex-end',
-      margin: '0 auto',
-      display: 'none',
-      '@media only screen and (max-width: 1366px)': { display: 'flex' },
-      '@media only screen and (max-height: 600px)': { bottom: `${-85 / 16}em` },
-      '&:before': {
-        background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, .25))',
-        height: '100%'
-      }
-    }
-  },
-  childExtend: {
-    props: { arrow: { boxSize: 'C ' } }
+    alignSelf: 'flex-end',
+    margin: '0 auto',
+    display: 'none',
+    ':before': {
+      background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, .25))',
+      height: '80%'
+    },
+    '@tabletL': { display: 'flex' },
+    style: { '@media only screen and (max-height: 600px)': { bottom: `${-85 / 16}em` } }
   },
 
   ...[
@@ -96,8 +90,6 @@ const props = {
   style: {
     boxSizing: 'border-box',
     margin: '0 auto'
-    // border: '3px solid red'
-    // overflow: 'hidden'
   },
   '@tabletL': { width: '100%' },
 

@@ -11,7 +11,7 @@ const title = {
     left: 'D',
     position: 'absolute',
     top: '-B2',
-    style: { alignSelf: 'flex-start' }
+    alignSelf: 'flex-start'
   }
 }
 
@@ -19,18 +19,15 @@ const props = {
   height: '100%',
   width: '100%',
   minHeight: '101.5%',
-  // overflow: 'hidden',
   flexAlign: 'center center',
   position: 'relative',
-
+  backgroundSize: 'contain',
+  backgroundPosition: 'center',
+  background: 'url(' + ORNAMENT_PNG + ')',
   style: {
     scrollBehavior: 'smooth',
-    backgroundImage: 'url(' + ORNAMENT_PNG + ')',
-    backgroundSize: 'contain',
-    backgroundPosition: 'center',
     boxSizing: 'border-box',
     backgroundAttachment: 'fixed',
-    '@media only screen and (max-width: 1366px)': { backgroundImage: 'none' },
     '&:before': {
       content: '""',
       width: '100%',
@@ -44,24 +41,16 @@ const props = {
         backgroundAttachment: 'initial',
         background: 'rgba(60, 84, 72, 1)'
       }
-    }
+    },
+    '@media only screen and (max-width: 1366px)': { backgroundImage: 'none' }
   },
 
-  content: {
-
-  }
+  content: {}
 }
 
 export const Apartments = {
   tag: 'section',
   props,
-  class: {
-    show: (element, state) => state.activeTab
-      ? {
-        // justifyContent: 'flex-start'
-      }
-      : {}
-  },
 
   attr: { id: 'apartments' },
 

@@ -40,9 +40,7 @@ const description = {
       bottom: '0'
     },
     style: {
-      '@media only screen and (max-height: 800px)': {
-        top: '-60px'
-      }
+      '@media only screen and (max-height: 800px)': { top: '-60px' }
     }
   }
 }
@@ -166,7 +164,11 @@ const navArrows = {
   extend: NavigationArrows,
   props: {
     margin: '0 0 -D 0',
-    gap: 'B',
+    ':before': {
+      height: '70%',
+      background: 'cream'
+      // '@media only screen and (max-width: 768px)': { display: 'none' }
+    },
     '@tabletL': {
       display: 'none'
     },
@@ -177,12 +179,8 @@ const navArrows = {
     },
     style: {
       zIndex: '40',
-      alignSelf: 'flex-end',
-      '&:before': {
-        height: '70%',
-        background: 'radial-gradient(rgba(248, 241, 227, .8), rgba(248, 241, 227, .35))',
-        '@media only screen and (max-width: 768px)': { display: 'none' }
-      }
+      alignSelf: 'flex-end'
+
     }
   },
   childExtend: {
@@ -216,8 +214,7 @@ const navArrows = {
       props: {
 
         arrow: {
-          src: LEFT_ARROW_PNG,
-          '@mobileL': { boxSize: 'B2 ' }
+          src: LEFT_ARROW_PNG
         }
       },
       style: {
@@ -243,8 +240,7 @@ const navArrows = {
       },
       props: {
         arrow: {
-          src: RIGHT_ARROW_PNG,
-          '@mobileL': { boxSize: 'B2 ' }
+          src: RIGHT_ARROW_PNG
         }
       },
       style: {
@@ -316,19 +312,13 @@ export const Gallery = {
     '@mobileL': { width: '100%' },
     '@mobileS': { boxSize: 'G 100%' },
     style: {
-      alignSelf: 'center',
-      '@media only screen and (max-height: 800px)': {
-        // maxHeight: '250px'
-      }
+      alignSelf: 'center'
     }
   },
 
   ba: {
     extend: back,
-    props: {
-      // '@tabletL': { display: 'none' }
-    }
-
+    props: {}
   },
   book,
   navArrows,
