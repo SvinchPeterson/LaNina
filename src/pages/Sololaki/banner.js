@@ -85,7 +85,6 @@ const title = {
     '@mobileXS': { height: `${80 / 16}em` },
 
     style: {
-      whiteSpace: 'nowrap',
       minWidth: 'fit-content'
     },
 
@@ -93,6 +92,7 @@ const title = {
       fontWeight: '100',
       fontSize: `${90 / 16}em`,
       style: {
+        whiteSpace: 'nowrap',
         textShadow: '1px -1px 1px rgba(0, 0, 0, 1)',
         overflow: 'hidden',
         animationName: animTitle,
@@ -114,7 +114,7 @@ const title = {
       color: 'cream2',
       style: {
         animationName: animCaption,
-        animationDuration: '4s',
+        animationDuration: '2.3s',
         animationTimingFunction: 'cubic-bezier(.17,.67,.83,.67)',
         marginTop: 'auto'
       },

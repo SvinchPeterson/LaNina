@@ -90,14 +90,22 @@ export const COLORS = {
   green2: 'rgba(60,84, 72, 1)',
   black: 'rgba(0, 0, 0, 1)',
   gold: 'rgba(220, 187, 140, 1)',
-  white: 'rgba(245, 245, 245, 1)'
+  white: 'rgba(245, 245, 245, 1)',
+  blue: 'rgba(30, 52, 71, 1)',
+  blue2: '#3A5A75',
+  blue3: 'rgba(30, 40, 49, 1)',
+  backgroundBlue: 'rgba(208, 224, 228, 1)',
+  backgroundBlue2: 'rgba(233, 250, 255, 1)',
+  gray: '#454B4E',
+  grey: '#5A5D5E'
 }
 
 export const GRADIENTS = {
   gold: 'linear-gradient(rgba(147, 119, 79, 1), rgba(242, 205, 128, 1))',
   blackGradient: 'radial-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .8))',
   green: 'radial-gradient(rgba(42, 81, 61, .75),rgba(42, 81, 61, .85))',
-  radial: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))'
+  radial: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))',
+  blueGradient: 'radial-gradient(rgba(30, 40, 49, .8), rgba(30, 40, 49, .83), rgba(30, 40, 49, .85), rgba(30, 40, 49, .95), rgba(30, 40, 49, 8), rgba(30, 40, 49, 1))'
 }
 
 export const THEMES = {

@@ -3,9 +3,9 @@
 export const Title = {
   tag: 'h1',
   props: {
-    fontSize: 'I',
-    text: 'BB Hospitality',
-    color: 'gold',
+    fontSize: 'J',
+    text: 'Hospitality',
+    color: 'cream .65',
     fontWeight: '100',
     margin: '0'
   }
@@ -17,7 +17,7 @@ export const TitleCaption = {
     title: { text: 'BB Residence' },
     caption: {
       text: 'sololaki',
-      color: 'cream2 .9',
+      color: 'cream2 1',
       fontWeight: '700',
       fontSize: 'A',
       style: {

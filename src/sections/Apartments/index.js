@@ -43,9 +43,7 @@ const props = {
       }
     },
     '@media only screen and (max-width: 1366px)': { backgroundImage: 'none' }
-  },
-
-  content: {}
+  }
 }
 
 export const Apartments = {

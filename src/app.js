@@ -2,7 +2,7 @@
 
 import router from 'domql/packages/router'
 
-import { Landing, Sololaki } from './pages'
+import { Landing, Sololaki, Travel } from './pages'
 // import { Story } from './sections'
 
 const App = {
@@ -18,7 +18,8 @@ const App = {
   define: { routes: param => param },
   routes: {
     '/': Landing,
-    '/Sololaki': Sololaki
+    '/Sololaki': Sololaki,
+    '/Travel': Travel
   },
 
   on: {

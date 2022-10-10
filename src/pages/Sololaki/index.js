@@ -1,4 +1,5 @@
 'use strict'
+import { Flex } from 'smbls'
 import { HeaderMobile, Menu, Header, Footer } from '../../components'
 
 import { Residence, placeFeature, Entrence, Apartments, Wine, feedBacks, Location } from '../../sections'
@@ -14,10 +15,10 @@ const state = {
   tabs: 0
 }
 
-const props = {
+export const props = {
   position: 'relative',
   background: 'cream2',
-  flexFlow: 'column',
+  flow: 'column',
   width: '100%',
   height: '100%',
   style: {
@@ -25,11 +26,12 @@ const props = {
     overflowX: 'hidden',
     overflowY: 'auto',
     scrollBehavior: 'smooth',
-    margin: '0 auto'
+    '::-webkit-scrollbar': { display: 'none' }
   }
 }
 
 export default {
+  extend: Flex,
   state,
   props,
 

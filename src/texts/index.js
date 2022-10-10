@@ -46,17 +46,42 @@ export const ResidenceText = {
     {
       text: `Built in 19th century and listed as historical monument, the historical building is representing traditional Georgian housing structure called 'Italian Courtyard', making it an excellent model of past and present of the city. You will be charmed by a unique atmosphere, feeling yourself at the crossroads of cultures`
     }
-
   ]
+}
 
-  // props: {
-  //   text: `Situated in one of the most picturesque districts of Old Tbilisi, within walking distance from Liberty square and most famous sights, "BB Residence“ Sololaki offers a choice of fully furnished apartments, having everything for confortable living.
+export const countryText = {
+  extend: Text,
+  tag: 'p',
+  ...[
+    {
+      text: `Georgia, a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Seabeaches.
+      `
+    },
+    {
+      text: `Neighbor Countries -Turkey, Russia, Azerbaijan, Armenia. Georgia'sIs Famous for UNESCO World Heritage Listed Churches, Beautiful Nature and lots of Caves,most important -'World's oldest wine' found in 8,000-year-old (Qvevri ) Clay Pot in Georgia, The capital, Tbilisi, is known for the diverse architecture and mazelike, cobblestone streets of its old town.`
+    },
+    {
+      text: `Georgia's total territory covers 69,700 square kilometers. Population in Georgia is almost 4 million. Georgian currency is Georgian Lari ( ₾ ) (GEL).`
+    }
+  ]
+}
 
-  //   Right in the heart of the capital of Georgia, with plenty of food markets, restaurants, nightclubs and bars nearby, just in a few minutes from busy city life, you will find comfort and relaxation in a peaceful and calm area.
+export const aboutText = {
+  tag: 'p',
+  ...[
+    {
+      text: `BBTravel is a Georgian travel agency specialized in Georgia and the Caucasus region and offering Individual and group tours and other tour services in Georgia, Armenia and Azerbaijan.
+      `
+    },
 
-  //   Built in 19th century and listed as historical monument, the historical building is representing traditional Georgian housing structure called "Italian Courtyard”, making it an excellent model (example?) of past and present of the city. You will be charmed by a unique atmosphere, feeling yourself at the crossroads of cultures.
-  //   .`
-  // }
+    {
+      text: `Our trips are authentic and close to the people, in order that you get to know the countries not as a tourist, but as a guest.`
+    },
+
+    {
+      text: `We have mission to fell in love our guest to Georgia and Caucasus. Places, food, wine and people. we will give people all over the world unique, memorable and authentic travel experiences. `
+    }
+  ]
 }
 
 export const laninaSololaki = {
@@ -67,20 +92,14 @@ export const laninaSololaki = {
     “Italian yard” which in reality is “Tbilisian yard” - A socio-cultural space that characterizes the city of Tbilisi and gives you an insight of the unique architectural appearance of the city.
     Walking distance to liberty square, Mtatsminda park and other points of interest`
   }
-  // text: `- A socio-cultural space that characterizes the city of Tbilisi and gives you an insight of the unique architectural appearance of the city.
-  // Walking distance to liberty square, Mtatsminda park and other points of interest.`
 }
 
 export const wineText = {
   extend: Text,
   props: {
     text: `Georgians are very proud of their rich and historic winemaking culture, and as traditional methods enjoy a renaissance,
-    the Qvevri (an earthenware vessel used to store and age wine for thousands of years). Georgia is generally considered the ‘cradle of wine’,
-    as archaeologists have traced the world’s first known wine creation back to the people of the South Caucasus in 6,000BC.`
-    // text: ` These early Georgians discovered grape juice could be turned into wine by burying it underground for the winter.
-    // Some of the qvevri’s were buried in could remain underground for up to 50 years. Wine continued to be important to the Georgians,
-    // who incorporated it into art and sculpture,
-    // with grape designs and evidence of wine-drinking paraphernalia found at ruins and burial sites..`
+    the Qvevri (an earthenware vessel used to store and age wine for thousands of years). Georgia is generally considered the 'cradle of wine',
+    as archaeologists have traced the world's first known wine creation back to the people of the South Caucasus in 6,000BC.`
   }
 }
 const roomParagraph = {
@@ -102,7 +121,6 @@ const roomParagraph = {
     extend: [Text, Box],
     props: {
       color: 'cream2 1'
-      // fontWeight: '400'
     }
   }
 }

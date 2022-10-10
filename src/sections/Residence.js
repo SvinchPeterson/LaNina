@@ -1,41 +1,21 @@
 'use strict'
 
+import { Flex } from 'smbls'
+
 import { ResidenceText } from '../texts'
 
-import { SectionTitle } from '../components'
+import { Paragraph } from '../components'
 import BB_JPG from '../assets/images/sololaki/b.jpg'
 
-const title = {
-  extend: SectionTitle,
-  props: {
-    fontSize: 'B',
-    fontWeight: 700,
-    style: { textTransform: 'uppercase' }
-  }
-}
-
-const paragraph = {
+export const paragraph = {
+  extend: Paragraph,
   props: {
     color: 'cream2',
-    maxWidth: `${650 / 16}em`,
-    flexFlow: 'column',
-    gap: 'C',
-    flexAlign: 'center center',
-    style: { zIndex: '2' },
-
-    p: {
-      flexFlow: 'column',
-      gap: 'A',
-      color: 'cream2',
-      textAlign: 'center',
-      '@mobileS': {
-        fontSize: `${14.7 / 16}em`,
-        textAlign: 'left'
-      }
-    }
+    title: { text: 'residence' },
+    p: {}
   },
 
-  title,
+  title: {},
   p: { extend: ResidenceText }
 }
 
@@ -43,7 +23,7 @@ const props = {
   minHeight: '100%',
   gap: 'B',
   position: 'relative',
-  flexAlign: 'center center',
+  align: 'center center',
   padding: '0 A2',
   margin: 'F2 0 D 0',
   backgroundImage: 'url(' + BB_JPG + ')',
@@ -70,6 +50,7 @@ const props = {
 export const Residence = {
   tag: 'section',
   attr: { id: 'residence' },
+  extend: Flex,
   props,
 
   paragraph

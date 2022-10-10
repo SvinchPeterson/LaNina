@@ -14,10 +14,10 @@ export const animTitle = keyframes`
 
 export const animContainer = keyframes`
   from {
-    background-position: center left -450px;
+    background-position: top 50 left 100px;
   }
   to {
-    background-position: top 52px left -450px;
+    background-position: top center;
   }
 `
 

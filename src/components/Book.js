@@ -14,14 +14,14 @@ export const Book = {
       zIndex: 100,
       color: 'white !important',
       '&:hover > span': { opacity: '1' }
-    }
-  },
+    },
 
-  span: {
-    props: {
+    span: {
       text: 'BOOK',
       fontSize: 'Z',
       style: { opacity: '.9' }
     }
-  }
+  },
+
+  span: {}
 }
