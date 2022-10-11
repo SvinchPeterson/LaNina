@@ -3,11 +3,11 @@ import { RoomTab } from './RoomTab'
 
 import { ballerinaParagraph, redBrickParagrap, yellowCouchParagraph, greenForestParagraph, retroParagraph } from '../../texts'
 
-import BALLERINA_JPG from '../../assets/images/ballerina/ballerinaTab.jpg'
-import REDBRICK_JPG from '../../assets/images/redBrick/redbrickTab.jpg'
-import YELLOWCOUCH_JPG from '../../assets/images/yellowCouch/yellowcouchTab.jpg'
-import GREENFOREST_JPG from '../../assets/images/greenForest/greenforestTab.jpg'
-import RETRO_JPG from '../../assets/images/retro/retroTab.jpg'
+import BALLERINA_JPG from '../../assets/images/residence/rooms/ballerina/ballerinaTab.jpg'
+import REDBRICK_JPG from '../../assets/images/residence/rooms/redBrick/redbrickTab.jpg'
+import YELLOWCOUCH_JPG from '../../assets/images/residence/rooms/yellowCouch/yellowcouchTab.jpg'
+import GREENFOREST_JPG from '../../assets/images/residence/rooms/greenForest/greenforestTab.jpg'
+import RETRO_JPG from '../../assets/images/residence/rooms/retro/retroTab.jpg'
 
 import DRESS_PNG from '../../assets/icons/dress.png'
 import BRICKS_PNG from '../../assets/icons/bricks.png'

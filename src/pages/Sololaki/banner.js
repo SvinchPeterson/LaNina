@@ -2,7 +2,7 @@
 import { keyframes } from '@emotion/css'
 
 import { TitleCaption } from '../../components'
-import SOLOLAKI_JPG from '../../assets/images/sololaki/entrence2.jpg'
+import SOLOLAKI_JPG from '../../assets/images/residence/sololaki/entrence2.jpg'
 
 export const animTitle = keyframes`
   from {

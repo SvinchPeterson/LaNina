@@ -2,7 +2,7 @@
 import { Grid, Img, Flex } from 'smbls'
 
 import { Feature, SectionTitle } from '../../components'
-import SHELF_JPG from '../../assets/images/sololaki/shelf.jpg'
+import SHELF_JPG from '../../assets/images/residence/sololaki/shelf.jpg'
 import SCROLL_PNG from '../../assets/icons/scroll.png'
 
 const title = {

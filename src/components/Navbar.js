@@ -1,40 +1,31 @@
 'use strict'
-import { Link } from 'smbls'
+import { Link, Flex } from 'smbls'
 
 const link = {
   extend: Link,
   props: {
-    color: 'white',
-    // fontWeight: '100',
+    color: 'cream',
     fontSize: 'Z',
+    opacity: '.8',
+    // fontWeight: '500',
+    ':hover': { opacity: 1 },
     style: {
       textTransform: 'uppercase',
-      textDecoration: 'none',
-      opacity: '.9',
-      '&:hover': { opacity: 1 }
+      textDecoration: 'none'
     }
   }
 }
 
 const props = {
-  flexAlign: 'flex-start center',
-  gap: '0',
+  align: 'flex-start center',
   childProps: {
-    // background: 'radial-gradient(rgba(248, 241, 227, .15), rgba(248, 241, 227, .15))',
-    // background: 'cream2 .15',
-    // background: 'green2 .5',
-    // padding: 'A B2',
-    // round: 'C2',
-    fontWeight: '500',
-    // fontSize: '13px',
-    style: { letterSpacing: '5px', textAlign: 'right' }
-    // backdropFilter: 'blur(10px)',
-    // border: '1px solid #3A5A75'
+    style: { letterSpacing: '5px' }
   }
 }
 
 export const Navbar = {
   tag: 'nav',
+  extend: Flex,
   props,
   childExtend: link
 }

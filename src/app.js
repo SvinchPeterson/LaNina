@@ -8,7 +8,7 @@ import { Landing, Sololaki, Travel } from './pages'
 const App = {
   key: 'app',
   props: {
-    background: 'radial'
+    // background: 'white .5'
   },
 
   state: {

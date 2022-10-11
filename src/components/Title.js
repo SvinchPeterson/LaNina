@@ -5,7 +5,7 @@ export const Title = {
   props: {
     fontSize: 'J',
     text: 'Hospitality',
-    color: 'cream .65',
+    color: 'cream 1',
     fontWeight: '100',
     margin: '0'
   }

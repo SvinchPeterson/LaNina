@@ -1,6 +1,6 @@
 'use strict'
 import { SectionTitle } from '../../components'
-import VERANDA_JPG from '../../assets/images/sololaki/veranda.jpg'
+import VERANDA_JPG from '../../assets/images/residence/sololaki/veranda.jpg'
 
 const image = {
   props: {

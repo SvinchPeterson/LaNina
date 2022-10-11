@@ -2,7 +2,7 @@
 import { tabs } from './tabs'
 import { rooms } from './rooms'
 import { SectionTitle } from '../../components'
-import ORNAMENT_PNG from '../../assets/images/sololaki/ornaments.png'
+import ORNAMENT_PNG from '../../assets/images/residence/sololaki/ornaments.png'
 
 const title = {
   extend: SectionTitle,

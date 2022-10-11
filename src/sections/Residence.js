@@ -5,7 +5,7 @@ import { Flex } from 'smbls'
 import { ResidenceText } from '../texts'
 
 import { Paragraph } from '../components'
-import BB_JPG from '../assets/images/sololaki/b.jpg'
+import BB_JPG from '../assets/images/residence/sololaki/b.jpg'
 
 export const paragraph = {
   extend: Paragraph,

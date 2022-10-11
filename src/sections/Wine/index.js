@@ -1,7 +1,7 @@
 'use strict'
 import { Box } from 'smbls'
 import { SectionTitle } from '../../components'
-import WINE_JPG from '../../assets/images/sololaki/wine.jpg'
+import WINE_JPG from '../../assets/images/residence/sololaki/wine.jpg'
 
 const title = {
   extend: SectionTitle,
@@ -14,7 +14,6 @@ const title = {
 
 const image = {
   extend: Box,
-
   props: {
     boxSize: `H1 H`,
     padding: '0',
