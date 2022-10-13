@@ -2,7 +2,7 @@
 
 import { Img, Link } from 'smbls'
 import { keyframes } from '@emotion/css'
-
+import { BBHeading } from './BBHeading'
 import { Navbar } from './Navbar'
 import { MenuButton } from './MenuButton'
 import LOGO_PNG from '../assets/icons/logo-white.png'
@@ -32,10 +32,11 @@ const logo = {
     }
   }
 }
-
 const navBar = {
   extend: Navbar,
-  props: { gap: 'C1' },
+  props: {
+    gap: 'B2'
+  },
 
   ...[
     { props: { text: 'residence', href: '#residence' } },
@@ -70,7 +71,6 @@ export const Header = {
       }
     }
   },
-
   logo,
   navBar
 }
@@ -81,7 +81,7 @@ export const HeaderMobile = {
     position: 'fixed',
     top: '0',
     flexAlign: 'center space-between',
-    padding: 'B1 D 0 D',
+    padding: 'D2 D2 0 D2',
     gap: 'E',
     display: 'none',
     width: '100%',

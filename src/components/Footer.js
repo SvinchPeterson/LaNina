@@ -63,7 +63,7 @@ export const Footer = {
     position: 'fixed',
     bottom: '0',
     flexAlign: 'center space-between',
-    padding: '0 D B1 D',
+    padding: '0 D2 C D2',
     style: {
       mixBlendMode: 'difference',
       zIndex: '60',

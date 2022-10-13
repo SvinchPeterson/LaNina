@@ -10,6 +10,17 @@ export const position = keyframes`
   }
 `
 
+export const opacityLetterSpacing = keyframes`
+  from {
+    opacity: 0;
+    letter-spacing: 1px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0px;
+  }
+`
+
 export const opacity = keyframes`
   from {
     opacity: 0;

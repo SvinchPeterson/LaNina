@@ -2,7 +2,7 @@
 import { keyframes } from '@emotion/css'
 
 import { TitleCaption } from '../../components'
-import SOLOLAKI_JPG from '../../assets/images/residence/sololaki/entrence2.jpg'
+import SOLOLAKI_JPG from '../../assets/images/residence/sololaki/residencee.jpg'
 
 export const animTitle = keyframes`
   from {
@@ -89,8 +89,8 @@ const title = {
     },
 
     title: {
-      fontWeight: '100',
-      fontSize: `${90 / 16}em`,
+      fontWeight: '400',
+      fontSize: 'H',
       style: {
         whiteSpace: 'nowrap',
         textShadow: '1px -1px 1px rgba(0, 0, 0, 1)',
@@ -141,7 +141,7 @@ const image = {
       width: '100%',
       height: '100%',
       display: 'block',
-      background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8))'
+      background: 'radial-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .7))'
     },
     style: {
       backgroundRepeat: 'no-repeat',
@@ -199,6 +199,6 @@ export const banner = {
   props,
   attr: { id: 'banner' },
 
-  image,
-  title
+  image
+  // title
 }
