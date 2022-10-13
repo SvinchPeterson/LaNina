@@ -1,8 +1,8 @@
 'use strict'
 import { Flex } from 'smbls'
-import { HeaderMobile, Menu, Header, Footer } from '../../components'
+import { Menu, Header, Footer } from '../../components'
 
-import { Residence, placeFeature, Entrence, Apartments, Wine, feedBacks, Location } from '../../sections'
+import { Residence, ServiceFacility, Entrence, Apartments, Wine, feedBacks, Location } from '../../sections'
 import { banner } from './banner'
 
 const state = {
@@ -37,15 +37,13 @@ export default {
 
   banner,
   Header,
-  HeaderMobile,
   Menu,
   Residence,
-  placeFeature,
+  ServiceFacility,
   Entrence,
   Apartments,
   Wine,
   feedBacks,
-
   Location,
   Footer
 }

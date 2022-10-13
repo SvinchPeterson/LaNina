@@ -13,7 +13,7 @@ export const position = keyframes`
 export const opacityLetterSpacing = keyframes`
   from {
     opacity: 0;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
   }
   to {
     opacity: 1;

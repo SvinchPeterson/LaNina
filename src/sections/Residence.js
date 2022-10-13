@@ -7,25 +7,13 @@ import { ResidenceText } from '../texts'
 import { Paragraph } from '../components'
 import BB_JPG from '../assets/images/residence/sololaki/b.jpg'
 
-export const paragraph = {
-  extend: Paragraph,
-  props: {
-    color: 'cream2',
-    title: { text: 'residence' },
-    p: {}
-  },
-
-  title: {},
-  p: { extend: ResidenceText }
-}
-
 const props = {
   minHeight: '100%',
   gap: 'B',
   position: 'relative',
   align: 'center center',
-  padding: '0 A2',
-  margin: 'F2 0 D 0',
+  padding: 'D A2',
+  margin: 'V - D -',
   backgroundImage: 'url(' + BB_JPG + ')',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
@@ -41,10 +29,15 @@ const props = {
   },
   style: {
     backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
     '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
   },
-  '@tabletL': { margin: '0 0 0 0' },
-  '@mobileXS': { padding: '0 A' }
+  '@tabletL': { margin: '0' },
+
+  paragraph: {
+    color: 'cream2',
+    title: { text: 'residence' }
+  }
 }
 
 export const Residence = {
@@ -53,5 +46,9 @@ export const Residence = {
   extend: Flex,
   props,
 
-  paragraph
+  paragraph: {
+    extend: Paragraph,
+    title: {},
+    p: { extend: ResidenceText }
+  }
 }

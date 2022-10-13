@@ -11,6 +11,7 @@ export const MenuButton = {
       '> svg': { display: 'none' }
     }
   },
+
   on: {
     click: (event, element, state) => {
       state.activeMenu
@@ -33,7 +34,6 @@ export const MenuButton = {
         left: '50%',
         style: {
           height: '2px',
-          // transition: 'all .3s ease-in-out',
           transform: 'translate(-50%, -50%)'
         }
       }

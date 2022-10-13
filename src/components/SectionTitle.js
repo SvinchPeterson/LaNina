@@ -4,10 +4,13 @@ export const SectionTitle = {
   tag: 'h3',
   props: {
     text: 'residence',
-    fontSize: 'C',
-    fontWeight: 400,
+    align: 'center center',
+    width: 'fit-content',
+    fontSize: 'A',
+    fontWeight: '400',
     style: {
-      textTransform: 'capitalize'
+      textTransform: 'capitalize',
+      letterSpacing: '2px'
     }
   }
 }

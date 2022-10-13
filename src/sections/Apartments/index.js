@@ -55,5 +55,4 @@ export const Apartments = {
   title,
   tabs,
   rooms
-
 }

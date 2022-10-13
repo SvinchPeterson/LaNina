@@ -2,15 +2,12 @@
 
 import { Flex, Img, Box } from 'smbls'
 
-import { deopacity, opacityLetterSpacing, position, opacity } from './animations'
-
-import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
+import { deopacity, opacityLetterSpacing, position, opacity } from '../../animations'
 
 import { Title, BBHeading, Navbar } from '../../components'
 
-// import navBar from './navBar'
-
 import ORNAMENTS_PNG from '../../assets/images/landing/ornamentsGray.png'
+import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 
 const props = {
   boxSize: '100% 100%',
@@ -69,7 +66,7 @@ const props = {
       transform: 'rotate(-20deg) skew(30deg)',
       backdropFilter: 'blur(1px)',
       animationName: opacity,
-      animationDuration: '5s',
+      animationDuration: '4s',
       animationTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
     }
   },
@@ -78,7 +75,7 @@ const props = {
     position: 'absolute',
     zIndex: '10',
     flow: 'column',
-    margin: '- - D1 H2',
+    margin: '- - D1 H1',
     gap: '0',
     backdropFilter: 'blur(4px)',
     transform: 'rotate(25deg) skew(30deg)',
@@ -118,7 +115,7 @@ const props = {
       fontSize: 'I',
       style: {
         animationName: opacityLetterSpacing,
-        animationDuration: '6s',
+        animationDuration: '4s',
         animationTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
       },
       '@tabletL': { display: 'none' },
@@ -171,21 +168,6 @@ const props = {
   }
 }
 
-const navBar = {
-  extend: Navbar,
-  ...[
-    { props: { text: 'residence', href: '/Sololaki' } },
-    { props: { text: 'travel', href: '/Travel' } },
-    {
-      props: {
-        text: 'rental',
-        pointerEvents: 'none',
-        opacity: '.2'
-      }
-    }
-  ]
-}
-
 export default {
   extend: Flex,
   props,
@@ -198,6 +180,19 @@ export default {
 
     heading: { extend: BBHeading },
     title: { extend: Title },
-    navBar
+    navBar: {
+      extend: Navbar,
+      ...[
+        { props: { text: 'residence', href: '/Sololaki' } },
+        { props: { text: 'travel', href: '/Travel' } },
+        {
+          props: {
+            text: 'rental',
+            pointerEvents: 'none',
+            opacity: '.2'
+          }
+        }
+      ]
+    }
   }
 }
