@@ -49,7 +49,7 @@ const itemProps = {
   fontSize: `${12 / 16}em`,
   position: 'relative',
   flexAlign: 'center center',
-  fontWeight: '500',
+  fontWeight: '700',
   color: 'black',
   letterSpacing: '.8px',
   '@mobileS': {

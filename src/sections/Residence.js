@@ -36,6 +36,10 @@ const props = {
 
   paragraph: {
     color: 'cream2',
+    padding: '- D',
+    '@mobileM': { padding: '- A1' },
+    '@mobileS': { padding: '- Z' },
+    style: { '@media only screen and (max-height: 630px)': { fontSize: `${14 / 16}em` } },
     title: { text: 'residence' }
   }
 }

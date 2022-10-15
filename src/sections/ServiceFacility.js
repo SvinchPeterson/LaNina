@@ -11,25 +11,35 @@ const props = {
 
   title: {
     text: 'Services & Facilities',
-    padding: '- - Z D',
-    '@tabletL': {
-      alignSelf: 'center',
-      padding: '- - A 0'
-    }
+    padding: '- - A2 D2'
   },
 
   content: {
     columns: 'repeat(4, 270px)',
     justifyContent: 'center',
-    gap: 'Y2',
-    padding: 'D 0',
+    gap: 'Y1',
+    padding: 'E -',
     position: 'relative',
     backgroundImage: 'url(' + SHELF_JPG + ')',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     style: {
       backgroundAttachment: 'fixed',
-      '> div': { zIndex: '3' }
+      '> div': { zIndex: '3' },
+      '@media only screen and (max-width: 1366px) and (max-height: 1000px)': { padding: '60px 0 60px 0' },
+      '@media only screen and (max-width: 1024px) and (max-height: 1150px)': {
+        maxHeight: `${500 / 16}em`,
+        overflowY: 'auto'
+      },
+      '@media only screen and (max-width: 768px)': {
+        maxHeight: `${480 / 16}em`
+      },
+      '@media only screen and (max-width: 1024px) and (max-height: 800px)': {
+        maxHeight: `${370 / 16}em`
+      },
+      '@media only screen and (max-width: 768px) and (max-height: 800px)': {
+        maxHeight: `${300 / 16}em`
+      }
     },
     ':before': {
       content: '""',
@@ -48,14 +58,17 @@ const props = {
     '@tabletS': { columns: 'repeat(2, 270px)' },
     '@mobileL': {
       columns: 'repeat(1, 270px)',
-      maxHeight: `${450 / 16}em`,
       overflow: 'auto',
       borderTop: '1px solid silver',
       borderBottom: '1px solid silver'
     },
 
     childProps: {
-      style: { '@media only screen and (max-height: 800px)': { padding: `${25 / 16}em 0 ${25 / 16}em ${25 / 16}em` } }
+      style: {
+        boxShadow: '0px 0px 3.5px 0px rgba(0, 0, 0, .15)',
+        '@media only screen and (max-height: 800px)': {
+          padding: `${25 / 16}em 0 ${25 / 16}em ${25 / 16}em` }
+      }
     }
   }
 }
@@ -66,6 +79,7 @@ export const ServiceFacility = {
   attr: { id: 'features' },
 
   title: { extend: SectionTitle },
+
   content: {
     extend: Grid,
     childExtend: {

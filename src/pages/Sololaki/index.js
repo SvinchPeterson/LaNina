@@ -2,7 +2,7 @@
 import { Flex } from 'smbls'
 import { Menu, Header, Footer } from '../../components'
 
-import { Residence, ServiceFacility, Entrence, Apartments, Wine, feedBacks, Location } from '../../sections'
+import { Residence, ServiceFacility, Mission, Apartments, Wine, feedBacks, Location } from '../../sections'
 import { banner } from './banner'
 
 const state = {
@@ -40,7 +40,7 @@ export default {
   Menu,
   Residence,
   ServiceFacility,
-  Entrence,
+  Mission,
   Apartments,
   Wine,
   feedBacks,

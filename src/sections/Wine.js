@@ -1,20 +1,18 @@
 'use strict'
-import { Box } from 'smbls'
-import { SectionTitle } from '../../components'
-import WINE_JPG from '../../assets/images/residence/sololaki/wine.jpg'
+import WINE_JPG from '../assets/images/residence/sololaki/wine.jpg'
 
-const title = {
-  extend: SectionTitle,
-  props: {
-    text: 'Wine',
-    '@tabletL': { color: 'cream2' },
-    '@mobileM': { padding: '0 0 A 0' }
-  }
-}
+const props = {
+  position: 'relative',
+  flexAlign: 'center center',
+  minHeight: '100%',
+  margin: 'F 0 0 0',
+  '@tabletL': {
+    flexFlow: 'column',
+    flexAlign: 'flex-end center',
+    margin: '0 0 0 0'
+  },
 
-const image = {
-  extend: Box,
-  props: {
+  image: {
     boxSize: `H1 H`,
     padding: '0',
     backgroundSize: 'contain',
@@ -41,12 +39,9 @@ const image = {
         background: 'rgba(0, 0, 0, .3)'
       }
     }
-  }
-}
+  },
 
-const paragraph = {
-  extend: Box,
-  props: {
+  paragraph: {
     position: 'absolute',
     background: 'cream2',
     flexAlign: 'center center',
@@ -63,13 +58,18 @@ const paragraph = {
       padding: '0 C'
     },
     '@mobileS': { padding: '0 A2' },
-    style: { zIndex: '10' }
-  },
+    style: { zIndex: '10' },
 
-  title,
-  texts: {
-    props: {
-      fontSize: 'Z',
+    title: {
+      text: 'Wine',
+      fontSize: 'B',
+      fontWeight: '500',
+      '@tabletL': { color: 'cream2' },
+      '@mobileM': { padding: '0 0 A 0' }
+    },
+
+    p: {
+      fontSize: 'A',
       maxWidth: 'H3',
       margin: '0 auto',
       color: 'black .75',
@@ -81,39 +81,29 @@ const paragraph = {
         maxWidth: `100%`,
         padding: '0 A1'
       }
-    },
-
-    ...[
-      {
-        text: `Georgians are very proud of their rich and historic winemaking culture, and as traditional methods enjoy a renaissance,
-      the Qvevri (an earthenware vessel used to store and age wine for thousands of years).`
-      },
-      {
-        text: `Georgia is generally considered the 'cradle of wine',
-        as archaeologists have traced the world's first known wine creation back to the people of the South Caucasus in 6,000BC.`
-      }
-    ]
-  }
-}
-
-const props = {
-  position: 'relative',
-  flexAlign: 'center center',
-  minHeight: '100%',
-  margin: 'F 0 0 0',
-  '@tabletL': {
-    flexFlow: 'column',
-    flexAlign: 'flex-end center',
-    margin: '0 0 0 0'
+    }
   }
 }
 
 export const Wine = {
   tag: 'section',
-  extend: Box,
   props,
   attr: { id: 'wine' },
 
-  image,
-  paragraph
+  image: {},
+  paragraph: {
+    title: { tag: 'h5' },
+    p: {
+      ...[
+        {
+          text: `Georgians are very proud of their rich and historic winemaking culture, and as traditional methods enjoy a renaissance,
+        the Qvevri (an earthenware vessel used to store and age wine for thousands of years).`
+        },
+        {
+          text: `Georgia is generally considered the 'cradle of wine',
+          as archaeologists have traced the world's first known wine creation back to the people of the South Caucasus in 6,000BC.`
+        }
+      ]
+    }
+  }
 }

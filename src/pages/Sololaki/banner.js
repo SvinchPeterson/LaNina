@@ -14,6 +14,7 @@ const props = {
   align: 'center center',
   style: {
     overflow: 'hidden',
+    '@media only screen and (max-height: 500px)': { padding: '0' },
     ':before': {
       content: '""',
       width: '100%',
@@ -64,11 +65,13 @@ const props = {
     flow: 'column',
     color: 'cream2',
     alignItems: 'flex-end',
+
     h3: {
       text: 'BB Residence',
       fontSize: 'G',
       '@mobileS': { fontSize: 'F' }
     },
+
     caption: {
       width: 'fit-content',
       text: 'sololaki',
@@ -100,6 +103,7 @@ export const banner = {
   attr: { id: 'banner' },
 
   image: {},
+
   title: {
     extend: Flex,
     h3: {},

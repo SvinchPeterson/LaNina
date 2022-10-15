@@ -1,22 +1,24 @@
 'use strict'
 
 const props = {
-  maxWidth: 'G',
-  padding: 'C - C A2',
+  maxWidth: 'G1',
+  padding: 'C - C B',
   background: 'cream2',
   round: 'Y',
+
   title: {
     text: 'city center',
-    fontSize: 'Z',
-    textTransform: 'uppercase'
+    fontSize: '12px',
+    textTransform: 'uppercase',
+    style: { letterSpacing: '.5px' }
   },
+
   p: {
     text: '7 min from Liberty square',
-    padding: 'X - - -',
+    padding: 'V2 - - -',
     fontSize: 'Z',
     color: 'black .8'
   }
-
 }
 
 export const Feature = {

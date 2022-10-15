@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { ContactItems, Map, SectionTitle } from '../../components'
+import { ContactItems, Map, SectionTitle } from '../components'
 const title = {
   extend: SectionTitle,
   props: {

@@ -1,9 +1,17 @@
 'use strict'
-import { SectionTitle } from '../../components'
-import VERANDA_JPG from '../../assets/images/residence/sololaki/veranda.jpg'
 
-const image = {
-  props: {
+import VERANDA_JPG from '../assets/images/residence/sololaki/veranda.jpg'
+
+const props = {
+  width: '100%',
+  flexFlow: 'column',
+  position: 'relative',
+  flexAlign: 'center flex-start',
+  gap: 'C2',
+  margin: 'F1 0 G1 0',
+  '@tabletL': { margin: '0 0 F3 0' },
+
+  image: {
     minWidth: `I1`,
     minHeight: `H1`,
     position: 'relative',
@@ -28,11 +36,9 @@ const image = {
       overflow: 'hidden',
       '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
     }
-  }
-}
+  },
 
-const missions = {
-  props: {
+  paragraph: {
     '@mobileS': { padding: '0 A' },
     title: {
       text: 'mission',
@@ -56,37 +62,26 @@ const missions = {
       },
       '@mobileS': { fontSize: 'Z' }
     }
-  },
-
-  title: {
-    extend: SectionTitle,
-    props: 'match'
-  },
-  p: {
-    tag: 'p',
-    ...[
-      '"Providing remarkable lodging facilities and services to our guests.',
-      {
-        text: 'Emphasizing on customer service and creating an unforgettable in-home experience."',
-        props: { maxWidth: 'H' }
-      }
-    ]
   }
 }
 
-const props = {
-  width: '100%',
-  flexFlow: 'column',
-  position: 'relative',
-  flexAlign: 'center flex-start',
-  gap: 'C2',
-  margin: 'F1 0 G1 0',
-  '@tabletL': { margin: '0 0 F3 0' }
-}
-export const Entrence = {
+export const Mission = {
   tag: 'section',
   props,
 
-  image,
-  missions
+  image: {},
+
+  paragraph: {
+    title: { tag: 'h5' },
+    p: {
+      tag: 'p',
+      ...[
+        '"Providing remarkable lodging facilities and services to our guests.',
+        {
+          text: 'Emphasizing on customer service and creating an unforgettable in-home experience."',
+          props: { maxWidth: 'H' }
+        }
+      ]
+    }
+  }
 }

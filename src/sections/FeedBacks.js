@@ -1,6 +1,6 @@
 'use strict'
 import { Flex } from 'smbls'
-import { FeedBack, NavigationArrows } from '../../components'
+import { FeedBack, NavigationArrows } from '../components'
 
 const navArrows = {
   extend: NavigationArrows,
