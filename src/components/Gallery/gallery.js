@@ -5,8 +5,8 @@ import { NavigationArrows, NavigationVerticalArrows } from '../NavigationArrows'
 import { AmenitiesResponsive } from '../AmenitiesResponsive'
 import { ApartmentDescription } from '../ApartmentDescription'
 
-import LEFT_ARROW_PNG from '../../assets/icons/left-arrows2.png'
-import RIGHT_ARROW_PNG from '../../assets/icons/right-arrows.png'
+import LEFT_ARROW_PNG from '../../assets/icons/leftArrow-black.png'
+import RIGHT_ARROW_PNG from '../../assets/icons/rightArrow-black.png'
 import BACK_PNG from '../../assets/icons/arrowBack.png'
 
 export const opacities = keyframes`

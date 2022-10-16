@@ -2,8 +2,8 @@
 
 import { Flex } from 'smbls'
 
-import LEFT_ARROW_PNG from '../../../assets/icons/left-arrowSilver.png'
-import RIGHT_ARROW_PNG from '../../../assets/icons/right-arrowSilver.png'
+import LEFT_ARROW_PNG from '../../../assets/icons/leftArrow-cream.png'
+import RIGHT_ARROW_PNG from '../../../assets/icons/rightArrow-cream.png'
 import { TourTab, NavigationArrows } from '../../../components'
 
 import NATURE_JPG from '../../../assets/images/travel/nature.jpg'

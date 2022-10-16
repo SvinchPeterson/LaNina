@@ -11,7 +11,7 @@ const props = {
 
   title: {
     text: 'Services & Facilities',
-    padding: '- - A2 D2'
+    padding: '- - Z2 D2'
   },
 
   content: {
@@ -29,7 +29,10 @@ const props = {
       '@media only screen and (max-width: 1366px) and (max-height: 1000px)': { padding: '60px 0 60px 0' },
       '@media only screen and (max-width: 1024px) and (max-height: 1150px)': {
         maxHeight: `${500 / 16}em`,
-        overflowY: 'auto'
+        overflowY: 'auto',
+        borderTop: '1px solid silver',
+        borderBottom: '1px solid silver'
+
       },
       '@media only screen and (max-width: 768px)': {
         maxHeight: `${480 / 16}em`

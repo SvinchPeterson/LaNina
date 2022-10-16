@@ -1,8 +1,6 @@
 'use strict'
 import { RoomTab } from './RoomTab'
 
-import { ballerinaParagraph, redBrickParagrap, yellowCouchParagraph, greenForestParagraph, retroParagraph } from '../../texts'
-
 import BALLERINA_JPG from '../../assets/images/residence/rooms/ballerina/ballerinaTab.jpg'
 import REDBRICK_JPG from '../../assets/images/residence/rooms/redBrick/redbrickTab.jpg'
 import YELLOWCOUCH_JPG from '../../assets/images/residence/rooms/yellowCouch/yellowcouchTab.jpg'

@@ -13,10 +13,10 @@ const props = {
 
   image: {
     minWidth: `I1`,
-    minHeight: `H1`,
+    minHeight: `H`,
     position: 'relative',
     padding: '0',
-    background: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .8)), url(' + VERANDA_JPG + ')',
+    background: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .6)), url(' + VERANDA_JPG + ')',
     backgroundSize: 'contain',
     backgroundPosition: `bottom ${200 / 16}em center`,
     '@tabletL': {
@@ -24,10 +24,7 @@ const props = {
       backgroundSize: 'cover',
       backgroundPosition: 'bottom 0px center'
     },
-    '@mobileL': {
-      minHeight: 'H',
-      minWidth: '100%'
-    },
+    '@mobileL': { minWidth: '100%' },
     style: {
       flex: '1',
       backgroundAttachment: 'fixed',

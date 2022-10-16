@@ -1,96 +1,96 @@
 'use strict'
-import { Box, Img } from 'smbls'
-import LEFT_ARROW_PNG from '../assets/icons/leftBlack.png'
-import RIGHT_ARROW_PNG from '../assets/icons/rightBlack.png'
-import DOWN_ARROW_PNG from '../assets/icons/down-arrowCream.png'
-import UP_ARROW_PNG from '../assets/icons/up-arrowCream.png'
+import { Box, Img, Flex } from 'smbls'
+import LEFT_ARROW_BLACK_PNG from '../assets/icons/leftArrow-black.png'
+import RIGHT_ARROW_BLACK_PNG from '../assets/icons/rightArrow-black.png'
+import DOWN_ARROW_BLACK_PNG from '../assets/icons/downArrow-black.png'
+import UP_ARROW_BLACK_PNG from '../assets/icons/upArrow-black.png'
 
-export const NavigationArrows = {
-  props: {
-    flexAlign: 'center space-between',
-    position: 'relative',
-    gap: 'C',
-    ':before': {
-      content: '""',
-      position: 'absolute',
-      opacity: '.8',
-      width: '3px',
-      height: '80%',
-      background: 'black',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      borderRadius: '100%'
-    }
+import LEFT_ARROW_CREAM_PNG from '../assets/icons/leftArrow-cream.png'
+import RIGHT_ARROW_CREAM_PNG from '../assets/icons/rightArrow-cream.png'
+import DOWN_ARROW_CREAM_PNG from '../assets/icons/downArrow-cream.png'
+import UP_ARROW_CREAM_PNG from '../assets/icons/upArrow-cream.png'
+
+const props = {
+  align: 'center space-between',
+  gap: 'C',
+  position: 'relative',
+  maxWidth: 'fit-content',
+  ':after': {
+    content: '""',
+    boxSize: '70% 2px',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    round: '100%'
   },
 
-  childExtend: {
-    tag: 'button',
-    props: {
-      style: {
-        borderRadius: '100%',
-        cursor: 'pointer',
-        outline: 'none',
-        border: 'none',
-        opacity: '.8',
-        zIndex: '20',
-        background: 'transparent',
-        '&:hover': { opacity: '1' }
-      },
-      arrow: {
-        alignSelf: 'center',
-        boxSize: 'B A'
-      }
-    },
+  childProps: {
+    background: 'transparent',
+    border: 'none',
+    style: { cursor: 'pointer' },
     arrow: {
-      extend: [Img, Box],
-      props: 'match'
+      alignSelf: 'center',
+      boxSize: ' Z2'
     }
-  },
+  }
+}
+
+const navigationHorizontalArrows = {
+  extend: Flex,
+  props,
+  childExtend: { tag: 'button', arrow: { extend: [Img, Box] } }
+}
+
+const navigationVerticalArrows = {
+  extend: navigationHorizontalArrows,
+  props: {
+    flow: 'column',
+    ':after': { boxSize: '2px 45%' },
+    childProps: { arrow: { boxSize: ' B' } }
+  }
+}
+
+export const NavVerticalArrowsBlack = {
+  extend: navigationVerticalArrows,
+  props: { ':after': { background: 'black' } },
 
   ...[
-    {
-      props: {
-        left: '0',
-        arrow: { src: LEFT_ARROW_PNG }
-      }
-    },
+    { props: { arrow: { src: UP_ARROW_BLACK_PNG } } },
 
-    {
-      props: {
-        right: '0',
-        arrow: { src: RIGHT_ARROW_PNG }
-      }
-    }
+    { props: { arrow: { src: DOWN_ARROW_BLACK_PNG } } }
   ]
 }
 
-export const NavigationVerticalArrows = {
-  extend: NavigationArrows,
-  props: {
-    flexFlow: 'column',
-    gap: 'C',
-    ':before': {
-      content: '""',
-      position: 'absolute',
-      width: '50%',
-      height: '3px',
-      background: 'cream2',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      borderRadius: '100%'
-    }
-  },
-  childExtend: {
-    props: { style: { '> img': { width: `${30 / 16}em`, height: `${20 / 16}em` } } }
-  },
+export const NavVerticalArrowsCream = {
+  extend: navigationVerticalArrows,
+  props: { ':after': { background: 'cream2' } },
+
   ...[
-    {
-      props: { arrow: { src: UP_ARROW_PNG } }
-    },
-    {
-      props: { arrow: { src: DOWN_ARROW_PNG } }
-    }
+    { props: { arrow: { src: UP_ARROW_CREAM_PNG } } },
+
+    { props: { arrow: { src: DOWN_ARROW_CREAM_PNG } } }
+  ]
+}
+
+export const NavHorizontalArrowsBlack = {
+  extend: navigationHorizontalArrows,
+  props: { ':after': { background: 'black' } },
+
+  ...[
+    { props: { arrow: { src: LEFT_ARROW_BLACK_PNG } } },
+
+    { props: { arrow: { src: RIGHT_ARROW_BLACK_PNG } } }
+  ]
+}
+
+export const NavHorizontalArrowsCream = {
+  extend: navigationHorizontalArrows,
+  props: { ':after': { background: 'cream2' } },
+
+  ...[
+    { props: { arrow: { src: LEFT_ARROW_CREAM_PNG } } },
+
+    { props: { arrow: { src: RIGHT_ARROW_CREAM_PNG } } }
   ]
 }

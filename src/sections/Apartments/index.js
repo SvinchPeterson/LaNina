@@ -1,19 +1,7 @@
 'use strict'
 import { tabs } from './tabs'
 import { rooms } from './rooms'
-import { SectionTitle } from '../../components'
 import ORNAMENT_PNG from '../../assets/images/residence/sololaki/ornaments.png'
-
-const title = {
-  extend: SectionTitle,
-  props: {
-    text: 'apartments',
-    left: 'D',
-    position: 'absolute',
-    top: '-B2',
-    alignSelf: 'flex-start'
-  }
-}
 
 const props = {
   height: '100%',
@@ -24,25 +12,21 @@ const props = {
   backgroundSize: 'contain',
   backgroundPosition: 'center',
   background: 'url(' + ORNAMENT_PNG + ')',
+  '@tabletL': { background: 'none' },
   style: {
     scrollBehavior: 'smooth',
-    boxSizing: 'border-box',
-    backgroundAttachment: 'fixed',
-    '&:before': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
-      backgroundAttachment: 'fixed',
-      '@media only screen and (max-width: 1366px)': {
-        backgroundAttachment: 'initial',
-        background: 'rgba(60, 84, 72, 1)'
-      }
-    },
-    '@media only screen and (max-width: 1366px)': { backgroundImage: 'none' }
+    '@media only screen and (min-width: 1366px)': { backgroundAttachment: 'fixed' }
+  },
+
+  ':before': {
+    content: '""',
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    background: 'radial-gradient(rgba(60, 84, 72, .85),rgba(60, 84, 72, .9),rgba(60, 84, 72, 1), rgba(60, 84, 72, 1), rgba(60, 84, 72, 1))',
+    '@tabletL': { background: 'green2' }
   }
 }
 
@@ -52,7 +36,6 @@ export const Apartments = {
 
   attr: { id: 'apartments' },
 
-  title,
   tabs,
   rooms
 }

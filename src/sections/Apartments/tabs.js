@@ -1,11 +1,11 @@
 'use strict'
+
+import { Flex } from 'smbls'
+
 import { keyframes } from '@emotion/css'
-import LEFT_ARROW_PNG from '../../assets/icons/left-arrows2.png'
-import RIGHT_ARROW_PNG from '../../assets/icons/right-arrows.png'
 
 import {
-  tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro,
-  NavigationArrows
+  tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro, NavHorizontalArrowsCream
 } from '../../components'
 
 export const opacities = keyframes`
@@ -20,13 +20,9 @@ export const opacities = keyframes`
 `
 
 const navArrow = {
-  extend: NavigationArrows,
+  extend: NavHorizontalArrowsCream,
   props: {
-    position: 'absolute',
-    bottom: '-D2',
     gap: 'D',
-    alignSelf: 'flex-end',
-    margin: '0 auto',
     display: 'none',
     ':before': {
       background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, .25))',
@@ -38,7 +34,6 @@ const navArrow = {
 
   ...[
     {
-      props: { arrow: { src: LEFT_ARROW_PNG } },
       on: {
         click: (event, element, state) => {
           const { tabs } = state
@@ -65,76 +60,65 @@ const navArrow = {
           }
           console.log(state.tabs)
         }
-      },
-      props: { arrow: { src: RIGHT_ARROW_PNG } }
+      }
     }
   ]
 }
 
 const tabsContainer = {
   tag: 'nav',
-  childExtend: {
-    props: {
-    }
-  },
+  extend: Flex,
   ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
 }
 
 const props = {
+  flow: 'column',
+  align: 'center flex-start',
   position: 'relative',
-  display: 'flex',
-  flexAlign: 'flex-start center',
-  padding: '0 8%',
-  maxWidth: `${1440 / 16}em`,
+  padding: '0 F',
   width: `${1440 / 16}em`,
   style: {
-    boxSizing: 'border-box',
     margin: '0 auto'
   },
-  '@tabletL': { width: '100%' },
-
-  buttons: {
-    '@mobileM': {
-      bottom: `${-60 / 16}em`,
-      maxWidth: `70%`
-    },
-    style: {
-      display: 'none',
-      '@media only screen and (max-width: 1366px)': {
-        display: 'flex',
-        zIndex: '50',
-        width: '88%'
-      },
-      '@media only screen and (max-height: 650px)': {
-        bottom: `${-50 / 16}em`
-      },
-      '@media only screen and (max-width: 768px)': {
-        width: '90%'
-      },
-      '@media only screen and (max-width: 560px)': {
-        '> button': {
-          opacity: '.75',
-          padding: '15px'
-        }
-      }
-    }
+  '@tabletL': {
+    width: '100%',
+    gap: 'C2'
   },
 
   tabsContainer: {
-    flexAlign: 'center flex-start',
-    gap: 'C',
+    gap: 'Z',
     width: '100%',
-    '@tabletL': {
-      gap: 'B',
-      position: 'relative',
-      boxSize: `${400 / 16}em ${600 / 16}em`
+    padding: 'A1 -',
+    position: 'relative',
+    boxSizing: 'content-box',
+    ':before': {
+      content: '"Apartments"',
+      fontSize: `${17 / 16}em`,
+      position: 'absolute',
+      top: '-B2',
+      left: '0',
+      color: 'rgba(248, 241, 227, 1)',
+      style: { letterSpacing: '2px' }
     },
-    '@mobileL': { boxSize: `${300 / 16}em ${550 / 16}em` },
-    '@mobileS': { boxSize: `${250 / 16}em ${550 / 16}em` }
+    style: { borderTop: '1.5px solid rgba(248, 241, 227, .5)' },
+
+    '@tabletL': { boxSize: 'G3 H2' },
+    '@mobileL': { boxSize: 'G H' },
+    '@mobileM': { boxSize: 'F1 G2' },
+    '@mobileS': { boxSize: 'F G' },
+    childProps: { '@tabletL': { margin: 'A - - -' } }
+    // '@tabletL': {
+    //   gap: 'B',
+    //   position: 'relative',
+    //   boxSize: `${400 / 16}em ${600 / 16}em`
+    // },
+    // '@mobileL': { boxSize: `${300 / 16}em ${550 / 16}em` },
+    // '@mobileS': { boxSize: `${250 / 16}em ${550 / 16}em` }
   }
 }
 
 export const tabs = {
+  extend: Flex,
   props,
 
   class: {
@@ -145,8 +129,6 @@ export const tabs = {
         display: 'none'
       }
       : {
-        width: `${1440 / 16}em`,
-        padding: '0 8%',
         display: 'block',
         animationName: opacities,
         animationDuration: '.5s',
@@ -154,6 +136,6 @@ export const tabs = {
       }
   },
 
-  navArrow,
-  tabsContainer
+  tabsContainer,
+  navArrow
 }

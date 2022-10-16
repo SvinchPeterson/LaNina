@@ -6,11 +6,11 @@ export const SectionTitle = {
     text: 'residence',
     align: 'center center',
     width: 'fit-content',
-    fontSize: 'A',
+    fontSize: `${17 / 16}em`,
     fontWeight: '400',
     style: {
       textTransform: 'capitalize',
-      letterSpacing: '2px'
+      letterSpacing: '1.7px'
     }
   }
 }

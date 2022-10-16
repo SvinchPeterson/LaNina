@@ -9,13 +9,7 @@ const icon = {
     position: 'absolute',
     left: '0',
     top: '0',
-    '@tabletL': {
-      padding: 'C'
-    },
-    '@mobileS': {
-      padding: 'B'
-    },
-    style: { zIndex: '20' }
+    zIndex: '20'
   },
 
   img: {
@@ -64,7 +58,11 @@ const tabParagraph = {
 export const props = {
   height: 'G1',
   padding: 'B',
-  round: 'V',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  position: 'relative',
+  overflow: 'hidden',
+  zIndex: 1,
   '@tabletL': {
     boxSize: '100% 100%',
     position: 'absolute',
@@ -72,32 +70,24 @@ export const props = {
     left: '0',
     round: 'V2'
   },
+
   style: {
-    overflow: 'hidden',
     flex: 1,
     cursor: 'pointer',
     boxSizing: 'border-box',
     transition: 'all .7s ease-in-out',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    zIndex: 1,
     textDecoration: 'none',
-    position: 'relative',
-    backdropFilter: 'blur(2px)',
-    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, .15)',
     '@media only screen and (max-width: 1366px)': {
       boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, .25)'
     },
     '&:hover': {
       '@media only screen and (min-width: 1366px)': {
         flex: 5.5,
-        backdropFilter: 'blur(10px)',
-        boxShadow: '0px 0px 0px 0px rgba(0, 0, 0, 0)',
         '> div > div': { opacity: 1 },
-        ':before': { opacity: 1 },
-        img: { opacity: 1 }
+        ':before': { opacity: 1 }
       }
     },
+
     '&:before': {
       content: '""',
       position: 'absolute',
@@ -106,13 +96,10 @@ export const props = {
       top: '0',
       left: 0,
       background: 'linear-gradient(rgba(60,84, 72, .5), rgba(60,84, 72, 1))',
-      // background: 'red',
       opacity: '.4',
       transition: 'opacity .7s ease-in-out',
       cursor: 'pointer',
-      '@media only screen and (max-width: 1366px)': {
-        padding: '20px'
-      }
+      '@tabletL': { display: 'none' }
     }
 
   },
@@ -123,17 +110,14 @@ export const props = {
     position: 'absolute',
     right: 'B',
     bottom: 'B',
-    fontWeight: '900',
-    fontSize: 'A',
-    '@tabletL': {
-      right: 'B',
-      bottom: 'B',
-      fontSize: `${26 / 16}em`
+    fontWeight: '700',
+    '@tabletL': { fontSize: 'C' },
+    '@mobileL': {
+      fontSize: 'B'
     },
     '@mobileS': {
-      right: 'B',
-      bottom: 'B',
-      fontSize: `${18 / 16}em`
+      right: 'A',
+      bottom: 'Z'
     },
     style: {
       textTransform: 'uppercase',
