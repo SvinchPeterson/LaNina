@@ -1,8 +1,11 @@
 'use strict'
 
 import { Img, Link } from 'smbls'
+
+import { opacity } from '../animations'
 import { Navbar } from './Navbar'
 import { MenuButton } from './MenuButton'
+
 import LOGO_PNG from '../assets/icons/logo-white.png'
 
 const props = {
@@ -13,17 +16,18 @@ const props = {
   flexAlign: 'center space-between',
   padding: 'C D 0 D',
   margin: '0 0 0 0',
-  zIndex: '100',
+  zIndex: '7',
   style: {
-    zIndex: '100',
     mixBlendMode: 'difference',
+    animationName: opacity,
+    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+    animationDuration: '5s',
     '@media only screen and (max-height: 800px)': {
       paddingTop: `${30 / 16}em !important`,
       paddingBottom: `0 !important`
     }
   },
-  '@mobileM': { padding: 'B1 C - C' },
-  '@mobileS': { padding: '- A2 A1 A2' },
+  '@mobileL': { padding: 'A B - B' },
 
   logo: {
     href: '#banner',

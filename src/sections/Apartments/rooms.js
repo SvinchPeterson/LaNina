@@ -6,19 +6,7 @@ const props = {
   height: `100%`,
   position: 'relative',
   maxWidth: `${1440 / 16}em`,
-  margin: 'auto',
-
-  style: {
-    transformOrigin: 'left',
-    zIndex: '20',
-    transition: 'all 1s ease-in-out !important'
-  },
-
-  roomsContainer: {
-    boxSize: 'fit-content fit-content',
-    margin: '0 D 0 auto',
-    style: { alignSelf: 'center' }
-  }
+  margin: 'auto'
 }
 
 export const rooms = {
@@ -26,13 +14,9 @@ export const rooms = {
 
   class: {
     show: (element, state) => state.activeTab
-      ? {
-        display: 'block'
-      }
-      : {
-        display: 'none !important'
-      }
+      ? { display: 'block' } : { display: 'none' }
   },
+
   ...[
     roomBallerina,
     roomRedBrick,

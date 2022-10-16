@@ -2,6 +2,8 @@
 
 import { Img, Link } from 'smbls'
 
+import { opacity } from '../animations'
+
 import FACEBOOK_PNG from '../assets/icons/facebook-white.png'
 import INSTAGRAM_PNG from '../assets/icons/instagram-white.png'
 
@@ -13,16 +15,18 @@ const props = {
   bottom: '0',
   flexAlign: 'center space-between',
   padding: '0 D2 C D2',
+  zIndex: '7',
   style: {
     mixBlendMode: 'difference',
-    zIndex: '60',
+    animationName: opacity,
+    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+    animationDuration: '5s',
     '@media only screen and (max-height: 800px)': {
       paddingBottom: `${30 / 16}em !important`
     },
     '@media only screen and (max-height: 650px)': { paddingBottom: `${20 / 16}em !important` }
   },
-  '@mobileM': { padding: '0 C B1 C' },
-  '@mobileS': { padding: '0 A2 A1 A2' },
+  '@mobileL': { padding: '- B A B' },
 
   socialLinks: {
     flexAlign: 'center center',

@@ -8,12 +8,12 @@ const props = {
   top: '0',
   left: '0',
   flexAlign: 'center center',
-  background: 'black 1',
+  background: 'black',
   style: {
     boxSizing: 'border-box',
     backdropFilter: 'blur(1px)',
-    transition: 'opacity .5s ease-in-out'
-    // zIndex: '400'
+    transition: 'opacity .5s ease-in-out',
+    zIndex: '4'
   },
 
   nav: {
@@ -22,9 +22,9 @@ const props = {
     childProps: {
       fontSize: 'B',
       fontWeight: '500',
-      style: { letterSpacing: '3px' },
-      '@mobileS': { fontSize: 'A' },
-      '@mobileXS': { fontSize: 'Z' }
+      style: { letterSpacing: '3px' }
+      // '@mobileS': { fontSize: 'A' },
+      // '@mobileXS': { fontSize: 'Z' }
     }
   }
 }

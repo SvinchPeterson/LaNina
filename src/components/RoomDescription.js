@@ -1,16 +1,24 @@
 'use strict'
 
+import { Flex } from 'smbls'
+
 const title = { tag: 'h3' }
 
 const paragraph = { tag: 'p' }
 
 const props = {
+  flow: 'column',
+  gap: 'A2',
   title: {
-    fontSize: 'F',
+    fontSize: 'C',
     text: 'Ballerina',
-    fontWeight: '900',
-    color: 'orange3',
-    padding: '0 0 X 0'
+    fontWeight: '500',
+    color: 'orange3 .75',
+    padding: '0 0 X 0',
+    style: {
+      letterSpacing: '2px',
+      borderBottom: '1px solid rgba(248, 241, 227, .5)'
+    }
   },
 
   paragraph: {
@@ -25,6 +33,7 @@ const props = {
 
 export const RoomDescription = {
   props,
+  extend: Flex,
 
   title,
   paragraph

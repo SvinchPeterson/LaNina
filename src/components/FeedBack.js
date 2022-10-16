@@ -53,7 +53,7 @@ const props = {
     bottom: 'C',
     right: 'C1',
     fontSize: 'Z',
-    fontWeight: '500',
+    fontWeight: '700',
     alignSelf: 'flex-end',
     '@mobileS': {
       bottom: 'B',

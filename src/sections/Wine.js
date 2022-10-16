@@ -55,10 +55,10 @@ const props = {
     },
     '@mobileM': {
       width: '100%',
-      padding: '0 C'
+      padding: '0 A2'
     },
-    '@mobileS': { padding: '0 A2' },
-    style: { zIndex: '10' },
+    '@mobileS': { padding: '0 Z' },
+    style: { zIndex: '2' },
 
     title: {
       text: 'Wine',

@@ -35,15 +35,15 @@ export default {
   state,
   props,
 
-  // banner,
-  // Header,
-  // Menu,
-  // Residence,
-  // ServiceFacility,
-  // Mission,
-  Apartments
-  // Wine,
-  // feedBacks,
-  // Location,
-  // Footer
+  banner,
+  Header,
+  Menu,
+  Residence,
+  ServiceFacility,
+  Mission,
+  Apartments,
+  Wine,
+  feedBacks,
+  Location,
+  Footer
 }

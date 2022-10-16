@@ -5,14 +5,12 @@ const list = {
     flexAlign: 'flex-start flex-start',
     color: 'cream2',
     padding: 'Z 0 0 X'
-    // style: { border: '1px solid red' }
   },
   childExtend: {
     props: {
       lineHeight: '25px',
       fontSize: `${14 / 16}em`,
       flexFlow: 'column',
-      // flexAlign: 'center flex-start',
       color: 'cream2 .8'
     }
   },
@@ -23,7 +21,6 @@ const list = {
         margin: '0 B1 0 0',
         padding: '0 B1 0 0',
         style: {
-          // textAlign: 'right',
           '&:after': {
             content: '""',
             position: 'absolute',
@@ -84,8 +81,4 @@ export const Amenities = {
 
   title: {},
   list
-}
-
-export const AmenitiesResponsive = {
-  extend: Amenities
 }

@@ -15,7 +15,6 @@ const header = {
   style: {
     textTransform: 'uppercase',
     transition: 'height .3s linear'
-    // fontWeight: 900
   },
 
   h5: {
@@ -23,11 +22,7 @@ const header = {
       text: 'amenities',
       color: 'cream2 .75',
       fontSize: 'Z',
-      // fontWeight: '900',
-      '@tabletL': { color: 'cream2' },
-      '@mobileS': {
-        // fontSize: 'Y'
-      }
+      '@tabletL': { color: 'cream2' }
     },
     style: {
       letterSpacing: '1px',
@@ -52,9 +47,8 @@ const header = {
       '&:hover > button': { opacity: '1' }
     },
     span: {
-      // extend: Button,
       props: {
-        boxSize: 'X B',
+        boxSize: 'V1 B',
         background: 'cream2',
         round: 'Z'
       }

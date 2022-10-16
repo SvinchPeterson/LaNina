@@ -72,13 +72,13 @@ const tabsContainer = {
 }
 
 const props = {
-  flow: 'column',
-  align: 'center flex-start',
   position: 'relative',
   padding: '0 F',
   width: `${1440 / 16}em`,
   style: {
-    margin: '0 auto'
+    display: 'flex',
+    flexFlow: 'column',
+    alignItems: 'center'
   },
   '@tabletL': {
     width: '100%',
@@ -106,14 +106,8 @@ const props = {
     '@mobileL': { boxSize: 'G H' },
     '@mobileM': { boxSize: 'F1 G2' },
     '@mobileS': { boxSize: 'F G' },
+
     childProps: { '@tabletL': { margin: 'A - - -' } }
-    // '@tabletL': {
-    //   gap: 'B',
-    //   position: 'relative',
-    //   boxSize: `${400 / 16}em ${600 / 16}em`
-    // },
-    // '@mobileL': { boxSize: `${300 / 16}em ${550 / 16}em` },
-    // '@mobileS': { boxSize: `${250 / 16}em ${550 / 16}em` }
   }
 }
 

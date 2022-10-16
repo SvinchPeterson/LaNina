@@ -2,6 +2,8 @@
 
 import { Flex } from 'smbls'
 
+import { deopacity, positionBanner, letterSpacing, opacity, scale } from '../../animations'
+
 import SOLOLAKI_JPG from '../../assets/images/residence/sololaki/residencee.jpg'
 import SOLOLAKI_TABLET_JPG from '../../assets/images/residence/sololaki/residence-tablet.jpg'
 
@@ -9,31 +11,36 @@ const props = {
   minWidth: '100%',
   minHeight: '100%',
   position: 'relative',
-  padding: '0 0 D 0',
+  padding: '0 0 0 0',
   background: 'radial-gradient(rgba(0 ,0 , 0, .8), rgba(0 , 0, 0, .95))',
   align: 'center center',
+
+  ':before': {
+    content: '""',
+    boxSize: '100% 100%',
+    background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45))',
+    position: 'absolute',
+    zIndex: '2',
+    bottom: '0',
+    pointerEvents: 'none'
+  },
+
+  ':after': {
+    content: '""',
+    boxSize: '100% 100%',
+    background: 'linear-gradient(rgba(0 , 0, 0, 1), rgba(0, 0, 0, 1))',
+    opacity: '0',
+    position: 'absolute',
+    pointerEvens: 'none',
+    style: {
+      animationName: deopacity,
+      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+      animationDuration: '5s'
+    }
+  },
   style: {
     overflow: 'hidden',
-    '@media only screen and (max-height: 500px)': { padding: '0' },
-    ':before': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45))',
-      position: 'absolute',
-      zIndex: '30',
-      bottom: '0',
-      pointerEvents: 'none'
-    },
-    '&:after': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      background: 'linear-gradient(rgba(0 , 0, 0, 1), rgba(0, 0, 0, 1))',
-      opacity: '0',
-      position: 'absolute',
-      pointerEvens: 'none'
-    }
+    '@media only screen and (max-height: 500px)': { padding: '0' }
   },
 
   image: {
@@ -43,7 +50,7 @@ const props = {
     left: '0',
     backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
     backgroundSize: 'cover',
-    backgroundPosition: 'bottom left',
+    backgroundPosition: 'center center',
     ':before': {
       content: '""',
       width: '100%',
@@ -54,7 +61,14 @@ const props = {
     style: {
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
-      '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
+      animationName: positionBanner,
+      animationDuration: '5s',
+      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+      '@media only screen and (max-width: 1366px)': {
+        backgroundAttachment: 'initial',
+        animationName: scale
+
+      }
     },
     '@tabletM': { backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')' },
     '@mobileL': { backgroundPosition: 'bottom center' }
@@ -65,10 +79,18 @@ const props = {
     flow: 'column',
     color: 'cream2',
     alignItems: 'flex-end',
+    animationName: opacity,
+    animationDuration: '3s',
+    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
 
     h3: {
       text: 'BB Residence',
       fontSize: 'G',
+      style: {
+        animationName: letterSpacing,
+        animationDuration: '3s',
+        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+      },
       '@mobileS': { fontSize: 'F' }
     },
 

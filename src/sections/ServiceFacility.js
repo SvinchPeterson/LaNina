@@ -25,7 +25,7 @@ const props = {
     backgroundPosition: 'center',
     style: {
       backgroundAttachment: 'fixed',
-      '> div': { zIndex: '3' },
+      '> div': { zIndex: '2' },
       '@media only screen and (max-width: 1366px) and (max-height: 1000px)': { padding: '60px 0 60px 0' },
       '@media only screen and (max-width: 1024px) and (max-height: 1150px)': {
         maxHeight: `${500 / 16}em`,

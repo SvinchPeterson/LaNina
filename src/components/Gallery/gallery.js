@@ -1,12 +1,10 @@
-import { Box, Link, Img } from 'smbls'
+import { Box, Link, Img, Flex } from 'smbls'
 import { keyframes } from '@emotion/css'
 
-import { NavigationArrows, NavigationVerticalArrows } from '../NavigationArrows'
+import { NavHorizontalArrowsCream, NavVerticalArrowsCream } from '../NavigationArrows'
 import { AmenitiesResponsive } from '../AmenitiesResponsive'
 import { ApartmentDescription } from '../ApartmentDescription'
 
-import LEFT_ARROW_PNG from '../../assets/icons/leftArrow-black.png'
-import RIGHT_ARROW_PNG from '../../assets/icons/rightArrow-black.png'
 import BACK_PNG from '../../assets/icons/arrowBack.png'
 
 export const opacities = keyframes`
@@ -23,8 +21,8 @@ export const opacities = keyframes`
 const amenities = {
   extend: AmenitiesResponsive,
   props: {
-    display: 'none',
-    '@tabletL': { display: 'block' }
+    display: 'none !important',
+    '@tabletL': { display: 'block !important' }
   }
 }
 
@@ -46,21 +44,20 @@ const description = {
 }
 
 export const back = {
-  extend: Link,
+  extend: [Link, Flex],
   props: {
     gap: 'Z',
-    position: 'absolute',
-    top: '-C',
-    left: 'A',
+    margin: '-B2 auto - -',
     href: '#apartments',
     color: 'cream2',
-    flexAlign: 'center center',
+    align: 'center center',
     padding: 'Z',
     '@tabletL': {
-      top: '0',
-      left: '0',
+      position: 'absolute',
       background: 'green2',
-      padding: 'Z A'
+      padding: 'Z1 A',
+      top: 'B1',
+      left: '0'
     },
     style: {
       color: 'rgba(248, 241, 227, 1) !important',
@@ -91,6 +88,7 @@ export const back = {
       }
     }
   },
+
   span: {
     props: {
       text: 'APARTMENTS',
@@ -115,17 +113,21 @@ const book = {
     padding: 'Z A',
     fontSize: 'Z',
     width: 'fit-content',
-    top: '-C1',
+    top: '-C',
     right: 'B',
+
     '@tabletL': {
       right: '102%',
       top: '40%'
     },
+
     '@mobileL': {
-      top: '80%',
-      left: '0',
+      bottom: '80%',
+      top: '100%',
+      left: 'Z',
       padding: 'A'
     },
+
     style: {
       zIndex: '30',
       textDecoration: 'none',
@@ -138,8 +140,8 @@ const book = {
       },
       '@media only screen and (max-width: 768px)': {
         writingMode: 'initial',
-        textOrientation: 'initial',
-        backdropFilter: 'blur(10px)'
+        textOrientation: 'initial'
+        // backdropFilter: 'blur(10px)'
       }
     }
   },
@@ -160,46 +162,36 @@ const book = {
   }
 }
 
-const navArrows = {
-  extend: NavigationArrows,
+const navHorizontalArrows = {
+  extend: NavHorizontalArrowsCream,
   props: {
-    margin: '0 0 -D 0',
-    ':before': {
-      height: '70%',
-      background: 'cream'
-      // '@media only screen and (max-width: 768px)': { display: 'none' }
-    },
-    '@tabletL': {
-      display: 'none'
-    },
+    margin: '- A2 -C -',
+    alignSelf: 'flex-end',
+    '@tabletL': { display: 'none' },
     '@mobileL': {
       display: 'flex',
-      margin: 'auto',
-      width: '100%'
-    },
-    style: {
-      zIndex: '40',
-      alignSelf: 'flex-end'
-
+      alignSelf: 'center',
+      minWidth: '101%',
+      margin: '0',
+      ':after': { display: 'none' }
     }
   },
+
   childExtend: {
     props: {
       '@mobileL': {
         background: 'green2',
-        flexAlign: 'center center',
-        boxSize: 'E2 D1'
-      },
-      style: {
-        borderRadius: '0px',
-        '@media only screen and (max-width: 768px)': {
-          opacity: 1
-        }
+        padding: 'A2 A1'
       }
     }
   },
   ...[
     {
+      props: {
+        '@mobileL': {
+          style: { borderTopRightRadius: '10px', borderBottomRightRadius: '10px' }
+        }
+      },
       on: {
         click: (event, element, state) => {
           const { activeImage } = state
@@ -210,23 +202,15 @@ const navArrows = {
             state.update({ activeImage: 0 })
           }
         }
-      },
-      props: {
-
-        arrow: {
-          src: LEFT_ARROW_PNG
-        }
-      },
-      style: {
-        '@media only screen and (max-width: 1366px)': {
-          borderTopRightRadius: '100px',
-          borderBottomRightRadius: '100px',
-          paddingRight: '20px'
-        }
       }
     },
 
     {
+      props: {
+        '@mobileL': {
+          style: { borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }
+        }
+      },
       on: {
         click: (event, element, state) => {
           const { activeImage } = state
@@ -237,32 +221,19 @@ const navArrows = {
             state.update({ activeImage: 8 })
           }
         }
-      },
-      props: {
-        arrow: {
-          src: RIGHT_ARROW_PNG
-        }
-      },
-      style: {
-        '@media only screen and (max-width: 1366px)': {
-          borderTopLeftRadius: '100px',
-          borderBottomLeftRadius: '100px',
-          paddingLeft: '20px'
-        }
       }
     }
   ]
 }
 
 const navVerticalArrows = {
-  extend: NavigationVerticalArrows,
+  extend: NavVerticalArrowsCream,
   props: {
     display: 'none',
     '@tabletL': {
       display: 'flex',
-      position: 'absolute',
-      top: '50%',
-      right: '-D1'
+      alignSelf: 'center',
+      margin: '- -D - auto'
     },
     '@mobileL': { display: 'none' },
     style: {
@@ -300,28 +271,26 @@ const navVerticalArrows = {
 }
 
 export const Gallery = {
+  extend: Flex,
 
   props: {
     position: 'relative',
     boxSize: 'H I',
     margin: '0 D 0 auto',
-    flexAlign: 'flex-start center',
-    '@tabletS': {
-      boxSize: 'G1 H2'
-    },
+    align: 'flex-start center',
+    '@tabletS': { boxSize: 'G1 H2' },
     '@mobileL': { width: '100%' },
     '@mobileS': { boxSize: 'G 100%' },
-    style: {
-      alignSelf: 'center'
-    }
+    style: { alignSelf: 'center' }
   },
 
   ba: {
     extend: back,
     props: {}
   },
+
   book,
-  navArrows,
+  navHorizontalArrows,
   navVerticalArrows,
   imageContainer: {
     style: { transition: 'all 3s ease-in-out' },

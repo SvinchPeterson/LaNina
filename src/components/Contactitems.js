@@ -46,12 +46,11 @@ const props = {
 }
 
 const itemProps = {
-  fontSize: `${12 / 16}em`,
+  fontSize: `Z`,
   position: 'relative',
   flexAlign: 'center center',
   fontWeight: '700',
   color: 'black',
-  letterSpacing: '.8px',
   '@mobileS': {
     width: `${240 / 13}em`,
     height: `${45 / 13}em`,
@@ -60,6 +59,7 @@ const itemProps = {
     round: 'C'
   },
   style: {
+    letterSpacing: '.8px',
     '@media only screen and (max-width: 480px)': {
       border: '.5px solid rgba(0, 0, 0, .75)'
     }
