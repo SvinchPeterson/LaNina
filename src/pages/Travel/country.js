@@ -19,7 +19,7 @@ const paragraph = {
 const props = {
   flow: 'column',
   align: 'center center',
-  minHeight: 'I',
+  minHeight: 'H2',
   padding: '0 A2'
 }
 

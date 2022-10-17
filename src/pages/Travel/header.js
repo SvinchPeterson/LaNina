@@ -6,11 +6,11 @@ export const header = {
   logo: {},
   navBar: {
     ...[
-      { props: { text: 'gallery', href: '#gallery' } },
       { props: { text: 'tours', href: '#tours' } },
-      { props: { text: 'blog', href: '#blog' } },
+      { props: { text: 'video blog', href: '#blog' } },
       { props: { text: 'about us', href: '#about' } },
-      { props: { display: 'none' } }
+      { props: { text: 'contact' } },
+      { props: { text: '' } }
     ]
   }
 }

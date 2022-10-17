@@ -1,66 +1,53 @@
 'use strict'
-import { keyframes } from '@emotion/css'
 
 import { banner } from '../Sololaki/banner'
 
 import TBILISI_JPG from '../../assets/images/travel/tbilisi.jpg'
+import TBILISI_TABLET_JPG from '../../assets/images/travel/tbilisi-tablet.jpg'
 
-export const animCaption = keyframes`
-  from {
-    letter-spacing: 1px;
-    opacity: 0;
-  }
-  to {
-    letter-spacing: .5px;
-    opacity: 1;
-  }
-`
-
-export const travelBanner = {
-  extend: banner,
-  props: {
-    background: 'none'
-  },
-
+const props = {
   image: {
-    props: {
-      backgroundImage: 'url(' + TBILISI_JPG + ')',
-      ':before': {
-        background: 'radial-gradient(rgba(30, 40, 49, .5), rgba(30, 40, 49, .8))'
-      }
-    }
-
+    ':before': { background: 'radial-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .6))' },
+    backgroundImage: 'url(' + TBILISI_JPG + ')',
+    '@tabletM': { backgroundImage: 'url(' + TBILISI_TABLET_JPG + ')' }
   },
 
   title: {
-    props: {
-      left: '15%',
-      right: 'initial',
-      '@mobileL': {
-        right: 'initial',
-        top: '40%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)'
-      },
-      '@mobileM': { height: `${110 / 16}em` },
-      '@mobileXS': { height: `${110 / 16}em` },
+    margin: '- - E -H1',
+    '@tabletM': { margin: '- - E 0' },
+    '@mobileS': { alignItems: 'center' },
 
-      title: {
-        text: 'BB TRAVEL',
-        '@mobileXS': { fontSize: '' }
-      },
-      caption: {
-        fontSize: 'Z',
-        padding: '0',
-        text: 'We Know better our country than anyone here.',
+    h3: {
+      text: 'BB TRAVEL',
+      fontWeight: '100',
+      fontSize: 'I',
+      '@mobileS': { fontSize: 'G' }
+    },
+
+    caption: {
+      text: 'We Know better our country than anyone here',
+      fontSize: 'Z',
+      margin: '- -D1 - -',
+      style: {
+        letterSpacing: '0',
         fontWeight: '400',
-        style: {
-          letterSpacing: '.5px',
-          animationName: animCaption,
-          fontStyle: 'italic'
-        },
-        '@mobileXS': { fontSize: 'Z' }
+        fontStyle: 'italic'
+      },
+      ':before': {
+        width: '100%',
+        top: '-Z2',
+        '@mobileS': { top: '0' }
+      },
+      '@mobileL': { margin: '- 0 - -' },
+      '@mobileS': {
+        padding: 'A2 - - -',
+        maxWidth: '220px',
+        lineHeight: '23px'
       }
     }
   }
+}
+export const travelBanner = {
+  extend: banner,
+  props
 }

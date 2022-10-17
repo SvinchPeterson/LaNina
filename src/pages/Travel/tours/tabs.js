@@ -6,11 +6,11 @@ import LEFT_ARROW_PNG from '../../../assets/icons/leftArrow-cream.png'
 import RIGHT_ARROW_PNG from '../../../assets/icons/rightArrow-cream.png'
 import { TourTab, NavigationArrows } from '../../../components'
 
-import NATURE_JPG from '../../../assets/images/travel/nature.jpg'
-import ADVENTURE_JPG from '../../../assets/images/travel/adventure.jpg'
-import FOOD_JPG from '../../../assets/images/travel/food.jpg'
-import JEEP_JPG from '../../../assets/images/travel/jeep.jpg'
-import CULTURAL_JPG from '../../../assets/images/travel/meidan.jpg'
+// import NATURE_JPG from '../../../assets/images/travel/nature.jpg'
+// import ADVENTURE_JPG from '../../../assets/images/travel/adventure.jpg'
+// import FOOD_JPG from '../../../assets/images/travel/food.jpg'
+// import JEEP_JPG from '../../../assets/images/travel/jeep.jpg'
+// import CULTURAL_JPG from '../../../assets/images/travel/meidan.jpg'
 
 const exclusiveTours = { tag: 'button' }
 
@@ -147,29 +147,29 @@ export const tabs = {
     childExtend: TourTab,
     ...[
       {
-        props: { image: { backgroundImage: 'url(' + CULTURAL_JPG + ')' } }
+        // props: { image: { backgroundImage: 'url(' + CULTURAL_JPG + ')' } }
       },
       {
         props: {
-          image: { backgroundImage: 'url(' + FOOD_JPG + ')' },
+          // image: { backgroundImage: 'url(' + FOOD_JPG + ')' },
           title: { text: 'Food and wine tour' }
         }
       },
       {
         props: {
-          image: { backgroundImage: 'url(' + NATURE_JPG + ')' },
+          // image: { backgroundImage: 'url(' + NATURE_JPG + ')' },
           title: { text: 'nature and eco tour' }
         }
       },
       {
         props: {
-          image: { backgroundImage: 'url(' + ADVENTURE_JPG + ')' },
+          // image: { backgroundImage: 'url(' + ADVENTURE_JPG + ')' },
           title: { text: 'adventure tour' }
         }
       },
       {
         props: {
-          image: { backgroundImage: 'url(' + JEEP_JPG + ')' },
+          // image: { backgroundImage: 'url(' + JEEP_JPG + ')' },
           title: { text: 'jeep tour' }
         }
       }

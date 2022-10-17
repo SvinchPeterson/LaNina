@@ -22,9 +22,8 @@ const props = {
     childProps: {
       fontSize: 'B',
       fontWeight: '500',
-      style: { letterSpacing: '3px' }
-      // '@mobileS': { fontSize: 'A' },
-      // '@mobileXS': { fontSize: 'Z' }
+      style: { letterSpacing: '3px' },
+      '@mobileS': { fontSize: 'A' }
     }
   }
 }
