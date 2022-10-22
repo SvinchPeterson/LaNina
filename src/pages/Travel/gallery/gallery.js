@@ -1,35 +1,37 @@
 'use strict'
 import { Grid } from 'smbls'
 
-import SNOW_JPG from '../../../assets/images/travel/snow.jpg'
-import SNOW_TABLET_JPG from '../../../assets/images/travel/snow-tablet.jpg'
-import SNOW_MOBILE_JPG from '../../../assets/images/travel/snow-mobile.jpg'
+import SVANETI_JPG from '../../../assets/images/travel/svaneti.png'
+// import SVANETI_TABLET_JPG from '../../../assets/images/travel/svaneti-tablet.jpg'
+// import SVANETI_MOBILE_JPG from '../../../assets/images/travel/svaneti-mobile.jpg'
 
-import VARZIA_JPG from '../../../assets/images/travel/varzia.jpg'
-import VARZIA_MOBILE_JPG from '../../../assets/images/travel/varzia-mobile.jpg'
+import BAKHMARO_JPG from '../../../assets/images/travel/bakhmaro.jpg'
+import BAKHMARO_MOBILE_JPG from '../../../assets/images/travel/bakhmaro-mobile.jpg'
 
 import MTSKETA_JPG from '../../../assets/images/travel/mtsketa.jpg'
 import MTSKETA_TABLET_JPG from '../../../assets/images/travel/mtsketa-tablet.jpg'
 import MTSKETA_MOBILE_JPG from '../../../assets/images/travel/mtsketa-mobile.jpg'
 
-import DANCE_JPG from '../../../assets/images/travel/dance.jpg'
-import DANCE_TABLET_JPG from '../../../assets/images/travel/dance-tablet.jpg'
-import DANCE_MOBILE_JPG from '../../../assets/images/travel/dance-mobile.jpg'
+import KAZBEGI_JPG from '../../../assets/images/travel/gerget.jpg'
+import KAZBEGI_TABLET_JPG from '../../../assets/images/travel/gerget-tablet.jpg'
+import KAZBEGI_MOBILE_JPG from '../../../assets/images/travel/gerget-mobile.jpg'
 
-import MUSEUM_JPG from '../../../assets/images/travel/museum.jpg'
+import VARZIA_JPG from '../../../assets/images/travel/varzia.jpg'
+import KVEVRI_TABLET_JPG from '../../../assets/images/travel/varzia-tablet.jpg'
+import KVEVRI_MOBILE_JPG from '../../../assets/images/travel/varzia-mobile.jpg'
 
-import STALIN_JPG from '../../../assets/images/travel/stalin.jpeg'
-import STALIN_TABLET_JPG from '../../../assets/images/travel/stalin-tablet.jpeg'
-import STALIN_MOBILE_JPG from '../../../assets/images/travel/stalin-mobile.jpeg'
+import MARTVILI_JPG from '../../../assets/images/travel/martvili.jpg'
+import MARTVILI_TABLET_JPG from '../../../assets/images/travel/martvili-tablet.jpg'
+import MARTVILI_MOBILE_JPG from '../../../assets/images/travel/martvili-mobile.jpg'
 
 const gridGallery = {
   extend: Grid,
   ...[
     {
       props: {
-        backgroundImage: 'url(' + SNOW_JPG + ')',
-        '@tabletS': { backgroundImage: 'url(' + SNOW_TABLET_JPG + ')' },
-        '@mobileM': { backgroundImage: 'url(' + SNOW_MOBILE_JPG + ')' },
+        backgroundImage: 'url(' + SVANETI_JPG + ')',
+        // '@tabletS': { backgroundImage: 'url(' + SVANETI_TABLET_JPG + ')' },
+        // '@mobileM': { backgroundImage: 'url(' + SVANETI_MOBILE_JPG + ')' },
         gridColumn: '1 / span 2',
         gridRow: '1 / span 2'
       }
@@ -38,8 +40,8 @@ const gridGallery = {
     {
       props: {
         gridColumn: '3 / span 4',
-        backgroundImage: 'url(' + VARZIA_JPG + ')',
-        '@tabletS': { backgroundImage: 'url(' + VARZIA_MOBILE_JPG + ')' }
+        backgroundImage: 'url(' + BAKHMARO_JPG + ')',
+        '@tabletS': { backgroundImage: 'url(' + BAKHMARO_MOBILE_JPG + ')' }
       }
     },
 
@@ -54,9 +56,9 @@ const gridGallery = {
 
     {
       props: {
-        backgroundImage: 'url(' + DANCE_JPG + ')',
-        '@tabletS': { backgroundImage: 'url(' + DANCE_TABLET_JPG + ')' },
-        '@mobileM': { backgroundImage: 'url(' + DANCE_MOBILE_JPG + ')' },
+        backgroundImage: 'url(' + KAZBEGI_JPG + ')',
+        '@tabletS': { backgroundImage: 'url(' + KAZBEGI_TABLET_JPG + ')' },
+        '@mobileM': { backgroundImage: 'url(' + KAZBEGI_MOBILE_JPG + ')' },
         gridColumn: '1 / span 6',
         gridRow: 'span 2'
       }
@@ -66,7 +68,9 @@ const gridGallery = {
       props: {
         gridRow: '5',
         gridColumn: '1 / span 2',
-        backgroundImage: 'url(' + MUSEUM_JPG + ')'
+        backgroundImage: 'url(' + VARZIA_JPG + ')',
+        '@tabletS': { backgroundImage: 'url(' + KVEVRI_TABLET_JPG + ')' },
+        '@mobileM': { backgroundImage: 'url(' + KVEVRI_MOBILE_JPG + ')' }
       }
     },
 
@@ -74,9 +78,9 @@ const gridGallery = {
       props: {
         gridRow: '5',
         gridColumn: '3 / span 4',
-        backgroundImage: 'url(' + STALIN_JPG + ')',
-        '@tabletS': { backgroundImage: 'url(' + STALIN_TABLET_JPG + ')' },
-        '@mobileM': { backgroundImage: 'url(' + STALIN_MOBILE_JPG + ')' }
+        backgroundImage: 'url(' + MARTVILI_JPG + ')',
+        '@tabletS': { backgroundImage: 'url(' + MARTVILI_TABLET_JPG + ')' },
+        '@mobileL': { backgroundImage: 'url(' + MARTVILI_MOBILE_JPG + ')' }
       }
     }
   ]
@@ -117,7 +121,7 @@ const props = {
         left: '0',
         width: '100%',
         height: '100%',
-        background: 'radial-gradient(rgba(30, 40, 49, .5), rgba(30, 40, 49, .5))'
+        background: 'radial-gradient(rgba(30, 40, 49, .3), rgba(30, 40, 49, .5))'
       }
     }
   }

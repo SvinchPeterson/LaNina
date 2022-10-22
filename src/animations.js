@@ -65,3 +65,13 @@ export const scale = keyframes`
     transform: scale(1);
   }
 `
+
+export const opacityScale = keyframes`
+  from {
+    transform: translate(-50%, -50%) scale(.99);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+`

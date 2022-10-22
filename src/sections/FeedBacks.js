@@ -38,6 +38,7 @@ const heading = {
     '@mobileL': { width: '85%' }
   },
   style: { zIndex: '20' },
+
   title: {
     tag: 'caption',
     text: 'Feedbacks',
@@ -51,6 +52,7 @@ const heading = {
       }
     }
   },
+
   navArrows
 }
 

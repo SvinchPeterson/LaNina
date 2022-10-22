@@ -7,7 +7,7 @@ import TBILISI_TABLET_JPG from '../../assets/images/travel/tbilisi-tablet.jpg'
 
 const props = {
   image: {
-    ':before': { background: 'radial-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .6))' },
+    ':before': { background: 'radial-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .7))' },
     backgroundImage: 'url(' + TBILISI_JPG + ')',
     '@tabletM': { backgroundImage: 'url(' + TBILISI_TABLET_JPG + ')' }
   },

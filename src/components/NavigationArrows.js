@@ -12,12 +12,14 @@ import UP_ARROW_CREAM_PNG from '../assets/icons/upArrow-cream.png'
 
 const props = {
   align: 'center space-between',
-  gap: 'C',
+  gap: 'C1',
   position: 'relative',
   maxWidth: 'fit-content',
+  height: 'fit-content',
+  // border: '2px solid red',
   ':after': {
     content: '""',
-    boxSize: '70% 2px',
+    boxSize: '60% 2px',
     position: 'absolute',
     top: '50%',
     left: '50%',

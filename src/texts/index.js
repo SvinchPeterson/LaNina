@@ -1,6 +1,6 @@
 'use strict'
 
-import { Text, Box } from 'smbls'
+import { Text, Box, Flex } from 'smbls'
 
 export const origin = {
   extend: Text,
@@ -262,4 +262,89 @@ export const stayText = {
     text: `Long term stays allow for 28 days or more`
   }
 
+}
+
+export const tbilisiTravelText = {
+  extend: Text,
+  props: {
+    text: ` - capital of Georgia, Found In mid-5th century, Tbilisi is in the Caucasus is considered one of the most ancient cities. Before Tbilisi, Mtskheta was the Royal capital of Georgia till V century.`,
+    span: { text: 'Tbilisi' }
+  },
+
+  span: {}
+}
+
+export const ananuriText = {
+  props: {
+    text: ` - is 66km north of Tbilisi is a classic
+    example of beautiful old Georgian architecture in a
+    beautiful location, enhanced by the Zhinvali Reservoir
+    spreading out below.`,
+    span: { text: 'The fortress of Ananuri' }
+  },
+
+  span: {}
+}
+
+export const gudauriText = {
+  props: {
+    text: ` - is a mountain ski resort situated on a south-facing
+    plateau of the greater Caucasus mountain range in Georgia,
+    2,200 m above sea level. Its skiable area enjoys the
+    maximum exposure to the sun, which makes Gudauri a
+    magnificent all-year-round tourist destination.`,
+    span: { text: 'Gudauri' }
+  },
+
+  span: {}
+}
+
+export const gergetText = {
+  props: {
+    text: ` - is the name of 14th century Holy Trinity Church on north-eastern
+    Georgia near the Gergeti village. The church is located at an
+    altitude of 2170 meters, under the glacier Kazbegi (5047 m) on
+    the right bank of Chkheri River.`,
+    span: { text: 'Gergeti Trinity Church' }
+  },
+
+  span: {}
+}
+
+export const canionText = {
+  props: {
+    text: ` - is a deep mountain gorge situated 100 kilometers west of Tbilisi in Tsalka Municipality.
+    we have 240-meter-long (787 feet) glass bridge with a diamond-shaped bar, which is largest and tallest hanging
+    structure in the world.`,
+    span: { text: 'dashbashi canyon' }
+  },
+
+  span: {}
+}
+
+export const kakhetiText = {
+  extend: Flex,
+  props: { flow: 'column', gap: 'Z' },
+
+  ...[
+    {
+      props: {
+        text: ` - is Georgia's premier wine-producing area. Almost everywhere you go, you'll be invited to drink a glass of wine and it's easy to find yourself wandering around in a semi-permanent mellow haze.`,
+        span: { text: 'The eastern of Kakheti' }
+      },
+      span: {}
+    },
+
+    {
+      ...[
+        `Kakheti is also rich in history. Here you'll find the incredible monastery complex of `,
+        { tag: 'span', text: 'Davit Gareji' },
+        ', The picturesque hilltop town of ',
+        { tag: 'span', text: 'Sighnagi City of Love,' },
+        'and Many of beautiful Churches, Castles and mansions around the main town ',
+        { tag: 'span', text: 'Telavi' }
+      ]
+
+    }
+  ]
 }

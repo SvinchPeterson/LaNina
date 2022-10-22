@@ -16,7 +16,16 @@ import { footer } from './footer'
 
 const state = {
   activeForm: false,
-  activeTour: false
+  activeTour: false,
+  activeDailyTour: false,
+  activeStandardTour: false,
+  activeArmeniaTour: false,
+  activeDescription: false,
+  activeTbilisiGalleryImage: 0,
+  activeAnanuriGudauriGalleryImage: 0,
+  activeCanyonGalleryImage: 0,
+  activeArrow: false,
+  activeKakhetiGalleryImage: 0
 }
 
 export default {
@@ -28,14 +37,14 @@ export default {
   },
   state,
 
-  header,
-  headerMobile,
-  menu,
-  travelBanner,
-  country,
-  gallery,
-  tours,
-  aboutUs,
-  planTrip,
-  footer
+  // header,
+  // headerMobile,
+  // menu,
+  // travelBanner,
+  // country,
+  // gallery,
+  tours
+  // aboutUs,
+  // planTrip,
+  // footer
 }

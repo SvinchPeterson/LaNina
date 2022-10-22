@@ -1,119 +1,60 @@
 'use strict'
+'use strict'
 
 import { Flex } from 'smbls'
 
-import LEFT_ARROW_PNG from '../../../assets/icons/leftArrow-cream.png'
-import RIGHT_ARROW_PNG from '../../../assets/icons/rightArrow-cream.png'
-import { TourTab, NavigationArrows } from '../../../components'
+import { TourTab, ScrollTitle } from '../../../components'
 
-// import NATURE_JPG from '../../../assets/images/travel/nature.jpg'
-// import ADVENTURE_JPG from '../../../assets/images/travel/adventure.jpg'
-// import FOOD_JPG from '../../../assets/images/travel/food.jpg'
-// import JEEP_JPG from '../../../assets/images/travel/jeep.jpg'
-// import CULTURAL_JPG from '../../../assets/images/travel/meidan.jpg'
-
-const exclusiveTours = { tag: 'button' }
-
-const navArrows = {
-  extend: NavigationArrows,
-  props: {
-    ':before': { background: '#D2D4D4' }
-  },
-  ...[
-    {
-      props: { arrow: { src: LEFT_ARROW_PNG } },
-      on: {
-        click: (event, element, state) => {
-          const { content } = element.parent.parent
-          content.node.scrollBy(-405, 0)
-        }
-      }
-    },
-
-    {
-      props: { arrow: { src: RIGHT_ARROW_PNG } },
-      on: {
-        click: (event, element, state) => {
-          const { content } = element.parent.parent
-          content.node.scrollBy(405, 0)
-        }
-      }
-    }
-  ]
+const scrollTitle = {
+  extend: ScrollTitle
 }
-
-const shadow = {}
 
 const props = {
   position: 'relative',
-  margin: '0 auto 0 F',
   width: 'fit-content',
   height: 'fit-content',
-  alignSelf: 'center',
-  style: {
-    overflowX: 'hidden',
-    scrollBehavior: 'smooth'
-  },
-  ':before': {
-    content: '""',
-    width: '5px',
-    height: '100%',
-    borderRadius: '30px',
-    background: '#1E2831',
-    position: 'absolute',
-    bottom: '0',
-    left: '0px',
-    zIndex: '10',
-    style: {
-      boxShadow: '2px 0px 3px 3px #1E2831'
-      // '@media only screen and (max-width: 1280px)': { boxShadow: '0px 0px 50px 50px #1E2831' }
-    }
-  },
-  '@tabletM': { margin: '0 auto 0 D' },
-
-  shadow: {
-    width: '20px',
-    height: '100%',
-    position: 'absolute',
-    background: 'rgba(30, 40, 49, 1)',
-    bottom: '0',
-    right: '0',
-    zIndex: '20',
-    style: { boxShadow: '-2px 0px 70px 150px rgba(30, 40, 49, 1)' }
-  },
+  flow: 'column',
+  gap: 'A2',
+  style: { overflowX: 'hidden' },
+  '@tabletM': { padding: '- D' },
+  '@mobileS': { padding: '- B' },
 
   title: {
-    text: 'tours',
-    position: 'absolute',
-    color: 'silver',
-    fontSize: 'E',
-    top: '-Y',
-    left: 'B'
-  },
+    borderBottom: '1.5px solid #1e2831',
+    justifyContent: 'space-between',
+    padding: '- - Y -',
+    width: '50%',
+    alignSelf: 'flex-end',
+    margin: '- E - -',
+    '@tabletM': {
+      alignSelf: 'flex-start',
+      textAlign: 'left',
+      margin: '- - - A1'
+    },
+    '@mobileL': {
+      width: '90%',
+      margin: '0',
+      alignSelf: 'center'
+    },
 
-  navArrows: {
-    position: 'absolute',
-    top: 'A',
-    left: 'A'
-  },
+    h5: {
+      text: 'tours',
+      color: 'blue3',
+      fontSize: 'B',
+      fontWeight: '500',
+      textTransform: 'uppercase',
+      textAlign: 'right'
+    },
 
-  exclusiveTours: {
-    text: 'Exclusive Tours',
-    padding: 'Z1 A1',
-    background: 'radial-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .65))',
-    round: 'C',
-    position: 'absolute',
-    right: 'F',
-    top: 'Z2',
-    border: 'none',
-    zIndex: '30',
-    fontWeight: '700',
-    color: '#1E2831'
+    scrollTitle: {
+      display: 'none',
+      '@tabletM': { display: 'flex' }
+    }
+
   },
 
   content: {
-    gap: 'Z',
-    padding: 'D E2 0 A',
+    gap: 'X',
     style: {
       overflowX: 'auto',
       scrollBehavior: 'smooth',
@@ -126,51 +67,70 @@ export const tabs = {
   extend: Flex,
   props,
 
-  class: {
-    show: (element, state) => state.activeTour
-      ? {
-        display: 'none'
-      }
-      : {
-        display: 'flex'
-        // animationName: opacities,
-        // animationDuration: '.5s',
-        // animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
-      }
+  title: {
+    extend: Flex,
+    h5: {},
+    scrollTitle
   },
 
-  shadow,
-  navArrows,
-  exclusiveTours,
   content: {
     extend: Flex,
+
     childExtend: TourTab,
     ...[
       {
-        // props: { image: { backgroundImage: 'url(' + CULTURAL_JPG + ')' } }
-      },
-      {
         props: {
-          // image: { backgroundImage: 'url(' + FOOD_JPG + ')' },
-          title: { text: 'Food and wine tour' }
+          style: {
+            borderTopLeftRadius: `${200 / 16}em`,
+            borderBottomLeftRadius: `${200 / 16}em`,
+            '@media only screen and (max-width: 1366px)': {
+              borderTopLeftRadius: `0`,
+              borderBottomLeftRadius: `0`
+            }
+          },
+
+          title: { text: 'daily tours' }
+        },
+
+        on: {
+          click: (event, element, state) => {
+            state.activeTour
+              ? state.update({ activeTour: false, activeDailyTour: false })
+              : state.update({ activeTour: true, activeDailyTour: true })
+          }
         }
       },
+
       {
-        props: {
-          // image: { backgroundImage: 'url(' + NATURE_JPG + ')' },
-          title: { text: 'nature and eco tour' }
+        props: { title: { text: 'standard tours' } },
+        on: {
+          click: (event, element, state) => {
+            state.activeTour
+              ? state.update({ activeTour: false, activeStandardTour: false })
+              : state.update({ activeTour: true, activeStandardTour: true })
+          }
         }
       },
+
       {
         props: {
-          // image: { backgroundImage: 'url(' + ADVENTURE_JPG + ')' },
-          title: { text: 'adventure tour' }
-        }
-      },
-      {
-        props: {
-          // image: { backgroundImage: 'url(' + JEEP_JPG + ')' },
-          title: { text: 'jeep tour' }
+          style: {
+            borderTopRightRadius: `${200 / 16}em`,
+            borderBottomRightRadius: `${200 / 16}em`,
+            '@media only screen and (max-width: 1366px)': {
+              borderTopRightRadius: `0`,
+              borderBottomRightRadius: `0`
+            }
+          },
+          title: { text: 'Georgia & Armenia tour' }
+        },
+
+        on: {
+          click: (event, element, state) => {
+            state.activeTour
+              ? state.update({ activeTour: false, activeArmeniaTour: false })
+              : state.update({ activeTour: true, activeArmeniaTour: true })
+          }
         }
       }
     ]

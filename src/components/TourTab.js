@@ -2,50 +2,44 @@
 
 import { Flex, Link } from 'smbls'
 
-const image = {}
-const title = {}
-
 const props = {
-  width: 'fit-content',
+  boxSize: 'F1 G1',
+  background: 'blue',
+  align: 'center center',
+  style: {
+    cursor: 'pointer',
+    '@media only screen and (min-width: 1366px)': {
+      '&:hover': {
+        background: '#3A5A75',
+        transition: 'background .3s ease-in-out',
+        '> h5': {
+          color: 'white',
+          transform: 'scale(1.05)'
+        }
+      }
+    },
 
-  color: 'white',
-  flow: 'column',
-  gap: 'A',
-
-  image: {
-    boxSize: 'G G3',
-    background: 'white',
-    round: 'Y',
-    style: {
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      '@media only screen and (max-height: 600px)': { height: '250px' }
-    }
+    '@media only screen and (max-width: 1366px)': { borderRadius: '20px' }
   },
+  '@tabletM': {
+    minWidth: 'H'
+  },
+  '@mobileL': { minWidth: '100%' },
 
   title: {
-    text: 'cultural tour',
+    fontSize: `${12.5 / 16}em`,
+    fontWeight: '500',
     textTransform: 'uppercase',
-    fontWeight: '700',
-    padding: 'Z 0 0 0',
-    width: '93%',
-    margin: '0 auto',
-    opacity: '.85',
-    style: { borderTop: '.5px solid white' }
+    color: 'silver',
+    // padding: '- - A -',
+    style: { letterSpacing: '2px', transition: 'transform .6s ease-in-out, color .6s ease-in-out' }
   }
+
 }
 
 export const TourTab = {
   extend: [Link, Flex],
   props,
 
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeTour: true })
-    }
-  },
-
-  image,
-  title
+  title: { tag: 'h5' }
 }
