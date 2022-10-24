@@ -4,9 +4,12 @@ import { Flex } from 'smbls'
 
 import { tour } from '../tour'
 
+import { geoArmTour } from './geoArmTour'
+
 export const armeniaTour = {
   extend: tour,
   props: {
+    padding: 'E - C -',
     title: { text: 'tour', span: { text: 'georgia & armenia' } }
   },
 
@@ -18,5 +21,6 @@ export const armeniaTour = {
 
   title: { extend: Flex, span: {} },
   tours: {
+    geoArmTour
   }
 }

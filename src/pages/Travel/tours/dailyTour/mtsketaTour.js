@@ -24,7 +24,8 @@ export const mtsketaTour = {
             title: { },
             list: {
               ...[
-                { props: { text: '- Rabati Castle walking Tour' } }
+                { props: { text: '- Svetitskhoveli Cathedral 11th' } },
+                { props: { text: '- Jvari Monastery - 6th' } }
               ]
             }
           }

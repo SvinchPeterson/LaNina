@@ -25,12 +25,23 @@ const state = {
   activeAnanuriGudauriGalleryImage: 0,
   activeCanyonGalleryImage: 0,
   activeArrow: false,
+
   activeKakhetiGalleryImage: 0,
   activeKutaisiGalleryImage: 0,
   activeGoriGalleryImage: 0,
   activeBorjomiGalleryImage: 0,
   activeRabatiGalleryImage: 0,
-  activeMtsketaGalleryImage: 0
+  activeMtsketaGalleryImage: 0,
+
+  active2n3dGalleryImage: 0,
+  active3n4dGalleryImage: 0,
+  active4n5dGalleryImage: 0,
+  active5n6dGalleryImage: 0,
+  active6n7dGalleryImage: 0,
+  active7n8dGalleryImage: 0,
+  active9n10dGalleryImage: 0,
+
+  activeGeoArmGalleryImage: 0
 
 }
 
@@ -43,14 +54,14 @@ export default {
   },
   state,
 
-  // header,
-  // headerMobile,
-  // menu,
-  // travelBanner,
-  // country,
-  // gallery,
-  tours
-  // aboutUs,
-  // planTrip,
-  // footer
+  header,
+  headerMobile,
+  menu,
+  travelBanner,
+  country,
+  gallery,
+  tours,
+  aboutUs,
+  planTrip,
+  footer
 }

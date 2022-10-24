@@ -30,9 +30,7 @@ export const ananuriGudauriTour = {
               ...[
                 { props: { text: '- Zhinvali Water Reservoir' } },
                 { props: { text: '- Ananuri Fortress' } },
-                { props: { text: '- London bridge' } },
                 { props: { text: '- Gudauri Panorama' } },
-                { props: { text: '- I Love Tbilisi Statue' } },
                 { props: { text: '- Spring Water Mountain' } },
                 { props: { text: '- Kazbegi city ( Gergeti church extra charge)' } }
               ]

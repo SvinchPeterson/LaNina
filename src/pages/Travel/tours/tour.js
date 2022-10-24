@@ -28,7 +28,7 @@ const props = {
   },
 
   title: {
-    fontSize: '25px',
+    fontSize: 'D',
     fontWeight: '100',
     textTransform: 'uppercase',
     position: 'absolute',

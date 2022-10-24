@@ -2,14 +2,14 @@
 
 import { Tour } from '../../../../components'
 
-import { tbilisiTravelText, ananuriText, gudauriText, gergetText, kakhetiText } from '../../../../texts'
+import { tbilisiTravelText, ananuriText, gudauriText, gergetText } from '../../../../texts'
 
-import { $3n4dGallery } from '../galleries/3n4dGallery'
+import { $2n3dGallery } from '../galleries/2n3dGallery'
 
-export const $3n4dTour = {
+export const $2n3dTour = {
   extend: Tour,
 
-  gallery: { extend: $3n4dGallery },
+  gallery: { extend: $2n3dGallery },
 
   article: {
     articleContainer: {
@@ -37,26 +37,7 @@ export const $3n4dTour = {
 
         {
           captionButton: {},
-          title: { text: 'day 2 - kakheti tour' },
-          paragraphs: {
-            childExtend: kakhetiText
-          },
-          list: {
-            title: { },
-            list: {
-              ...[
-                { props: { text: '- Wine Tasting in Traditional Winery' } },
-                { props: { text: '- Bodbe Monastery' } },
-                { props: { text: '- ST. Nino Waterfall' } },
-                { props: { text: '- Signagi City' } }
-              ]
-            }
-          }
-        },
-
-        {
-          captionButton: {},
-          title: { text: 'day 3 - Ananuri / Gudauri / Kazbegi' },
+          title: { text: 'day 2 - Ananuri / Gudauri / Kazbegi' },
           paragraphs: {
             ...[
               { extend: ananuriText },
@@ -79,17 +60,15 @@ export const $3n4dTour = {
         },
 
         {
-          title: { text: 'day 4 - Departure TBS Airport' },
+          title: { text: 'day 3 - Departure TBS Airport' },
           list: {
             title: { text: 'Package Inclusion:' },
             list: {
               ...[
-                { props: { text: '3 Night Day Hotel' } },
-                { props: { text: '3 Days Private tour' } },
+                { props: { text: '2 Night Hotel Stay city center' } },
+                { props: { text: '2 Days Private tour' } },
                 { props: { text: 'Comfortable Car with professional driver' } },
-                { props: { text: 'English speaking Guide' } },
-                { props: { text: '2 Transfers from to Airport' } },
-                { props: { text: 'Wine excursion wine tasting included in Kakheti wine factory' } }
+                { props: { text: '2 Transfers from to Airport' } }
               ]
             }
           }

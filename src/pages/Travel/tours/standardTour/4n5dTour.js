@@ -4,12 +4,12 @@ import { Tour } from '../../../../components'
 
 import { tbilisiTravelText, ananuriText, gudauriText, gergetText, kakhetiText } from '../../../../texts'
 
-import { $3n4dGallery } from '../galleries/3n4dGallery'
+import { $4n5dGallery } from '../galleries/4n5dGallery'
 
-export const $3n4dTour = {
+export const $4n5dTour = {
   extend: Tour,
 
-  gallery: { extend: $3n4dGallery },
+  gallery: { extend: $4n5dGallery },
 
   article: {
     articleContainer: {
@@ -79,15 +79,20 @@ export const $3n4dTour = {
         },
 
         {
-          title: { text: 'day 4 - Departure TBS Airport' },
+          title: { text: 'day 4 - Tbilisi City free day' },
+          list: null
+        },
+
+        {
+          title: { text: 'day 5 - Departure TBS Airport' },
           list: {
             title: { text: 'Package Inclusion:' },
             list: {
               ...[
-                { props: { text: '3 Night Day Hotel' } },
+                { props: { text: '4 Night Day Hotel' } },
                 { props: { text: '3 Days Private tour' } },
-                { props: { text: 'Comfortable Car with professional driver' } },
                 { props: { text: 'English speaking Guide' } },
+                { props: { text: 'Comfortable Car with professional driver' } },
                 { props: { text: '2 Transfers from to Airport' } },
                 { props: { text: 'Wine excursion wine tasting included in Kakheti wine factory' } }
               ]

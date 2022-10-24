@@ -26,6 +26,8 @@ const props = {
   articleContainer: {
     boxSizing: 'border-box',
     padding: '- - C1 -',
+    flow: 'column',
+    gap: 'B',
     style: {
       overflowY: 'auto',
       '@media only screen and (min-width: 1280px)': { maxHeight: `${350 / 16}em` }
@@ -34,6 +36,17 @@ const props = {
     childProps: {
       flow: 'column',
       gap: '0',
+      padding: '- - Z -',
+      ':not(:last-child)': { borderBottom: '.5px solid gray' },
+
+      title: {
+        color: 'cream2 .55',
+        fontSize: 'B',
+        textTransform: 'capitalize',
+        padding: '- - Z2 -',
+        fontWeight: '700',
+        '@mobileXS': { fontSize: `A` }
+      },
 
       paragraphs: {
         flow: 'column',
@@ -105,9 +118,10 @@ export const TourArticle = {
   },
 
   articleContainer: {
+    extend: Flex,
     childExtend: {
       extend: Flex,
-      title: { },
+      title: { tag: 'h3' },
       paragraphs: {
         extend: Flex,
         childProps: { tag: 'p' }

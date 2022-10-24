@@ -340,8 +340,8 @@ export const kakhetiText = {
         `Kakheti is also rich in history. Here you'll find the incredible monastery complex of `,
         { tag: 'span', text: 'Davit Gareji' },
         ', The picturesque hilltop town of ',
-        { tag: 'span', text: 'Sighnagi City of Love,' },
-        'and Many of beautiful Churches, Castles and mansions around the main town ',
+        { tag: 'span', text: 'Sighnagi City of Love' },
+        ', and Many of beautiful Churches, Castles and mansions around the main town ',
         { tag: 'span', text: 'Telavi' }
       ]
 
@@ -485,4 +485,73 @@ export const mtsketaText = {
       ]
     }
   ]
+}
+
+export const yerevanText = {
+  props: {
+    text: ` is the capital of the Republic of Armenia. In Soviet years Yerevan
+    underwent massive reconstruction, following architect Alexander Tamanyan's plan to make
+    a "perfect city" - a Neo-Classical town with wide avenues, resembling Paris, Vienna and Saint
+    Petersburg.Central Yerevan is a true jewel of early Soviet architecture.
+    `,
+    span: { text: `Yerevan` }
+  },
+  span: {}
+}
+
+export const khorViperText = {
+  props: {
+    text: ` embodies the unquenchable longing of the entire Armenian people about their historical homeland and the biblical Mount Ararat. Khor Virap on the background of biblical Ararat has long become a symbol of
+    Armenia and the most famous landmark ever depicted on various postcards and pictures.
+    `,
+    span: { text: `The monastery of Khor Virap` }
+  },
+  span: {}
+}
+
+export const noravankText = {
+  props: {
+    text: ` was built 13 centuries
+    ago! The monastery stands majestically in the
+    gorge of the river Arpa, and in the gorge,
+    makes the view even more impressive.
+    `,
+    span: { text: `Noravank Monastery` }
+  },
+  span: {}
+}
+
+export const savaneText = {
+  props: {
+    text: ` the emerald of Armenia, is situated in the center of the marz.
+    Lake Sevan is 1,900 meters above the sea level. It is one of the highest among the freshwater lakes in
+    the world. Here are a great number of resorts, hotels and motels here and comfortable beaches.
+    `,
+    span: { text: `Lake Sevan` }
+  },
+  span: {}
+}
+
+export const savaneMonastryText = {
+  props: {
+    text: ` was built in 874. The complex consists of three churches, forecourt, a school, and other church
+    constructions.
+    `,
+    span: { text: `Lake Sevan Monastry` }
+  },
+  span: {}
+}
+
+export const dilijanText = {
+  props: {
+    text: ` is a resort town with mild climate, fresh
+    air in the northeast of Yerevan. It is famous for
+    its amazing surroundings, called the "Armenian
+    Switzerland" by the locals, due to the densely
+    forested valleys and mountains with alpine
+    meadows around.
+    `,
+    span: { text: `Dilijan` }
+  },
+  span: {}
 }
