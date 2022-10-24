@@ -1,6 +1,6 @@
 'use strict'
 
-import { ImgGallery } from '../../../../components'
+import { TourGallery } from '../../../../components'
 
 import SIGNAGI_JPG from '../../../../assets/images/travel/kakheti/signagi3.jpg'
 import SIGNAGI2_JPG from '../../../../assets/images/travel/kakheti/signagi2.jpg'
@@ -9,7 +9,7 @@ import BODBE_JPG from '../../../../assets/images/travel/kakheti/bodbe.jpg'
 import TELAVI_JPG from '../../../../assets/images/travel/kakheti/telavi.jpg'
 
 export const kakhetiGallery = {
-  extend: ImgGallery,
+  extend: TourGallery,
 
   props: { title: { text: 'kakheti tour' } },
 

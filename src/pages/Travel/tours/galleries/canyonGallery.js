@@ -1,6 +1,6 @@
 'use strict'
 
-import { ImgGallery } from '../../../../components'
+import { TourGallery } from '../../../../components'
 
 import BRILIANT_JPG from '../../../../assets/images/travel/canyon/briliant2.jpg'
 import BRILIANT2_JPG from '../../../../assets/images/travel/canyon/briliant.jpg'
@@ -8,7 +8,7 @@ import CANYON_JPG from '../../../../assets/images/travel/canyon/canyon.jpg'
 import CANYON2_JPG from '../../../../assets/images/travel/canyon/canyon2.jpg'
 
 export const canyonGallery = {
-  extend: ImgGallery,
+  extend: TourGallery,
 
   props: { title: { text: 'Dashbashi Canyon' } },
 

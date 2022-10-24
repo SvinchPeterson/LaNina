@@ -1,6 +1,6 @@
 'use strict'
 
-import { ImgGallery } from '../../../../components'
+import { TourGallery } from '../../../../components'
 
 import OLD_TBILISI_JPG from '../../../../assets/images/travel/oldTbilisi/oldTbilisi2.jpg'
 import ABANOTUBANI_JPG from '../../../../assets/images/travel/oldTbilisi/abanotUbani.jpg'
@@ -10,7 +10,7 @@ import BRIDGE2_JPG from '../../../../assets/images/travel/oldTbilisi/oldTbilisi.
 import METEKHI_JPG from '../../../../assets/images/travel/oldTbilisi/metekhi2.jpg'
 
 export const oldTbilisiGallery = {
-  extend: ImgGallery,
+  extend: TourGallery,
   title: {},
 
   images: {

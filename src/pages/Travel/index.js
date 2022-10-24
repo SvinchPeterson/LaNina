@@ -25,7 +25,13 @@ const state = {
   activeAnanuriGudauriGalleryImage: 0,
   activeCanyonGalleryImage: 0,
   activeArrow: false,
-  activeKakhetiGalleryImage: 0
+  activeKakhetiGalleryImage: 0,
+  activeKutaisiGalleryImage: 0,
+  activeGoriGalleryImage: 0,
+  activeBorjomiGalleryImage: 0,
+  activeRabatiGalleryImage: 0,
+  activeMtsketaGalleryImage: 0
+
 }
 
 export default {

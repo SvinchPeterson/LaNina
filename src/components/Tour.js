@@ -3,7 +3,7 @@
 import { Flex, Img } from 'smbls'
 
 import DOWN_ARROW_PNG from '../assets/icons/downArrow-cream.png'
-import { ImgGallery } from './ImgGallery'
+import { TourGallery } from './TourGallery'
 import { TourArticle } from './TourArticle'
 
 const props = {
@@ -17,12 +17,12 @@ const props = {
 
   captionButton: {
     display: 'none',
-    alignSelf: 'flex-start',
+    alignSelf: 'center',
     background: 'transparent',
     padding: 'Y2 Z2',
-    gap: 'Y',
+    gap: 'Y2',
     align: 'center center',
-    margin: 'A - - -',
+    margin: 'A2 - - -',
     color: 'cream2',
     textTransform: 'capitalize',
     border: 'none',
@@ -48,7 +48,7 @@ export const Tour = {
   extend: Flex,
   props,
 
-  gallery: { extend: ImgGallery },
+  gallery: { extend: TourGallery },
 
   captionButton: {
     tag: 'button',

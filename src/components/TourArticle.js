@@ -18,7 +18,7 @@ const props = {
     position: 'absolute',
     bottom: '-5px',
     left: '0',
-    // boxShadow: '0px 0px 50px 30px #283d4f',
+    boxShadow: '0px 0px 100px 50px #1e3447;',
     '@tabletM': { display: 'block' }
   },
   '@mobileXS': { padding: '- X2' },
@@ -42,17 +42,16 @@ const props = {
         childProps: {
           fontSize: `${15.5 / 16}em`,
           maxWidth: `${500 / 15.5}em`,
-          color: 'cream2 .75',
+          color: 'cream2 .7',
           fontWeight: '400',
-          '@tabletM': { maxWidth: 'H' },
-          // '@mobileL': { maxWidth: 'G3' },
+          '@tabletM': { maxWidth: 'H1' },
+          '@mobileL': { maxWidth: 'H' },
           '@mobileM': { maxWidth: 'G3' },
-          '@mobileS': { maxWidth: 'G1' },
+          '@mobileS': { maxWidth: 'G2' },
           style: {
             span: { color: 'rgba(248, 241, 227, 1)', fontWeight: 700 },
             '@media only screen and (max-width: 400px)': { fontSize: `${13.5 / 16}em` }
           }
-          // span: { fontWeight: '700', color: 'cream2 1' }
         }
       },
 
@@ -75,7 +74,7 @@ const props = {
           padding: '- - - Y',
           childProps: {
             fontSize: 'Z',
-            color: 'cream2 .75',
+            color: 'cream2 .85',
             style: { letterSpacing: '.5px' }
           }
         }

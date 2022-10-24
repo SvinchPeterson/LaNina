@@ -6,7 +6,6 @@ import { NavHorizontalArrowsCream } from './NavigationArrows'
 
 const props = {
   flow: 'column',
-  // maxWidth: 'H',
   gap: 'A',
   position: 'relative',
   '@mobileL': { gap: 'Y1' },
@@ -32,14 +31,13 @@ const props = {
   },
 
   images: {
-    boxSize: 'G H',
+    boxSize: 'G1 H1',
     display: 'block',
     position: 'relative',
+    '@mobileL': { boxSize: 'F3 H' },
     '@mobileM': { boxSize: 'F3 G3' },
     '@mobileS': { boxSize: 'F3 G1' },
     '@mobileXS': { boxSize: 'F3 G' },
-
-    // '@mobileS': { boxSize: 'F1 G1' },
     style: { '@media only screen and (max-width: 400px)': { maxWidth: `${310 / 16}em`, maxHeight: `${180 / 16}em` } },
     childProps: {
       position: 'absolute',
@@ -71,7 +69,9 @@ const props = {
       color: 'cream2',
       textTransform: 'uppercase',
       opacity: '.85',
-      ':hover': { opacity: '1' },
+      ':hover': {
+        opacity: '1'
+      },
       '@mobileS': { fontSize: `${10 / 16}em` }
     },
 
@@ -85,22 +85,13 @@ const props = {
   }
 }
 
-export const ImgGallery = {
+export const TourGallery = {
   extend: Flex,
   props,
 
   title: {},
 
-  images: {
-    childExtend: {
-      extend: Img
-
-      // class: {
-      //   show: (element, state) => state.activeGalleryImage === parseInt(element.key)
-      //     ? { opacity: 1, transition: 'all .5s ease-in-out' } : { opacity: 0, transition: 'all .5s ease-in-out' }
-      // }
-    }
-  },
+  images: { childExtend: { extend: Img } },
 
   footer: {
     extend: Flex,

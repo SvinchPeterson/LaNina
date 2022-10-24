@@ -1,6 +1,6 @@
 'use strict'
 
-import { ImgGallery } from '../../../../components'
+import { TourGallery } from '../../../../components'
 
 import KAZBEGI_JPG from '../../../../assets/images/travel/ananuri-gudauri/gazbegi.jpg'
 import GERGET_JPG from '../../../../assets/images/travel/ananuri-gudauri/gerget.jpg'
@@ -9,7 +9,7 @@ import ANANURI_JPG from '../../../../assets/images/travel/ananuri-gudauri/ananur
 import GUDAURI_JPG from '../../../../assets/images/travel/ananuri-gudauri/gudauri.jpg'
 
 export const ananuriGudauriGallery = {
-  extend: ImgGallery,
+  extend: TourGallery,
 
   props: { title: { text: 'ananuri - gudauri - kazbegi' } },
 

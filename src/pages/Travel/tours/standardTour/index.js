@@ -4,6 +4,8 @@ import { Flex } from 'smbls'
 
 import { tour } from '../tour'
 
+import { $3n4dTour } from './3n4dTour'
+
 export const standardTour = {
   extend: tour,
   props: { title: { span: { text: 'standard' } } },
@@ -16,5 +18,6 @@ export const standardTour = {
 
   title: { extend: Flex, span: {} },
   tours: {
+    $3n4dTour
   }
 }

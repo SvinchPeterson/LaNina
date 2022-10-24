@@ -46,13 +46,13 @@ const props = {
 
   tours: {
     flow: 'column',
-    gap: 'C2',
+    gap: 'E',
     align: 'center flex-start',
     style: { overflowY: 'auto' },
-
     maxHeight: '100%',
     padding: '- - F -',
-    '::-webkit-scrollbar': { display: 'none' }
+    '::-webkit-scrollbar': { display: 'none' },
+    '@mobileL': { gap: 'D' }
   }
 }
 

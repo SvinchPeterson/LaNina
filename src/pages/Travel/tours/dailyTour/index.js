@@ -7,6 +7,11 @@ import { oldTbilisiTour } from './oldTbilisiTour'
 import { ananuriGudauriTour } from './ananuriGdauriTour'
 import { canyonTour } from './canyonTour'
 import { kakhetiTour } from './kakhetiTour'
+import { kutaisiTour } from './kutaisiTour'
+import { goriTour } from './goriTour'
+import { borjomiTour } from './borjomiTour'
+import { rabatiTour } from './rabatiTour'
+import { mtsketaTour } from './mtsketaTour'
 
 export const dailyTour = {
   extend: tour,
@@ -21,6 +26,11 @@ export const dailyTour = {
     oldTbilisiTour,
     ananuriGudauriTour,
     canyonTour,
-    kakhetiTour
+    mtsketaTour,
+    kakhetiTour,
+    kutaisiTour,
+    goriTour,
+    borjomiTour,
+    rabatiTour
   }
 }
