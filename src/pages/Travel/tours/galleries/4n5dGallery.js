@@ -90,6 +90,64 @@ export const $4n5dGallery = {
           }
         }
       ]
+    },
+
+    bookContainer: {
+      book: {
+        on: {
+          click: (event, element, state) => {
+            state.active_5d_TourMail
+              ? state.update({ active_5d_TourMail: false, active_5d_TourBook: false, active_5d_TourBooked: true })
+              : state.update({ active_5d_TourMail: true })
+          }
+        },
+
+        class: {
+          show: (element, state) => state.active_5d_TourMail
+            ? {
+              background: '#28819c',
+              border: '1px solid rgba(0, 0, 0, 0)'
+            }
+            : {
+              background: 'transparent'
+            },
+
+          show2: (element, state) => state.active_5d_TourBooked
+            ? {
+              pointerEvents: 'none',
+              opacity: '.55'
+            }
+            : {
+            }
+        },
+
+        span: {
+          class: {
+            show: (element, state) => state.active_5d_TourBook
+              ? { display: 'block' } : { display: 'none' }
+          }
+        },
+        booked: {
+          class: {
+            show: (element, state) => state.active_5d_TourBooked
+              ? { display: 'block' } : { display: 'none' }
+          }
+        }
+      },
+
+      email: {
+        class: {
+          show: (element, state) => state.active_5d_TourMail
+            ? { display: 'block' } : { display: 'none' }
+        }
+      },
+
+      paragraph: {
+        class: {
+          show: (element, state) => state.active_5d_TourBooked
+            ? { display: 'block' } : { display: 'none' }
+        }
+      }
     }
   }
 }

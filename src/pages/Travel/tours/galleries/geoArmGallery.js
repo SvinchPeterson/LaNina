@@ -116,6 +116,64 @@ export const geoArmGallery = {
           }
         }
       ]
+    },
+
+    bookContainer: {
+      book: {
+        on: {
+          click: (event, element, state) => {
+            state.active_arm_TourMail
+              ? state.update({ active_arm_TourMail: false, active_arm_TourBook: false, active_arm_TourBooked: true })
+              : state.update({ active_arm_TourMail: true })
+          }
+        },
+
+        class: {
+          show: (element, state) => state.active_arm_TourMail
+            ? {
+              background: '#28819c',
+              border: '1px solid rgba(0, 0, 0, 0)'
+            }
+            : {
+              background: 'transparent'
+            },
+
+          show2: (element, state) => state.active_arm_TourBooked
+            ? {
+              pointerEvents: 'none',
+              opacity: '.55'
+            }
+            : {
+            }
+        },
+
+        span: {
+          class: {
+            show: (element, state) => state.active_arm_TourBook
+              ? { display: 'block' } : { display: 'none' }
+          }
+        },
+        booked: {
+          class: {
+            show: (element, state) => state.active_arm_TourBooked
+              ? { display: 'block' } : { display: 'none' }
+          }
+        }
+      },
+
+      email: {
+        class: {
+          show: (element, state) => state.active_arm_TourMail
+            ? { display: 'block' } : { display: 'none' }
+        }
+      },
+
+      paragraph: {
+        class: {
+          show: (element, state) => state.active_arm_TourBooked
+            ? { display: 'block' } : { display: 'none' }
+        }
+      }
     }
   }
 }

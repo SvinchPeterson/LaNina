@@ -62,6 +62,64 @@ export const oldTbilisiGallery = {
           }
         }
       ]
+    },
+
+    bookContainer: {
+      book: {
+        on: {
+          click: (event, element, state) => {
+            state.active_Tbilisi_TourMail
+              ? state.update({ active_Tbilisi_TourMail: false, active_Tbilisi_TourBook: false, active_Tbilisi_TourBooked: true })
+              : state.update({ active_Tbilisi_TourMail: true })
+          }
+        },
+
+        class: {
+          show: (element, state) => state.active_Tbilisi_TourMail
+            ? {
+              background: '#28819c',
+              border: '1px solid rgba(0, 0, 0, 0)'
+            }
+            : {
+              background: 'transparent'
+            },
+
+          show2: (element, state) => state.active_Tbilisi_TourBooked
+            ? {
+              pointerEvents: 'none',
+              opacity: '.55'
+            }
+            : {
+            }
+        },
+
+        span: {
+          class: {
+            show: (element, state) => state.active_Tbilisi_TourBook
+              ? { display: 'block' } : { display: 'none' }
+          }
+        },
+        booked: {
+          class: {
+            show: (element, state) => state.active_Tbilisi_TourBooked
+              ? { display: 'block' } : { display: 'none' }
+          }
+        }
+      },
+
+      email: {
+        class: {
+          show: (element, state) => state.active_Tbilisi_TourMail
+            ? { display: 'block' } : { display: 'none' }
+        }
+      },
+
+      paragraph: {
+        class: {
+          show: (element, state) => state.active_Tbilisi_TourBooked
+            ? { display: 'block' } : { display: 'none' }
+        }
+      }
     }
   }
 }

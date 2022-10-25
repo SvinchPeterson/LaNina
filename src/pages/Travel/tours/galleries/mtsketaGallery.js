@@ -62,6 +62,64 @@ export const mtsketaGallery = {
           }
         }
       ]
+    },
+
+    bookContainer: {
+      book: {
+        on: {
+          click: (event, element, state) => {
+            state.active_Mtsketa_TourMail
+              ? state.update({ active_Mtsketa_TourMail: false, active_Mtsketa_TourBook: false, active_Mtsketa_TourBooked: true })
+              : state.update({ active_Mtsketa_TourMail: true })
+          }
+        },
+
+        class: {
+          show: (element, state) => state.active_Mtsketa_TourMail
+            ? {
+              background: '#28819c',
+              border: '1px solid rgba(0, 0, 0, 0)'
+            }
+            : {
+              background: 'transparent'
+            },
+
+          show2: (element, state) => state.active_Mtsketa_TourBooked
+            ? {
+              pointerEvents: 'none',
+              opacity: '.55'
+            }
+            : {
+            }
+        },
+
+        span: {
+          class: {
+            show: (element, state) => state.active_Mtsketa_TourBook
+              ? { display: 'block' } : { display: 'none' }
+          }
+        },
+        booked: {
+          class: {
+            show: (element, state) => state.active_Mtsketa_TourBooked
+              ? { display: 'block' } : { display: 'none' }
+          }
+        }
+      },
+
+      email: {
+        class: {
+          show: (element, state) => state.active_Mtsketa_TourMail
+            ? { display: 'block' } : { display: 'none' }
+        }
+      },
+
+      paragraph: {
+        class: {
+          show: (element, state) => state.active_Mtsketa_TourBooked
+            ? { display: 'block' } : { display: 'none' }
+        }
+      }
     }
   }
 }

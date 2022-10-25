@@ -1,6 +1,8 @@
 'use strict'
 
-import { Img, Flex, Button } from 'smbls'
+import { Img, Flex } from 'smbls'
+
+import { TourBook } from './TourBook'
 
 import { NavHorizontalArrowsCream } from './NavigationArrows'
 
@@ -9,7 +11,6 @@ const props = {
   gap: 'A',
   position: 'relative',
   '@mobileL': { gap: 'Y1' },
-  // '@mobileS': { width: '100%' },
 
   title: {
     text: 'Tbilisi City Tour',
@@ -57,29 +58,10 @@ const props = {
     height: 'fit-content',
     flow: 'row-reverse',
     align: 'center space-between',
-
-    book: {
-      text: 'book',
-      round: 'D',
-      padding: 'A C1',
-      fontSize: `${12 / 16}em`,
-      fontWeight: '700',
-      background: 'transparent',
-      border: '1px solid silver',
-      color: 'cream2',
-      textTransform: 'uppercase',
-      opacity: '.85',
-      ':hover': {
-        opacity: '1'
-      },
-      '@mobileS': { fontSize: `${10 / 16}em` }
-    },
-
     navArrow: {
       childProps: {
         opacity: '.85',
         ':hover': { opacity: '1' }
-        // '@mobileS': { boxSize: `X ` }
       }
     }
   }
@@ -95,10 +77,9 @@ export const TourGallery = {
 
   footer: {
     extend: Flex,
-    navArrow: {
-      extend: NavHorizontalArrowsCream
-    },
 
-    book: { extend: Button }
+    navArrow: { extend: NavHorizontalArrowsCream },
+
+    bookContainer: { extend: TourBook }
   }
 }
