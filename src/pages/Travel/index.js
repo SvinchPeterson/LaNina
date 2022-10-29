@@ -127,14 +127,14 @@ export default {
   },
   state,
 
-  // header,
-  // headerMobile,
-  // menu,
-  // travelBanner,
-  // country,
-  // gallery,
-  tours
-  // aboutUs,
-  // planTrip,
-  // footer
+  header,
+  headerMobile,
+  menu,
+  travelBanner,
+  country,
+  gallery,
+  tours,
+  aboutUs,
+  planTrip,
+  footer
 }

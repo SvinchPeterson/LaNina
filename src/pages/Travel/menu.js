@@ -7,9 +7,10 @@ export const menu = {
   nav: {
     ...[
       { props: { text: 'tours', href: '#tours' } },
-      { props: { text: 'blog', href: '#blog' } },
-      { props: { text: 'about', href: 'about' } },
-      { props: { text: 'contact', href: '#contact' } }
+      { props: { text: 'about us', href: '#about' } },
+      { props: { text: 'contact', href: '#contact' } },
+      { props: { display: 'none' } },
+      { props: { display: 'none' } }
     ]
   }
 }

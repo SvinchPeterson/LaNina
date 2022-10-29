@@ -7,10 +7,10 @@ export const header = {
   navBar: {
     ...[
       { props: { text: 'tours', href: '#tours' } },
-      { props: { text: 'video blog', href: '#blog' } },
       { props: { text: 'about us', href: '#about' } },
       { props: { text: 'contact' } },
-      { props: { text: '' } }
+      { props: { display: 'none' } },
+      { props: { display: 'none' } }
     ]
   }
 }

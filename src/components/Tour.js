@@ -20,7 +20,6 @@ const props = {
     alignSelf: 'center',
     background: 'transparent',
     padding: 'Y2 Z2',
-    // border: '2px solid red',
     gap: 'Y2',
     align: 'center center',
     margin: 'A2 - - -',
@@ -55,23 +54,6 @@ export const Tour = {
   captionButton: {
     tag: 'button',
     extend: Flex,
-    // on: {
-    //   click: (event, element, state) => {
-    //     state.activeDescription
-    //       ? state.update({ activeDescription: false, activeArrow: false })
-    //       : state.update({ activeDescription: true, activeArrow: true })
-    //   }
-    // },
-
-    // class: {
-    //   show: (element, state) => state.activeArrow
-    //     ? {
-    //       '> img': { transform: 'rotate(180deg)' }
-    //     }
-    //     : {
-    //       '> img': { transform: 'rotate(0deg)' }
-    //     }
-    // },
     span: {},
     icon: { extend: Img }
   },
