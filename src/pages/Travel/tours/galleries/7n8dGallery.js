@@ -150,13 +150,6 @@ export const $7n8dGallery = {
           show: (element, state) => state.active_8d_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_8d_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

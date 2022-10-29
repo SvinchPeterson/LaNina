@@ -1,15 +1,18 @@
 'use strict'
 
-import { Flex, Button, Input } from 'smbls'
+import { Flex, Button, Input, Img } from 'smbls'
+
+import TICK_PNG from '../assets/icons/tick.png'
 
 const props = {
   round: 'C',
   gap: 'Z',
   alignItems: 'center',
+  '@mobileXS': { gap: 'Y' },
 
   book: {
     border: '1px solid gray',
-    padding: 'A -',
+    padding: 'Z2 -',
     width: 'E2',
     fontSize: `${12 / 16}em`,
     fontWeight: '700',
@@ -18,30 +21,39 @@ const props = {
     opacity: '.85',
     ':hover': { opacity: '1' },
     span: { text: 'book' },
-    booked: { text: 'booked' },
+    booked: {
+      align: 'center center',
+      gap: 'B',
+      color: '#AFFFD2',
+      span: { text: 'booked' },
+      icon: {
+        src: TICK_PNG,
+        boxSize: ' A1',
+        margin: '- - - Z'
+      }
+    },
     '@mobileS': { fontSize: `${10 / 16}em` }
   },
 
   email: {
-    placeholder: 'type email',
+    // border: '1px solid red',
+    placeholder: '. . . email',
     background: 'transparent',
     color: 'cream2',
-    border: 'none',
+    // position: 'relative',
+    // border: 'none',
     outline: 'none',
     minHeight: '100%',
     fontSize: 'Z',
     padding: 'Z A',
+    width: 'F',
+    '@mobileS': { padding: 'Y Z', width: 'E' },
     style: {
       textAlign: 'center',
       outline: 'none',
-      letterSpacing: '1px'
+      letterSpacing: '1px',
+      overflowX: 'auto'
     }
-  },
-
-  paragraph: {
-    text: 'received your request !',
-    color: '#66e394',
-    fontSize: 'Z'
   }
 }
 
@@ -52,7 +64,11 @@ export const TourBook = {
   book: {
     extend: Button,
     span: {},
-    booked: {}
+    booked: {
+      extend: Flex,
+      span: {},
+      icon: { extend: Img }
+    }
   },
 
   email: {
@@ -62,7 +78,5 @@ export const TourBook = {
       id: 'email'
     },
     style: { outline: 'none !important' }
-  },
-
-  paragraph: {}
+  }
 }

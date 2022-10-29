@@ -112,13 +112,6 @@ export const rabatiGallery = {
           show: (element, state) => state.active_Rabat_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_Rabat_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

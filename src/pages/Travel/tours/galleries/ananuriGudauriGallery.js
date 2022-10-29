@@ -114,13 +114,6 @@ export const ananuriGudauriGallery = {
           show: (element, state) => state.active_Ananuri_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_Ananuri_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

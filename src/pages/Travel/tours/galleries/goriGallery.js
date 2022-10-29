@@ -114,13 +114,6 @@ export const goriGallery = {
           show: (element, state) => state.active_Gori_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_Gori_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

@@ -166,13 +166,6 @@ export const geoArmGallery = {
           show: (element, state) => state.active_arm_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_arm_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

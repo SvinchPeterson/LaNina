@@ -8,7 +8,7 @@ import { NavHorizontalArrowsCream } from './NavigationArrows'
 
 const props = {
   flow: 'column',
-  gap: 'A',
+  gap: 'Z',
   position: 'relative',
   '@mobileL': { gap: 'Y1' },
 
@@ -16,30 +16,23 @@ const props = {
     text: 'Tbilisi City Tour',
     fontWeight: '500',
     fontSize: 'Z',
-    position: 'absolute',
     color: 'cream2',
-    top: 'Y2',
-    right: '-B1',
     textTransform: 'uppercase',
-    style: {
-      writingMode: 'vertical-lr',
-      letterSpacing: '1px'
-    },
-    '@mobileL': {
-      position: 'initial',
-      style: { writingMode: 'initial' }
-    }
+    '@mobileS': { padding: '- - - A' }
   },
 
   images: {
     boxSize: 'G1 H1',
     display: 'block',
     position: 'relative',
-    '@mobileL': { boxSize: 'F3 H' },
+    // border: '5px solid red',
+    '@mobileL': { boxSize: 'G H' },
     '@mobileM': { boxSize: 'F3 G3' },
     '@mobileS': { boxSize: 'F3 G1' },
-    '@mobileXS': { boxSize: 'F3 G' },
-    style: { '@media only screen and (max-width: 400px)': { maxWidth: `${310 / 16}em`, maxHeight: `${180 / 16}em` } },
+    style: {
+      // boxShadow: '0px 0px 10px 1px black;',
+      '@media only screen and (max-width: 400px)': { maxWidth: `${310 / 16}em`, maxHeight: `${180 / 16}em` }
+    },
     childProps: {
       position: 'absolute',
       boxSize: '100% 100%'
@@ -58,9 +51,11 @@ const props = {
     height: 'fit-content',
     flow: 'row-reverse',
     align: 'center space-between',
+    '@mobileXS': { padding: 'A Z1 - Z1' },
     navArrow: {
       childProps: {
         opacity: '.85',
+        // border: '2px solid red',
         ':hover': { opacity: '1' }
       }
     }
@@ -78,7 +73,13 @@ export const TourGallery = {
   footer: {
     extend: Flex,
 
-    navArrow: { extend: NavHorizontalArrowsCream },
+    navArrow: {
+      extend: NavHorizontalArrowsCream,
+      props: {
+        '@mobileXS': { gap: 'B1' },
+        childProps: { arrow: { '@mobileXS': { boxSize: ' Z1' } } }
+      }
+    },
 
     bookContainer: { extend: TourBook }
   }

@@ -140,13 +140,6 @@ export const $4n5dGallery = {
           show: (element, state) => state.active_5d_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_5d_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

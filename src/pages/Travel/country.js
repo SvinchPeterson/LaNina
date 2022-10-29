@@ -9,7 +9,7 @@ import { Paragraph } from '../../components'
 const paragraph = {
   extend: Paragraph,
   props: {
-    title: { text: 'country' }
+    title: { text: 'about georgia' }
   },
 
   title: {},

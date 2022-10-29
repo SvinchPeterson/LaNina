@@ -12,14 +12,17 @@ const sendButton = {
   props: {
     boxSize: 'C2 F1',
     background: 'black',
-    round: 'C',
     border: 'none',
     outline: 'none',
     style: {
       cursor: 'pointer',
       border: 'none',
       justifySelf: 'center',
-      alignSelf: 'center'
+      alignSelf: 'center',
+      borderRadius: '30px',
+      borderRight: '1.5px solid rgba(245, 245, 245, 0)',
+      borderBottom: '1.5px solid rgba(245, 245, 245, 0)',
+      borderBottomRightRadius: '30px'
     },
     span: {
       text: 'SEND',

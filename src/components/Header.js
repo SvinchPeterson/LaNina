@@ -8,6 +8,8 @@ import { MenuButton } from './MenuButton'
 
 import LOGO_PNG from '../assets/icons/logo-white.png'
 
+import BACK_PNG from '../assets/icons/arrowBackcream.png'
+
 const props = {
   position: 'fixed',
   width: '100%',
@@ -28,6 +30,15 @@ const props = {
     }
   },
   '@mobileL': { padding: 'A B - B' },
+
+  back: {
+    position: 'absolute',
+    bottom: '-A1',
+    arrow: {
+      boxSize: ' A1'
+    }
+
+  },
 
   logo: {
     href: '#banner',
@@ -53,6 +64,14 @@ const props = {
 export const Header = {
   tag: 'header',
   props: props,
+  back: {
+    extend: Link,
+    attr: { href: '../#landing' },
+    arrow: {
+      extend: Img,
+      props: { src: BACK_PNG }
+    }
+  },
 
   logo: { extend: Link, icon: { extend: Img } },
 

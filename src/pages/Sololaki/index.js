@@ -14,7 +14,6 @@ const state = {
   back: true,
   tabs: 0
 }
-
 export const props = {
   position: 'relative',
   background: 'cream2',

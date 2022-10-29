@@ -12,6 +12,7 @@ const props = {
   backgroundPosition: 'center',
   padding: 'F2 0 F 0',
   align: 'center center',
+  position: 'relative',
   ':before': {
     content: '""',
     width: '100%',

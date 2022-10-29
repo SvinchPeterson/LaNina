@@ -114,13 +114,6 @@ export const kutaisiGallery = {
           show: (element, state) => state.active_Kutaisi_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_Kutaisi_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

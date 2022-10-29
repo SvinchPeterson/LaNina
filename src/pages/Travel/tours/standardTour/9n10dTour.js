@@ -14,7 +14,44 @@ export const $9n10dTour = {
 
   gallery: { extend: $9n10dGallery },
 
+  captionButton: {
+    on: {
+      click: (event, element, state) => {
+        state.active_10d_Description
+          ? state.update({ active_10d_Description: false })
+          : state.update({ active_10d_Description: true })
+      }
+    },
+
+    class: {
+      show: (element, state) => state.active_10d_Description
+        ? {
+          '> img': { transform: 'rotate(180deg)' }
+        }
+        : {
+          '> img': { transform: 'rotate(0deg)' }
+        }
+    }
+  },
+
   article: {
+    class: {
+      show: (element, state) => state.active_10d_Description
+        ? {
+          '@media only screen and (max-width: 1280px)': {
+            maxHeight: `${250 / 16}em`,
+            overflowY: 'auto',
+            paddingTop: `${35 / 16}em`
+          }
+        }
+        : {
+          '@media only screen and (max-width: 1280px)': {
+            maxHeight: `0`,
+            overflowY: 'hidden'
+          }
+        }
+    },
+
     articleContainer: {
       ...[
         {

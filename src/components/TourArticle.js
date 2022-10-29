@@ -12,6 +12,17 @@ const placesList = {
 
 const props = {
   position: 'relative',
+  boxSizing: 'border-box',
+  style: { transition: 'max-height .5s ease-in-out, padding-top .5s ease-in-out' },
+  ':before': {
+    content: '""',
+    boxSize: '0px 100%',
+    position: 'absolute',
+    top: '0px',
+    left: '0',
+    boxShadow: '0px 0px 100px 50px #1e3447',
+    '@tabletM': { display: 'block' }
+  },
   ':after': {
     content: '""',
     boxSize: '0px 100%',
@@ -21,15 +32,19 @@ const props = {
     boxShadow: '0px 0px 100px 50px #1e3447;',
     '@tabletM': { display: 'block' }
   },
-  '@mobileXS': { padding: '- X2' },
+  '@tabletM': { padding: '- A' },
+  // '@mobileXS': { padding: '- X2' },
 
   articleContainer: {
     boxSizing: 'border-box',
-    padding: '- - C1 -',
+    padding: 'C2 - C1 -',
     flow: 'column',
     gap: 'B',
+    '@tabletM': { padding: 'A - C1 -' },
     style: {
       overflowY: 'auto',
+      scrollBehavior: 'smooth',
+      '::-webkit-scrollbar': { display: 'none' },
       '@media only screen and (min-width: 1280px)': { maxHeight: `${350 / 16}em` }
     },
 
@@ -57,10 +72,10 @@ const props = {
           maxWidth: `${500 / 15.5}em`,
           color: 'cream2 .7',
           fontWeight: '400',
-          '@tabletM': { maxWidth: 'H1' },
           '@mobileL': { maxWidth: 'H' },
           '@mobileM': { maxWidth: 'G3' },
-          '@mobileS': { maxWidth: 'G2' },
+          '@mobileS': { fontSize: `${15 / 16}em`, maxWidth: 'G2' },
+          // '@mobileS': { maxWidth: 'G2' },
           style: {
             span: { color: 'rgba(248, 241, 227, 1)', fontWeight: 700 },
             '@media only screen and (max-width: 400px)': { fontSize: `${13.5 / 16}em` }
@@ -100,22 +115,22 @@ export const TourArticle = {
   props,
   extend: Flex,
 
-  class: {
-    show: (element, state) => state.activeDescription
-      ? {
-        '@media only screen and (max-width: 1280px)': {
-          maxHeight: `${250 / 16}em`,
-          overflowY: 'auto',
-          paddingTop: `${35 / 16}em`
-        }
-      }
-      : {
-        '@media only screen and (max-width: 1280px)': {
-          maxHeight: `0`,
-          overflowY: 'hidden'
-        }
-      }
-  },
+  // class: {
+  //   show: (element, state) => state.activeDescription
+  //     ? {
+  //       '@media only screen and (max-width: 1280px)': {
+  //         maxHeight: `${250 / 16}em`,
+  //         overflowY: 'auto',
+  //         paddingTop: `${35 / 16}em`
+  //       }
+  //     }
+  //     : {
+  //       '@media only screen and (max-width: 1280px)': {
+  //         maxHeight: `0`,
+  //         overflowY: 'hidden'
+  //       }
+  //     }
+  // },
 
   articleContainer: {
     extend: Flex,

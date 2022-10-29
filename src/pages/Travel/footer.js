@@ -25,6 +25,7 @@ export const footer = {
       href: '',
       span: { text: 'PLAN TRIP' }
     },
+
     on: {
       click: (event, element, state) => {
         state.activeForm

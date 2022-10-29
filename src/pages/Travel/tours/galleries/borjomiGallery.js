@@ -102,7 +102,7 @@ export const borjomiGallery = {
         booked: {
           class: {
             show: (element, state) => state.active_Borjomi_TourBooked
-              ? { display: 'block' } : { display: 'none' }
+              ? { display: 'block', color: '#AFFFD2' } : { display: 'none' }
           }
         }
       },
@@ -110,13 +110,6 @@ export const borjomiGallery = {
       email: {
         class: {
           show: (element, state) => state.active_Borjomi_TourMail
-            ? { display: 'block' } : { display: 'none' }
-        }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_Borjomi_TourBooked
             ? { display: 'block' } : { display: 'none' }
         }
       }

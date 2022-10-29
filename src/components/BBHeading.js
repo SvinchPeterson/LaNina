@@ -7,20 +7,19 @@ import LOGO_BIG_PNG from '../assets/icons/logoBig.png'
 
 const props = {
   align: 'center center',
-  gap: 'A',
+  gap: 'Z',
 
   logo: {
     src: LOGO_BIG_PNG,
-    boxSize: 'C ',
+    boxSize: 'B2 ',
     opacity: '.75'
   },
 
   title: {
     color: 'cream2',
     fontSize: 'G',
-    fontWeight: '100',
-    style: { letterSpacing: '3px' }
-    // textTransform: 'uppercase'
+    fontWeight: '100'
+    // style: { letterSpacing: '3px' }
   }
 }
 

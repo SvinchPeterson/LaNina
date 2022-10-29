@@ -1,13 +1,12 @@
 'use strict'
 
-import { Flex, Img, Box } from 'smbls'
+import { Flex } from 'smbls'
 
 import { deopacity, opacityLetterSpacing, position, opacity } from '../../animations'
 
-import { Title, BBHeading, Navbar } from '../../components'
+import { BBHeading, Navbar } from '../../components'
 
 import ORNAMENTS_PNG from '../../assets/images/landing/ornamentsGray.png'
-import LOGO_BIG_PNG from '../../assets/icons/logoBig.png'
 
 const props = {
   boxSize: '100% 100%',
@@ -21,7 +20,9 @@ const props = {
   style: {
     animationName: position,
     animationDuration: '20s',
-    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+    '@media only screen and (min-width: 1680px)': { fontSize: `${18 / 16}em` },
+    '@media only screen and (min-width: 1920px)': { fontSize: `${20 / 16}em` }
   },
   ':before': {
     content: '""',
@@ -40,117 +41,76 @@ const props = {
     content: '""',
     position: 'absolute',
     boxSize: '100% 100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .8), rgba(0, 0, 0, 1))',
-    zIndex: '3'
+    background: 'radial-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9), rgba(0, 0, 0, 1))'
   },
 
   sha: {
     boxSize: '100% 100%',
     position: 'absolute',
     top: '0',
-    left: '0',
-    background: 'radial-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .5))',
-    zIndex: '0'
-  },
-
-  logo: {
-    src: LOGO_BIG_PNG,
-    boxSize: '78% 50%',
-    margin: '- - - -',
-    zIndex: '3',
-    background: 'gold .0',
-    padding: 'D2',
-    '@tabletL': { display: 'none' },
-
-    style: {
-      transform: 'rotate(-20deg) skew(30deg)',
-      backdropFilter: 'blur(1px)',
-      animationName: opacity,
-      animationDuration: '4s',
-      animationTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-    }
+    left: '0'
   },
 
   content: {
     position: 'absolute',
     zIndex: '10',
     flow: 'column',
-    margin: '- - D1 H1',
+    margin: '- - D1 -',
     gap: '0',
+    lineHeight: `${17 / 16}em`,
     backdropFilter: 'blur(4px)',
-    transform: 'rotate(25deg) skew(30deg)',
     style: {
       animationName: opacity,
-      animationDuration: '4s',
+      animationDuration: '3s',
       animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
     },
-    '@tabletL': {
-      transform: 'rotate(0deg) skew(0deg)',
-      margin: 'auto',
-      padding: '- - F1 -',
-      gap: 'Y',
-      style: {
-        '@media only screen and (max-height: 1200px)': { paddingBottom: `${70 / 16}em` },
-        '@media only screen and (max-height: 750px)': { marginBottom: '0' }
-      }
-    },
+    '@mobileL': { lineHeight: `${40 / 16}em` },
 
     heading: {
-      display: 'none',
-      '@tabletL': { display: 'flex' },
-      '@mobileL': {
-        flow: 'column',
-        gap: 'Z'
-      },
-
-      logo: {
-        '@mobileL': { boxSize: 'C2 ' },
-        '@mobileXS': { boxSize: 'C1 ' }
-      },
-      title: { '@mobileXS': { fontSize: 'F' } }
-    },
-
-    title: {
-      color: 'cream2 .85',
-      fontSize: 'I',
-      style: {
-        animationName: opacityLetterSpacing,
-        animationDuration: '4s',
-        animationTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-      },
-      '@tabletL': { display: 'none' },
-      '@screenM': { fontSize: 'I' }
+      title: {
+        fontSize: 'G',
+        style: {
+          animationName: opacityLetterSpacing,
+          animationDuration: '3s',
+          animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+        }
+      }
     },
 
     navBar: {
       position: 'relative',
-      padding: 'C - - -',
       gap: 'C',
-      align: 'flex-start flex-end',
+      align: 'center center',
+      padding: 'C - - -',
+      flow: 'row',
       style: {
         animationName: opacity,
-        animationDuration: '5s',
+        animationDuration: '3s',
         animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
       },
       ':before': {
         content: '""',
-        boxSize: '1.5px 80%',
+        boxSize: '1px 60%',
         position: 'absolute',
-        round: 'C',
-        top: '0',
-        left: '20%',
-        background: 'radial-gradient(rgba(248, 241, 227, .75), rgba(248, 241, 227, 0))'
-      },
-      '@tabletL': {
-        align: 'center center',
-        padding: 'B2 - - -',
-        flow: 'row',
-        gap: 'C'
+        round: '100%',
+        top: 'A2',
+        right: '0%',
+        background: 'radial-gradient(rgba(220, 187, 140, .45) ,rgba(220, 187, 140, .25), rgba(220, 187, 140, 0))',
+        '@mobileL': {
+          boxSize: '1px 100%',
+          right: '-C',
+          top: 'A1'
+        },
+        '@mobileS': {
+          boxSize: '1px 80%',
+          right: '0'
+          // top: 'A1'
+        }
       },
       '@mobileL': {
         align: 'flex-start flex-start',
-        padding: 'A2 - - C',
-        gap: 'B1',
+        padding: 'B1 - - C',
+        gap: 'A',
         flow: 'column'
       },
 
@@ -159,7 +119,7 @@ const props = {
         style: {
           letterSpacing: '5px',
           '&:not(:last-child)': {
-            opacity: '.85'
+            opacity: '.65'
           }
         },
         '@mobileL': { fontSize: 'A' }
@@ -171,15 +131,16 @@ const props = {
 export default {
   extend: Flex,
   props,
+  attr: { id: 'landing' },
 
   sha: {},
-  logo: { extend: [Img, Box] },
 
   content: {
     extend: Flex,
 
-    heading: { extend: BBHeading },
-    title: { extend: Title },
+    heading: {
+      extend: BBHeading
+    },
     navBar: {
       extend: Navbar,
       ...[

@@ -23,6 +23,16 @@ const props = {
     animationDuration: '.5s',
     animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
   },
+  ':after': {
+    content: '""',
+    width: '100%',
+    height: '0',
+    // background: 'red',
+    position: 'absolute',
+    bottom: '100px',
+    left: '0',
+    style: { boxShadow: '0px 0px 120px 100px #1e3447' }
+  },
   '@tabletM': {
     boxSize: '100% 90%'
   },
@@ -48,11 +58,11 @@ const props = {
     flow: 'column',
     gap: 'E',
     align: 'center flex-start',
-    style: { overflowY: 'auto' },
+    style: { overflowY: 'auto', scrollBehavior: 'smooth' },
     maxHeight: '100%',
     padding: '- - F -',
-    '::-webkit-scrollbar': { display: 'none' },
-    '@mobileL': { gap: 'D' }
+    '::-webkit-scrollbar': { display: 'none' }
+    // '@mobileL': { gap: '0' }
   }
 }
 

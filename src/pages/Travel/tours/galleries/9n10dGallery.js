@@ -204,13 +204,6 @@ export const $9n10dGallery = {
           show: (element, state) => state.active_10d_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_10d_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

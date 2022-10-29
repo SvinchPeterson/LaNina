@@ -112,13 +112,6 @@ export const oldTbilisiGallery = {
           show: (element, state) => state.active_Tbilisi_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_Tbilisi_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

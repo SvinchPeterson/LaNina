@@ -99,8 +99,23 @@ const state = {
 
   active_arm_TourMail: false,
   active_arm_TourBook: true,
-  active_arm_TourBooked: false
+  active_arm_TourBooked: false,
 
+  activeTbilisiDescripion: false,
+  activeAnanuriDescripion: false,
+  activeGoriDescripion: false,
+  activeKakhetiDescripion: false,
+  activeCanyonDescripion: false,
+  activeKutaisiDescripion: false,
+  activeBorjomiDescripion: false,
+  activeRabatDescription: false,
+  activeMtsketaDescription: false,
+  active_3d_Description: false,
+  active_4d_Description: false,
+  active_5d_Description: false,
+  active_8d_Description: false,
+  active_10d_Description: false,
+  active_Armenia_Description: false
 }
 
 export default {

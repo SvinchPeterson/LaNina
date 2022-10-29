@@ -114,13 +114,6 @@ export const kakhetiGallery = {
           show: (element, state) => state.active_Kakheti_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_Kakheti_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }

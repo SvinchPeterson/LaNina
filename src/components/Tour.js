@@ -8,7 +8,7 @@ import { TourArticle } from './TourArticle'
 
 const props = {
   gap: 'D2',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   '@tabletM': {
     flow: 'column',
     gap: '0',
@@ -20,6 +20,7 @@ const props = {
     alignSelf: 'center',
     background: 'transparent',
     padding: 'Y2 Z2',
+    // border: '2px solid red',
     gap: 'Y2',
     align: 'center center',
     margin: 'A2 - - -',
@@ -39,7 +40,8 @@ const props = {
     },
     icon: {
       src: DOWN_ARROW_PNG,
-      boxSize: ' A'
+      boxSize: ' A',
+      style: { transition: 'transform .5s ease-in-out' }
     }
   }
 }
@@ -53,23 +55,23 @@ export const Tour = {
   captionButton: {
     tag: 'button',
     extend: Flex,
-    on: {
-      click: (event, element, state) => {
-        state.activeDescription
-          ? state.update({ activeDescription: false, activeArrow: false })
-          : state.update({ activeDescription: true, activeArrow: true })
-      }
-    },
+    // on: {
+    //   click: (event, element, state) => {
+    //     state.activeDescription
+    //       ? state.update({ activeDescription: false, activeArrow: false })
+    //       : state.update({ activeDescription: true, activeArrow: true })
+    //   }
+    // },
 
-    class: {
-      show: (element, state) => state.activeArrow
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    },
+    // class: {
+    //   show: (element, state) => state.activeArrow
+    //     ? {
+    //       '> img': { transform: 'rotate(180deg)' }
+    //     }
+    //     : {
+    //       '> img': { transform: 'rotate(0deg)' }
+    //     }
+    // },
     span: {},
     icon: { extend: Img }
   },

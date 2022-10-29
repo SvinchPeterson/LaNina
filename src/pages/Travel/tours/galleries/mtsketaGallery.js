@@ -112,13 +112,6 @@ export const mtsketaGallery = {
           show: (element, state) => state.active_Mtsketa_TourMail
             ? { display: 'block' } : { display: 'none' }
         }
-      },
-
-      paragraph: {
-        class: {
-          show: (element, state) => state.active_Mtsketa_TourBooked
-            ? { display: 'block' } : { display: 'none' }
-        }
       }
     }
   }
