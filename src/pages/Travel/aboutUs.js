@@ -16,7 +16,7 @@ const paragraph = {
     '@tabletS': { padding: '- D' },
     '@mobileL': { padding: '- C' },
     '@mobileS': { padding: '- A1' },
-    '@mobileXS': { padding: '- Z1' }
+    '@mobileXS': { padding: '- Z' }
   },
   title: {},
   p: { extend: aboutText }
