@@ -12,6 +12,7 @@ import { gallery } from './gallery/gallery'
 import { aboutUs } from './aboutUs'
 import { planTrip } from './planTrip'
 import { tours } from './tours'
+import { contact } from './contact'
 import { footer } from './footer'
 
 const state = {
@@ -135,6 +136,7 @@ export default {
   gallery,
   tours,
   aboutUs,
+  contact,
   planTrip,
   footer
 }

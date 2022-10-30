@@ -8,7 +8,7 @@ export const header = {
     ...[
       { props: { text: 'tours', href: '#tours' } },
       { props: { text: 'about us', href: '#about' } },
-      { props: { text: 'contact' } },
+      { props: { text: 'contact', href: '#contact' } },
       { props: { display: 'none' } },
       { props: { display: 'none' } }
     ]

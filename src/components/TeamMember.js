@@ -18,7 +18,6 @@ const props = {
   flow: 'column',
   position: 'relative',
   gap: 'Z',
-
   image: {
     boxSize: 'G F3',
     background: 'purple',
@@ -36,18 +35,19 @@ const props = {
     top: 'X',
     style: {
       writingMode: 'vertical-lr',
-      letterSpacing: '1px'
+      letterSpacing: '1px',
+      display: 'none'
     }
   },
 
   paragraph: {
     flow: 'column',
-    gap: 'Z',
+    padding: '- A1 - -',
+    alignItems: 'flex-end',
     title: {
       text: 'Alex Smith',
-      fontWeight: 'bold',
-      padding: '0 0 X 0',
-      style: { borderBottom: '1px solid rgba(0, 0, 0, .5)' }
+      fontWeight: '700',
+      fontSize: 'A'
     },
     p: {
       fontSize: `${14 / 16}em`,
