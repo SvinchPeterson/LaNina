@@ -108,17 +108,17 @@ export const GRADIENTS = {
   blueGradient: 'radial-gradient(rgba(30, 40, 49, .8), rgba(30, 40, 49, .83), rgba(30, 40, 49, .85), rgba(30, 40, 49, .95), rgba(30, 40, 49, 8), rgba(30, 40, 49, 1))'
 }
 
-export const THEMES = {
-  primary: {
-    color: 'cream 0.65',
-    state: {
-      hover: {
-        color: 'cream 0.85'
-      }
-    }
-  },
-  link: {}
-}
+// export const THEMES = {
+//   primary: {
+//     color: 'cream 0.65',
+//     state: {
+//       hover: {
+//         color: 'cream 0.85'
+//       }
+//     }
+//   },
+//   link: {}
+// }
 
 export const MEDIA = {
   screenL: '(max-width: 1920px)',
@@ -138,7 +138,7 @@ export const MEDIA = {
 export default init({
   color: COLORS,
   gradient: GRADIENTS,
-  theme: THEMES,
+  // theme: THEMES,
   font: FONT,
   typography: {},
   spacing: {

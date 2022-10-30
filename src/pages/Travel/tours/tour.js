@@ -45,6 +45,7 @@ const props = {
     color: 'cream2',
     top: '-B',
     gap: 'Y1',
+    '@mobileS': { fontSize: 'B' },
     style: { whiteSpace: 'nowrap' },
     span: {
       text: 'daily',
