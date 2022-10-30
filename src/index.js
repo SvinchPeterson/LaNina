@@ -1,7 +1,7 @@
 'use strict'
 
 import DOM from 'domql'
-import './config'
+import SYSTEM from './config'
 
 import 'domql/packages/emotion'
 
@@ -13,7 +13,8 @@ import { FastClick } from 'fastclick'
 
 export default DOM.create(App, undefined, 'app', {
   extend: [smbls.Box],
-  components: { ...smbls, ...components }
+  components: { ...smbls, ...components },
+  content: { SYSTEM }
 })
 
 if ('addEventListener' in document) {
