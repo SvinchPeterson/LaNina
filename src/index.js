@@ -3,8 +3,8 @@
 import DOM from 'domql'
 import SYSTEM from './config'
 
-import { DevFocus } from './devFocus' // eslint-disable-line no-unused-vars
-import { Sync } from './sync' // eslint-disable-line no-unused-vars
+import { DevFocus } from './tools/devFocus' // eslint-disable-line no-unused-vars
+import { Sync } from './tools/sync' // eslint-disable-line no-unused-vars
 
 import App from './app'
 import { FastClick } from 'fastclick'

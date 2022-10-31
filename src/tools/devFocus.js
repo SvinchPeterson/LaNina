@@ -4,7 +4,7 @@ import { isString } from '@domql/utils'
 import { getColor } from '@symbo.ls/scratch'
 import { send } from 'smbls'
 
-import * as components from './components'
+import * as components from '../components'
 
 for (const key in components) {
   if (!components[key].__componentKey) {
