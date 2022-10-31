@@ -3,7 +3,7 @@
 import router from 'domql/packages/router'
 
 import { DevFocus } from './tools/devFocus'
-import { Sync } from './tools/Sync'
+import { Sync } from './tools/sync'
 
 import { Landing, Sololaki, Travel } from './pages'
 
