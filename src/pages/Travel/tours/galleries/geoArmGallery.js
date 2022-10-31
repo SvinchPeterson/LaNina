@@ -37,7 +37,7 @@ import VIRAP_JPG from '../../../../assets/images/travel/armenia/virap.jpg'
 export const geoArmGallery = {
   extend: TourGallery,
 
-  props: { title: { text: '4 nights / 5 days - tour' } },
+  props: { title: { text: '' } },
 
   title: {},
 

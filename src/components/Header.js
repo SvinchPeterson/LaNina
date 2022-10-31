@@ -66,7 +66,9 @@ export const Header = {
   props: props,
   back: {
     extend: Link,
-    attr: { href: '../#landing' },
+    props: {
+      href: '/'
+    },
     arrow: {
       extend: Img,
       props: { src: BACK_PNG }

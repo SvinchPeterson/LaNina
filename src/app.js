@@ -2,13 +2,20 @@
 
 import router from 'domql/packages/router'
 
+import { DevFocus } from './devFocus'
+import { Sync } from './Sync'
+
 import { Landing, Sololaki, Travel } from './pages'
+
 // import { Story } from './sections'
 
 const App = {
+  extend: [DevFocus, Sync],
   key: 'app',
   props: {
-    // background: 'white .5'
+    '.preventSelect': {
+      userSelect: 'none'
+    }
   },
 
   state: {
@@ -23,8 +30,9 @@ const App = {
   },
 
   on: {
-    render: element => {
-      router(element, window.location.pathname, {})
+    render: (el, s) => {
+      router(el, window.location.pathname, {})
+      Sync.on.render(el, s)
     }
   }
 }

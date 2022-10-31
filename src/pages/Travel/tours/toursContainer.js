@@ -43,8 +43,8 @@ const props = {
     background: 'transparent',
     position: 'absolute',
     zIndex: '3',
-    top: 'B',
-    left: 'B',
+    top: 'A',
+    right: 'C2',
     padding: 'A',
     icon: {
       src: CLOSE_PNG,
