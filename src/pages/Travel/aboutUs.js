@@ -5,9 +5,8 @@ import { Flex, Grid } from 'smbls'
 import { aboutText } from '../../texts'
 import { Paragraph, TeamMember } from '../../components'
 
-import GIO_PNG from '../../assets/images/travel/gio.png'
-import SALOME_PNG from '../../assets/images/travel/salome.png'
-import ALEKO_PNG from '../../assets/images/travel/aleko.png'
+import GIO_JPG from '../../assets/images/travel/gio.jpg'
+import SALOME_JPG from '../../assets/images/travel/salome.jpg'
 
 const paragraph = {
   extend: Paragraph,
@@ -36,7 +35,7 @@ const team = {
     },
 
     members: {
-      columns: 'repeat(3, 1fr)',
+      columns: 'repeat(2, 1fr)',
       padding: 'A - - -',
       gap: 'C1',
       '@tabletL': { columns: 'repeat(2, 1fr)' },
@@ -58,7 +57,7 @@ const team = {
     ...[
       {
         props: {
-          image: { backgroundImage: 'url(' + GIO_PNG + ')' },
+          image: { backgroundImage: 'url(' + GIO_JPG + ')' },
           paragraph: {
             title: { text: 'Giorgi Bejuashvili' },
             p: { text: 'Co-founder / Managing Director ' }
@@ -67,22 +66,22 @@ const team = {
       },
       {
         props: {
-          image: { backgroundImage: 'url(' + SALOME_PNG + ')' },
+          image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
           paragraph: {
             title: { text: 'Salome Petriashvili' },
             p: { text: 'Customer Relations Manager' }
           }
         }
-      },
-      {
-        props: {
-          image: { backgroundImage: 'url(' + ALEKO_PNG + ')' },
-          paragraph: {
-            title: { text: 'Aleksander Giorgidze' },
-            p: { text: 'Operations Director' }
-          }
-        }
       }
+      // {
+      //   props: {
+      //     image: { backgroundImage: 'url(' + ALEKO_PNG + ')' },
+      //     paragraph: {
+      //       title: { text: 'Aleksander Giorgidze' },
+      //       p: { text: 'Operations Director' }
+      //     }
+      //   }
+      // }
     ]
   }
 }

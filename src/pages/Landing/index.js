@@ -32,7 +32,7 @@ const props = {
     opacity: '0',
     style: {
       animationName: deopacity,
-      animationDuration: '6s',
+      animationDuration: '2s',
       animationTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
       zIndex: 4
     }

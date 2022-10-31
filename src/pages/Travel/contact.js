@@ -51,7 +51,7 @@ export const contact = {
   mailLocation: {
     extend: Flex,
     ...[
-      { props: { text: 'spetriashvili@bbhospitality.ge' } },
+      { props: { text: 'info@bbhospitality.ge' } },
       { props: { text: 'Georgia, Tbilisi, 0105, Lado Asatiani Street #41' } }
     ]
 

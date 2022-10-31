@@ -25,12 +25,13 @@ const props = {
     },
 
     caption: {
-      text: 'We Know better our country than anyone here',
+      text: 'make your trip extraordinary',
       fontSize: 'Z',
       margin: '- -D1 - -',
       style: {
-        letterSpacing: '0',
+        // letterSpacing: '0',
         fontWeight: '400',
+        letterSpacing: '3px',
         fontStyle: 'italic'
       },
       ':before': {
@@ -42,7 +43,7 @@ const props = {
       '@mobileS': {
         padding: 'A2 - - -',
         maxWidth: '220px',
-        lineHeight: '23px'
+        lineHeight: '25px'
       }
     }
   }

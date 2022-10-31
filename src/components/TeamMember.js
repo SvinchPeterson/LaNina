@@ -1,7 +1,6 @@
 'use strict'
 
 import { Flex } from 'smbls'
-import PORTRAIT_JPG from '../assets/images/travel/portrait.png'
 
 const image = {}
 
@@ -21,13 +20,9 @@ const props = {
   image: {
     boxSize: 'G F3',
     background: 'purple',
-    backgroundImage: 'url(' + PORTRAIT_JPG + ')',
     style: {
-      // backgroundAttachment: 'fixed',
       backgroundSize: 'cover',
       backgroundPosition: 'center'
-      // borderTopLeftRadius: '150px',
-      // borderTopRightRadius: '150px'
     }
   },
 

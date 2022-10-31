@@ -61,7 +61,7 @@ export const countryText = {
       text: `Neighbouring Countries -Turkey, Russia, Azerbaijan, Armenia. Georgia is Famous for UNESCO World number of unique caves and most importantly -'World's oldest wine' found in 8,000-year-old (Qvevri ) Clay Pot in Georgia, The capital, Tbilisi, is known for the diverse architecture and mazelike, cobblestone streets of its old town.`
     },
     {
-      text: `Georgia's total territory covers 69,700 square kilometers. Population in Georgia is almost 4 million. Georgian currency is Georgian Lari ( ₾ ) (GEL).`
+      text: `Georgia's total territory covers 69,700 square kilometers. Population in Georgia is almost 4 million. Georgian currency is Georgian Lari (GEL).`
     }
   ]
 }
@@ -70,16 +70,20 @@ export const aboutText = {
   tag: 'p',
   ...[
     {
-      text: `BBTravel is a Georgian travel agency specialized in Georgia and the Caucasus region and offering Individual and group tours and other tour services in Georgia, Armenia and Azerbaijan.
+      // text: `BBTravel is a Georgian travel agency specialized in Georgia and the Caucasus region and offering Individual and group tours and other tour services in Georgia, Armenia and Azerbaijan.
+      // `
+      text: `We go above and beyond to make our guest feel appreciated and we do everything in our power
+      to show our guests how special Georgian Hospitality is. Introdusing our amazing nature and places as well Georgian Gastronomy and wine culture.
       `
     },
 
     {
-      text: `Our trips are authentic and close to the people, in order that you get to know the countries not as a tourist, but as a guest.`
+      text: `Our trips are authentic & guest oriented, in order to make guest experience unforgettable and
+      extraordinary. We make our guests feel at home.`
     },
 
     {
-      text: `We have mission to fell in love our guest to Georgia and Caucasus. Places, food, wine and people. we will give people all over the world unique, memorable and authentic travel experiences. `
+      text: `Mission of our team at BB Travel is to make your stay memorable and authentic`
     }
   ]
 }
