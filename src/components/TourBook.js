@@ -66,6 +66,7 @@ export const TourBook = {
     span: {},
     booked: {
       extend: Flex,
+      style: { display: 'none' },
       span: {},
       icon: { extend: Img }
     }
