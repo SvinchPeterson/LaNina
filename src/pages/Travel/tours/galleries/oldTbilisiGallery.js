@@ -91,28 +91,28 @@ export const oldTbilisiGallery = {
             }
             : {
             }
-        },
-
-        span: {
-          class: {
-            show: (element, state) => state.active_Tbilisi_TourBook
-              ? { display: 'block' } : { display: 'none' }
-          }
-        },
-        booked: {
-          class: {
-            show: (element, state) => state.active_Tbilisi_TourBooked
-              ? { display: 'block' } : { display: 'none' }
-          }
         }
-      },
 
-      email: {
-        class: {
-          show: (element, state) => state.active_Tbilisi_TourMail
-            ? { display: 'block' } : { display: 'none' }
-        }
+        // span: {
+        //   class: {
+        //     show: (element, state) => state.active_Tbilisi_TourBook
+        //       ? { display: 'block' } : { display: 'none' }
+        //   }
+        // }
+        // booked: {
+        //   class: {
+        //     show: (element, state) => state.active_Tbilisi_TourBooked
+        //       ? { display: 'block' } : { display: 'none' }
+        //   }
+        // }
       }
+
+      // email: {
+      //   class: {
+      //     show: (element, state) => state.active_Tbilisi_TourMail
+      //       ? { display: 'block' } : { display: 'none' }
+      //   }
+      // }
     }
   }
 }

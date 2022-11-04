@@ -30,20 +30,21 @@ const team = {
     title: {
       text: 'TEAM',
       fontWeight: 'bold',
-      padding: '0 0 X 0',
-      style: { borderBottom: '1px solid rgba(0, 0, 0, .5)' }
+      padding: '0 0 0 C'
+      // textAlign: 'ce'
+      // style: { borderBottom: '1px solid rgba(0, 0, 0, .5)' }
     },
 
     members: {
-      columns: 'repeat(2, 1fr)',
-      padding: 'A - - -',
+      columns: 'repeat(3, 1fr)',
+      padding: 'A2 - - -',
       gap: 'C1',
       '@tabletL': { columns: 'repeat(2, 1fr)' },
       '@mobileL': { columns: 'repeat(1, 1fr)' },
 
       childProps: {
         style: {
-          borderRight: '1px solid rgba(0, 0, 0, .5)'
+          // borderRight: '1px solid rgba(0, 0, 0, .5)'
           // paddingRight: '20px'
         }
       }
@@ -72,6 +73,16 @@ const team = {
             p: { text: 'Customer Relations Manager' }
           }
         }
+      },
+
+      {
+        props: {
+          image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
+          paragraph: {
+            title: { text: 'Salome Petriashvili' },
+            p: { text: 'Customer Relations Manager' }
+          }
+        }
       }
       // {
       //   props: {
@@ -90,7 +101,7 @@ const props = {
   flow: 'column',
   align: 'center center',
   gap: 'D',
-  padding: 'E2 A2 F A2'
+  padding: 'E2 A2 B A2'
 }
 
 export const aboutUs = {

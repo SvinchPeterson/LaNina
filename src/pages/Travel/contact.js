@@ -6,10 +6,12 @@ import PHONE_PNG from '../../assets/icons/phone.png'
 import MOBILE_PNG from '../../assets/icons/mobile.png'
 
 const props = {
-  flow: 'column',
+  // flow: 'column',
+  justifyContent: 'space-between',
+  borderTop: '1px solid black',
   width: '60%',
   margin: '- auto',
-  padding: 'C - E -',
+  padding: 'A - E -',
   fontSize: `${14.5 / 16}em`,
   '@tabletS': { width: '80%' },
   mailLocation: {
@@ -18,8 +20,7 @@ const props = {
     padding: '- - A -',
     margin: '- - A -',
     style: {
-      letterSpacing: '1px',
-      borderBottom: '1px solid black'
+      letterSpacing: '1px'
     },
 
     childProps: {
@@ -29,12 +30,12 @@ const props = {
 
   numbers: {
     flow: 'column',
-    gap: 'X2',
+    gap: 'Y1',
     style: { letterSpacing: '1px', margin: '- - - auto' },
     childProps: {
       gap: 'Y2',
       align: 'center flex-end',
-      fontWeight: '700',
+      fontWeight: '400',
       icon: {
         boxSize: 'A1 '
       }
@@ -54,7 +55,6 @@ export const contact = {
       { props: { text: 'info@bbhospitality.ge' } },
       { props: { text: 'Georgia, Tbilisi, 0105, Lado Asatiani Street #41' } }
     ]
-
   },
 
   numbers: {

@@ -29,7 +29,6 @@ const props = {
       fontSize: 'Z',
       margin: '- -D1 - -',
       style: {
-        // letterSpacing: '0',
         fontWeight: '400',
         letterSpacing: '3px',
         fontStyle: 'italic'

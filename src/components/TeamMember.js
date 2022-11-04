@@ -2,17 +2,6 @@
 
 import { Flex } from 'smbls'
 
-const image = {}
-
-const paragraph = {
-  extend: Flex,
-
-  title: { tag: 'H5' },
-  p: {}
-}
-
-const caption = { tag: 'caption' }
-
 const props = {
   flow: 'column',
   position: 'relative',
@@ -20,6 +9,19 @@ const props = {
   image: {
     boxSize: 'G F3',
     background: 'purple',
+    position: 'relative',
+    round: 'E1 E1 0 0',
+    ':after': {
+      content: '""',
+      position: 'absolute',
+      boxSize: '100% 100%',
+      round: 'E1 E1 0 0',
+      top: '0',
+      left: '0',
+      // background: 'blue .6'
+      background: 'linear-gradient(rgba(30, 52, 71, .5), rgba(30, 52, 71, .5))'
+      // background: 'linear-gradient(rgba(30, 40, 49, .5), rgba(30, 40, 49, .5))'
+    },
     style: {
       backgroundSize: 'cover',
       backgroundPosition: 'center'
@@ -40,7 +42,7 @@ const props = {
 
   paragraph: {
     flow: 'column',
-    padding: '- A1 - -',
+    padding: '- Z - -',
     alignItems: 'flex-end',
     title: {
       text: 'Alex Smith',
@@ -62,7 +64,11 @@ export const TeamMember = {
   extend: Flex,
   props,
 
-  image,
-  caption,
-  paragraph
+  image: {},
+  caption: {},
+  paragraph: {
+    extend: Flex,
+    title: { tag: 'H5' },
+    p: {}
+  }
 }

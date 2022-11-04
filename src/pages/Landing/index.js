@@ -41,6 +41,7 @@ const props = {
     content: '""',
     position: 'absolute',
     boxSize: '100% 100%',
+    // background: 'linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .5), rgba(0, 0, 0, .5), rgba(0, 0, 0, 1))'
     background: 'radial-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9), rgba(0, 0, 0, 1))'
   },
 
@@ -117,10 +118,8 @@ const props = {
       childProps: {
         color: 'cream2',
         style: {
-          letterSpacing: '5px',
-          '&:not(:last-child)': {
-            opacity: '.65'
-          }
+          letterSpacing: '5px'
+
         },
         '@mobileL': { fontSize: 'A' }
       }
@@ -145,7 +144,15 @@ export default {
       extend: Navbar,
       ...[
         { props: { text: 'residence', href: '/Sololaki' } },
-        { props: { text: 'travel', href: '/Travel' } },
+        {
+          props: {
+            text: 'travel',
+            pointerEvents: 'none',
+            opacity: '.2'
+            // href: '/Travel'
+          }
+        },
+
         {
           props: {
             text: 'rental',
