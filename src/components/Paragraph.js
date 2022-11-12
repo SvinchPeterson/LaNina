@@ -5,13 +5,12 @@ const props = {
   maxWidth: 'I',
   flow: 'column',
   gap: 'B',
-  align: 'center center',
   style: { zIndex: '2' },
 
   title: {
     tag: 'h3',
-    fontSize: 'Z',
     fontWeight: '500',
+    fontSize: `${12 / 16}em`,
     style: {
       textTransform: 'uppercase',
       letterSpacing: '3.5px'
@@ -21,12 +20,8 @@ const props = {
   p: {
     flow: 'column',
     gap: 'Z',
-    textAlign: 'center',
-    leterSpacing: '.1px',
-    '@mobileS': {
-      fontSize: `${15 / 16}em`,
-      textAlign: 'left'
-    }
+    style: { letterSpacing: '.38px' },
+    fontSize: `${15 / 16}em`
   }
 }
 

@@ -10,7 +10,7 @@ export const armeniaTour = {
   extend: tour,
   props: {
     padding: 'E - C -',
-    title: { text: 'tour', span: { text: 'georgia & armenia' } }
+    title: { text: 'tour', span: { text: 'caucasus' } }
   },
 
   class: {

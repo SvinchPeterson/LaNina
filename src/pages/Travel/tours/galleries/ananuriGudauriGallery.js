@@ -79,17 +79,18 @@ export const ananuriGudauriGallery = {
         class: {
           show: (element, state) => state.active_Ananuri_TourMail
             ? {
-              background: '#28819c',
-              border: '1px solid rgba(0, 0, 0, 0)'
+              background: '#0EB393',
+              border: 'none'
             }
             : {
-              background: 'transparent'
+              background: 'transparent',
+              border: '.8px solid silver'
             },
 
           show2: (element, state) => state.active_Ananuri_TourBooked
             ? {
               pointerEvents: 'none',
-              opacity: '.55'
+              border: 'none'
             }
             : {
             }
@@ -104,15 +105,16 @@ export const ananuriGudauriGallery = {
         booked: {
           class: {
             show: (element, state) => state.active_Ananuri_TourBooked
-              ? { display: 'block' } : { display: 'none' }
+              ? { display: 'flex' } : { display: 'none' }
           }
         }
       },
 
-      email: {
+      form: {
         class: {
           show: (element, state) => state.active_Ananuri_TourMail
-            ? { display: 'block' } : { display: 'none' }
+            ? { opacity: '1', transition: 'opacity .15s ease-in-out' }
+            : { opacity: '0', pointerEvents: 'none' }
         }
       }
     }

@@ -6,8 +6,9 @@ const props = {
   flow: 'column',
   position: 'relative',
   gap: 'Z',
+  // border: '2px solid red',
   image: {
-    boxSize: 'G F3',
+    boxSize: 'F2 220px',
     background: 'purple',
     position: 'relative',
     round: 'E1 E1 0 0',
@@ -18,9 +19,7 @@ const props = {
       round: 'E1 E1 0 0',
       top: '0',
       left: '0',
-      // background: 'blue .6'
-      background: 'linear-gradient(rgba(30, 52, 71, .5), rgba(30, 52, 71, .5))'
-      // background: 'linear-gradient(rgba(30, 40, 49, .5), rgba(30, 40, 49, .5))'
+      background: 'radial-gradient(rgba(30, 98, 123, 0), rgba(30, 98, 123, .9))'
     },
     style: {
       backgroundSize: 'cover',
@@ -42,20 +41,22 @@ const props = {
 
   paragraph: {
     flow: 'column',
-    padding: '- Z - -',
+    padding: '- X1 - -',
     alignItems: 'flex-end',
     title: {
       text: 'Alex Smith',
       fontWeight: '700',
-      fontSize: 'A'
+      fontSize: `${15 / 16}em`,
+
+      style: { letterSpacing: '.5px' }
     },
     p: {
       fontSize: `${14 / 16}em`,
       maxWidth: 'G',
       padding: '0 0 0 V',
       color: 'black .65',
-      text: 'Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin.',
-      style: { fontStyle: 'italic' }
+      text: 'Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin.'
+      // style: { fontStyle: 'italic' }
     }
   }
 }

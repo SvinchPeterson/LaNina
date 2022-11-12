@@ -75,3 +75,9 @@ export const opacityScale = keyframes`
     transform: translate(-50%, -50%) scale(1);
   }
 `
+
+export const scroll = keyframes`
+100% {
+  transform: translateX(calc(-100% - 32px));
+}
+`

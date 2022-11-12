@@ -14,18 +14,18 @@ const props = {
   width: 'fit-content',
   height: 'fit-content',
   flow: 'column',
-  gap: 'A2',
+  gap: 'A',
   style: { overflowX: 'hidden' },
   '@tabletM': { padding: '- D' },
   '@mobileS': { padding: '- B' },
 
   title: {
-    borderBottom: '1.5px solid #1e2831',
+    borderBottom: '.8px solid black',
     justifyContent: 'space-between',
     padding: '- - Y -',
     width: '50%',
     alignSelf: 'flex-end',
-    margin: '- E - -',
+    margin: '- D1 - -',
     '@tabletM': {
       alignSelf: 'flex-start',
       textAlign: 'left',
@@ -39,11 +39,11 @@ const props = {
 
     h5: {
       text: 'tours',
-      color: 'blue3',
-      fontSize: 'B',
+      fontSize: 'A',
       fontWeight: '500',
       textTransform: 'uppercase',
-      textAlign: 'right'
+      textAlign: 'right',
+      style: { letterSpacing: '1px' }
     },
 
     scrollTitle: {
@@ -54,7 +54,7 @@ const props = {
   },
 
   content: {
-    gap: 'X',
+    gap: '0',
     style: {
       overflowX: 'auto',
       scrollBehavior: 'smooth',
@@ -89,7 +89,7 @@ export const tabs = {
             }
           },
 
-          title: { text: 'daily tours' }
+          title: { text: 'daily' }
         },
 
         on: {
@@ -102,12 +102,32 @@ export const tabs = {
       },
 
       {
-        props: { title: { text: 'standard tours' } },
+        props: { title: { text: 'standard' } },
         on: {
           click: (event, element, state) => {
             state.activeTour
               ? state.update({ activeTour: false, activeStandardTour: false })
               : state.update({ activeTour: true, activeStandardTour: true })
+          }
+        }
+      },
+
+      {
+        props: {
+          style: {
+            '@media only screen and (max-width: 1366px)': {
+              borderTopRightRadius: `0`,
+              borderBottomRightRadius: `0`
+            }
+          },
+          title: { text: 'caucasus' }
+        },
+
+        on: {
+          click: (event, element, state) => {
+            state.activeTour
+              ? state.update({ activeTour: false, activeArmeniaTour: false })
+              : state.update({ activeTour: true, activeArmeniaTour: true })
           }
         }
       },
@@ -122,7 +142,7 @@ export const tabs = {
               borderBottomRightRadius: `0`
             }
           },
-          title: { text: 'Georgia & Armenia tour' }
+          title: { text: 'exclusive' }
         },
 
         on: {

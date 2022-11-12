@@ -6,38 +6,30 @@ import PHONE_PNG from '../../assets/icons/phone.png'
 import MOBILE_PNG from '../../assets/icons/mobile.png'
 
 const props = {
-  // flow: 'column',
-  justifyContent: 'space-between',
-  borderTop: '1px solid black',
-  width: '60%',
-  margin: '- auto',
-  padding: 'A - E -',
-  fontSize: `${14.5 / 16}em`,
-  '@tabletS': { width: '80%' },
+  flow: 'column',
+  padding: 'C - - -',
+  gap: 'Z1',
   mailLocation: {
     flow: 'column',
     gap: 'X',
-    padding: '- - A -',
-    margin: '- - A -',
-    style: {
-      letterSpacing: '1px'
-    },
-
-    childProps: {
-      '@mobileS': { maxWidth: 'F1' }
-    }
+    fontSize: `${13.5 / 14.5}em`,
+    style: { letterSpacing: '.5px' }
   },
 
   numbers: {
     flow: 'column',
-    gap: 'Y1',
-    style: { letterSpacing: '1px', margin: '- - - auto' },
+    borderTop: '.5px solid black',
+    padding: 'Z1 - - -',
+    gap: 'Z',
+    style: {
+      letterSpacing: '.5px',
+      fontSize: `${13.5 / 14.5}em`
+    },
     childProps: {
       gap: 'Y2',
-      align: 'center flex-end',
-      fontWeight: '400',
+      align: 'center flex-start',
       icon: {
-        boxSize: 'A1 '
+        boxSize: '16px '
       }
     }
   }
@@ -53,7 +45,7 @@ export const contact = {
     extend: Flex,
     ...[
       { props: { text: 'info@bbhospitality.ge' } },
-      { props: { text: 'Georgia, Tbilisi, 0105, Lado Asatiani Street #41' } }
+      { props: { text: 'Tbilisi, 0105, Lado Asatiani Street #41' } }
     ]
   },
 

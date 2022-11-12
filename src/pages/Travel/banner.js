@@ -2,12 +2,12 @@
 
 import { banner } from '../Sololaki/banner'
 
-import TBILISI_JPG from '../../assets/images/travel/tbilisi.jpg'
-import TBILISI_TABLET_JPG from '../../assets/images/travel/tbilisi-tablet.jpg'
+import TBILISI_JPG from '../../assets/images/travel/tbilisi2.jpg'
+import TBILISI_TABLET_JPG from '../../assets/images/travel/tbilisi2-tablet.jpg'
 
 const props = {
   image: {
-    ':before': { background: 'radial-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .7))' },
+    ':before': { background: 'radial-gradient(rgba(30, 98, 123, .15), rgba(30, 98, 123, .65))' },
     backgroundImage: 'url(' + TBILISI_JPG + ')',
     '@tabletM': { backgroundImage: 'url(' + TBILISI_TABLET_JPG + ')' }
   },
@@ -35,7 +35,9 @@ const props = {
       },
       ':before': {
         width: '100%',
-        top: '-Z2',
+        top: '-Z1',
+        height: '.8px',
+        background: 'orange3',
         '@mobileS': { top: '0' }
       },
       '@mobileL': { margin: '- 0 - -' },

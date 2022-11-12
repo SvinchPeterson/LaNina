@@ -18,19 +18,25 @@ const props = {
     fontSize: 'Z',
     color: 'cream2',
     textTransform: 'uppercase',
+    padding: '- - - B',
     '@mobileS': { padding: '- - - A' }
   },
 
   images: {
     boxSize: 'G1 H1',
     display: 'block',
+    // border: '2px solid rgba(30, 98, 123, 1)',
+    // boxShadow: 'inset 0px 0px 10px 3px black',
+    // round: 'F 0 0 F',
+    round: 'A',
+    overflow: 'hidden',
     position: 'relative',
     // border: '5px solid red',
     '@mobileL': { boxSize: 'G H' },
     '@mobileM': { boxSize: 'F3 G3' },
     '@mobileS': { boxSize: 'F3 G1' },
     style: {
-      // boxShadow: '0px 0px 10px 1px black;',
+      // boxShadow: 'inset 0px 0px 10px 3px red',
       '@media only screen and (max-width: 400px)': { maxWidth: `${310 / 16}em`, maxHeight: `${180 / 16}em` }
     },
     childProps: {
@@ -46,11 +52,15 @@ const props = {
   },
 
   footer: {
-    padding: 'A X1 - X1',
-    borderTop: '1px solid silver',
+    padding: 'Z2 - - -',
+    width: 'calc(100% - 40px)',
+    margin: '- auto - auto',
     height: 'fit-content',
     flow: 'row-reverse',
     align: 'center space-between',
+    '@mobileL': {
+      align: 'flex-start space-between'
+    },
     '@mobileXS': { padding: 'A Z1 - Z1' },
     navArrow: {
       childProps: {

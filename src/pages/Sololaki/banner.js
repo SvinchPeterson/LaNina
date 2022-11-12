@@ -62,7 +62,7 @@ const props = {
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
       animationName: positionBanner,
-      animationDuration: '5s',
+      animationDuration: '10s',
       animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
       '@media only screen and (max-width: 1366px)': {
         backgroundAttachment: 'initial',

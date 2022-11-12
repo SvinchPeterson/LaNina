@@ -16,24 +16,24 @@ const props = {
   style: { transition: 'max-height .5s ease-in-out, padding-top .5s ease-in-out' },
   ':before': {
     content: '""',
-    boxSize: '0px 100%',
+    boxSize: '50px 100%',
     position: 'absolute',
     top: '0px',
     left: '0',
-    boxShadow: '0px 0px 100px 50px #1e3447',
+    zIndex: '3',
+    background: 'linear-gradient(to bottom, rgba(30, 98, 123, 1) 0%,rgba(30, 98, 123, 0) 100%)',
     '@tabletM': { display: 'block' }
   },
   ':after': {
     content: '""',
-    boxSize: '0px 100%',
+    boxSize: '50px 100%',
     position: 'absolute',
     bottom: '-5px',
     left: '0',
-    boxShadow: '0px 0px 100px 50px #1e3447;',
+    background: 'linear-gradient(to top, rgba(30, 98, 123, 1) 0%,rgba(30, 98, 123, 0) 100%)',
     '@tabletM': { display: 'block' }
   },
   '@tabletM': { padding: '- A' },
-  // '@mobileXS': { padding: '- X2' },
 
   articleContainer: {
     boxSizing: 'border-box',
@@ -68,7 +68,7 @@ const props = {
         gap: 'A',
 
         childProps: {
-          fontSize: `${15.5 / 16}em`,
+          fontSize: `${20 / 16}em`,
           maxWidth: `${500 / 15.5}em`,
           color: 'cream2 .7',
           fontWeight: '400',
@@ -77,6 +77,7 @@ const props = {
           '@mobileS': { fontSize: `${15 / 16}em`, maxWidth: 'G2' },
           // '@mobileS': { maxWidth: 'G2' },
           style: {
+            letterSpacing: '.38px',
             span: { color: 'rgba(248, 241, 227, 1)', fontWeight: 700 },
             '@media only screen and (max-width: 400px)': { fontSize: `${13.5 / 16}em` }
           }
@@ -101,7 +102,7 @@ const props = {
           gap: 'X',
           padding: '- - - Y',
           childProps: {
-            fontSize: 'Z',
+            fontSize: `${20 / 16}em`,
             color: 'cream2 .85',
             style: { letterSpacing: '.5px' }
           }

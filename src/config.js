@@ -91,7 +91,7 @@ export const COLORS = {
   black: 'rgba(0, 0, 0, 1)',
   gold: 'rgba(220, 187, 140, 1)',
   white: 'rgba(245, 245, 245, 1)',
-  blue: 'rgba(30, 52, 71, 1)',
+  seaBlue: 'rgba(30, 98, 123, 1)',
   blue2: '#3A5A75',
   blue3: 'rgba(30, 40, 49, 1)',
   backgroundBlue: 'rgba(208, 224, 228, 1)',

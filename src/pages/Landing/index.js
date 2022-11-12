@@ -6,7 +6,7 @@ import { deopacity, opacityLetterSpacing, position, opacity } from '../../animat
 
 import { BBHeading, Navbar } from '../../components'
 
-import ORNAMENTS_PNG from '../../assets/images/landing/ornamentsGray.png'
+import ORNAMENTS_PNG from '../../assets/images/landing/ornaments.png'
 
 const props = {
   boxSize: '100% 100%',
@@ -14,7 +14,7 @@ const props = {
   backgroundSize: 'cover',
   backgroundARepeat: 'no-repeat',
   position: 'relative',
-  background: 'cream .55',
+  background: 'white .5',
   align: 'center center',
   backgroundPosition: 'top center',
   style: {
@@ -41,8 +41,7 @@ const props = {
     content: '""',
     position: 'absolute',
     boxSize: '100% 100%',
-    // background: 'linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .5), rgba(0, 0, 0, .5), rgba(0, 0, 0, 1))'
-    background: 'radial-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9), rgba(0, 0, 0, 1))'
+    background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8), rgba(0, 0, 0, 1))'
   },
 
   sha: {
@@ -82,7 +81,8 @@ const props = {
       position: 'relative',
       gap: 'C',
       align: 'center center',
-      padding: 'C - - -',
+      padding: 'A1 - - -',
+      margin: '0',
       flow: 'row',
       style: {
         animationName: opacity,
@@ -94,7 +94,7 @@ const props = {
         boxSize: '1px 60%',
         position: 'absolute',
         round: '100%',
-        top: 'A2',
+        top: 'Y',
         right: '0%',
         background: 'radial-gradient(rgba(220, 187, 140, .45) ,rgba(220, 187, 140, .25), rgba(220, 187, 140, 0))',
         '@mobileL': {
@@ -147,9 +147,9 @@ export default {
         {
           props: {
             text: 'travel',
-            pointerEvents: 'none',
-            opacity: '.2'
-            // href: '/Travel'
+            href: '/Travel'
+            // pointerEvents: 'none',
+            // opacity: '.2'
           }
         },
 

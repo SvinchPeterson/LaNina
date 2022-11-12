@@ -77,17 +77,18 @@ export const borjomiGallery = {
         class: {
           show: (element, state) => state.active_Borjomi_TourMail
             ? {
-              background: '#28819c',
-              border: '1px solid rgba(0, 0, 0, 0)'
+              background: '#0EB393',
+              border: 'none'
             }
             : {
-              background: 'transparent'
+              background: 'transparent',
+              border: '.8px solid silver'
             },
 
           show2: (element, state) => state.active_Borjomi_TourBooked
             ? {
               pointerEvents: 'none',
-              opacity: '.55'
+              border: 'none'
             }
             : {
             }
@@ -102,15 +103,16 @@ export const borjomiGallery = {
         booked: {
           class: {
             show: (element, state) => state.active_Borjomi_TourBooked
-              ? { display: 'block', color: '#AFFFD2' } : { display: 'none' }
+              ? { display: 'flex' } : { display: 'none' }
           }
         }
       },
 
-      email: {
+      form: {
         class: {
           show: (element, state) => state.active_Borjomi_TourMail
-            ? { display: 'block' } : { display: 'none' }
+            ? { opacity: '1', transition: 'opacity .15s ease-in-out' }
+            : { opacity: '0', pointerEvents: 'none' }
         }
       }
     }

@@ -20,7 +20,7 @@ const closeButton = {
 const props = {
   boxSize: '100% 100%',
   position: 'fixed',
-  background: 'blue',
+  background: 'seaBlue',
   justifyContent: 'center',
   zIndex: '100',
   top: '0',
@@ -43,8 +43,8 @@ const props = {
     background: 'transparent',
     position: 'absolute',
     zIndex: '3',
-    top: 'A',
-    right: 'C2',
+    top: 'Z',
+    right: 'A',
     padding: 'A',
     icon: {
       src: CLOSE_PNG,

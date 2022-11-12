@@ -83,7 +83,8 @@ export const aboutText = {
     },
 
     {
-      text: `Mission of our team at BB Travel is to make your stay memorable and authentic`
+      span: 'Mission',
+      text: ` of our team at BB Travel is to make your stay memorable and authentic`
     }
   ]
 }

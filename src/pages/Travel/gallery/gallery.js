@@ -98,6 +98,7 @@ const props = {
     columns: 'repeat(4, 1fr)',
     rows: 'repeat(5, 450px)',
     padding: '0 0',
+    position: 'relative',
     gap: 'X',
     '@tabletS': { rows: 'repeat(5, 300px)' },
     '@mobileL': { rows: 'repeat(5, 250px)' },
@@ -121,7 +122,10 @@ const props = {
         left: '0',
         width: '100%',
         height: '100%',
-        background: 'radial-gradient(rgba(30, 40, 49, .3), rgba(30, 40, 49, .5))'
+        background: 'rgba(30, 98, 123, .5)'
+        // background: 'linear-gradient(rgba(30, 98, 123, 0), rgba(30, 98, 123, .75))'
+        // background: 'radial-gradient(rgba(30, 98, 123, .8), rgba(30, 98, 123, .8), rgba(30, 98, 123, 1))',
+
       }
     }
   }

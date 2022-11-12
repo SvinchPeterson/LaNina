@@ -9,7 +9,9 @@ import { Paragraph } from '../../components'
 const paragraph = {
   extend: Paragraph,
   props: {
-    title: { text: 'about georgia' }
+    alignItems: 'center',
+    title: { text: 'about georgia' },
+    p: { style: { textAlign: 'center' } }
   },
 
   title: {},

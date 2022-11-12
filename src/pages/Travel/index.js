@@ -124,7 +124,8 @@ export default {
 
   props: {
     ...props,
-    background: 'radial-gradient(rgba(233, 250, 255, 1), rgba(208, 224, 228, 1))'
+    background: '#BDD8F6'
+    // background: 'rgba(233, 253, 255, 1)'
   },
   state,
 
@@ -136,7 +137,6 @@ export default {
   gallery,
   tours,
   aboutUs,
-  contact,
   planTrip,
   footer
 }
