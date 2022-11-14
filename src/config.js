@@ -91,13 +91,14 @@ export const COLORS = {
   black: 'rgba(0, 0, 0, 1)',
   gold: 'rgba(220, 187, 140, 1)',
   white: 'rgba(245, 245, 245, 1)',
-  seaBlue: 'rgba(30, 98, 123, 1)',
   blue2: '#3A5A75',
   blue3: 'rgba(30, 40, 49, 1)',
   backgroundBlue: 'rgba(208, 224, 228, 1)',
   backgroundBlue2: 'rgba(233, 250, 255, 1)',
   gray: '#454B4E',
-  grey: '#5A5D5E'
+  grey: '#5A5D5E',
+
+  blue: 'rgba(43, 56, 98, 1)'
 }
 
 export const GRADIENTS = {

@@ -22,11 +22,24 @@ export const positionBanner = keyframes`
 export const opacityLetterSpacing = keyframes`
   from {
     opacity: 0;
-    letter-spacing: 1.5px;
+    letter-spacing: 2.5px;
   }
   to {
     opacity: 1;
-    letter-spacing: 0px;
+    letter-spacing: 2px;
+  }
+`
+
+export const opacityLetterSpacing2 = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(1.02);
+    bottom: -30px;
+  }
+  to {
+    opacity: 1;
+    transform:  translateY(0px) scale(1);
+    bottom: 100px;
   }
 `
 

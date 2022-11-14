@@ -169,7 +169,7 @@ const team = {
         {
           props: {
             image: {
-              backgroundImage: 'url(' + GIO_JPG + ')'
+              backgroundImage: 'url(' + SALOME_JPG + ')'
             },
             paragraph: {
               title: { text: 'Giorgi Bejuashvili' },
@@ -181,7 +181,7 @@ const team = {
         {
           props: {
             image: {
-              backgroundImage: 'url(' + SALOME_JPG + ')'
+              backgroundImage: 'url(' + GIO_JPG + ')'
             },
             paragraph: {
               title: { text: 'Salome Petriashvili' },

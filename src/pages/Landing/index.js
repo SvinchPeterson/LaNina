@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { deopacity, opacityLetterSpacing, position, opacity } from '../../animations'
+import { deopacity, opacityLetterSpacing, position, opacity, opacityLetterSpacing2 } from '../../animations'
 
 import { BBHeading, Navbar } from '../../components'
 
@@ -14,7 +14,7 @@ const props = {
   backgroundSize: 'cover',
   backgroundARepeat: 'no-repeat',
   position: 'relative',
-  background: 'white .5',
+  background: 'gold .86',
   align: 'center center',
   backgroundPosition: 'top center',
   style: {
@@ -41,90 +41,127 @@ const props = {
     content: '""',
     position: 'absolute',
     boxSize: '100% 100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8), rgba(0, 0, 0, 1))'
-  },
-
-  sha: {
-    boxSize: '100% 100%',
-    position: 'absolute',
-    top: '0',
-    left: '0'
+    background: 'radial-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, .97))'
   },
 
   content: {
-    position: 'absolute',
-    zIndex: '10',
     flow: 'column',
-    margin: '- - D1 -',
-    gap: '0',
-    lineHeight: `${17 / 16}em`,
-    backdropFilter: 'blur(4px)',
+    zIndex: '5',
+    gap: 'Y',
+    boxSize: '100% 100%',
+    justifyContent: 'space-between',
+    boxSizing: 'border-box',
+    padding: 'D2 D2 D2 D2',
+    '@mobileL': { padding: 'C C D C' },
+    '@mobileS': { padding: 'C B1 D2 B1' },
     style: {
-      animationName: opacity,
-      animationDuration: '3s',
-      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-    },
-    '@mobileL': { lineHeight: `${40 / 16}em` },
-
-    heading: {
-      title: {
-        fontSize: 'G',
-        style: {
-          animationName: opacityLetterSpacing,
-          animationDuration: '3s',
-          animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-        }
+      '@media only screen and (max-height: 750px)': {
+        paddingTop: `${50 / 16}em`,
+        paddingBottom: `${50 / 16}em`
+      },
+      '@media only screen and (max-height: 550px)': {
+        paddingTop: `${30 / 16}em !important`,
+        paddingBottom: `${30 / 16}em !important`
       }
     },
 
-    navBar: {
-      position: 'relative',
-      gap: 'C',
-      align: 'center center',
-      padding: 'A1 - - -',
-      margin: '0',
-      flow: 'row',
+    heading: {
+      gap: 'Z',
+      padding: '- - - -',
+      alignSelf: 'flex-start',
+      align: 'center',
+      zIndex: '3',
       style: {
         animationName: opacity,
         animationDuration: '3s',
         animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
       },
-      ':before': {
-        content: '""',
-        boxSize: '1px 60%',
-        position: 'absolute',
-        round: '100%',
-        top: 'Y',
-        right: '0%',
-        background: 'radial-gradient(rgba(220, 187, 140, .45) ,rgba(220, 187, 140, .25), rgba(220, 187, 140, 0))',
-        '@mobileL': {
-          boxSize: '1px 100%',
-          right: '-C',
-          top: 'A1'
-        },
+
+      logo: {
+        boxSize: 'C ',
+        opacity: '.55',
         '@mobileS': {
-          boxSize: '1px 80%',
-          right: '0'
-          // top: 'A1'
+          boxSize: 'B2 '
         }
       },
+
+      title: {
+        fontSize: 'E',
+        color: 'cream2 .45',
+        fontWeight: '100',
+        style: {
+          letterSpacing: '2px',
+          animationName: opacityLetterSpacing,
+          animationDuration: '2s',
+          animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+        },
+        span: {
+          text: 'H',
+          fontSize: 'A',
+          height: '0',
+          overflow: 'hidden'
+        },
+        text: 'ospitality'
+      }
+
+    },
+
+    navBar: {
+      position: 'relative',
+      gap: 'Z2',
+      alignSelf: 'center',
       '@mobileL': {
-        align: 'flex-start flex-start',
-        padding: 'B1 - - C',
-        gap: 'A',
-        flow: 'column'
+        flow: 'column',
+        gap: 'A'
+      },
+      style: {
+        animationName: opacity,
+        animationDuration: '3s',
+        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
       },
 
       childProps: {
-        color: 'cream2',
+        color: 'cream2 .75',
+        border: '1px solid gray',
+        textAlign: 'center',
+        padding: 'A -',
+        width: 'F',
+        fontSize: `${12.5 / 16}em`,
+        round: 'C',
+        fontWeight: '700',
+        ':hover': { background: 'linear-gradient(to left, rgba(220, 187, 140, 0), rgba(220, 187, 140, .07))' },
         style: {
-          letterSpacing: '5px'
-
+          letterSpacing: '1px',
+          backdropFilter: 'bur(4px)'
         },
-        '@mobileL': { fontSize: 'A' }
+        '@mobileL': { width: 'F1' }
+      }
+    },
+
+    paragraph: {
+      text: ` a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea shores.`,
+      alignSelf: 'flex-end',
+      color: 'cream2 .5',
+      span: { text: 'Georgia', color: 'cream2 .85' },
+      zIndex: '20',
+      lineHeight: `${25 / 16}em`,
+      maxWidth: 'G2',
+      fontSize: 'A',
+      '@mobileL': { maxWidth: 'G1' },
+      '@mobileS': {
+        fontSize: `${14.3 / 16}em`,
+        alignSelf: 'center',
+        textAlign: 'center'
+      },
+      style: {
+        letterSpacing: '.6px',
+        animationName: opacityLetterSpacing2,
+        animationDuration: '1.5s',
+        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
       }
     }
   }
+
 }
 
 export default {
@@ -132,24 +169,34 @@ export default {
   props,
   attr: { id: 'landing' },
 
-  sha: {},
-
   content: {
     extend: Flex,
-
     heading: {
-      extend: BBHeading
+      extend: BBHeading,
+      logo: {},
+      title: {
+        span: {}
+      }
     },
     navBar: {
       extend: Navbar,
       ...[
-        { props: { text: 'residence', href: '/Sololaki' } },
+        {
+          props: {
+            text: 'residence',
+            href: '/Sololaki',
+            style: {
+              textShadow: '.4px .4px 1px black'
+            }
+          }
+        },
         {
           props: {
             text: 'travel',
-            href: '/Travel'
-            // pointerEvents: 'none',
-            // opacity: '.2'
+            href: '/Travel',
+            style: {
+              textShadow: '.4px .4px 1px black'
+            }
           }
         },
 
@@ -161,6 +208,11 @@ export default {
           }
         }
       ]
+    },
+
+    paragraph: {
+      tag: 'p',
+      span: {}
     }
   }
 }
