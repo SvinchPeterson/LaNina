@@ -66,7 +66,7 @@ const props = {
     },
 
     heading: {
-      gap: 'Z',
+      gap: 'Y2',
       padding: '- - - -',
       alignSelf: 'flex-start',
       align: 'center',
@@ -86,11 +86,12 @@ const props = {
       },
 
       title: {
-        fontSize: 'E',
-        color: 'cream2 .45',
+        fontSize: 'C',
+        color: 'cream2 .75',
         fontWeight: '100',
+        textTransform: 'uppercase',
         style: {
-          letterSpacing: '2px',
+          letterSpacing: '2.5px',
           animationName: opacityLetterSpacing,
           animationDuration: '2s',
           animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
