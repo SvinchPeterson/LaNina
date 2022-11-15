@@ -23,11 +23,11 @@ export const MenuButton = {
   content: {
     props: {
       position: 'relative',
-      boxSize: 'B2 B2'
+      boxSize: 'B1 B2'
     },
     childExtend: {
       props: {
-        background: 'cream2',
+        background: 'white',
         round: 'C',
         width: '100%',
         position: 'absolute',

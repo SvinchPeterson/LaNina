@@ -69,8 +69,10 @@ const props = {
       alignSelf: 'center',
       flow: 'column',
       gap: 'Y',
+      logo: { opacity: '.65' },
       title: {
-        fontSize: 'B'
+        fontSize: 'B',
+        color: 'white .65'
       }
     },
 
@@ -89,7 +91,7 @@ const props = {
       },
 
       childProps: {
-        color: 'cream2 .75',
+        color: 'white .75',
         border: '1px solid gray',
         textAlign: 'center',
         padding: 'A -',

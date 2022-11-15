@@ -8,14 +8,6 @@ import CLOSES_PNG from '../../assets/icons/reject.png'
 
 export const footer = {
   extend: Footer,
-  props: {
-    style: { zIndex: '7' }
-    // height: `${120 / 16}em`,
-    // border: '2px solid red',
-    // padding: '0 D'
-    // background: 'skyblue',
-    // mixBlendMode: 'difference'
-  },
   socialLinks: {
     ...[{
       props: { href: `https://www.facebook.com/profile.php?id=100077381466828` }
@@ -26,12 +18,7 @@ export const footer = {
 
   Book: {
     extend: Flex,
-    props: {
-      align: 'center space-between',
-      style: { cursor: 'pointer' },
-      href: '',
-      span: { text: 'PLAN TRIP' }
-    },
+    props: { span: { text: 'PLAN TRIP' } },
 
     on: {
       click: (event, element, state) => {

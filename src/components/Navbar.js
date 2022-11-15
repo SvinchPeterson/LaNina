@@ -5,8 +5,7 @@ const link = {
   extend: Link,
   props: {
     color: 'white',
-    fontSize: 'Z',
-    opacity: '.8',
+    fontSize: `${14.5 / 16}em`,
     ':hover': { opacity: 1 },
     style: {
       textTransform: 'uppercase',

@@ -6,7 +6,7 @@ import { countryText } from '../../texts'
 import KAZBEGI_JPG from '../../assets/images/travel/ushguli.jpg'
 import ORNAMENTS_JPG from '../../assets/images/travel/ornaments.png'
 
-import { deopacity, opacity, position, positionOpacity, opacityTransform } from '../../animations'
+import { deopacity, position, positionOpacity, opacityTransform, scale } from '../../animations'
 
 const props = {
   minWidth: '100%',
@@ -28,9 +28,7 @@ const props = {
       animationDuration: '3s',
       animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
     }
-
   },
-  // border: '5px solid red',
 
   paragraph: {
     position: 'absolute',
@@ -38,17 +36,19 @@ const props = {
     maxWidth: 'G3',
     margin: '- I - -',
     fontSize: `${15.5 / 16}em`,
-    // border: '5px solid green',
     style: {
-      letterSpacing: '.7px',
+      letterSpacing: `${0.7 / 16}em`,
       animationName: opacityTransform,
       animationDuration: '3s',
       animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
     },
-    '@tabletL': { margin: '- H2 - -' },
-    '@tabletM': { margin: '- H - -' },
-    '@tabletS': { margin: '- F2 - -' },
-    '@mobileL': { maxWidth: 'G3' },
+    '@tabletL': { margin: '- H - -' },
+    '@tabletS': { margin: '- F1 - -' },
+    '@mobileL': {
+      margin: '- 0 - C2',
+      alignSelf: 'flex-start'
+    },
+    '@mobileS': { maxWidth: 'G', margin: '- 0 - C1' },
     title: {
       text: 'make your trip extraordinary',
       fontSize: 'F',
@@ -56,21 +56,29 @@ const props = {
       textTransform: 'uppercase',
       lineHeight: `1.1em`,
       color: 'cream2 .85',
-      '@mobileL': { fontSize: 'D' }
+      '@mobileL': {
+        lineHeight: '1.3em',
+        fontWeight: '700'
+      },
+      '@mobileS': { fontSize: 'D' }
     },
     p: {
       padding: 'A1 - - -',
-      color: 'cream2 .75'
+      color: 'cream2 .8',
+      '@mobileL': { display: 'none' }
     }
   },
 
   image: {
     boxSize: '100% 100%',
-    // border: '5px solid yellow',
     align: 'center flex-end',
     backgroundImage: 'url(' + ORNAMENTS_JPG + ')',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    overflow: 'hidden',
+    '@tabletM': {
+      style: { backgroundAttachment: 'initial' }
+    },
     style: {
       backgroundAttachment: 'fixed',
       animationName: position,
@@ -86,25 +94,50 @@ const props = {
       background: 'radial-gradient(rgba(30, 40, 49, .9), rgba(30, 40, 49, 1))'
     },
 
-    childProps: {
-      width: '70%',
-      height: '73%',
+    imgCon: {
+      boxSize: '70% 73%',
       position: 'absolute',
-      zIndex: '2',
       right: '0',
-      // border: '5px solid pink',
+      align: 'center flex-end',
+      overflow: 'hidden',
       round: 'H1 0 0 H1',
-      // '@tabletS': { width: '6%' },
-      style: {
-        backgroundRepeat: 'no-repeat',
+      '@mobileL': {
+        width: '80%'
+      },
+      imgs: {
+        width: '100%',
+        height: '100%',
+        zIndex: '6',
+        right: '0',
+        round: 'H1 0 0 H1',
+        position: 'absolute',
+        backgroundImage: 'url(' + KAZBEGI_JPG + ')',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center bottom',
         overflow: 'hidden',
-        animationName: positionOpacity,
-        animationDuration: '10s',
-        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-        // '@mediia only screen and ( max-height: 750px)': {
-        //   height: '75%',
-        //   border: '3px solid red'
-        // }
+        ':after': {
+          content: '""',
+          position: 'absolute',
+          boxSize: '100% 100%',
+          overflow: 'hidden',
+          background: 'radial-gradient(rgba(30, 40, 49, .4), rgba(30, 40, 49, .6), rgba(30, 40, 49, 1))',
+          top: '0',
+          left: '0',
+          zIndex: '5',
+          '@mobileL': { background: 'radial-gradient(rgba(30, 40, 49, .6), rgba(30, 40, 49, .6), rgba(30, 40, 49, 1))' }
+        },
+        style: {
+          backgroundRepeat: 'no-repeat',
+          overflow: 'hidden',
+          animationName: positionOpacity,
+          animationDuration: '10s',
+          animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+          backgroundAttachment: 'fixed',
+          '@media only screen and (max-width: 1280px)': {
+            backgroundAttachment: 'initial',
+            animationName: scale
+          }
+        }
       }
     }
   }
@@ -125,34 +158,12 @@ export const travelBanner = {
     }
 
   },
+
   image: {
     extend: Flex,
-    ...[
-      {
-        props: {
-          position: 'relative',
-          zIndex: '6',
-          backgroundImage: 'url(' + KAZBEGI_JPG + ')',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center bottom',
-          style: {
-            backgroundRepeat: 'no-repeat',
-            // transition: 'all 3s ease-in-out',
-            backgroundAttachment: 'fixed'
-          },
-          overflow: 'hidden',
-          ':after': {
-            content: '""',
-            position: 'absolute',
-            boxSize: '100% 100%',
-            overflow: 'hidden',
-            background: 'radial-gradient(rgba(30, 40, 49, .4), rgba(30, 40, 49, .6), rgba(30, 40, 49, 1))',
-            top: '0',
-            left: '0',
-            zIndex: '5'
-          }
-        }
-      }
-    ]
+    imgCon: {
+      extend: Flex,
+      imgs: {}
+    }
   }
 }

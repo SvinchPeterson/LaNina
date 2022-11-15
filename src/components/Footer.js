@@ -14,20 +14,25 @@ const props = {
   position: 'fixed',
   bottom: '0',
   flexAlign: 'center space-between',
-  padding: '0 D2 C D2',
+  padding: '0 C1',
+  height: 'E',
   zIndex: '7',
-
+  '@mobileL': { padding: '0 B1' },
+  '@mobileS': {
+    padding: '0 A2',
+    height: 'D2'
+  },
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    animationDuration: '5s',
-    '@media only screen and (max-height: 800px)': {
-      paddingBottom: `${30 / 16}em !important`
-    },
-    '@media only screen and (max-height: 650px)': { paddingBottom: `${20 / 16}em !important` }
+    animationDuration: '5s'
+    // '@media only screen and (max-height: 800px)': {
+    //   paddingBottom: `${30 / 16}em !important`
+    // },
+    // '@media only screen and (max-height: 650px)': { paddingBottom: `${20 / 16}em !important` }
   },
-  '@mobileL': { padding: '- B A B' },
+  // '@mobileL': { padding: '- B A B' },
 
   socialLinks: {
     flexAlign: 'center center',

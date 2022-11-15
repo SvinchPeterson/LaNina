@@ -22,16 +22,13 @@ const props = {
 
   logo: {
     boxSize: 'C ',
-    opacity: '.75',
-    src: LOGO_BIG_PNG,
-    '@mobileS': {
-      boxSize: 'B2 '
-    }
+    opacity: '1',
+    src: LOGO_BIG_PNG
   },
 
   title: {
     fontSize: 'A',
-    color: 'cream2 .75',
+    color: 'white .95',
     fontWeight: '400',
     textTransform: 'uppercase',
     style: {

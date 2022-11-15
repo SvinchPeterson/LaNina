@@ -1,6 +1,6 @@
 'use strict'
 
-import { Img, Link } from 'smbls'
+import { Link, Flex } from 'smbls'
 
 import { opacity } from '../animations'
 import { Navbar } from './Navbar'
@@ -9,51 +9,49 @@ import { BBHeading } from './BBHeading'
 
 import LOGO_PNG from '../assets/icons/logo-white.png'
 
-import BACK_PNG from '../assets/icons/arrowBackcream.png'
-
 const props = {
   position: 'fixed',
   width: '100%',
   top: '0',
   left: '0',
-  flexAlign: 'center space-between',
-  padding: 'C D 0 D',
+  align: 'center space-between',
+  padding: '0 C1',
+  height: 'E',
   margin: '0 0 0 0',
-  zIndex: '7',
+  zIndex: '50',
+  '@mobileL': { padding: '0 B1' },
+  '@mobileS': {
+    padding: '0 A2',
+    height: 'D2'
+  },
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    animationDuration: '5s',
-    '@media only screen and (max-height: 800px)': {
-      paddingTop: `${30 / 16}em !important`,
-      paddingBottom: `0 !important`
-    }
+    animationDuration: '5s'
+    // '@media only screen and (max-height: 800px)': {
+    //   paddingTop: `${30 / 16}em !important`,
+    //   paddingBottom: `0 !important`
+    // }
   },
-  '@mobileL': { padding: 'A B - B' },
-
-  back: {
-    position: 'absolute',
-    bottom: '-A1',
-    arrow: {
-      boxSize: ' A1'
-    }
-
-  },
+  // '@mobileL': { padding: 'A B - B' },
 
   logo: {
+    alignSelf: 'center',
     href: '#banner',
     ':hover': { opacity: 1 },
-    icon: {
-      src: LOGO_PNG,
-      boxSize: 'B -',
-      '@tabletS': { boxSize: 'B1 -' }
+    logo: {
+      '@mobileS': { boxSize: 'B2 ' }
     }
   },
 
   navBar: {
     gap: 'B2',
-    '@tabletS': { display: 'none' }
+    '@tabletS': { display: 'none' },
+    childProps: {
+      fontWeight: '700',
+      style: { letterSpacing: '.7px' }
+    }
   },
 
   menuButton: {
@@ -65,16 +63,7 @@ const props = {
 export const Header = {
   tag: 'header',
   props: props,
-  // back: {
-  //   extend: Link,
-  //   props: {
-  //     href: '/'
-  //   },
-  //   arrow: {
-  //     extend: Img,
-  //     props: { src: BACK_PNG }
-  //   }
-  // },
+  extend: Flex,
 
   logo: { extend: [Link, BBHeading] },
 
