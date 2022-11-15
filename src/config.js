@@ -98,7 +98,9 @@ export const COLORS = {
   gray: '#454B4E',
   grey: '#5A5D5E',
 
-  blue: 'rgba(43, 56, 98, 1)'
+  blue: 'rgba(43, 56, 98, 1)',
+  seablue: 'rgba(56, 104, 153, 1)',
+  skyblue: 'rgba(189, 216, 246, 1)'
 }
 
 export const GRADIENTS = {

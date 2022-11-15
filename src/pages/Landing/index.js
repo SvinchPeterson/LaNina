@@ -65,48 +65,6 @@ const props = {
       }
     },
 
-    heading: {
-      gap: 'Y2',
-      padding: '- - - -',
-      alignSelf: 'flex-start',
-      align: 'center',
-      zIndex: '3',
-      style: {
-        animationName: opacity,
-        animationDuration: '3s',
-        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-      },
-
-      logo: {
-        boxSize: 'C ',
-        opacity: '.55',
-        '@mobileS': {
-          boxSize: 'B2 '
-        }
-      },
-
-      title: {
-        fontSize: 'C',
-        color: 'cream2 .75',
-        fontWeight: '100',
-        textTransform: 'uppercase',
-        style: {
-          letterSpacing: '2.5px',
-          animationName: opacityLetterSpacing,
-          animationDuration: '2s',
-          animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-        },
-        span: {
-          text: 'H',
-          fontSize: 'A',
-          height: '0',
-          overflow: 'hidden'
-        },
-        text: 'ospitality'
-      }
-
-    },
-
     navBar: {
       position: 'relative',
       gap: 'Z2',

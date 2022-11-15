@@ -1,55 +1,150 @@
 'use strict'
+import { Flex } from 'smbls'
 
-import { banner } from '../Sololaki/banner'
+import { countryText } from '../../texts'
 
-import TBILISI_JPG from '../../assets/images/travel/tbilisi2.jpg'
-import TBILISI_TABLET_JPG from '../../assets/images/travel/tbilisi2-tablet.jpg'
+import KAZBEGI_JPG from '../../assets/images/travel/ushguli.jpg'
+import ORNAMENTS_JPG from '../../assets/images/travel/ornaments.png'
+
+import { deopacity, opacity, position, positionOpacity, opacityTransform } from '../../animations'
 
 const props = {
-  image: {
-    ':before': { background: 'radial-gradient(rgba(30, 98, 123, .15), rgba(30, 98, 123, .65))' },
-    backgroundImage: 'url(' + TBILISI_JPG + ')',
-    '@tabletM': { backgroundImage: 'url(' + TBILISI_TABLET_JPG + ')' }
+  minWidth: '100%',
+  minHeight: '100%',
+  background: 'orange2 .5',
+  flow: 'column',
+  align: 'center center',
+  ':before': {
+    content: '""',
+    background: 'black',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    boxSize: '100% 100%',
+    zIndex: '20',
+    opacity: '0',
+    style: {
+      animationName: deopacity,
+      animationDuration: '3s',
+      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+    }
+
+  },
+  // border: '5px solid red',
+
+  paragraph: {
+    position: 'absolute',
+    zIndex: '7',
+    maxWidth: 'G3',
+    margin: '- I - -',
+    fontSize: `${15.5 / 16}em`,
+    // border: '5px solid green',
+    style: {
+      letterSpacing: '.7px',
+      animationName: opacityTransform,
+      animationDuration: '3s',
+      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+    },
+    '@tabletL': { margin: '- H2 - -' },
+    '@tabletM': { margin: '- H - -' },
+    '@tabletS': { margin: '- F2 - -' },
+    '@mobileL': { maxWidth: 'G3' },
+    title: {
+      text: 'make your trip extraordinary',
+      fontSize: 'F',
+      fontWeight: '700',
+      textTransform: 'uppercase',
+      lineHeight: `1.1em`,
+      color: 'cream2 .85',
+      '@mobileL': { fontSize: 'D' }
+    },
+    p: {
+      padding: 'A1 - - -',
+      color: 'cream2 .75'
+    }
   },
 
-  title: {
-    margin: '- - E -H1',
-    '@tabletM': { margin: '- - E 0' },
-    '@mobileS': { alignItems: 'center' },
-
-    h3: {
-      text: 'BB TRAVEL',
-      fontWeight: '100',
-      fontSize: 'I',
-      '@mobileS': { fontSize: 'G' }
+  image: {
+    boxSize: '100% 100%',
+    // border: '5px solid yellow',
+    align: 'center flex-end',
+    backgroundImage: 'url(' + ORNAMENTS_JPG + ')',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    style: {
+      backgroundAttachment: 'fixed',
+      animationName: position,
+      animationDuration: '15s',
+      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+      backgroundPosition: 'top center'
+    },
+    ':before': {
+      content: '""',
+      position: 'absoute',
+      boxSize: '100% 100%',
+      zIndex: '1',
+      background: 'radial-gradient(rgba(30, 40, 49, .9), rgba(30, 40, 49, 1))'
     },
 
-    caption: {
-      text: 'make your trip extraordinary',
-      fontSize: 'Z',
-      margin: '- -D1 - -',
+    childProps: {
+      width: '70%',
+      height: '73%',
+      position: 'absolute',
+      zIndex: '2',
+      right: '0',
+      // border: '5px solid pink',
+      round: 'H1 0 0 H1',
+      // '@tabletS': { width: '6%' },
       style: {
-        fontWeight: '400',
-        letterSpacing: '3px',
-        fontStyle: 'italic'
-      },
-      ':before': {
-        width: '100%',
-        top: '-Z1',
-        height: '.8px',
-        background: 'orange3',
-        '@mobileS': { top: '0' }
-      },
-      '@mobileL': { margin: '- 0 - -' },
-      '@mobileS': {
-        padding: 'A2 - - -',
-        maxWidth: '220px',
-        lineHeight: '25px'
+        backgroundRepeat: 'no-repeat',
+        overflow: 'hidden',
+        animationName: positionOpacity,
+        animationDuration: '10s',
+        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+        // '@mediia only screen and ( max-height: 750px)': {
+        //   height: '75%',
+        //   border: '3px solid red'
+        // }
       }
     }
   }
 }
 export const travelBanner = {
-  extend: banner,
-  props
+  props,
+  extend: Flex,
+
+  paragraph: {
+    title: {},
+    p: { extend: countryText }
+
+  },
+  image: {
+    extend: Flex,
+    ...[
+      {
+        props: {
+          position: 'relative',
+          zIndex: '6',
+          backgroundImage: 'url(' + KAZBEGI_JPG + ')',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center bottom',
+          style: {
+            // transition: 'all 3s ease-in-out',
+            backgroundAttachment: 'fixed'
+          },
+          overflow: 'hidden',
+          ':after': {
+            content: '""',
+            position: 'absolute',
+            boxSize: '100% 100%',
+            overflow: 'hidden',
+            background: 'radial-gradient(rgba(30, 40, 49, 0), rgba(30, 40, 49, .5), rgba(30, 40, 49, 1))',
+            top: '0',
+            left: '0',
+            zIndex: '5'
+          }
+        }
+      }
+    ]
+  }
 }

@@ -5,6 +5,7 @@ import { Img, Link } from 'smbls'
 import { opacity } from '../animations'
 import { Navbar } from './Navbar'
 import { MenuButton } from './MenuButton'
+import { BBHeading } from './BBHeading'
 
 import LOGO_PNG from '../assets/icons/logo-white.png'
 
@@ -64,18 +65,18 @@ const props = {
 export const Header = {
   tag: 'header',
   props: props,
-  back: {
-    extend: Link,
-    props: {
-      href: '/'
-    },
-    arrow: {
-      extend: Img,
-      props: { src: BACK_PNG }
-    }
-  },
+  // back: {
+  //   extend: Link,
+  //   props: {
+  //     href: '/'
+  //   },
+  //   arrow: {
+  //     extend: Img,
+  //     props: { src: BACK_PNG }
+  //   }
+  // },
 
-  logo: { extend: Link, icon: { extend: Img } },
+  logo: { extend: [Link, BBHeading] },
 
   navBar: {
     extend: Navbar,

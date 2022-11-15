@@ -10,6 +10,28 @@ export const position = keyframes`
   }
 `
 
+export const positionOpacity = keyframes`
+  from {
+    background-position: center left;,
+    opacity: 0;
+  }
+  to {
+    background-position: bottom center;
+    opacity: 1;
+  }
+`
+
+export const opacityTransform = keyframes`
+  from {
+    transform: translateY(50px) scale(.98);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+`
+
 export const positionBanner = keyframes`
   from {
     background-position: top left;

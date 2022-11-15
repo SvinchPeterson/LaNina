@@ -16,6 +16,7 @@ const props = {
   flexAlign: 'center space-between',
   padding: '0 D2 C D2',
   zIndex: '7',
+
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,

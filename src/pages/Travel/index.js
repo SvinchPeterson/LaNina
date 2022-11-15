@@ -124,8 +124,7 @@ export default {
 
   props: {
     ...props,
-    background: '#BDD8F6'
-    // background: 'rgba(233, 253, 255, 1)'
+    background: 'rgba(229, 249, 252, 1)'
   },
   state,
 
@@ -133,7 +132,7 @@ export default {
   headerMobile,
   menu,
   travelBanner,
-  country,
+  // country,
   gallery,
   tours,
   aboutUs,

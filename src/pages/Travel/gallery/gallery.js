@@ -92,7 +92,26 @@ const props = {
   padding: '0 0 0 0',
   margin: '0 auto',
   style: { ':hover': { '> div > h3 > div': { width: '100px' } } },
+  title: {
+    text: 'gallery',
+    fontSize: 'C',
+    textTransform: 'capitalize',
+    fontWeight: '500',
+    padding: 'F2 - A D',
+    position: 'relative',
+    display: 'flex',
+    gap: 'Y',
+    style: { alignItems: 'center' },
+    ':before': {
+      content: '""',
+      boxSize: '2px 50px',
+      background: 'black'
+      // position: 'absolute'
 
+    }
+    // textTransform: 'uppercase',
+    // style: { letterSpacing: '5px' }
+  },
   gridGallery: {
     maxWidth: '1440px',
     columns: 'repeat(4, 1fr)',
@@ -134,6 +153,6 @@ const props = {
 export const gallery = {
   props,
   attr: { id: 'gallery' },
-
+  title: {},
   gridGallery
 }
