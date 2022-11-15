@@ -115,7 +115,14 @@ export const travelBanner = {
 
   paragraph: {
     title: {},
-    p: { extend: countryText }
+    p: {
+      extend: countryText,
+      ...[
+        {
+          span: { text: 'Georgia' }
+        }
+      ]
+    }
 
   },
   image: {
@@ -138,7 +145,7 @@ export const travelBanner = {
             position: 'absolute',
             boxSize: '100% 100%',
             overflow: 'hidden',
-            background: 'radial-gradient(rgba(30, 40, 49, 0), rgba(30, 40, 49, .5), rgba(30, 40, 49, 1))',
+            background: 'radial-gradient(rgba(30, 40, 49, .4), rgba(30, 40, 49, .6), rgba(30, 40, 49, 1))',
             top: '0',
             left: '0',
             zIndex: '5'

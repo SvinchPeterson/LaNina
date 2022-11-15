@@ -54,7 +54,7 @@ export const countryText = {
   tag: 'p',
   ...[
     {
-      text: `Georgia, a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea shores.
+      text: `, a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea shores.
       `
     },
     // {

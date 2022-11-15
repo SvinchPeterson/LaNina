@@ -6,6 +6,7 @@ export const header = {
   props: {
     mixBlendMode: 'difference',
     align: 'center space-between',
+    zIndex: '30',
     logo: {
       padding: '0',
       alignSelf: 'center',
@@ -38,7 +39,7 @@ export const header = {
   logo: {},
   navBar: {
     ...[
-      { props: { text: 'gallery', href: '#about' } },
+      { props: { text: 'gallery', href: '#gallery' } },
       { props: { text: 'tours', href: '#tours' } },
       { props: { text: 'about us', href: '#about' } },
       { props: { text: 'news feed', href: '#about' } },
