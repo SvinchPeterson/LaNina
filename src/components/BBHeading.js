@@ -31,22 +31,16 @@ const props = {
 
   title: {
     fontSize: 'A',
-    color: 'cream2 .45',
+    color: 'cream2 .75',
     fontWeight: '400',
     textTransform: 'uppercase',
     style: {
-      letterSpacing: '2.5px',
+      letterSpacing: '1.4px',
       animationName: opacityLetterSpacing,
       animationDuration: '2s',
       animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
     },
-    span: {
-      text: 'H',
-      fontSize: 'A',
-      height: '0',
-      overflow: 'hidden'
-    },
-    text: 'ospitality'
+    text: 'hospitality'
   }
 
 }

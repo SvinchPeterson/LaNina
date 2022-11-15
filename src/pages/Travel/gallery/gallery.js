@@ -33,7 +33,7 @@ const gridGallery = {
   ...[
     {
       props: {
-        round: 'G1 G1 0 0',
+        round: 'G1 G1 G1 0',
         backgroundImage: 'url(' + TBILISI_JPG + ')',
         // '@tabletS': { backgroundImage: 'url(' + SVANETI_TABLET_JPG + ')' },
         // '@mobileM': { backgroundImage: 'url(' + SVANETI_MOBILE_JPG + ')' },
@@ -65,7 +65,7 @@ const gridGallery = {
     {
       props: {
         gridColumn: '3 / span 4',
-        round: '0 0 G1 G1',
+        round: '0 0 0 G1',
         backgroundImage: 'url(' + MTSKETA_JPG + ')',
         '@tabletS': { backgroundImage: 'url(' + MTSKETA_TABLET_JPG + ')' },
         '@mobileM': { backgroundImage: 'url(' + MTSKETA_MOBILE_JPG + ')' },

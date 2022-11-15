@@ -136,6 +136,7 @@ export const travelBanner = {
           backgroundSize: 'cover',
           backgroundPosition: 'center bottom',
           style: {
+            backgroundRepeat: 'no-repeat',
             // transition: 'all 3s ease-in-out',
             backgroundAttachment: 'fixed'
           },

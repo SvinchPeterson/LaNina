@@ -44,11 +44,11 @@ export const positionBanner = keyframes`
 export const opacityLetterSpacing = keyframes`
   from {
     opacity: 0;
-    letter-spacing: 3px;
+    letter-spacing: 2.3px;
   }
   to {
     opacity: 1;
-    letter-spacing: 2.5px;
+    letter-spacing: 1.4px;
   }
 `
 
@@ -112,6 +112,9 @@ export const opacityScale = keyframes`
 `
 
 export const scroll = keyframes`
+0% {
+  transform: translateX(0%);
+},
 100% {
   transform: translateX(calc(-100% - 32px));
 }

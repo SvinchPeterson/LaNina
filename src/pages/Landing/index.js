@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { deopacity, opacityLetterSpacing, position, opacity, opacityLetterSpacing2 } from '../../animations'
+import { deopacity, position, opacity } from '../../animations'
 
 import { BBHeading, Navbar } from '../../components'
 
@@ -47,11 +47,11 @@ const props = {
   content: {
     flow: 'column',
     zIndex: '5',
-    gap: 'Y',
+    gap: 'D',
     boxSize: '100% 100%',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     boxSizing: 'border-box',
-    padding: 'D2 D2 D2 D2',
+    padding: 'D2 D2 F D2',
     '@mobileL': { padding: 'C C D C' },
     '@mobileS': { padding: 'C B1 D2 B1' },
     style: {
@@ -62,6 +62,15 @@ const props = {
       '@media only screen and (max-height: 550px)': {
         paddingTop: `${30 / 16}em !important`,
         paddingBottom: `${30 / 16}em !important`
+      }
+    },
+
+    heading: {
+      alignSelf: 'center',
+      flow: 'column',
+      gap: 'Y',
+      title: {
+        fontSize: 'B'
       }
     },
 
@@ -95,29 +104,6 @@ const props = {
         },
         '@mobileL': { width: 'F1' }
       }
-    },
-
-    paragraph: {
-      text: ` a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea shores.`,
-      alignSelf: 'flex-end',
-      color: 'cream2 .5',
-      span: { text: 'Georgia', color: 'cream2 .85' },
-      zIndex: '20',
-      lineHeight: `${25 / 16}em`,
-      maxWidth: 'G2',
-      fontSize: 'A',
-      '@mobileL': { maxWidth: 'G1' },
-      '@mobileS': {
-        fontSize: `${14.3 / 16}em`,
-        alignSelf: 'center',
-        textAlign: 'center'
-      },
-      style: {
-        letterSpacing: '.6px',
-        animationName: opacityLetterSpacing2,
-        animationDuration: '1.5s',
-        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-      }
     }
   }
 
@@ -130,13 +116,8 @@ export default {
 
   content: {
     extend: Flex,
-    heading: {
-      extend: BBHeading,
-      logo: {},
-      title: {
-        span: {}
-      }
-    },
+
+    heading: { extend: BBHeading },
     navBar: {
       extend: Navbar,
       ...[
@@ -167,11 +148,6 @@ export default {
           }
         }
       ]
-    },
-
-    paragraph: {
-      tag: 'p',
-      span: {}
     }
   }
 }

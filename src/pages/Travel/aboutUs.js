@@ -11,6 +11,7 @@ import { contact } from './contact'
 
 import GIO_JPG from '../../assets/images/travel/gio.jpg'
 import SALOME_JPG from '../../assets/images/travel/salome.jpg'
+import ALEKO_JPG from '../../assets/images/travel/aleko.jpg'
 
 const paragraph = {
   extend: Paragraph,
@@ -52,7 +53,7 @@ const team = {
       position: 'absolute',
       right: '0px',
       top: '0',
-      background: 'linear-gradient(to left, rgba(233, 253, 255, 1) 0%,rgba(233, 253, 255, 0) 100%)',
+      background: 'linear-gradient(to left, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)',
       zIndex: '2'
     },
     ':after': {
@@ -140,17 +141,7 @@ const team = {
 
         {
           props: {
-            image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
-            paragraph: {
-              title: { text: 'Salome Petriashvili' },
-              p: { text: 'Customer Relations Manager' }
-            }
-          }
-        },
-
-        {
-          props: {
-            image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
+            image: { backgroundImage: 'url(' + ALEKO_JPG + ')' },
             paragraph: {
               title: { text: 'Salome Petriashvili' },
               p: { text: 'Customer Relations Manager' }
@@ -159,58 +150,58 @@ const team = {
         }
       ]
 
-    },
-
-    membersTwo: {
-      extend: Flex,
-      style: { right: '0' },
-      childExtend: TeamMember,
-      ...[
-        {
-          props: {
-            image: {
-              backgroundImage: 'url(' + SALOME_JPG + ')'
-            },
-            paragraph: {
-              title: { text: 'Giorgi Bejuashvili' },
-              p: { text: 'Co-founder / Managing Director ' }
-            }
-          }
-        },
-
-        {
-          props: {
-            image: {
-              backgroundImage: 'url(' + GIO_JPG + ')'
-            },
-            paragraph: {
-              title: { text: 'Salome Petriashvili' },
-              p: { text: 'Customer Relations Manager' }
-            }
-          }
-        },
-
-        {
-          props: {
-            image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
-            paragraph: {
-              title: { text: 'Salome Petriashvili' },
-              p: { text: 'Customer Relations Manager' }
-            }
-          }
-        },
-
-        {
-          props: {
-            image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
-            paragraph: {
-              title: { text: 'Salome Petriashvili' },
-              p: { text: 'Customer Relations Manager' }
-            }
-          }
-        }
-      ]
     }
+
+    // membersTwo: {
+    //   extend: Flex,
+    //   style: { right: '0' },
+    //   childExtend: TeamMember,
+    //   ...[
+    //     {
+    //       props: {
+    //         image: {
+    //           backgroundImage: 'url(' + SALOME_JPG + ')'
+    //         },
+    //         paragraph: {
+    //           title: { text: 'Giorgi Bejuashvili' },
+    //           p: { text: 'Co-founder / Managing Director ' }
+    //         }
+    //       }
+    //     },
+
+    //     {
+    //       props: {
+    //         image: {
+    //           backgroundImage: 'url(' + GIO_JPG + ')'
+    //         },
+    //         paragraph: {
+    //           title: { text: 'Salome Petriashvili' },
+    //           p: { text: 'Customer Relations Manager' }
+    //         }
+    //       }
+    //     },
+
+    //     {
+    //       props: {
+    //         image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
+    //         paragraph: {
+    //           title: { text: 'Salome Petriashvili' },
+    //           p: { text: 'Customer Relations Manager' }
+    //         }
+    //       }
+    //     },
+
+    //     {
+    //       props: {
+    //         image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
+    //         paragraph: {
+    //           title: { text: 'Salome Petriashvili' },
+    //           p: { text: 'Customer Relations Manager' }
+    //         }
+    //       }
+    //     }
+    //   ]
+    // }
   }
 }
 
