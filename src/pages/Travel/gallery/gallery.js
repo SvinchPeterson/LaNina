@@ -139,7 +139,7 @@ const props = {
   style: { ':hover': { '> div > h3 > div': { width: '100px' } } },
   position: 'relative',
   '@tabletM': {
-    padding: '- A - C2'
+    padding: '- C1 - C1'
   },
   '@mobileL': {
     padding: '- A2'
