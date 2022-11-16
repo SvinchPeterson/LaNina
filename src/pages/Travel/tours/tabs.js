@@ -7,7 +7,7 @@ import TBILISI_JPG from '../../../assets/images/travel/tbilisi.jpg'
 import USHGULI_JPG from '../../../assets/images/travel/ushguli.jpg'
 import SIGNAGI_JPG from '../../../assets/images/travel/kakheti/signagi.jpg'
 import WINE_JPG from '../../../assets/images/travel/kakheti/kvevri.jpg'
-import { TourTab, ScrollTitle } from '../../../components'
+import { TourTab, ScrollTitle, NavHorizontalArrowsBlack } from '../../../components'
 
 const scrollTitle = {
   extend: ScrollTitle
@@ -19,14 +19,18 @@ const props = {
   height: 'fit-content',
   flow: 'column',
   gap: 'A2',
+  // border: '3px solid red',
+  '@tabletS': { padding: '- C' },
+  '@mobileM': { padding: '- A' },
   ':before': {
     content: '""',
-    boxSize: '100% 600px',
-    display: 'none',
+    boxSize: '100% 250px',
+    pointerEvents: 'none',
+    // display: 'none',
     // background: 'red',
     zIndex: '4',
     // background: 'linear-gradient(rgba(229, 249, 252, .8),rgba(229, 249, 252, 0) 100%)',
-    background: 'linear-gradient(to left, rgba(229, 249, 252, .8) 0%,rgba(229, 249, 252, 0) 100%)',
+    background: 'linear-gradient(to left, rgba(229, 249, 252, .85) 0%,rgba(229, 249, 252, 0) 100%)',
     position: 'absolute',
     top: '0',
     right: '0',
@@ -38,52 +42,68 @@ const props = {
     // }
   },
   style: { overflowX: 'hidden' },
-  '@tabletM': { padding: '- D' },
-  '@mobileS': { padding: '- B' },
+  // '@tabletM': { padding: '- D' },
+  // '@mobileS': { padding: '- B' },
 
   title: {
     fontSize: 'D',
     borderBottom: '1px solid black',
-    justifyContent: 'space-between',
-    padding: '- - Y -',
-    width: '100%',
-    alignSelf: 'flex-end',
-    margin: '- - - -',
-    '@tabletM': {
-      alignSelf: 'flex-start',
-      textAlign: 'left',
-      margin: '- - - A1'
-    },
-    '@mobileL': {
-      width: '90%',
-      margin: '0',
-      alignSelf: 'center'
-    },
+    align: 'center space-between',
+    padding: '- - Z -',
+    // border: '5px solid blue',
+    '@mobileM': { fontSize: 'C' },
+    // width: '100%',
+    // alignSelf: 'flex-end',
+    // margin: '- - - -',
+    // '@tabletM': {
+    //   alignSelf: 'flex-start',
+    //   textAlign: 'left',
+    //   margin: '- - - A1'
+    // },
+    // '@mobileL': {
+    //   width: '90%',
+    //   margin: '0',
+    //   alignSelf: 'center'
+    // },
 
     h5: {
       text: 'tours',
       fontSize: 'A',
       fontWeight: '500',
       textTransform: 'uppercase',
-      textAlign: 'right',
+      // textAlign: 'right',
       style: { letterSpacing: '1px' }
     },
-
-    scrollTitle: {
-      display: 'none',
-      '@tabletM': { display: 'flex' }
+    arrows: {
+      gap: 'A1',
+      zIndex: '100',
+      ':after': { display: 'none' },
+      childProps: {
+        boxSize: 'D D',
+        borderRadius: '100%',
+        border: '1.5px solid gray',
+        '@mobileM': {
+          boxSize: 'C2 C2'
+        },
+        icon: {
+          fontSize: 'V'
+        }
+        // fontSize: 'V'
+      }
     }
 
   },
 
   content: {
+    // border: '5px solid green',
     gap: 'Z',
     width: 'I2',
     // border: '3px solid red',
-    overflow: 'hidden',
+    // overflow: 'hidden',
     style: {
       overflowX: 'auto',
       scrollBehavior: 'smooth',
+      padding: '- D - D',
       '::-webkit-scrollbar': { display: 'none' }
     }
   }
@@ -96,7 +116,8 @@ export const tabs = {
   title: {
     extend: Flex,
     h5: {},
-    scrollTitle
+    arrows: { extend: NavHorizontalArrowsBlack }
+    // scrollTitle
   },
 
   content: {
@@ -157,7 +178,7 @@ export const tabs = {
 
       {
         props: {
-          ':after': { background: 'gold .7' },
+          ':after': { background: 'blue3 .7' },
           style: {
 
             backgroundImage: 'url(' + USHGULI_JPG + ')'
@@ -179,7 +200,7 @@ export const tabs = {
           style: {
             backgroundImage: 'url(' + WINE_JPG + ')'
           },
-          title: { text: 'exclusive' }
+          title: { text: 'wine' }
         },
 
         on: {

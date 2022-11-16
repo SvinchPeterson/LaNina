@@ -10,7 +10,7 @@ const props = {
   width: '100%',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  padding: 'E 0 F 0',
+  padding: 'F 0 E1 0',
   align: 'center center',
   position: 'relative',
   ':before': {

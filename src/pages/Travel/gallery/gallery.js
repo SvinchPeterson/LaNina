@@ -1,7 +1,7 @@
 'use strict'
 import { Grid } from 'smbls'
 
-import SVANETI_JPG from '../../../assets/images/travel/svaneti.png'
+// import SVANETI_JPG from '../../../assets/images/travel/svaneti.png'
 // import SVANETI_TABLET_JPG from '../../../assets/images/travel/svaneti-tablet.jpg'
 // import SVANETI_MOBILE_JPG from '../../../assets/images/travel/svaneti-mobile.jpg'
 
@@ -65,10 +65,16 @@ const gridGallery = {
     {
       props: {
         gridColumn: '3 / span 4',
-        round: '0 0 0 G1',
+        round: '0 0 0 G',
         backgroundImage: 'url(' + MTSKETA_JPG + ')',
-        '@tabletS': { backgroundImage: 'url(' + MTSKETA_TABLET_JPG + ')' },
-        '@mobileM': { backgroundImage: 'url(' + MTSKETA_MOBILE_JPG + ')' },
+        '@tabletS': {
+          backgroundImage: 'url(' + MTSKETA_TABLET_JPG + ')',
+          round: '0 0 0 F'
+        },
+        '@mobileM': {
+          backgroundImage: 'url(' + MTSKETA_MOBILE_JPG + ')',
+          round: '0 0 0 E'
+        },
         title: {
           text: 'mtsketa'
           // left: 'B',
@@ -119,8 +125,6 @@ const gridGallery = {
         gridRow: 'span 2',
         title: {
           text: 'kazbegi'
-          // right: 'B',
-          // bottom: 'B'
         }
       }
     }
@@ -134,28 +138,48 @@ const props = {
   margin: 'E auto',
   style: { ':hover': { '> div > h3 > div': { width: '100px' } } },
   position: 'relative',
+  '@tabletM': {
+    padding: '- A - C2'
+  },
+  '@mobileL': {
+    padding: '- A2'
+  },
+  '@mobileS': { padding: '- Z1' },
+
   title: {
     text: 'gallery',
     fontSize: 'C',
     textTransform: 'capitalize',
     fontWeight: '500',
     padding: '- - - -',
-    // position: 'relative',
     display: 'flex',
     position: 'absolute',
     left: 'C1',
     top: 'G2',
     gap: 'Y',
+    '@tabletM': {
+      left: 'Y1'
+    },
+    '@mobileL': {
+      top: 'D',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
+    },
     style: {
       alignItems: 'center',
       letterSpacing: '.5px',
       writingMode: 'vertical-rl',
       textOrientation: 'mixed',
-      transform: 'rotate(180deg)'
+      transform: 'rotate(180deg)',
+      '@media only screen and (max-width: 768px)': {
+        writingMode: 'initial',
+        textOrientation: 'initial',
+        transform: 'rotate(0)'
+      }
     },
     ':before': {
       content: '""',
-      boxSize: '2px 50px',
+      boxSize: `${2 / 16}em ${50 / 16}em`,
       background: 'black',
       display: 'none'
       // position: 'absolute'
@@ -172,7 +196,10 @@ const props = {
     overflow: 'hidden',
     gap: 'X',
     '@tabletS': { rows: 'repeat(5, 300px)' },
-    '@mobileL': { rows: 'repeat(5, 250px)' },
+    '@mobileL': {
+      rows: 'repeat(5, 250px)',
+      gap: 'Y'
+    },
     '@mobileM': { rows: 'repeat(5, 200px)' },
     '@mobileS': { rows: 'repeat(5, 150px)' },
 
@@ -195,7 +222,9 @@ const props = {
         textTransform: 'uppercase',
         top: '50%',
         left: '50%',
-        transform: 'translate(-50%, -50%)'
+        transform: 'translate(-50%, -50%)',
+        '@mobileL': { fontSize: 'B' },
+        '@mobileS': { fontSize: 'A' }
         // bottom: 'Z',
         // right: 'A'
       },
