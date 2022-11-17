@@ -34,7 +34,9 @@ const props = {
     position: 'absolute',
     top: '0',
     right: '0',
-    opacity: '1'
+    opacity: '1',
+    '@mobileL': { boxSize: '100% 100px' },
+    '@mobileM': { boxSize: '100% 50px' }
     // style: { boxShadow: '-3px 0px 40px 2px rgba(229, 249, 252, .8)' }
     // style: {
     //   transition: 'opacity .5s ease-in-out, backdrop-filter .5s ease-in-out',

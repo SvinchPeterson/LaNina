@@ -14,7 +14,7 @@ const props = {
   backgroundSize: 'cover',
   backgroundARepeat: 'no-repeat',
   position: 'relative',
-  background: 'gold .86',
+  background: 'gold .75',
   align: 'center center',
   backgroundPosition: 'top center',
   style: {
@@ -51,7 +51,7 @@ const props = {
     boxSize: '100% 100%',
     justifyContent: 'center',
     boxSizing: 'border-box',
-    padding: 'D2 D2 F D2',
+    padding: 'D2 D2 F2 D2',
     '@mobileL': { padding: 'C C D C' },
     '@mobileS': { padding: 'C B1 D2 B1' },
     style: {
@@ -66,7 +66,7 @@ const props = {
     },
 
     heading: {
-      alignSelf: 'center',
+      // alignSelf: 'center',
       flow: 'column',
       gap: 'Y',
       logo: { opacity: '.65' },

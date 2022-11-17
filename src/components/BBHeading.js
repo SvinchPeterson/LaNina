@@ -11,8 +11,6 @@ const props = {
   align: 'center center',
 
   gap: 'Y1',
-  padding: '- - - -',
-  alignSelf: 'flex-start',
   zIndex: '3',
   style: {
     animationName: opacity,
