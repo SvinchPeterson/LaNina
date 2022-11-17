@@ -35,7 +35,10 @@ export default {
   props,
 
   banner,
-  Header,
+  header: {
+    extend: Header,
+    props: { logo: { title: { text: 'residence' } } }
+  },
   Menu,
   Residence,
   ServiceFacility,
