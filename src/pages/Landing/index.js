@@ -6,6 +6,8 @@ import { deopacity, position, opacity } from '../../animations'
 
 import { BBHeading, Navbar } from '../../components'
 
+import LOGO_PNG from '../../assets/icons/logoCream.png'
+
 import ORNAMENTS_PNG from '../../assets/images/landing/ornaments.png'
 
 const props = {
@@ -47,7 +49,7 @@ const props = {
   content: {
     flow: 'column',
     zIndex: '5',
-    gap: 'D',
+    gap: 'C',
     boxSize: '100% 100%',
     justifyContent: 'center',
     boxSizing: 'border-box',
@@ -66,13 +68,17 @@ const props = {
     },
 
     heading: {
-      // alignSelf: 'center',
       flow: 'column',
-      gap: 'Y',
-      logo: { opacity: '.65' },
+      gap: '0',
+      logo: {
+        src: LOGO_PNG,
+        opacity: '.6'
+      },
       title: {
-        fontSize: 'B',
-        color: 'white .65'
+        fontSize: 'F',
+        color: 'cream2 .75',
+        fontWeight: '100',
+        textTransform: 'capitalize'
       }
     },
 
@@ -91,8 +97,9 @@ const props = {
       },
 
       childProps: {
-        color: 'white .75',
-        border: '1px solid gray',
+        color: 'cream2 .75',
+        border: 'solid, cream2 .5',
+        borderWidth: '.8px',
         textAlign: 'center',
         padding: 'A -',
         width: 'F',
