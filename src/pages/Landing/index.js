@@ -53,19 +53,8 @@ const props = {
     boxSize: '100% 100%',
     justifyContent: 'center',
     boxSizing: 'border-box',
-    padding: 'D2 D2 F2 D2',
-    '@mobileL': { padding: 'C C D C' },
-    '@mobileS': { padding: 'C B1 D2 B1' },
-    style: {
-      '@media only screen and (max-height: 750px)': {
-        paddingTop: `${50 / 16}em`,
-        paddingBottom: `${50 / 16}em`
-      },
-      '@media only screen and (max-height: 550px)': {
-        paddingTop: `${30 / 16}em !important`,
-        paddingBottom: `${30 / 16}em !important`
-      }
-    },
+    padding: '- - E -',
+    style: { '@media only screen and (max-height: 650px)': { padding: '0', gap: `${30 / 16}em` } },
 
     heading: {
       flow: 'column',
@@ -84,12 +73,9 @@ const props = {
 
     navBar: {
       position: 'relative',
-      gap: 'Z2',
+      gap: 'A',
       alignSelf: 'center',
-      '@mobileL': {
-        flow: 'column',
-        gap: 'A'
-      },
+      '@mobileL': { flow: 'column' },
       style: {
         animationName: opacity,
         animationDuration: '3s',
@@ -97,21 +83,20 @@ const props = {
       },
 
       childProps: {
+        fontSize: 'Z',
         color: 'cream2 .75',
-        border: 'solid, cream2 .5',
-        borderWidth: '.8px',
+        border: 'solid, cream2 .35',
+        borderWidth: '1px',
         textAlign: 'center',
-        padding: 'A -',
+        padding: 'Z2 -',
         width: 'F',
-        fontSize: `${12.5 / 16}em`,
         round: 'C',
         fontWeight: '700',
         ':hover': { background: 'linear-gradient(to left, rgba(220, 187, 140, 0), rgba(220, 187, 140, .07))' },
         style: {
           letterSpacing: '1px',
           backdropFilter: 'bur(4px)'
-        },
-        '@mobileL': { width: 'F1' }
+        }
       }
     }
   }
