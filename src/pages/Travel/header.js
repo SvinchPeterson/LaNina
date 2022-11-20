@@ -4,8 +4,7 @@ import { Header, HeaderMobile } from '../../components'
 export const header = {
   extend: Header,
   props: { logo: { title: { text: 'travel' } } },
-  logo: {
-  },
+  logo: {},
   navBar: {
     ...[
       { props: { text: 'gallery', href: '#gallery' } },

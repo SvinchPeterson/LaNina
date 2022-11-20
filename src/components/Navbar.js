@@ -4,9 +4,9 @@ import { Link, Flex } from 'smbls'
 const link = {
   extend: Link,
   props: {
-    color: 'white',
-    fontSize: `${14.5 / 16}em`,
-    ':hover': { opacity: 1 },
+    color: 'white .85',
+    fontSize: '14px',
+    ':hover': { color: 'white 1' },
     style: {
       textTransform: 'uppercase',
       textDecoration: 'none'

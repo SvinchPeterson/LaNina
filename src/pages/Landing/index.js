@@ -19,6 +19,8 @@ const props = {
   background: 'gold .75',
   align: 'center center',
   backgroundPosition: 'top center',
+  flow: 'column',
+  gap: 'C',
   style: {
     animationName: position,
     animationDuration: '20s',
@@ -34,7 +36,7 @@ const props = {
     opacity: '0',
     style: {
       animationName: deopacity,
-      animationDuration: '2s',
+      animationDuration: '7s',
       animationTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
       zIndex: 4
     }
@@ -46,61 +48,59 @@ const props = {
     background: 'radial-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, .97))'
   },
 
-  content: {
+  heading: {
     flow: 'column',
+    gap: '0',
     zIndex: '5',
-    gap: 'C',
-    boxSize: '100% 100%',
-    justifyContent: 'center',
-    boxSizing: 'border-box',
-    padding: '- - E -',
-    style: { '@media only screen and (max-height: 650px)': { padding: '0', gap: `${30 / 16}em` } },
+    animationName: opacity,
+    animationDuration: '3s',
+    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+    logo: {
+      src: LOGO_PNG,
+      opacity: '.6',
+      animationName: opacity,
+      animationDuration: '3s',
+      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+    },
+    title: {
+      fontSize: 'F',
+      color: 'cream2 .75',
+      fontWeight: '100',
+      textTransform: 'capitalize'
+    }
+  },
 
-    heading: {
-      flow: 'column',
-      gap: '0',
-      logo: {
-        src: LOGO_PNG,
-        opacity: '.6'
-      },
-      title: {
-        fontSize: 'F',
-        color: 'cream2 .75',
-        fontWeight: '100',
-        textTransform: 'capitalize'
-      }
+  navBar: {
+    position: 'relative',
+    gap: 'A',
+    alignSelf: 'center',
+    zIndex: '5',
+    padding: '- - E -',
+    '@mobileL': { flow: 'column' },
+    style: {
+      animationName: opacity,
+      animationDuration: '3s',
+      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+      '@media only screen and (max-height: 680px)': { padding: `0 0 ${36 / 16}em 0` }
     },
 
-    navBar: {
-      position: 'relative',
-      gap: 'A',
-      alignSelf: 'center',
-      '@mobileL': { flow: 'column' },
+    childProps: {
+      fontSize: 'Z',
+      color: 'cream2 .75',
+      border: 'solid, cream2 .35',
+      borderWidth: '1px',
+      textAlign: 'center',
+      padding: 'Z2 -',
+      width: 'F',
+      round: 'C',
+      fontWeight: '700',
+      ':hover': { background: 'linear-gradient(to left, rgba(220, 187, 140, 0), rgba(220, 187, 140, .07))' },
       style: {
-        animationName: opacity,
-        animationDuration: '3s',
-        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-      },
-
-      childProps: {
-        fontSize: 'Z',
-        color: 'cream2 .75',
-        border: 'solid, cream2 .35',
-        borderWidth: '1px',
-        textAlign: 'center',
-        padding: 'Z2 -',
-        width: 'F',
-        round: 'C',
-        fontWeight: '700',
-        ':hover': { background: 'linear-gradient(to left, rgba(220, 187, 140, 0), rgba(220, 187, 140, .07))' },
-        style: {
-          letterSpacing: '1px',
-          backdropFilter: 'bur(4px)'
-        }
+        letterSpacing: '1px',
+        backdropFilter: 'bur(4px)'
       }
     }
   }
-
 }
 
 export default {
@@ -108,40 +108,36 @@ export default {
   props,
   attr: { id: 'landing' },
 
-  content: {
-    extend: Flex,
-
-    heading: { extend: BBHeading },
-    navBar: {
-      extend: Navbar,
-      ...[
-        {
-          props: {
-            text: 'residence',
-            href: '/Sololaki',
-            style: {
-              textShadow: '.4px .4px 1px black'
-            }
-          }
-        },
-        {
-          props: {
-            text: 'travel',
-            href: '/Travel',
-            style: {
-              textShadow: '.4px .4px 1px black'
-            }
-          }
-        },
-
-        {
-          props: {
-            text: 'rental',
-            pointerEvents: 'none',
-            opacity: '.2'
+  heading: { extend: BBHeading },
+  navBar: {
+    extend: Navbar,
+    ...[
+      {
+        props: {
+          text: 'residence',
+          href: '/Sololaki',
+          style: {
+            textShadow: '.4px .4px 1px black'
           }
         }
-      ]
-    }
+      },
+      {
+        props: {
+          text: 'travel',
+          href: '/Travel',
+          style: {
+            textShadow: '.4px .4px 1px black'
+          }
+        }
+      },
+
+      {
+        props: {
+          text: 'rental',
+          pointerEvents: 'none',
+          opacity: '.2'
+        }
+      }
+    ]
   }
 }

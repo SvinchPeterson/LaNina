@@ -18,7 +18,12 @@ export const footer = {
 
   Book: {
     extend: Flex,
-    props: { span: { text: 'PLAN TRIP' } },
+    props: {
+      href: '',
+      target: 'none',
+      cursor: 'pointer',
+      span: { text: 'PLAN TRIP' }
+    },
 
     on: {
       click: (event, element, state) => {

@@ -16,7 +16,7 @@ const props = {
   flexAlign: 'center space-between',
   padding: '0 C1',
   height: 'E',
-  zIndex: '7',
+  zIndex: '50',
   '@mobileL': { padding: '0 B1' },
   '@mobileS': {
     padding: '0 A2',
@@ -27,12 +27,7 @@ const props = {
     animationName: opacity,
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
     animationDuration: '5s'
-    // '@media only screen and (max-height: 800px)': {
-    //   paddingBottom: `${30 / 16}em !important`
-    // },
-    // '@media only screen and (max-height: 650px)': { paddingBottom: `${20 / 16}em !important` }
   },
-  // '@mobileL': { padding: '- B A B' },
 
   socialLinks: {
     flexAlign: 'center center',
@@ -40,14 +35,10 @@ const props = {
     style: { zIndex: '60' },
     childProps: {
       target: '_blank',
-      icon: {
-        boxSize: 'B -',
-        style: {
-          '&:hover': { opacity: 1 }
-        }
-      }
+      opacity: '.85',
+      '&:hover': { opacity: '1' },
+      icon: { boxSize: 'B -' }
     }
-
   }
 
 }
@@ -66,8 +57,7 @@ export const Footer = {
       {
         props: { href: 'https://www.instagram.com/laninaresidence/' },
         icon: {
-          props: { src: INSTAGRAM_PNG },
-          style: { opacity: '.9' }
+          props: { src: INSTAGRAM_PNG }
         }
       }
     ]

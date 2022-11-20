@@ -19,8 +19,8 @@ const props = {
   },
 
   logo: {
-    boxSize: 'C ',
-    opacity: '1',
+    boxSize: 'B1 ',
+    opacity: '.85',
     src: LOGO_BIG_PNG
   },
 

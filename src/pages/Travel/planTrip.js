@@ -72,7 +72,7 @@ const props = {
   gap: 'D',
   position: 'fixed',
   background: 'radial-gradient(rgba(255, 255, 255, 1), rgba(233, 250, 255, 1), rgba(208, 224, 228, 1))',
-  zIndex: '100',
+  zIndex: '30',
   top: '0',
   left: '0',
   style: {

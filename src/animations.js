@@ -12,12 +12,12 @@ export const position = keyframes`
 
 export const positionOpacity = keyframes`
   from {
-    background-position: center left;,
-    opacity: 0;
+    background-position: bottom;
+    // opacity: 0;
   }
   to {
-    background-position: bottom center;
-    opacity: 1;
+    background-position: center;
+    // opacity: 1;
   }
 `
 
@@ -55,13 +55,11 @@ export const opacityLetterSpacing = keyframes`
 export const opacityLetterSpacing2 = keyframes`
   from {
     opacity: 0;
-    transform: translateY(30px) scale(1.02);
-    bottom: -30px;
+    letter-spacing: 3px;
   }
   to {
     opacity: 1;
-    transform:  translateY(0px) scale(1);
-    bottom: 100px;
+    letter-spacing: 6px;
   }
 `
 

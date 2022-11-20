@@ -7,8 +7,6 @@ import { Navbar } from './Navbar'
 import { MenuButton } from './MenuButton'
 import { BBHeading } from './BBHeading'
 
-import LOGO_PNG from '../assets/icons/logo-white.png'
-
 const props = {
   position: 'fixed',
   width: '100%',
@@ -29,12 +27,7 @@ const props = {
     animationName: opacity,
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
     animationDuration: '5s'
-    // '@media only screen and (max-height: 800px)': {
-    //   paddingTop: `${30 / 16}em !important`,
-    //   paddingBottom: `0 !important`
-    // }
   },
-  // '@mobileL': { padding: 'A B - B' },
 
   logo: {
     alignSelf: 'center',
