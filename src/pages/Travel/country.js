@@ -1,33 +1,37 @@
 'use strict'
 
-import { Flex } from 'smbls'
-
 import { countryText } from '../../texts'
-
 import { Paragraph } from '../../components'
-
-const paragraph = {
-  extend: Paragraph,
-  props: {
-    alignItems: 'center',
-    title: { text: 'about georgia' },
-    p: { style: { textAlign: 'center' } }
-  },
-
-  title: {},
-  p: { extend: countryText }
-}
 
 const props = {
   flow: 'column',
   align: 'center center',
-  minHeight: 'H2',
-  padding: '0 A2'
+  minHeight: '',
+  padding: 'F2 A C A',
+  margin: 'auto',
+  maxWidth: 'H3',
+  '@mobileL': { padding: 'F2 B C B' },
+  title: {
+    text: 'georgia',
+    fontSize: 'A',
+    minWidth: '90%',
+    borderBottom: '1px solid black',
+    padding: '- - Y -',
+    alignSelf: 'flex-start',
+    textAlign: 'left'
+  },
+  p: {
+    fontSize: `${17.5 / 16}em`,
+    '@mobileL': { fontSize: 'A' },
+    '@mobileS': { fontSize: `${15 / 16}em` },
+    style: { letterSpacing: '.5px' }
+  }
 }
 
 export const country = {
-  extend: Flex,
+  extend: Paragraph,
   props,
 
-  paragraph
+  title: { },
+  p: { extend: countryText }
 }

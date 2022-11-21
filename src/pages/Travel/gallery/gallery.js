@@ -134,7 +134,7 @@ const gridGallery = {
 const props = {
   width: '100%',
   maxWidth: '1440px',
-  padding: 'F E1',
+  padding: 'E2 E1',
   margin: 'E auto',
   style: { ':hover': { '> div > h3 > div': { width: '100px' } } },
   position: 'relative',
