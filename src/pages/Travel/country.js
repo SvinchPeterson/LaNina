@@ -7,10 +7,9 @@ const props = {
   flow: 'column',
   align: 'center center',
   minHeight: '',
-  padding: 'F2 A C A',
+  padding: 'F2 B C B',
   margin: 'auto',
   maxWidth: 'H3',
-  '@mobileL': { padding: 'F2 B C B' },
   title: {
     text: 'georgia',
     fontSize: 'A',
@@ -22,8 +21,8 @@ const props = {
   },
   p: {
     fontSize: `${17.5 / 16}em`,
-    '@mobileL': { fontSize: 'A' },
-    '@mobileS': { fontSize: `${15 / 16}em` },
+    '@mobileL': { fontSize: `A` },
+
     style: { letterSpacing: '.5px' }
   }
 }

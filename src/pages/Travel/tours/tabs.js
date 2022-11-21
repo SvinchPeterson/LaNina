@@ -3,16 +3,7 @@
 
 import { Flex } from 'smbls'
 
-import TBILISI_JPG from '../../../assets/images/travel/tbilisi.jpg'
-import USHGULI_JPG from '../../../assets/images/travel/ushguli.jpg'
-import SIGNAGI_JPG from '../../../assets/images/travel/kakheti/signagi.jpg'
-import WINE_JPG from '../../../assets/images/travel/kakheti/kvevri.jpg'
 import { TourTab, ScrollTitle, NavHorizontalArrowsBlack } from '../../../components'
-
-const scrollTitle = {
-  extend: ScrollTitle
-}
-
 const props = {
   position: 'relative',
   width: 'fit-content',
@@ -130,7 +121,7 @@ export const tabs = {
       {
         props: {
           style: {
-            backgroundImage: 'url(' + TBILISI_JPG + ')'
+            // backgroundImage: 'url(' + TBILISI_JPG + ')'
           },
 
           title: { text: 'daily' }
@@ -149,7 +140,7 @@ export const tabs = {
         props: {
           title: { text: 'standard' },
           style: {
-            backgroundImage: 'url(' + USHGULI_JPG + ')'
+            // backgroundImage: 'url(' + USHGULI_JPG + ')'
           }
         },
         on: {
@@ -164,7 +155,7 @@ export const tabs = {
       {
         props: {
           style: {
-            backgroundImage: 'url(' + SIGNAGI_JPG + ')'
+            // backgroundImage: 'url(' + SIGNAGI_JPG + ')'
           },
           title: { text: 'caucasus' }
         },
@@ -183,7 +174,7 @@ export const tabs = {
           ':after': { background: 'blue3 .7' },
           style: {
 
-            backgroundImage: 'url(' + USHGULI_JPG + ')'
+            // backgroundImage: 'url(' + USHGULI_JPG + ')'
           },
           title: { text: 'exclusive' }
         },
@@ -200,7 +191,7 @@ export const tabs = {
       {
         props: {
           style: {
-            backgroundImage: 'url(' + WINE_JPG + ')'
+            // backgroundImage: 'url(' + WINE_JPG + ')'
           },
           title: { text: 'wine' }
         },

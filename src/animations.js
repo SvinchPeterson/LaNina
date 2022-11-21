@@ -16,7 +16,7 @@ export const positionOpacity = keyframes`
     // opacity: 0;
   }
   to {
-    background-position: center;
+    background-position: top 200px;
     // opacity: 1;
   }
 `

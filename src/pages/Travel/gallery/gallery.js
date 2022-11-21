@@ -6,24 +6,13 @@ import { Grid } from 'smbls'
 // import SVANETI_MOBILE_JPG from '../../../assets/images/travel/svaneti-mobile.jpg'
 
 import TBILISI_JPG from '../../../assets/images/travel/tbilisi.jpg'
-import BAKHMARO_JPG from '../../../assets/images/travel/bakhmaro.jpg'
-import BAKHMARO_MOBILE_JPG from '../../../assets/images/travel/bakhmaro-mobile.jpg'
-
+import BORJOMI_JPG from '../../../assets/images/travel/borjomi.jpeg'
 import MTSKETA_JPG from '../../../assets/images/travel/mtsketa.jpg'
-import MTSKETA_TABLET_JPG from '../../../assets/images/travel/mtsketa-tablet.jpg'
-import MTSKETA_MOBILE_JPG from '../../../assets/images/travel/mtsketa-mobile.jpg'
-
-import KAZBEGI_JPG from '../../../assets/images/travel/gerget.jpg'
-import KAZBEGI_TABLET_JPG from '../../../assets/images/travel/gerget-tablet.jpg'
-import KAZBEGI_MOBILE_JPG from '../../../assets/images/travel/gerget-mobile.jpg'
-
-import VARZIA_JPG from '../../../assets/images/travel/varzia.jpg'
-import KVEVRI_TABLET_JPG from '../../../assets/images/travel/varzia-tablet.jpg'
-import KVEVRI_MOBILE_JPG from '../../../assets/images/travel/varzia-mobile.jpg'
-
+import KAKHETI_JPG from '../../../assets/images/travel/kakheti.jpg'
 import MARTVILI_JPG from '../../../assets/images/travel/martvili.jpg'
-import MARTVILI_TABLET_JPG from '../../../assets/images/travel/martvili-tablet.jpg'
-import MARTVILI_MOBILE_JPG from '../../../assets/images/travel/martvili-mobile.jpg'
+import KUTAISI_JPG from '../../../assets/images/travel/kutaisi.jpg'
+import GORI_JPG from '../../../assets/images/travel/gori.jpg'
+import KAZBEGI_JPG from '../../../assets/images/travel/kazbegi.jpg'
 
 const gridGallery = {
   extend: Grid,
@@ -33,7 +22,7 @@ const gridGallery = {
   ...[
     {
       props: {
-        round: 'G1 G1 G1 0',
+        round: 'G1 G1 G 0',
         backgroundImage: 'url(' + TBILISI_JPG + ')',
         // '@tabletS': { backgroundImage: 'url(' + SVANETI_TABLET_JPG + ')' },
         // '@mobileM': { backgroundImage: 'url(' + SVANETI_MOBILE_JPG + ')' },
@@ -51,11 +40,11 @@ const gridGallery = {
       props: {
         round: 'G1 G1 0 0',
         gridColumn: '3 / span 4',
-        backgroundImage: 'url(' + BAKHMARO_JPG + ')',
-        '@tabletS': { backgroundImage: 'url(' + BAKHMARO_MOBILE_JPG + ')' },
+        backgroundImage: 'url(' + BORJOMI_JPG + ')',
+        // '@tabletS': { backgroundImage: 'url(' + BAKHMARO_MOBILE_JPG + ')' },
 
         title: {
-          text: 'bakhmaro'
+          text: 'borjomi'
           // right: 'B',
           // bottom: 'B'
         }
@@ -65,16 +54,16 @@ const gridGallery = {
     {
       props: {
         gridColumn: '3 / span 4',
-        round: '0 0 0 G',
+        round: '0 0 0 F2',
         backgroundImage: 'url(' + MTSKETA_JPG + ')',
         '@tabletS': {
-          backgroundImage: 'url(' + MTSKETA_TABLET_JPG + ')',
-          round: '0 0 0 F'
-        },
-        '@mobileM': {
-          backgroundImage: 'url(' + MTSKETA_MOBILE_JPG + ')',
+          // backgroundImage: 'url(' + MTSKETA_TABLET_JPG + ')',
           round: '0 0 0 E'
         },
+        // '@mobileM': {
+        //   backgroundImage: 'url(' + MTSKETA_MOBILE_JPG + ')',
+        //   round: '0 0 0 E'
+        // },
         title: {
           text: 'mtsketa'
           // left: 'B',
@@ -88,11 +77,11 @@ const gridGallery = {
         gridRow: '3',
         round: '0 G1 G1 0',
         gridColumn: '1 / span 2',
-        backgroundImage: 'url(' + VARZIA_JPG + ')',
-        '@tabletS': { backgroundImage: 'url(' + KVEVRI_TABLET_JPG + ')' },
-        '@mobileM': { backgroundImage: 'url(' + KVEVRI_MOBILE_JPG + ')' },
+        backgroundImage: 'url(' + KAKHETI_JPG + ')',
+        // '@tabletS': { backgroundImage: 'url(' + KVEVRI_TABLET_JPG + ')' },
+        // '@mobileM': { backgroundImage: 'url(' + KVEVRI_MOBILE_JPG + ')' },
         title: {
-          text: 'varzia'
+          text: 'kakheti'
           // right: 'B',
           // bottom: 'B'
         }
@@ -105,10 +94,39 @@ const gridGallery = {
         gridRow: '3',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + MARTVILI_JPG + ')',
-        '@tabletS': { backgroundImage: 'url(' + MARTVILI_TABLET_JPG + ')' },
-        '@mobileL': { backgroundImage: 'url(' + MARTVILI_MOBILE_JPG + ')' },
+        // '@tabletS': { backgroundImage: 'url(' + MARTVILI_TABLET_JPG + ')' },
+        // '@mobileL': { backgroundImage: 'url(' + MARTVILI_MOBILE_JPG + ')' },
         title: {
           text: 'martvili'
+          // right: 'B',
+          // bottom: 'B'
+        }
+      }
+    },
+    {
+      props: {
+        round: '0 G1 G1 0',
+        gridRow: '4',
+        gridColumn: '1 / span 2',
+        backgroundImage: 'url(' + KUTAISI_JPG + ')',
+        // '@tabletS': { backgroundImage: 'url(' + MARTVILI_TABLET_JPG + ')' },
+        // '@mobileL': { backgroundImage: 'url(' + MARTVILI_MOBILE_JPG + ')' },
+        title: {
+          text: 'kutaisi'
+        }
+      }
+    },
+
+    {
+      props: {
+        round: 'G1 0 0 G1',
+        gridRow: '4',
+        gridColumn: '3 / span 4',
+        backgroundImage: 'url(' + GORI_JPG + ')',
+        // '@tabletS': { backgroundImage: 'url(' + MARTVILI_TABLET_JPG + ')' },
+        // '@mobileL': { backgroundImage: 'url(' + MARTVILI_MOBILE_JPG + ')' },
+        title: {
+          text: 'gori'
           // right: 'B',
           // bottom: 'B'
         }
@@ -119,10 +137,10 @@ const gridGallery = {
       props: {
         round: '0 0 I1 I1',
         backgroundImage: 'url(' + KAZBEGI_JPG + ')',
-        '@tabletS': { backgroundImage: 'url(' + KAZBEGI_TABLET_JPG + ')' },
-        '@mobileM': { backgroundImage: 'url(' + KAZBEGI_MOBILE_JPG + ')' },
+        // '@tabletS': { backgroundImage: 'url(' + KAZBEGI_TABLET_JPG + ')' },
+        // '@mobileM': { backgroundImage: 'url(' + KAZBEGI_MOBILE_JPG + ')' },
         gridColumn: '1 / span 6',
-        gridRow: 'span 2',
+        gridRow: 'span 5',
         title: {
           text: 'kazbegi'
         }
@@ -191,7 +209,7 @@ const props = {
     maxWidth: '1440px',
     columns: 'repeat(4, 1fr)',
     round: 'C',
-    rows: 'repeat(5, 450px)',
+    rows: 'repeat(6, 550px)',
     position: 'relative',
     overflow: 'hidden',
     gap: 'X',

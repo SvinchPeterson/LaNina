@@ -9,9 +9,9 @@ import { scroll } from '../../animations'
 
 import { contact } from './contact'
 
-import GIO_JPG from '../../assets/images/travel/gio.jpg'
-import SALOME_JPG from '../../assets/images/travel/salome.jpg'
-import ALEKO_JPG from '../../assets/images/travel/aleko.jpg'
+import GIO_JPG from '../../assets/images/travel/team/gio.jpg'
+import SALOME_JPG from '../../assets/images/travel/team/salome.jpg'
+import ALEKO_JPG from '../../assets/images/travel/team/aleko.jpg'
 
 const paragraph = {
   extend: Paragraph,
