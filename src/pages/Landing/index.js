@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { deopacity, position, opacity } from '../../animations'
+import { deopacity, position, opacity, opacityTransform } from '../../animations'
 
 import { BBHeading, Navbar } from '../../components'
 
@@ -45,7 +45,7 @@ const props = {
     content: '""',
     position: 'absolute',
     boxSize: '100% 100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, .97))'
+    background: 'radial-gradient(rgba(0, 0, 0, .55),rgba(0, 0, 0, 1))'
   },
 
   heading: {
@@ -60,10 +60,11 @@ const props = {
       opacity: '.6',
       animationName: opacity,
       animationDuration: '3s',
-      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+      boxSize: 'C1 '
     },
     title: {
-      fontSize: 'F',
+      fontSize: 'G',
       color: 'cream2 .75',
       fontWeight: '100',
       textTransform: 'capitalize'
@@ -91,7 +92,7 @@ const props = {
       borderWidth: '1px',
       textAlign: 'center',
       padding: 'Z2 -',
-      width: 'F',
+      width: 'F+Z',
       round: 'C',
       fontWeight: '700',
       ':hover': { background: 'linear-gradient(to left, rgba(220, 187, 140, 0), rgba(220, 187, 140, .07))' },

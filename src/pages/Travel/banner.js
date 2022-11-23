@@ -19,7 +19,7 @@ const props = {
     animationName: positionOpacity,
     animationDuration: '3s',
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    '@media only screen and (max-width: 1024px)': {
+    '@media only screen and (max-width: 1280px)': {
       backgroundAttachment: 'initial'
     }
   },
@@ -43,7 +43,7 @@ const props = {
     boxSize: '100% 100%',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .65))'
+    background: 'radial-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .45))'
   },
 
   p: {
