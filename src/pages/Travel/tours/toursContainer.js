@@ -4,7 +4,7 @@ import { dailyTour } from './dailyTour'
 import { standardTour } from './standardTour'
 import { armeniaTour } from './armeniaTour'
 
-import CLOSE_PNG from '../../../assets/icons/close.png'
+import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
 
 const closeButton = {
   extend: Button,
@@ -20,7 +20,7 @@ const closeButton = {
 const props = {
   boxSize: '100% 100%',
   position: 'fixed',
-  background: 'seaBlue',
+  background: 'rgba(229, 249, 252, 1)',
   justifyContent: 'center',
   zIndex: '100',
   top: '0',

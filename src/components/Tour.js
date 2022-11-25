@@ -7,7 +7,7 @@ import { TourGallery } from './TourGallery'
 import { TourArticle } from './TourArticle'
 
 const props = {
-  gap: 'D2',
+  gap: 'C1',
   alignItems: 'center',
   '@tabletM': {
     flow: 'column',
@@ -23,7 +23,7 @@ const props = {
     gap: 'Y2',
     align: 'center center',
     margin: 'A2 - - -',
-    color: 'cream2',
+    color: 'black',
     textTransform: 'capitalize',
     border: 'none',
     outline: 'none',

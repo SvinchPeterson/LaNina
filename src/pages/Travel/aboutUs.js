@@ -129,7 +129,7 @@ const team = {
       boxSize: 'G3 H2',
       overflow: 'hidden',
       gap: 'B1',
-      padding: '- - - -',
+      padding: '- - - B1',
       margin: 'auto',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -160,12 +160,12 @@ const team = {
           padding: 'B - - -'
         },
         style: {
+
           // animationName: scroll,
           // animationDuration: '20s',
           // animationTimingFunction: 'linear',
           // animationIterationCount: 'infinite'
-        },
-        gap: 'B1'
+        }
       }
     }
   },
@@ -173,46 +173,43 @@ const team = {
   title: {},
   members: {
     extend: Flex,
-    membersOne: {
-      extend: Flex,
-      childExtend: TeamMember,
-      ...[
-        {
-          props: {
-            image: {
-              backgroundImage: 'url(' + GIO_JPG + ')'
-            },
-            paragraph: {
-              title: { text: 'Giorgi Bejuashvili' },
-              p: { text: 'Co-founder / Managing Director ' }
-            }
-          }
-        },
-
-        {
-          props: {
-            image: {
-              backgroundImage: 'url(' + SALOME_JPG + ')'
-            },
-            paragraph: {
-              title: { text: 'Salome Petriashvili' },
-              p: { text: 'Customer Relations Manager' }
-            }
-          }
-        },
-
-        {
-          props: {
-            image: { backgroundImage: 'url(' + ALEKO_JPG + ')' },
-            paragraph: {
-              title: { text: 'Aleko Giorgidze' },
-              p: { text: 'Customer Relations Manager' }
-            }
+    childExtend: TeamMember,
+    ...[
+      {
+        props: {
+          image: {
+            backgroundImage: 'url(' + GIO_JPG + ')'
+          },
+          paragraph: {
+            title: { text: 'Giorgi Bejuashvili' },
+            p: { text: 'Co-founder / Managing Director ' }
           }
         }
-      ]
+      },
 
-    }
+      {
+        props: {
+          image: {
+            backgroundImage: 'url(' + SALOME_JPG + ')'
+          },
+          paragraph: {
+            title: { text: 'Salome Petriashvili' },
+            p: { text: 'Customer Relations Manager' }
+          }
+        }
+      },
+
+      {
+        props: {
+          image: { backgroundImage: 'url(' + ALEKO_JPG + ')' },
+          paragraph: {
+            title: { text: 'Aleko Giorgidze' },
+            p: { text: 'Customer Relations Manager' }
+          }
+        }
+      }
+    ]
+
   }
 }
 

@@ -2,9 +2,8 @@
 
 import { Img, Flex } from 'smbls'
 
-import { TourBook } from './TourBook'
-
-import { NavHorizontalArrowsCream } from './NavigationArrows'
+import { NavHorizontalArrowsBlack } from './NavigationArrows'
+import { Book } from './Book'
 
 const props = {
   flow: 'column',
@@ -15,8 +14,8 @@ const props = {
   title: {
     text: 'Tbilisi City Tour',
     fontWeight: '500',
-    fontSize: 'Z',
-    color: 'cream2',
+    fontSize: 'A',
+    color: 'black',
     textTransform: 'uppercase',
     padding: '- - - B',
     '@mobileS': { padding: '- - - A' }
@@ -25,18 +24,13 @@ const props = {
   images: {
     boxSize: 'G1 H1',
     display: 'block',
-    // border: '2px solid rgba(30, 98, 123, 1)',
-    // boxShadow: 'inset 0px 0px 10px 3px black',
-    // round: 'F 0 0 F',
-    round: 'A',
+    round: '0 F F 0',
     overflow: 'hidden',
     position: 'relative',
-    // border: '5px solid red',
     '@mobileL': { boxSize: 'G H' },
     '@mobileM': { boxSize: 'F3 G3' },
     '@mobileS': { boxSize: 'F3 G1' },
     style: {
-      // boxShadow: 'inset 0px 0px 10px 3px red',
       '@media only screen and (max-width: 400px)': { maxWidth: `${310 / 16}em`, maxHeight: `${180 / 16}em` }
     },
     childProps: {
@@ -53,20 +47,37 @@ const props = {
 
   footer: {
     padding: 'Z2 - - -',
-    width: 'calc(100% - 40px)',
-    margin: '- auto - auto',
-    height: 'fit-content',
+    width: '72%',
+    // height: 'fit-content',
     flow: 'row-reverse',
     align: 'center space-between',
     '@mobileL': {
       align: 'flex-start space-between'
     },
     '@mobileXS': { padding: 'A Z1 - Z1' },
+
     navArrow: {
+      ':after': { display: 'none' },
+      gap: 'B',
       childProps: {
-        opacity: '.85',
-        // border: '2px solid red',
-        ':hover': { opacity: '1' }
+        boxSize: 'C1 C1',
+        borderRadius: '100%',
+        border: '1.5px solid gray',
+        padding: '0',
+        '@mobileM': {
+          boxSize: 'C2 C2'
+        },
+        arrow: { fontSize: '11px' }
+      }
+    },
+
+    book: {
+      border: '1px solid gray',
+      background: 'transparent',
+      padding: 'Z1 B2',
+      span: {
+        color: 'black',
+        fontSize: 'A'
       }
     }
   }
@@ -84,13 +95,16 @@ export const TourGallery = {
     extend: Flex,
 
     navArrow: {
-      extend: NavHorizontalArrowsCream,
+      extend: NavHorizontalArrowsBlack,
       props: {
         '@mobileXS': { gap: 'B1' },
         childProps: { arrow: { '@mobileXS': { boxSize: ' Z1' } } }
       }
     },
 
-    bookContainer: { extend: TourBook }
+    book: {
+      tag: 'button',
+      extend: Book
+    }
   }
 }

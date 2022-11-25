@@ -26,7 +26,8 @@ const props = {
     mixBlendMode: 'difference',
     animationName: opacity,
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    animationDuration: '5s'
+    animationDuration: '5s',
+    '@media only screen and (max-height: 450px)': { height: `${80 / 16}em` }
   },
 
   socialLinks: {

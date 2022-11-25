@@ -21,7 +21,7 @@ const props = {
     top: '0px',
     left: '0',
     zIndex: '3',
-    background: 'linear-gradient(to bottom, rgba(30, 98, 123, 1) 0%,rgba(30, 98, 123, 0) 100%)',
+    background: 'linear-gradient(to bottom, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0)100%)',
     '@tabletM': { display: 'block' }
   },
   ':after': {
@@ -30,7 +30,7 @@ const props = {
     position: 'absolute',
     bottom: '-5px',
     left: '0',
-    background: 'linear-gradient(to top, rgba(30, 98, 123, 1) 0%,rgba(30, 98, 123, 0) 100%)',
+    background: 'linear-gradient(to top, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)',
     '@tabletM': { display: 'block' }
   },
   '@tabletM': { padding: '- A' },
@@ -52,10 +52,10 @@ const props = {
       flow: 'column',
       gap: '0',
       padding: '- - Z -',
-      ':not(:last-child)': { borderBottom: '.5px solid gray' },
+      ':not(:last-child)': { borderBottom: '.5px solid black' },
 
       title: {
-        color: 'cream2 .55',
+        color: 'black',
         fontSize: 'B',
         textTransform: 'capitalize',
         padding: '- - Z2 -',
@@ -68,9 +68,9 @@ const props = {
         gap: 'A',
 
         childProps: {
-          fontSize: `${20 / 16}em`,
+          fontSize: `${18 / 16}em`,
           maxWidth: `${500 / 15.5}em`,
-          color: 'cream2 .7',
+          color: 'black .7',
           fontWeight: '400',
           '@mobileL': { maxWidth: 'H' },
           '@mobileM': { maxWidth: 'G3' },
@@ -78,7 +78,7 @@ const props = {
           // '@mobileS': { maxWidth: 'G2' },
           style: {
             letterSpacing: '.38px',
-            span: { color: 'rgba(248, 241, 227, 1)', fontWeight: 700 },
+            span: { color: 'black', fontWeight: 700 },
             '@media only screen and (max-width: 400px)': { fontSize: `${13.5 / 16}em` }
           }
         }
@@ -87,7 +87,7 @@ const props = {
       list: {
         flow: 'column',
         gap: 'Y2',
-        color: 'cream2',
+        color: 'black',
         padding: 'A - - -',
 
         title: {
@@ -103,7 +103,7 @@ const props = {
           padding: '- - - Y',
           childProps: {
             fontSize: `${20 / 16}em`,
-            color: 'cream2 .85',
+            color: 'black .85',
             style: { letterSpacing: '.5px' }
           }
         }
