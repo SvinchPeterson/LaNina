@@ -10,7 +10,7 @@ const props = {
   width: '100%',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  padding: 'E 0 E 0',
+  padding: 'F - 0 -',
   align: 'center center',
   position: 'relative',
   ':before': {
@@ -24,7 +24,13 @@ const props = {
   style: {
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
+    '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' },
+    '@media only screen and (max-height: 650px)': {
+      paddingTop: `${130 / 16}em`
+    },
+    '@media only screen and (max-height: 530px)': {
+      paddingTop: `${100 / 16}em`
+    }
   }
 }
 

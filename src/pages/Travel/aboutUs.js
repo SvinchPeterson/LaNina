@@ -216,7 +216,7 @@ const team = {
 const props = {
   align: 'flex-start center',
   gap: 'B1',
-  padding: 'E2 A2 E2 A2',
+  padding: 'F2 A2 E2 A2',
   '@tabletL': {
     padding: '- D - D1',
     flow: 'column',
