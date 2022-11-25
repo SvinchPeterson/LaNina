@@ -20,7 +20,7 @@ const props = {
   '@mobileS': { minWidth: '100%' },
   title: {
     text: 'about us',
-    fontSize: 'B'
+    fontSize: 'A'
   },
   p: {
     gap: 'Z',

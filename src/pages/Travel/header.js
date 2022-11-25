@@ -10,7 +10,7 @@ export const header = {
       { props: { text: 'gallery', href: '#gallery' } },
       { props: { text: 'tours', href: '#tours' } },
       { props: { text: 'about us', href: '#about' } },
-      { props: { text: 'news feed', href: '#about' } },
+      { props: { text: 'contact', href: '#contact' } },
       { props: { display: 'none' } }
     ]
   }

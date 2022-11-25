@@ -6,14 +6,19 @@ import PHONE_PNG from '../../assets/icons/phone.png'
 import MOBILE_PNG from '../../assets/icons/mobile.png'
 
 const props = {
+  maxWidth: '1440px',
+  margin: '- auto',
   flow: 'column',
-  padding: 'C - - -',
+  padding: 'C - E2 -',
   gap: 'Z1',
+  '@mobileXS': {
+    padding: 'C B2 E2 B2'
+  },
   mailLocation: {
     flow: 'column',
     gap: 'X',
-    fontSize: `${13.5 / 14.5}em`,
-    style: { letterSpacing: '.5px' }
+    textAlign: 'center',
+    style: { letterSpacing: '.8px' }
   },
 
   numbers: {
@@ -21,15 +26,15 @@ const props = {
     borderTop: '.5px solid black',
     padding: 'Z1 - - -',
     gap: 'Z',
+    textAlign: 'center',
     style: {
-      letterSpacing: '.5px',
-      fontSize: `${13.5 / 14.5}em`
+      letterSpacing: '.8px'
     },
     childProps: {
       gap: 'Y2',
-      align: 'center flex-start',
+      align: 'center center',
       icon: {
-        boxSize: '16px '
+        boxSize: 'A '
       }
     }
   }

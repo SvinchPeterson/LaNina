@@ -8,8 +8,10 @@ import { toursContainer } from './toursContainer'
 
 const props = {
   width: '100%',
+  maxWidth: '1440px',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
+  margin: '- auto',
   padding: 'F - 0 -',
   align: 'center center',
   position: 'relative',

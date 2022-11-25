@@ -137,5 +137,6 @@ export default {
   tours,
   aboutUs,
   planTrip,
+  contact,
   footer
 }
