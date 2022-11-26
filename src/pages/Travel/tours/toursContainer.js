@@ -72,6 +72,6 @@ export const toursContainer = {
 
   dailyTour,
   standardTour,
-  armeniaTour,
-  articleContainer
+  armeniaTour
+  // articleContainer
 }
