@@ -4,6 +4,7 @@ import { dailyTour } from './dailyTour'
 import { standardTour } from './standardTour'
 import { armeniaTour } from './armeniaTour'
 import { exclusive } from './exclusiveTour'
+import { adventure } from './adventureTour'
 
 import { articlesContainer } from './articlesContainer'
 
@@ -15,7 +16,7 @@ const closeButton = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeTour: false, activeDailyTour: false, activeStandardTour: false, activeArmeniaTour: false, activeExclusiveTour: false })
+      state.update({ activeTour: false, activeDailyTour: false, activeStandardTour: false, activeArmeniaTour: false, activeExclusiveTour: false, activeAdventureTour: false })
     }
   }
 }
@@ -76,6 +77,7 @@ export const toursContainer = {
   standardTour,
   armeniaTour,
   exclusive,
+  adventure,
 
   articlesContainer
 }

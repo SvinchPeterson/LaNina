@@ -630,3 +630,39 @@ export const abuli = {
     }
   ]
 }
+
+export const adventure = {
+  ...[
+    {
+      props: {
+        text: `, a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea beaches. Neighbor Countries -Turkey, Russia, Azerbaijan, Armenia. Georgia's Is Famous for UNESCO World Heritage Listed Churches`,
+        span: { text: 'Georgia' }
+      },
+      span: {}
+    },
+    {
+      props: {
+        text: `Beautiful Nature and lots of Caves, most important -'World's oldest wine' found in 8,000-year-old (Qvevri ) Clay Pot in Georgia, The capital, Tbilisi, is known for the diverse architecture and mazelike, cobblestone streets of its old town. Georgia's total territory covers 69,700 square kilometers. Population in Georgia is almost 4 million. Georgian currency is Georgian Lari ( ₾ ) (GEL).`
+      }
+    }
+  ]
+}
+
+export const birtvisi = {
+  ...[
+    {
+      props: {
+        text: ` is one of the oldest citadels in Georgia. It is located in the most inaccessible place, high in the mountains, among the impassable Birtvisi canyons. Currently, only parts of the walls and gates of the fortress remain, as well as the Sheupovari tower and the ruins of internal buildings. However, it is definitely worth seeing this miracle.`,
+        span: { text: `Birtvisi Fortress ` }
+
+      },
+      span: {}
+    },
+
+    {
+      props: {
+        text: `When exactly the citadel was built, no one knows. In the sources that have come down to us, it has been mentioned since the beginning of the XI century. The fortress was part of the fortifications along with other fortresses: Partskhisi and Orbeti. At that time, most of modern Georgia was dominated by a state entity called the Tbilisi Emirate.`
+      }
+    }
+  ]
+}

@@ -23,7 +23,9 @@ import {
   megalith,
   samshvilde,
   shaori,
-  abuli
+  abuli,
+  adventure,
+  birtvisi
 } from '../../../texts'
 
 export const tbilisiArticle = {
@@ -1043,6 +1045,41 @@ export const exclusiveArticle = {
               { props: { text: 'Abuli megalith fortress' } },
               { props: { text: 'Kaurma bridge' } },
               { props: { text: 'Kumurdo church' } }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
+
+export const adventureArticle = {
+  extend: TourArticle,
+
+  class: {
+    show: (element, state) => state.activeAdventureDescription
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
+  articleContainer: {
+    ...[
+      {
+        title: {},
+        paragraphs: { childExtend: adventure },
+        list: null
+      },
+
+      {
+        title: { text: 'Day 1 - Birtvisi Fortress / Sheuopovari / Devi Canyon' },
+        paragraphs: { childExtend: birtvisi },
+        list: {
+          title: { text: 'places' },
+          list: {
+            ...[
+              { props: { text: 'Birtvisi Fortress' } },
+              { props: { text: 'Sheupovari' } },
+              { props: { text: 'Devi Canyon' } }
             ]
           }
         }

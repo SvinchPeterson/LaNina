@@ -18,7 +18,8 @@ import {
   $3n4dArticle,
   $7n18dArticle,
   $9n10dArticle,
-  exclusiveArticle
+  exclusiveArticle,
+  adventureArticle
 
 } from './articles'
 
@@ -140,7 +141,8 @@ export const articlesContainer = {
               active_8d_Description: false,
               active_10d_Description: false,
               active_Armenia_Description: false,
-              activeExclusiveDescription: false
+              activeExclusiveDescription: false,
+              activeAdventureDescription: false
             })
           }
         },
@@ -163,7 +165,8 @@ export const articlesContainer = {
       $3n4dArticle,
       $7n18dArticle,
       $9n10dArticle,
-      exclusiveArticle
+      exclusiveArticle,
+      adventureArticle
     }
   }
 }

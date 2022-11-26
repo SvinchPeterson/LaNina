@@ -2,11 +2,11 @@
 
 import { Tour } from '../../../../components'
 
-import { megalith } from '../../../../texts'
+import { adventure } from '../../../../texts'
 
 import { geoArmGallery } from '../galleries/geoArmGallery'
 
-export const exclusiveTour = {
+export const adventureTour = {
   extend: Tour,
 
   props: {
@@ -23,7 +23,7 @@ export const exclusiveTour = {
       ...[
         {
           title: null,
-          paragraphs: { childExtend: megalith }
+          paragraphs: { childExtend: adventure }
 
         }
       ]
@@ -33,7 +33,7 @@ export const exclusiveTour = {
       props: { alignSelf: 'flex-start' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, activeExclusiveDescription: true })
+          state.update({ activeFullDescription: true, activeAdventureDescription: true })
         }
       }
 

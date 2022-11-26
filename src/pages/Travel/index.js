@@ -23,6 +23,7 @@ const state = {
   activeStandardTour: false,
   activeArmeniaTour: false,
   activeExclusiveTour: false,
+  activeAdventureTour: false,
 
   activeDescription: false,
   activeTbilisiGalleryImage: 0,
@@ -123,6 +124,7 @@ const state = {
   active_Armenia_Description: false,
 
   activeExclusiveDescription: false,
+  activeAdventureDescription: false,
 
   activeFullDescription: false
 }
