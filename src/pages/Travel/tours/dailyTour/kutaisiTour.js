@@ -16,18 +16,8 @@ export const kutaisiTour = {
       ...[
         {
           title: {},
-          paragraphs: {
-            childExtend: kutaisiText
-          },
-          list: {
-            title: { },
-            list: {
-              ...[
-                { props: { text: '- Prometheus Cave' } },
-                { props: { text: '- Martvili Canyon' } }
-              ]
-            }
-          }
+          paragraphs: { childExtend: kutaisiText },
+          list: null
         }
       ]
     },

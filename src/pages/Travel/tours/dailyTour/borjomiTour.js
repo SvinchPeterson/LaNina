@@ -15,19 +15,8 @@ export const borjomiTour = {
       ...[
         {
           title: {},
-          paragraphs: {
-            childExtend: borjomiText
-          },
-          list: {
-            title: { },
-            list: {
-              ...[
-                { props: { text: '- Borjomi Central Park' } },
-                { props: { text: '- Mineral Water tasting' } },
-                { props: { text: '- Cable Car' } }
-              ]
-            }
-          }
+          paragraphs: { childExtend: borjomiText },
+          list: null
         }
       ]
     },

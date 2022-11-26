@@ -981,3 +981,37 @@ export const $9n10dArticle = {
     ]
   }
 }
+
+export const exclusiveArticle = {
+  extend: TourArticle,
+
+  class: {
+    show: (element, state) => state.activeExclusiveDescription
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
+  articleContainer: {
+    ...[
+      {
+        title: {},
+        paragraphs: { childExtend: tbilisiTravelText },
+        list: {
+          title: { },
+          list: {
+            ...[
+              { props: { text: '- Mtatsminda Park by Train' } },
+              { props: { text: '- Abanotubani' } },
+              { props: { text: '- London bridge' } },
+              { props: { text: '- Legvtakhevi Waterfall' } },
+              { props: { text: '- I Love Tbilisi Statue' } },
+              { props: { text: '- Leselidze souvenires streete' } },
+              { props: { text: '- Meidan bazaar' } },
+              { props: { text: '- Bridge of Peace' } }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -17,7 +17,8 @@ import {
   $4n5dArticle,
   $3n4dArticle,
   $7n18dArticle,
-  $9n10dArticle
+  $9n10dArticle,
+  exclusiveArticle
 
 } from './articles'
 
@@ -99,7 +100,7 @@ const props = {
   }
 }
 
-export const articleContainer = {
+export const articlesContainer = {
   extend: Flex,
   props,
 
@@ -160,7 +161,8 @@ export const articleContainer = {
       $4n5dArticle,
       $3n4dArticle,
       $7n18dArticle,
-      $9n10dArticle
+      $9n10dArticle,
+      exclusiveArticle
     }
   }
 }

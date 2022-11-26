@@ -18,9 +18,12 @@ import { footer } from './footer'
 const state = {
   activeForm: false,
   activeTour: false,
+
   activeDailyTour: false,
   activeStandardTour: false,
   activeArmeniaTour: false,
+  activeExclusiveTour: false,
+
   activeDescription: false,
   activeTbilisiGalleryImage: 0,
   activeAnanuriGudauriGalleryImage: 0,
@@ -119,6 +122,8 @@ const state = {
   active_10d_Description: false,
   active_Armenia_Description: false,
 
+  activeExclusiveDescription: false,
+
   activeFullDescription: false
 }
 
@@ -131,15 +136,15 @@ export default {
   },
   state,
 
-  header,
-  headerMobile,
-  menu,
-  travelBanner,
-  country,
-  gallery,
-  tours,
-  aboutUs,
-  planTrip,
-  contact,
-  footer
+  // header,
+  // headerMobile,
+  // menu,
+  // travelBanner,
+  // country,
+  // gallery,
+  tours
+  // aboutUs,
+  // planTrip,
+  // contact,
+  // footer
 }

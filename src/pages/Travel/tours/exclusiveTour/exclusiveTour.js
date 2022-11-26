@@ -2,13 +2,14 @@
 
 import { Tour } from '../../../../components'
 
-import { tbilisiTravelText, ananuriText, gudauriText, gergetText, kakhetiText, yerevanText,
+import { megalith,
+  tbilisiTravelText, ananuriText, gudauriText, gergetText, kakhetiText, yerevanText,
   khorViperText, noravankText, savaneText, savaneMonastryText, dilijanText
 } from '../../../../texts'
 
 import { geoArmGallery } from '../galleries/geoArmGallery'
 
-export const geoArmTour = {
+export const exclusiveTour = {
   extend: Tour,
 
   props: {
@@ -24,9 +25,9 @@ export const geoArmTour = {
     articleContainer: {
       ...[
         {
-          title: { text: 'day 1 - Tbilisi City tour' },
-          paragraphs: { childExtend: tbilisiTravelText },
-          list: null
+          title: null,
+          paragraphs: { childExtend: megalith }
+
         }
       ]
     },
@@ -35,7 +36,7 @@ export const geoArmTour = {
       props: { alignSelf: 'flex-start' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, active_Armenia_Description: true })
+          state.update({ activeFullDescription: true, activeExclusiveDescription: true })
         }
       }
 

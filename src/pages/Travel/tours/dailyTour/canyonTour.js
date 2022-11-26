@@ -26,18 +26,8 @@ export const canyonTour = {
       ...[
         {
           title: {},
-          paragraphs: {
-            childExtend: canionText
-          },
-          list: {
-            title: { },
-            list: {
-              ...[
-                { props: { text: '- Dashabshi Canyon' } },
-                { props: { text: '- Brilliant Glass Bridge' } }
-              ]
-            }
-          }
+          paragraphs: { childExtend: canionText },
+          list: null
         }
       ]
     },

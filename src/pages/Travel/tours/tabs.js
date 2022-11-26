@@ -171,8 +171,8 @@ export const tabs = {
           on: {
             click: (event, element, state) => {
               state.activeTour
-                ? state.update({ activeTour: false, activeArmeniaTour: false })
-                : state.update({ activeTour: true, activeArmeniaTour: true })
+                ? state.update({ activeTour: false, activeExclusiveTour: false })
+                : state.update({ activeTour: true, activeExclusiveTour: true })
             }
           }
         },

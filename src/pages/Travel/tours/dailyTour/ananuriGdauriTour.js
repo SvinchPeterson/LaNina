@@ -2,7 +2,7 @@
 
 import { Tour } from '../../../../components'
 
-import { ananuriText, gudauriText, gergetText } from '../../../../texts'
+import { ananuriText } from '../../../../texts'
 
 import { ananuriGudauriGallery } from '../galleries/ananuriGudauriGallery'
 
@@ -16,25 +16,8 @@ export const ananuriGudauriTour = {
       ...[
         {
           title: {},
-          paragraphs: {
-            ...[
-              { extend: ananuriText },
-              { extend: gudauriText },
-              { extend: gergetText }
-            ]
-          },
-          list: {
-            title: { },
-            list: {
-              ...[
-                { props: { text: '- Zhinvali Water Reservoir' } },
-                { props: { text: '- Ananuri Fortress' } },
-                { props: { text: '- Gudauri Panorama' } },
-                { props: { text: '- Spring Water Mountain' } },
-                { props: { text: '- Kazbegi city ( Gergeti church extra charge)' } }
-              ]
-            }
-          }
+          paragraphs: { ...[{ extend: ananuriText }] },
+          list: null
         }
       ]
     },

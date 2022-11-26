@@ -26,18 +26,8 @@ export const goriTour = {
       ...[
         {
           title: {},
-          paragraphs: {
-            childExtend: goriText
-          },
-          list: {
-            title: { },
-            list: {
-              ...[
-                { props: { text: '- Stalin Museum' } },
-                { props: { text: '- Uplistsikhe Cave City' } }
-              ]
-            }
-          }
+          paragraphs: { childExtend: goriText },
+          list: null
         }
       ]
     },

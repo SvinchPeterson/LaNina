@@ -16,18 +16,8 @@ export const mtsketaTour = {
       ...[
         {
           title: {},
-          paragraphs: {
-            childExtend: mtsketaText
-          },
-          list: {
-            title: { },
-            list: {
-              ...[
-                { props: { text: '- Svetitskhoveli Cathedral 11th' } },
-                { props: { text: '- Jvari Monastery - 6th' } }
-              ]
-            }
-          }
+          paragraphs: { childExtend: mtsketaText },
+          list: null
         }
       ]
     },

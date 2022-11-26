@@ -27,17 +27,8 @@ export const rabatiTour = {
         {
           captionButton: {},
           title: {},
-          paragraphs: {
-            childExtend: rabatiText
-          },
-          list: {
-            title: { },
-            list: {
-              ...[
-                { props: { text: '- Rabati Castle walking Tour' } }
-              ]
-            }
-          }
+          paragraphs: { childExtend: rabatiText },
+          list: null
         }
       ]
     },

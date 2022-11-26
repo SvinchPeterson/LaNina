@@ -560,3 +560,12 @@ export const dilijanText = {
   },
   span: {}
 }
+
+export const megalith = {
+  props: {
+    text: `. Mostly in southern part of Georgia, particularly, in Kvemo Kartli and Javakheti provinces. During the tour, we have an opportunity to discover less known ancient megalithic monuments. We will explore Lesser Caucasus fantastic landscapes and visit ancient cult monuments, where megalithic and Christian cultures are interrelated. Wonderful lakes and 360 % view of Javakheti
+    `,
+    span: { text: 'Mystical Unknown wonders of Georgia' }
+  },
+  span: {}
+}

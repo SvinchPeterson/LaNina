@@ -26,20 +26,8 @@ export const kakhetiTour = {
       ...[
         {
           title: {},
-          paragraphs: {
-            childExtend: kakhetiText
-          },
-          list: {
-            title: { },
-            list: {
-              ...[
-                { props: { text: '- Wine Tasting in Traditional Winery' } },
-                { props: { text: '- Bodbe Monastery' } },
-                { props: { text: '- ST. Nino Waterfall' } },
-                { props: { text: '- Signagi City' } }
-              ]
-            }
-          }
+          paragraphs: { childExtend: kakhetiText },
+          list: null
         }
       ]
     },

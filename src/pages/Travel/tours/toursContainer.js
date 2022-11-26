@@ -3,6 +3,9 @@ import { Img, Button, Flex } from 'smbls'
 import { dailyTour } from './dailyTour'
 import { standardTour } from './standardTour'
 import { armeniaTour } from './armeniaTour'
+import { exclusive } from './exclusiveTour'
+
+import { articlesContainer } from './articlesContainer'
 
 import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
 
@@ -12,7 +15,7 @@ const closeButton = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeTour: false, activeDailyTour: false, activeStandardTour: false, activeArmeniaTour: false })
+      state.update({ activeTour: false, activeDailyTour: false, activeStandardTour: false, activeArmeniaTour: false, activeExclusiveTour: false })
     }
   }
 }
@@ -71,6 +74,8 @@ export const toursContainer = {
 
   dailyTour,
   standardTour,
-  armeniaTour
-  // articleContainer
+  armeniaTour,
+  exclusive,
+
+  articlesContainer
 }
