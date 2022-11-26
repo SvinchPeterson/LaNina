@@ -4,7 +4,7 @@ import { Tour } from '../../../../components'
 
 import { megalith } from '../../../../texts'
 
-import { geoArmGallery } from '../galleries/geoArmGallery'
+import { exclusiveGallery } from '../galleries/exclusiveGallery'
 
 export const exclusiveTour = {
   extend: Tour,
@@ -16,7 +16,7 @@ export const exclusiveTour = {
     }
   },
 
-  gallery: { extend: geoArmGallery },
+  gallery: { extend: exclusiveGallery },
 
   article: {
     articleContainer: {

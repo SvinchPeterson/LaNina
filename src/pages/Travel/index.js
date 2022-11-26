@@ -45,6 +45,8 @@ const state = {
   active7n8dGalleryImage: 0,
   active9n10dGalleryImage: 0,
   activeGeoArmGalleryImage: 0,
+  activeExclusiveGalleryImage: 0,
+  activeAdventureGalleryImage: 0,
 
   active_Tbilisi_TourMail: false,
   active_Tbilisi_TourBook: true,
@@ -138,15 +140,15 @@ export default {
   },
   state,
 
-  // header,
-  // headerMobile,
-  // menu,
-  // travelBanner,
-  // country,
-  // gallery,
-  tours
-  // aboutUs,
-  // planTrip,
-  // contact,
-  // footer
+  header,
+  headerMobile,
+  menu,
+  travelBanner,
+  country,
+  gallery,
+  tours,
+  aboutUs,
+  planTrip,
+  contact,
+  footer
 }

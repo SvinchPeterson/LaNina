@@ -4,7 +4,7 @@ import { Tour } from '../../../../components'
 
 import { adventure } from '../../../../texts'
 
-import { geoArmGallery } from '../galleries/geoArmGallery'
+import { adventureGallery } from '../galleries/adventureGallery'
 
 export const adventureTour = {
   extend: Tour,
@@ -16,7 +16,7 @@ export const adventureTour = {
     }
   },
 
-  gallery: { extend: geoArmGallery },
+  gallery: { extend: adventureGallery },
 
   article: {
     articleContainer: {
