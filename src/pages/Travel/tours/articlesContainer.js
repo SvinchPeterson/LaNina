@@ -2,7 +2,24 @@
 
 import { Flex, Button, Img } from 'smbls'
 
-import { tbilisiArticle } from './articles'
+import {
+  tbilisiArticle,
+  ananuriArticle,
+  goriArticle,
+  borjomiArticle,
+  qutaisiArticle,
+  kakhetiArticle,
+  mtsketaArticle,
+  rabatiArticle,
+  canyonArticle,
+  caucasusArticle,
+  $2n3dArticle,
+  $4n5dArticle,
+  $3n4dArticle,
+  $7n18dArticle,
+  $9n10dArticle
+
+} from './articles'
 
 import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
 import LOGO_PNG from '../../../assets/icons/logoBlack.png'
@@ -22,19 +39,45 @@ const props = {
 
   articles: {
     background: 'rgba(229, 249, 252, 1)',
-    padding: 'B',
-    boxSize: '80% 80%',
+    padding: 'B B - B',
+    boxSize: '85% 70%',
     flow: 'column',
-    gap: 'C',
+    gap: '',
+    overflow: 'hidden',
+    position: 'relative',
+    ':before': {
+      content: '""',
+      position: 'absolute',
+      boxSize: 'E 100%',
+      background: 'linear-gradient(to bottom,  rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0)100%)',
+      // background: 'linear-gradient(to top, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)',
+      // background: 'linear-gradient(to top, rgba(229, 249, 252, 0) 0%,rgba(229, 249, 252, 1) 100%)',
+      top: '0',
+      left: '0',
+      zIndex: '2'
+      // zIndex: '300'
+    },
+    ':after': {
+      content: '""',
+      position: 'absolute',
+      boxSize: 'E 100%',
+      background: 'linear-gradient(to bottom, rgba(229, 249, 252, 0) 0%,rgba(229, 249, 252, 1) 100%)',
+      bottom: '0',
+      left: '0'
+      // zIndex: '300'
+    },
+
     header: {
       align: 'center space-between',
+      zIndex: '3',
       logo: {
         src: LOGO_PNG,
-        boxSize: 'C '
+        boxSize: 'B1 '
       },
 
       close: {
         background: 'rgba(229, 249, 252, 1)',
+        boxSize: 'A2 A2',
         icon: {
           src: CLOSE_PNG,
           boxSize: 'A2 A2'
@@ -43,9 +86,9 @@ const props = {
     },
 
     content: {
-      // position: 'relative',
-      zIndex: '100',
-      alignSelf: 'center'
+      alignSelf: 'center',
+      padding: 'C2 -',
+      style: { overflowY: 'auto' }
     }
   }
 }
@@ -73,14 +116,45 @@ export const descriptionsContainer = {
         extend: Button,
         on: {
           click: (event, element, state) => {
-            state.update({ activeFullDescription: false })
+            state.update({
+              activeFullDescription: false,
+              activeTbilisiDescripion: false,
+              activeAnanuriDescripion: false,
+              activeGoriDescripion: false,
+              activeKakhetiDescripion: false,
+              activeCanyonDescripion: false,
+              activeKutaisiDescripion: false,
+              activeBorjomiDescripion: false,
+              activeRabatDescription: false,
+              activeMtsketaDescription: false,
+              active_3d_Description: false,
+              active_4d_Description: false,
+              active_5d_Description: false,
+              active_8d_Description: false,
+              active_10d_Description: false,
+              active_Armenia_Description: false
+            })
           }
         },
         icon: { extend: Img }
       }
     },
     content: {
-      tbilisiArticle
+      tbilisiArticle,
+      ananuriArticle,
+      goriArticle,
+      borjomiArticle,
+      qutaisiArticle,
+      kakhetiArticle,
+      mtsketaArticle,
+      rabatiArticle,
+      canyonArticle,
+      caucasusArticle,
+      $2n3dArticle,
+      $4n5dArticle,
+      $3n4dArticle,
+      $7n18dArticle,
+      $9n10dArticle
     }
   }
 }

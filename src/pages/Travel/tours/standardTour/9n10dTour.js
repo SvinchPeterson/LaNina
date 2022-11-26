@@ -209,6 +209,14 @@ export const $9n10dTour = {
       ]
     },
 
-    button: { props: { alignSelf: 'flex-end' } }
+    button: {
+      props: { alignSelf: 'flex-end' },
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeFullDescription: true, active_10d_Description: true })
+        }
+      }
+
+    }
   }
 }

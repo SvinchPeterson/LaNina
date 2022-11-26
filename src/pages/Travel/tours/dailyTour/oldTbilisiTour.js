@@ -72,6 +72,13 @@ export const oldTbilisiTour = {
       ]
     },
 
-    button: { props: { alignSelf: 'flex-end' } }
+    button: {
+      props: { alignSelf: 'flex-end' },
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeFullDescription: true, activeTbilisiDescripion: true })
+        }
+      }
+    }
   }
 }

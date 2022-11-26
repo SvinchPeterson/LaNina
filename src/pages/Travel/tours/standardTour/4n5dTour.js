@@ -139,6 +139,13 @@ export const $4n5dTour = {
       ]
     },
 
-    button: { props: { alignSelf: 'flex-end' } }
+    button: {
+      props: { alignSelf: 'flex-end' },
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeFullDescription: true, active_5d_Description: true })
+        }
+      }
+    }
   }
 }

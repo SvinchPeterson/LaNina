@@ -111,6 +111,7 @@ const state = {
   activeBorjomiDescripion: false,
   activeRabatDescription: false,
   activeMtsketaDescription: false,
+
   active_3d_Description: false,
   active_4d_Description: false,
   active_5d_Description: false,

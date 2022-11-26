@@ -70,6 +70,13 @@ export const goriTour = {
       ]
     },
 
-    button: { props: { alignSelf: 'flex-end' } }
+    button: {
+      props: { alignSelf: 'flex-end' },
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeFullDescription: true, activeGoriDescripion: true })
+        }
+      }
+    }
   }
 }

@@ -24,6 +24,13 @@ import {
 
 export const tbilisiArticle = {
   extend: TourArticle,
+
+  class: {
+    show: (element, state) => state.activeTbilisiDescripion
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -52,6 +59,13 @@ export const tbilisiArticle = {
 
 export const ananuriArticle = {
   extend: TourArticle,
+
+  class: {
+    show: (element, state) => state.activeAnanuriDescripion
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -83,6 +97,12 @@ export const ananuriArticle = {
 
 export const borjomiArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.activeBorjomiDescripion
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -108,6 +128,12 @@ export const borjomiArticle = {
 
 export const canyonArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.activeCanyonDescripion
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -132,6 +158,12 @@ export const canyonArticle = {
 
 export const goriArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.activeGoriDescripion
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -156,6 +188,12 @@ export const goriArticle = {
 
 export const kakhetiArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.activeKakhetiDescripion
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -182,6 +220,12 @@ export const kakhetiArticle = {
 
 export const qutaisiArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.activeKutaisiDescripion
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -206,6 +250,12 @@ export const qutaisiArticle = {
 
 export const mtsketaArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.activeMtsketaDescription
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -230,6 +280,12 @@ export const mtsketaArticle = {
 
 export const rabatiArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.activeRabatDescription
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -253,6 +309,12 @@ export const rabatiArticle = {
 
 export const caucasusArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.active_Armenia_Description
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -401,6 +463,12 @@ export const caucasusArticle = {
 
 export const $2n3dArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.active_3d_Description
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -468,6 +536,12 @@ export const $2n3dArticle = {
 
 export const $3n4dArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.active_4d_Description
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -556,6 +630,12 @@ export const $3n4dArticle = {
 
 export const $4n5dArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.active_5d_Description
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -649,6 +729,12 @@ export const $4n5dArticle = {
 
 export const $7n18dArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.active_8d_Description
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {
@@ -747,6 +833,12 @@ export const $7n18dArticle = {
 
 export const $9n10dArticle = {
   extend: TourArticle,
+  class: {
+    show: (element, state) => state.active_10d_Description
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
+
   articleContainer: {
     ...[
       {

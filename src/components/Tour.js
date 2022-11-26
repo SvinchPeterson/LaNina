@@ -92,9 +92,7 @@ export const Tour = {
       }
     },
 
-    articleContainer: {
-
-    },
+    articleContainer: {},
     button: {
       on: {
         click: (event, element, state) => {

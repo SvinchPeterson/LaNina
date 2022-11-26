@@ -72,7 +72,14 @@ export const kakhetiTour = {
       ]
     },
 
-    button: { props: { alignSelf: 'flex-end' } }
+    button: {
+      props: { alignSelf: 'flex-end' },
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeFullDescription: true, activeKakhetiDescripion: true })
+        }
+      }
+    }
 
   }
 }

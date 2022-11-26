@@ -140,6 +140,14 @@ export const $7n8dTour = {
           list: null
         }
       ]
+    },
+
+    button: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeFullDescription: true, active_8d_Description: true })
+        }
+      }
     }
   },
 

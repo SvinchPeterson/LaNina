@@ -73,6 +73,14 @@ export const ananuriGudauriTour = {
           }
         }
       ]
+    },
+
+    button: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeFullDescription: true, activeAnanuriDescripion: true })
+        }
+      }
     }
   },
 
