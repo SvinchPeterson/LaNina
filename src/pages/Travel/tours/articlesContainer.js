@@ -48,6 +48,7 @@ const props = {
     position: 'relative',
     '@tabletM': { boxSize: '85% 85%' },
     '@tabletS': { boxSize: '85% 90%' },
+    '@mobileS': { boxSize: '90% 95%' },
     ':before': {
       content: '""',
       position: 'absolute',
@@ -72,9 +73,9 @@ const props = {
       position: 'absolute',
       padding: 'B B',
       width: '100%',
-      maxWidth: '100%',
       top: '0',
       left: '0',
+      style: { backdropFilter: 'blur(1px)' },
       logo: {
         src: LOGO_PNG,
         boxSize: 'B1 '
@@ -92,7 +93,8 @@ const props = {
 
     content: {
       alignSelf: 'center',
-      padding: 'C2 -',
+      padding: 'D1 C C2 C',
+      '@mobileS': { padding: 'D1 A - A' },
       style: {
         overflowY: 'auto',
         '::-webkit-scrollbar': { display: 'none' }

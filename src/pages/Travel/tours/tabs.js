@@ -125,9 +125,7 @@ export const tabs = {
 
           on: {
             click: (event, element, state) => {
-              state.activeTour
-                ? state.update({ activeTour: false, activeDailyTour: false })
-                : state.update({ activeTour: true, activeDailyTour: true })
+              state.update({ activeTour: true, activeDailyTour: true, activeFullDescription: false })
             }
           }
         },
@@ -139,9 +137,7 @@ export const tabs = {
           },
           on: {
             click: (event, element, state) => {
-              state.activeTour
-                ? state.update({ activeTour: false, activeStandardTour: false })
-                : state.update({ activeTour: true, activeStandardTour: true })
+              state.update({ activeTour: true, activeStandardTour: true, activeFullDescription: false })
             }
           }
         },
@@ -154,9 +150,7 @@ export const tabs = {
 
           on: {
             click: (event, element, state) => {
-              state.activeTour
-                ? state.update({ activeTour: false, activeArmeniaTour: false })
-                : state.update({ activeTour: true, activeArmeniaTour: true })
+              state.update({ activeTour: true, activeArmeniaTour: true, activeFullDescription: false })
             }
           }
         },
@@ -170,9 +164,7 @@ export const tabs = {
 
           on: {
             click: (event, element, state) => {
-              state.activeTour
-                ? state.update({ activeTour: false, activeExclusiveTour: false })
-                : state.update({ activeTour: true, activeExclusiveTour: true })
+              state.update({ activeTour: true, activeExclusiveTour: true, activeFullDescription: false })
             }
           }
         },
@@ -185,9 +177,7 @@ export const tabs = {
 
           on: {
             click: (event, element, state) => {
-              state.activeTour
-                ? state.update({ activeTour: false, activeArmeniaTour: false })
-                : state.update({ activeTour: true, activeArmeniaTour: true })
+              state.update({ activeTour: true, activeArmeniaTour: true, activeFullDescription: false })
             }
           }
         },
@@ -200,9 +190,7 @@ export const tabs = {
 
           on: {
             click: (event, element, state) => {
-              state.activeTour
-                ? state.update({ activeTour: false, activeAdventureTour: false })
-                : state.update({ activeTour: true, activeAdventureTour: true })
+              state.update({ activeTour: true, activeAdventureTour: true, activeFullDescription: false })
             }
           }
         }
