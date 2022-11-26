@@ -9,26 +9,6 @@ import { ananuriGudauriGallery } from '../galleries/ananuriGudauriGallery'
 export const ananuriGudauriTour = {
   extend: Tour,
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.activeAnanuriDescripion
-          ? state.update({ activeAnanuriDescripion: false })
-          : state.update({ activeAnanuriDescripion: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.activeAnanuriDescripion
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.activeAnanuriDescripion
@@ -50,7 +30,6 @@ export const ananuriGudauriTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: {},
           paragraphs: {
             ...[

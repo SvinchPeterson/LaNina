@@ -34,7 +34,6 @@ export const tbilisiArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: {},
         paragraphs: { childExtend: tbilisiTravelText },
         list: {
@@ -69,7 +68,6 @@ export const ananuriArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: {},
         paragraphs: {
           ...[
@@ -106,7 +104,6 @@ export const borjomiArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: {},
         paragraphs: {
           childExtend: borjomiText
@@ -137,7 +134,6 @@ export const canyonArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: {},
         paragraphs: {
           childExtend: canionText
@@ -167,7 +163,6 @@ export const goriArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: {},
         paragraphs: {
           childExtend: goriText
@@ -197,7 +192,6 @@ export const kakhetiArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: {},
         paragraphs: {
           childExtend: kakhetiText
@@ -229,7 +223,6 @@ export const qutaisiArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: {},
         paragraphs: {
           childExtend: kutaisiText
@@ -259,7 +252,6 @@ export const mtsketaArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: {},
         paragraphs: {
           childExtend: mtsketaText
@@ -289,7 +281,6 @@ export const rabatiArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: {},
         paragraphs: {
           childExtend: rabatiText
@@ -318,7 +309,6 @@ export const caucasusArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: { text: 'day 1 - Tbilisi City tour' },
         paragraphs: { childExtend: tbilisiTravelText },
         list: {
@@ -339,7 +329,6 @@ export const caucasusArticle = {
       },
 
       {
-        captionButton: {},
         title: { text: 'day 2 - Ananuri / Gudauri / Kazbegi' },
         paragraphs: {
           ...[
@@ -363,7 +352,6 @@ export const caucasusArticle = {
       },
 
       {
-        captionButton: {},
         title: { text: 'day 3 - kakheti tour' },
         paragraphs: {
           childExtend: kakhetiText
@@ -472,7 +460,6 @@ export const $2n3dArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
         title: { text: 'day 1 - Tbilisi City tour' },
         paragraphs: { childExtend: tbilisiTravelText },
         list: {
@@ -493,7 +480,7 @@ export const $2n3dArticle = {
       },
 
       {
-        captionButton: {},
+
         title: { text: 'day 2 - Ananuri / Gudauri / Kazbegi' },
         paragraphs: {
           ...[
@@ -545,7 +532,7 @@ export const $3n4dArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
+
         title: { text: 'day 1 - Tbilisi City tour' },
         paragraphs: { childExtend: tbilisiTravelText },
         list: {
@@ -566,7 +553,7 @@ export const $3n4dArticle = {
       },
 
       {
-        captionButton: {},
+
         title: { text: 'day 2 - kakheti tour' },
         paragraphs: {
           childExtend: kakhetiText
@@ -585,7 +572,7 @@ export const $3n4dArticle = {
       },
 
       {
-        captionButton: {},
+
         title: { text: 'day 3 - Ananuri / Gudauri / Kazbegi' },
         paragraphs: {
           ...[
@@ -639,7 +626,7 @@ export const $4n5dArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
+
         title: { text: 'day 1 - Tbilisi City tour' },
         paragraphs: { childExtend: tbilisiTravelText },
         list: {
@@ -660,7 +647,7 @@ export const $4n5dArticle = {
       },
 
       {
-        captionButton: {},
+
         title: { text: 'day 2 - kakheti tour' },
         paragraphs: {
           childExtend: kakhetiText
@@ -679,7 +666,7 @@ export const $4n5dArticle = {
       },
 
       {
-        captionButton: {},
+
         title: { text: 'day 3 - Ananuri / Gudauri / Kazbegi' },
         paragraphs: {
           ...[
@@ -738,13 +725,13 @@ export const $7n18dArticle = {
   articleContainer: {
     ...[
       {
-        captionButton: {},
+
         title: { text: 'day 1 - Arrival TBS Airport / Transfer' },
         list: null
       },
 
       {
-        captionButton: {},
+
         title: { text: 'day 2 - Ananuri / Gudauri / Kazbegi' },
         paragraphs: {
           ...[
@@ -768,7 +755,7 @@ export const $7n18dArticle = {
       },
 
       {
-        captionButton: {},
+
         title: { text: 'day 3 - Kakheti Tour' },
         paragraphs: { ...[{ extend: kakhetiText }] },
         list: {
@@ -862,7 +849,7 @@ export const $9n10dArticle = {
       },
 
       {
-        captionButton: {},
+
         title: { text: 'day 2 - Ananuri / Gudauri / Kazbegi' },
         paragraphs: {
           ...[
@@ -886,7 +873,6 @@ export const $9n10dArticle = {
       },
 
       {
-        captionButton: {},
         title: { text: 'day 3 - Dashbashi Canyon' },
         paragraphs: { ...[{ extend: canionText }] },
         list: {
@@ -901,7 +887,6 @@ export const $9n10dArticle = {
       },
 
       {
-        captionButton: {},
         title: { text: 'day 4 - Kakheti Tour' },
         paragraphs: { ...[{ extend: kakhetiText }] },
         list: {

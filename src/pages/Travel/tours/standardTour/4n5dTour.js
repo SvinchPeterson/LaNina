@@ -11,26 +11,6 @@ export const $4n5dTour = {
 
   gallery: { extend: $4n5dGallery },
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.active_5d_Description
-          ? state.update({ active_5d_Description: false })
-          : state.update({ active_5d_Description: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.active_5d_Description
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.active_5d_Description
@@ -52,7 +32,7 @@ export const $4n5dTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
+
           title: { text: 'day 1 - Tbilisi City tour' },
           paragraphs: { childExtend: tbilisiTravelText },
           list: {
@@ -73,7 +53,6 @@ export const $4n5dTour = {
         },
 
         {
-          captionButton: {},
           title: { text: 'day 2 - kakheti tour' },
           paragraphs: {
             childExtend: kakhetiText
@@ -92,7 +71,6 @@ export const $4n5dTour = {
         },
 
         {
-          captionButton: {},
           title: { text: 'day 3 - Ananuri / Gudauri / Kazbegi' },
           paragraphs: {
             ...[

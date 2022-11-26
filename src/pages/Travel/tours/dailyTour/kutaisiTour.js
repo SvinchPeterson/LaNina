@@ -9,26 +9,6 @@ import { kutaisiGallery } from '../galleries/kutaisiGallery'
 export const kutaisiTour = {
   extend: Tour,
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.activeKutaisiDescripion
-          ? state.update({ activeKutaisiDescripion: false })
-          : state.update({ activeKutaisiDescripion: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.activeKutaisiDescripion
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.activeKutaisiDescripion
@@ -50,7 +30,6 @@ export const kutaisiTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: {},
           paragraphs: {
             childExtend: kutaisiText

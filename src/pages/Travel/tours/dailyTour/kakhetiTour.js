@@ -11,26 +11,6 @@ export const kakhetiTour = {
 
   gallery: { extend: kakhetiGallery },
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.activeKakhetiDescripion
-          ? state.update({ activeKakhetiDescripion: false })
-          : state.update({ activeKakhetiDescripion: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.activeKakhetiDescripion
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.activeKakhetiDescripion
@@ -52,7 +32,6 @@ export const kakhetiTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: {},
           paragraphs: {
             childExtend: kakhetiText

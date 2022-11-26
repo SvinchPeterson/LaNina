@@ -14,26 +14,6 @@ export const $9n10dTour = {
 
   gallery: { extend: $9n10dGallery },
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.active_10d_Description
-          ? state.update({ active_10d_Description: false })
-          : state.update({ active_10d_Description: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.active_10d_Description
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.active_10d_Description
@@ -75,7 +55,6 @@ export const $9n10dTour = {
         },
 
         {
-          captionButton: {},
           title: { text: 'day 2 - Ananuri / Gudauri / Kazbegi' },
           paragraphs: {
             ...[
@@ -99,7 +78,6 @@ export const $9n10dTour = {
         },
 
         {
-          captionButton: {},
           title: { text: 'day 3 - Dashbashi Canyon' },
           paragraphs: { ...[{ extend: canionText }] },
           list: {
@@ -114,7 +92,6 @@ export const $9n10dTour = {
         },
 
         {
-          captionButton: {},
           title: { text: 'day 4 - Kakheti Tour' },
           paragraphs: { ...[{ extend: kakhetiText }] },
           list: {

@@ -88,7 +88,10 @@ const props = {
     content: {
       alignSelf: 'center',
       padding: 'C2 -',
-      style: { overflowY: 'auto' }
+      style: {
+        overflowY: 'auto',
+        '::-webkit-scrollbar': { display: 'none' }
+      }
     }
   }
 }

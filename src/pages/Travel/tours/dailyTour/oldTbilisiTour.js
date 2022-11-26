@@ -9,26 +9,6 @@ export const oldTbilisiTour = {
 
   gallery: { extend: oldTbilisiGallery },
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.activeTbilisiDescripion
-          ? state.update({ activeTbilisiDescripion: false })
-          : state.update({ activeTbilisiDescripion: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.activeTbilisiDescripion
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.activeTbilisiDescripion
@@ -50,7 +30,6 @@ export const oldTbilisiTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: {},
           paragraphs: { childExtend: tbilisiTravelText },
           list: {

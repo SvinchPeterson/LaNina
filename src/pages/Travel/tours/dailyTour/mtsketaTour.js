@@ -9,26 +9,6 @@ import { mtsketaGallery } from '../galleries/mtsketaGallery'
 export const mtsketaTour = {
   extend: Tour,
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.activeMtsketaDescription
-          ? state.update({ activeMtsketaDescription: false })
-          : state.update({ activeMtsketaDescription: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.activeMtsketaDescription
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.activeMtsketaDescription
@@ -50,7 +30,6 @@ export const mtsketaTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: {},
           paragraphs: {
             childExtend: mtsketaText

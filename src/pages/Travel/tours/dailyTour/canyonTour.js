@@ -11,26 +11,6 @@ export const canyonTour = {
 
   gallery: { extend: canyonGallery },
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.activeCanyonDescripion
-          ? state.update({ activeCanyonDescripion: false })
-          : state.update({ activeCanyonDescripion: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.activeCanyonDescripion
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.activeCanyonDescripion
@@ -52,7 +32,6 @@ export const canyonTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: {},
           paragraphs: {
             childExtend: canionText

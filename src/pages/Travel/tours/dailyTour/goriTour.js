@@ -11,26 +11,6 @@ export const goriTour = {
 
   gallery: { extend: goriGallery },
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.activeGoriDescripion
-          ? state.update({ activeGoriDescripionn: false })
-          : state.update({ activeGoriDescripion: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.activeGoriDescripion
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.activeGoriDescripion
@@ -52,7 +32,6 @@ export const goriTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: {},
           paragraphs: {
             childExtend: goriText

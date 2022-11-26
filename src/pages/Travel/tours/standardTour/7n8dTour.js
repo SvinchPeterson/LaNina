@@ -9,26 +9,6 @@ import { $7n8dGallery } from '../galleries/7n8dGallery'
 export const $7n8dTour = {
   extend: Tour,
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.active_8d_Description
-          ? state.update({ active_8d_Description: false })
-          : state.update({ active_8d_Description: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.active_8d_Description
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.active_8d_Description
@@ -50,13 +30,11 @@ export const $7n8dTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: { text: 'day 1 - Arrival TBS Airport / Transfer' },
           list: null
         },
 
         {
-          captionButton: {},
           title: { text: 'day 2 - Ananuri / Gudauri / Kazbegi' },
           paragraphs: {
             ...[
@@ -80,7 +58,6 @@ export const $7n8dTour = {
         },
 
         {
-          captionButton: {},
           title: { text: 'day 3 - Kakheti Tour' },
           paragraphs: { ...[{ extend: kakhetiText }] },
           list: {

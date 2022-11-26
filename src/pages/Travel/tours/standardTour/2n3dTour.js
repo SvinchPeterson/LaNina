@@ -11,26 +11,6 @@ export const $2n3dTour = {
 
   gallery: { extend: $2n3dGallery },
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.active_3d_Description
-          ? state.update({ active_3d_Description: false })
-          : state.update({ active_3d_Description: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.active_3d_Description
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.active_3d_Description
@@ -52,7 +32,6 @@ export const $2n3dTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: { text: 'day 1 - Tbilisi City tour' },
           paragraphs: { childExtend: tbilisiTravelText },
           list: {
@@ -73,7 +52,6 @@ export const $2n3dTour = {
         },
 
         {
-          captionButton: {},
           title: { text: 'day 2 - Ananuri / Gudauri / Kazbegi' },
           paragraphs: {
             ...[

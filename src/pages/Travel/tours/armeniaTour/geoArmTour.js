@@ -26,26 +26,6 @@ export const geoArmTour = {
     }
   },
 
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.active_Armenia_Description
-          ? state.update({ active_Armenia_Description: false })
-          : state.update({ active_Armenia_Description: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.active_Armenia_Description
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.active_Armenia_Description
@@ -67,7 +47,6 @@ export const geoArmTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: { text: 'day 1 - Tbilisi City tour' },
           paragraphs: { childExtend: tbilisiTravelText },
           list: {
@@ -88,7 +67,6 @@ export const geoArmTour = {
         },
 
         {
-          captionButton: {},
           title: { text: 'day 2 - Ananuri / Gudauri / Kazbegi' },
           paragraphs: {
             ...[
@@ -112,7 +90,6 @@ export const geoArmTour = {
         },
 
         {
-          captionButton: {},
           title: { text: 'day 3 - kakheti tour' },
           paragraphs: {
             childExtend: kakhetiText

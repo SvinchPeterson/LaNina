@@ -8,27 +8,6 @@ import { borjomiGallery } from '../galleries/borjomiGallery'
 
 export const borjomiTour = {
   extend: Tour,
-
-  captionButton: {
-    on: {
-      click: (event, element, state) => {
-        state.activeBorjomiDescripion
-          ? state.update({ activeBorjomiDescripion: false, activeArrow: false })
-          : state.update({ activeBorjomiDescripion: true, activeArrow: true })
-      }
-    },
-
-    class: {
-      show: (element, state) => state.activeBorjomiDescripion
-        ? {
-          '> img': { transform: 'rotate(180deg)' }
-        }
-        : {
-          '> img': { transform: 'rotate(0deg)' }
-        }
-    }
-  },
-
   article: {
     class: {
       show: (element, state) => state.activeBorjomiDescripion
@@ -50,7 +29,6 @@ export const borjomiTour = {
     articleContainer: {
       ...[
         {
-          captionButton: {},
           title: {},
           paragraphs: {
             childExtend: borjomiText
