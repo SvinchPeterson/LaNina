@@ -15,23 +15,7 @@ export const $9n10dTour = {
   gallery: { extend: $9n10dGallery },
 
   article: {
-    class: {
-      show: (element, state) => state.active_10d_Description
-        ? {
-          '@media only screen and (max-width: 1280px)': {
-            maxHeight: `${250 / 16}em`,
-            overflowY: 'auto',
-            paddingTop: `${35 / 16}em`
-          }
-        }
-        : {
-          '@media only screen and (max-width: 1280px)': {
-            maxHeight: `0`,
-            overflowY: 'hidden'
-          }
-        }
-    },
-
+    props: { '@tabletS': { alignSelf: 'flex-start' } },
     articleContainer: {
       ...[
         {

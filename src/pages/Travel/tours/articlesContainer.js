@@ -39,7 +39,7 @@ const props = {
 
   articles: {
     background: 'rgba(229, 249, 252, 1)',
-    padding: 'B B - B',
+    // padding: 'B B - B',
     boxSize: '85% 70%',
     flow: 'column',
     gap: '',
@@ -70,6 +70,12 @@ const props = {
     header: {
       align: 'center space-between',
       zIndex: '3',
+      position: 'absolute',
+      padding: 'B B',
+      width: '100%',
+      maxWidth: '100%',
+      top: '0',
+      left: '0',
       logo: {
         src: LOGO_PNG,
         boxSize: 'B1 '

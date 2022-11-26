@@ -12,23 +12,7 @@ export const kakhetiTour = {
   gallery: { extend: kakhetiGallery },
 
   article: {
-    class: {
-      show: (element, state) => state.activeKakhetiDescripion
-        ? {
-          '@media only screen and (max-width: 1280px)': {
-            maxHeight: `${250 / 16}em`,
-            overflowY: 'auto',
-            paddingTop: `${35 / 16}em`
-          }
-        }
-        : {
-          '@media only screen and (max-width: 1280px)': {
-            maxHeight: `0`,
-            overflowY: 'hidden'
-          }
-        }
-    },
-
+    props: { '@tabletS': { alignSelf: 'flex-start' } },
     articleContainer: {
       ...[
         {

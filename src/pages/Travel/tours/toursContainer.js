@@ -52,11 +52,6 @@ const props = {
       src: CLOSE_PNG,
       boxSize: 'A1 '
     }
-    // '@tabletM': {
-    //   left: 'initial',
-    //   right: 'A',
-    //   top: 'A'
-    // }
   }
 }
 

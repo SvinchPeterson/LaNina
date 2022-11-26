@@ -26,7 +26,6 @@ const props = {
     style: {
       overflowY: 'hidden',
       '::-webkit-scrollbar': { display: 'none' }
-      // '@media only screen and (min-width: 1280px)': { maxHeight: `${120 / 16}em` }
     },
 
     childProps: {
@@ -41,7 +40,6 @@ const props = {
         textTransform: 'capitalize',
         padding: '- - Z2 -',
         fontWeight: '700'
-        // '@mobileXS': { fontSize: `A` }
       },
 
       paragraphs: {
@@ -78,8 +76,8 @@ const props = {
           gap: 'X',
           padding: '- - - Y',
           childProps: {
-            fontSize: `${18 / 16}em`,
-            color: 'black .85',
+            fontSize: `${17 / 16}em`,
+            color: 'black',
             style: { letterSpacing: '.5px' }
           }
         }
@@ -91,23 +89,6 @@ const props = {
 export const TourArticle = {
   props,
   extend: Flex,
-
-  // class: {
-  //   show: (element, state) => state.activeDescription
-  //     ? {
-  //       '@media only screen and (max-width: 1280px)': {
-  //         maxHeight: `${250 / 16}em`,
-  //         overflowY: 'auto',
-  //         paddingTop: `${35 / 16}em`
-  //       }
-  //     }
-  //     : {
-  //       '@media only screen and (max-width: 1280px)': {
-  //         maxHeight: `0`,
-  //         overflowY: 'hidden'
-  //       }
-  //     }
-  // },
 
   articleContainer: {
     extend: Flex,

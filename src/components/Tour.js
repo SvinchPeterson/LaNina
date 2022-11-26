@@ -1,14 +1,40 @@
 'use strict'
 
-import { Flex, Img } from 'smbls'
+import { Flex } from 'smbls'
 
-import DOWN_ARROW_PNG from '../assets/icons/downArrow-cream.png'
 import { TourGallery } from './TourGallery'
 import { TourArticle } from './TourArticle'
 
 const props = {
   gap: 'C1',
   alignItems: 'center',
+  '@tabletS': {
+    flow: 'column',
+    gap: 'B'
+  },
+
+  gallery: {
+    images: {
+      '@mobileL': { boxSize: 'G H' },
+      '@mobileM': { boxSize: 'F3 G3' },
+      '@mobileS': { boxSize: 'F3 G1' },
+      style: {
+        '@media only screen and (max-width: 400px)': {
+          width: '320px !important'
+        },
+        '@media only screen and (max-width: 350px)': {
+          width: '300px !important'
+        }
+      }
+    },
+
+    footer: {
+      '@mobileS': {
+        width: '95%'
+      }
+    }
+
+  },
 
   article: {
     articleContainer: {
@@ -18,12 +44,11 @@ const props = {
         position: 'absolute',
         bottom: '0px',
         left: '0',
-        // zIndex: '10',
         background: 'linear-gradient(to top, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)'
-      }
+      },
+      '@tabletS': { display: 'none' }
     },
     button: {
-      text: 'more',
       zIndex: '10',
       boxSize: 'C E1',
       cursor: 'pointer',
@@ -32,7 +57,16 @@ const props = {
       textTransform: 'uppercase',
       background: 'transparent',
       border: '1px solid black',
-      round: 'Y2'
+      round: 'Y2',
+      more: {
+        text: 'more',
+        '@tabletS': { display: 'none' }
+      },
+      description: {
+        text: 'description',
+        display: 'none',
+        '@tabletS': { display: 'block' }
+      }
     }
   }
 }
@@ -57,7 +91,10 @@ export const Tour = {
         click: (event, element, state) => {
           state.update({ activeFullDescription: true })
         }
-      }
+      },
+
+      more: {},
+      description: {}
     }
   }
 }

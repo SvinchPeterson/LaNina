@@ -24,32 +24,24 @@ const props = {
     animationDuration: '.5s',
     animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
   },
-  // ':before': {
-  //   content: '""',
-  //   width: '100%',
-  //   height: `${100 / 16}em`,
-  //   // background: 'red',
-  //   background: 'linear-gradient(to bottom, rgba(30, 98, 123, 1) 0%,rgba(30, 98, 123, 0) 100%)',
-  //   position: 'absolute',
-  //   top: `0`,
-  //   left: '0',
-  //   zIndex: '3',
-  //   style: { pointerEvents: 'none' }
-  // },
-  // ':after': {
-  //   content: '""',
-  //   width: '100%',
-  //   height: `${200 / 16}em`,
-  //   // background: 'red',
-  //   background: 'linear-gradient(to top, rgba(30, 98, 123, 1) 0%,rgba(30, 98, 123, 0) 100%)',
-  //   position: 'absolute',
-  //   bottom: `${100 / 16}em`,
-  //   left: '0',
-  //   style: { pointerEvents: 'none' }
-  // },
+  ':after': {
+    content: '""',
+    width: '100%',
+    height: `${100 / 16}em`,
+    // background: 'red',
+    background: 'linear-gradient(to top, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)',
+    position: 'absolute',
+    bottom: `${100 / 16}em`,
+    left: '0',
+    style: { pointerEvents: 'none' }
+  },
   '@tabletM': {
     boxSize: '100% 90%'
   },
+  '@tabletS': {
+    boxSize: '100% 95%'
+  },
+  '@MobileL': { boxSize: '100% 100%' },
 
   title: {
     fontSize: 'D',
@@ -60,7 +52,7 @@ const props = {
     top: '-B',
     gap: 'Y1',
     zIndex: '3',
-    '@mobileS': { fontSize: 'B' },
+    // '@mobileS': { fontSize: 'B' },
     style: { whiteSpace: 'nowrap' },
     span: {
       text: 'daily',

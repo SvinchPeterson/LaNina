@@ -27,22 +27,6 @@ export const geoArmTour = {
   },
 
   article: {
-    class: {
-      show: (element, state) => state.active_Armenia_Description
-        ? {
-          '@media only screen and (max-width: 1280px)': {
-            maxHeight: `${250 / 16}em`,
-            overflowY: 'auto',
-            paddingTop: `${35 / 16}em`
-          }
-        }
-        : {
-          '@media only screen and (max-width: 1280px)': {
-            maxHeight: `0`,
-            overflowY: 'hidden'
-          }
-        }
-    },
 
     articleContainer: {
       ...[
