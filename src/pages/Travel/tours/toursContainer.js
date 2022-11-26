@@ -4,8 +4,6 @@ import { dailyTour } from './dailyTour'
 import { standardTour } from './standardTour'
 import { armeniaTour } from './armeniaTour'
 
-import { articleContainer } from './articlesContainer'
-
 import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
 
 const closeButton = {
@@ -45,9 +43,10 @@ const props = {
     background: 'transparent',
     position: 'absolute',
     zIndex: '3',
-    top: 'Z',
-    right: 'A',
-    padding: 'A',
+    top: '0',
+    right: '0',
+    padding: 'B',
+    '@mobileS': { padding: 'A' },
     icon: {
       src: CLOSE_PNG,
       boxSize: 'A1 '

@@ -9,7 +9,16 @@ import { $4n5dGallery } from '../galleries/4n5dGallery'
 export const $4n5dTour = {
   extend: Tour,
 
-  gallery: { extend: $4n5dGallery },
+  gallery: {
+    extend: $4n5dGallery,
+    props: {
+      images: {
+        round: '0 F F 0',
+        ':after': { round: '0 F F 0' },
+        childProps: { round: '0 F F 0' }
+      }
+    }
+  },
 
   article: {
     props: { '@tabletS': { alignSelf: 'flex-start' } },

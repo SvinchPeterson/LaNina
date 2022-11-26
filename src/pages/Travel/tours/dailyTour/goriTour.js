@@ -9,7 +9,16 @@ import { goriGallery } from '../galleries/goriGallery'
 export const goriTour = {
   extend: Tour,
 
-  gallery: { extend: goriGallery },
+  gallery: {
+    extend: goriGallery,
+    props: {
+      images: {
+        round: '0 F F 0',
+        ':after': { round: '0 F F 0' },
+        childProps: { round: '0 F F 0' }
+      }
+    }
+  },
 
   article: {
     props: { '@tabletS': { alignSelf: 'flex-start' } },

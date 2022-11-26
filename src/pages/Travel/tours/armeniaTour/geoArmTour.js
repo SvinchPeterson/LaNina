@@ -12,22 +12,15 @@ export const geoArmTour = {
   extend: Tour,
 
   props: {
-    overflow: 'hidden'
-  },
-
-  gallery: {
-    extend: geoArmGallery,
-    props: {
-      images: {
-        boxSize: 'H H1',
-        round: 'G G 0 0'
-      },
+    gallery: {
+      images: { round: 'G G 0 0' },
       footer: { width: '100%' }
     }
   },
 
-  article: {
+  gallery: { extend: geoArmGallery },
 
+  article: {
     articleContainer: {
       ...[
         {
@@ -171,7 +164,7 @@ export const geoArmTour = {
     },
 
     button: {
-      props: { alignSelf: 'flex-end' },
+      props: { alignSelf: 'flex-start' },
       on: {
         click: (event, element, state) => {
           state.update({ activeFullDescription: true, active_Armenia_Description: true })

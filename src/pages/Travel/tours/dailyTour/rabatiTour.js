@@ -9,7 +9,16 @@ import { rabatiGallery } from '../galleries/rabatiGallery'
 export const rabatiTour = {
   extend: Tour,
 
-  gallery: { extend: rabatiGallery },
+  gallery: {
+    extend: rabatiGallery,
+    props: {
+      images: {
+        round: '0 F F 0',
+        ':after': { round: '0 F F 0' },
+        childProps: { round: '0 F F 0' }
+      }
+    }
+  },
 
   article: {
     props: { '@tabletS': { alignSelf: 'flex-start' } },

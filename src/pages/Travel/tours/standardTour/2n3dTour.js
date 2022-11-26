@@ -9,7 +9,16 @@ import { $2n3dGallery } from '../galleries/2n3dGallery'
 export const $2n3dTour = {
   extend: Tour,
 
-  gallery: { extend: $2n3dGallery },
+  gallery: {
+    extend: $2n3dGallery,
+    props: {
+      images: {
+        round: '0 F F 0',
+        ':after': { round: '0 F F 0' },
+        childProps: { round: '0 F F 0' }
+      }
+    }
+  },
 
   article: {
     props: { '@tabletS': { alignSelf: 'flex-start' } },

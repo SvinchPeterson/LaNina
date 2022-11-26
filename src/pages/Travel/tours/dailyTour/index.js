@@ -23,6 +23,14 @@ export const dailyTour = {
 
   title: { extend: Flex, span: {} },
   tours: {
+    props: {
+      style: {
+        overflowY: 'auto',
+        scrollBehavior: 'smooth',
+        '> div:first-child': { paddingTop: `${50 / 16}em` }
+      }
+    },
+
     oldTbilisiTour,
     ananuriGudauriTour,
     canyonTour,

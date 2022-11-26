@@ -60,11 +60,13 @@ const props = {
       round: 'Y2',
       more: {
         text: 'more',
+        color: 'black',
         '@tabletS': { display: 'none' }
       },
       description: {
         text: 'description',
         display: 'none',
+        color: 'black',
         '@tabletS': { display: 'block' }
       }
     }

@@ -33,7 +33,8 @@ const props = {
     position: 'absolute',
     bottom: `${100 / 16}em`,
     left: '0',
-    style: { pointerEvents: 'none' }
+    style: { pointerEvents: 'none' },
+    '@mobileM': { bottom: '50px' }
   },
   '@tabletM': {
     boxSize: '100% 90%'
@@ -42,6 +43,9 @@ const props = {
     boxSize: '100% 95%'
   },
   '@MobileL': { boxSize: '100% 100%' },
+  '@mobileM': {
+    margin: 'D1 - - -'
+  },
 
   title: {
     fontSize: 'D',
@@ -67,9 +71,8 @@ const props = {
     gap: 'D',
     align: 'center flex-start',
     style: {
-      overflowY: 'auto',
-      scrollBehavior: 'smooth',
-      '> div:first-child': { paddingTop: `${50 / 16}em` }
+      // overflowY: 'auto',
+      // scrollBehavior: 'smooth',
     },
     maxHeight: '100%',
     padding: '- - F -',

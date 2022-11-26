@@ -54,7 +54,9 @@ export const ananuriGudauriTour = {
       align: 'flex-end',
       title: { padding: '- Z - -' },
       images: {
-        round: 'F 0 0 F'
+        round: 'F 0 0 F',
+        ':after': { round: 'F 0 0 F' },
+        childProps: { round: 'F 0 0 F' }
       }
     }
   }

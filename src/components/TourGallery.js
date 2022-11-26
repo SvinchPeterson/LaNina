@@ -23,18 +23,20 @@ const props = {
   images: {
     boxSize: 'G1 H1',
     display: 'block',
-    round: '0 F F 0',
     overflow: 'hidden',
     position: 'relative',
     childProps: {
       position: 'absolute',
-      boxSize: '100% 100%'
+      boxSize: '100% 100%',
+      overflow: 'hidden'
     },
+    style: { overflow: 'hidden' },
     ':after': {
       content: '""',
       position: 'absolute',
       boxSize: '100% 100%',
       background: 'linear-gradient(rgba(30, 52, 71, .25), rgba(30, 52, 71, .45))'
+      // round: '0 F F 0'
     }
   },
 

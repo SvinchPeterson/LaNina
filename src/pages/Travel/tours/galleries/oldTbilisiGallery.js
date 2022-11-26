@@ -14,6 +14,7 @@ export const oldTbilisiGallery = {
   title: {},
 
   images: {
+    props: { style: { overflow: 'hidden' } },
     childExtend: {
       class: {
         show: (element, state) => state.activeTbilisiGalleryImage === parseInt(element.key)

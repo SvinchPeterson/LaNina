@@ -22,6 +22,14 @@ export const standardTour = {
 
   title: { extend: Flex, span: {} },
   tours: {
+    props: {
+      style: {
+        overflowY: 'auto',
+        scrollBehavior: 'smooth',
+        '> div:first-child': { paddingTop: `${50 / 16}em` }
+      }
+    },
+
     $2n3dTour,
     $3n4dTour,
     $4n5dTour,
