@@ -104,7 +104,7 @@ export const descriptionsContainer = {
   class: {
     show: (element, state) => state.activeFullDescription
       ? {
-        display: 'flex'
+        display: 'none'
       }
       : {
         display: 'none'
