@@ -139,7 +139,8 @@ export const articlesContainer = {
               active_5d_Description: false,
               active_8d_Description: false,
               active_10d_Description: false,
-              active_Armenia_Description: false
+              active_Armenia_Description: false,
+              activeExclusiveDescription: false
             })
           }
         },

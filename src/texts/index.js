@@ -569,3 +569,64 @@ export const megalith = {
   },
   span: {}
 }
+
+export const samshvilde = {
+  ...[
+    {
+      props: {
+        text: `,dating back to the 3rd millennia B.C., is known as one of the most ancient towns in the Caucasus region. This abandoned medieval town, which includes the ruins of a citadel, the central Sioni Temple along with several minor churches, an ancient cemetery, water reservoir, bridge and numerous caves is situated in the Tetri Tskaro district, approximately 70 km from Tbilisi.
+        `,
+        span: { text: 'Samshvilde' }
+      },
+      span: {}
+    },
+
+    {
+      props: {
+        text: `according to historical sources the first settlements in Samshvilde date back to the 4th millennia B.C. The meaning of the word “Samshvilde” is “the place of the bow”, which emphasizes its military function. Owing to its strategic location, Samshvilde was an object of attacks and sieges from various states or dynasties.`
+      }
+
+    }
+  ]
+}
+
+export const shaori = {
+  ...[
+    {
+      props: {
+        text: `
+        Megalithic complex is the one of the most interesting megalithic monuments, possibly has astronomic nature on the area of modern Georgia. It is located near Lake Paravani, at 2700m above sea level. Fortress Shaori is located on the top of Kerogli Mountain which represents extinct volcano. Amazing construction of Bronze Age is the copy of Abuli Fortress. The most interesting fact is good preserved rocky road. Among with the main fortress Shaori exist another one too located on the neighboring top 400m far to the east.
+        `,
+        span: { text: 'Shaori' }
+      },
+      span: {}
+    },
+
+    {
+      props: {
+        text: `Complex has a great value based on archeo-astronomic study it is oriented to the horizon point with an azimuth of 98-1000. That's why it is possible to use the complex as a solar observatory which will define solstice point.It was possible to observe sun rise and sunset in the days of solstice and many more astronomic feature.This kind of construction may be called “solar plant”. People had lived, worked, believed and observed over ancient luminaries of the ancient world for the purpose of orientation in time or space.`
+      }
+    }
+
+  ]
+}
+
+export const abuli = {
+  ...[
+    {
+      props: {
+        text: `
+        located on the south slope of lesser Abuli mountain, on latitude 2500 m above the sea level, is one of the most mysterious and not well studied megalithic structures from the Bronze Age.  The little Abuli mountain, which's height reaches 2700 m above the sea level, is one of the volcanic mountains of Samsari range. At the top, one of the extinct craters, according to rumors, there is a lake. The very top of the mountain is covered with gray stones, of which the Abuli fortress was built.
+        `,
+        span: { text: 'Abuli fortress' }
+      },
+      span: {}
+    },
+
+    {
+      props: {
+        text: `The fortress has the shape of the ring. We can distinguish tower and living quarters inside the fort. Now in the area are no water sources. There are also not found cultural layers, although the excavations were not conducted seriously. In the current climatic conditions Abuli cleavage at such a height is not suitable for life, because of too low temperatures, although the Javakheti plateau everywhere are scattered ruins from different epochs, which show once active life in these parts, when the climate was warmer and softer.`
+      }
+    }
+  ]
+}

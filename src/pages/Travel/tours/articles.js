@@ -19,7 +19,11 @@ import {
   noravankText,
   savaneText,
   savaneMonastryText,
-  dilijanText
+  dilijanText,
+  megalith,
+  samshvilde,
+  shaori,
+  abuli
 } from '../../../texts'
 
 export const tbilisiArticle = {
@@ -995,19 +999,50 @@ export const exclusiveArticle = {
     ...[
       {
         title: {},
-        paragraphs: { childExtend: tbilisiTravelText },
+        paragraphs: { childExtend: megalith },
+        list: null
+      },
+
+      {
+        title: { text: 'Day 1 - Samshvilde / Paravani Lake' },
+        paragraphs: { childExtend: samshvilde },
         list: {
-          title: { },
+          title: { text: 'places' },
           list: {
             ...[
-              { props: { text: '- Mtatsminda Park by Train' } },
-              { props: { text: '- Abanotubani' } },
-              { props: { text: '- London bridge' } },
-              { props: { text: '- Legvtakhevi Waterfall' } },
-              { props: { text: '- I Love Tbilisi Statue' } },
-              { props: { text: '- Leselidze souvenires streete' } },
-              { props: { text: '- Meidan bazaar' } },
-              { props: { text: '- Bridge of Peace' } }
+              { props: { text: 'Samshvilde medieval city' } },
+              { props: { text: 'Chikiani Menhir' } },
+              { props: { text: 'Paravani Lake' } }
+            ]
+          }
+        }
+      },
+
+      {
+        title: { text: 'Day 2 - Shaori Megalith Fortress / bugdasheni lake / khanchali lake / Sagamo lake' },
+        paragraphs: { childExtend: shaori },
+        list: {
+          title: { text: 'places' },
+          list: {
+            ...[
+              { props: { text: 'Shaori Megalith' } },
+              { props: { text: 'Bugdasheni Lake' } },
+              { props: { text: 'Sagamo lake' } }
+            ]
+          }
+        }
+      },
+
+      {
+        title: { text: 'Day 3 - Abuli megalith fortress / Kaurma bridge / Kumurdo church / back to Tbilisi' },
+        paragraphs: { childExtend: abuli },
+        list: {
+          title: { text: 'places' },
+          list: {
+            ...[
+              { props: { text: 'Abuli megalith fortress' } },
+              { props: { text: 'Kaurma bridge' } },
+              { props: { text: 'Kumurdo church' } }
             ]
           }
         }
