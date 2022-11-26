@@ -9,8 +9,6 @@ import { kutaisiGallery } from '../galleries/kutaisiGallery'
 export const kutaisiTour = {
   extend: Tour,
 
-  gallery: { extend: kutaisiGallery },
-
   captionButton: {
     on: {
       click: (event, element, state) => {
@@ -69,6 +67,16 @@ export const kutaisiTour = {
         }
       ]
     }
+  },
 
+  gallery: {
+    extend: kutaisiGallery,
+    props: {
+      align: 'flex-end',
+      title: { padding: '- Z - -' },
+      images: {
+        round: 'F 0 0 F'
+      }
+    }
   }
 }

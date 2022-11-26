@@ -9,8 +9,6 @@ import { ananuriGudauriGallery } from '../galleries/ananuriGudauriGallery'
 export const ananuriGudauriTour = {
   extend: Tour,
 
-  gallery: { extend: ananuriGudauriGallery },
-
   captionButton: {
     on: {
       click: (event, element, state) => {
@@ -76,6 +74,16 @@ export const ananuriGudauriTour = {
         }
       ]
     }
+  },
 
+  gallery: {
+    extend: ananuriGudauriGallery,
+    props: {
+      align: 'flex-end',
+      title: { padding: '- Z - -' },
+      images: {
+        round: 'F 0 0 F'
+      }
+    }
   }
 }

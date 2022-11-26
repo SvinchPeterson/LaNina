@@ -7,9 +7,10 @@ import { opacityScale } from '../../../animations'
 const props = {
   boxSize: '100% 80%',
   maxWidth: '1440px',
-  borderTop: '1px solid silver',
+  borderTop: '1px solid gray',
   backgroundSize: 'cover',
   position: 'absolute',
+  background: 'rgba(229, 249, 252, .3)',
   margin: 'E - - -',
   padding: '- - - -',
   top: '50%',

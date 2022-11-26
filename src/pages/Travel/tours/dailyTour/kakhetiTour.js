@@ -70,7 +70,9 @@ export const kakhetiTour = {
           }
         }
       ]
-    }
+    },
+
+    button: { props: { alignSelf: 'flex-end' } }
 
   }
 }

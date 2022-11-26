@@ -9,11 +9,11 @@ import { TourArticle } from './TourArticle'
 const props = {
   gap: 'C1',
   alignItems: 'center',
-  '@tabletM': {
-    flow: 'column',
-    gap: '0',
-    alignItems: 'center'
-  },
+  // '@tabletM': {
+  //   flow: 'column',
+  //   gap: '0',
+  //   alignItems: 'center'
+  // },
 
   captionButton: {
     display: 'none',
@@ -29,7 +29,7 @@ const props = {
     outline: 'none',
     cursor: 'pointer',
     opacity: '.5',
-    '@tabletM': { display: 'flex' },
+    // '@tabletM': { display: 'flex' },
     span: {
       text: 'description',
       display: 'block',
@@ -41,6 +41,32 @@ const props = {
       src: DOWN_ARROW_PNG,
       boxSize: ' A',
       style: { transition: 'transform .5s ease-in-out' }
+    }
+  },
+
+  article: {
+    articleContainer: {
+      ':after': {
+        content: '""',
+        boxSize: '50px 100%',
+        position: 'absolute',
+        bottom: '0px',
+        left: '0',
+        // zIndex: '10',
+        background: 'linear-gradient(to top, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)'
+      }
+    },
+    button: {
+      text: 'more',
+      zIndex: '10',
+      boxSize: 'C E1',
+      cursor: 'pointer',
+      fontSize: 'Z',
+      fontWeight: '700',
+      textTransform: 'uppercase',
+      background: 'transparent',
+      border: '1px solid black',
+      round: 'Y2'
     }
   }
 }
@@ -59,6 +85,22 @@ export const Tour = {
   },
 
   article: {
-    extend: TourArticle
+    extend: TourArticle,
+    props: {
+      articleContainer: {
+        maxHeight: 'E1'
+      }
+    },
+
+    articleContainer: {
+
+    },
+    button: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeFullDescription: true })
+        }
+      }
+    }
   }
 }

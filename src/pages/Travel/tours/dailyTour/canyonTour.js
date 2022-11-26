@@ -68,7 +68,9 @@ export const canyonTour = {
           }
         }
       ]
-    }
+    },
+
+    button: { props: { alignSelf: 'flex-end' } }
 
   }
 }

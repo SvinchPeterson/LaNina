@@ -111,7 +111,8 @@ export const $2n3dTour = {
           }
         }
       ]
-    }
+    },
 
+    button: { props: { alignSelf: 'flex-end' } }
   }
 }

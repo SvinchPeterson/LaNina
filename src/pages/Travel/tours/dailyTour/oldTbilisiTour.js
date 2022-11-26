@@ -1,7 +1,6 @@
 'use strict'
 
 import { Tour } from '../../../../components'
-
 import { tbilisiTravelText } from '../../../../texts'
 import { oldTbilisiGallery } from '../galleries/oldTbilisiGallery'
 
@@ -71,6 +70,8 @@ export const oldTbilisiTour = {
           }
         }
       ]
-    }
+    },
+
+    button: { props: { alignSelf: 'flex-end' } }
   }
 }

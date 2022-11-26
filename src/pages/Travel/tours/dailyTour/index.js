@@ -13,6 +13,8 @@ import { borjomiTour } from './borjomiTour'
 import { rabatiTour } from './rabatiTour'
 import { mtsketaTour } from './mtsketaTour'
 
+import { descriptionsContainer } from '../articlesContainer'
+
 export const dailyTour = {
   extend: tour,
   class: {
@@ -33,4 +35,5 @@ export const dailyTour = {
     borjomiTour,
     rabatiTour
   }
+  // fullDescription: { extend: descriptionsContainer }
 }

@@ -9,7 +9,7 @@ import { geoArmTour } from './geoArmTour'
 export const armeniaTour = {
   extend: tour,
   props: {
-    padding: 'E - C -',
+    padding: '- - C -',
     title: { text: 'tour', span: { text: 'caucasus' } }
   },
 

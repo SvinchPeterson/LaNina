@@ -9,8 +9,6 @@ import { borjomiGallery } from '../galleries/borjomiGallery'
 export const borjomiTour = {
   extend: Tour,
 
-  gallery: { extend: borjomiGallery },
-
   captionButton: {
     on: {
       click: (event, element, state) => {
@@ -69,6 +67,16 @@ export const borjomiTour = {
           }
         }
       ]
+    }
+  },
+  gallery: {
+    extend: borjomiGallery,
+    props: {
+      align: 'flex-end',
+      title: { padding: '- Z - -' },
+      images: {
+        round: 'F 0 0 F'
+      }
     }
   }
 }

@@ -11,7 +11,20 @@ import { geoArmGallery } from '../galleries/geoArmGallery'
 export const geoArmTour = {
   extend: Tour,
 
-  gallery: { extend: geoArmGallery },
+  props: {
+    overflow: 'hidden'
+  },
+
+  gallery: {
+    extend: geoArmGallery,
+    props: {
+      images: {
+        boxSize: 'H H1',
+        round: 'G G 0 0'
+      },
+      footer: { width: '100%' }
+    }
+  },
 
   captionButton: {
     on: {
@@ -194,7 +207,8 @@ export const geoArmTour = {
           }
         }
       ]
-    }
+    },
 
+    button: { props: { alignSelf: 'flex-end' } }
   }
 }

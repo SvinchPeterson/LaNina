@@ -9,8 +9,6 @@ import { $7n8dGallery } from '../galleries/7n8dGallery'
 export const $7n8dTour = {
   extend: Tour,
 
-  gallery: { extend: $7n8dGallery },
-
   captionButton: {
     on: {
       click: (event, element, state) => {
@@ -143,6 +141,16 @@ export const $7n8dTour = {
         }
       ]
     }
+  },
 
+  gallery: {
+    extend: $7n8dGallery,
+    props: {
+      align: 'flex-end',
+      title: { padding: '- Z - -' },
+      images: {
+        round: 'F 0 0 F'
+      }
+    }
   }
 }

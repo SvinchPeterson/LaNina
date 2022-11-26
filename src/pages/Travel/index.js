@@ -116,7 +116,9 @@ const state = {
   active_5d_Description: false,
   active_8d_Description: false,
   active_10d_Description: false,
-  active_Armenia_Description: false
+  active_Armenia_Description: false,
+
+  activeFullDescription: false
 }
 
 export default {
@@ -128,15 +130,15 @@ export default {
   },
   state,
 
-  header,
-  headerMobile,
-  menu,
-  travelBanner,
-  country,
-  gallery,
-  tours,
-  aboutUs,
-  planTrip,
-  contact,
-  footer
+  // header,
+  // headerMobile,
+  // menu,
+  // travelBanner,
+  // country,
+  // gallery,
+  tours
+  // aboutUs,
+  // planTrip,
+  // contact,
+  // footer
 }

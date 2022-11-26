@@ -9,8 +9,6 @@ import { mtsketaGallery } from '../galleries/mtsketaGallery'
 export const mtsketaTour = {
   extend: Tour,
 
-  gallery: { extend: mtsketaGallery },
-
   captionButton: {
     on: {
       click: (event, element, state) => {
@@ -69,6 +67,16 @@ export const mtsketaTour = {
         }
       ]
     }
+  },
 
+  gallery: {
+    extend: mtsketaGallery,
+    props: {
+      align: 'flex-end',
+      title: { padding: '- Z - -' },
+      images: {
+        round: 'F 0 0 F'
+      }
+    }
   }
 }

@@ -68,7 +68,8 @@ export const goriTour = {
           }
         }
       ]
-    }
+    },
 
+    button: { props: { alignSelf: 'flex-end' } }
   }
 }

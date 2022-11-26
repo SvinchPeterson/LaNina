@@ -137,7 +137,8 @@ export const $4n5dTour = {
           }
         }
       ]
-    }
+    },
 
+    button: { props: { alignSelf: 'flex-end' } }
   }
 }

@@ -61,6 +61,7 @@ const props = {
     overflow: 'hidden',
     position: 'relative',
     boxSizing: 'border-box',
+    scrollBehavior: 'smooth',
     tabs: {
       gap: 'Y2',
       maxWidth: '100%',

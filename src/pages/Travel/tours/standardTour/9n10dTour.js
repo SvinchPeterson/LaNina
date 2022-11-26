@@ -207,7 +207,8 @@ export const $9n10dTour = {
           }
         }
       ]
-    }
+    },
 
+    button: { props: { alignSelf: 'flex-end' } }
   }
 }

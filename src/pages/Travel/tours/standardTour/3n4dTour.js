@@ -9,8 +9,6 @@ import { $3n4dGallery } from '../galleries/3n4dGallery'
 export const $3n4dTour = {
   extend: Tour,
 
-  gallery: { extend: $3n4dGallery },
-
   captionButton: {
     on: {
       click: (event, element, state) => {
@@ -133,6 +131,16 @@ export const $3n4dTour = {
         }
       ]
     }
+  },
 
+  gallery: {
+    extend: $3n4dGallery,
+    props: {
+      align: 'flex-end',
+      title: { padding: '- Z - -' },
+      images: {
+        round: 'F 0 0 F'
+      }
+    }
   }
 }

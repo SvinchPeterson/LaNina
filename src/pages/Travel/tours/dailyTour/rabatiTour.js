@@ -67,7 +67,9 @@ export const rabatiTour = {
           }
         }
       ]
-    }
+    },
+
+    button: { props: { alignSelf: 'flex-end' } }
 
   }
 }
