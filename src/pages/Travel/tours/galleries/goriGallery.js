@@ -64,59 +64,6 @@ export const goriGallery = {
           }
         }
       ]
-    },
-
-    bookContainer: {
-      book: {
-        on: {
-          click: (event, element, state) => {
-            state.active_Gori_TourMail
-              ? state.update({ active_Gori_TourMail: false, active_Gori_TourBook: false, active_Gori_TourBooked: true })
-              : state.update({ active_Gori_TourMail: true })
-          }
-        },
-
-        class: {
-          show: (element, state) => state.active_Gori_TourMail
-            ? {
-              background: '#0EB393',
-              border: 'none'
-            }
-            : {
-              background: 'transparent',
-              border: '.8px solid silver'
-            },
-
-          show2: (element, state) => state.active_Gori_TourBooked
-            ? {
-              pointerEvents: 'none',
-              border: 'none'
-            }
-            : {
-            }
-        },
-
-        span: {
-          class: {
-            show: (element, state) => state.active_Gori_TourBook
-              ? { display: 'block' } : { display: 'none' }
-          }
-        },
-        booked: {
-          class: {
-            show: (element, state) => state.active_Gori_TourBooked
-              ? { display: 'flex' } : { display: 'none' }
-          }
-        }
-      },
-
-      form: {
-        class: {
-          show: (element, state) => state.active_Gori_TourMail
-            ? { opacity: '1', transition: 'opacity .15s ease-in-out' }
-            : { opacity: '0', pointerEvents: 'none' }
-        }
-      }
     }
   }
 }

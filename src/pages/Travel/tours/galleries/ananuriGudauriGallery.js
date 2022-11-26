@@ -64,59 +64,6 @@ export const ananuriGudauriGallery = {
           }
         }
       ]
-    },
-
-    bookContainer: {
-      book: {
-        on: {
-          click: (event, element, state) => {
-            state.active_Ananuri_TourMail
-              ? state.update({ active_Ananuri_TourMail: false, active_Ananuri_TourBook: false, active_Ananuri_TourBooked: true })
-              : state.update({ active_Ananuri_TourMail: true })
-          }
-        },
-
-        class: {
-          show: (element, state) => state.active_Ananuri_TourMail
-            ? {
-              background: '#0EB393',
-              border: 'none'
-            }
-            : {
-              background: 'transparent',
-              border: '.8px solid silver'
-            },
-
-          show2: (element, state) => state.active_Ananuri_TourBooked
-            ? {
-              pointerEvents: 'none',
-              border: 'none'
-            }
-            : {
-            }
-        },
-
-        span: {
-          class: {
-            show: (element, state) => state.active_Ananuri_TourBook
-              ? { display: 'block' } : { display: 'none' }
-          }
-        },
-        booked: {
-          class: {
-            show: (element, state) => state.active_Ananuri_TourBooked
-              ? { display: 'flex' } : { display: 'none' }
-          }
-        }
-      },
-
-      form: {
-        class: {
-          show: (element, state) => state.active_Ananuri_TourMail
-            ? { opacity: '1', transition: 'opacity .15s ease-in-out' }
-            : { opacity: '0', pointerEvents: 'none' }
-        }
-      }
     }
   }
 }

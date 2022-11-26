@@ -64,59 +64,6 @@ export const kakhetiGallery = {
           }
         }
       ]
-    },
-
-    bookContainer: {
-      book: {
-        on: {
-          click: (event, element, state) => {
-            state.active_Kakheti_TourMail
-              ? state.update({ active_Kakheti_TourMail: false, active_Kakheti_TourBook: false, active_Kakheti_TourBooked: true })
-              : state.update({ active_Kakheti_TourMail: true })
-          }
-        },
-
-        class: {
-          show: (element, state) => state.active_Kakheti_TourMail
-            ? {
-              background: '#0EB393',
-              border: 'none'
-            }
-            : {
-              background: 'transparent',
-              border: '.8px solid silver'
-            },
-
-          show2: (element, state) => state.active_Kakheti_TourBooked
-            ? {
-              pointerEvents: 'none',
-              border: 'none'
-            }
-            : {
-            }
-        },
-
-        span: {
-          class: {
-            show: (element, state) => state.active_Kakheti_TourBook
-              ? { display: 'block' } : { display: 'none' }
-          }
-        },
-        booked: {
-          class: {
-            show: (element, state) => state.active_Kakheti_TourBooked
-              ? { display: 'flex' } : { display: 'none' }
-          }
-        }
-      },
-
-      form: {
-        class: {
-          show: (element, state) => state.active_Kakheti_TourMail
-            ? { opacity: '1', transition: 'opacity .15s ease-in-out' }
-            : { opacity: '0', pointerEvents: 'none' }
-        }
-      }
     }
   }
 }

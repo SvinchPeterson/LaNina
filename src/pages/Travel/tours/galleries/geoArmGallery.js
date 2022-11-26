@@ -116,59 +116,6 @@ export const geoArmGallery = {
           }
         }
       ]
-    },
-
-    bookContainer: {
-      book: {
-        on: {
-          click: (event, element, state) => {
-            state.active_arm_TourMail
-              ? state.update({ active_arm_TourMail: false, active_arm_TourBook: false, active_arm_TourBooked: true })
-              : state.update({ active_arm_TourMail: true })
-          }
-        },
-
-        class: {
-          show: (element, state) => state.active_arm_TourMail
-            ? {
-              background: '#0EB393',
-              border: 'none'
-            }
-            : {
-              background: 'transparent',
-              border: '.8px solid silver'
-            },
-
-          show2: (element, state) => state.active_arm_TourBooked
-            ? {
-              pointerEvents: 'none',
-              border: 'none'
-            }
-            : {
-            }
-        },
-
-        span: {
-          class: {
-            show: (element, state) => state.active_arm_TourBook
-              ? { display: 'block' } : { display: 'none' }
-          }
-        },
-        booked: {
-          class: {
-            show: (element, state) => state.active_arm_TourBooked
-              ? { display: 'flex' } : { display: 'none' }
-          }
-        }
-      },
-
-      form: {
-        class: {
-          show: (element, state) => state.active_arm_TourMail
-            ? { opacity: '1', transition: 'opacity .15s ease-in-out' }
-            : { opacity: '0', pointerEvents: 'none' }
-        }
-      }
     }
   }
 }
