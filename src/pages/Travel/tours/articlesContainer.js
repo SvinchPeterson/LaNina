@@ -44,6 +44,8 @@ const props = {
     gap: '',
     overflow: 'hidden',
     position: 'relative',
+    '@tabletM': { boxSize: '85% 85%' },
+    '@tabletS': { boxSize: '85% 90%' },
     ':before': {
       content: '""',
       position: 'absolute',
@@ -97,14 +99,14 @@ const props = {
   }
 }
 
-export const descriptionsContainer = {
+export const articleContainer = {
   extend: Flex,
   props,
 
   class: {
     show: (element, state) => state.activeFullDescription
       ? {
-        display: 'none'
+        display: 'flex'
       }
       : {
         display: 'none'

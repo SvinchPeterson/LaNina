@@ -4,7 +4,7 @@ import { dailyTour } from './dailyTour'
 import { standardTour } from './standardTour'
 import { armeniaTour } from './armeniaTour'
 
-import { descriptionsContainer } from './articlesContainer'
+import { articleContainer } from './articlesContainer'
 
 import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
 
@@ -73,5 +73,5 @@ export const toursContainer = {
   dailyTour,
   standardTour,
   armeniaTour,
-  descriptionsContainer
+  articleContainer
 }
