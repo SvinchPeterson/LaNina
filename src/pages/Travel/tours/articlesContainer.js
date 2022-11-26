@@ -39,7 +39,6 @@ const props = {
 
   articles: {
     background: 'rgba(229, 249, 252, 1)',
-    // padding: 'B B - B',
     boxSize: '85% 70%',
     flow: 'column',
     gap: '',
@@ -50,12 +49,9 @@ const props = {
       position: 'absolute',
       boxSize: 'E 100%',
       background: 'linear-gradient(to bottom,  rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0)100%)',
-      // background: 'linear-gradient(to top, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)',
-      // background: 'linear-gradient(to top, rgba(229, 249, 252, 0) 0%,rgba(229, 249, 252, 1) 100%)',
       top: '0',
       left: '0',
       zIndex: '2'
-      // zIndex: '300'
     },
     ':after': {
       content: '""',
@@ -64,7 +60,6 @@ const props = {
       background: 'linear-gradient(to bottom, rgba(229, 249, 252, 0) 0%,rgba(229, 249, 252, 1) 100%)',
       bottom: '0',
       left: '0'
-      // zIndex: '300'
     },
 
     header: {
