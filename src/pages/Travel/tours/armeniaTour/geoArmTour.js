@@ -2,8 +2,7 @@
 
 import { Tour } from '../../../../components'
 
-import { tbilisiTravelText, ananuriText, gudauriText, gergetText, kakhetiText, yerevanText,
-  khorViperText, noravankText, savaneText, savaneMonastryText, dilijanText
+import { tbilisiTravelText
 } from '../../../../texts'
 
 import { geoArmGallery } from '../galleries/geoArmGallery'

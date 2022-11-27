@@ -30,6 +30,7 @@ import {
 
 export const tbilisiArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
 
   class: {
     show: (element, state) => state.activeTbilisiArticle
@@ -64,6 +65,7 @@ export const tbilisiArticle = {
 
 export const ananuriArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
 
   class: {
     show: (element, state) => state.activeAnanuriArticle
@@ -101,6 +103,7 @@ export const ananuriArticle = {
 
 export const borjomiArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeBorjomiArticle
       ? { display: 'flex' }
@@ -131,6 +134,7 @@ export const borjomiArticle = {
 
 export const canyonArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeCanyonArticle
       ? { display: 'flex' }
@@ -160,6 +164,7 @@ export const canyonArticle = {
 
 export const goriArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeGoriArticle
       ? { display: 'flex' }
@@ -189,6 +194,7 @@ export const goriArticle = {
 
 export const kakhetiArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeKakhetiArticle
       ? { display: 'flex' }
@@ -220,6 +226,7 @@ export const kakhetiArticle = {
 
 export const qutaisiArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeKutaisiArticle
       ? { display: 'flex' }
@@ -249,6 +256,7 @@ export const qutaisiArticle = {
 
 export const mtsketaArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeMtsketaArticle
       ? { display: 'flex' }
@@ -278,6 +286,7 @@ export const mtsketaArticle = {
 
 export const rabatiArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeRabatArticle
       ? { display: 'flex' }
@@ -306,6 +315,7 @@ export const rabatiArticle = {
 
 export const caucasusArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active_Armenia_Article
       ? { display: 'flex' }
@@ -457,6 +467,7 @@ export const caucasusArticle = {
 
 export const $2n3dArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active_3d_Article
       ? { display: 'flex' }
@@ -529,6 +540,7 @@ export const $2n3dArticle = {
 
 export const $3n4dArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active_4d_Article
       ? { display: 'flex' }
@@ -623,6 +635,7 @@ export const $3n4dArticle = {
 
 export const $4n5dArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active_5d_Article
       ? { display: 'flex' }
@@ -722,6 +735,7 @@ export const $4n5dArticle = {
 
 export const $7n18dArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active_8d_Article
       ? { display: 'flex' }
@@ -826,6 +840,7 @@ export const $7n18dArticle = {
 
 export const $9n10dArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active_10d_Article
       ? { display: 'flex' }
@@ -990,6 +1005,7 @@ export const $9n10dArticle = {
 
 export const exclusiveArticle = {
   extend: TourArticle,
+  props: { display: 'none' },
 
   class: {
     show: (element, state) => state.activeExclusiveArticle
@@ -1055,7 +1071,7 @@ export const exclusiveArticle = {
 
 export const adventureArticle = {
   extend: TourArticle,
-
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeAdventureArticle
       ? { display: 'flex' }
