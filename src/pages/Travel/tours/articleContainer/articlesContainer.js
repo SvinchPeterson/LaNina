@@ -30,6 +30,7 @@ const props = {
   align: 'center center',
   position: 'absolute',
   boxSize: '100% 100%',
+  display: 'none',
   background: 'black .5',
   zIndex: '200',
   top: '0',
@@ -107,15 +108,15 @@ export const articlesContainer = {
   extend: Flex,
   props,
 
-  class: {
-    show: (element, state) => state.activeFullDescription
-      ? {
-        display: 'flex'
-      }
-      : {
-        display: 'none'
-      }
-  },
+  // class: {
+  //   show: (element, state) => state.activeFullDescription
+  //     ? {
+  //       display: 'flex'
+  //     }
+  //     : {
+  //       display: 'none'
+  //     }
+  // },
 
   articles: {
     extend: Flex,
