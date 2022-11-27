@@ -10,7 +10,7 @@ const props = {
   alignItems: 'center',
   '@tabletS': {
     flow: 'column',
-    gap: 'B'
+    gap: '0'
   },
 
   gallery: {
@@ -59,6 +59,7 @@ const props = {
       background: 'transparent',
       border: '1px solid black',
       round: 'Y2',
+      '@tabletS': { margin: 'B - - -' },
       more: {
         text: 'more',
         color: 'black',
