@@ -6,8 +6,6 @@ const heading = { tag: 'h3' }
 
 const textArea = { tag: 'textarea' }
 
-const footerParagraph = { tag: 'p' }
-
 const props = {
   flow: 'column',
   alignItems: 'center',
@@ -19,28 +17,21 @@ const props = {
     fontSize: 'A',
     text: 'WHAT WOULD YOU LIKE TO EXPERIENCE ?',
     padding: '0 0 A 0',
-    style: { textTransform: 'uppercase' },
-    '@tabletS': { fontSize: 'Z' }
+    textAlign: 'center',
+    '@mobileM': { maxWidth: 'G' },
+    style: { textTransform: 'uppercase' }
+    // '@tabletS': { fontSize: 'Z' }
   },
 
   textArea: {
     padding: 'A',
     outline: 'none',
     background: 'transparent',
-    minWidth: `375px`,
+    width: `H`,
     minHeight: 'F1',
     round: 'B',
-    style: { border: '1.5px solid rgba(0, 0, 0, .55)' },
-    '@mobileS': { minWidth: `287px` }
-  },
-
-  footerParagraph: {
-    fontSize: 'Z',
-    text: 'tell us your plan, your wishes, your budget for planning your trip',
-    color: 'black .55',
-    maxWidth: 'G1',
-    padding: 'X 0 0 0',
-    style: { textAlign: 'center' }
+    border: '1.3px solid gray',
+    '@mobileM': { width: 'G1' }
   }
 }
 
@@ -49,6 +40,5 @@ export const TextArea = {
   props,
 
   heading,
-  textArea,
-  footerParagraph
+  textArea
 }

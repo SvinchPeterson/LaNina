@@ -2,9 +2,7 @@
 
 import { Flex, Grid } from 'smbls'
 
-import { Inputs, TextArea, Book } from '../../components'
-
-const title = { tag: 'h1' }
+import { Inputs, TextArea, Book, MailInput } from '../../components'
 
 const sendButton = {
   tag: 'button',
@@ -32,44 +30,43 @@ const sendButton = {
   }
 }
 
-const content = {
-  extend: Flex,
-  heading: {
-    extend: Flex,
-    p: {},
-    tourOperator: {}
+const gridForm = {
+  extend: Grid,
+  dates: { extend: Inputs },
+  persons: {
+    extend: Inputs,
+    heading: {},
+    fields: {
+      ...[
+        { attr: { type: 'number' } },
+        { attr: { type: 'number' } }
+
+      ]
+    },
+    footerLabels: {
+      ...[
+        { props: { text: 'adult' } },
+        { props: { text: 'children' } }
+      ]
+    }
   },
 
-  gridForm: {
-    extend: Grid,
-    dates: { extend: Inputs },
-    persons: {
-      extend: Inputs,
-      heading: {},
-      fields: {
-        ...[
-          { attr: { type: 'number' } }
-        ]
-      },
-      footerLabels: {
-        ...[
-          { props: { text: 'adult' } },
-          { props: { text: 'children' } }
-        ]
-      }
-    },
-    textField: { extend: TextArea },
+  textField: { extend: TextArea },
+  mailSend: {
+    extend: Flex,
+    mail: { extend: MailInput },
     send: { extend: sendButton }
-
   }
+  // send: { extend: sendButton }
 }
 
 const props = {
-  padding: 'C E C E',
+  padding: 'D E C E',
   width: '100%',
   height: '100%',
   flow: 'column',
-  gap: 'D',
+  gap: 'D1',
+  align: 'center flex-start',
   position: 'fixed',
   background: 'radial-gradient(rgba(255, 255, 255, 1), rgba(233, 250, 255, 1), rgba(208, 224, 228, 1))',
   zIndex: '30',
@@ -79,61 +76,34 @@ const props = {
     transition: 'opacity .4s ease-in-out, pointer-events .4s ease-in-out, z-index .4s ease-in-out',
     '@media only screen and (max-height: 700px)': { overflowY: 'auto' }
   },
-  '@tabletS': { style: { overflowY: 'auto' } },
-  '@mobileL': { padding: 'D2 C' },
-  '@mobileS': { padding: 'D2 A' },
+  '@tabletS': {
+    padding: 'D E C E',
+    gap: 'C',
+    style: { overflowY: 'auto' }
+  },
+  '@mobileL': { padding: 'D A' },
 
   title: {
     text: 'planing trip',
     fontSize: 'D',
-    style: { textTransform: 'uppercase' },
-    '@tabletS': { textAlign: 'center' }
+    fontWeight: '700',
+    style: { textTransform: 'uppercase' }
   },
-
-  content: {
-    flow: 'column',
-    gap: 'D2',
-    '@tabletS': { gap: 'D2' },
-
-    heading: {
-      fontSize: `${14 / 16}em`,
-      align: 'center space-between',
-      padding: '0 0 A 0',
-      position: 'relative',
-      style: { borderBottom: '1px solid rgba(0, 0, 0, .5)' },
-      '@tabletS': { flow: 'column' },
-      p: {
-        text: 'We have best guides , drivers, tour operators, hosts, travel partners and etc.',
-        maxWidth: 'G2',
-        padding: '0 A',
-        '@tabletS': {
-          alignSelf: 'center',
-          style: { textAlign: 'center' }
-        }
-      },
-      tourOperator: {
-        fontWeight: 'bold',
-        text: 'Talk tour operator / 995 571 017 170',
-        '@tabletS': {
-          position: 'absolute',
-          bottom: '-B1'
-        }
-      }
+  gridForm: {
+    columns: 'repeat(2, 1fr)',
+    width: 'fit-content',
+    gap: 'D',
+    margin: '0 auto',
+    style: { justifyItems: 'center' },
+    '@tabletS': {
+      columns: '1fr',
+      gap: 'C'
     },
-
-    gridForm: {
-      columns: 'repeat(2, 1fr)',
-      width: 'fit-content',
-      gap: 'D',
-      margin: '0 auto',
-      '@tabletS': {
-        columns: '1fr',
-        gap: 'C',
-        justifyitems: 'center'
-      },
-      persons: {
-        heading: { text: 'number of persons?' }
-      }
+    persons: { heading: { text: 'number of persons?' } },
+    mailSend: {
+      flow: 'column',
+      align: 'center center',
+      gap: 'C'
     }
   }
 }
@@ -143,10 +113,10 @@ export const planTrip = {
   props,
   class: {
     show: (element, state) => state.activeForm
-      ? { opacity: 1 }
+      ? { opacity: 1, zIndex: '100' }
       : { opacity: 0, pointerEvents: 'none', zIndex: '-1' }
   },
 
-  title,
-  content
+  title: {},
+  gridForm
 }

@@ -42,7 +42,7 @@ const props = {
         content: '""',
         boxSize: '50px 100%',
         position: 'absolute',
-        bottom: '0px',
+        bottom: '-5px',
         left: '0',
         background: 'linear-gradient(to top, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)'
       },
@@ -50,7 +50,8 @@ const props = {
     },
     button: {
       zIndex: '10',
-      boxSize: 'C E1',
+      boxSize: 'fit-content',
+      padding: 'Y2 B1',
       cursor: 'pointer',
       fontSize: 'Z',
       fontWeight: '700',

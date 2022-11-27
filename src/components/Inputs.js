@@ -15,7 +15,7 @@ const fields = {
       border: 'none',
       textAlign: 'center',
       padding: '0 B',
-      '@mobileS': { padding: '0 A1' },
+      // '@mobileS': { padding: '0 A1' },
       style: {
         boxSizing: 'border-box'
       }
@@ -23,7 +23,7 @@ const fields = {
   },
   ...[
     { attr: { type: 'date' } },
-    { attr: { type: 'number' } }
+    { attr: { type: 'date' } }
   ]
 }
 
@@ -34,7 +34,7 @@ const footerLabels = {
   },
   ...[
     { props: { text: 'start date' } },
-    { props: { text: 'number of night' } }
+    { props: { text: 'end date' } }
   ]
 }
 
@@ -49,8 +49,9 @@ const props = {
     fontSize: 'A',
     text: 'when do you plan to travel?',
     padding: '0 0 A 0',
-    style: { textTransform: 'uppercase' },
-    '@tabletS': { fontSize: 'Z' }
+    textAlign: 'center',
+    style: { textTransform: 'uppercase' }
+    // '@tabletS': { fontSize: 'Z' }
   },
 
   fields: {
@@ -58,10 +59,8 @@ const props = {
     position: 'relative',
     boxSize: 'C G2',
     justifyContent: 'space-between',
-    style: {
-      border: '1.5px solid rgba(0, 0, 0, .55)',
-      overflow: 'hidden'
-    },
+    border: '1.3px solid gray',
+    overflow: 'hidden',
     ':after': {
       content: '""',
       width: '1px',
@@ -74,7 +73,7 @@ const props = {
       transform: 'translate(-50%, -50%)'
     },
 
-    '@mobileS': { width: 'G' }
+    '@mobileM': { width: 'G' }
   },
 
   footerLabels: {

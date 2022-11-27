@@ -11,7 +11,11 @@ export const exclusiveTour = {
 
   props: {
     gallery: {
-      images: { round: 'G G 0 0' },
+      images: {
+        round: 'G G 0 0',
+        ':after': { round: 'G G 0 0' },
+        childProps: { round: 'G G 0 0' }
+      },
       footer: { width: '100%' }
     }
   },
