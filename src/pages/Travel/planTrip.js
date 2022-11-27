@@ -7,24 +7,64 @@ import { Inputs, TextArea, Book, MailInput } from '../../components'
 const sendButton = {
   tag: 'button',
   extend: Book,
+  on: {
+    click: (event, element, state) => {
+      state.update({ activeSent: true, activeSend: false })
+    }
+  },
+
+  class: {
+    show: (element, state) => state.activeSent
+      ? { pointerEvents: 'none', background: 'transparent', '> div': { color: 'black' } }
+      : { },
+
+    show2: (element, state) => state.activeSend
+      ? { transition: 'background 1.5s ease-in-out' }
+      : { }
+  },
+
+  span: {
+    class: {
+      show: (element, state) => state.activeSend
+        ? { display: 'block' }
+        : { display: 'none' }
+    }
+  },
+
+  sent: {
+    class: {
+      show: (element, state) => state.activeSent
+        ? { display: 'block' }
+        : { display: 'none' }
+    }
+  },
   props: {
-    boxSize: 'C2 F1',
-    background: 'black',
-    border: 'none',
+    boxSize: 'C1 F1',
+    // border: 'none',
+    color: 'white',
     outline: 'none',
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
+    background: 'black',
     style: {
       cursor: 'pointer',
-      border: 'none',
+      // border: 'none',
       justifySelf: 'center',
       alignSelf: 'center',
       borderRadius: '30px',
-      borderRight: '1.5px solid rgba(245, 245, 245, 0)',
-      borderBottom: '1.5px solid rgba(245, 245, 245, 0)',
-      borderBottomRightRadius: '30px'
+      border: '1px solid black'
     },
+
     span: {
-      text: 'SEND',
-      fontSize: 'B',
+      text: 'send',
+      textTransform: 'uppercase',
+      fontSize: 'A',
+      fontWeight: 'bold'
+    },
+    sent: {
+      text: 'request sent',
+      textTransform: 'uppercase',
+      fontSize: 'A',
       fontWeight: 'bold'
     }
   }
@@ -73,7 +113,7 @@ const props = {
   top: '0',
   left: '0',
   style: {
-    transition: 'opacity .4s ease-in-out, pointer-events .4s ease-in-out, z-index .4s ease-in-out',
+    transition: 'opacity .15s ease-in-out, pointer-events .15s ease-in-out, z-index .15s ease-in-out',
     '@media only screen and (max-height: 700px)': { overflowY: 'auto' }
   },
   '@tabletS': {

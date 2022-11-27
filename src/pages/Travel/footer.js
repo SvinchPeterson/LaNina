@@ -29,7 +29,7 @@ export const footer = {
     on: {
       click: (event, element, state) => {
         state.activeForm
-          ? state.update({ activeForm: false })
+          ? state.update({ activeForm: false, activeSent: false, activeSend: true })
           : state.update({ activeForm: true })
       }
     },

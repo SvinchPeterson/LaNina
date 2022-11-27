@@ -66,7 +66,10 @@ const state = {
   activeExclusiveArticle: false,
   activeAdventureArticle: false,
 
-  activeArticleContainer: false
+  activeArticleContainer: false,
+
+  activeSend: true,
+  activeSent: false
 }
 
 export default {
