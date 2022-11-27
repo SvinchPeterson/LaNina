@@ -33,7 +33,7 @@ export const exclusiveTour = {
       props: { alignSelf: 'flex-start' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, activeExclusiveDescription: true })
+          state.update({ activeArticleContainer: true, activeExclusiveArticle: true })
         }
       }
 

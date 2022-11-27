@@ -35,7 +35,7 @@ export const geoArmTour = {
       props: { alignSelf: 'flex-start' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, active_Armenia_Description: true })
+          state.update({ activeArticleContainer: true, active_Armenia_Article: true })
         }
       }
 

@@ -36,7 +36,7 @@ export const goriTour = {
       props: { alignSelf: 'flex-end' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, activeGoriDescripion: true })
+          state.update({ activeArticleContainer: true, activeGoriArticle: true })
         }
       }
     }

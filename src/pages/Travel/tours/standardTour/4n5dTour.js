@@ -37,7 +37,7 @@ export const $4n5dTour = {
       props: { alignSelf: 'flex-end' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, active_5d_Description: true })
+          state.update({ activeArticleContainer: true, active_5d_Article: true })
         }
       }
     }

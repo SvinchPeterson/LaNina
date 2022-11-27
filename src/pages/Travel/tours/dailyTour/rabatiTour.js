@@ -37,7 +37,7 @@ export const rabatiTour = {
       props: { alignSelf: 'flex-end' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, activeRabatDescription: true })
+          state.update({ activeArticleContainer: true, activeRabatArticle: true })
         }
       }
     }

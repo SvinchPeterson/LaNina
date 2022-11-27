@@ -24,7 +24,7 @@ export const kutaisiTour = {
     button: {
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, activeKutaisiDescripion: true })
+          state.update({ activeArticleContainer: true, activeKutaisiArticle: true })
         }
       }
     }

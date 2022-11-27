@@ -89,12 +89,6 @@ export const Tour = {
 
     articleContainer: {},
     button: {
-      // on: {
-      //   click: (event, element, state) => {
-      //     state.update({ activeFullDescription: true })
-      //   }
-      // },
-
       more: {},
       description: {}
     }

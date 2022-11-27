@@ -24,7 +24,7 @@ export const borjomiTour = {
     button: {
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, activeBorjomiDescripion: true })
+          state.update({ activeArticleContainer: true, activeBorjomiArticle: true })
         }
       }
     }

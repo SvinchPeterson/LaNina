@@ -36,7 +36,7 @@ export const canyonTour = {
       props: { alignSelf: 'flex-end' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, activeCanyonDescripion: true })
+          state.update({ activeArticleContainer: true, activeCanyonArticle: true })
         }
       }
     }

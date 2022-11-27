@@ -130,22 +130,22 @@ export const articlesContainer = {
             state.update({
               activeArticleContainer: false,
               activeTbilisiArticle: false,
-              activeAnanuriArticle: false
-              // activeGoriDescripion: false,
-              // activeKakhetiDescripion: false,
-              // activeCanyonDescripion: false,
-              // activeKutaisiDescripion: false,
-              // activeBorjomiDescripion: false,
-              // activeRabatDescription: false,
-              // activeMtsketaDescription: false,
-              // active_3d_Description: false,
-              // active_4d_Description: false,
-              // active_5d_Description: false,
-              // active_8d_Description: false,
-              // active_10d_Description: false,
-              // active_Armenia_Description: false,
-              // activeExclusiveDescription: false,
-              // activeAdventureDescription: false
+              activeAnanuriArticle: false,
+              activeGoriArticle: false,
+              activeKakhetiArticle: false,
+              activeCanyonArticle: false,
+              activeKutaisiArticle: false,
+              activeBorjomiArticle: false,
+              activeRabatArticle: false,
+              activeMtsketaArticle: false,
+              active_3d_Article: false,
+              active_4d_Article: false,
+              active_5d_Article: false,
+              active_8d_Article: false,
+              active_10d_Article: false,
+              active_Armenia_Article: false,
+              activeExclusiveArticle: false,
+              activeAdventureArticle: false
             })
           }
         },
@@ -154,22 +154,22 @@ export const articlesContainer = {
     },
     content: {
       tbilisiArticle,
-      ananuriArticle
-      // goriArticle,
-      // borjomiArticle,
-      // qutaisiArticle,
-      // kakhetiArticle,
-      // mtsketaArticle,
-      // rabatiArticle,
-      // canyonArticle,
-      // caucasusArticle,
-      // $2n3dArticle,
-      // $4n5dArticle,
-      // $3n4dArticle,
-      // $7n18dArticle,
-      // $9n10dArticle,
-      // exclusiveArticle,
-      // adventureArticle
+      ananuriArticle,
+      goriArticle,
+      borjomiArticle,
+      qutaisiArticle,
+      kakhetiArticle,
+      mtsketaArticle,
+      rabatiArticle,
+      canyonArticle,
+      caucasusArticle,
+      $2n3dArticle,
+      $4n5dArticle,
+      $3n4dArticle,
+      $7n18dArticle,
+      $9n10dArticle,
+      exclusiveArticle,
+      adventureArticle
     }
   }
 }

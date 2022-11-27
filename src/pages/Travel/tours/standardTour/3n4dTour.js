@@ -25,7 +25,7 @@ export const $3n4dTour = {
     button: {
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, active_4d_Description: true })
+          state.update({ activeArticleContainer: true, active_4d_Article: true })
         }
       }
     }
