@@ -6,7 +6,7 @@ import { armeniaTour } from './armeniaTour'
 import { exclusive } from './exclusiveTour'
 import { adventure } from './adventureTour'
 
-import { articlesContainer } from './articlesContainer'
+// import { articlesContainer } from './articlesContainer'
 
 import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
 
@@ -77,7 +77,5 @@ export const toursContainer = {
   standardTour,
   armeniaTour,
   exclusive,
-  adventure,
-
-  articlesContainer
+  adventure
 }
