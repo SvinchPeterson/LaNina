@@ -128,9 +128,9 @@ export const articlesContainer = {
         on: {
           click: (event, element, state) => {
             state.update({
-              activeArticleContainer: false
-              // activeTbilisiDescripion: false,
-              // activeAnanuriDescripion: false,
+              activeArticleContainer: false,
+              activeTbilisiArticle: false,
+              activeAnanuriArticle: false
               // activeGoriDescripion: false,
               // activeKakhetiDescripion: false,
               // activeCanyonDescripion: false,
@@ -153,8 +153,8 @@ export const articlesContainer = {
       }
     },
     content: {
-      // tbilisiArticle,
-      // ananuriArticle,
+      tbilisiArticle,
+      ananuriArticle
       // goriArticle,
       // borjomiArticle,
       // qutaisiArticle,

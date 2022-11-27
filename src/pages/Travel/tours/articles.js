@@ -31,11 +31,11 @@ import {
 export const tbilisiArticle = {
   extend: TourArticle,
 
-  // class: {
-  //   show: (element, state) => state.activeTbilisiDescripion
-  //     ? { display: 'flex' }
-  //     : { display: 'none' }
-  // },
+  class: {
+    show: (element, state) => state.activeTbilisiArticle
+      ? { display: 'flex' }
+      : { display: 'none' }
+  },
 
   articleContainer: {
     ...[
