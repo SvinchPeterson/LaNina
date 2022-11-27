@@ -69,7 +69,7 @@ const props = {
       cursor: 'pointer',
       span: {
         color: 'black',
-        fontSize: 'A'
+        fontSize: 'B'
       }
     }
   }
