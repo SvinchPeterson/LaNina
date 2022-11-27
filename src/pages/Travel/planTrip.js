@@ -15,7 +15,7 @@ const sendButton = {
 
   class: {
     show: (element, state) => state.activeSent
-      ? { pointerEvents: 'none', background: 'transparent' }
+      ? { pointerEvents: 'none', background: 'transparent', '> div': { color: 'black' } }
       : { },
 
     show2: (element, state) => state.activeSend
@@ -34,7 +34,7 @@ const sendButton = {
   sent: {
     class: {
       show: (element, state) => state.activeSent
-        ? { display: 'block', color: 'black' }
+        ? { display: 'block' }
         : { display: 'none' }
     }
   },
@@ -126,7 +126,7 @@ const props = {
     fontSize: 'D',
     fontWeight: '700',
     alignSelf: 'center',
-    margin: '0',
+    margin: '- B - -',
     style: { textTransform: 'uppercase' }
   },
   gridForm: {

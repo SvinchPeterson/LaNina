@@ -27,7 +27,7 @@ const props = {
     padding: 'A',
     outline: 'none',
     background: 'transparent',
-    width: `H`,
+    width: `G3`,
     minHeight: 'F1',
     round: 'B',
     border: '1.3px solid gray',
