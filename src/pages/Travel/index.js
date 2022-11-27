@@ -78,15 +78,15 @@ export default {
   },
   state,
 
-  // header,
-  // headerMobile,
-  // menu,
-  // travelBanner,
-  // country,
-  // gallery,
-  tours
-  // aboutUs,
-  // planTrip,
-  // contact,
-  // footer
+  header,
+  headerMobile,
+  menu,
+  travelBanner,
+  country,
+  gallery,
+  tours,
+  aboutUs,
+  planTrip,
+  contact,
+  footer
 }
