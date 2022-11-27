@@ -39,7 +39,7 @@ const sendButton = {
     }
   },
   props: {
-    boxSize: 'C1 F1',
+    boxSize: 'C2 F1',
     // border: 'none',
     color: 'white',
     outline: 'none',
@@ -58,13 +58,13 @@ const sendButton = {
     span: {
       text: 'send',
       textTransform: 'uppercase',
-      fontSize: 'A',
+      fontSize: 'B',
       fontWeight: 'bold'
     },
     sent: {
       text: 'request sent',
       textTransform: 'uppercase',
-      fontSize: 'A',
+      fontSize: 'B',
       fontWeight: 'bold'
     }
   }
@@ -117,7 +117,7 @@ const props = {
     '@media only screen and (max-height: 700px)': { overflowY: 'auto' }
   },
   '@tabletS': {
-    padding: 'D E C E',
+    padding: 'D E D1 E',
     gap: 'C',
     style: { overflowY: 'auto' }
   },
@@ -127,6 +127,8 @@ const props = {
     text: 'planing trip',
     fontSize: 'D',
     fontWeight: '700',
+    alignSelf: 'center',
+    margin: '0',
     style: { textTransform: 'uppercase' }
   },
   gridForm: {
