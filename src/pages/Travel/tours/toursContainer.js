@@ -1,12 +1,13 @@
 'use strict'
 import { Img, Button, Flex } from 'smbls'
+
 import { dailyTour } from './dailyTour'
 import { standardTour } from './standardTour'
 import { armeniaTour } from './armeniaTour'
 import { exclusive } from './exclusiveTour'
 import { adventure } from './adventureTour'
 
-// import { articlesContainer } from './articlesContainer'
+import { articlesContainer } from './articleContainer/articlesContainer'
 
 import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
 
@@ -77,5 +78,6 @@ export const toursContainer = {
   standardTour,
   armeniaTour,
   exclusive,
-  adventure
+  adventure,
+  articlesContainer
 }

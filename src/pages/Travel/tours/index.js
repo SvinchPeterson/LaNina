@@ -5,7 +5,6 @@ import { Flex } from 'smbls'
 import { tabs } from './tabs'
 
 import { toursContainer } from './toursContainer'
-import { articlesContainer } from './articlesContainer'
 
 const props = {
   width: '100%',
@@ -43,6 +42,5 @@ export const tours = {
   attr: { id: 'tours' },
 
   tabs,
-  toursContainer,
-  articlesContainer
+  toursContainer
 }

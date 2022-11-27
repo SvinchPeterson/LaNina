@@ -21,10 +21,10 @@ import {
   exclusiveArticle,
   adventureArticle
 
-} from './articles'
+} from '../articles'
 
-import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
-import LOGO_PNG from '../../../assets/icons/logoBlack.png'
+import CLOSE_PNG from '../../../../assets/icons/closeBlack.png'
+import LOGO_PNG from '../../../../assets/icons/logoBlack.png'
 
 const props = {
   align: 'center center',
@@ -127,24 +127,24 @@ export const articlesContainer = {
         on: {
           click: (event, element, state) => {
             state.update({
-              activeFullDescription: false,
-              activeTbilisiDescripion: false,
-              activeAnanuriDescripion: false,
-              activeGoriDescripion: false,
-              activeKakhetiDescripion: false,
-              activeCanyonDescripion: false,
-              activeKutaisiDescripion: false,
-              activeBorjomiDescripion: false,
-              activeRabatDescription: false,
-              activeMtsketaDescription: false,
-              active_3d_Description: false,
-              active_4d_Description: false,
-              active_5d_Description: false,
-              active_8d_Description: false,
-              active_10d_Description: false,
-              active_Armenia_Description: false,
-              activeExclusiveDescription: false,
-              activeAdventureDescription: false
+              activeFullDescription: false
+              // activeTbilisiDescripion: false,
+              // activeAnanuriDescripion: false,
+              // activeGoriDescripion: false,
+              // activeKakhetiDescripion: false,
+              // activeCanyonDescripion: false,
+              // activeKutaisiDescripion: false,
+              // activeBorjomiDescripion: false,
+              // activeRabatDescription: false,
+              // activeMtsketaDescription: false,
+              // active_3d_Description: false,
+              // active_4d_Description: false,
+              // active_5d_Description: false,
+              // active_8d_Description: false,
+              // active_10d_Description: false,
+              // active_Armenia_Description: false,
+              // activeExclusiveDescription: false,
+              // activeAdventureDescription: false
             })
           }
         },
@@ -152,23 +152,23 @@ export const articlesContainer = {
       }
     },
     content: {
-      tbilisiArticle,
-      ananuriArticle,
-      goriArticle,
-      borjomiArticle,
-      qutaisiArticle,
-      kakhetiArticle,
-      mtsketaArticle,
-      rabatiArticle,
-      canyonArticle,
-      caucasusArticle,
-      $2n3dArticle,
-      $4n5dArticle,
-      $3n4dArticle,
-      $7n18dArticle,
-      $9n10dArticle,
-      exclusiveArticle,
-      adventureArticle
+      // tbilisiArticle,
+      // ananuriArticle,
+      // goriArticle,
+      // borjomiArticle,
+      // qutaisiArticle,
+      // kakhetiArticle,
+      // mtsketaArticle,
+      // rabatiArticle,
+      // canyonArticle,
+      // caucasusArticle,
+      // $2n3dArticle,
+      // $4n5dArticle,
+      // $3n4dArticle,
+      // $7n18dArticle,
+      // $9n10dArticle,
+      // exclusiveArticle,
+      // adventureArticle
     }
   }
 }
