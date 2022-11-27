@@ -108,15 +108,15 @@ export const articlesContainer = {
   extend: Flex,
   props,
 
-  // class: {
-  //   show: (element, state) => state.activeFullDescription
-  //     ? {
-  //       display: 'flex'
-  //     }
-  //     : {
-  //       display: 'none'
-  //     }
-  // },
+  class: {
+    show: (element, state) => state.activeArticleContainer
+      ? {
+        display: 'flex'
+      }
+      : {
+        display: 'none'
+      }
+  },
 
   articles: {
     extend: Flex,
@@ -128,7 +128,7 @@ export const articlesContainer = {
         on: {
           click: (event, element, state) => {
             state.update({
-              activeFullDescription: false
+              activeArticleContainer: false
               // activeTbilisiDescripion: false,
               // activeAnanuriDescripion: false,
               // activeGoriDescripion: false,

@@ -66,7 +66,7 @@ const state = {
   activeExclusiveArticle: false,
   activeAdventureArticle: false,
 
-  activeFullDescription: false
+  activeArticleContainer: false
 }
 
 export default {

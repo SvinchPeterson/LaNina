@@ -35,7 +35,7 @@ export const oldTbilisiTour = {
       props: { alignSelf: 'flex-end' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeFullDescription: true, activeTbilisiDescripion: true })
+          state.update({ activeArticleContainer: true })
         }
       }
     }
