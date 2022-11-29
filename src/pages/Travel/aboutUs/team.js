@@ -101,7 +101,7 @@ export const team = {
           image: { backgroundImage: 'url(' + ALEKO_JPG + ')' },
           paragraph: {
             title: { text: 'Aleko Giorgidze' },
-            p: { text: 'operations director' }
+            p: { text: 'Operations Director' }
           }
         }
       }
