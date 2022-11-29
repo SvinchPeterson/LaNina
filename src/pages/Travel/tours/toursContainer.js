@@ -6,6 +6,7 @@ import { standardTour } from './standardTour'
 import { armeniaTour } from './armeniaTour'
 import { exclusive } from './exclusiveTour'
 import { adventure } from './adventureTour'
+import { BookingForm } from '../../../components'
 
 import { articlesContainer } from './articleContainer/articlesContainer'
 
@@ -79,5 +80,6 @@ export const toursContainer = {
   armeniaTour,
   exclusive,
   adventure,
-  articlesContainer
+  articlesContainer,
+  book: { extend: BookingForm }
 }

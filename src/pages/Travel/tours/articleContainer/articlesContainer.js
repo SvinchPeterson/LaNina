@@ -42,14 +42,14 @@ const props = {
 
   articles: {
     background: 'rgba(229, 249, 252, 1)',
-    boxSize: '85% 70%',
+    boxSize: '75% 75%',
     flow: 'column',
     gap: '',
     overflow: 'hidden',
     position: 'relative',
-    '@tabletM': { boxSize: '85% 85%' },
-    '@tabletS': { boxSize: '85% 90%' },
-    '@mobileS': { boxSize: '90% 95%' },
+    '@tabletS': { boxSize: '80% 90%' },
+    // '@tabletS': { boxSize: '85% 90%' },
+    // '@mobileS': { boxSize: '90% 95%' },
     ':before': {
       content: '""',
       position: 'absolute',
@@ -68,37 +68,51 @@ const props = {
       left: '0'
     },
 
-    header: {
-      align: 'center space-between',
-      zIndex: '3',
+    logo: {
+      src: LOGO_PNG,
+      boxSize: 'B1 ',
       position: 'absolute',
-      padding: 'B B',
-      width: '100%',
-      top: '0',
-      left: '0',
-      style: { backdropFilter: 'blur(1px)' },
-      logo: {
-        src: LOGO_PNG,
-        boxSize: 'B1 '
-      },
+      top: 'B',
+      left: 'B',
+      zIndex: '10'
+    },
 
-      close: {
-        background: 'rgba(229, 249, 252, 1)',
-        boxSize: 'A2 A2',
-        icon: {
-          src: CLOSE_PNG,
-          boxSize: 'A2 A2'
-        }
+    close: {
+      background: 'transparent',
+      boxSize: 'A2 A2',
+      position: 'absolute',
+      top: 'B',
+      right: 'B',
+      zIndex: '10',
+      icon: {
+        src: CLOSE_PNG,
+        boxSize: 'A2 A2'
       }
     },
 
     content: {
       alignSelf: 'center',
-      padding: 'D1 C C2 C',
-      '@mobileS': { padding: 'D1 A - A' },
+      padding: 'D1 B C2 B',
+      '@tabletS': { padding: 'D1 B1 C2 B1' },
       style: {
         overflowY: 'auto',
         '::-webkit-scrollbar': { display: 'none' }
+      },
+      childProps: {
+        articleContainer: {
+          childProps: {
+            paragraphs: {
+              childProps: {
+                '@mobileM': { fontSize: '15px' }
+              }
+            },
+            list: {
+              childProps: {
+                '@mobileM': { fontSize: '15px' }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -120,37 +134,34 @@ export const articlesContainer = {
 
   articles: {
     extend: Flex,
-    header: {
-      extend: Flex,
-      logo: { extend: Img },
-      close: {
-        extend: Button,
-        on: {
-          click: (event, element, state) => {
-            state.update({
-              activeArticleContainer: false,
-              activeTbilisiArticle: false,
-              activeAnanuriArticle: false,
-              activeGoriArticle: false,
-              activeKakhetiArticle: false,
-              activeCanyonArticle: false,
-              activeKutaisiArticle: false,
-              activeBorjomiArticle: false,
-              activeRabatArticle: false,
-              activeMtsketaArticle: false,
-              active_3d_Article: false,
-              active_4d_Article: false,
-              active_5d_Article: false,
-              active_8d_Article: false,
-              active_10d_Article: false,
-              active_Armenia_Article: false,
-              activeExclusiveArticle: false,
-              activeAdventureArticle: false
-            })
-          }
-        },
-        icon: { extend: Img }
-      }
+    logo: { extend: Img },
+    close: {
+      extend: Button,
+      on: {
+        click: (event, element, state) => {
+          state.update({
+            activeArticleContainer: false,
+            activeTbilisiArticle: false,
+            activeAnanuriArticle: false,
+            activeGoriArticle: false,
+            activeKakhetiArticle: false,
+            activeCanyonArticle: false,
+            activeKutaisiArticle: false,
+            activeBorjomiArticle: false,
+            activeRabatArticle: false,
+            activeMtsketaArticle: false,
+            active_3d_Article: false,
+            active_4d_Article: false,
+            active_5d_Article: false,
+            active_8d_Article: false,
+            active_10d_Article: false,
+            active_Armenia_Article: false,
+            activeExclusiveArticle: false,
+            activeAdventureArticle: false
+          })
+        }
+      },
+      icon: { extend: Img }
     },
     content: {
       tbilisiArticle,

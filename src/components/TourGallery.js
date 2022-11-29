@@ -96,7 +96,13 @@ export const TourGallery = {
 
     book: {
       tag: 'button',
-      extend: Book
+      extend: Book,
+      on: {
+        click: (event, element, state) => {
+          console.log('gela')
+          state.update({ activeBookingForm: true })
+        }
+      }
     }
   }
 }

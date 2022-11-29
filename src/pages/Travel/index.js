@@ -69,7 +69,8 @@ const state = {
   activeArticleContainer: false,
 
   activeSend: true,
-  activeSent: false
+  activeSent: false,
+  activeBookingForm: false
 }
 
 export default {

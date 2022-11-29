@@ -39,7 +39,8 @@ const props = {
         fontSize: 'B',
         textTransform: 'capitalize',
         padding: '- - Z2 -',
-        fontWeight: '700'
+        fontWeight: '700',
+        maxWidth: 'H'
       },
 
       paragraphs: {
