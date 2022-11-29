@@ -90,7 +90,7 @@ export const team = {
         props: {
           image: { backgroundImage: 'url(' + ALEKO_JPG + ')' },
           paragraph: {
-            title: { text: 'Aleko Giorgidze' },
+            title: { text: 'Alexander Giorgidze' },
             p: { text: 'Operations Director' }
           }
         }
