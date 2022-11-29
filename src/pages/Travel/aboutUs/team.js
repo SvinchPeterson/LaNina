@@ -88,20 +88,20 @@ export const team = {
 
       {
         props: {
-          image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
+          image: { backgroundImage: 'url(' + ALEKO_JPG + ')' },
           paragraph: {
-            title: { text: 'Salome Petriashvili' },
-            p: { text: 'Customer Relations Manager' }
+            title: { text: 'Aleko Giorgidze' },
+            p: { text: 'Operations Director' }
           }
         }
       },
 
       {
         props: {
-          image: { backgroundImage: 'url(' + ALEKO_JPG + ')' },
+          image: { backgroundImage: 'url(' + SALOME_JPG + ')' },
           paragraph: {
-            title: { text: 'Aleko Giorgidze' },
-            p: { text: 'Operations Director' }
+            title: { text: 'Salome Petriashvili' },
+            p: { text: 'Customer Relations Manager' }
           }
         }
       }
