@@ -5,7 +5,7 @@ import { Title } from './Title'
 
 import { opacity, opacityLetterSpacing } from '../animations'
 
-import LOGO_BIG_PNG from '../assets/icons/logoBig.png'
+// import LOGO_BIG_PNG from '../assets/icons/logoBig.png'
 import LOGO_PNG from '../assets/icons/logoCream.png'
 
 const props = {

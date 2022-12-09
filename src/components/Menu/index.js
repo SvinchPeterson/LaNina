@@ -20,10 +20,13 @@ const props = {
     flow: 'column',
     gap: 'A2',
     childProps: {
-      fontSize: 'B',
-      fontWeight: '500',
+      fontSize: 'E',
+      fontWeight: '100',
+      textTransform: 'capitalize',
+      color: 'cream',
       style: { letterSpacing: '3px' },
-      '@mobileS': { fontSize: 'A' }
+      '@mobileS': { fontSize: 'D' },
+      '@mobileXS': { fontSize: 'C' }
     }
   }
 }

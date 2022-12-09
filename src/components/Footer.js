@@ -4,8 +4,8 @@ import { Img, Link } from 'smbls'
 
 import { opacity } from '../animations'
 
-import FACEBOOK_PNG from '../assets/icons/facebook-white.png'
-import INSTAGRAM_PNG from '../assets/icons/instagram-white.png'
+import FACEBOOK_PNG from '../assets/icons/facebook-cream.png'
+import INSTAGRAM_PNG from '../assets/icons/instagram-cream.png'
 
 import { Book } from './Book'
 

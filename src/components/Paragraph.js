@@ -11,16 +11,14 @@ const props = {
     tag: 'h3',
     fontWeight: '500',
     fontSize: `${12 / 16}em`,
-    style: {
-      textTransform: 'uppercase',
-      letterSpacing: '3.5px'
-    }
+    textTransform: 'uppercase',
+    letterSpacing: '3.5px'
   },
 
   p: {
     flow: 'column',
     gap: 'Z',
-    style: { letterSpacing: '.38px' },
+    letterSpacing: '.4px',
     fontSize: `${15 / 16}em`
   }
 }

@@ -14,6 +14,19 @@ const state = {
   back: true,
   tabs: 0
 }
+
+const header = {
+  extend: Header,
+  props: {
+    logo: { title: { display: 'none' } },
+    menuButton: {
+      content: {
+        childProps: { background: 'cream' }
+      }
+    }
+  }
+}
+
 export const props = {
   position: 'relative',
   background: 'cream2',
@@ -35,10 +48,7 @@ export default {
   props,
 
   banner,
-  header: {
-    extend: Header,
-    props: { logo: { title: { text: 'residence' } } }
-  },
+  header,
   Menu,
   Residence,
   ServiceFacility,

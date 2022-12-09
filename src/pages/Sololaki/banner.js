@@ -107,8 +107,8 @@ const props = {
       ':before': {
         content: '""',
         width: '150%',
-        height: 'V1',
-        background: 'gold',
+        height: 'V',
+        background: 'orange3 .8',
         position: 'absolute',
         top: '-X',
         round: 'C'

@@ -43,8 +43,11 @@ const props = {
     gap: 'B2',
     '@tabletS': { display: 'none' },
     childProps: {
+      fontSize: `${15 / 16}em`,
       fontWeight: '700',
-      style: { letterSpacing: '.7px' }
+      textTransform: 'uppercase',
+      color: 'cream',
+      style: { letterSpacing: '0px' }
     }
   },
 
@@ -67,7 +70,6 @@ export const Header = {
       { props: { text: 'residence', href: '#residence' } },
       { props: { text: 'servises & facilities', href: '#features' } },
       { props: { text: 'apartments', href: '#apartments' } },
-      { props: { text: 'wine', href: '#wine' } },
       { props: { text: 'location', href: '#location' } }
     ]
   },

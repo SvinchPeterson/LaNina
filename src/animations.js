@@ -111,7 +111,7 @@ export const letterSpacing = keyframes`
 
 export const letterSpacing2 = keyframes`
   from {
-    letter-spacing: 4px;
+    letter-spacing: 5px;
   }
   to {
     letter-spacing: 6px;

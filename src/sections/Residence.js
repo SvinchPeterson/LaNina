@@ -37,10 +37,20 @@ const props = {
   paragraph: {
     color: 'cream2',
     padding: '- D',
-    '@mobileM': { padding: '- A1' },
-    '@mobileS': { padding: '- Z' },
+    gap: 'A',
+    '@mobileM': { padding: '- A' },
+    '@mobileS': { padding: '- Y' },
     style: { '@media only screen and (max-height: 630px)': { fontSize: `${14 / 16}em` } },
-    title: { text: 'residence' }
+    title: {
+      fontSize: 'D',
+      text: 'residence',
+      textTransform: 'capitalize',
+      '@mobileS': { fontSize: 'C' }
+    },
+    p: {
+      fontSize: 'A',
+      '@mobileS': { fontSize: `${15 / 16}em` }
+    }
   }
 }
 
