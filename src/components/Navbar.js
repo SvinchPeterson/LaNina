@@ -5,10 +5,9 @@ const link = {
   extend: Link,
   props: {
     color: 'white .85',
-    fontSize: '14px',
     ':hover': { color: 'white 1' },
     style: {
-      textTransform: 'uppercase',
+      // textTransform: 'uppercase',
       textDecoration: 'none'
     }
   }

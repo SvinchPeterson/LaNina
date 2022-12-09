@@ -1,14 +1,32 @@
 'use strict'
 
-import { Flex } from 'smbls'
+import { Flex, Img } from 'smbls'
 
-import { deopacity, position, opacity, opacityTransform } from '../../animations'
+import { deopacity, position, opacityTransform, opacityTransform2, opacityTransform3, letterSpacing2 } from '../../animations'
 
-import { BBHeading, Navbar } from '../../components'
+import { Navbar } from '../../components'
 
 import LOGO_PNG from '../../assets/icons/logoCream.png'
 
 import ORNAMENTS_PNG from '../../assets/images/landing/ornaments.png'
+
+const navbar = {
+  extend: Navbar,
+  ...[
+    { props: { text: 'residence', href: '/Sololaki' } },
+    { props: { text: 'travel', href: '/Travel' } },
+    { props: { text: 'rental', pointerEvents: 'none' } }
+  ]
+}
+
+const logoTitle = {
+  extend: Flex,
+  logo: {
+    extend: Img,
+    props: { src: LOGO_PNG }
+  },
+  title: { text: 'Hospitality' }
+}
 
 const props = {
   boxSize: '100% 100%',
@@ -19,15 +37,6 @@ const props = {
   background: 'gold .75',
   align: 'center center',
   backgroundPosition: 'top center',
-  flow: 'column',
-  gap: 'C',
-  style: {
-    animationName: position,
-    animationDuration: '20s',
-    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    '@media only screen and (min-width: 1680px)': { fontSize: `${18 / 16}em` },
-    '@media only screen and (min-width: 1920px)': { fontSize: `${20 / 16}em` }
-  },
   ':before': {
     content: '""',
     position: 'absolute',
@@ -38,67 +47,112 @@ const props = {
       animationName: deopacity,
       animationDuration: '7s',
       animationTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-      zIndex: 4
+      zIndex: '4',
+      pointerEvents: 'none'
     }
   },
+
   ':after': {
     content: '""',
     position: 'absolute',
     boxSize: '100% 100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .55),rgba(0, 0, 0, 1))'
+    background: 'radial-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, 1))'
   },
 
-  heading: {
-    flow: 'column',
-    gap: '0',
-    zIndex: '5',
-    animationName: opacity,
-    animationDuration: '3s',
+  style: {
+    animationName: position,
+    animationDuration: '20s',
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    logo: {
-      src: LOGO_PNG,
-      opacity: '.6',
-      animationName: opacity,
-      animationDuration: '3s',
-      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-      boxSize: 'C1 '
-    },
-    title: {
-      fontSize: 'G',
-      color: 'cream2 .75',
-      fontWeight: '100',
-      textTransform: 'capitalize'
-    }
+    '@media only screen and (min-width: 1680px)': { fontSize: `${18 / 16}em` },
+    '@media only screen and (min-width: 1920px)': { fontSize: `${20 / 16}em` }
   },
 
-  navBar: {
-    position: 'relative',
-    gap: 'A',
-    alignSelf: 'center',
-    zIndex: '5',
+  content: {
+    zIndex: '2',
     padding: '- - E -',
-    '@mobileL': { flow: 'column' },
-    style: {
-      animationName: opacity,
-      animationDuration: '3s',
-      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-      '@media only screen and (max-height: 680px)': { padding: `0 0 ${36 / 16}em 0` }
+    align: 'flex-start center',
+    '@mobileM': { padding: '- - 0 -' },
+    style: { '@media only screen and (max-height: 600px)': { paddingBottom: '0' } },
+
+    navbar: {
+      flow: 'column',
+      textAlign: 'right',
+      padding: 'Z1 A - -',
+      overflow: 'hidden',
+      '@mobileM': {
+        gap: 'B',
+        textAlign: 'center',
+        padding: '- 0 - -'
+      },
+
+      childProps: {
+        height: 'fit-content',
+        fontSize: 'E',
+        fontWeight: '100',
+        color: 'cream2 .75',
+        lineHeight: `${45 / 33}em`,
+        textTransform: 'capitalize',
+        cursor: 'pointer',
+        '@mobileM': {
+          fontSize: 'H',
+          lineHeight: `${55 / 48}em`,
+          color: 'cream2'
+        },
+        '@mobileXS': {
+          fontSize: 'F',
+          lineHeight: `${35 / 40}em`
+        },
+        ':hover': { color: 'cream2' },
+        ':last-child': { color: 'cream2 .2' },
+        style: {
+          letterSpacing: '1px',
+          '@media only screen and (min-width: 560px)': { animationName: opacityTransform2 },
+          '@media only screen and (max-width: 560px)': { animationName: opacityTransform },
+          animationDuration: '1.3s',
+          animationTimingFunction: 'cubic-bezier(.8,.37,.53,.87)',
+          '@media only screen and (max-width: 560px) and (max-height: 500px)': { fontSize: `38px !important` }
+        }
+      }
     },
 
-    childProps: {
-      fontSize: 'Z',
-      color: 'cream2 .75',
-      border: 'solid, cream2 .35',
-      borderWidth: '1px',
-      textAlign: 'center',
-      padding: 'Z2 -',
-      width: 'F+Z',
-      round: 'C',
-      fontWeight: '700',
-      ':hover': { background: 'linear-gradient(to left, rgba(220, 187, 140, 0), rgba(220, 187, 140, .07))' },
+    logoTitle: {
+      flow: 'column',
+      gap: 'Y',
       style: {
-        letterSpacing: '1px',
-        backdropFilter: 'bur(4px)'
+        animationName: opacityTransform3,
+        animationDuration: '1s',
+        animationTimingFunction: 'cubic-bezier(.8,.37,.53,.87)'
+      },
+      '@mobileM': {
+        flow: 'row',
+        align: 'center flex-start',
+        position: 'absolute',
+        top: 'B1',
+        left: 'B2'
+      },
+
+      logo: {
+        boxSize: 'F ',
+        opacity: '.75',
+        '@mobileM': { boxSize: 'C ' }
+      },
+
+      title: {
+        color: 'cream2 .65',
+        fontSize: `${14 / 16}em`,
+        fontWeight: '400',
+        padding: '- - - V',
+        textTransform: 'uppercase',
+        letterSpacing: `${6 / 14}em`,
+        '@mobileM': {
+          fontSize: 'A',
+          letterSpacing: `${6 / 16}em`
+        },
+        style: {
+          animationName: letterSpacing2,
+          animationDuration: '1.3s',
+          animationTimingFunction: 'ease-in-out'
+        }
       }
     }
   }
@@ -109,36 +163,9 @@ export default {
   props,
   attr: { id: 'landing' },
 
-  heading: { extend: BBHeading },
-  navBar: {
-    extend: Navbar,
-    ...[
-      {
-        props: {
-          text: 'residence',
-          href: '/Sololaki',
-          style: {
-            textShadow: '.4px .4px 1px black'
-          }
-        }
-      },
-      {
-        props: {
-          text: 'travel',
-          href: '/Travel',
-          style: {
-            textShadow: '.4px .4px 1px black'
-          }
-        }
-      },
-
-      {
-        props: {
-          text: 'rental',
-          pointerEvents: 'none',
-          opacity: '.2'
-        }
-      }
-    ]
+  content: {
+    extend: Flex,
+    navbar,
+    logoTitle
   }
 }

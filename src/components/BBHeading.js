@@ -6,6 +6,7 @@ import { Title } from './Title'
 import { opacity, opacityLetterSpacing } from '../animations'
 
 import LOGO_BIG_PNG from '../assets/icons/logoBig.png'
+import LOGO_PNG from '../assets/icons/logoCream.png'
 
 const props = {
   align: 'center center',
@@ -21,7 +22,7 @@ const props = {
   logo: {
     boxSize: 'B1 ',
     opacity: '.85',
-    src: LOGO_BIG_PNG
+    src: LOGO_PNG
   },
 
   title: {

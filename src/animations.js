@@ -32,6 +32,43 @@ export const opacityTransform = keyframes`
   }
 `
 
+export const opacityTransform2 = keyframes`
+  from {
+    transform: translateX(100px) scale(.98);
+    opacity: 0;
+    letter-spacing: 3px;
+  }
+  to {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+`
+
+export const opacityTransform3 = keyframes`
+  from {
+    transform: scale(.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`
+
+export const opacityTransform4 = keyframes`
+from {
+  transform: translateX(50px) scale(.95);
+  opacity: 0;
+  letter-spacing: 2.5px;
+}
+to {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  letter-spacing: 1.8px;
+}
+`
+
 export const positionBanner = keyframes`
   from {
     background-position: top left;
@@ -72,12 +109,30 @@ export const letterSpacing = keyframes`
   }
 `
 
+export const letterSpacing2 = keyframes`
+  from {
+    letter-spacing: 4px;
+  }
+  to {
+    letter-spacing: 6px;
+  }
+`
+
 export const opacity = keyframes`
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+`
+
+export const opacity2 = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.75;
   }
 `
 
