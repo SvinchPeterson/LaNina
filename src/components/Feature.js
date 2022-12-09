@@ -5,18 +5,22 @@ const props = {
   padding: 'C - C B',
   background: 'cream2',
   round: 'Y',
+  '@mobileS': {
+    maxWidth: '100%',
+    padding: 'C Z C Z2'
+  },
 
   title: {
     text: 'city center',
-    fontSize: '12px',
-    textTransform: 'uppercase',
-    style: { letterSpacing: '.5px' }
+    fontSize: 'Z',
+    fontWeight: '700',
+    textTransform: 'uppercase'
   },
 
   p: {
     text: '7 min from Liberty square',
     padding: 'V2 - - -',
-    fontSize: 'Z',
+    fontSize: `${14 / 16}em`,
     color: 'black .8'
   }
 }

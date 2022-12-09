@@ -32,7 +32,7 @@ const props = {
     backgroundRepeat: 'no-repeat',
     '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
   },
-  '@tabletL': { margin: '0' },
+  '@tabletL': { margin: 'V - 0 -' },
 
   paragraph: {
     color: 'cream2',
