@@ -3,7 +3,12 @@ import { Header, HeaderMobile } from '../../components'
 
 export const header = {
   extend: Header,
-  props: { logo: { title: { text: 'travel' } } },
+  props: {
+    logo: { title: { text: 'travel' } },
+    navBar: {
+      childProps: { color: 'white' }
+    }
+  },
   logo: {},
   navBar: {
     ...[
