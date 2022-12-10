@@ -4,6 +4,7 @@ import { BookingForm } from '../../../components/BookingForm'
 
 export const tbilisiBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeTbilisiBooking
       ? { display: 'flex' }
@@ -13,6 +14,7 @@ export const tbilisiBooking = {
 
 export const ananuriBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeAnanuriBooking
       ? { display: 'flex' }
@@ -22,6 +24,7 @@ export const ananuriBooking = {
 
 export const borjomiBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeBorjomiBooking
       ? { display: 'flex' }
@@ -31,6 +34,7 @@ export const borjomiBooking = {
 
 export const canyonBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeCanyonBooking
       ? { display: 'flex' }
@@ -40,6 +44,7 @@ export const canyonBooking = {
 
 export const goriBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeGoriBooking
       ? { display: 'flex' }
@@ -49,6 +54,7 @@ export const goriBooking = {
 
 export const kakhetiBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeKakhetiBooking
       ? { display: 'flex' }
@@ -58,6 +64,7 @@ export const kakhetiBooking = {
 
 export const kutaisiBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeKutaisiBooking
       ? { display: 'flex' }
@@ -67,6 +74,7 @@ export const kutaisiBooking = {
 
 export const mtsketaBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeMtsketaBooking
       ? { display: 'flex' }
@@ -76,6 +84,7 @@ export const mtsketaBooking = {
 
 export const rabatBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeRabatBooking
       ? { display: 'flex' }
@@ -85,6 +94,7 @@ export const rabatBooking = {
 
 export const caucasusBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeCaucasusBooking
       ? { display: 'flex' }
@@ -94,6 +104,7 @@ export const caucasusBooking = {
 
 export const adventureBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeAdventureBooking
       ? { display: 'flex' }
@@ -103,6 +114,7 @@ export const adventureBooking = {
 
 export const exclusiveBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeExclusiveBooking
       ? { display: 'flex' }
@@ -112,6 +124,7 @@ export const exclusiveBooking = {
 
 export const $3dBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active3dBooking
       ? { display: 'flex' }
@@ -121,6 +134,7 @@ export const $3dBooking = {
 
 export const $4dBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active4dBooking
       ? { display: 'flex' }
@@ -130,6 +144,7 @@ export const $4dBooking = {
 
 export const $5dBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active5dBooking
       ? { display: 'flex' }
@@ -139,6 +154,7 @@ export const $5dBooking = {
 
 export const $8dBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active8dBooking
       ? { display: 'flex' }
@@ -148,6 +164,7 @@ export const $8dBooking = {
 
 export const $10dBooking = {
   extend: BookingForm,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.active10dBooking
       ? { display: 'flex' }
