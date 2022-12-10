@@ -35,15 +35,19 @@ const heading = {
     flexAlign: 'center space-between',
     width: '83%',
     margin: '0 auto',
-    '@mobileL': { width: '85%' }
+    zIndex: '20',
+    '@mobileL': { width: '85%' },
+    navArrows: {
+      childProps: { arrow: { boxSize: ' A' } }
+    }
   },
-  style: { zIndex: '20' },
 
   title: {
     tag: 'caption',
     text: 'Feedbacks',
     props: {
       fontWeight: '700',
+      fontSize: 'B',
       style: {
         whiteSpace: 'nowrap',
         letterSpacing: '.3px',
@@ -78,29 +82,21 @@ const props = {
     style: {
       '&:after': {
         content: '""',
-        width: '0px',
+        width: '50px',
         height: '100%',
         position: 'absolute',
         right: '0px',
         top: 0,
-        background: 'rgba(248, 241, 227, .5)',
-        boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .87)',
-        '@media only screen and (max-width: 560px)': {
-          boxShadow: '0px 0px 20px 15px rgba(248, 241, 227, 1)'
-        }
+        background: 'linear-gradient(to left, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)'
       },
       '&:before': {
         content: '""',
-        width: '0px',
+        width: '50px',
         height: '100%',
         position: 'absolute',
         left: '0',
         top: 0,
-        boxShadow: '0px 0px 40px 40px rgba(248, 241, 227, .87)',
-        '@media only screen and (max-width: 560px)': {
-          boxShadow: '0px 0px 20px 15px rgba(248, 241, 227, 1)'
-        },
-        background: 'rgba(248, 241, 227, .5)',
+        background: 'linear-gradient(to right, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
         zIndex: 3
       }
     },

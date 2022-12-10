@@ -51,6 +51,4 @@ window.onkeyup = (ev) => {
     })
   }
 }
-
-// window.onpopstate = e => router(App, window.location.pathname, {}, 0, false)
 export default app

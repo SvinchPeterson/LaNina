@@ -36,7 +36,7 @@ export const Apartments = {
   props,
   class: {
     show: (element, state) => state.activeTab
-      ? { zIndex: '70' } : { zIndex: '0' }
+      ? { zIndex: '70' } : { zIndex: 1 }
   },
 
   attr: { id: 'apartments' },

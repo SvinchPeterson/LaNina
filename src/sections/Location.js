@@ -6,15 +6,19 @@ import { ContactItems, Map, SectionTitle } from '../components'
 const title = {
   extend: SectionTitle,
   props: {
-    padding: '0 0 Z A',
+    padding: '0 0 Z2 A',
     minWidth: '60%',
     text: 'location',
+    fontSize: 'B',
+    fontWeight: '500',
+    letterSpacing: '0',
     '@tabletS': {
-      minWidth: '50%'
+      minWidth: '50%',
+      textAlign: 'center'
     },
-    '@mobileL': { minWidth: '30%' },
-    '@mobileM': { minWidth: '23%' },
-    '@mobileXS': { minWidth: '20%' },
+    // '@mobileL': { minWidth: '30%' },
+    // '@mobileM': { minWidth: '23%' },
+    // '@mobileXS': { minWidth: '20%' },
     style: {
       alignSelf: 'center',
       '@media only screen and (max-height: 650px)': { fontSize: `${16 / 19}em` }
