@@ -77,6 +77,9 @@ export const props = {
     boxSizing: 'border-box',
     transition: 'all .7s ease-in-out',
     textDecoration: 'none',
+    '@media only screen and (max-height: 650px) and (min-width: 1366px)': {
+      height: `${250 / 16}em`
+    },
     '@media only screen and (max-width: 1366px)': {
       boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, .25)'
     },
@@ -95,8 +98,9 @@ export const props = {
       height: '100%',
       top: '0',
       left: 0,
-      background: 'linear-gradient(rgba(60,84, 72, .5), rgba(60,84, 72, 1))',
-      opacity: '.4',
+      background: 'linear-gradient(rgba(25, 63, 55, .5), rgba(25, 63, 55, 1))',
+      // background: 'linear-gradient(rgba(60,84, 72, .5), rgba(60,84, 72, 1))',
+      opacity: '.65',
       transition: 'opacity .7s ease-in-out',
       cursor: 'pointer',
       '@tabletL': { display: 'none' }
@@ -108,9 +112,13 @@ export const props = {
     text: 'ballerina',
     color: 'cream2',
     position: 'absolute',
-    right: 'B',
-    bottom: 'B',
-    fontWeight: '700',
+    right: 'A',
+    bottom: 'A',
+    fontWeight: '400',
+    zIndex: '5',
+    fontSize: 'A',
+    textTransform: 'uppercase',
+    letterSpacing: '1px',
     '@tabletL': { fontSize: 'C' },
     '@mobileL': {
       fontSize: 'B'
@@ -120,7 +128,6 @@ export const props = {
       bottom: 'Z'
     },
     style: {
-      textTransform: 'uppercase',
       textShadow: '.5px .5px 1px black',
       whiteSpace: 'nowrap'
     }

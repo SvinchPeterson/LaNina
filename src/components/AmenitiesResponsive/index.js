@@ -67,47 +67,28 @@ const header = {
 const offers = {
   style: {
     position: 'relative',
-    transition: 'height 1s ease-in-out',
-    '&:before': {
-      content: '""',
-      width: '100%',
-      height: '0px',
-      boxShadow: '0px 0px 40px 15px rgba(60,84, 72, 0)',
-      position: 'absolute',
-      top: '0px',
-      left: 0,
-      zIndex: 100,
-      transition: 'boxShadow 1s ease-in-out'
-    },
-    '&:after': {
-      content: '""',
-      width: '100%',
-      height: '0px',
-      boxShadow: '0px 0px 40px 40px rgba(60,84, 72, 0)',
-      position: 'absolute',
-      bottom: '-20px',
-      left: 0,
-      zIndex: 100,
-      transition: 'boxShadow 1s ease-in-out'
-
-    }
+    transition: 'height .5s ease-in-out'
   },
 
   class: {
     show: (element, state) => state.offers
+      ? { height: '120px' }
+      : { height: '0' }
+  },
 
-      ? {
-        height: '120px',
-        '&:before': { boxShadow: '0px 0px 40px 15px rgba(60,84, 72, .85)' },
-        '&:after': {
-          boxShadow: '30px 0px 30px 25px rgba(60,84, 72, 1)'
-        }
-      }
-
-      : {
-        height: '0'
-
-      }
+  props: {
+    overflow: 'hidden',
+    ':after': {
+      content: '""',
+      width: '100%',
+      height: '30px',
+      background: 'linear-gradient(to top, rgba(25, 63, 55, 1) 0%, rgba(25, 63, 55, 0) 100%)',
+      position: 'absolute',
+      bottom: '0',
+      left: 0,
+      zIndex: 100,
+      transition: 'boxShadow 1s ease-in-out'
+    }
   },
 
   content: {
@@ -201,13 +182,20 @@ export const AmenitiesResponsive = {
     minWidth: 'G1',
     position: 'absolute',
     flexFlow: 'column',
-    background: 'green2',
+    background: 'rgba(25, 63, 55, 1)',
     round: 'Z',
     bottom: '-D',
-    style: {
-      left: '50%',
-      transform: 'translate(-50%, 0%)'
-    },
+    // '&:before': {
+    //   content: '""',
+    //   width: '100%',
+    //   height: '30px',
+    //   position: 'absolute',
+    //   background: 'red',
+    //   top: '0',
+    //   left: 0,
+    //   zIndex: 100,
+    //   transition: 'boxShadow 1s ease-in-out'
+    // },
     '@mobileM': {
       top: '-D',
       height: 'fit-content',
@@ -232,7 +220,7 @@ export const AmenitiesResponsive = {
       ? {
         padding: ` 0 0 ${40 / 16}em 0`,
         margin: ` 0 0 ${20 / 16}em 0`,
-        background: 'rgba(60,84, 72, 1)',
+        background: 'rgba(25, 63, 55, 1)',
         transition: 'padding .5s ease-in-out, margin .5s ease-in-out background .5s ease-in-out'
         // '@media only screen and (max-width: 480px)': { marginBottom: '0' }
       }

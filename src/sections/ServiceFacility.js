@@ -12,6 +12,11 @@ const props = {
   flow: 'column',
   justifyContent: 'center',
   position: 'relative',
+  style: {
+    '@media only screen and (max-height: 600px)': {
+      paddingTop: `${70 / 16}em`
+    }
+  },
 
   title: {
     text: 'Services & Facilities',
@@ -47,7 +52,6 @@ const props = {
       style: {
         writingMode: 'vertical-rl',
         transform: 'rotate(-180deg)'
-        // textOrientation: 'upright'
       },
       '@mobileXS': { fontSize: `${12 / 16}em` }
     },
@@ -81,8 +85,7 @@ const props = {
         '@media only screen and (max-width: 1024px) and (max-height: 1150px)': {
           maxHeight: `${500 / 16}em`,
           overflowY: 'auto',
-          borderTop: '1px solid silver',
-          borderBottom: '1px solid silver'
+          borderTop: '1px solid silver'
 
         },
         '@media only screen and (max-width: 768px)': {

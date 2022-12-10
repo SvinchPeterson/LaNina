@@ -24,12 +24,15 @@ const navArrow = {
   props: {
     gap: 'D',
     display: 'none',
+    zIndex: '60',
     ':before': {
       background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, .25))',
       height: '80%'
     },
     '@tabletL': { display: 'flex' },
-    style: { '@media only screen and (max-height: 600px)': { bottom: `${-85 / 16}em` } }
+    childProps: { arrow: { boxSize: ' A1' } }
+
+    // style: { '@media only screen and (max-height: 600px)': { bottom: `${-85 / 16}em` } }
   },
 
   ...[
@@ -82,7 +85,11 @@ const props = {
   },
   '@tabletL': {
     width: '100%',
-    gap: 'C2'
+    gap: 'C'
+  },
+
+  '@mobileL': {
+    padding: '0'
   },
 
   tabsContainer: {
@@ -93,19 +100,33 @@ const props = {
     boxSizing: 'content-box',
     ':before': {
       content: '"Apartments"',
-      fontSize: `${17 / 16}em`,
+      fontSize: `D`,
       position: 'absolute',
-      top: '-B2',
+      top: '-A2',
       left: '0',
-      color: 'rgba(248, 241, 227, 1)',
-      style: { letterSpacing: '2px' }
+      fontWeight: '700',
+      color: 'cream2',
+      letterSpacing: '1px'
     },
-    style: { borderTop: '1.5px solid rgba(248, 241, 227, .5)' },
+    style: {
+      '@media only screen and (max-width: 1366px)': {
+        width: `${600 / 16}em`,
+        height: `${350 / 16}em `
+      },
 
-    '@tabletL': { boxSize: 'G3 H2' },
-    '@mobileL': { boxSize: 'G H' },
-    '@mobileM': { boxSize: 'F1 G2' },
-    '@mobileS': { boxSize: 'F G' },
+      '@media only screen and (max-width: 768px)': {
+        width: `85%`
+      },
+      '@media only screen and (max-width: 1366px) and (max-height: 750px)': {
+        height: `${300 / 16}em !important`
+      },
+      '@media only screen and (max-width: 1366px) and (max-height: 670px)': {
+        height: `${250 / 16}em !important`
+      },
+      '@media only screen and (max-width: 1366px) and (max-height: 550px)': {
+        height: `${200 / 16}em !important`
+      }
+    },
 
     childProps: { '@tabletL': { margin: 'A - - -' } }
   }

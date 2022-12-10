@@ -54,13 +54,12 @@ export const back = {
     padding: 'Z',
     '@tabletL': {
       position: 'absolute',
-      background: 'green2',
+      background: 'rgba(25, 63, 55, 1)',
       padding: 'Z1 A',
       top: 'B1',
       left: '0'
     },
     style: {
-      color: 'rgba(248, 241, 227, 1) !important',
       textDecoration: 'none',
       borderBottomRightRadius: '6px',
       '&:hover > span': { opacity: '1' },
@@ -92,7 +91,8 @@ export const back = {
   span: {
     props: {
       text: 'APARTMENTS',
-      fontSize: 'Y',
+      fontSize: `${12 / 16}em`,
+      fontWeight: '700',
       style: {
         letterSpacing: '1px',
         opacity: '.7',
@@ -141,7 +141,6 @@ const book = {
       '@media only screen and (max-width: 768px)': {
         writingMode: 'initial',
         textOrientation: 'initial'
-        // backdropFilter: 'blur(10px)'
       }
     }
   },
@@ -165,14 +164,17 @@ const book = {
 const navHorizontalArrows = {
   extend: NavHorizontalArrowsCream,
   props: {
-    margin: '- A2 -C -',
     alignSelf: 'flex-end',
+    position: 'absolute',
+    left: 'B',
+    bottom: '-C1',
     '@tabletL': { display: 'none' },
     '@mobileL': {
       display: 'flex',
       alignSelf: 'center',
       minWidth: '101%',
-      margin: '0',
+      bottom: '40%',
+      left: '-2px',
       ':after': { display: 'none' }
     }
   },
@@ -180,8 +182,7 @@ const navHorizontalArrows = {
   childExtend: {
     props: {
       '@mobileL': {
-        background: 'green2',
-        padding: 'A2 A1'
+        background: 'rgba(25, 63, 55, 1)'
       }
     }
   },
@@ -189,7 +190,8 @@ const navHorizontalArrows = {
     {
       props: {
         '@mobileL': {
-          style: { borderTopRightRadius: '10px', borderBottomRightRadius: '10px' }
+          padding: 'B2 B B2 A1',
+          style: { borderTopRightRadius: '40px', borderBottomRightRadius: '40px' }
         }
       },
       on: {
@@ -208,7 +210,8 @@ const navHorizontalArrows = {
     {
       props: {
         '@mobileL': {
-          style: { borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }
+          padding: 'B2 A1 B2 B',
+          style: { borderTopLeftRadius: '40px', borderBottomLeftRadius: '40px' }
         }
       },
       on: {
@@ -278,10 +281,15 @@ export const Gallery = {
     boxSize: 'H I',
     margin: '0 D 0 auto',
     align: 'flex-start center',
+    alignSelf: 'center',
     '@tabletS': { boxSize: 'G1 H2' },
     '@mobileL': { width: '100%' },
     '@mobileS': { boxSize: 'G 100%' },
-    style: { alignSelf: 'center' }
+    style: {
+      '@media only screen and (max-width: 1366px) and (max-height: 650px)': {
+        height: '250px !important'
+      }
+    }
   },
 
   ba: {

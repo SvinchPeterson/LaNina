@@ -8,8 +8,8 @@ const props = {
   margin: 'F 0 0 0',
   '@tabletL': {
     flexFlow: 'column',
-    flexAlign: 'flex-end center',
-    margin: '0 0 0 0'
+    flexAlign: 'flex-end center'
+    // margin: '0 0 0 0'
   },
 
   image: {

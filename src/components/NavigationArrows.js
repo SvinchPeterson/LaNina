@@ -16,7 +16,6 @@ const props = {
   position: 'relative',
   maxWidth: 'fit-content',
   height: 'fit-content',
-  // border: '2px solid red',
   ':after': {
     content: '""',
     boxSize: '60% 2px',

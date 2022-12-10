@@ -13,8 +13,8 @@ const iconCaption = {
     style: { textAlign: 'left' },
     icon: {
       boxSize: '26px ',
-      margin: '0 0 0 0',
-      '@mobileM': { boxSize: '35px ' }
+      margin: '0 0 0 0'
+      // '@mobileM': { boxSize: '35px ' }
     },
     caption: {
       color: 'cream2 .65',
@@ -23,7 +23,7 @@ const iconCaption = {
       flexFlow: 'column',
       lineHeight: '16.8px',
       '@mobileM': {
-        fontSize: 'B',
+        fontSize: 'A',
         lineHeight: '25px'
 
       },
@@ -54,9 +54,9 @@ const props = {
       content: '""',
       position: 'absolute',
       width: '100%',
-      height: '0px',
-      bottom: '0',
-      boxShadow: '20px 0px 50px 35px rgba(60,84, 72, 1)',
+      height: '30px',
+      background: 'linear-gradient(to top, rgba(25, 63, 55, 1) 0%, rgba(25, 63, 55, 0) 100%)',
+      bottom: '-1px',
       display: 'none',
       '@media only screen and (max-width: 560px)': {
         display: 'block'
@@ -66,7 +66,7 @@ const props = {
   content: {
     flexAlign: 'center flex-start',
     gap: 'D',
-    background: 'green2',
+    background: 'rgba(25, 63, 55, 1)',
     '@mobileL': { gap: 'C' },
     '@mobileM': {
       margin: 'C 0 0 0',

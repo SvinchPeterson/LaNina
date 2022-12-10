@@ -9,9 +9,10 @@ const list = {
   childExtend: {
     props: {
       lineHeight: '25px',
-      fontSize: `${14 / 16}em`,
+      fontSize: `${15 / 16}em`,
       flexFlow: 'column',
-      color: 'cream2 .8'
+      color: 'cream2 .8',
+      letterSpacing: '.3px'
     }
   },
   ...[
@@ -67,9 +68,10 @@ const props = {
   title: {
     text: 'amenities',
     fontSize: 'Z',
-    fontWeight: '700',
+    fontWeight: '500',
     color: 'orange3 .95',
     textAlign: 'flex-start',
+    letterSpacing: '3px',
     style: {
       textTransform: 'uppercase'
     }
