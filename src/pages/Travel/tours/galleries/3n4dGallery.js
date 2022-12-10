@@ -90,6 +90,14 @@ export const $3n4dGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, active4dBooking: true })
+        }
+      }
     }
   }
 }

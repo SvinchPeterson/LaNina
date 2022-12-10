@@ -17,9 +17,6 @@ const title = {
       textAlign: 'center',
       padding: '0 0 Z2 0'
     },
-    // '@mobileL': { minWidth: '30%' },
-    // '@mobileM': { minWidth: '23%' },
-    // '@mobileXS': { minWidth: '20%' },
     style: {
       alignSelf: 'center',
       '@media only screen and (max-height: 650px)': { fontSize: `${16 / 19}em` }

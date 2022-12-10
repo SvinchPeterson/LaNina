@@ -36,7 +36,7 @@ export const $7n8dTour = {
     button: {
       on: {
         click: (event, element, state) => {
-          state.update({ activeArticleContainer: true, active_8d_Article: true })
+          state.update({ activePopUpContainer: true, active_8d_Article: true })
         }
       }
     }

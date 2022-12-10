@@ -116,6 +116,14 @@ export const geoArmGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, activeCaucasusBooking: true })
+        }
+      }
     }
   }
 }

@@ -70,6 +70,14 @@ export const exclusiveGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, activeExclusiveBooking: true })
+        }
+      }
     }
   }
 }

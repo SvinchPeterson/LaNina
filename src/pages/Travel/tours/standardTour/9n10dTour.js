@@ -38,7 +38,7 @@ export const $9n10dTour = {
       props: { alignSelf: 'flex-end' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeArticleContainer: true, active_10d_Article: true })
+          state.update({ activePopUpContainer: true, active_10d_Article: true })
         }
       }
 

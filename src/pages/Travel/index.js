@@ -62,15 +62,32 @@ const state = {
   active_8d_Article: false,
   active_10d_Article: false,
   active_Armenia_Article: false,
-
   activeExclusiveArticle: false,
   activeAdventureArticle: false,
 
-  activeArticleContainer: false,
+  activePopUpContainer: false,
 
   activeSend: true,
   activeSent: false,
-  activeBookingForm: false
+
+  activeTbilisiBooking: false,
+  activeAnanuriBooking: false,
+  activeBorjomiBooking: false,
+  activeCanyonBooking: false,
+  activeGoriBooking: false,
+  activeKakhetiBooking: false,
+  activeKutaisiBooking: false,
+  activeMtsketaBooking: false,
+  activeRabatBooking: false,
+  activeCaucasusBooking: false,
+  activeAdventureBooking: false,
+  activeExclusiveBooking: false,
+  active3dBooking: false,
+  active4dBooking: false,
+  active5dBooking: false,
+  active8dBooking: false,
+  active10dBooking: false
+
 }
 
 export default {

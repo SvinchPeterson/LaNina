@@ -76,6 +76,14 @@ export const $2n3dGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, active3dBooking: true })
+        }
+      }
     }
   }
 }

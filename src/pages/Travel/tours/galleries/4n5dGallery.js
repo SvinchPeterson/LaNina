@@ -90,6 +90,14 @@ export const $4n5dGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, active5dBooking: true })
+        }
+      }
     }
   }
 }

@@ -36,7 +36,7 @@ export const $2n3dTour = {
       props: { alignSelf: 'flex-end' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeArticleContainer: true, active_3d_Article: true })
+          state.update({ activePopUpContainer: true, active_3d_Article: true })
         }
       }
     }

@@ -154,6 +154,14 @@ export const $9n10dGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, active10dBooking: true })
+        }
+      }
     }
   }
 }

@@ -64,6 +64,14 @@ export const ananuriGudauriGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, activeAnanuriBooking: true })
+        }
+      }
     }
   }
 }

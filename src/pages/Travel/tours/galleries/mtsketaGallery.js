@@ -62,6 +62,14 @@ export const mtsketaGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, activeMtsketaBooking: true })
+        }
+      }
     }
   }
 }

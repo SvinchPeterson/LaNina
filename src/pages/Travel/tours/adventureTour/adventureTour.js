@@ -37,7 +37,7 @@ export const adventureTour = {
       props: { alignSelf: 'flex-start' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeArticleContainer: true, activeAdventureArticle: true })
+          state.update({ activePopUpContainer: true, activeAdventureArticle: true })
         }
       }
 

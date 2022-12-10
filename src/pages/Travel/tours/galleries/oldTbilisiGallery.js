@@ -63,6 +63,14 @@ export const oldTbilisiGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, activeTbilisiBooking: true })
+        }
+      }
     }
   }
 }

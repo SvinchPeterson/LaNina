@@ -25,7 +25,7 @@ export const mtsketaTour = {
     button: {
       on: {
         click: (event, element, state) => {
-          state.update({ activeArticleContainer: true, activeMtsketaArticle: true })
+          state.update({ activePopUpContainer: true, activeMtsketaArticle: true })
         }
       }
     }

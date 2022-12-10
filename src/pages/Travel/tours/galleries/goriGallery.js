@@ -64,6 +64,14 @@ export const goriGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, activeGoriBooking: true })
+        }
+      }
     }
   }
 }

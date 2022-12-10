@@ -100,6 +100,14 @@ export const $7n8dGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, active8dBooking: true })
+        }
+      }
     }
   }
 }

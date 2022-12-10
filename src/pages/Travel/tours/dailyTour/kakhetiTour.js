@@ -36,7 +36,7 @@ export const kakhetiTour = {
       props: { alignSelf: 'flex-end' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeArticleContainer: true, activeKakhetiArticle: true })
+          state.update({ activePopUpContainer: true, activeKakhetiArticle: true })
         }
       }
     }

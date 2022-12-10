@@ -6,9 +6,8 @@ import { standardTour } from './standardTour'
 import { armeniaTour } from './armeniaTour'
 import { exclusive } from './exclusiveTour'
 import { adventure } from './adventureTour'
-import { BookingForm } from '../../../components'
 
-import { articlesContainer } from './articleContainer/articlesContainer'
+import { popUpContainer } from './popUpContainer/popUpContainer'
 
 import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
 
@@ -80,6 +79,5 @@ export const toursContainer = {
   armeniaTour,
   exclusive,
   adventure,
-  articlesContainer,
-  book: { extend: BookingForm }
+  popUpContainer
 }

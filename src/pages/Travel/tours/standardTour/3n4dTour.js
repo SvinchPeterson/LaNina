@@ -25,7 +25,7 @@ export const $3n4dTour = {
     button: {
       on: {
         click: (event, element, state) => {
-          state.update({ activeArticleContainer: true, active_4d_Article: true })
+          state.update({ activePopUpContainer: true, active_4d_Article: true })
         }
       }
     }

@@ -86,13 +86,7 @@ export const TourGallery = {
   footer: {
     extend: Flex,
 
-    navArrow: {
-      extend: NavHorizontalArrowsBlack,
-      props: {
-        // '@mobileXS': { gap: 'B1' },
-        // childProps: { arrow: { '@mobileXS': { boxSize: ' Z1' } } }
-      }
-    },
+    navArrow: { extend: NavHorizontalArrowsBlack },
 
     book: {
       tag: 'button',
@@ -100,7 +94,7 @@ export const TourGallery = {
       on: {
         click: (event, element, state) => {
           console.log('gela')
-          state.update({ activeBookingForm: true })
+          state.update({ activeTbilisiBooking: true })
         }
       }
     }

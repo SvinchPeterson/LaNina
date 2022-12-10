@@ -62,6 +62,14 @@ export const rabatiGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, activeRabatBooking: true })
+        }
+      }
     }
   }
 }

@@ -20,8 +20,28 @@ import {
   $9n10dArticle,
   exclusiveArticle,
   adventureArticle
-
 } from '../articles'
+
+import {
+  tbilisiBooking,
+  ananuriBooking,
+  borjomiBooking,
+  canyonBooking,
+  goriBooking,
+  caucasusBooking,
+  adventureBooking,
+  exclusiveBooking,
+  kakhetiBooking,
+  kutaisiBooking,
+  mtsketaBooking,
+  rabatBooking,
+  $3dBooking,
+  $4dBooking,
+  $5dBooking,
+  $8dBooking,
+  $10dBooking
+
+} from '../bookings'
 
 import CLOSE_PNG from '../../../../assets/icons/closeBlack.png'
 import LOGO_PNG from '../../../../assets/icons/logoBlack.png'
@@ -40,7 +60,7 @@ const props = {
     backdropFilter: 'blur(4px)'
   },
 
-  articles: {
+  articlesBookings: {
     background: 'rgba(229, 249, 252, 1)',
     boxSize: '75% 75%',
     flow: 'column',
@@ -91,6 +111,8 @@ const props = {
     },
 
     content: {
+      // border: '5px solid red',
+      height: '100%',
       alignSelf: 'center',
       padding: 'D1 B C2 B',
       '@tabletS': { padding: 'D1 B1 C2 B1' },
@@ -118,12 +140,12 @@ const props = {
   }
 }
 
-export const articlesContainer = {
+export const popUpContainer = {
   extend: Flex,
   props,
 
   class: {
-    show: (element, state) => state.activeArticleContainer
+    show: (element, state) => state.activePopUpContainer
       ? {
         display: 'flex'
       }
@@ -132,7 +154,7 @@ export const articlesContainer = {
       }
   },
 
-  articles: {
+  articlesBookings: {
     extend: Flex,
     logo: { extend: Img },
     close: {
@@ -140,7 +162,7 @@ export const articlesContainer = {
       on: {
         click: (event, element, state) => {
           state.update({
-            activeArticleContainer: false,
+            activePopUpContainer: false,
             activeTbilisiArticle: false,
             activeAnanuriArticle: false,
             activeGoriArticle: false,
@@ -157,13 +179,33 @@ export const articlesContainer = {
             active_10d_Article: false,
             active_Armenia_Article: false,
             activeExclusiveArticle: false,
-            activeAdventureArticle: false
+            activeAdventureArticle: false,
+
+            activeTbilisiBooking: false,
+            activeAnanuriBooking: false,
+            activeBorjomiBooking: false,
+            activeCanyonBooking: false,
+            activeGoriBooking: false,
+            activeKakhetiBooking: false,
+            activeKutaisiBooking: false,
+            activeMtsketaBooking: false,
+            activeRabatBooking: false,
+            activeCaucasusBooking: false,
+            activeAdventureBooking: false,
+            activeExclusiveBooking: false,
+            active3dBooking: false,
+            active4dBooking: false,
+            active5dBooking: false,
+            active8dBooking: false,
+            active10dBooking: false
           })
         }
       },
       icon: { extend: Img }
     },
     content: {
+      extend: Flex,
+
       tbilisiArticle,
       ananuriArticle,
       goriArticle,
@@ -180,7 +222,25 @@ export const articlesContainer = {
       $7n18dArticle,
       $9n10dArticle,
       exclusiveArticle,
-      adventureArticle
+      adventureArticle,
+
+      tbilisiBooking,
+      ananuriBooking,
+      borjomiBooking,
+      canyonBooking,
+      goriBooking,
+      caucasusBooking,
+      adventureBooking,
+      exclusiveBooking,
+      kakhetiBooking,
+      kutaisiBooking,
+      mtsketaBooking,
+      rabatBooking,
+      $3dBooking,
+      $4dBooking,
+      $5dBooking,
+      $8dBooking,
+      $10dBooking
     }
   }
 }

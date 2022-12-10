@@ -25,7 +25,7 @@ export const ananuriGudauriTour = {
     button: {
       on: {
         click: (event, element, state) => {
-          state.update({ activeArticleContainer: true, activeAnanuriArticle: true })
+          state.update({ activePopUpContainer: true, activeAnanuriArticle: true })
         }
       }
     }

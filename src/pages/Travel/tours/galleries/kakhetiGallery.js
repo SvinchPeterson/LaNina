@@ -64,6 +64,14 @@ export const kakhetiGallery = {
           }
         }
       ]
+    },
+
+    book: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpContainer: true, activeKakhetiBooking: true })
+        }
+      }
     }
   }
 }
