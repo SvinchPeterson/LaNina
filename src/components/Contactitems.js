@@ -52,7 +52,7 @@ const itemProps = {
   fontWeight: '700',
   color: 'black',
   '@mobileS': {
-    width: `${240 / 13}em`,
+    width: `${280 / 13}em`,
     height: `${45 / 13}em`,
     padding: '0',
     fontSize: `${13 / 16}em`,

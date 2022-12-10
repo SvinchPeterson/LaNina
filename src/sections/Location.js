@@ -14,7 +14,8 @@ const title = {
     letterSpacing: '0',
     '@tabletS': {
       minWidth: '50%',
-      textAlign: 'center'
+      textAlign: 'center',
+      padding: '0 0 Z2 0'
     },
     // '@mobileL': { minWidth: '30%' },
     // '@mobileM': { minWidth: '23%' },
