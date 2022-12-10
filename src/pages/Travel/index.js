@@ -67,8 +67,11 @@ const state = {
 
   activePopUpContainer: false,
 
-  activeSend: true,
-  activeSent: false,
+  activePlandSend: true,
+  activePlanSent: false,
+
+  activeBookSend: true,
+  activeBookSent: false,
 
   activeTbilisiBooking: false,
   activeAnanuriBooking: false,
@@ -99,15 +102,15 @@ export default {
   },
   state,
 
-  header,
-  headerMobile,
-  menu,
-  travelBanner,
-  country,
-  gallery,
-  tours,
-  aboutUs,
-  planTrip,
-  contact,
-  footer
+  // header,
+  // headerMobile,
+  // menu,
+  // travelBanner,
+  // country,
+  // gallery,
+  tours
+  // aboutUs,
+  // planTrip,
+  // contact,
+  // footer
 }

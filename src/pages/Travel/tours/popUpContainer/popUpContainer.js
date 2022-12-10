@@ -197,7 +197,10 @@ export const popUpContainer = {
             active4dBooking: false,
             active5dBooking: false,
             active8dBooking: false,
-            active10dBooking: false
+            active10dBooking: false,
+            activeBookSent: false,
+            activeBookSend: true
+
           })
         }
       },

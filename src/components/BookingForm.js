@@ -1,6 +1,6 @@
 'use strict'
 
-import { Input, Flex } from 'smbls'
+import { Input, Flex, Button } from 'smbls'
 
 const props = {
   alignSelf: 'center',
@@ -8,6 +8,7 @@ const props = {
   flow: 'column',
   gap: 'A',
   padding: '- - D -',
+  style: { '@media only screen and (max-height: 700px)': { paddingBottom: '0' } },
   childProps: {
     height: 'C+X1',
     width: 'G',
@@ -21,17 +22,63 @@ const props = {
     style: {
       outline: 'none !important',
       '::placeholder': { letterSpacing: '2px' }
-    },
-    ':last-child': {
-      cursor: 'pointer',
-      textTransform: 'uppercase',
-      fontWeight: '700',
-      letterSpacing: '.5px',
-      color: 'black .7',
-      alignSelf: 'center',
-      transition: 'color .3s ease-in-out, background .3s ease-in-out',
-      ':hover': { color: 'black 1', background: 'black .05' }
     }
+  },
+
+  sendButton: {
+    cursor: 'pointer',
+    textTransform: 'uppercase',
+    fontWeight: '700',
+    letterSpacing: '0',
+    color: 'black .7',
+    border: '.5px solid silver',
+    height: 'fit-content',
+    transition: 'color .3s ease-in-out, background .3s ease-in-out',
+    childProps: { fontSize: `${14 / 16}em` }
+    // ':hover': { color: 'black 1', background: 'black .05' }
+  }
+}
+
+const sendButton = {
+  extend: Button,
+  on: {
+    click: (event, element, state) => {
+      state.update({ activeBookSent: true, activeBookSend: false })
+    }
+  },
+  class: {
+    show: (element, state) => state.activeBookSent
+      ? {
+        pointerEvents: 'none',
+        background: 'black .05',
+        '> div': { color: 'black' }
+      }
+      : { },
+
+    show2: (element, state) => state.activeBookSend
+      ? { transition: 'background 1.5s ease-in-out' }
+      : { }
+  },
+
+  send: {
+    class: {
+      show: (element, state) => state.activeBookSend
+        ? { display: 'block' }
+        : { display: 'none' }
+    }
+  },
+
+  sent: {
+    class: {
+      show: (element, state) => state.activeBookSent
+        ? { display: 'block' }
+        : { display: 'none' }
+    }
+  },
+
+  props: {
+    send: { text: 'send' },
+    sent: { text: 'request sent' }
   }
 }
 
@@ -40,10 +87,15 @@ export const BookingForm = {
   extend: Flex,
   props,
 
-  childExtend: Input,
-  ...[
-    { attr: { type: 'email', placeholder: 'Email' } },
-    { attr: { type: 'password', placeholder: 'Password' } },
-    { attr: { type: 'submit', value: 'send' } }
-  ]
+  mail: {
+    extend: Input,
+    attr: { type: 'email', placeholder: 'Email' }
+  },
+
+  password: {
+    extend: Input,
+    attr: { type: 'password', placeholder: 'Password' }
+  },
+
+  sendButton
 }

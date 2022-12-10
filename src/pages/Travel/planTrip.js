@@ -9,23 +9,23 @@ const sendButton = {
   extend: Book,
   on: {
     click: (event, element, state) => {
-      state.update({ activeSent: true, activeSend: false })
+      state.update({ activePlandSent: true, activePlandSend: false })
     }
   },
 
   class: {
-    show: (element, state) => state.activeSent
+    show: (element, state) => state.activePlandSent
       ? { pointerEvents: 'none', background: 'transparent', '> div': { color: 'black' } }
       : { },
 
-    show2: (element, state) => state.activeSend
+    show2: (element, state) => state.activePlandSend
       ? { transition: 'background 1.5s ease-in-out' }
       : { }
   },
 
   span: {
     class: {
-      show: (element, state) => state.activeSend
+      show: (element, state) => state.activePlandSend
         ? { display: 'block' }
         : { display: 'none' }
     }
@@ -33,11 +33,12 @@ const sendButton = {
 
   sent: {
     class: {
-      show: (element, state) => state.activeSent
+      show: (element, state) => state.activePlandSent
         ? { display: 'block' }
         : { display: 'none' }
     }
   },
+
   props: {
     boxSize: 'C2 F1',
     color: 'white',
