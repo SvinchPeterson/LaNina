@@ -60,19 +60,16 @@ const placesGallery = {
       boxSize: 'G H'
     },
     '@mobileS': {
-      boxSize: 'F3 G3'
+      boxSize: 'F2 G2'
     },
     style: {
-      '@media only screen and (max-width: 415px)': {
+      '@media only screen and (max-width: 400px)': {
         width: `${300 / 16}em !important`,
         height: `${200 / 16}em !important`
-      },
-      '@media only screen and (max-height: 720px)': {
-        height: `${300 / 16}em !important`
-      },
-      '@media only screen and (max-height: 570px)': {
-        height: `${250 / 16}em !important`
       }
+      // '@media only screen and (min-width: 768px) and (max-height: 570px)': {
+      //   height: `${250 / 16}em !important`
+      // }
     },
 
     title: {

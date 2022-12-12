@@ -47,14 +47,14 @@ const props = {
     background: 'rgba(229, 249, 252, 1)',
     position: 'relative',
     style: {
-      '@media only screen and (min-height: 850px)': {
-        height: `${600 / 16}em`
+      '@media only screen and (min-height: 900px)': {
+        height: `${700 / 16}em`
       },
-      '@media only screen and (max-height: 720px)': {
+      '@media only screen and (max-height: 900px)': {
+        height: `65%`
+      },
+      '@media only screen and (max-height: 650px)': {
         height: `85%`
-      },
-      '@media only screen and (max-height: 570px)': {
-        height: `100%`
       }
     },
     close: {
