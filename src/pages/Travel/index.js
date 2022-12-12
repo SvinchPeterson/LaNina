@@ -15,6 +15,8 @@ import { tours } from './tours'
 import { contact } from './contact'
 import { footer } from './footer'
 
+import { galleryPopUp } from './tours/placesGallery/galleryPopUp'
+
 const state = {
   activeForm: false,
   activeTour: false,
@@ -66,6 +68,7 @@ const state = {
   activeAdventureArticle: false,
 
   activePopUpContainer: false,
+  activeGalleryPopUp: false,
 
   activePlandSend: true,
   activePlanSent: false,
@@ -89,7 +92,18 @@ const state = {
   active4dBooking: false,
   active5dBooking: false,
   active8dBooking: false,
-  active10dBooking: false
+  active10dBooking: false,
+
+  activeTbilisi: false,
+  activeBorjomi: false,
+  activeMtsketa: false,
+  activeKakheti: false,
+  activeMartvili: false,
+  activeKutaisi: false,
+  activeGori: false,
+  activeKazbegi: false,
+
+  activeImage: 0
 
 }
 
@@ -108,6 +122,7 @@ export default {
   travelBanner,
   country,
   gallery,
+  galleryPopUp,
   tours,
   aboutUs,
   planTrip,

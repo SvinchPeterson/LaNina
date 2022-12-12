@@ -6,7 +6,7 @@ export const header = {
   props: {
     logo: { title: { text: 'travel' } },
     navBar: {
-      childProps: { color: 'white' }
+      // childProps: { color: 'white' }
     }
   },
   logo: {},

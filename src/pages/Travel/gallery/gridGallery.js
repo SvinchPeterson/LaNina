@@ -37,28 +37,34 @@ const props = {
     position: 'relative',
     backgroundSize: 'cover',
     overflow: 'hidden',
+    cursor: 'pointer',
     '@tabletM': {
       round: 'Z'
     },
     style: {
       backgroundAttachment: 'fixed',
       backgroundRepeat: 'no-repeat',
+      '&:hover': {
+        h4: {
+          color: 'skyblue',
+          letterSpacing: '2px'
+        }
+      },
       '@media only screen and (max-width: 1366px)': {
         backgroundAttachment: 'initial'
       }
-      // '@media only screen and (max-height: 1366px)': {
-      //   backgroundAttachment: 'initial'
-      // }
     },
     title: {
       position: 'absolute',
       color: 'cream2',
-      fontSize: 'C',
-      fontWeight: '700',
-      textTransform: 'uppercase',
+      fontSize: 'G',
+      fontWeight: '100',
+      textTransform: 'capitalize',
+      letterSpacing: '3px',
       top: '50%',
       left: '50%',
-      transform: 'translate(-50%, -50%)'
+      transform: 'translate(-50%, -50%)',
+      style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' }
     },
     ':before': {
       content: '""',
@@ -67,7 +73,7 @@ const props = {
       left: '0',
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(rgba(30, 40, 49, .3), rgba(30, 40, 49, 1))'
+      background: 'linear-gradient(rgba(30, 40, 49, .45), rgba(30, 40, 49, 1))'
     }
   }
 }
@@ -75,7 +81,7 @@ const props = {
 export const gridGallery = {
   extend: Grid,
   props,
-  childExtend: { title: {} },
+  childExtend: { title: { tag: 'h4' } },
   ...[
     {
       props: {
@@ -87,6 +93,12 @@ export const gridGallery = {
         '@tabletM': {
           gridColumn: '1',
           gridRow: '1'
+        }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeGalleryPopUp: true, activeTbilisi: true })
         }
       }
     },
@@ -102,6 +114,12 @@ export const gridGallery = {
           gridColumn: '1',
           gridRow: '2'
         }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeGalleryPopUp: true, activeBorjomi: true })
+        }
       }
     },
 
@@ -115,6 +133,12 @@ export const gridGallery = {
         '@tabletM': {
           gridColumn: '1',
           gridRow: '3'
+        }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeGalleryPopUp: true, activeMtsketa: true })
         }
       }
     },
@@ -130,6 +154,12 @@ export const gridGallery = {
           gridColumn: '1',
           gridRow: '4'
         }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeGalleryPopUp: true, activeKakheti: true })
+        }
       }
     },
 
@@ -144,8 +174,15 @@ export const gridGallery = {
           gridColumn: '1',
           gridRow: '5'
         }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeGalleryPopUp: true, activeMartvili: true })
+        }
       }
     },
+
     {
       props: {
         round: '0 G1 G1 0',
@@ -156,6 +193,12 @@ export const gridGallery = {
         '@tabletM': {
           gridColumn: '1',
           gridRow: '6'
+        }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeGalleryPopUp: true, activeKutaisi: true })
         }
       }
     },
@@ -171,6 +214,12 @@ export const gridGallery = {
           gridColumn: '1',
           gridRow: '7'
         }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeGalleryPopUp: true, activeGori: true })
+        }
       }
     },
 
@@ -184,6 +233,12 @@ export const gridGallery = {
         '@tabletM': {
           gridColumn: '1',
           gridRow: '8'
+        }
+      },
+
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeGalleryPopUp: true, activeKazbegi: true })
         }
       }
     }

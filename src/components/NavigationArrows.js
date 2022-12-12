@@ -10,6 +10,9 @@ import RIGHT_ARROW_CREAM_PNG from '../assets/icons/rightArrow-cream.png'
 import DOWN_ARROW_CREAM_PNG from '../assets/icons/downArrow-cream.png'
 import UP_ARROW_CREAM_PNG from '../assets/icons/upArrow-cream.png'
 
+import LEFT_ARROW_WHITE_PNG from '../assets/icons/leftArrow-white.png'
+import RIGHT_ARROW_WHITE_PNG from '../assets/icons/rightArrow-white.png'
+
 const props = {
   align: 'center space-between',
   gap: 'C1',
@@ -82,6 +85,17 @@ export const NavHorizontalArrowsBlack = {
     { props: { arrow: { src: LEFT_ARROW_BLACK_PNG } } },
 
     { props: { arrow: { src: RIGHT_ARROW_BLACK_PNG } } }
+  ]
+}
+
+export const NavHorizontalArrowsWhite = {
+  extend: navigationHorizontalArrows,
+  props: { ':after': { background: 'black' } },
+
+  ...[
+    { props: { arrow: { src: LEFT_ARROW_WHITE_PNG } } },
+
+    { props: { arrow: { src: RIGHT_ARROW_WHITE_PNG } } }
   ]
 }
 
