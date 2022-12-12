@@ -148,6 +148,13 @@ export const tbilisi = {
 
   title: { props: { text: 'tbilisi' } },
   images: {
+    childExtend: {
+      extend: Img,
+      class: {
+        show: (element, state) => state.activeTbilisiImage === parseInt(element.key)
+          ? { opacity: 1, transition: 'all .5s ease-in-out' } : { opacity: 0, transition: 'all .5s ease-in-out' }
+      }
+    },
     ...[
       { props: { src: OLD_TBILISI_JPG } },
       { props: { src: ABANOTUBANI_JPG } },
@@ -162,12 +169,12 @@ export const tbilisi = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeTbilisiImage } = state
             state.update({
-              activeImage: activeImage - 1
+              activeTbilisiImage: activeTbilisiImage - 1
             })
-            if (activeImage <= 0) {
-              state.update({ activeImage: 5 })
+            if (activeTbilisiImage <= 0) {
+              state.update({ activeTbilisiImage: 5 })
             }
           }
         }
@@ -176,12 +183,12 @@ export const tbilisi = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeTbilisiImage } = state
             state.update({
-              activeImage: activeImage + 1
+              activeTbilisiImage: activeTbilisiImage + 1
             })
-            if (activeImage >= 5) {
-              state.update({ activeImage: 0 })
+            if (activeTbilisiImage >= 5) {
+              state.update({ activeTbilisiImage: 0 })
             }
           }
         }
@@ -202,6 +209,13 @@ export const borjomi = {
   title: { props: { text: 'borjomi' } },
 
   images: {
+    childExtend: {
+      extend: Img,
+      class: {
+        show: (element, state) => state.activeBorjomiImage === parseInt(element.key)
+          ? { opacity: 1, transition: 'all .5s ease-in-out' } : { opacity: 0, transition: 'all .5s ease-in-out' }
+      }
+    },
     ...[
       { props: { src: BORJOMI_JPG } },
       { props: { src: BORJOMI2_JPG } },
@@ -215,12 +229,12 @@ export const borjomi = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeBorjomiImage } = state
             state.update({
-              activeImage: activeImage - 1
+              activeBorjomiImage: activeBorjomiImage - 1
             })
-            if (activeImage <= 0) {
-              state.update({ activeImage: 3 })
+            if (activeBorjomiImage <= 0) {
+              state.update({ activeBorjomiImage: 3 })
             }
           }
         }
@@ -229,12 +243,12 @@ export const borjomi = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeBorjomiImage } = state
             state.update({
-              activeImage: activeImage + 1
+              activeBorjomiImage: activeBorjomiImage + 1
             })
-            if (activeImage >= 3) {
-              state.update({ activeImage: 0 })
+            if (activeBorjomiImage >= 3) {
+              state.update({ activeBorjomiImage: 0 })
             }
           }
         }
@@ -253,6 +267,13 @@ export const mtsketa = {
   },
   title: { props: { text: 'mtsketa' } },
   images: {
+    childExtend: {
+      extend: Img,
+      class: {
+        show: (element, state) => state.activeMtsketaImage === parseInt(element.key)
+          ? { opacity: 1, transition: 'all .5s ease-in-out' } : { opacity: 0, transition: 'all .5s ease-in-out' }
+      }
+    },
     ...[
       { props: { src: JVARI_JPG } },
       { props: { src: MTSKETA_JPG } },
@@ -266,12 +287,12 @@ export const mtsketa = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeMtsketaImage } = state
             state.update({
-              activeImage: activeImage - 1
+              activeMtsketaImage: activeMtsketaImage - 1
             })
-            if (activeImage <= 0) {
-              state.update({ activeImage: 3 })
+            if (activeMtsketaImage <= 0) {
+              state.update({ activeMtsketaImage: 3 })
             }
           }
         }
@@ -280,12 +301,12 @@ export const mtsketa = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeMtsketaImage } = state
             state.update({
-              activeImage: activeImage + 1
+              activeMtsketaImage: activeMtsketaImage + 1
             })
-            if (activeImage >= 3) {
-              state.update({ activeImage: 0 })
+            if (activeMtsketaImage >= 3) {
+              state.update({ activeMtsketaImage: 0 })
             }
           }
         }
@@ -304,6 +325,13 @@ export const kakheti = {
   },
   title: { props: { text: 'kakheti' } },
   images: {
+    childExtend: {
+      extend: Img,
+      class: {
+        show: (element, state) => state.activeKakhetiImage === parseInt(element.key)
+          ? { opacity: 1, transition: 'all .5s ease-in-out' } : { opacity: 0, transition: 'all .5s ease-in-out' }
+      }
+    },
     ...[
       { props: { src: SIGNAGI_JPG } },
       { props: { src: SIGNAGI2_JPG } },
@@ -318,12 +346,12 @@ export const kakheti = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeKakhetiImage } = state
             state.update({
-              activeImage: activeImage - 1
+              activeKakhetiImage: activeKakhetiImage - 1
             })
-            if (activeImage <= 0) {
-              state.update({ activeImage: 4 })
+            if (activeKakhetiImage <= 0) {
+              state.update({ activeKakhetiImage: 4 })
             }
           }
         }
@@ -332,12 +360,12 @@ export const kakheti = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeKakhetiImage } = state
             state.update({
-              activeImage: activeImage + 1
+              activeKakhetiImage: activeKakhetiImage + 1
             })
-            if (activeImage >= 4) {
-              state.update({ activeImage: 0 })
+            if (activeKakhetiImage >= 4) {
+              state.update({ activeKakhetiImage: 0 })
             }
           }
         }
@@ -356,6 +384,13 @@ export const martvili = {
   },
   title: { props: { text: 'martvili' } },
   images: {
+    childExtend: {
+      extend: Img,
+      class: {
+        show: (element, state) => state.activeMartviliImage === parseInt(element.key)
+          ? { opacity: 1, transition: 'all .5s ease-in-out' } : { opacity: 0, transition: 'all .5s ease-in-out' }
+      }
+    },
     ...[
       { props: { src: BRILIANT_JPG } },
       { props: { src: BRILIANT2_JPG } },
@@ -369,12 +404,12 @@ export const martvili = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeMartviliImage } = state
             state.update({
-              activeImage: activeImage - 1
+              activeMartviliImage: activeMartviliImage - 1
             })
-            if (activeImage <= 0) {
-              state.update({ activeImage: 3 })
+            if (activeMartviliImage <= 0) {
+              state.update({ activeMartviliImage: 3 })
             }
           }
         }
@@ -383,12 +418,12 @@ export const martvili = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeMartviliImage } = state
             state.update({
-              activeImage: activeImage + 1
+              activeMartviliImage: activeMartviliImage + 1
             })
-            if (activeImage >= 3) {
-              state.update({ activeImage: 0 })
+            if (activeMartviliImage >= 3) {
+              state.update({ activeMartviliImage: 0 })
             }
           }
         }
@@ -408,6 +443,13 @@ export const kutaisi = {
 
   title: { props: { text: 'kutaisi' } },
   images: {
+    childExtend: {
+      extend: Img,
+      class: {
+        show: (element, state) => state.activeKutaisiImage === parseInt(element.key)
+          ? { opacity: 1, transition: 'all .5s ease-in-out' } : { opacity: 0, transition: 'all .5s ease-in-out' }
+      }
+    },
     ...[
       { props: { src: KUTAISI_JPG } },
       { props: { src: CANYONS_JPG } },
@@ -421,12 +463,12 @@ export const kutaisi = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeKutaisiImage } = state
             state.update({
-              activeImage: activeImage - 1
+              activeKutaisiImage: activeKutaisiImage - 1
             })
-            if (activeImage <= 0) {
-              state.update({ activeImage: 4 })
+            if (activeKutaisiImage <= 0) {
+              state.update({ activeKutaisiImage: 4 })
             }
           }
         }
@@ -435,12 +477,12 @@ export const kutaisi = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeKutaisiImage } = state
             state.update({
-              activeImage: activeImage + 1
+              activeKutaisiImage: activeKutaisiImage + 1
             })
-            if (activeImage >= 4) {
-              state.update({ activeImage: 0 })
+            if (activeKutaisiImage >= 4) {
+              state.update({ activeKutaisiImage: 0 })
             }
           }
         }
@@ -459,6 +501,13 @@ export const gori = {
   },
   title: { props: { text: 'gori' } },
   images: {
+    childExtend: {
+      extend: Img,
+      class: {
+        show: (element, state) => state.activeGoriImage === parseInt(element.key)
+          ? { opacity: 1, transition: 'all .5s ease-in-out' } : { opacity: 0, transition: 'all .5s ease-in-out' }
+      }
+    },
     ...[
       { props: { src: GORI_JPG } },
       { props: { src: MUSEUM_JPG } },
@@ -472,12 +521,12 @@ export const gori = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeGoriImage } = state
             state.update({
-              activeImage: activeImage - 1
+              activeGoriImage: activeGoriImage - 1
             })
-            if (activeImage <= 0) {
-              state.update({ activeImage: 4 })
+            if (activeGoriImage <= 0) {
+              state.update({ activeGoriImage: 4 })
             }
           }
         }
@@ -486,12 +535,12 @@ export const gori = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeGoriImage } = state
             state.update({
-              activeImage: activeImage + 1
+              activeGoriImage: activeGoriImage + 1
             })
-            if (activeImage >= 4) {
-              state.update({ activeImage: 0 })
+            if (activeGoriImage >= 4) {
+              state.update({ activeGoriImage: 0 })
             }
           }
         }
@@ -511,6 +560,13 @@ export const kazbegi = {
 
   title: { props: { text: 'kazbegi' } },
   images: {
+    childExtend: {
+      extend: Img,
+      class: {
+        show: (element, state) => state.activeKazbegiImage === parseInt(element.key)
+          ? { opacity: 1, transition: 'all .5s ease-in-out' } : { opacity: 0, transition: 'all .5s ease-in-out' }
+      }
+    },
     ...[
       { props: { src: KAZBEGI_JPG } },
       { props: { src: GERGET_JPG } },
@@ -524,12 +580,12 @@ export const kazbegi = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeKazbegiImage } = state
             state.update({
-              activeImage: activeImage - 1
+              activeKazbegiImage: activeKazbegiImage - 1
             })
-            if (activeImage <= 0) {
-              state.update({ activeImage: 4 })
+            if (activeKazbegiImage <= 0) {
+              state.update({ activeKazbegiImage: 4 })
             }
           }
         }
@@ -538,12 +594,12 @@ export const kazbegi = {
       {
         on: {
           click: (event, element, state) => {
-            const { activeImage } = state
+            const { activeKazbegiImage } = state
             state.update({
-              activeImage: activeImage + 1
+              activeKazbegiImage: activeKazbegiImage + 1
             })
-            if (activeImage >= 4) {
-              state.update({ activeImage: 0 })
+            if (activeKazbegiImage >= 4) {
+              state.update({ activeKazbegiImage: 0 })
             }
           }
         }

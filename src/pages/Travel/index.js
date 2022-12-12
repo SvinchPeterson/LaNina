@@ -103,7 +103,14 @@ const state = {
   activeGori: false,
   activeKazbegi: false,
 
-  activeImage: 0
+  activeTbilisiImage: 0,
+  activeBorjomiImage: 0,
+  activeMtsketaImage: 0,
+  activeKakhetiImage: 0,
+  activeMartviliImage: 0,
+  activeKutaisiImage: 0,
+  activeGoriImage: 0,
+  activeKazbegiImage: 0
 
 }
 

@@ -51,7 +51,7 @@ const props = {
         height: `${700 / 16}em`
       },
       '@media only screen and (max-height: 900px)': {
-        height: `65%`
+        height: `70%`
       },
       '@media only screen and (max-height: 650px)': {
         height: `85%`
@@ -62,7 +62,7 @@ const props = {
       right: 'Z',
       top: 'A',
       background: 'transparent',
-      icon: { boxSize: 'B ' }
+      icon: { boxSize: 'A2 ' }
     }
   }
 }
