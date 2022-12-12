@@ -99,7 +99,6 @@ const placesGallery = {
       gap: 'A2',
       ':after': { display: 'none' },
       childProps: {
-        // border: '1px solid black',
         boxSize: 'C2 C2',
         round: '100%'
       }
@@ -118,7 +117,32 @@ const placesGallery = {
   },
 
   navArrows: {
-    extend: NavHorizontalArrowsBlack,
+    extend: NavHorizontalArrowsBlack
+
+  }
+}
+
+export const tbilisi = {
+  extend: placesGallery,
+  props: { display: 'none' },
+  class: {
+    show: (element, state) => state.activeTbilisi
+      ? { display: 'flex', transform: 'scale(1)' }
+      : { display: 'none', transform: 'scale(.95)' }
+  },
+
+  title: { props: { text: 'tbilisi' } },
+  images: {
+    ...[
+      { props: { src: OLD_TBILISI_JPG } },
+      { props: { src: ABANOTUBANI_JPG } },
+      { props: { src: BRIDGE_JPG } },
+      { props: { src: BAZAR_JPG } },
+      { props: { src: BRIDGE2_JPG } },
+      { props: { src: METEKHI_JPG } }
+    ]
+  },
+  navArrows: {
     ...[
       {
         on: {
@@ -151,29 +175,9 @@ const placesGallery = {
   }
 }
 
-export const tbilisi = {
-  extend: placesGallery,
-  class: {
-    show: (element, state) => state.activeTbilisi
-      ? { display: 'flex', transform: 'scale(1)' }
-      : { display: 'none', transform: 'scale(.95)' }
-  },
-
-  title: { props: { text: 'tbilisi' } },
-  images: {
-    ...[
-      { props: { src: OLD_TBILISI_JPG } },
-      { props: { src: ABANOTUBANI_JPG } },
-      { props: { src: BRIDGE_JPG } },
-      { props: { src: BAZAR_JPG } },
-      { props: { src: BRIDGE2_JPG } },
-      { props: { src: METEKHI_JPG } }
-    ]
-  }
-}
-
 export const borjomi = {
   extend: placesGallery,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeBorjomi
       ? { display: 'flex' }
@@ -226,6 +230,7 @@ export const borjomi = {
 
 export const mtsketa = {
   extend: placesGallery,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeMtsketa
       ? { display: 'flex' }
@@ -276,6 +281,7 @@ export const mtsketa = {
 
 export const kakheti = {
   extend: placesGallery,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeKakheti
       ? { display: 'flex' }
@@ -327,6 +333,7 @@ export const kakheti = {
 
 export const martvili = {
   extend: placesGallery,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeMartvili
       ? { display: 'flex' }
@@ -377,6 +384,7 @@ export const martvili = {
 
 export const kutaisi = {
   extend: placesGallery,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeKutaisi
       ? { display: 'flex' }
@@ -428,6 +436,7 @@ export const kutaisi = {
 
 export const gori = {
   extend: placesGallery,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeGori
       ? { display: 'flex' }
@@ -478,6 +487,7 @@ export const gori = {
 
 export const kazbegi = {
   extend: placesGallery,
+  props: { display: 'none' },
   class: {
     show: (element, state) => state.activeKazbegi
       ? { display: 'flex' }

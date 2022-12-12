@@ -2,8 +2,6 @@
 
 import { Img, Flex, Button } from 'smbls'
 
-import LOGO_PNG from '../../../../assets/icons/logoBlack.png'
-
 import CLOSE_PNG from '../../../../assets/icons/closeBlack.png'
 
 import { tbilisi, borjomi, mtsketa, kakheti, martvili, kutaisi, gori, kazbegi } from './placesGallery'
@@ -37,7 +35,7 @@ const props = {
   position: 'fixed',
   boxSize: '100% 100%',
   // background: 'radial-gradient(rgba(229, 249, 252, .5), rgba(229, 249, 252, 1))',
-  zIndex: '70',
+  zIndex: '200',
   flow: 'column',
   align: 'center center',
   background: 'black .55',
