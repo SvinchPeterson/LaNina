@@ -56,6 +56,18 @@ const placesGallery = {
     boxSize: 'G2 H2',
     alignSelf: 'center',
     position: 'relative',
+    '@mobileL': {
+      boxSize: 'G H'
+    },
+    '@mobileS': {
+      boxSize: 'F3 G3'
+    },
+    style: {
+      '@media only screen and (max-width: 415px)': {
+        width: `${300 / 16}em !important`,
+        height: `${200 / 16}em !important`
+      }
+    },
 
     title: {
       position: 'absolute',

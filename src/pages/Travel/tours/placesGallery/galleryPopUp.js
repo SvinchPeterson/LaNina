@@ -34,11 +34,11 @@ const close = {
 const props = {
   position: 'fixed',
   boxSize: '100% 100%',
-  // background: 'radial-gradient(rgba(229, 249, 252, .5), rgba(229, 249, 252, 1))',
   zIndex: '200',
   flow: 'column',
   align: 'center center',
   background: 'black .55',
+  display: 'none',
   style: { backdropFilter: 'blur(.5px)' },
 
   content: {
@@ -53,9 +53,6 @@ const props = {
       background: 'transparent',
       icon: { boxSize: 'B ' }
     }
-    // style: { boxShadow: 'inset 0 0 100px 1px black' }
-    // overflow: 'hidden
-    // boxSize: '70% 70%'
   }
 }
 
