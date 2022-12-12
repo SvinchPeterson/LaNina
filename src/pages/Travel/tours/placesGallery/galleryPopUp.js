@@ -46,6 +46,17 @@ const props = {
     boxSize: '80% fit-content',
     background: 'rgba(229, 249, 252, 1)',
     position: 'relative',
+    style: {
+      '@media only screen and (min-height: 850px)': {
+        height: `${600 / 16}em`
+      },
+      '@media only screen and (max-height: 720px)': {
+        height: `85%`
+      },
+      '@media only screen and (max-height: 570px)': {
+        height: `100%`
+      }
+    },
     close: {
       position: 'absolute',
       right: 'Z',

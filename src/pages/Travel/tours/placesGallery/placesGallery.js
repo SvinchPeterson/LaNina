@@ -66,6 +66,12 @@ const placesGallery = {
       '@media only screen and (max-width: 415px)': {
         width: `${300 / 16}em !important`,
         height: `${200 / 16}em !important`
+      },
+      '@media only screen and (max-height: 720px)': {
+        height: `${300 / 16}em !important`
+      },
+      '@media only screen and (max-height: 570px)': {
+        height: `${250 / 16}em !important`
       }
     },
 
