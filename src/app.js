@@ -1,6 +1,7 @@
 'use strict'
 
-import router from 'domql/packages/router'
+// import router from 'domql/packages/router'
+import { router, lastLevel } from '@domql/router'
 
 import { DevFocus } from './tools/devFocus'
 import { Sync } from './tools/sync'

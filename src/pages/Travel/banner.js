@@ -43,7 +43,7 @@ const props = {
     boxSize: '100% 100%',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .45))'
+    background: 'radial-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .65))'
   },
 
   p: {

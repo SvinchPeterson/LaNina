@@ -67,9 +67,6 @@ const placesGallery = {
         width: `${300 / 16}em !important`,
         height: `${200 / 16}em !important`
       }
-      // '@media only screen and (min-width: 768px) and (max-height: 570px)': {
-      //   height: `${250 / 16}em !important`
-      // }
     },
 
     title: {
@@ -86,13 +83,11 @@ const placesGallery = {
       position: 'relative',
       top: '0',
       left: '0',
-      // round: 'A',
       overflow: 'hidden',
       ':after': {
         content: '""',
         boxSize: '100% 100%',
         background: 'linear-gradient(rgba(30, 40, 49, 0), rgba(30, 40, 49, 1))',
-        // boxShadow: '0px 0px 30px 3px black',
         position: 'absolute',
         top: '0',
         left: '0'

@@ -19,6 +19,9 @@ const header = {
   extend: Header,
   props: {
     logo: { title: { display: 'none' } },
+    navBar: {
+      childProps: { color: 'cream' }
+    },
     menuButton: {
       content: {
         childProps: { background: 'cream' }

@@ -12,6 +12,7 @@ import { gallery } from './gallery'
 import { aboutUs } from './aboutUs/index'
 import { planTrip } from './planTrip'
 import { tours } from './tours'
+import { feedBacks } from './feedBacks/feedBacks'
 import { contact } from './contact'
 import { footer } from './footer'
 
@@ -131,6 +132,7 @@ export default {
   gallery,
   galleryPopUp,
   tours,
+  feedBacks,
   aboutUs,
   planTrip,
   contact,

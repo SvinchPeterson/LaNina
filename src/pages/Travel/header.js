@@ -4,13 +4,11 @@ import { Header, HeaderMobile } from '../../components'
 export const header = {
   extend: Header,
   props: {
-    logo: { title: { text: 'travel' } },
-    navBar: {
-      // childProps: { color: 'white' }
-    }
+    logo: { title: { text: 'travel' } }
   },
   logo: {},
   navBar: {
+    childExtend: { props: { scrollToTop: false } },
     ...[
       { props: { text: 'gallery', href: '#gallery' } },
       { props: { text: 'tours', href: '#tours' } },

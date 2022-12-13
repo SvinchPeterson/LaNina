@@ -23,6 +23,7 @@ const navArrows = {
           feedbacks.node.scrollBy({
             top: 0,
             left: feedbacks.node.clientWidth + 16.5 * 1.618
+
           })
         }
       }

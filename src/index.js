@@ -2,6 +2,8 @@
 
 import DOM from 'domql'
 import SYSTEM from './config'
+import { router, lastLevel } from '@domql/router'
+// import router from 'domql/packages/router'
 
 import { DevFocus } from './tools/devFocus' // eslint-disable-line no-unused-vars
 import { Sync } from './tools/sync' // eslint-disable-line no-unused-vars
@@ -51,4 +53,13 @@ window.onkeyup = (ev) => {
     })
   }
 }
+
+// window.onpopstate = e => {
+//   const { pathname } = window.location
+//   const url = pathname
+//   router(app, url, {}, {
+//     level: lastLevel,
+//     pushState: false
+//   })
+// }
 export default app
