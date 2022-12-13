@@ -78,7 +78,6 @@ const props = {
   },
   content: {
     position: 'relative',
-    // padding: '- D',
     ':before': {
       content: '""',
       boxSize: '100% D',

@@ -1,6 +1,6 @@
 'use strict'
 
-import { Link, Flex } from 'smbls'
+import { Flex } from 'smbls'
 
 import { opacity } from '../animations'
 import { Navbar } from './Navbar'
@@ -32,7 +32,7 @@ const props = {
 
   logo: {
     alignSelf: 'center',
-    href: '#banner',
+    // href: '#banner',
     ':hover': { opacity: 1 },
     logo: {
       '@mobileS': { boxSize: 'B2 ' }
@@ -61,7 +61,9 @@ export const Header = {
   props: props,
   extend: Flex,
 
-  logo: { extend: [Link, BBHeading] },
+  logo: {
+    extend: BBHeading
+  },
 
   navBar: {
     extend: Navbar,

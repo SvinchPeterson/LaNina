@@ -1,12 +1,13 @@
 'use strict'
 
-import { Flex, Img } from 'smbls'
+import { Flex, Img, Link } from 'smbls'
 import { Title } from './Title'
 
 import { opacity, opacityLetterSpacing } from '../animations'
 
 // import LOGO_BIG_PNG from '../assets/icons/logoBig.png'
 import LOGO_PNG from '../assets/icons/logoCream.png'
+import BACK_PNG from '../assets/icons/arrowBack.png'
 
 const props = {
   align: 'center center',
@@ -20,9 +21,26 @@ const props = {
   },
 
   logo: {
-    boxSize: 'B1 ',
-    opacity: '.85',
-    src: LOGO_PNG
+    position: 'relative',
+    flow: 'column',
+    align: 'center center',
+    width: 'fit-content',
+    img: {
+      boxSize: 'B1 ',
+      opacity: '.85',
+      src: LOGO_PNG
+    },
+    back: {
+      boxSize: ' B',
+      position: 'absolute',
+      bottom: '-B1',
+      left: '50%',
+      zIndex: '3',
+      transform: 'translate(-50%, -50%)',
+      icon: {
+        boxSize: ' B'
+      }
+    }
   },
 
   title: {
@@ -45,6 +63,21 @@ export const BBHeading = {
   extend: Flex,
   props,
 
-  logo: { extend: Img },
+  logo: {
+    extend: Flex,
+    img: { extend: Img },
+    back: {
+      extend: Link,
+      props: {
+        href: '../#landing',
+        cursor: 'pointer'
+      },
+      icon: {
+        extend: Img,
+        props: { src: BACK_PNG }
+      }
+    }
+  },
+
   title: { extend: Title }
 }

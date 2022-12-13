@@ -1,6 +1,6 @@
 'use strict'
 
-import { Flex, Img } from 'smbls'
+import { Flex } from 'smbls'
 
 import { TravelFeedBack } from '../../../components'
 

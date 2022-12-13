@@ -18,7 +18,9 @@ const state = {
 const header = {
   extend: Header,
   props: {
-    logo: { title: { display: 'none' } },
+    logo: {
+      title: { display: 'none' }
+    },
     navBar: {
       childProps: { color: 'cream' }
     },
