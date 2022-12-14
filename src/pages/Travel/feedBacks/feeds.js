@@ -7,7 +7,7 @@ import { TravelFeedBack } from '../../../components'
 import FIROZMA_JPG from '../../../assets/images/travel/clients/firozma.jpg'
 import JEFERSON_JPG from '../../../assets/images/travel/clients/jeferson.jpg'
 import AISHA_JPG from '../../../assets/images/travel/clients/aysha.jpg'
-import JAYDEE_JPG from '../../../assets/images/travel/clients/Jaydee.jpg'
+import JAYDEE_JPG from '../../../assets/images/travel/clients/jaydee.jpg'
 import LALANG_JPG from '../../../assets/images/travel/clients/lalang.jpg'
 
 const props = {
