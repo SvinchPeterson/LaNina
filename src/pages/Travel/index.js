@@ -111,7 +111,10 @@ const state = {
   activeMartviliImage: 0,
   activeKutaisiImage: 0,
   activeGoriImage: 0,
-  activeKazbegiImage: 0
+  activeKazbegiImage: 0,
+
+  activeScroll: false,
+  activeScroll2: false
 
 }
 
