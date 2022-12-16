@@ -33,6 +33,14 @@ export const feeds = {
       },
       '@mobileS': {
         height: `${250 / 16}em`
+      },
+      style: {
+        '@media only screen and (min-width: 1024px) and (max-height: 650px)': {
+          height: `${350 / 16}em !important`
+        },
+        '@media only screen and (min-width: 1024px) and (max-height: 550px)': {
+          height: `${300 / 16}em !important`
+        }
       }
       // minWidth: `${700 / 16}em`
       // maxWidth: '600px',

@@ -6,19 +6,19 @@ const props = {
   alignSelf: 'center',
   maxWidth: 'fit-content',
   flow: 'column',
+  align: 'center flex-start',
   gap: 'A',
   padding: '- - D -',
   style: { '@media only screen and (max-height: 700px)': { paddingBottom: '0' } },
   childProps: {
     height: 'C+X1',
-    width: 'G',
+    minWidth: 'G',
     textAlign: 'center',
     background: 'transparent',
     border: 'solid, silver',
     borderWidth: '.5px',
     letterSpacing: '.5px',
-    '@mobileS': { width: 'F2' },
-    '@mobileXS': { width: 'F1' },
+    '@mobileS': { minWidth: 'F3' },
     style: {
       outline: 'none !important',
       '::placeholder': { letterSpacing: '2px' }
@@ -30,7 +30,7 @@ const props = {
     textTransform: 'uppercase',
     fontWeight: '700',
     letterSpacing: '0',
-    color: 'black .7',
+    color: 'black .85',
     border: '.5px solid silver',
     height: 'fit-content',
     transition: 'color .3s ease-in-out, background .3s ease-in-out',
@@ -41,6 +41,10 @@ const props = {
 
 const sendButton = {
   extend: Button,
+
+  attr: {
+    type: 'submit'
+  },
   on: {
     click: (event, element, state) => {
       state.update({ activeBookSent: true, activeBookSend: false })
@@ -86,15 +90,37 @@ export const BookingForm = {
   tag: 'form',
   extend: Flex,
   props,
+  attr: {
+    action: 'https://formspree.io/f/xpznvvzp',
+    method: 'POST'
+  },
+
+  tour: {
+    extend: Input,
+    props: {
+      fontWeight: '700',
+      padding: '0',
+      letterSpacing: '0',
+      color: 'black .85',
+
+      '@mobileS': { fontSize: `${14.5 / 16}em` },
+      style: {
+        pointerEvents: 'none',
+        width: '100%',
+        border: 'none'
+      }
+    },
+    attr: { type: 'text', name: 'tour' }
+  },
+
+  fullName: {
+    extend: Input,
+    attr: { type: 'text', placeholder: 'full name', name: 'name' }
+  },
 
   mail: {
     extend: Input,
-    attr: { type: 'email', placeholder: 'Email' }
-  },
-
-  password: {
-    extend: Input,
-    attr: { type: 'password', placeholder: 'Password' }
+    attr: { type: 'email', placeholder: 'Email', name: 'email' }
   },
 
   sendButton

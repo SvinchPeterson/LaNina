@@ -48,8 +48,9 @@ const props = {
         gap: 'A',
 
         childProps: {
-          fontSize: `${17 / 16}em`,
-          maxWidth: `${600 / 17}em`,
+          // border: '3px solid red',
+          fontSize: `${16 / 16}em`,
+          maxWidth: `${500 / 16}em`,
           color: 'black .7',
           fontWeight: '400',
           style: {

@@ -62,7 +62,10 @@ const props = {
     fontWeight: '100',
     zIndex: '100',
     textTransform: 'uppercase',
-    color: 'white',
+    color: 'skyblue',
+    whiteSpace: 'pre-wrap',
+    maxWidth: 'E',
+    textAlign: 'center',
     // zIndex: '3',
     padding: 'D1 - - -',
     style: {

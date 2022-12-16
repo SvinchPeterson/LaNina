@@ -159,7 +159,7 @@ export const tabs = {
           props: {
             backgroundImage: 'url(' + EXCLUSIVE_JPG + ')',
             ':after': { background: 'blue3 .7' },
-            title: { text: 'exclusive' }
+            title: { text: 'exclusive', color: 'orange3' }
           },
 
           on: {
@@ -172,7 +172,7 @@ export const tabs = {
         {
           props: {
             backgroundImage: 'url(' + WINE_JPG + ')',
-            title: { text: 'wine & food' }
+            title: { text: 'wine & gastronomy' }
           },
 
           on: {

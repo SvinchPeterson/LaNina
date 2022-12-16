@@ -12,7 +12,7 @@ const props = {
 
   title: {
     text: 'Tbilisi City Tour',
-    fontWeight: '500',
+    fontWeight: '700',
     fontSize: 'A',
     color: 'black',
     textTransform: 'uppercase',
@@ -79,7 +79,7 @@ export const TourGallery = {
   extend: Flex,
   props,
 
-  title: {},
+  title: { tag: 'label' },
 
   images: { childExtend: { extend: Img } },
 

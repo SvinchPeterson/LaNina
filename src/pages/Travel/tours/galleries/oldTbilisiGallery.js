@@ -11,7 +11,9 @@ import METEKHI_JPG from '../../../../assets/images/travel/oldTbilisi/metekhi2.jp
 
 export const oldTbilisiGallery = {
   extend: TourGallery,
-  title: {},
+  title: {
+    attr: { for: 'TBILISI CITY TOUR' }
+  },
 
   images: {
     props: { style: { overflow: 'hidden' } },
