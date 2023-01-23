@@ -2,7 +2,7 @@
 
 import { Img, Flex, Button } from 'smbls'
 
-import CLOSE_PNG from '../../../../assets/icons/closeBlack.png'
+import CLOSE_PNG from '../../../../assets/icons/close.png'
 
 import { tbilisi, borjomi, mtsketa, kakheti, martvili, kutaisi, gori, kazbegi } from './placesGallery'
 
@@ -37,32 +37,42 @@ const props = {
   zIndex: '200',
   flow: 'column',
   align: 'center center',
-  background: 'black .55',
+  background: 'blue3 .9',
   display: 'none',
-  style: { backdropFilter: 'blur(.5px)' },
+  style: { backdropFilter: 'blur(2px)' },
 
   content: {
     align: 'centet center',
     boxSize: '80% fit-content',
-    background: 'rgba(229, 249, 252, 1)',
+    // background: 'rgba(229, 249, 252, 1)',
     position: 'relative',
+    // round: '0 0 G2 G2',
+    overflow: 'hidden',
+    // border: '2px solid black',
+    // border: '3px solid red',
+
     style: {
+      mixBlendMode: 'difference',
       '@media only screen and (min-height: 900px)': {
         height: `${700 / 16}em`
       },
       '@media only screen and (max-height: 900px)': {
         height: `70%`
       },
-      '@media only screen and (max-height: 650px)': {
+      '@media only screen and (max-height: 750px)': {
         height: `85%`
+      },
+      '@media only screen and (max-height: 650px)': {
+        height: `95%`
       }
     },
     close: {
       position: 'absolute',
-      right: 'Z',
-      top: 'A',
+      right: '0',
+      top: '0',
       background: 'transparent',
-      icon: { boxSize: 'A2 ' }
+      icon: { boxSize: 'A2 ' },
+      style: { mixBlendMode: 'difference' }
     }
   }
 }

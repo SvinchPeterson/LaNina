@@ -98,6 +98,9 @@ export const COLORS = {
   gray: '#454B4E',
   grey: '#5A5D5E',
 
+  greenNew: '#02A169',
+  blueNew: '#00A294',
+
   blue: 'rgba(43, 56, 98, 1)',
   seablue: 'rgba(56, 104, 153, 1)',
   skyblue: 'rgba(189, 216, 246, 1)'
@@ -110,18 +113,6 @@ export const GRADIENTS = {
   radial: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1))',
   blueGradient: 'radial-gradient(rgba(30, 40, 49, .8), rgba(30, 40, 49, .83), rgba(30, 40, 49, .85), rgba(30, 40, 49, .95), rgba(30, 40, 49, 8), rgba(30, 40, 49, 1))'
 }
-
-// export const THEMES = {
-//   primary: {
-//     color: 'cream 0.65',
-//     state: {
-//       hover: {
-//         color: 'cream 0.85'
-//       }
-//     }
-//   },
-//   link: {}
-// }
 
 export const MEDIA = {
   screenL: '(max-width: 1920px)',

@@ -32,7 +32,7 @@ const props = {
   left: '0',
   flow: 'column',
   alignItems: 'center',
-  overflow: 'hidden',
+  // overflow: 'hidden',
   style: { backdropFilter: 'blur(1px)' },
 
   ':after': {

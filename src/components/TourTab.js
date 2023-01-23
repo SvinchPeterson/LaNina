@@ -5,26 +5,11 @@ import { Flex, Link } from 'smbls'
 const props = {
   minWidth: `${300 / 16}em`,
   minHeight: 'G',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center center',
   align: 'center center',
   position: 'relative',
   opacity: '.95',
-  round: '0 0 G1 G1',
   overflow: 'hidden',
-  ':hover:after': { opacity: '.7' },
-  ':after': {
-    content: '""',
-    boxSize: '100% 100%',
-    background: 'linear-gradient(rgba(30, 40, 49, .2), rgba(30, 40, 49, 1))',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    opacity: '1',
-    style: {
-      transition: 'opacity .5s ease-in-out'
-    }
-  },
+  round: 'B B G2 G2',
   ':not(:last-child):before': {
     content: '""',
     width: '1px',
@@ -45,9 +30,11 @@ const props = {
       '&:hover': {
         opacity: '1',
         transition: 'opacity .3s ease-in-out',
-        '> h5': {
-          color: 'rgba(248, 241, 227, 1)',
-          transform: 'scale(1.01)'
+        '> div': {
+          '> h5': {
+            color: 'rgba(248, 241, 227, 1)'
+            // transform: 'scale(1.01)'
+          }
         }
       }
     },
@@ -57,20 +44,62 @@ const props = {
     }
   },
 
-  title: {
-    fontSize: `${26 / 16}em`,
-    fontWeight: '100',
-    zIndex: '100',
-    textTransform: 'uppercase',
-    color: 'skyblue',
-    whiteSpace: 'pre-wrap',
-    maxWidth: 'E',
-    textAlign: 'center',
-    // zIndex: '3',
-    padding: 'D1 - - -',
-    style: {
-      letterSpacing: '1.5px',
-      transition: 'transform .23s ease-in-out, color .23s ease-in-out, letter-spacing .23s ease-in-out'
+  image: {
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    minWidth: `${280 / 16}em`,
+    minHeight: 'G',
+    position: 'relative',
+    round: 'A A G1 G1',
+    // round: 'Y',
+    overflow: 'hidden',
+    style: { backgroundAttachments: 'fixed' },
+    border: 'solid, silver',
+    borderWidth: '1px',
+
+    ':hover:after': { opacity: '.7' },
+    ':after': {
+      content: '""',
+      boxSize: '100% 100%',
+      background: 'linear-gradient(rgba(30, 40, 49, .2), rgba(30, 40, 49, 1))',
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      opacity: '1',
+      style: {
+        transition: 'opacity .5s ease-in-out'
+      }
+    },
+
+    title: {
+      fontSize: `${18 / 16}em`,
+      fontWeight: '700',
+      zIndex: '200',
+      textTransform: 'uppercase',
+      color: 'cream2',
+      whiteSpace: 'no-wrap',
+      textAlign: 'center',
+      // background: 'black .5',
+      // width: 'fit-content',
+      position: 'absolute',
+      margin: '0',
+      bottom: 'B2',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      lineHeight: '30px',
+      // textAlign: 'center',
+      // border: 'solid, silver',
+      // borderWidth: '1px 0px 1px 1px',
+      // zIndex: '3',
+      // round: 'B1 0 0 B1',
+      // padding: 'Z2 - Z2 A2',
+      // minWidth: '60%',
+      style: {
+        backdropFilter: 'blur(.8px)',
+        // fontStyle: 'italic',
+        // letterSpacing: '3px',
+        transition: 'transform .23s ease-in-out, color .23s ease-in-out, letter-spacing .23s ease-in-out'
+      }
     }
   }
 }
@@ -79,5 +108,7 @@ export const TourTab = {
   extend: [Link, Flex],
   props,
 
-  title: { tag: 'h5' }
+  image: {
+    title: { tag: 'h5' }
+  }
 }

@@ -12,19 +12,17 @@ const props = {
   minHeight: '100%',
   position: 'relative',
   padding: '0 0 0 0',
-  background: 'radial-gradient(rgba(0 ,0 , 0, .8), rgba(0 , 0, 0, .95))',
+  background: 'transparent',
   align: 'center center',
-
   ':before': {
     content: '""',
     boxSize: '100% 100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .45))',
+    background: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .45))',
     position: 'absolute',
     zIndex: '2',
     bottom: '0',
     pointerEvents: 'none'
   },
-
   ':after': {
     content: '""',
     boxSize: '100% 100%',
@@ -46,17 +44,17 @@ const props = {
   image: {
     boxSize: '100% 100%',
     position: 'absolute',
-    top: '0',
-    left: '0',
+    overflow: 'hidden',
+    bottom: '0',
+    right: '0',
     backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
     backgroundSize: 'cover',
-    backgroundPosition: 'center center',
     ':before': {
       content: '""',
       width: '100%',
       height: '100%',
       display: 'block',
-      background: 'radial-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .7))'
+      background: 'radial-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .7))'
     },
     style: {
       backgroundRepeat: 'no-repeat',
@@ -64,56 +62,38 @@ const props = {
       animationName: positionBanner,
       animationDuration: '10s',
       animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+      backgroundPosition: 'center center',
       '@media only screen and (max-width: 1366px)': {
         backgroundAttachment: 'initial',
         animationName: scale
-
       }
     },
     '@tabletM': { backgroundImage: 'url(' + SOLOLAKI_TABLET_JPG + ')' },
     '@mobileL': { backgroundPosition: 'bottom center' }
   },
-
-  title: {
+  titleContainer: {
     position: 'absolute',
     flow: 'column',
-    color: 'cream2',
-    alignItems: 'flex-end',
-    animationName: opacity,
-    animationDuration: '3s',
-    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-
-    h3: {
+    gap: 'A',
+    title: {
       text: 'BB Residence',
-      fontSize: 'G',
-      style: {
-        animationName: letterSpacing,
-        animationDuration: '3s',
-        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-      },
-      '@mobileS': { fontSize: 'F' }
+      fontSize: 'H',
+      padding: '0',
+      margin: '0',
+      minHeight: 'fit-content',
+      fontWeight: '700',
+      color: 'cream2',
+      letterSpacing: `${-2.5 / 57}em`,
+      style: { textShadow: '.5px .5px rgba(0, 0, 0, .5)' }
     },
-
-    caption: {
-      width: 'fit-content',
+    subTitle: {
       text: 'sololaki',
+      color: 'cream2 .75',
       fontSize: 'A',
       textTransform: 'uppercase',
-      fontWeight: '700',
-      position: 'relative',
-      margin: '- D1 - -',
-      padding: 'Z - - -',
-      style: { letterSpacing: '10px' },
-      ':before': {
-        content: '""',
-        width: '150%',
-        height: 'V',
-        background: 'orange3 .8',
-        position: 'absolute',
-        top: '-X',
-        round: 'C'
-      },
-      '@mobileS': { fontSize: 'Z' }
+      letterSpacing: `${10 / 16}em`,
+      margin: '-Z2 -Y2 - -',
+      alignSelf: 'center'
     }
   }
 }
@@ -126,9 +106,9 @@ export const banner = {
 
   image: {},
 
-  title: {
+  titleContainer: {
     extend: Flex,
-    h3: {},
-    caption: {}
+    title: {},
+    subTitle: {}
   }
 }

@@ -2,7 +2,9 @@
 
 import { Flex, Img } from 'smbls'
 
-import { NavHorizontalArrowsBlack } from '../../../../components'
+import { NavHorizontalArrowsCream } from '../../../../components'
+
+import { opacityTransform } from '../../../../animations'
 
 import OLD_TBILISI_JPG from '../../../../assets/images/travel/oldTbilisi/oldTbilisi2.jpg'
 import ABANOTUBANI_JPG from '../../../../assets/images/travel/oldTbilisi/abanotUbani.jpg'
@@ -50,70 +52,109 @@ import JINVALI_JPG from '../../../../assets/images/travel/ananuri-gudauri/jinval
 import ANANURI_JPG from '../../../../assets/images/travel/ananuri-gudauri/ananuri.jpg'
 import GUDAURI_JPG from '../../../../assets/images/travel/ananuri-gudauri/gudauri.jpg'
 
-const placesGallery = {
-  extend: Flex,
-  props: {
-    boxSize: 'G2 H2',
-    alignSelf: 'center',
-    position: 'relative',
-    '@mobileL': {
-      boxSize: 'G H'
-    },
-    '@mobileS': {
-      boxSize: 'F2 G2'
-    },
-    style: {
-      '@media only screen and (max-width: 400px)': {
-        width: `${300 / 16}em !important`,
-        height: `${200 / 16}em !important`
-      }
-    },
+const props = {
+  boxSize: 'G2 H2',
+  alignSelf: 'center',
+  position: 'relative',
+  // round: '0 0 G2 G2',
+  '@mobileL': {
+    boxSize: 'G H'
+  },
+  '@mobileS': {
+    boxSize: 'F2 G2'
+  },
+  style: {
+    animationName: opacityTransform,
+    animationDuration: '2s',
+    animationTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
 
-    title: {
-      position: 'absolute',
-      fontSize: 'A',
-      top: '-B1',
-      left: 'A',
-      textTransform: 'uppercase',
-      fontWeight: '700',
-      letterSpacing: '4px'
-    },
-    images: {
-      boxSize: '100% 100%',
-      position: 'relative',
-      top: '0',
-      left: '0',
-      overflow: 'hidden',
-      ':after': {
-        content: '""',
-        boxSize: '100% 100%',
-        background: 'linear-gradient(rgba(30, 40, 49, 0), rgba(30, 40, 49, 1))',
-        position: 'absolute',
-        top: '0',
-        left: '0'
-      },
-
-      childProps: {
-        boxSize: '100% 100%',
-        position: 'absolute',
-        top: '0',
-        left: '0'
-      }
-    },
-
-    navArrows: {
-      position: 'absolute',
-      bottom: '-D2',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      gap: 'A2',
-      ':after': { display: 'none' },
-      childProps: {
-        boxSize: 'C2 C2',
-        round: '100%'
-      }
+    '@media only screen and (max-width: 400px)': {
+      width: `${300 / 16}em !important`,
+      height: `${200 / 16}em !important`
     }
   },
+
+  title: {
+    position: 'absolute',
+    fontSize: 'E',
+    width: '100%',
+    top: '-B1',
+    left: '0',
+    textTransform: 'capitalize',
+    fontWeight: '700',
+    letterSpacing: '1px',
+    color: 'cream2',
+    border: 'solid, cream2 .35',
+    borderWidth: '0 0 1px 0'
+  },
+  images: {
+    boxSize: '100% 100%',
+    position: 'relative',
+    top: '0',
+    left: '0',
+    // round: '0 0 G2 G2',
+    overflow: 'hidden',
+    ':after': {
+      content: '""',
+      boxSize: '100% 100%',
+      // background: 'linear-gradient(rgba(30, 40, 49, 0), rgba(30, 40, 49, 1))',
+      background: 'radial-gradient(rgba(56, 104, 153, .2), rgba(56, 104, 153, .45))',
+      position: 'absolute',
+      top: '0',
+      left: '0'
+    },
+    // ':before': {
+    //   content: '""',
+    //   boxSize: '1px 100%',
+    //   // background: 'linear-gradient(rgba(30, 40, 49, 0), rgba(30, 40, 49, 1))',
+    //   background: 'radial-gradient(rgba(56, 104, 153, .2), rgba(56, 104, 153, .45))',
+    //   position: 'absolute',
+    //   bottom: '0',
+    //   left: '0'
+    // },
+
+    childProps: {
+      boxSize: '100% 100%',
+      position: 'absolute',
+      top: '0',
+      left: '0'
+    }
+  },
+
+  navArrows: {
+    position: 'absolute',
+    // bottom: '-55px',
+    // left: '5px',
+    left: '50%',
+    bottom: '-D2',
+    transform: 'translate(-50%, -50%)',
+    gap: 'B',
+    // display: 'none',
+    // ':before': {
+    //   content: '""',
+    //   position: 'absolute',
+    //   boxSize: '1px 325%',
+    //   background: 'cream2 .5',
+    //   top: '-Z',
+    //   left: 'Z'
+
+    // },
+    ':after': { display: 'none' },
+    childProps: {
+      boxSize: 'C2 C2',
+      round: '100%',
+      opacity: '.75',
+      border: '1px solid silver',
+      ':hover': { opacity: '1' },
+      arrow: { fontSize: '10px' }
+    }
+  }
+
+}
+
+const placesGallery = {
+  extend: Flex,
+  props,
 
   title: { tag: 'h5' },
   images: {
@@ -127,7 +168,7 @@ const placesGallery = {
   },
 
   navArrows: {
-    extend: NavHorizontalArrowsBlack
+    extend: NavHorizontalArrowsCream
 
   }
 }

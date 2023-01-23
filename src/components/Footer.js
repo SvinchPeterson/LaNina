@@ -4,18 +4,20 @@ import { Img, Link } from 'smbls'
 
 import { opacity } from '../animations'
 
-import FACEBOOK_PNG from '../assets/icons/facebook-cream.png'
-import INSTAGRAM_PNG from '../assets/icons/instagram-cream.png'
+import FACEBOOK_PNG from '../assets/icons/facebook-white.png'
+import INSTAGRAM_PNG from '../assets/icons/instagram-white.png'
 
 import { Book } from './Book'
 
 const props = {
-  width: '100%',
+  width: '80%',
   position: 'fixed',
   bottom: '0',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
   flexAlign: 'center space-between',
-  padding: '0 C1',
-  height: 'E',
+  padding: '- - Z -',
+  // height: 'C',
   zIndex: '50',
   '@mobileL': { padding: '0 B1' },
   '@mobileS': {

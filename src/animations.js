@@ -23,12 +23,44 @@ export const positionOpacity = keyframes`
 
 export const opacityTransform = keyframes`
   from {
-    transform: translateY(50px) scale(.98);
+    transform: translateY(5px) scale(.95);
     opacity: 0;
   }
   to {
     transform: translateY(0px) scale(1);
     opacity: 1;
+  }
+`
+
+// export const opacityTransforms = keyframes`
+//   0% {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+//   100% {
+//     // display: none;
+//     transform: translateX(-100%);
+//     opacity: 0;
+//   }
+//   // 100% {
+
+//   // }
+// `
+
+export const slideHide = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * 6));
+  }
+`
+export const flexFlow = keyframes`
+  from {
+    flex-flow: row;
+  }
+  to {
+    flex-flow: row-reverse
   }
 `
 
@@ -47,11 +79,11 @@ export const opacityTransform2 = keyframes`
 
 export const opacityTransform3 = keyframes`
   from {
-    transform: scale(.95);
+    transform: rotateX(-40deg) rotateY(40deg) scale(.95);
     opacity: 0;
   }
   to {
-    transform: scale(1);
+    transform: rotateX(-45deg) rotateY(45deg) scale(1);
     opacity: 1;
   }
 `

@@ -22,7 +22,7 @@ const header = {
       title: { display: 'none' }
     },
     navBar: {
-      childProps: { color: 'cream' }
+      childProps: { color: 'white' }
     },
     menuButton: {
       content: {
@@ -39,6 +39,7 @@ export const props = {
   width: '100%',
   height: '100%',
   style: {
+    mixBlendMode: 'screen',
     flex: 1,
     overflowX: 'hidden',
     overflowY: 'auto',
@@ -51,11 +52,12 @@ export default {
   extend: Flex,
   state,
   props,
+  // attr: { id: 'residence' },
 
   banner,
   header,
   Menu,
-  Residence,
+  // Residence,
   ServiceFacility,
   Mission,
   Apartments,

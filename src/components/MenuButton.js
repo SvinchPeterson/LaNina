@@ -23,7 +23,8 @@ export const MenuButton = {
   content: {
     props: {
       position: 'relative',
-      boxSize: 'B1 B2'
+      boxSize: 'B B1',
+      opacity: '.75'
     },
     childExtend: {
       props: {
