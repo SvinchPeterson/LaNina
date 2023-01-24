@@ -17,17 +17,18 @@ const state = {
 
 const header = {
   extend: Header,
-  props: {
-    logo: {
-      title: { display: 'none' }
-    },
-    navBar: {
-      childProps: { color: 'white' }
-    },
-    menuButton: {
-      content: {
-        childProps: { background: 'cream' }
-      }
+  logoMenuButton: {
+    logoLink: {}
+  },
+  navigation: {
+    back: {},
+    nav: {
+      ...[
+        { props: { text: 'residence', href: '#residence' } },
+        { props: { text: 'servises & facilities', href: '#features' } },
+        { props: { text: 'apartments', href: '#apartments' } },
+        { props: { text: 'location', href: '#location' } }
+      ]
     }
   }
 }

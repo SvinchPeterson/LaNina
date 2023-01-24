@@ -5,7 +5,7 @@ import { Flex, Img, Link } from 'smbls'
 import { opacity } from '../animations'
 import { Navbar } from './Navbar'
 import { MenuButton } from './MenuButton'
-import { BBHeading } from './BBHeading'
+import { LogoWhite } from './Logo'
 
 import BACK_PNG from '../assets/icons/arrowBack-white.png'
 
@@ -14,12 +14,14 @@ const props = {
   minWidth: '80%',
   align: 'flex-start space-between',
   flow: 'column',
-  gap: 'Z',
-  margin: 'auto',
+  gap: 'Y1',
   alignSelf: 'center',
   zIndex: '50',
-  padding: 'B - - -',
-  '@mobileL': { minWidth: '90%' },
+  margin: 'A2 auto - auto',
+  '@mobileL': {
+    minWidth: '90%',
+    gap: 'Y1'
+  },
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
@@ -27,15 +29,38 @@ const props = {
     animationDuration: '5s',
     '@media only screen and (max-height: 450px)': { height: `${80 / 16}em` }
   },
-  logo: {
-    padding: '- Y'
-  },
-  navBar: {
-    align: 'center space-between',
+
+  logoMenuButton: {
     minWidth: '100%',
-    border: 'solid, white .65',
-    borderWidth: '.5px 0 0 0',
-    padding: '- Y',
+    align: 'flex-end space-between',
+
+    logoLink: {
+      opacity: '.85',
+      padding: '- - - Y',
+      ':hover': { opacity: '1' },
+      style: {
+        animationName: opacity,
+        animationDuration: '3s',
+        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+      },
+      logo: {
+        boxSize: 'B1 '
+      }
+    },
+
+    menuButton: {
+      display: 'none',
+      '@mobileL': { display: 'block' }
+    }
+  },
+
+  navigation: {
+    align: 'flex-start space-between',
+    minWidth: '100%',
+    border: 'solid, white .75',
+    borderWidth: '.7px 0 0 0',
+    padding: 'Y Y - Y',
+    '@mobileL': { padding: 'Y2 Y - Y' },
     back: {
       opacity: '.75',
       transition: 'opacity .15s ease-in-out',
@@ -43,22 +68,17 @@ const props = {
       icon: { boxSize: ' A2' }
     },
     nav: {
-      padding: ' - - -',
       gap: 'B',
-      '@tabletS': { display: 'none' },
+      '@mobileL': { display: 'none' },
       childProps: {
         textTransform: 'uppercase',
         fontSize: `${13 / 16}em`,
         letterSpacing: '.5px',
         opacity: '.75',
         transition: 'opacity .15s ease-in-out',
+        color: 'white 1',
         ':hover': { opacity: '1' }
       }
-    },
-
-    menuButton: {
-      display: 'none',
-      '@tabletS': { display: 'block' }
     }
   }
 }
@@ -68,13 +88,19 @@ export const Header = {
   props: props,
   extend: Flex,
 
-  logo: {
-    extend: [Link, BBHeading],
-    attr: { href: '#banner' }
+  logoMenuButton: {
+    extend: Flex,
+    logoLink: {
+      extend: Link,
+      attr: { href: '#banner' },
+      logo: { extend: LogoWhite }
+    },
+    menuButton: { extend: MenuButton }
   },
 
-  navBar: {
+  navigation: {
     extend: Flex,
+
     back: {
       extend: Link,
       props: {
@@ -85,19 +111,8 @@ export const Header = {
         extend: Img,
         props: { src: BACK_PNG }
       }
-
     },
 
-    nav: {
-      extend: Navbar,
-      ...[
-        { props: { text: 'residence', href: '#residence' } },
-        { props: { text: 'servises & facilities', href: '#features' } },
-        { props: { text: 'apartments', href: '#apartments' } },
-        { props: { text: 'location', href: '#location' } }
-      ]
-    },
-
-    menuButton: { extend: MenuButton }
+    nav: { extend: Navbar }
   }
 }

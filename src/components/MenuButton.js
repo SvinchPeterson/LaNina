@@ -5,7 +5,7 @@ export const MenuButton = {
   extend: Button,
   props: {
     background: 'transparent',
-    padding: 'Z',
+    padding: '0',
     style: {
       cursor: 'pointer',
       '> svg': { display: 'none' }
@@ -23,7 +23,7 @@ export const MenuButton = {
   content: {
     props: {
       position: 'relative',
-      boxSize: 'B B1',
+      boxSize: 'B B2',
       opacity: '.75'
     },
     childExtend: {
