@@ -4,7 +4,7 @@ import { keyframes } from '@emotion/css'
 
 import { Flex, Img } from 'smbls'
 
-import { deopacity, opacity, position } from '../../animations'
+import { deopacity, position } from '../../animations'
 
 import { Navbar } from '../../components'
 
@@ -25,26 +25,13 @@ to {
 }
 `
 
-export const navBarTransform2 = keyframes`
-from {
-  transform: translateY(50px) scale(.98);
-  opacity: 0;
-  letter-spacing: 3px;
-}
-to {
-  transform: translateY(0px) scale(1);
-  opacity: 0.75;
-  letter-spacing: .5px;
-}
-`
-
 export const logoTitleTransform = keyframes`
 from {
-  transform: translateY(10px) scale(.95);
+  transform: scale(.9);
   opacity: 0;
 }
 to {
-  transform: translateY(0px) scale(1);
+  transform: scale(1);
   opacity: 1;
 }
 `
@@ -73,10 +60,6 @@ const navbar = {
           animationName: navBarTransform,
           animationDuration: '1.5s',
           animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
-          // '@media only screen and (max-width: 768px)': {
-          //   animationName: navBarTransform2,
-          //   animationDuration: '1.4s'
-          // }
         }
       }
     },
@@ -88,10 +71,6 @@ const navbar = {
           animationName: navBarTransform,
           animationDuration: '1.5s',
           animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
-          // '@media only screen and (max-width: 768px)': {
-          //   animationName: navBarTransform2,
-          //   animationDuration: '1.4s'
-          // }
         }
       }
     },
@@ -118,12 +97,20 @@ const props = {
   boxSize: '100% 100%',
   backgroundImage: 'url(' + ORNAMENTS_PNG + ')',
   backgroundSize: 'cover',
-  backgroundARepeat: 'no-repeat',
   position: 'relative',
   align: 'center center',
   background: 'gold .85',
   backgroundPosition: 'top center',
   overflow: 'hidden',
+  style: {
+    backgroundARepeat: 'no-repeat',
+    animationName: position,
+    animationDuration: '20s',
+    animatonTimingFunction: 'linear',
+    '@media only screen and (max-width: 1024px)': { animationDuration: '30s' },
+    '@media only screen and (min-width: 1680px)': { fontSize: `${18 / 16}em` },
+    '@media only screen and (min-width: 1920px)': { fontSize: `${20 / 16}em` }
+  },
   ':before': {
     content: '""',
     position: 'absolute',
@@ -138,21 +125,12 @@ const props = {
       pointerEvents: 'none'
     }
   },
-
   ':after': {
     content: '""',
     position: 'absolute',
     boxSize: '100% 100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .75),rgba(0, 0, 0, 1))',
+    background: 'radial-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, 1))',
     style: { pointerEvents: 'none' }
-  },
-
-  style: {
-    animationName: position,
-    animationDuration: '20s',
-    animatonTimingFunction: 'linear',
-    '@media only screen and (min-width: 1680px)': { fontSize: `${18 / 16}em` },
-    '@media only screen and (min-width: 1920px)': { fontSize: `${20 / 16}em` }
   },
 
   content: {
@@ -163,26 +141,23 @@ const props = {
     overflow: 'hidden',
     '@mobileL': {
       flow: 'column-reverse',
-      gap: '0'
+      align: 'center space-between',
+      gap: 'D'
     },
     style: {
-      // '@media only screen and (max-height: 700px)': {
-      //   padding: '0'
-      // }
+      '@media only screen and (max-height: 750px)': { paddingBottom: '0' }
     },
 
     navbar: {
       flow: 'column',
-      textAlign: 'right',
-      textTransform: 'capitalize',
       lineHeight: `${38 / 16}em`,
       margin: 'Z1 - - -',
-      letterSpacing: '.5px',
       overflow: 'hidden',
       '@mobileL': {
+        gap: 'Y',
         textAlign: 'center',
         textTransform: 'uppercase',
-        gap: 'A2'
+        margin: '0'
       },
 
       childProps: {
@@ -190,10 +165,8 @@ const props = {
         fontSize: 'E',
         color: 'cream2',
         letterSpacing: '.5px',
-        // '@mobileL': {
-        //   fontSize: 'E',
-        //   fontWeight: '700'
-        // },
+        textTransform: 'capitalize',
+        textAlign: 'right',
         ':not(:last-child)': {
           opacity: '.75',
           transition: 'opacity .3s ease-in-out',
@@ -202,9 +175,22 @@ const props = {
         ':last-child': {
           opacity: '.45',
           pointerEvents: 'none'
+        },
+
+        '@mobileL': {
+          fontSize: 'Z',
+          border: 'solid, cream2 .75',
+          borderWidth: '.75px',
+          animation: 'none',
+          textAlign: 'center',
+          textTransform: 'uppercase',
+          fontWeight: '700',
+          boxSize: '- G',
+          padding: 'X -',
+          round: 'C',
+          background: 'cream2 .015'
         }
       }
-
     },
 
     logoTitle: {
@@ -213,25 +199,18 @@ const props = {
       overflow: 'hidden',
       style: {
         animationName: logoTitleTransform,
-        animationDuration: '1.4s',
+        animationDuration: '1.5s',
         animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
-        // '@media only screen and (max-width: 768px)': {
-        //   animationName: opacity
-        // }
+      },
+      '@mobileL': {
+        gap: 'A',
+        align: 'center ceter'
       },
 
       logo: {
         boxSize: 'F ',
-        opacity: '.75'
-        // '@mobileL': {
-        //   boxSize: 'B2 ',
-        //   position: 'absolute',
-        //   top: 'B1',
-        //   left: 'B',
-        //   style: {
-
-        //   }
-        // }
+        opacity: '.75',
+        '@mobileL': { boxSize: 'C2 ' }
       },
 
       title: {
@@ -245,17 +224,23 @@ const props = {
           animationName: titleLetterSpacing,
           animationDuration: '1.5s',
           animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
+        },
+
+        '@mobileL': {
+          fontSize: 'A',
+          animation: 'none',
+          letterSpacing: `${5 / 16}em`
         }
-        // '@mobileL': {
-        //   position: 'absolute',
-        //   bottom: 'B',
-        //   right: 'B',
-        //   fontSize: 'D',
-        //   fontWeight: '400',
-        //   letterSpacing: `.5px`,
-        //   textTransform: 'capitalize'
-        // }
       }
+    },
+
+    title: {
+      display: 'none',
+      fontSize: 'B',
+      color: 'cream2',
+      textTransform: 'uppercase',
+      letterSpacing: '5px',
+      '@mobileL': { display: 'block' }
     }
   }
 }
