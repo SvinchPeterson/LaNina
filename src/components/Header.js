@@ -11,23 +11,22 @@ import BACK_PNG from '../assets/icons/arrowBack-white.png'
 
 const props = {
   position: 'fixed',
-  minWidth: '80%',
+  width: '85%',
   align: 'flex-start space-between',
   flow: 'column',
   gap: 'Y1',
   alignSelf: 'center',
   zIndex: '50',
-  margin: 'A2 auto - auto',
+  margin: 'A2 - - -',
   '@mobileL': {
-    minWidth: '90%',
-    gap: 'Y1'
+    minWidth: '90%'
+    // gap: 'Y1'
   },
   style: {
-    mixBlendMode: 'difference',
-    animationName: opacity,
-    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    animationDuration: '5s',
-    '@media only screen and (max-height: 450px)': { height: `${80 / 16}em` }
+    mixBlendMode: 'difference'
+    // animationName: opacity,
+    // animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+    // animationDuration: '5s',
   },
 
   logoMenuButton: {
@@ -60,7 +59,7 @@ const props = {
     border: 'solid, white .75',
     borderWidth: '.7px 0 0 0',
     padding: 'Y Y - Y',
-    '@mobileL': { padding: 'Y2 Y - Y' },
+    // '@mobileL': { padding: 'Y2 Y - Y' },
     back: {
       opacity: '.75',
       transition: 'opacity .15s ease-in-out',
@@ -112,7 +111,6 @@ export const Header = {
         props: { src: BACK_PNG }
       }
     },
-
     nav: { extend: Navbar }
   }
 }

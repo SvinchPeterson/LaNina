@@ -44,7 +44,7 @@ export const ResidenceText = {
       text: `Right in the heart of the capital of Georgia, with plenty of food markets, restaurants, nightclubs and bars nearby, just in a few minutes from busy city life, you will find comfort and relaxation in a peaceful and calm area.`
     },
     {
-      text: `Built in 19th century and listed as historical monument, the historical building is representing traditional Georgian housing structure called 'Italian Courtyard', making it an excellent model of past and present of the city. You will be charmed by a unique atmosphere, feeling yourself at the crossroads of cultures`
+      text: `Built in 19th century and listed as historical monument, the historical building is representing traditional Georgian housing structure called 'Italian Courtyard', making it an excellent model of past and present of the city. You will be charmed by a unique atmosphere, feeling yourself at the crossroads of cultures.`
     }
   ]
 }

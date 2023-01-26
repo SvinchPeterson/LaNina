@@ -2,24 +2,22 @@
 import { Flex } from 'smbls'
 
 const props = {
-  maxWidth: 'I',
+  maxWidth: 'H2',
   flow: 'column',
-  gap: 'B',
+  gap: 'Z2',
+  color: 'black',
   style: { zIndex: '2' },
 
   title: {
-    tag: 'h3',
-    fontWeight: '500',
-    fontSize: `${12 / 16}em`,
-    textTransform: 'uppercase',
-    letterSpacing: '3.5px'
+    fontWeight: '700',
+    fontSize: 'D',
+    textTransform: 'capitalize'
   },
 
   p: {
     flow: 'column',
     gap: 'Z',
-    letterSpacing: '.4px',
-    fontSize: `${15 / 16}em`
+    letterSpacing: '.4px'
   }
 }
 
@@ -27,6 +25,6 @@ export const Paragraph = {
   extend: Flex,
   props,
 
-  title: {},
+  title: { tag: 'h3' },
   p: { extend: Flex }
 }

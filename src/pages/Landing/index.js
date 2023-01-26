@@ -39,11 +39,9 @@ to {
 export const titleLetterSpacing = keyframes`
 from {
   opacity: 0;
-  // letter-spacing: 1px;
   transform: translateX(-100px) scale(.98);
 }
 to {
-  // letter-spacing: 4.5px;
   opacity: 0.75;
   transform: translateX(0) scale(1);
 }

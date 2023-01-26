@@ -101,15 +101,6 @@ to {
 }
 `
 
-export const positionBanner = keyframes`
-  from {
-    background-position: top left;
-  }
-  to {
-    background-position: center center;
-  }
-`
-
 export const opacityLetterSpacing = keyframes`
   from {
     opacity: 0;

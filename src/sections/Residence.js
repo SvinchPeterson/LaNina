@@ -8,49 +8,47 @@ import { Paragraph } from '../components'
 import BB_JPG from '../assets/images/residence/sololaki/b.jpg'
 
 const props = {
+  width: '100%',
   minHeight: '100%',
   gap: 'B',
   position: 'relative',
-  align: 'center center',
-  padding: 'D A2',
-  margin: 'V - D -',
-  backgroundImage: 'url(' + BB_JPG + ')',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center center',
-  ':before': {
-    content: '""',
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    backdropFilter: 'blur(.5px)',
-    background: 'radial-gradient(rgba(0, 0, 0, .87), rgba(0, 0, 0, .65))'
+  maxWidth: '1440px',
+  flow: 'column',
+  margin: 'F2 auto F auto',
+  image: {
+    alignSelf: 'center',
+    boxSize: '95% 60%',
+    backgroundImage: 'url(' + BB_JPG + ')',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    position: 'relative',
+    round: 'J J 0 0',
+    overflow: 'hidden',
+    style: {
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat'
+    },
+    ':before': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      backdropFilter: 'blur(.5px)',
+      background: 'radial-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8))'
+    }
   },
-  style: {
-    backgroundAttachment: 'fixed',
-    backgroundRepeat: 'no-repeat',
-    '@media only screen and (max-width: 1366px)': { backgroundAttachment: 'initial' }
-  },
-  '@tabletL': { margin: 'V - 0 -' },
 
   paragraph: {
-    color: 'cream2',
-    padding: '- D',
-    gap: 'A',
-    '@mobileM': { padding: '- A' },
-    '@mobileS': { padding: '- Y' },
-    style: { '@media only screen and (max-height: 630px)': { fontSize: `${14 / 16}em` } },
-    title: {
-      fontSize: 'D',
-      text: 'residence',
-      textTransform: 'capitalize',
-      '@mobileS': { fontSize: 'C' }
-    },
-    p: {
-      fontSize: 'A',
-      '@mobileS': { fontSize: `${15 / 16}em` }
-    }
+    position: 'absolute',
+    background: 'cream2',
+    padding: 'D2',
+    left: 'E',
+    bottom: '-F',
+    alignSelf: 'flex-start',
+    round: '0 F 0 0',
+    style: { boxShadow: '-20px 20px 300px 1px rgba(248, 241, 227, .5)' }
   }
 }
 
@@ -60,9 +58,11 @@ export const Residence = {
   extend: Flex,
   props,
 
+  image: {},
+
   paragraph: {
     extend: Paragraph,
-    title: {},
+    title: { text: 'residence' },
     p: { extend: ResidenceText }
   }
 }
