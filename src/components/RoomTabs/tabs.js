@@ -15,9 +15,6 @@ import VINYL_PNG from '../../assets/icons/vinyl.png'
 
 export const tabBallerina = {
   extend: RoomTab,
-  style: {
-    backgroundImage: 'url(' + BALLERINA_JPG + ')'
-  },
 
   class: {
     show: (element, state) => state.tabs === 0
@@ -27,6 +24,7 @@ export const tabBallerina = {
 
   props: {
     href: '#roomBallerina',
+    image: { style: { backgroundImage: 'url(' + BALLERINA_JPG + ')' } },
     title: { text: 'ballerina' }
   },
   content: {
@@ -44,6 +42,7 @@ export const tabRedBrick = {
   extend: RoomTab,
   props: {
     href: '#roomRedBrick',
+    image: { style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' } },
     title: { text: 'red brick' }
   },
   class: {
@@ -51,7 +50,6 @@ export const tabRedBrick = {
       ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
       : { '@media only screen and (max-width: 1366px)': { display: 'none' } }
   },
-  style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' },
   content: {
     paragraph: {
       ...[
@@ -67,6 +65,7 @@ export const tabYellowCouch = {
   extend: RoomTab,
   props: {
     href: '#roomYellowCouch',
+    image: { style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')' } },
     title: { text: 'yellow couch' }
   },
   class: {
@@ -74,7 +73,6 @@ export const tabYellowCouch = {
       ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
       : { '@media only screen and (max-width: 1366px)': { display: 'none' } }
   },
-  style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')' },
   content: {
     paragraph: {
       ...[
@@ -90,6 +88,7 @@ export const tabGreenForest = {
   extend: RoomTab,
   props: {
     href: '#roomGreenForest',
+    image: { style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')' } },
     title: { text: 'green forest' }
   },
   class: {
@@ -102,7 +101,6 @@ export const tabGreenForest = {
         '@media only screen and (max-width: 1366px)': { display: 'none' }
       }
   },
-  style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')' },
   content: {
     paragraph: {
       ...[
@@ -118,9 +116,9 @@ export const tabRetro = {
   extend: RoomTab,
   props: {
     href: '#roomRetro',
+    image: { style: { backgroundImage: 'url(' + RETRO_JPG + ')' } },
     title: { text: 'retro' }
   },
-  style: { backgroundImage: 'url(' + RETRO_JPG + ')' },
   class: {
     show: (element, state) => state.tabs === 4
       ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }

@@ -25,9 +25,9 @@ const Room = {
   extend: Flex,
   props: {
     boxSize: '100% 100%',
-    align: 'center space-between',
+    align: 'center center',
     position: 'relative',
-    gap: 'B',
+    gap: 'C',
     style: {
       zIndex: 10,
       alignSelf: 'center'
@@ -67,6 +67,7 @@ const Room = {
     description: { extend: RoomDescription },
     amenities: { extend: Amenities }
   },
+
   gallery: {
     props: {
       '@tabletL': { margin: 'auto' }

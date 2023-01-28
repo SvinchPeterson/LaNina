@@ -7,15 +7,16 @@ const icon = {
   props: {
     padding: 'B',
     position: 'absolute',
-    left: '0',
-    top: '0',
+    top: 'D',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
     zIndex: '20'
   },
 
   img: {
     extend: [Img, Box],
     props: {
-      boxSize: 'A1 A1',
+      boxSize: 'B B',
       '@tabletL': { boxSize: 'B1 B1' },
       '@mobileL': { boxSize: 'A2 A2' }
     }
@@ -28,6 +29,7 @@ const tabParagraph = {
     padding: `0 A2`,
     width: 'H',
     fontWeight: '400',
+    fontSize: 'B',
     '@tabletL': {
       position: 'absolute',
       top: '-D2'
@@ -57,12 +59,12 @@ const tabParagraph = {
 
 export const props = {
   height: 'G1',
-  padding: 'B',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
   position: 'relative',
   overflow: 'hidden',
   zIndex: 1,
+  round: 'F1',
+  // border: 'solid, cream2 .25',
+  // borderWidth: '2px',
   '@tabletL': {
     boxSize: '100% 100%',
     position: 'absolute',
@@ -72,10 +74,11 @@ export const props = {
   },
 
   style: {
+    // boxShadow: '0px 0px 5px 1px rgba(0, 0, 0, .1)',
     flex: 1,
     cursor: 'pointer',
     boxSizing: 'border-box',
-    transition: 'all .7s ease-in-out',
+    transition: 'flex .7s cubic-bezier(.6,.37,.52,.74)',
     textDecoration: 'none',
     '@media only screen and (max-height: 650px) and (min-width: 1366px)': {
       height: `${250 / 16}em`
@@ -87,38 +90,55 @@ export const props = {
       '@media only screen and (min-width: 1366px)': {
         flex: 5.5,
         '> div > div': { opacity: 1 },
-        ':before': { opacity: 1 }
+        '> div:before': { opacity: 1 },
+        '> h1': {
+          transform: 'translate(-50%, -50%) scale(.7)',
+          letterSpacing: '-2px'
+        }
       }
-    },
-
-    '&:before': {
-      content: '""',
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      top: '0',
-      left: 0,
-      background: 'linear-gradient(rgba(25, 63, 55, .5), rgba(25, 63, 55, 1))',
-      // background: 'linear-gradient(rgba(60,84, 72, .5), rgba(60,84, 72, 1))',
-      opacity: '.65',
-      transition: 'opacity .7s ease-in-out',
-      cursor: 'pointer',
-      '@tabletL': { display: 'none' }
     }
 
+  },
+
+  image: {
+    boxSize: '101% 101%',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    position: 'relative',
+    overflow: 'hidden',
+    style: {
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat'
+    },
+    ':before': {
+      content: '""',
+      position: 'absolute',
+      width: '105%',
+      height: '105%',
+      top: '0',
+      left: '0',
+      background: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, 1))',
+      // background: 'linear-gradient(rgba(60,84, 72, .5), rgba(60,84, 72, 1))',
+      // opacity: '.65',
+      transition: 'opacity .7s cubic-bezier(.6,.37,.52,.74)',
+      cursor: 'pointer',
+      // round: 'I',
+      '@tabletL': { display: 'none' }
+    }
   },
 
   title: {
     text: 'ballerina',
     color: 'cream2',
     position: 'absolute',
-    right: 'A',
-    bottom: 'A',
-    fontWeight: '400',
+    bottom: '0',
+    left: '50%',
+    transform: 'translate(-5%, -50%)',
+    fontWeight: '700',
     zIndex: '5',
-    fontSize: 'A',
-    textTransform: 'uppercase',
-    letterSpacing: '1px',
+    fontSize: `H`,
+    textTransform: 'capitalize',
+    letterSpacing: `-1px`,
     '@tabletL': { fontSize: 'C' },
     '@mobileL': {
       fontSize: 'B'
@@ -129,7 +149,9 @@ export const props = {
     },
     style: {
       textShadow: '.5px .5px 1px black',
-      whiteSpace: 'nowrap'
+      whiteSpace: 'nowrap',
+      mixBlendMode: 'screen',
+      transition: 'transform .7s cubic-bezier(.6,.37,.52,.74), letter-spacing .7s cubic-bezier(.6,.37,.52,.74)'
     }
   },
 
@@ -153,7 +175,9 @@ export const RoomTab = {
     }
   },
 
-  title: { tag: 'caption' },
+  image: {},
+
+  title: { tag: 'h1' },
 
   content: {
     paragraph: { extend: tabParagraph },

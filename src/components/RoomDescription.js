@@ -10,12 +10,12 @@ const props = {
   flow: 'column',
   gap: 'A2',
   title: {
-    fontSize: 'C',
+    fontSize: 'D',
     text: 'Ballerina',
-    fontWeight: '500',
-    color: 'orange3 .85',
+    fontWeight: '700',
+    color: 'cream2 .85',
     padding: '0 0 X 0',
-    letterSpacing: '.5px',
+    // letterSpacing: '.5px',
     style: {
       borderBottom: '1px solid rgba(248, 241, 227, .5)'
     }
@@ -26,7 +26,7 @@ const props = {
     // fontSize: `${15 / 16}em`,
     maxWidth: `${450 / 16}em`,
     letterSpacing: '.5px',
-    color: 'cream2',
+    color: 'cream2 .75',
     fontWeight: '400',
     padding: '0 0 0 X'
   }

@@ -8,26 +8,21 @@ import { Paragraph } from '../components'
 import BB_JPG from '../assets/images/residence/sololaki/b.jpg'
 
 const props = {
-  width: '100%',
+  width: '70%',
   minHeight: '100%',
   gap: 'B',
   position: 'relative',
   maxWidth: '1440px',
   flow: 'column',
-  margin: 'F2 auto F auto',
-  image: {
+  margin: 'G auto',
+  round: 'J J 0 0',
+  // overflow: 'hidden',
+  imageContainer: {
     alignSelf: 'center',
-    boxSize: '95% 60%',
-    backgroundImage: 'url(' + BB_JPG + ')',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
+    boxSize: '100% 100%',
     position: 'relative',
     round: 'J J 0 0',
     overflow: 'hidden',
-    style: {
-      backgroundAttachment: 'fixed',
-      backgroundRepeat: 'no-repeat'
-    },
     ':before': {
       content: '""',
       width: '100%',
@@ -35,20 +30,31 @@ const props = {
       position: 'absolute',
       top: 0,
       left: 0,
-      backdropFilter: 'blur(.5px)',
-      background: 'radial-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8))'
+      background: 'linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .85), rgba(0, 0, 0, 1))'
+    },
+
+    image: {
+      boxSize: '100% 100%',
+      backgroundImage: 'url(' + BB_JPG + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      style: {
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat'
+      }
     }
   },
-
   paragraph: {
     position: 'absolute',
     background: 'cream2',
-    padding: 'D2',
-    left: 'E',
-    bottom: '-F',
+    padding: 'D2 D2 - Y',
+    left: '0',
+    bottom: '-E',
     alignSelf: 'flex-start',
-    round: '0 F 0 0',
-    style: { boxShadow: '-20px 20px 300px 1px rgba(248, 241, 227, .5)' }
+    zIndex: '5',
+    round: '0 F2 0 0',
+    fontSize: `${16 / 16}em`,
+    style: { boxShadow: '0px 0px 300px 0px rgba(248, 241, 227, .2)' }
   }
 }
 
@@ -58,8 +64,9 @@ export const Residence = {
   extend: Flex,
   props,
 
-  image: {},
-
+  imageContainer: {
+    image: {}
+  },
   paragraph: {
     extend: Paragraph,
     title: { text: 'residence' },

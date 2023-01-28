@@ -7,8 +7,8 @@ const props = {
   flexFlow: 'column',
   position: 'relative',
   flexAlign: 'center flex-start',
-  gap: 'C2',
-  margin: 'F1 0 G1 0',
+  gap: 'E',
+  margin: 'F 0 G1 0',
   '@tabletL': { margin: '0 0 F3 0' },
 
   image: {
@@ -16,6 +16,8 @@ const props = {
     minHeight: `H`,
     position: 'relative',
     padding: '0',
+    round: 'C',
+    // round: 'H H H H',
     background: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .6)), url(' + VERANDA_JPG + ')',
     backgroundSize: 'contain',
     backgroundPosition: `bottom ${200 / 16}em center`,
@@ -40,7 +42,7 @@ const props = {
     title: {
       text: 'mission',
       padding: '0 0 A 0',
-      fontSize: `Z`,
+      fontSize: `A`,
       fontWeight: '700',
       style: {
         textTransform: 'uppercase',
@@ -52,6 +54,7 @@ const props = {
       flexFlow: 'column',
       gap: 'X',
       color: 'black .8',
+      fontSize: 'B',
       style: { fontStyle: 'italic' },
       '@mobileM': {
         maxWidth: 'G2',
@@ -65,9 +68,6 @@ const props = {
 export const Mission = {
   tag: 'section',
   props,
-
-  image: {},
-
   paragraph: {
     title: { tag: 'h5' },
     p: {
@@ -80,5 +80,6 @@ export const Mission = {
         }
       ]
     }
-  }
+  },
+  image: {}
 }

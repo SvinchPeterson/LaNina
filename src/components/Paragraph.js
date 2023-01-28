@@ -10,14 +10,15 @@ const props = {
 
   title: {
     fontWeight: '700',
-    fontSize: 'D',
-    textTransform: 'capitalize'
+    fontSize: 'E',
+    textTransform: 'capitalize',
+    letterSpacing: '-1px'
   },
 
   p: {
     flow: 'column',
     gap: 'Z',
-    letterSpacing: '.4px'
+    letterSpacing: '.5px'
   }
 }
 

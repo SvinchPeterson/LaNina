@@ -11,11 +11,11 @@ import {
 export const opacities = keyframes`
   from {
     opacity: 0;
-    transform: scale(1.01);
+    // transform: scale(1.01);
   }
   to {
    opacity: 1;
-   transform: scale(1);
+  //  transform: scale(1);
   }
 `
 
@@ -102,11 +102,12 @@ const props = {
       content: '"Apartments"',
       fontSize: `D`,
       position: 'absolute',
-      top: '-A2',
-      left: '0',
+      top: '-C2',
+      left: 'E',
+      transform: 'translate(-50%, -50%)',
       fontWeight: '700',
       color: 'cream2',
-      letterSpacing: '1px'
+      display: 'none'
     },
     style: {
       '@media only screen and (max-width: 1366px)': {

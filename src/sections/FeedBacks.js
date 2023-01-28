@@ -83,7 +83,7 @@ const props = {
     style: {
       '&:after': {
         content: '""',
-        width: '50px',
+        width: '200px',
         height: '100%',
         position: 'absolute',
         right: '0px',
@@ -92,7 +92,7 @@ const props = {
       },
       '&:before': {
         content: '""',
-        width: '50px',
+        width: '200px',
         height: '100%',
         position: 'absolute',
         left: '0',

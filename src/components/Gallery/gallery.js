@@ -113,7 +113,7 @@ const book = {
     padding: 'Z A',
     fontSize: 'Z',
     width: 'fit-content',
-    top: '-C',
+    top: '0',
     right: 'B',
 
     '@tabletL': {
@@ -166,7 +166,7 @@ const navHorizontalArrows = {
   props: {
     alignSelf: 'flex-end',
     position: 'absolute',
-    left: 'B',
+    left: 'Y',
     bottom: '-C1',
     '@tabletL': { display: 'none' },
     '@mobileL': {
@@ -279,7 +279,7 @@ export const Gallery = {
   props: {
     position: 'relative',
     boxSize: 'H I',
-    margin: '0 D 0 auto',
+    // margin: '0 0 0 auto',
     align: 'flex-start center',
     alignSelf: 'center',
     '@tabletS': { boxSize: 'G1 H2' },
@@ -289,6 +289,11 @@ export const Gallery = {
       '@media only screen and (max-width: 1366px) and (max-height: 650px)': {
         height: '250px !important'
       }
+    },
+    imageContainer: {
+      overflow: 'hidden',
+      style: { transition: 'all 3s ease-in-out' },
+      childProps: { round: '0 G G 0' }
     }
   },
 
@@ -301,7 +306,6 @@ export const Gallery = {
   navHorizontalArrows,
   navVerticalArrows,
   imageContainer: {
-    style: { transition: 'all 3s ease-in-out' },
     class: {
       show: (element, state) => state.activeTab === element.key
         ? {

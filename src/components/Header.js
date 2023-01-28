@@ -17,7 +17,7 @@ const props = {
   gap: 'Y1',
   alignSelf: 'center',
   zIndex: '50',
-  margin: 'A2 - - -',
+  margin: 'B - - -',
   '@mobileL': {
     minWidth: '90%'
     // gap: 'Y1'
@@ -43,7 +43,7 @@ const props = {
         animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
       },
       logo: {
-        boxSize: 'B1 '
+        boxSize: 'B '
       }
     },
 

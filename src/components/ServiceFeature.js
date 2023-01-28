@@ -1,31 +1,35 @@
 'use strict'
 
+import { Flex } from 'smbls'
+
 const props = {
-  maxWidth: 'G1',
-  padding: 'C - C B',
+  maxWidth: 'I',
+  padding: 'C1 - C1 B',
   background: 'cream2',
+  flow: 'column',
+  gap: '0',
   round: 'Y',
+
   '@mobileS': {
     maxWidth: '100%',
-    padding: 'C Z C Z2'
+    padding: 'C Z C Z'
   },
 
   title: {
-    text: 'city center',
-    fontSize: 'Z',
+    fontSize: '16px',
     fontWeight: '700',
-    textTransform: 'uppercase'
+    textTransform: 'capitalize'
   },
 
   p: {
-    text: '7 min from Liberty square',
     padding: 'V2 - - -',
-    fontSize: `${14 / 16}em`,
+    fontSize: `15px`,
     color: 'black .8'
   }
 }
 
-export const Feature = {
+export const ServiceFeature = {
+  extend: Flex,
   props,
 
   title: { tag: 'h5' },

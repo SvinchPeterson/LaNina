@@ -15,6 +15,7 @@ const props = {
   image: {
     boxSize: `H1 H`,
     padding: '0',
+    round: 'B1 - G G',
     backgroundSize: 'contain',
     backgroundPosition: `center bottom ${100 / 16}em`,
     style: {
@@ -47,8 +48,11 @@ const props = {
     flexAlign: 'center center',
     flexFlow: 'column',
     width: 'fit-content',
-    margin: '-F2 -H 0 0',
-    padding: 'E1 0 0 0',
+    margin: '-G1 -F 0 0',
+    padding: 'A2 E E D1',
+    round: '0 0 0 F',
+    gap: 'A',
+    fontSize: `${15 / 16}em`,
     '@tabletL': {
       margin: '0 0 0 0',
       background: 'cream2 0'
@@ -62,18 +66,17 @@ const props = {
 
     title: {
       text: 'Wine',
-      fontSize: 'B',
-      fontWeight: '500',
+      fontSize: 'D',
+      fontWeight: '700',
       '@tabletL': { color: 'cream2' },
       '@mobileM': { padding: '0 0 A 0' }
     },
 
     p: {
       fontSize: 'A',
-      maxWidth: 'H3',
+      maxWidth: 'G2',
       margin: '0 auto',
       color: 'black .75',
-      padding: 'A2 E E2 E',
       flexFlow: 'column',
       gap: 'Z',
       '@tabletL': { color: 'cream 1' },

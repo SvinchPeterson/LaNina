@@ -27,7 +27,7 @@ const header = {
     nav: {
       ...[
         { props: { text: 'residence', href: '#residence' } },
-        { props: { text: 'servises & facilities', href: '#features' } },
+        { props: { text: 'servises & facilities', href: '#service&facilities' } },
         { props: { text: 'apartments', href: '#apartments' } },
         { props: { text: 'location', href: '#location' } }
       ]

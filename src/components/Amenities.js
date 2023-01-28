@@ -3,7 +3,7 @@
 const list = {
   props: {
     flexAlign: 'flex-start flex-start',
-    color: 'cream2',
+    color: 'cream2 .75',
     padding: 'Z 0 0 X'
   },
   childExtend: {
@@ -68,8 +68,8 @@ const props = {
   title: {
     text: 'amenities',
     fontSize: 'Z',
-    fontWeight: '500',
-    color: 'orange3 .95',
+    fontWeight: '700',
+    color: 'cream2 .95',
     textAlign: 'flex-start',
     letterSpacing: '3px',
     style: {
