@@ -1,5 +1,5 @@
 'use strict'
-import WINE_JPG from '../assets/images/residence/sololaki/wine.jpg'
+import WINE_JPG from '../../assets/images/residence/sololaki/wine.jpg'
 
 const props = {
   position: 'relative',
@@ -88,7 +88,7 @@ const props = {
   }
 }
 
-export const Wine = {
+export const wine = {
   tag: 'section',
   props,
   attr: { id: 'wine' },

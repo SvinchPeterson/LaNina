@@ -6,7 +6,7 @@ import { keyframes } from '@emotion/css'
 
 import {
   tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro, NavHorizontalArrowsCream
-} from '../../components'
+} from '../../../components'
 
 export const opacities = keyframes`
   from {

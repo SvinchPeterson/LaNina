@@ -1,5 +1,5 @@
 'use strict'
-import { roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro } from '../../components'
+import { roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro } from '../../../components'
 
 const props = {
   width: '100%',

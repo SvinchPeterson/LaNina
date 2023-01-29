@@ -1,11 +1,11 @@
 'use strict'
 import { Grid, Flex, Img } from 'smbls'
 
-import { ServiceFeature } from '../components'
-import SHELF_JPG from '../assets/images/residence/sololaki/shelf.jpg'
+import { ServiceFeature } from '../../components'
+import SHELF_JPG from '../../assets/images/residence/sololaki/shelf.jpg'
 
-import UP_ARROW_PNG from '../assets/icons/upArrow-black.png'
-import DOWN_ARROW_PNG from '../assets/icons/downArrow-black.png'
+import UP_ARROW_PNG from '../../assets/icons/upArrow-black.png'
+import DOWN_ARROW_PNG from '../../assets/icons/downArrow-black.png'
 
 const props = {
   minHeight: '100%',
@@ -135,7 +135,7 @@ const props = {
   }
 }
 
-export const ServiceFacility = {
+export const servicesFacilities = {
   extend: Flex,
   props,
   attr: { id: 'service&facilities' },

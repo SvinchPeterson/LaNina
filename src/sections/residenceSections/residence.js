@@ -2,10 +2,11 @@
 
 import { Flex } from 'smbls'
 
-import { ResidenceText } from '../texts'
+import { ResidenceText } from '../../texts'
 
-import { Paragraph } from '../components'
-import BB_JPG from '../assets/images/residence/sololaki/b.jpg'
+import { Paragraph } from '../../components'
+// import BB_JPG from '../assets/images/residence/sololaki/b.jpg'
+import BB_JPG from '../../assets/images/residence/sololaki/b.jpg'
 
 const props = {
   width: '70%',
@@ -58,7 +59,7 @@ const props = {
   }
 }
 
-export const Residence = {
+export const residence = {
   tag: 'section',
   attr: { id: 'residence' },
   extend: Flex,

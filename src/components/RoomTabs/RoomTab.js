@@ -92,7 +92,7 @@ export const props = {
         '> div > div': { opacity: 1 },
         '> div:before': { opacity: 1 },
         '> h1': {
-          transform: 'translate(-50%, -50%) scale(.7)',
+          transform: 'translate(-50%, -50%) scale(.6)',
           letterSpacing: '-2px'
         }
       }
@@ -131,12 +131,12 @@ export const props = {
     text: 'ballerina',
     color: 'cream2',
     position: 'absolute',
-    bottom: '0',
+    bottom: '-Z',
     left: '50%',
-    transform: 'translate(-5%, -50%)',
+    transform: 'translate(-3%, -50%)',
     fontWeight: '700',
     zIndex: '5',
-    fontSize: `H`,
+    fontSize: `I`,
     textTransform: 'capitalize',
     letterSpacing: `-1px`,
     '@tabletL': { fontSize: 'C' },

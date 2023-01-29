@@ -1,6 +1,6 @@
 'use strict'
 
-import VERANDA_JPG from '../assets/images/residence/sololaki/veranda.jpg'
+import VERANDA_JPG from '../../assets/images/residence/sololaki/veranda.jpg'
 
 const props = {
   width: '100%',
@@ -65,7 +65,7 @@ const props = {
   }
 }
 
-export const Mission = {
+export const mission = {
   tag: 'section',
   props,
   paragraph: {

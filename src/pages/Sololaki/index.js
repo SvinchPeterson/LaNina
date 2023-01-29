@@ -1,11 +1,10 @@
 'use strict'
 import { Flex } from 'smbls'
+
 import { Menu, Header, Footer } from '../../components'
 
-import { Residence, ServiceFacility, Mission, Apartments, Wine, feedBacks, Location } from '../../sections'
-
+import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location } from '../../sections/residenceSections'
 import { deopacity } from '../../animations'
-import { banner } from './banner'
 
 const state = {
   activeMenu: false,
@@ -70,17 +69,16 @@ export default {
   extend: Flex,
   state,
   props,
-  // attr: { id: 'residence' },
 
   banner,
   header,
   Menu,
-  Residence,
-  ServiceFacility,
-  Mission,
-  Apartments,
-  Wine,
+  residence,
+  servicesFacilities,
+  mission,
+  apartments,
+  wine,
   feedBacks,
-  Location,
+  location,
   Footer
 }

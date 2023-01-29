@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { tabs } from './tabs'
 import { rooms } from './rooms'
-import ORNAMENT_PNG from '../../assets/images/residence/sololaki/ornaments.png'
+import ORNAMENT_PNG from '../../../assets/images/residence/sololaki/ornaments.png'
 
 const props = {
   width: '100%',
@@ -59,7 +59,7 @@ const props = {
   }
 }
 
-export const Apartments = {
+export const apartments = {
   tag: 'section',
   props,
   class: {

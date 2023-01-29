@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { ContactItems, Map, SectionTitle } from '../components'
+import { ContactItems, Map, SectionTitle } from '../../components'
 const title = {
   extend: SectionTitle,
   props: {
@@ -101,7 +101,7 @@ const props = {
   }
 }
 
-export const Location = {
+export const location = {
   tag: 'section',
   extend: Flex,
   props,

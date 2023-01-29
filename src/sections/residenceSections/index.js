@@ -1,0 +1,10 @@
+'use strict'
+
+export * from './banner'
+export * from './residence'
+export * from './services&facilities'
+export * from './mission'
+export * from './apartments'
+export * from './wine'
+export * from './feedBacks'
+export * from './location'

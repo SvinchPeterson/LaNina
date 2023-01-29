@@ -4,7 +4,7 @@ import { keyframes } from '@emotion/css'
 
 import { Flex } from 'smbls'
 
-import { deopacity, letterSpacing, opacity, scale } from '../../animations'
+import { scale } from '../../animations'
 
 import SOLOLAKI_JPG from '../../assets/images/residence/sololaki/residencee.jpg'
 import SOLOLAKI_TABLET_JPG from '../../assets/images/residence/sololaki/residence-tablet.jpg'

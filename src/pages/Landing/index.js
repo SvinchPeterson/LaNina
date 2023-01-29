@@ -1,10 +1,8 @@
 'use strict'
 
-import { keyframes } from '@emotion/css'
-
 import { Flex, Img } from 'smbls'
 
-import { deopacity, position } from '../../animations'
+import { keyframes } from '@emotion/css'
 
 import { Navbar } from '../../components'
 
@@ -12,6 +10,7 @@ import LOGO_PNG from '../../assets/icons/logoCream.png'
 
 import ORNAMENTS_PNG from '../../assets/images/landing/ornaments.png'
 
+// ANIMATIONS
 export const navBarTransform = keyframes`
 from {
   transform: translateX(100px) scale(.98);
@@ -47,43 +46,27 @@ to {
 }
 `
 
-const navbar = {
-  extend: Navbar,
-  ...[
-    {
-      props: {
-        text: 'residence',
-        href: '/Sololaki',
-        style: {
-          animationName: navBarTransform,
-          animationDuration: '1.5s',
-          animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
-        }
-      }
-    },
-    {
-      props: {
-        text: 'travel',
-        href: '/Travel',
-        style: {
-          animationName: navBarTransform,
-          animationDuration: '1.5s',
-          animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
-        }
-      }
-    },
-    {
-      props: {
-        text: 'rental',
-        style: { animationName: 'none' }
-      }
-    }
-  ]
-}
+export const deopacity = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`
 
+export const backgroundPosition = keyframes`
+  from {
+    background-position: top 100 left 100px;
+  }
+  to {
+    background-position: top center;
+  }
+`
+
+// COMPONENTS
 const logoTitle = {
   extend: Flex,
-
   logo: {
     extend: Img,
     props: { src: LOGO_PNG }
@@ -91,6 +74,16 @@ const logoTitle = {
   title: { props: { text: 'hospitality' } }
 }
 
+const navbar = {
+  extend: Navbar,
+  ...[
+    { props: { text: 'residence', href: '/Sololaki' } },
+    { props: { text: 'travel', href: '/Travel' } },
+    { props: { text: 'rental' } }
+  ]
+}
+
+// PROPERTIES
 const props = {
   boxSize: '100% 100%',
   backgroundImage: 'url(' + ORNAMENTS_PNG + ')',
@@ -102,7 +95,7 @@ const props = {
   overflow: 'hidden',
   style: {
     backgroundARepeat: 'no-repeat',
-    animationName: position,
+    animationName: backgroundPosition,
     animationDuration: '20s',
     animatonTimingFunction: 'linear',
     '@media only screen and (max-width: 1024px)': { animationDuration: '30s' },
@@ -142,9 +135,7 @@ const props = {
       align: 'center space-between',
       gap: 'D'
     },
-    style: {
-      '@media only screen and (max-height: 750px)': { paddingBottom: '0' }
-    },
+    style: { '@media only screen and (max-height: 750px)': { paddingBottom: '0' } },
 
     navbar: {
       flow: 'column',
@@ -165,6 +156,13 @@ const props = {
         letterSpacing: '.5px',
         textTransform: 'capitalize',
         textAlign: 'right',
+        ':nth-child(1), :nth-child(2)': {
+          style: {
+            animationName: navBarTransform,
+            animationDuration: '1.5s',
+            animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
+          }
+        },
         ':not(:last-child)': {
           opacity: '.75',
           transition: 'opacity .3s ease-in-out',
@@ -174,7 +172,6 @@ const props = {
           opacity: '.45',
           pointerEvents: 'none'
         },
-
         '@mobileL': {
           fontSize: 'Z',
           border: 'solid, cream2 .75',
@@ -230,15 +227,6 @@ const props = {
           letterSpacing: `${5 / 16}em`
         }
       }
-    },
-
-    title: {
-      display: 'none',
-      fontSize: 'B',
-      color: 'cream2',
-      textTransform: 'uppercase',
-      letterSpacing: '5px',
-      '@mobileL': { display: 'block' }
     }
   }
 }
