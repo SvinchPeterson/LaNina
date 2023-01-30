@@ -2,67 +2,12 @@
 
 import { Flex, Img } from 'smbls'
 
-import { keyframes } from '@emotion/css'
+import { navBarItemTransform, logoTitleTransform, titleLetterSpacing, backgroundPosition, deopacity } from '../animations'
 
-import { Navbar } from '../../components'
+import { Navbar } from '../components'
 
-import LOGO_PNG from '../../assets/icons/logoCream.png'
-
-import ORNAMENTS_PNG from '../../assets/images/landing/ornaments.png'
-
-// ANIMATIONS
-export const navBarTransform = keyframes`
-from {
-  transform: translateX(100px) scale(.98);
-  opacity: 0;
-  letter-spacing: 3px;
-}
-to {
-  transform: translateX(0px) scale(1);
-  opacity: 0.75;
-  letter-spacing: .5px;
-}
-`
-
-export const logoTitleTransform = keyframes`
-from {
-  transform: scale(.9);
-  opacity: 0;
-}
-to {
-  transform: scale(1);
-  opacity: 1;
-}
-`
-
-export const titleLetterSpacing = keyframes`
-from {
-  opacity: 0;
-  transform: translateX(-100px) scale(.98);
-}
-to {
-  opacity: 0.75;
-  transform: translateX(0) scale(1);
-}
-`
-
-export const deopacity = keyframes`
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-`
-
-export const backgroundPosition = keyframes`
-  from {
-    background-position: top 100 left 100px;
-  }
-  to {
-    background-position: top center;
-  }
-`
+import LOGO_PNG from '../assets/icons/logoCream.png'
+import ORNAMENTS_PNG from '../assets/images/landing/ornaments.png'
 
 // COMPONENTS
 const logoTitle = {
@@ -158,9 +103,10 @@ const props = {
         textAlign: 'right',
         ':nth-child(1), :nth-child(2)': {
           style: {
-            animationName: navBarTransform,
+            animationName: navBarItemTransform,
             animationDuration: '1.5s',
-            animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
+            animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)',
+            '@media only screen and (max-width: 768px)': { animation: 'none' }
           }
         },
         ':not(:last-child)': {
@@ -175,15 +121,16 @@ const props = {
         '@mobileL': {
           fontSize: 'Z',
           border: 'solid, cream2 .75',
-          borderWidth: '.75px',
-          animation: 'none',
+          borderWidth: 'V',
           textAlign: 'center',
           textTransform: 'uppercase',
           fontWeight: '700',
           boxSize: '- G',
           padding: 'X -',
           round: 'C',
-          background: 'cream2 .015'
+          background: 'cream2 .015',
+
+          style: { animationName: 'none' }
         }
       }
     },
@@ -231,7 +178,7 @@ const props = {
   }
 }
 
-export default {
+export const Landing = {
   extend: Flex,
   props,
   attr: { id: 'landing' },

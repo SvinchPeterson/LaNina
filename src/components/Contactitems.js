@@ -1,75 +1,36 @@
 'use strict'
 
+import { Flex } from 'smbls'
+
 const props = {
   display: 'flex',
   flexAlign: 'center space-between',
-  round: 'C',
-  padding: 'Y1 A2',
+  gap: 'B',
   position: 'relative',
-  '@mobileS': {
-    flexFlow: 'column',
-    flexAlign: 'center center',
-    padding: '0',
-    round: '0',
-    background: 'black 0',
-    gap: 'A',
-    border: 'none'
-  },
-  style: {
-    border: '.5px solid rgba(0, 0, 0, .7)',
-    '@media only screen and (max-height: 650px)': { gap: '10px !important' },
-    '> div:first-child': {
+  childProps: {
+    fontSize: 'Z',
+    fontWeight: '700',
+    letterSpacing: '.5px',
+    ':first-child': {
       position: 'relative',
-      marginRight: `${10 / 14}em`,
-      paddingRight: `${10 / 14}em`,
-      '@media only screen and (max-width: 480px)': {
-        marginRight: `0`,
-        paddingRight: `0`
-      },
-
-      '&:before': {
+      ':after': {
         content: '""',
+        boxSize: '65% 1px',
+        round: 'B',
         position: 'absolute',
-        width: '1.5px',
-        height: '85%',
-        borderRadius: '20px',
-        background: 'rgba(0, 0, 0, .75)',
         top: '50%',
-        right: '0',
-        transform: 'translate(-50%, -50%)',
-        '@media only screen and (max-width: 480px)': {
-          display: 'none'
-        }
+        transform: 'translate(50%, -50%)',
+        right: '-13px',
+        background: 'black 1'
       }
     }
-  }
-}
 
-const itemProps = {
-  fontSize: `Z`,
-  position: 'relative',
-  flexAlign: 'center center',
-  fontWeight: '700',
-  color: 'black',
-  '@mobileS': {
-    width: `${280 / 13}em`,
-    height: `${45 / 13}em`,
-    padding: '0',
-    fontSize: `${13 / 16}em`,
-    round: 'C'
-  },
-  style: {
-    letterSpacing: '.8px',
-    '@media only screen and (max-width: 480px)': {
-      border: '.5px solid rgba(0, 0, 0, .75)'
-    }
   }
 }
 
 export const ContactItems = {
+  extend: Flex,
   props,
-
-  childExtend: { props: itemProps },
   ...[
     { props: { text: 'reservations@bbhospitality.ge' } },
     { props: { text: 'info@bbhospitality.ge' } }

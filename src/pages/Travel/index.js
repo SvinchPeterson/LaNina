@@ -4,9 +4,12 @@ import { Flex } from 'smbls'
 
 import { props } from '../Sololaki'
 
-import { header, headerMobile } from './header'
+import { Header } from '../../components'
+import { footer } from './footer'
+import { banner } from '../../sections/travelSections'
+
+import { headerMobile } from './header'
 import { menu } from './menu'
-import { travelBanner } from './banner'
 import { country } from './country'
 import { gallery } from './gallery'
 import { aboutUs } from './aboutUs/index'
@@ -14,7 +17,6 @@ import { planTrip } from './planTrip'
 import { tours } from './tours'
 import { feedBacks } from './feedBacks/feedBacks'
 import { contact } from './contact'
-import { footer } from './footer'
 
 import { galleryPopUp } from './tours/placesGallery/galleryPopUp'
 
@@ -118,7 +120,23 @@ const state = {
 
 }
 
-export default {
+const header = {
+  extend: Header,
+  logoMenuButton: { logoLink: {} },
+  navigation: {
+    back: {},
+    nav: {
+      ...[
+        { props: { text: 'gallery', href: '#gallery' } },
+        { props: { text: 'tours', href: '#tours' } },
+        { props: { text: 'about us', href: '#about' } },
+        { props: { text: 'contact', href: '#contact' } }
+      ]
+    }
+  }
+}
+
+export const Travel = {
   extend: Flex,
 
   props: {
@@ -130,7 +148,7 @@ export default {
   header,
   headerMobile,
   menu,
-  travelBanner,
+  banner,
   country,
   gallery,
   galleryPopUp,

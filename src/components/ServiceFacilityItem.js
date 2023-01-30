@@ -3,32 +3,28 @@
 import { Flex } from 'smbls'
 
 const props = {
-  maxWidth: 'I',
-  padding: 'C1 - C1 B',
+  maxWidth: 'G1',
+  padding: 'B1 C2 B1 B',
   background: 'cream2',
   flow: 'column',
   gap: '0',
   round: 'Y',
-
-  '@mobileS': {
-    maxWidth: '100%',
-    padding: 'C Z C Z'
-  },
+  whiteSpace: 'nowrap',
 
   title: {
-    fontSize: '16px',
+    fontSize: 'A',
     fontWeight: '700',
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
+    letterSpacing: '-0.5px'
   },
 
   p: {
     padding: 'V2 - - -',
-    fontSize: `15px`,
-    color: 'black .8'
+    fontSize: `${15 / 16}em`
   }
 }
 
-export const ServiceFeature = {
+export const ServiceFacilityItem = {
   extend: Flex,
   props,
 

@@ -3,11 +3,42 @@
 import { Flex, Img, Link } from 'smbls'
 
 import { opacity } from '../animations'
+
 import { Navbar } from './Navbar'
 import { MenuButton } from './MenuButton'
 import { LogoWhite } from './Logo'
 
 import BACK_PNG from '../assets/icons/arrowBack-white.png'
+
+const logoMenuButton = {
+  extend: Flex,
+
+  logoLink: {
+    extend: Link,
+    attr: { href: '#banner' },
+    logo: { extend: LogoWhite }
+  },
+
+  menuButton: { extend: MenuButton }
+}
+
+const navigation = {
+  extend: Flex,
+
+  back: {
+    extend: Link,
+    props: {
+      href: '../#landing',
+      cursor: 'pointer'
+    },
+    icon: {
+      extend: Img,
+      props: { src: BACK_PNG }
+    }
+  },
+
+  nav: { extend: Navbar }
+}
 
 const props = {
   position: 'fixed',
@@ -18,16 +49,13 @@ const props = {
   alignSelf: 'center',
   zIndex: '50',
   margin: 'B - - -',
-  '@mobileL': {
-    minWidth: '90%'
-    // gap: 'Y1'
-  },
   style: {
-    mixBlendMode: 'difference'
-    // animationName: opacity,
-    // animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    // animationDuration: '5s',
+    mixBlendMode: 'difference',
+    animationName: opacity,
+    animationDuration: '3s',
+    animationTimingFunction: 'ease-in-out'
   },
+  '@mobileL': { minWidth: '90%' },
 
   logoMenuButton: {
     minWidth: '100%',
@@ -37,16 +65,8 @@ const props = {
       opacity: '.85',
       padding: '- - - Y',
       ':hover': { opacity: '1' },
-      style: {
-        animationName: opacity,
-        animationDuration: '3s',
-        animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
-      },
-      logo: {
-        boxSize: 'B '
-      }
+      logo: { boxSize: 'B ' }
     },
-
     menuButton: {
       display: 'none',
       '@mobileL': { display: 'block' }
@@ -59,7 +79,7 @@ const props = {
     border: 'solid, white .75',
     borderWidth: '.7px 0 0 0',
     padding: 'Y Y - Y',
-    // '@mobileL': { padding: 'Y2 Y - Y' },
+
     back: {
       opacity: '.75',
       transition: 'opacity .15s ease-in-out',
@@ -73,7 +93,7 @@ const props = {
         textTransform: 'uppercase',
         fontSize: `${13 / 16}em`,
         letterSpacing: '.5px',
-        opacity: '.75',
+        opacity: '.8',
         transition: 'opacity .15s ease-in-out',
         color: 'white 1',
         ':hover': { opacity: '1' }
@@ -84,33 +104,9 @@ const props = {
 
 export const Header = {
   tag: 'header',
-  props: props,
   extend: Flex,
+  props: props,
 
-  logoMenuButton: {
-    extend: Flex,
-    logoLink: {
-      extend: Link,
-      attr: { href: '#banner' },
-      logo: { extend: LogoWhite }
-    },
-    menuButton: { extend: MenuButton }
-  },
-
-  navigation: {
-    extend: Flex,
-
-    back: {
-      extend: Link,
-      props: {
-        href: '../#landing',
-        cursor: 'pointer'
-      },
-      icon: {
-        extend: Img,
-        props: { src: BACK_PNG }
-      }
-    },
-    nav: { extend: Navbar }
-  }
+  logoMenuButton,
+  navigation
 }

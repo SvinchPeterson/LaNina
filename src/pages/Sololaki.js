@@ -1,10 +1,12 @@
 'use strict'
+
 import { Flex } from 'smbls'
 
-import { Menu, Header, Footer } from '../../components'
+import { Menu, Header, Footer } from '../components'
 
-import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location } from '../../sections/residenceSections'
-import { deopacity } from '../../animations'
+import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location } from '../sections/residenceSections'
+
+import { deopacity } from '../animations'
 
 const state = {
   activeMenu: false,
@@ -18,9 +20,7 @@ const state = {
 
 const header = {
   extend: Header,
-  logoMenuButton: {
-    logoLink: {}
-  },
+  logoMenuButton: { logoLink: {} },
   navigation: {
     back: {},
     nav: {
@@ -40,9 +40,7 @@ export const props = {
   flow: 'column',
   width: '100%',
   height: '100%',
-  // gap: 'E',
   style: {
-    mixBlendMode: 'screen',
     flex: 1,
     overflowX: 'hidden',
     overflowY: 'auto',
@@ -65,7 +63,7 @@ export const props = {
   }
 }
 
-export default {
+export const Sololaki = {
   extend: Flex,
   state,
   props,

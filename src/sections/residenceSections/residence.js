@@ -2,10 +2,10 @@
 
 import { Flex } from 'smbls'
 
-import { ResidenceText } from '../../texts'
-
 import { Paragraph } from '../../components'
-// import BB_JPG from '../assets/images/residence/sololaki/b.jpg'
+
+import { residenceTextEng } from '../../texts/residenceTexts'
+
 import BB_JPG from '../../assets/images/residence/sololaki/b.jpg'
 
 const props = {
@@ -17,7 +17,6 @@ const props = {
   flow: 'column',
   margin: 'G auto',
   round: 'J J 0 0',
-  // overflow: 'hidden',
   imageContainer: {
     alignSelf: 'center',
     boxSize: '100% 100%',
@@ -54,23 +53,21 @@ const props = {
     alignSelf: 'flex-start',
     zIndex: '5',
     round: '0 F2 0 0',
-    fontSize: `${16 / 16}em`,
-    style: { boxShadow: '0px 0px 300px 0px rgba(248, 241, 227, .2)' }
+    fontSize: `${16 / 16}em`
   }
 }
 
 export const residence = {
   tag: 'section',
-  attr: { id: 'residence' },
   extend: Flex,
+  attr: { id: 'residence' },
   props,
 
-  imageContainer: {
-    image: {}
-  },
+  imageContainer: { image: {} },
+
   paragraph: {
     extend: Paragraph,
     title: { text: 'residence' },
-    p: { extend: ResidenceText }
+    p: { extend: residenceTextEng }
   }
 }

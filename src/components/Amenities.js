@@ -21,18 +21,16 @@ const list = {
         position: 'relative',
         margin: '0 B1 0 0',
         padding: '0 B1 0 0',
-        style: {
-          '&:after': {
-            content: '""',
-            position: 'absolute',
-            width: '1.1px',
-            borderRadius: '100%',
-            height: '95%',
-            top: '50%',
-            right: '0',
-            transform: 'translate(-50%, -50%)',
-            background: 'radial-gradient(rgba(248, 241, 227, .85), rgba(248, 241, 227, 0))'
-          }
+        ':after': {
+          content: '""',
+          position: 'absolute',
+          width: '1.1px',
+          height: '100%',
+          round: 'B',
+          top: '50%',
+          right: '0',
+          transform: 'translate(-50%, -50%)',
+          background: 'radial-gradient(rgba(248, 241, 227, .85), rgba(248, 241, 227, 0))'
         }
       },
       ...[
@@ -69,9 +67,10 @@ const props = {
     text: 'amenities',
     fontSize: 'Z',
     fontWeight: '700',
-    color: 'cream2 .95',
+    color: 'cream2',
     textAlign: 'flex-start',
-    letterSpacing: '3px',
+    letterSpacing: '5px',
+    padding: '- - Y1 Y',
     style: {
       textTransform: 'uppercase'
     }

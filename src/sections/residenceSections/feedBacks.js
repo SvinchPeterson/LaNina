@@ -159,46 +159,33 @@ const feedbacks = {
 
 const props = {
   maxWidth: '1440px',
-  // minHeight: 'H',
-  margin: 'E2 auto 0 auto',
-  // '@tabletL': {
-  //   margin: '0 auto',
-  //   maxWidth: '75%',
-  //   padding: 'E 0 0 0',
-  //   minHeight: 'H1'
-  // },
-  // '@mobileL': { maxWidth: '85%' },
-  // '@mobileS': { maxWidth: '90%' },
-  // '@mobileXS': { maxWidth: '98%' },
+  flow: 'column',
+  gap: 'A2',
+  margin: 'E2 auto D auto',
 
   heading: {
     flexAlign: 'center space-between',
-    width: '83%',
+    width: '80%',
     margin: '0 auto',
-    zIndex: '20',
-    // '@mobileL': { width: '85%' },
     title: {
       fontWeight: '700',
       fontSize: 'B',
-      // fontSize: '15px',
-      // textTransform: 'uppercase',
       style: {
         whiteSpace: 'nowrap',
-        letterSpacing: '0px',
+        letterSpacing: '5px',
         zIndex: '100',
         opacity: '.85'
       }
     },
     navArrows: {
-      childProps: { arrow: { boxSize: ' A' } }
+      childProps: { arrow: { boxSize: ' Z2' } }
     }
   },
 
   content: {
     position: 'relative',
-    width: '80%',
-    margin: 'B auto 0 auto',
-    // '@mobileM': { width: '100%' },
+    width: '90%',
+    margin: '0 auto 0 auto',
     style: {
       '&:after': {
         content: '""',
@@ -235,6 +222,7 @@ const props = {
 
 export const feedBacks = {
   tag: 'section',
+  extend: Flex,
   props,
 
   heading: { extend: heading },

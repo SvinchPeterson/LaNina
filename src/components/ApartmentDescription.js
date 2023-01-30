@@ -14,7 +14,6 @@ const iconCaption = {
     icon: {
       boxSize: '26px ',
       margin: '0 0 0 0'
-      // '@mobileM': { boxSize: '35px ' }
     },
     caption: {
       color: 'cream2 .65',

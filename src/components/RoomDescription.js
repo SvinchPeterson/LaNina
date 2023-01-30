@@ -8,14 +8,13 @@ const paragraph = { tag: 'p' }
 
 const props = {
   flow: 'column',
-  gap: 'A2',
+  gap: 'A',
   title: {
-    fontSize: 'D',
+    fontSize: 'F',
     text: 'Ballerina',
     fontWeight: '700',
-    color: 'cream2 .85',
-    padding: '0 0 X 0',
-    // letterSpacing: '.5px',
+    color: 'cream2',
+    letterSpacing: '-1px',
     style: {
       borderBottom: '1px solid rgba(248, 241, 227, .5)'
     }

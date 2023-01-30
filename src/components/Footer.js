@@ -18,17 +18,11 @@ const props = {
   zIndex: '50',
   margin: '- - - -',
   padding: '- A',
-  // '@mobileL': { padding: '0 B1' },
-  // '@mobileS': {
-  //   padding: '0 A2',
-  //   height: 'D2'
-  // },
   style: {
-    mixBlendMode: 'difference'
-    // animationName: opacity,
-    // animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    // animationDuration: '5s'
-    // '@media only screen and (max-height: 450px)': { height: `${80 / 16}em` }
+    mixBlendMode: 'difference',
+    animationName: opacity,
+    animationDuration: '3s',
+    animatonTimingFunction: 'ease-in-out'
   },
 
   socialLinks: {
@@ -42,6 +36,25 @@ const props = {
       icon: { boxSize: 'B -' }
     }
   }
+}
+
+const socialLinks = {
+  childExtend: { extend: Link, icon: { extend: Img } },
+  ...[
+    {
+      props: {
+        href: `https://www.facebook.com/BBResidenceTbilisi`,
+        icon: { src: FACEBOOK_PNG }
+      }
+    },
+
+    {
+      props: {
+        href: 'https://www.instagram.com/laninaresidence/',
+        icon: { src: INSTAGRAM_PNG }
+      }
+    }
+  ]
 
 }
 export const Footer = {
@@ -49,23 +62,6 @@ export const Footer = {
   props,
   extend: Flex,
 
-  socialLinks: {
-    childExtend: { extend: Link, icon: { extend: Img } },
-
-    ...[
-      {
-        props: { href: `https://www.facebook.com/BBResidenceTbilisi` },
-        icon: { props: { src: FACEBOOK_PNG } }
-      },
-
-      {
-        props: { href: 'https://www.instagram.com/laninaresidence/' },
-        icon: {
-          props: { src: INSTAGRAM_PNG }
-        }
-      }
-    ]
-  },
-
+  socialLinks,
   Book
 }

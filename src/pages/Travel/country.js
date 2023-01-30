@@ -4,26 +4,14 @@ import { countryText } from '../../texts'
 import { Paragraph } from '../../components'
 
 const props = {
-  flow: 'column',
-  align: 'center center',
-  minHeight: '',
-  padding: 'F2 B C B',
-  margin: 'auto',
-  maxWidth: 'H3',
-  title: {
-    text: 'georgia',
-    fontSize: 'A',
-    minWidth: '90%',
-    borderBottom: '1px solid black',
-    padding: '- - Y -',
-    alignSelf: 'flex-start',
-    textAlign: 'left'
-  },
+  alignSelf: 'center',
+  margin: 'F - - -',
+  align: 'center flex-start',
+  maxWidth: 'I1',
+  gap: 'C',
   p: {
-    fontSize: `${17.5 / 16}em`,
-    '@mobileL': { fontSize: `A` },
-
-    style: { letterSpacing: '.5px' }
+    textAlign: 'center',
+    fontSize: 'B'
   }
 }
 
@@ -31,6 +19,6 @@ export const country = {
   extend: Paragraph,
   props,
 
-  title: { },
+  title: { text: 'georgia' },
   p: { extend: countryText }
 }

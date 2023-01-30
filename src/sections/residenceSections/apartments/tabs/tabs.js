@@ -1,17 +1,17 @@
 'use strict'
-import { RoomTab } from './RoomTab'
+import { RoomTab } from '../../../../components'
 
-import BALLERINA_JPG from '../../assets/images/residence/rooms/ballerina/ballerinaTab.jpg'
-import REDBRICK_JPG from '../../assets/images/residence/rooms/redBrick/redbrickTab.jpg'
-import YELLOWCOUCH_JPG from '../../assets/images/residence/rooms/yellowCouch/yellowcouchTab.jpg'
-import GREENFOREST_JPG from '../../assets/images/residence/rooms/greenForest/greenforestTab.jpg'
-import RETRO_JPG from '../../assets/images/residence/rooms/retro/retroTab.jpg'
+import BALLERINA_JPG from '../../../../assets/images/residence/rooms/ballerina/ballerinaTab.jpg'
+import REDBRICK_JPG from '../../../../assets/images/residence/rooms/redBrick/redbrickTab.jpg'
+import YELLOWCOUCH_JPG from '../../../../assets/images/residence/rooms/yellowCouch/yellowcouchTab.jpg'
+import GREENFOREST_JPG from '../../../../assets/images/residence/rooms/greenForest/greenforestTab.jpg'
+import RETRO_JPG from '../../../../assets/images/residence/rooms/retro/retroTab.jpg'
 
-import DRESS_PNG from '../../assets/icons/dress.png'
-import BRICKS_PNG from '../../assets/icons/bricks.png'
-import SOFA_PNG from '../../assets/icons/sofa.png'
-import LEAF_PNG from '../../assets/icons/leaf.png'
-import VINYL_PNG from '../../assets/icons/vinyl.png'
+import DRESS_PNG from '../../../../assets/icons/dress.png'
+import BRICKS_PNG from '../../../../assets/icons/bricks.png'
+import SOFA_PNG from '../../../../assets/icons/sofa.png'
+import LEAF_PNG from '../../../../assets/icons/leaf.png'
+import VINYL_PNG from '../../../../assets/icons/vinyl.png'
 
 export const tabBallerina = {
   extend: RoomTab,

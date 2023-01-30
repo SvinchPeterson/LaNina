@@ -18,7 +18,7 @@ import RIGHT_ARROW_BLUE_PNG from '../assets/icons/rightArrow-blue.png'
 
 const props = {
   align: 'center space-between',
-  gap: 'C1',
+  gap: 'C',
   position: 'relative',
   maxWidth: 'fit-content',
   height: 'fit-content',
@@ -29,12 +29,15 @@ const props = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    round: '100%'
+    round: 'C',
+    opacity: '.85'
   },
 
   childProps: {
     background: 'transparent',
     border: 'none',
+    opacity: '.75',
+    ':hover': { opacity: '1' },
     style: { cursor: 'pointer' },
     arrow: {
       alignSelf: 'center',

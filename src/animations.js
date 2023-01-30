@@ -1,7 +1,50 @@
 'use strict'
 import { keyframes } from '@emotion/css'
 
-export const position = keyframes`
+// common animations
+export const opacity = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`
+export const deopacity = keyframes`
+  from { opacity: 1; }
+  to { opacity: 0; }
+`
+
+// landing animations
+export const navBarItemTransform = keyframes`
+from {
+  transform: translateX(100px) scale(.98);
+  opacity: 0;
+  letter-spacing: 3px;
+}
+to {
+  transform: translateX(0px) scale(1);
+  opacity: 0.75;
+  letter-spacing: .5px;
+}
+`
+export const logoTitleTransform = keyframes`
+from {
+  transform: scale(.9);
+  opacity: 0;
+}
+to {
+  transform: scale(1);
+  opacity: 1;
+}
+`
+export const titleLetterSpacing = keyframes`
+from {
+  opacity: 0;
+  transform: translateX(-100px) scale(.98);
+}
+to {
+  opacity: 0.75;
+  transform: translateX(0) scale(1);
+}
+`
+export const backgroundPosition = keyframes`
   from {
     background-position: top 100 left 100px;
   }
@@ -10,6 +53,58 @@ export const position = keyframes`
   }
 `
 
+// residence animations
+export const bannerBackground = keyframes`
+  from { background-position: top left; }
+  to { background-position: center center; }
+`
+export const bannerTitle = keyframes`
+  from {
+    transform: translateY(0px) scale(.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-30px) scale(1);
+    opacity: 1;
+  }
+`
+export const bannerH5 = keyframes`
+  from { letter-spacing: 9px; }
+  to { letter-spacing: 10px; }
+`
+
+// travel animation
+export const bannerH1 = keyframes`
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 140px;
+    opacity: 1;
+  }
+`
+export const travelBannerH5 = keyframes`
+  from {
+    opacity: 0;
+    letter-spacing: 5px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 7.8px;
+  }
+`
+
+// -----------------
+
+export const position = keyframes`
+  from {
+    background-position: top 100 left 100px;
+  }
+  to {
+    background-position: top center;
+  }
+`
 export const positionOpacity = keyframes`
   from {
     background-position: bottom;
@@ -112,17 +207,6 @@ export const opacityLetterSpacing = keyframes`
   }
 `
 
-export const opacityLetterSpacing2 = keyframes`
-  from {
-    opacity: 0;
-    letter-spacing: 3px;
-  }
-  to {
-    opacity: 1;
-    letter-spacing: 6px;
-  }
-`
-
 export const letterSpacing = keyframes`
   from {
     letter-spacing: 1.5px;
@@ -141,30 +225,12 @@ export const letterSpacing2 = keyframes`
   }
 `
 
-export const opacity = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`
-
 export const opacity2 = keyframes`
   from {
     opacity: 0;
   }
   to {
     opacity: 0.75;
-  }
-`
-
-export const deopacity = keyframes`
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 `
 

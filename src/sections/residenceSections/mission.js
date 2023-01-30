@@ -17,7 +17,6 @@ const props = {
     position: 'relative',
     padding: '0',
     round: 'C',
-    // round: 'H H H H',
     background: 'radial-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .6)), url(' + VERANDA_JPG + ')',
     backgroundSize: 'contain',
     backgroundPosition: `bottom ${200 / 16}em center`,
@@ -65,21 +64,24 @@ const props = {
   }
 }
 
+const paragraph = {
+  title: { tag: 'h5' },
+  p: {
+    tag: 'p',
+    ...[
+      '"Providing remarkable lodging facilities and services to our guests.',
+      {
+        text: 'Emphasizing on customer service and creating an unforgettable in-home experience."',
+        props: { maxWidth: 'H' }
+      }
+    ]
+  }
+}
+
 export const mission = {
   tag: 'section',
   props,
-  paragraph: {
-    title: { tag: 'h5' },
-    p: {
-      tag: 'p',
-      ...[
-        '"Providing remarkable lodging facilities and services to our guests.',
-        {
-          text: 'Emphasizing on customer service and creating an unforgettable in-home experience."',
-          props: { maxWidth: 'H' }
-        }
-      ]
-    }
-  },
+
+  paragraph,
   image: {}
 }

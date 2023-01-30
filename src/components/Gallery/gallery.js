@@ -47,7 +47,7 @@ export const back = {
   extend: [Link, Flex],
   props: {
     gap: 'Z',
-    margin: '-B2 auto - -',
+    margin: '-C - - -',
     href: '#apartments',
     color: 'cream2',
     align: 'center center',
@@ -113,8 +113,8 @@ const book = {
     padding: 'Z A',
     fontSize: 'Z',
     width: 'fit-content',
-    top: '0',
-    right: 'B',
+    bottom: '0',
+    right: '0',
 
     '@tabletL': {
       right: '102%',
@@ -132,6 +132,8 @@ const book = {
       zIndex: '30',
       textDecoration: 'none',
       textTransform: 'uppercase',
+      writingMode: 'vertical-rl',
+      textOrientation: 'upright',
       color: ' rgba(248, 241, 227, 1) !important',
       '&:hover > span': { opacity: 1 },
       '@media only screen and (max-width: 1366px)': {
@@ -164,9 +166,9 @@ const book = {
 const navHorizontalArrows = {
   extend: NavHorizontalArrowsCream,
   props: {
-    alignSelf: 'flex-end',
+    // alignSelf: 'flex-end',
     position: 'absolute',
-    left: 'Y',
+    // left: 'Y',
     bottom: '-C1',
     '@tabletL': { display: 'none' },
     '@mobileL': {
@@ -293,7 +295,7 @@ export const Gallery = {
     imageContainer: {
       overflow: 'hidden',
       style: { transition: 'all 3s ease-in-out' },
-      childProps: { round: '0 G G 0' }
+      childProps: { round: 'G' }
     }
   },
 

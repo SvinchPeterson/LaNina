@@ -2,20 +2,18 @@
 
 import { Flex } from 'smbls'
 
-import { tabs } from './tabs'
-import { rooms } from './rooms'
+import { tabs } from './tabs/index'
+import { rooms } from './rooms/index'
 import ORNAMENT_PNG from '../../../assets/images/residence/sololaki/ornaments.png'
 
 const props = {
   width: '100%',
-  // padding: 'E -',
   minHeight: '101.5%',
   flexAlign: 'center center',
   position: 'relative',
+  background: 'url(' + ORNAMENT_PNG + ')',
   backgroundSize: 'contain',
   backgroundPosition: 'center',
-  // overflow: 'hidden',
-  background: 'url(' + ORNAMENT_PNG + ')',
   '@tabletL': { background: 'none' },
   style: {
     scrollBehavior: 'smooth',
@@ -30,7 +28,7 @@ const props = {
     position: 'absolute',
     top: 0,
     left: 0,
-    background: 'radial-gradient(rgba(25, 63, 55, .85),rgba(25, 63, 55, .9),rgba(25, 63, 55, 1), rgba(25, 63, 55, 1), rgba(25, 63, 55, 1))',
+    background: 'radial-gradient(rgba(25, 63, 55, .7),rgba(25, 63, 55, .8), rgba(25, 63, 55, 1), rgba(25, 63, 55, 1), rgba(25, 63, 55, 1))',
     '@tabletL': { background: 'rgba(25, 63, 55, 1)' }
   },
   title: {
@@ -68,6 +66,7 @@ export const apartments = {
   },
 
   attr: { id: 'apartments' },
+
   title: { extend: Flex, tag: 'h1', text: 'apartments' },
   tabs,
   rooms

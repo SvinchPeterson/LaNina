@@ -8,7 +8,6 @@ import CLOSES_PNG from '../../assets/icons/reject.png'
 
 export const footer = {
   extend: Footer,
-  props: { zIndex: '150' },
   socialLinks: {
     ...[{
       props: { href: `https://www.facebook.com/profile.php?id=100077381466828` }

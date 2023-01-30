@@ -2,61 +2,10 @@
 
 import { Flex } from 'smbls'
 
-import { ContactItems, Map, SectionTitle } from '../../components'
-const title = {
-  extend: SectionTitle,
-  props: {
-    padding: '0 0 Z2 A',
-    minWidth: '60%',
-    text: 'location',
-    fontSize: 'B',
-    fontWeight: '500',
-    letterSpacing: '0',
-    '@tabletS': {
-      minWidth: '50%',
-      textAlign: 'center',
-      padding: '0 0 Z2 0'
-    },
-    style: {
-      alignSelf: 'center',
-      '@media only screen and (max-height: 650px)': { fontSize: `${16 / 19}em` }
-    }
-  }
-}
-
-const map = {
-  extend: Map,
-  props: {
-    width: '100%',
-    margin: '0 auto',
-    minHeight: 'G3',
-    '@mobileM': { minHeight: 'G' },
-    '@mobileS': { minHeight: 'F3' },
-    style: {
-      flex: 1,
-      border: 'none',
-      boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .05)',
-      '@media only screen and (max-height: 700px)': { minHeight: `${300 / 16}em` },
-      '@media only screen and (max-height: 600px)': { minHeight: `${300 / 16}em` },
-      '@media only screen and (max-height: 550px)': { minHeight: `${250 / 16}em` }
-    }
-  }
-}
+import { ContactItems, Map } from '../../components'
 
 const contacts = {
-  childExtend: {
-    extend: ContactItems,
-    props: {
-      style: {
-        '@media only screen and (max-width: 480px)': {
-          display: 'block',
-          width: '100%',
-          '> div:after': { display: 'none' },
-          '> div:last-child': { justifySelf: 'flex-end' }
-        }
-      }
-    }
-  },
+  childExtend: ContactItems,
   ...[
     {},
     {
@@ -69,34 +18,59 @@ const contacts = {
 }
 
 const props = {
-  width: `${1440 / 16}em`,
+  minWidth: '80%',
   minHeight: '100%',
-  flow: 'column',
   align: 'center center',
   alignSelf: 'center',
+  gap: 'A',
+  margin: 'D - - -',
+
+  title: {
+    text: 'location',
+    fontSize: 'Z',
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    letterSpacing: `${10 / 13}em`,
+    transform: 'rotate(180deg)',
+    style: {
+      alignSelf: 'center',
+      writingMode: 'vertical-rl',
+      textOrientation: 'mixed'
+    }
+  },
+
   content: {
     flexFlow: 'column',
-    gap: 'A',
-    minWidth: '60%',
-    positioan: 'relative',
-    '@tabletS': { padding: '0 C2' },
-    '@mobileL': { padding: '0 E2' },
-    '@mobileM': { padding: '0 F1' },
-    '@mobileS': {
-      padding: '0 G'
+    gap: 'B',
+    boxSize: '80% 80%',
+    position: 'relative',
+    align: 'flex-end center',
+    alignSelf: 'center',
+    style: {
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat'
     },
-    style: { '@media only screen and (max-height: 650px)': { gap: `${10 / 16}em` } },
+
+    map: {
+      minWidth: '100%',
+      maxHeight: '70%',
+      zIndex: '2',
+      position: 'relative',
+      overflow: 'hidden',
+      round: 'A',
+      border: 'none',
+      style: {
+        boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .1)',
+        backgroundAttachment: 'fixed',
+        flex: 1
+      }
+    },
 
     contacts: {
+      zIndex: '2',
       flexAlign: 'center space-between',
-      padding: 'A Z 0 Z',
-      width: '90%',
-      margin: 'auto',
-      '@tabletS': {
-        flexFlow: 'column',
-        flexAlign: 'center center',
-        gap: 'A'
-      }
+      gap: 'C',
+      padding: '- Z - -'
     }
   }
 }
@@ -107,9 +81,11 @@ export const location = {
   props,
   attr: { id: 'location' },
 
-  title,
+  title: { tag: 'h5' },
   content: {
-    map,
+    extend: Flex,
+
+    map: { extend: Map },
     contacts
   }
 }

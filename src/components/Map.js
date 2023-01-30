@@ -1,13 +1,7 @@
 'use strict'
 
 const props = {
-  display: 'block',
-  width: '60%',
-  position: 'relative',
-  round: 'Y2',
-  '@mobileL': {
-    // minHeight: 'G2'
-  }
+  display: 'block'
 }
 
 export const Map = {
