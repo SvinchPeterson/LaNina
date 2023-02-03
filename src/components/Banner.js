@@ -10,11 +10,11 @@ const props = {
   position: 'relative',
   padding: '0 0 0 0',
   top: '0',
-  background: 'transparent',
   align: 'center center',
   alignSelf: 'center',
   overflow: 'hidden',
   backgroundSize: 'cover',
+  backgroundPosition: 'center center',
   ':before': {
     content: '""',
     boxSize: '100% 100%',
@@ -29,8 +29,7 @@ const props = {
     backgroundAttachment: 'fixed',
     animationName: bannerBackground,
     animationDuration: '4s',
-    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    backgroundPosition: 'center center'
+    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
   },
 
   title: {
@@ -57,7 +56,11 @@ const props = {
       letterSpacing: `${10 / 16}em`,
       margin: '-Z2 -Y2 - -',
       alignSelf: 'center',
-      fontWeight: '400'
+      fontWeight: '400',
+      style: {
+        animationDuration: '2s',
+        animationTimingFunction: 'ease-in-out'
+      }
     }
   }
 }

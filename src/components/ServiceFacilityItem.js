@@ -8,11 +8,11 @@ const props = {
   background: 'cream2',
   flow: 'column',
   gap: '0',
-  round: 'Y',
+  round: 'Z',
   whiteSpace: 'nowrap',
 
   title: {
-    fontSize: 'A',
+    fontSize: 'A1',
     fontWeight: '700',
     textTransform: 'capitalize',
     letterSpacing: '-0.5px'

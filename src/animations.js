@@ -73,6 +73,17 @@ export const bannerH5 = keyframes`
   to { letter-spacing: 10px; }
 `
 
+export const roomOpacityTransform = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(.99);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`
+
 // travel animation
 export const bannerH1 = keyframes`
   from {
@@ -80,7 +91,7 @@ export const bannerH1 = keyframes`
     opacity: 0;
   }
   to {
-    height: 140px;
+    height: 145px;
     opacity: 1;
   }
 `
@@ -92,6 +103,16 @@ export const travelBannerH5 = keyframes`
   to {
     opacity: 1;
     letter-spacing: 7.8px;
+  }
+`
+export const popUpGallery = keyframes`
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 80%;
   }
 `
 
@@ -120,10 +141,12 @@ export const opacityTransform = keyframes`
   from {
     transform: translateY(5px) scale(.95);
     opacity: 0;
+    height: 0;
   }
   to {
     transform: translateY(0px) scale(1);
     opacity: 1;
+    height: 376px;
   }
 `
 

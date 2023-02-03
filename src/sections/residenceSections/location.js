@@ -41,7 +41,7 @@ const props = {
 
   content: {
     flexFlow: 'column',
-    gap: 'B',
+    gap: 'A',
     boxSize: '80% 80%',
     position: 'relative',
     align: 'flex-end center',
@@ -70,7 +70,7 @@ const props = {
       zIndex: '2',
       flexAlign: 'center space-between',
       gap: 'C',
-      padding: '- Z - -'
+      padding: '- B - -'
     }
   }
 }

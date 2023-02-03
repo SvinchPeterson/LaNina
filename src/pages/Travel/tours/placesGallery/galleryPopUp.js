@@ -2,7 +2,9 @@
 
 import { Img, Flex, Button } from 'smbls'
 
-import CLOSE_PNG from '../../../../assets/icons/close.png'
+import CLOSE_PNG from '../../../../assets/icons/reject.png'
+
+import { popUpGallery } from '../../../../animations'
 
 import { tbilisi, borjomi, mtsketa, kakheti, martvili, kutaisi, gori, kazbegi } from './placesGallery'
 
@@ -37,22 +39,18 @@ const props = {
   zIndex: '200',
   flow: 'column',
   align: 'center center',
-  background: 'blue3 .9',
-  display: 'none',
-  style: { backdropFilter: 'blur(2px)' },
+  background: 'blue2 .95',
+  display: 'flex',
+  // height: '0',
+  style: { backdropFilter: 'blur(1px)', transition: 'width .5s ease-in-out, opacity .5s ease-in-out' },
 
   content: {
     align: 'centet center',
-    boxSize: '80% fit-content',
-    // background: 'rgba(229, 249, 252, 1)',
+    width: 'fit-content',
     position: 'relative',
-    // round: '0 0 G2 G2',
     overflow: 'hidden',
-    // border: '2px solid black',
-    // border: '3px solid red',
-
+    height: '100px',
     style: {
-      mixBlendMode: 'difference',
       '@media only screen and (min-height: 900px)': {
         height: `${700 / 16}em`
       },
@@ -71,8 +69,7 @@ const props = {
       right: '0',
       top: '0',
       background: 'transparent',
-      icon: { boxSize: 'A2 ' },
-      style: { mixBlendMode: 'difference' }
+      icon: { boxSize: 'A2 ' }
     }
   }
 }
@@ -82,12 +79,18 @@ export const galleryPopUp = {
   props,
   class: {
     show: (element, state) => state.activeGalleryPopUp
-      ? { display: 'flex' }
-      : { display: 'none' }
+      ? { width: '100%', opacity: '1' }
+      : { width: '0', opacity: '0' }
   },
 
   content: {
     extend: Flex,
+    class: {
+      show: (element, state) => state.activeGalleryPopUp
+        ? { }
+        : { }
+    },
+
     close,
     tbilisi,
     borjomi,

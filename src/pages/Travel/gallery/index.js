@@ -25,12 +25,12 @@ const props = {
   },
   title: {
     text: 'gallery',
-    fontSize: 'D',
+    fontSize: 'E',
     textTransform: 'capitalize',
     fontWeight: '500',
     display: 'flex',
     position: 'absolute',
-    left: 'B2',
+    left: 'A1',
     top: 'G',
     gap: 'Y2',
     '&:before': {

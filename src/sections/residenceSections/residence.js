@@ -30,7 +30,7 @@ const props = {
       position: 'absolute',
       top: 0,
       left: 0,
-      background: 'linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .85), rgba(0, 0, 0, 1))'
+      background: 'black .4'
     },
 
     image: {
@@ -40,20 +40,22 @@ const props = {
       backgroundPosition: 'center center',
       style: {
         backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        boxShadow: 'inset 0px 0px 500px 60px rgba(0, 0, 0, .9)'
       }
     }
   },
+
   paragraph: {
     position: 'absolute',
     background: 'cream2',
-    padding: 'D2 D2 - Y',
+    padding: 'D2 D1 - B',
     left: '0',
     bottom: '-E',
     alignSelf: 'flex-start',
     zIndex: '5',
     round: '0 F2 0 0',
-    fontSize: `${16 / 16}em`
+    maxWidth: 'H1'
   }
 }
 

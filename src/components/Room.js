@@ -1,47 +1,38 @@
 'use strict'
 
 import { Flex } from 'smbls'
-import { keyframes } from '@emotion/css'
 
-import { Gallery } from './Gallery/gallery'
+import { roomOpacityTransform } from '../animations'
+
+import { GalleryContainer } from './GalleryContainer'
+
+// import { Gallery } from './Gallery/gallery'
 import { RoomDescription } from './RoomDescription'
 import { Amenities } from './Amenities'
 
-export const opacities = keyframes`
-  from {
-    opacity: 0;
-    transform: scale(.99);
+const props = {
+  boxSize: '100% 100%',
+  align: 'center center',
+  position: 'relative',
+  gap: 'D',
+  zIndex: 10,
+  border: '3px solid yellow',
+  alignSelf: 'center',
+  article: {
+    flexFlow: 'column',
+    gap: 'C'
   }
-  to {
-   opacity: 1;
-   transform: scale(1);
-  }
-`
+}
 
 export const Room = {
   extend: Flex,
-  props: {
-    boxSize: '100% 100%',
-    align: 'center center',
-    position: 'relative',
-    gap: 'C',
-    style: {
-      zIndex: 10,
-      alignSelf: 'center'
-    },
-    article: {
-      flexFlow: 'column',
-      padding: '0 0 0 D',
-      gap: 'C'
-    }
-  },
-
+  props,
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
         minWidth: '100%',
         height: '100%',
-        animationName: opacities,
+        animationName: roomOpacityTransform,
         animationDuration: '.5s',
         animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
       }
@@ -58,5 +49,8 @@ export const Room = {
     description: { extend: RoomDescription },
     amenities: { extend: Amenities }
   },
-  gallery: { extend: Gallery }
+
+  galleryContainer: {
+    extend: GalleryContainer
+  }
 }

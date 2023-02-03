@@ -8,14 +8,17 @@ const props = {
   flow: 'column',
   justifyContent: 'flex-start',
   gap: '',
-  background: 'rgba(213, 241, 255, 1)',
+  border: 'solid, black .75',
+  borderWidth: '.5px',
+  // background: 'rgba(213, 241, 255, 1)',
   padding: 'B B A1 B',
   round: 'B',
   position: 'relative',
   '@mobileL': { padding: 'A' },
 
   person: {
-    align: 'center flex-start',
+    flow: 'column',
+    align: 'center center',
     gap: 'Z',
     img: {
       boxSize: 'C2 C2',
@@ -25,7 +28,8 @@ const props = {
     name: {
       fontSize: 'B',
       fontWeight: '700',
-      color: 'black .85',
+      color: 'black',
+      letterSpacing: '-0.5px',
       '@mobileL': { fontSize: '1em' }
     }
   },
@@ -41,13 +45,13 @@ const props = {
       position: 'absolute',
       boxSize: 'C 100%',
       top: '0',
-      background: ' linear-gradient(to bottom, rgba(213, 241, 255,1) 0%,rgba(213, 241, 255,0) 100%)'
+      background: 'linear-gradient(to bottom, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)'
     },
     ':after': {
       content: '""',
       position: 'absolute',
       boxSize: 'C 100%',
-      background: ' linear-gradient(to top, rgba(213, 241, 255,1) 0%,rgba(213, 241, 255,0) 100%)',
+      background: 'linear-gradient(to top, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)',
       bottom: '0'
     },
 
@@ -81,17 +85,17 @@ const props = {
     margin: 'auto auto 0 auto',
     textAlign: 'right',
     position: 'relative',
-    padding: 'Z - - -',
-    ':before': {
-      content: '""',
-      position: 'absolute',
-      boxSize: '1px 100%',
-      background: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
-      top: '-Z',
-      right: '0',
-      '@mobileL': { top: '0' },
-      '@mobileS': { fontSize: `${14 / 16}em` }
-    }
+    padding: 'Z - - -'
+    // ':before': {
+    //   content: '""',
+    //   position: 'absolute',
+    //   boxSize: '1px 100%',
+    //   background: 'radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))',
+    //   top: '-Z',
+    //   right: '0',
+    //   '@mobileL': { top: '0' },
+    //   '@mobileS': { fontSize: `${14 / 16}em` }
+    // }
   }
 }
 

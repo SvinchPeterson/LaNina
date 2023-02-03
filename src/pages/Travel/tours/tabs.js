@@ -16,7 +16,7 @@ import ADVENTURE_JPG from '../../../assets/images/travel/adventure.jpg'
 
 const props = {
   position: 'relative',
-  maxWidth: '70%',
+  maxWidth: '80%',
   height: 'fit-content',
   flow: 'column',
   gap: 'A',
@@ -31,7 +31,7 @@ const props = {
     content: '""',
     top: '0',
     left: '0',
-    boxSize: '100% 300px',
+    boxSize: '100% 500px',
     style: { pointerEvents: 'none' },
     position: 'absolute',
     zIndex: '10',
@@ -39,7 +39,7 @@ const props = {
   },
   ':after': {
     content: '""',
-    boxSize: '100% 300px',
+    boxSize: '100% 500px',
     style: { pointerEvents: 'none' },
     position: 'absolute',
     zIndex: '',
@@ -62,7 +62,7 @@ const props = {
       fontWeight: '500',
       textTransform: 'uppercase',
       zIndex: '55',
-      style: { letterSpacing: '0px' }
+      style: { letterSpacing: '-1px' }
     },
     arrows: {
       gap: 'A1',
@@ -87,13 +87,17 @@ const props = {
     position: 'relative',
     boxSizing: 'border-box',
     scrollBehavior: 'smooth',
+    // animationName: slideHide,
+    // animationDuration: '30s',
+    // animationTimingFunction: 'linear',
+    // animationIterationCount: 'infinite',
     gap: '',
     width: 'auto',
     style: { overflowX: 'auto', '::-webkit-scrollbar': { display: 'none' } },
 
     tabs: {
       width: '100%',
-      gap: '',
+      // gap: 'A',
       style: {
         // overflowX: 'auto'
         animationName: slideHide,

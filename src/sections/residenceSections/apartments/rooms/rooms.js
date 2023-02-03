@@ -1,13 +1,26 @@
 'use strict'
 
-import { Room, galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from '../../../../components'
+// import { Room, galleryRedBrick, galleryBallerina, galleryYellowCouch, galleryGreenForest, galleryRetro } from '../../../../components'
+import { Room } from '../../../../components'
+
+import { galleryBallerina } from '../../../../galleries/apartmentsGalleries/galleryBallerina'
+
+import { ballerinaTextEng, redBrickTextEng, yellowCouchTextEng, greenForrestTextEng, retroTextEng } from '../../../../texts/residenceTexts'
 
 export const roomBallerina = {
   extend: Room,
   attr: { id: 'roomBallerina' },
 
-  article: {},
-  gallery: { extend: galleryBallerina }
+  article: {
+    description: {
+      title: { text: 'ballerina' },
+      p: { extend: ballerinaTextEng }
+    }
+  },
+  galleryContainer: {
+    gallery: { extend: galleryBallerina }
+  }
+  // gallery: { extend: galleryBallerina }
 }
 
 export const roomRedBrick = {
@@ -16,26 +29,16 @@ export const roomRedBrick = {
 
   article: {
     description: {
-      props: {
-        title: { text: 'Red Brick' },
-        paragraph: {
-          text: `Studio apartment of 55m2 located on the ground floor, just few steps downstairs, composed of living area with comfortable sofa bed for 1 person and sleeping area with 1 Queen bed, private bathroom with shower, kitchen dining table, making the apartment comfortable for 3 people.`
-        }
-      }
+      title: { text: 'Red Brick' },
+      p: { extend: redBrickTextEng }
     },
     amenities: {
       title: {},
-      list: {
-        ...[
-          {},
-          {
-            ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }]
-          }
-        ]
-      }
+      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
     }
-  },
-  gallery: { extend: galleryRedBrick }
+  }
+
+  // gallery: { extend: galleryRedBrick }
 }
 
 export const roomYellowCouch = {
@@ -44,78 +47,52 @@ export const roomYellowCouch = {
 
   article: {
     description: {
-      props: {
-        title: { text: 'Yellow Couch' },
-        paragraph: {
-          text: `Cozy and quiet one bedroom apartment of 50 m2 with open terrace, located on high first floor and  composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
-        }
-      }
+      title: { text: 'Yellow Couch' },
+      p: { extend: yellowCouchTextEng }
     },
     amenities: {
       title: {},
-      list: {
-        ...[
-          {},
-          {
-            ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }]
-          }
-        ]
-      }
+      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
     }
-  },
-  gallery: { extend: galleryYellowCouch }
+  }
+
+  // gallery: { extend: galleryYellowCouch }
 }
 
 export const roomGreenForest = {
   extend: Room,
   attr: { id: 'roomGreenForest' },
+
   article: {
     description: {
-      props: {
-        title: { text: 'Green Forrest' },
-        paragraph: {
-          text: `One bedroom apartment of 51 m2 with open terrace, located on high first floor and  composed of living room and bedroom with 1 King bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 2 people.`
-        }
-      }
+      title: { text: 'Green Forrest' },
+      p: { extend: greenForrestTextEng }
     },
     amenities: {
       title: {},
       list: {
-        ...[
-          {},
-          {
-            ...[{}, {}, {}, {}, { props: { display: 'none' } }, {}, {}, {}, { props: { display: 'none' } }]
-          }
-        ]
+        ...[{}, { ...[{}, {}, {}, {}, { props: { display: 'none' } }, {}, {}, {}, { props: { display: 'none' } }] }]
       }
     }
-  },
-  gallery: { extend: galleryGreenForest }
+  }
+
+  // gallery: { extend: galleryGreenForest }
 }
 
 export const roomRetro = {
   extend: Room,
   attr: { id: 'roomRetro' },
+
   article: {
     description: {
-      props: {
-        title: { text: 'Retro' },
-        paragraph: {
-          text: `Cozy and quiet one bedroom apartment of 44 m2 with open terrace, located on high first floor and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
-        }
-      }
+      title: { text: 'Retro' },
+      p: { extend: retroTextEng }
     },
     amenities: {
       title: {},
-      list: {
-        ...[
-          {},
-          {
-            ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }]
-          }
-        ]
-      }
+      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
     }
-  },
-  gallery: { extend: galleryRetro }
+  }
+
+  // gallery: { extend: galleryRetro }
 }

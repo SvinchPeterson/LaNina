@@ -1,4 +1,5 @@
 'use strict'
+
 import { RoomTab } from '../../../../components'
 
 import BALLERINA_JPG from '../../../../assets/images/residence/rooms/ballerina/ballerinaTab.jpg'
@@ -15,26 +16,15 @@ import VINYL_PNG from '../../../../assets/icons/vinyl.png'
 
 export const tabBallerina = {
   extend: RoomTab,
-
-  class: {
-    show: (element, state) => state.tabs === 0
-      ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
-      : { '@media only screen and (max-width: 1366px)': { display: 'none' } }
-  },
-
   props: {
     href: '#roomBallerina',
-    image: { style: { backgroundImage: 'url(' + BALLERINA_JPG + ')' } },
-    title: { text: 'ballerina' }
-  },
-  content: {
-    paragraph: {
-      ...[
-        'Enjoy special atmosphere, delicate and airy',
-        { text: `as ballerina's dressing interior.` }
-      ]
+    image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)), url(' + BALLERINA_JPG + ')' } },
+    icon: { src: DRESS_PNG },
+    p: {
+      text: 'Enjoy special atmosphere, delicate and airy',
+      maxWidth: 'F2'
     },
-    icon: { img: { props: { src: DRESS_PNG } } }
+    title: { text: 'ballerina' }
   }
 }
 
@@ -42,22 +32,10 @@ export const tabRedBrick = {
   extend: RoomTab,
   props: {
     href: '#roomRedBrick',
-    image: { style: { backgroundImage: 'url(' + REDBRICK_JPG + ')' } },
+    image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + REDBRICK_JPG + ')' } },
+    icon: { src: BRICKS_PNG },
+    p: { text: 'Where traditional Georgian old style meets modernity!' },
     title: { text: 'red brick' }
-  },
-  class: {
-    show: (element, state) => state.tabs === 1
-      ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
-      : { '@media only screen and (max-width: 1366px)': { display: 'none' } }
-  },
-  content: {
-    paragraph: {
-      ...[
-        'Where traditional Georgian old style',
-        { text: 'meets modernity!' }
-      ]
-    },
-    icon: { img: { props: { src: BRICKS_PNG } } }
   }
 }
 
@@ -65,22 +43,13 @@ export const tabYellowCouch = {
   extend: RoomTab,
   props: {
     href: '#roomYellowCouch',
-    image: { style: { backgroundImage: 'url(' + YELLOWCOUCH_JPG + ')' } },
-    title: { text: 'yellow couch' }
-  },
-  class: {
-    show: (element, state) => state.tabs === 2
-      ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
-      : { '@media only screen and (max-width: 1366px)': { display: 'none' } }
-  },
-  content: {
-    paragraph: {
-      ...[
-        'Make yourself comfortable on',
-        { text: 'yellow couch' }
-      ]
+    image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + YELLOWCOUCH_JPG + ')' } },
+    icon: { src: SOFA_PNG },
+    p: {
+      maxWidth: 'F2',
+      text: 'Make yourself comfortable on yellow couch'
     },
-    icon: { img: { props: { src: SOFA_PNG } } }
+    title: { text: 'yellow couch' }
   }
 }
 
@@ -88,27 +57,10 @@ export const tabGreenForest = {
   extend: RoomTab,
   props: {
     href: '#roomGreenForest',
-    image: { style: { backgroundImage: 'url(' + GREENFOREST_JPG + ')' } },
+    image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + GREENFOREST_JPG + ')' } },
+    icon: { src: LEAF_PNG },
+    p: { text: 'Timeless and elegant, yet modern and fresh, green is your choice!' },
     title: { text: 'green forest' }
-  },
-  class: {
-    show: (element, state) => state.tabs === 3
-      ? {
-        '@media only screen and (max-width: 1366px)': { display: 'block' }
-
-      }
-      : {
-        '@media only screen and (max-width: 1366px)': { display: 'none' }
-      }
-  },
-  content: {
-    paragraph: {
-      ...[
-        'Timeless and elegant, yet modern and fresh,',
-        { text: 'green is your choice!' }
-      ]
-    },
-    icon: { img: { props: { src: LEAF_PNG } } }
   }
 }
 
@@ -116,24 +68,9 @@ export const tabRetro = {
   extend: RoomTab,
   props: {
     href: '#roomRetro',
-    image: { style: { backgroundImage: 'url(' + RETRO_JPG + ')' } },
+    image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + RETRO_JPG + ')' } },
+    icon: { src: VINYL_PNG },
+    p: { text: 'Where contemporary design combine with traditional architecture.' },
     title: { text: 'retro' }
-  },
-  class: {
-    show: (element, state) => state.tabs === 4
-      ? { '@media only screen and (max-width: 1366px)': { display: 'block' } }
-      : {
-        '@media only screen and (max-width: 1366px)': { display: 'none' }
-      }
-  },
-  content: {
-    paragraph: {
-      ...[
-        'Where contemporary design combine with',
-        { text: 'traditional architecture.' }
-
-      ]
-    },
-    icon: { img: { props: { src: VINYL_PNG } } }
   }
 }

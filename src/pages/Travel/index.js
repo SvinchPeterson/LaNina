@@ -6,11 +6,10 @@ import { props } from '../Sololaki'
 
 import { Header } from '../../components'
 import { footer } from './footer'
-import { banner } from '../../sections/travelSections'
+import { banner, georgia } from '../../sections/travelSections'
 
 import { headerMobile } from './header'
 import { menu } from './menu'
-import { country } from './country'
 import { gallery } from './gallery'
 import { aboutUs } from './aboutUs/index'
 import { planTrip } from './planTrip'
@@ -149,7 +148,7 @@ export const Travel = {
   headerMobile,
   menu,
   banner,
-  country,
+  georgia,
   gallery,
   galleryPopUp,
   tours,

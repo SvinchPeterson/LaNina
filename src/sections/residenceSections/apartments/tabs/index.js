@@ -2,135 +2,17 @@
 
 import { Flex } from 'smbls'
 
-import { keyframes } from '@emotion/css'
+import { opacity } from '../../../../animations'
 
-import {
-  tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro, NavHorizontalArrowsCream
-} from './tabs'
-
-export const opacities = keyframes`
-  from {
-    opacity: 0;
-    // transform: scale(1.01);
-  }
-  to {
-   opacity: 1;
-  //  transform: scale(1);
-  }
-`
-
-const navArrow = {
-  extend: NavHorizontalArrowsCream,
-  props: {
-    gap: 'D',
-    display: 'none',
-    zIndex: '60',
-    ':before': {
-      background: 'radial-gradient(rgba(248, 241, 227, 1), rgba(248, 241, 227, .25))',
-      height: '80%'
-    },
-    '@tabletL': { display: 'flex' },
-    childProps: { arrow: { boxSize: ' A1' } }
-
-    // style: { '@media only screen and (max-height: 600px)': { bottom: `${-85 / 16}em` } }
-  },
-
-  ...[
-    {
-      on: {
-        click: (event, element, state) => {
-          const { tabs } = state
-          state.update({
-            tabs: tabs - 1
-          })
-          if (tabs <= 0) {
-            state.update({ tabs: 4 })
-          }
-          console.log(state.tabs)
-        }
-      }
-    },
-
-    {
-      on: {
-        click: (event, element, state) => {
-          const { tabs } = state
-          state.update({
-            tabs: tabs + 1
-          })
-          if (tabs >= 4) {
-            state.update({ tabs: 0 })
-          }
-          console.log(state.tabs)
-        }
-      }
-    }
-  ]
-}
-
-const tabsContainer = {
-  tag: 'nav',
-  extend: Flex,
-  ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
-}
+import { tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro } from './tabs'
 
 const props = {
   position: 'relative',
   padding: '0 F',
   width: `${1440 / 16}em`,
-  style: {
-    display: 'flex',
-    flexFlow: 'column',
-    alignItems: 'center'
-  },
-  '@tabletL': {
-    width: '100%',
-    gap: 'C'
-  },
-
-  '@mobileL': {
-    padding: '0'
-  },
-
-  tabsContainer: {
-    gap: 'Z',
-    width: '100%',
-    padding: 'A1 -',
-    position: 'relative',
-    boxSizing: 'content-box',
-    ':before': {
-      content: '"Apartments"',
-      fontSize: `D`,
-      position: 'absolute',
-      top: '-C2',
-      left: 'E',
-      transform: 'translate(-50%, -50%)',
-      fontWeight: '700',
-      color: 'cream2',
-      display: 'none'
-    },
-    style: {
-      '@media only screen and (max-width: 1366px)': {
-        width: `${600 / 16}em`,
-        height: `${350 / 16}em `
-      },
-
-      '@media only screen and (max-width: 768px)': {
-        width: `85%`
-      },
-      '@media only screen and (max-width: 1366px) and (max-height: 750px)': {
-        height: `${300 / 16}em !important`
-      },
-      '@media only screen and (max-width: 1366px) and (max-height: 670px)': {
-        height: `${250 / 16}em !important`
-      },
-      '@media only screen and (max-width: 1366px) and (max-height: 550px)': {
-        height: `${200 / 16}em !important`
-      }
-    },
-
-    childProps: { '@tabletL': { margin: 'A - - -' } }
-  }
+  flow: 'column',
+  alignItems: 'center',
+  tabsContainer: { gap: 'Z' }
 }
 
 export const tabs = {
@@ -146,12 +28,15 @@ export const tabs = {
       }
       : {
         display: 'block',
-        animationName: opacities,
+        animationName: opacity,
         animationDuration: '.5s',
         animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
       }
   },
 
-  tabsContainer,
-  navArrow
+  tabsContainer: {
+    tag: 'nav',
+    extend: Flex,
+    ...[tabBallerina, tabRedBrick, tabYellowCouch, tabGreenForest, tabRetro]
+  }
 }

@@ -57,10 +57,10 @@ const props = {
     title: {
       position: 'absolute',
       color: 'cream2',
-      fontSize: 'G',
+      fontSize: 'H',
       fontWeight: '100',
       textTransform: 'capitalize',
-      letterSpacing: '3px',
+      letterSpacing: '0px',
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
@@ -85,7 +85,7 @@ export const gridGallery = {
   ...[
     {
       props: {
-        round: 'G1 G1 G 0',
+        round: 'G1 G1 G E',
         backgroundImage: 'url(' + TBILISI_JPG + ')',
         gridColumn: '1 / span 2',
         gridRow: '1 / span 2',
@@ -105,7 +105,7 @@ export const gridGallery = {
 
     {
       props: {
-        round: 'G1 G1 0 0',
+        round: 'G1 G1 E E',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + BORJOMI_JPG + ')',
         title: { text: 'borjomi' },
@@ -126,7 +126,7 @@ export const gridGallery = {
     {
       props: {
         gridColumn: '3 / span 4',
-        round: '0 0 0 F2',
+        round: 'E E E F2',
         backgroundImage: 'url(' + MTSKETA_JPG + ')',
         title: { text: 'mtsketa' },
 
@@ -146,7 +146,7 @@ export const gridGallery = {
     {
       props: {
         gridRow: '3',
-        round: '0 G1 G1 0',
+        round: 'E G1 G1 E',
         gridColumn: '1 / span 2',
         backgroundImage: 'url(' + KAKHETI_JPG + ')',
         title: { text: 'kakheti' },
@@ -165,7 +165,7 @@ export const gridGallery = {
 
     {
       props: {
-        round: 'G1 0 0 G1',
+        round: 'G1 E E G1',
         gridRow: '3',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + MARTVILI_JPG + ')',
@@ -185,7 +185,7 @@ export const gridGallery = {
 
     {
       props: {
-        round: '0 G1 G1 0',
+        round: 'E G1 G1 E',
         gridRow: '4',
         gridColumn: '1 / span 2',
         backgroundImage: 'url(' + KUTAISI_JPG + ')',
@@ -205,7 +205,7 @@ export const gridGallery = {
 
     {
       props: {
-        round: 'G1 0 0 G1',
+        round: 'G1 E E G1',
         gridRow: '4',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + GORI_JPG + ')',
@@ -225,7 +225,7 @@ export const gridGallery = {
 
     {
       props: {
-        round: '0 0 I1 I1',
+        round: 'E E I1 I1',
         backgroundImage: 'url(' + KAZBEGI_JPG + ')',
         gridColumn: '1 / span 6',
         gridRow: 'span 5',

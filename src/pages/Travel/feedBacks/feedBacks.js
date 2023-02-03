@@ -53,11 +53,11 @@ const header = {
     tag: 'caption',
     text: 'Feedbacks',
     props: {
-      fontWeight: '500',
+      fontWeight: '400',
       fontSize: 'B',
       style: {
         whiteSpace: 'nowrap',
-        letterSpacing: '.3px',
+        letterSpacing: '7px',
         zIndex: '100',
         opacity: '.85'
       }

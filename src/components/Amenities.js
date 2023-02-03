@@ -1,38 +1,11 @@
 'use strict'
 
+import { Flex } from 'smbls'
+
 const list = {
-  props: {
-    flexAlign: 'flex-start flex-start',
-    color: 'cream2 .75',
-    padding: 'Z 0 0 X'
-  },
-  childExtend: {
-    props: {
-      lineHeight: '25px',
-      fontSize: `${15 / 16}em`,
-      flexFlow: 'column',
-      color: 'cream2 .8',
-      letterSpacing: '.3px'
-    }
-  },
+  childExtend: { childExtend: Flex },
   ...[
     {
-      props: {
-        position: 'relative',
-        margin: '0 B1 0 0',
-        padding: '0 B1 0 0',
-        ':after': {
-          content: '""',
-          position: 'absolute',
-          width: '1.1px',
-          height: '100%',
-          round: 'B',
-          top: '50%',
-          right: '0',
-          transform: 'translate(-50%, -50%)',
-          background: 'radial-gradient(rgba(248, 241, 227, .85), rgba(248, 241, 227, 0))'
-        }
-      },
       ...[
         { props: { text: 'Wifi' } },
         { props: { text: 'Open terrace' } },
@@ -45,7 +18,6 @@ const list = {
         { props: { text: 'Carbon monoxide alarm' } }
       ]
     },
-
     {
       ...[
         { props: { text: 'Smoke alarm' } },
@@ -71,8 +43,30 @@ const props = {
     textAlign: 'flex-start',
     letterSpacing: '5px',
     padding: '- - Y1 Y',
-    style: {
-      textTransform: 'uppercase'
+    textTransform: 'uppercase'
+  },
+
+  list: {
+    flexAlign: 'flex-start flex-start',
+    padding: 'Z 0 0 X',
+    gap: 'C',
+    childProps: {
+      fontSize: `${15.5 / 16}em`,
+      lineHeight: `${25 / 15.5}em`,
+      flexFlow: 'column',
+      letterSpacing: '.3px',
+      childProps: {
+        align: 'center flex-start',
+        color: 'cream2 .75',
+        gap: 'Y2',
+        ':before': {
+          content: '""',
+          boxSize: 'X X',
+          display: 'block',
+          background: 'cream2 .5',
+          round: '100%'
+        }
+      }
     }
   }
 }

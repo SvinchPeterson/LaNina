@@ -56,6 +56,7 @@ const props = {
   boxSize: 'G2 H2',
   alignSelf: 'center',
   position: 'relative',
+  flow: 'column',
   // round: '0 0 G2 G2',
   '@mobileL': {
     boxSize: 'G H'
@@ -65,8 +66,8 @@ const props = {
   },
   style: {
     animationName: opacityTransform,
-    animationDuration: '2s',
-    animationTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+    animationDuration: '.5s',
+    animationTimingFunction: 'ease-in-out',
 
     '@media only screen and (max-width: 400px)': {
       width: `${300 / 16}em !important`,
@@ -76,29 +77,30 @@ const props = {
 
   title: {
     position: 'absolute',
-    fontSize: 'E',
-    width: '100%',
-    top: '-B1',
-    left: '0',
+    fontSize: 'F',
+    width: '88%',
+    top: '-B',
+    alignSelf: 'center',
+    // left: '0',
     textTransform: 'capitalize',
     fontWeight: '700',
-    letterSpacing: '1px',
-    color: 'cream2',
-    border: 'solid, cream2 .35',
-    borderWidth: '0 0 1px 0'
+    letterSpacing: '-1px',
+    color: 'cream2'
+    // border: 'solid, cream2 .35',
+    // borderWidth: '0 0 1px 0'
   },
   images: {
     boxSize: '100% 100%',
     position: 'relative',
     top: '0',
     left: '0',
-    // round: '0 0 G2 G2',
+    round: 'B',
     overflow: 'hidden',
     ':after': {
       content: '""',
       boxSize: '100% 100%',
       // background: 'linear-gradient(rgba(30, 40, 49, 0), rgba(30, 40, 49, 1))',
-      background: 'radial-gradient(rgba(56, 104, 153, .2), rgba(56, 104, 153, .45))',
+      background: 'radial-gradient(rgba(56, 104, 153, .2), rgba(56, 104, 153, .2))',
       position: 'absolute',
       top: '0',
       left: '0'
@@ -116,8 +118,10 @@ const props = {
     childProps: {
       boxSize: '100% 100%',
       position: 'absolute',
-      top: '0',
-      left: '0'
+      round: 'B',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
     }
   },
 

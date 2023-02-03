@@ -15,7 +15,7 @@ const props = {
   }
 }
 
-export const country = {
+export const georgia = {
   extend: Paragraph,
   props,
 

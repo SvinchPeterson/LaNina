@@ -19,12 +19,10 @@ const props = {
   },
   '@mobileS': { minWidth: '100%' },
   title: {
-    text: 'about us',
-    fontSize: 'A'
+    text: 'about us'
   },
   p: {
     gap: 'Z',
-    fontSize: 'A',
     style: {
       span: { fontWeight: '700' }
     },

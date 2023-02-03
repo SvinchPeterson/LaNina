@@ -8,19 +8,20 @@ const props = {
   gap: 'B',
   position: 'relative',
   childProps: {
-    fontSize: 'Z',
+    fontSize: `${13.5 / 16}em`,
     fontWeight: '700',
-    letterSpacing: '.5px',
+    letterSpacing: `${0.5 / 13.5}em`,
+    color: 'black',
     ':first-child': {
       position: 'relative',
       ':after': {
         content: '""',
-        boxSize: '65% 1px',
-        round: 'B',
+        boxSize: 'V2 V2',
+        round: '100%',
         position: 'absolute',
         top: '50%',
         transform: 'translate(50%, -50%)',
-        right: '-13px',
+        right: `${-13 / 16}em`,
         background: 'black 1'
       }
     }

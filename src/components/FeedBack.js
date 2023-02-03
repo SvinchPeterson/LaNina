@@ -1,56 +1,37 @@
 'use strict'
 
+import { Paragraph } from './Paragraph'
+
 const props = {
-  padding: 'A B',
-  flexFlow: 'column',
-  justifyContent: 'flex-start',
-  border: 'solid, black .5',
-  borderWidth: '1px',
-  boxSizing: 'border-box',
-  minHeight: 'G',
-  round: 'A',
   minWidth: 'H',
-  gap: 'A1',
-  position: 'relative',
+  minHeight: 'G',
+  border: 'solid, black .5',
+  borderWidth: '.7px',
+  round: 'B2',
+  gap: '0',
+  justifyContent: 'flex-start',
+  padding: 'A B',
 
-  name: {
-    margin: '0',
-    fontWeight: '700',
-    color: 'black .85',
-    fontSize: 'D',
-    alignSelf: 'flex-start',
-    style: {
-      textTransform: 'capitalize',
-      letterSpacing: '-1px'
-    }
-  },
-
+  title: { fontSize: 'D' },
   p: {
-    text: `This a must stay n worth every penny. The host was great, the place was great, great ambience, a quiet place but just few minutes walk to all the central points. The hospitality was great and the host was very helpful and accessible for all my needs. Special thanks to Gaia and Tato who actually received me like family and came in person while i was saying my bye too. I would really want to come back for a longer stay. Love the place and love u guys.`,
-    color: 'black .65',
-    letterSpacing: '.25px'
+    margin: 'A - - -',
+    letterSpacing: `${0.25 / 16}em`,
+    color: 'black .65'
   },
-
   date: {
-    text: 'January | 2022',
-    color: 'black .85',
-    alignSelf: 'flex-end',
     margin: 'auto - - -',
+    alignSelf: 'flex-end',
     fontSize: 'Z',
-    fontWeight: '700',
+    fontWeight: 'bold',
     textTransform: 'uppercase'
   }
 }
 
 export const FeedBack = {
+  extend: Paragraph,
   props,
 
-  name: {
-    tag: 'caption',
-    text: 'Ashitha'
-  },
+  title: {},
   p: {},
-  date: {
-    tag: 'h5'
-  }
+  date: { tag: 'h6' }
 }

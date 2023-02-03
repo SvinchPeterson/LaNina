@@ -46,111 +46,70 @@ const feedbacks = {
   childExtend: FeedBack,
   ...[
     {
-      name: { text: 'Mary' },
-      p: {
-        text: `
-        Very cozy and comfortable, thanks to the BB staff, they always responded very quickly to my requests
-          `
-      },
+      title: { text: 'Mary' },
+      p: { text: ` Very cozy and comfortable, thanks to the BB staff, they always responded very quickly to my requests` },
       date: { text: 'july | 2022' }
     },
 
     {
-      name: { text: 'Yana' },
-      p: {
-        text: `
-        Very cool host, helpful! Met us after a night flight, left small treats, which is also very nice. The apartment is nice, located near the center, you can walk. Recommended
-          `
-      },
+      title: { text: 'Yana' },
+      p: { text: ` Very cool host, helpful! Met us after a night flight, left small treats, which is also very nice. The apartment is nice, located near the center, you can walk. Recommended` },
       date: { text: 'august | 2022' }
     },
 
     {
-      name: { text: 'Yan' },
-      p: {
-        text: `
-        Best apartment in Tbilisi, I recommend to everyone, the staff are responsive, clean, very authentic quiet courtyard nearby there is everything available !)
-          `
-      },
+      title: { text: 'Yan' },
+      p: { text: ` Best apartment in Tbilisi, I recommend to everyone, the staff are responsive, clean, very authentic quiet courtyard nearby there is everything available !)` },
       date: { text: 'september | 2022' }
     },
 
     {
-      name: { text: 'Olesya Borzdiko' },
-      p: {
-        text: `
-        The stay was smooth. They are always nearby if you have any questions, open to suggestions, and thoughtful of not disturbing you. Our apartment was a little bit dark to our liking so we used lights all the time.
-          `
-      },
+      title: { text: 'Olesya Borzdiko' },
+      p: { text: `The stay was smooth. They are always nearby if you have any questions, open to suggestions, and thoughtful of not disturbing you. Our apartment was a little bit dark to our liking so we used lights all the time.` },
       date: { text: 'February | 2022' }
     },
 
     {
-      name: { text: 'Iqra Ashraf' },
-      p: {
-        text: `
-        Cozy homestay close to freedom Square and mall. Thank you to Team BB for making the stay comfortable
-          `
+      title: { text: 'Iqra Ashraf' },
+      p: { text: `Cozy homestay close to freedom Square and mall. Thank you to Team BB for making the stay comfortable`
       },
       date: { text: 'October | 2022' }
     },
 
     {
-      name: { text: 'Katie' },
-      p: {
-        text: `
-          Highly recommend to stay here! We really enjoyed BB Residence - Red Brick (also the other rooms look really cool too! ) It's in a great area, shops and bars nearby and also walking distance to lots of attractions and less than 10min walk to Freedom Square.
-          `
+      title: { text: 'Katie' },
+      p: { text: `Highly recommend to stay here! We really enjoyed BB Residence - Red Brick (also the other rooms look really cool too! ) It's in a great area, shops and bars nearby and also walking distance to lots of attractions and less than 10min walk to Freedom Square.`
       },
       date: { text: 'February | 2022' }
     },
 
     {
-      name: { text: 'Cameron' },
-      p: {
-        text: `
-          A lovely apartment in excellent location, perfect walking distance to sights, comfortable and cosy. Great hosts, they even brought me a cake and bottle of wine on my birthday! Would recommend
-          `
-      },
+      title: { text: 'Cameron' },
+      p: { text: `A lovely apartment in excellent location, perfect walking distance to sights, comfortable and cosy. Great hosts, they even brought me a cake and bottle of wine on my birthday! Would recommend` },
       date: { text: 'April | 2022' }
     },
 
     {
-      name: { text: 'Alexsandr' },
-      p: {
-        text: `
-          BB Residence is a great cozy apartments near Liberty Square. Its good to stay there and discover Tbilisi for yourself. Hope we will stay there again.
-          `
-      },
+      title: { text: 'Alexsandr' },
+      p: { text: ` BB Residence is a great cozy apartments near Liberty Square. Its good to stay there and discover Tbilisi for yourself. Hope we will stay there again.` },
       date: { text: 'March | 2022' }
     },
 
     {
-      name: { text: 'Daria' },
-      p: {
-        text: `
-        The apartment is very cozy, clean, light, spacious. Very warm welcome, the location is great too, cute courtyard, in the evening it is very pleasant to spend time, plus parking in the yard, which is very convenient. We only have pleasant emotions and memories.
-          `
-      },
+      title: { text: 'Daria' },
+      p: { text: `The apartment is very cozy, clean, light, spacious. Very warm welcome, the location is great too, cute courtyard, in the evening it is very pleasant to spend time, plus parking in the yard, which is very convenient. We only have pleasant emotions and memories.` },
       date: { text: 'April | 2022' }
     },
 
     {
-      name: { text: 'Stanislav' },
-      p: {
-        text: `
-        Very nice and spacious place! An amazingly responsive and helpful host! Would definitely book again!
-        Stanislav User Profile`
-      },
+      title: { text: 'Stanislav' },
+      p: { text: `Very nice and spacious place! An amazingly responsive and helpful host! Would definitely book again! Stanislav User Profile` },
       date: { text: 'April | 2022' }
     },
 
     {
-      name: { text: 'Dilfusa' },
-      p: {
-        text: `
-      Fue una estancia muy agradable! Hospitalidad, atencion excelente! Ubicacion y facilidades son perfectas. Muchas gracias a los duenos, me ayudaron en todo, presentaron mucho mas de lo prometido)))
-          `
+      title: { text: 'Dilfusa' },
+      p: { text: `Fue una estancia muy agradable! Hospitalidad, atencion excelente! Ubicacion y facilidades son perfectas. Muchas gracias a los duenos, me ayudaron en todo, presentaron mucho mas de lo prometido))`
       },
       date: { text: 'December | 2021' }
     }
@@ -186,27 +145,27 @@ const props = {
     position: 'relative',
     width: '90%',
     margin: '0 auto 0 auto',
-    style: {
-      '&:after': {
-        content: '""',
-        width: '250px',
-        height: '100%',
-        position: 'absolute',
-        right: '0px',
-        top: 0,
-        background: 'linear-gradient(to left, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)'
-      },
-      '&:before': {
-        content: '""',
-        width: '250px',
-        height: '100%',
-        position: 'absolute',
-        left: '0',
-        top: 0,
-        background: 'linear-gradient(to right, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
-        zIndex: 3
-      }
+    ':before': {
+      content: '""',
+      width: '250px',
+      height: '100%',
+      position: 'absolute',
+      left: '0',
+      top: '0',
+      background: 'linear-gradient(to right, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
+      zIndex: 3
     },
+    ':after': {
+      content: '""',
+      width: '250px',
+      height: '100%',
+      position: 'absolute',
+      right: '0',
+      top: '0',
+      background: 'linear-gradient(to left, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
+      zIndex: 3
+    },
+
     feedbacks: {
       gap: 'Z',
       style: {

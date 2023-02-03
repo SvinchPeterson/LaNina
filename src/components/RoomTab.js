@@ -1,134 +1,76 @@
 'use strict'
 
-import { Box, Link, Img } from 'smbls'
-
-const icon = {
-  extend: Box,
-  props: {
-    padding: 'B',
-    position: 'absolute',
-    top: 'D',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    zIndex: '20'
-  },
-
-  img: {
-    extend: [Img, Box],
-    props: {
-      boxSize: 'B B'
-    }
-  }
-}
-
-const tabParagraph = {
-  props: {
-    color: 'cream2',
-    padding: `0 A2`,
-    width: 'H',
-    fontWeight: '400',
-    fontSize: 'B',
-    style: {
-      zIndex: 10,
-      opacity: 0,
-      boxSizing: 'border-box',
-      pointerEvents: 'none',
-      transition: 'opacity 1s ease-in-out',
-      textAlign: 'center'
-    }
-  },
-
-  class: {
-    show: (element, state) => state.activeTab === element.parent.parent.key ? { opacity: 1 } : {}
-  }
-}
+import { Link, Img, Flex } from 'smbls'
 
 export const props = {
   height: 'G1',
   position: 'relative',
   overflow: 'hidden',
-  zIndex: 1,
-  round: 'F1',
+  flow: 'column',
+  align: 'center center',
+  gap: 'C2',
+  round: 'F',
   flex: 1,
   cursor: 'pointer',
   boxSizing: 'border-box',
-
+  color: 'cream2',
   style: {
-    transition: 'flex .7s linear',
-    textDecoration: 'none',
-    '&:hover': {
-      '@media only screen and (min-width: 1366px)': {
-        flex: 5.5,
-        '> div > div': { opacity: 1 },
-        '> div:before': { opacity: 1 },
-        '> h1': {
-          transform: 'translate(-50%, -50%) scale(.6)',
-          letterSpacing: '-2px'
-        }
-      }
-    },
-    '&:not(:hover)': {
-      '> div > div': { transition: 'opacity .1s ease-in-out' }
-    }
-
+    transition: 'flex .6s linear'
+  },
+  ':hover': { flex: '5.5' },
+  ':hover > p': {
+    opacity: '1',
+    transition: 'opacity .55s ease-in-out'
+  },
+  ':hover > h2': {
+    opacity: '1',
+    letterSpacing: '-2px',
+    transition: 'opacity .55s ease-in-out, letter-spacing .55s ease-in-out, transform .55s ease-in-out',
+    transform: 'scale(1)'
   },
 
   image: {
-    boxSize: '101% 101%',
+    boxSize: '100% 100%',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    position: 'relative',
+    position: 'absolute',
     overflow: 'hidden',
-    style: {
-      backgroundAttachment: 'fixed',
-      backgroundRepeat: 'no-repeat'
-    },
-    ':before': {
-      content: '""',
-      position: 'absolute',
-      width: '105%',
-      height: '105%',
-      top: '0',
-      left: '0',
-      background: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, 1))',
-      transition: 'opacity .7s cubic-bezier(.6,.37,.52,.74)',
-      cursor: 'pointer'
-    }
-  },
-
-  title: {
-    text: 'ballerina',
-    color: 'cream2',
-    position: 'absolute',
-    bottom: '-Z',
-    left: '50%',
-    transform: 'translate(-3%, -50%)',
-    fontWeight: '700',
-    zIndex: '5',
-    fontSize: `I`,
-    textTransform: 'capitalize',
-    letterSpacing: `-1px`,
-    style: {
-      textShadow: '.5px .5px 1px black',
-      whiteSpace: 'nowrap',
-      mixBlendMode: 'screen',
-      // transition: 'transform .7s cubic-bezier(.6,.37,.52,.74), letter-spacing .7s cubic-bezier(.6,.37,.52,.74)'
-      transition: 'transform .7s linear, letter-spacing .5s linear'
-    }
-  },
-
-  content: {
-    position: 'absolute',
-    boxSize: '100% 100%',
+    zIndex: '1',
     top: '0',
     left: '0',
-    flexFlow: 'column',
-    flexAlign: 'center center'
+    round: 'F',
+    style: {
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      boxShadow: 'inset 0px 0px .5px 0.5px rgba(0, 0, 0, .5)'
+    }
+  },
+  icon: {
+    zIndex: '2',
+    boxSize: 'B B'
+  },
+  p: {
+    zIndex: '2',
+    textAlign: 'center',
+    width: 'G',
+    fontWeight: '400',
+    opacity: '0',
+    fontSize: 'B',
+    letterSpacing: '.3px'
+  },
+  title: {
+    zIndex: '2',
+    fontSize: 'G',
+    textTransform: 'capitalize',
+    whiteSpace: 'nowrap',
+    opacity: '0',
+    transform: 'scale(.9)',
+    margin: '- - -Y1 -'
   }
 }
 
 export const RoomTab = {
-  extend: Link,
+  extend: [Link, Flex],
   props,
 
   on: {
@@ -138,11 +80,7 @@ export const RoomTab = {
   },
 
   image: {},
-
-  title: { tag: 'h1' },
-
-  content: {
-    paragraph: { extend: tabParagraph },
-    icon: { extend: icon }
-  }
+  icon: { extend: Img },
+  p: {},
+  title: { tag: 'h2' }
 }

@@ -2,9 +2,8 @@
 import { Flex } from 'smbls'
 
 const props = {
-  maxWidth: 'H2',
   flow: 'column',
-  gap: 'Z2',
+  gap: 'A',
   color: 'black',
   style: { zIndex: '2' },
 
@@ -12,13 +11,14 @@ const props = {
     fontWeight: '700',
     fontSize: 'E',
     textTransform: 'capitalize',
-    letterSpacing: '-1px'
+    letterSpacing: '-1px',
+    margin: '0'
   },
 
   p: {
     flow: 'column',
     gap: 'Z',
-    letterSpacing: '.5px'
+    letterSpacing: `${0.5 / 16}em`
   }
 }
 
