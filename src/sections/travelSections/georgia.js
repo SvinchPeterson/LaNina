@@ -1,6 +1,6 @@
 'use strict'
 
-import { countryText } from '../../texts'
+import { countryText } from '../../texts/travelTexts'
 import { Paragraph } from '../../components'
 
 const props = {
@@ -16,6 +16,7 @@ const props = {
 }
 
 export const georgia = {
+  tag: 'section',
   extend: Paragraph,
   props,
 

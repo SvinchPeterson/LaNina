@@ -2,8 +2,6 @@
 
 import { Flex } from 'smbls'
 
-import { bannerBackground } from '../animations'
-
 const props = {
   width: '100%',
   minHeight: '100%',
@@ -27,7 +25,6 @@ const props = {
   style: {
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    animationName: bannerBackground,
     animationDuration: '4s',
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
   },

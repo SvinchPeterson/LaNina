@@ -6,8 +6,6 @@ import LEFT_ARROW_PNG from '../assets/icons/arrowBack.png'
 const props = {
   fontSize: `${12 / 16}em`,
   background: 'transparent',
-  border: 'solid, cream2',
-  borderWidth: '.85px',
   round: 'C',
   color: 'cream2',
   textTransform: 'uppercase',
