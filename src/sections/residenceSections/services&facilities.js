@@ -66,6 +66,7 @@ const props = {
   flow: 'column',
   justifyContent: 'center',
   position: 'relative',
+
   title: {
     padding: '- - A1 F',
     fontSize: 'Z',

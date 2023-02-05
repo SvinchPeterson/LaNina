@@ -17,6 +17,7 @@ const props = {
   flow: 'column',
   margin: 'G auto',
   round: 'J J 0 0',
+
   imageContainer: {
     alignSelf: 'center',
     boxSize: '100% 100%',
@@ -32,7 +33,6 @@ const props = {
       left: 0,
       background: 'black .4'
     },
-
     image: {
       boxSize: '100% 100%',
       backgroundImage: 'url(' + BB_JPG + ')',

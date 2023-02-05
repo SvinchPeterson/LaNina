@@ -128,7 +128,6 @@ const props = {
     margin: '0 auto',
     title: {
       fontWeight: '700',
-      fontSize: 'B',
       style: {
         whiteSpace: 'nowrap',
         letterSpacing: '5px',
@@ -137,6 +136,7 @@ const props = {
       }
     },
     navArrows: {
+      gap: 'C1',
       childProps: { arrow: { boxSize: ' Z2' } }
     }
   },

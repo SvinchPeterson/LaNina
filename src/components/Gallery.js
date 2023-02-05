@@ -1,9 +1,10 @@
 'use strict'
 
 const props = {
-  boxSize: '100% 100%',
-  border: '5px solid yellow',
+  boxSize: 'G2 H2',
   position: 'relative',
+  round: 'B1',
+  overflow: 'hidden',
   childProps: {
     display: 'block',
     boxSize: '100% 100%',
@@ -20,7 +21,13 @@ const props = {
   }
 }
 
-export const Gallerys = {
+export const Gallery = {
   props,
-  childExtend: { tag: 'span' }
+  childExtend: {
+    tag: 'span',
+    class: {
+      show: (element, state) => state.activeImage === parseInt(element.key)
+        ? { opacity: 1 } : { opacity: 0 }
+    }
+  }
 }

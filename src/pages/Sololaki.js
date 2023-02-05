@@ -68,15 +68,15 @@ export const Sololaki = {
   state,
   props,
 
-  // banner,
+  banner,
   header,
-  // Menu,
-  // residence,
-  // servicesFacilities,
-  // mission,
+  Menu,
+  residence,
+  servicesFacilities,
+  mission,
   apartments,
-  // wine,
-  // feedBacks,
-  // location,
+  wine,
+  feedBacks,
+  location,
   Footer
 }

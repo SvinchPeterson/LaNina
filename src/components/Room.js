@@ -4,9 +4,8 @@ import { Flex } from 'smbls'
 
 import { roomOpacityTransform } from '../animations'
 
+import { Back } from './Back'
 import { GalleryContainer } from './GalleryContainer'
-
-// import { Gallery } from './Gallery/gallery'
 import { RoomDescription } from './RoomDescription'
 import { Amenities } from './Amenities'
 
@@ -16,8 +15,14 @@ const props = {
   position: 'relative',
   gap: 'D',
   zIndex: 10,
-  border: '3px solid yellow',
   alignSelf: 'center',
+
+  back: {
+    position: 'absolute',
+    top: 'B2',
+    left: 'B1'
+  },
+
   article: {
     flexFlow: 'column',
     gap: 'C'
@@ -27,6 +32,7 @@ const props = {
 export const Room = {
   extend: Flex,
   props,
+
   class: {
     show: (element, state) => state.activeTab === element.key
       ? {
@@ -45,12 +51,19 @@ export const Room = {
       }
   },
 
+  back: {
+    extend: Back,
+    on: {
+      click: (event, element, state) => {
+        state.update({ activeTab: false, activeImage: 0 })
+      }
+    }
+  },
+
   article: {
     description: { extend: RoomDescription },
     amenities: { extend: Amenities }
   },
 
-  galleryContainer: {
-    extend: GalleryContainer
-  }
+  galleryContainer: { extend: GalleryContainer }
 }

@@ -35,7 +35,7 @@ import KITCHEN3_MOBILE_JPG from '../../assets/images/residence/rooms/greenForest
 import HOLL_MOBILE_JPG from '../../assets/images/residence/rooms/greenForest/mobile/holl.jpg'
 import CROSLEY_MOBILE_JPG from '../../assets/images/residence/rooms/greenForest/mobile/crosley.jpg'
 
-export const galleryGreenForrest = {
+export const galleryGreenForest = {
   extend: Gallerys,
 
   ...[

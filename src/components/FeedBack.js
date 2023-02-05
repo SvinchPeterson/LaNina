@@ -7,23 +7,26 @@ const props = {
   minHeight: 'G',
   border: 'solid, black .5',
   borderWidth: '.7px',
-  round: 'B2',
+  round: 'B',
   gap: '0',
   justifyContent: 'flex-start',
   padding: 'A B',
 
   title: { fontSize: 'D' },
   p: {
-    margin: 'A - - -',
-    letterSpacing: `${0.25 / 16}em`,
-    color: 'black .65'
+    fontSize: `${15.5 / 16}em`,
+    margin: 'A2 - - Y',
+    letterSpacing: `${0.25 / 15.5}em`,
+    color: 'black .65',
+    lineHeight: `${23 / 15.5}em`
   },
   date: {
     margin: 'auto - - -',
     alignSelf: 'flex-end',
     fontSize: 'Z',
     fontWeight: 'bold',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    style: { wordSpacing: `${5 / 13}em` }
   }
 }
 

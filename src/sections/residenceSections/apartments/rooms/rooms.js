@@ -1,9 +1,8 @@
 'use strict'
 
-// import { Room, galleryRedBrick, galleryBallerina, galleryYellowCouch, galleryGreenForest, galleryRetro } from '../../../../components'
 import { Room } from '../../../../components'
 
-import { galleryBallerina } from '../../../../galleries/apartmentsGalleries/galleryBallerina'
+import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from '../../../../galleries/apartmentsGalleries'
 
 import { ballerinaTextEng, redBrickTextEng, yellowCouchTextEng, greenForrestTextEng, retroTextEng } from '../../../../texts/residenceTexts'
 
@@ -17,10 +16,12 @@ export const roomBallerina = {
       p: { extend: ballerinaTextEng }
     }
   },
+
   galleryContainer: {
-    gallery: { extend: galleryBallerina }
+    book: {},
+    gallery: { extend: galleryBallerina },
+    navArrows: {}
   }
-  // gallery: { extend: galleryBallerina }
 }
 
 export const roomRedBrick = {
@@ -36,9 +37,13 @@ export const roomRedBrick = {
       title: {},
       list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
     }
-  }
+  },
 
-  // gallery: { extend: galleryRedBrick }
+  galleryContainer: {
+    book: {},
+    gallery: { extend: galleryRedBrick },
+    navArrows: {}
+  }
 }
 
 export const roomYellowCouch = {
@@ -54,9 +59,13 @@ export const roomYellowCouch = {
       title: {},
       list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
     }
-  }
+  },
 
-  // gallery: { extend: galleryYellowCouch }
+  galleryContainer: {
+    book: {},
+    gallery: { extend: galleryYellowCouch },
+    navArrows: {}
+  }
 }
 
 export const roomGreenForest = {
@@ -74,9 +83,13 @@ export const roomGreenForest = {
         ...[{}, { ...[{}, {}, {}, {}, { props: { display: 'none' } }, {}, {}, {}, { props: { display: 'none' } }] }]
       }
     }
-  }
+  },
 
-  // gallery: { extend: galleryGreenForest }
+  galleryContainer: {
+    book: {},
+    gallery: { extend: galleryGreenForest },
+    navArrows: {}
+  }
 }
 
 export const roomRetro = {
@@ -92,7 +105,11 @@ export const roomRetro = {
       title: {},
       list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
     }
-  }
+  },
 
-  // gallery: { extend: galleryRetro }
+  galleryContainer: {
+    book: {},
+    gallery: { extend: galleryRetro },
+    navArrows: {}
+  }
 }

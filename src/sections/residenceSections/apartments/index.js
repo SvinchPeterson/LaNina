@@ -1,7 +1,5 @@
 'use strict'
 
-import { Flex } from 'smbls'
-
 import { tabs } from './tabs'
 import { rooms } from './rooms'
 import ORNAMENT_PNG from '../../../assets/images/residence/sololaki/ornaments.png'
@@ -20,7 +18,7 @@ const props = {
   },
   ':before': {
     content: '""',
-    boxSize: '100% 100%',
+    boxSize: '101% 100%',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -54,7 +52,7 @@ export const apartments = {
 
   attr: { id: 'apartments' },
 
-  title: { extend: Flex, tag: 'h1', text: 'apartments' },
+  title: { tag: 'h1', text: 'apartments' },
   tabs,
   rooms
 }
