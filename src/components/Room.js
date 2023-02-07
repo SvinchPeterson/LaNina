@@ -26,6 +26,10 @@ const props = {
   article: {
     flexFlow: 'column',
     gap: 'C'
+  },
+
+  galleryContainer: {
+    margin: 'C - - -'
   }
 }
 

@@ -1,6 +1,6 @@
 'use strict'
 
-import { Gallerys } from '../../components'
+import { Gallery } from '../../components'
 
 import LIVINGROOM_JPG from '../../assets/images/residence/rooms/redBrick/livingroom.jpg'
 import LIVINGROOM2_JPG from '../../assets/images/residence/rooms/redBrick/livingroom2.jpg'
@@ -33,7 +33,7 @@ import BATHROOM_MOBILE_JPG from '../../assets/images/residence/rooms/redBrick/mo
 import BATHROOM2_MOBILE_JPG from '../../assets/images/residence/rooms/redBrick/mobile/bathroom2.jpg'
 
 export const galleryRedBrick = {
-  extend: Gallerys,
+  extend: Gallery,
 
   ...[
     {

@@ -1,6 +1,6 @@
 'use strict'
 
-import { Text, Box, Flex } from 'smbls'
+import { Text, Flex } from 'smbls'
 
 export const aboutText = {
   tag: 'p',

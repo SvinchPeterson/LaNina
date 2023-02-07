@@ -18,54 +18,13 @@ const props = {
   rows: 'repeat(6, 550px)',
   position: 'relative',
   overflow: 'hidden',
-  gap: 'Z',
-  '@tabletM': {
-    columns: '100%',
-    rows: 'repeat(8, 450px)',
-    round: 'H1'
-  },
-  style: {
-    '@media only screen and (max-width: 768px) and (max-height: 800px)': {
-      gridTemplateRows: 'repeat(8, 350px) !important'
-    },
-    '@media only screen and (max-width: 560px) and (max-height: 560px)': {
-      gridTemplateRows: 'repeat(8, 300px) !important'
-    }
-  },
+  gap: 'Y',
 
   childProps: {
     position: 'relative',
     backgroundSize: 'cover',
     overflow: 'hidden',
     cursor: 'pointer',
-    '@tabletM': {
-      round: 'Z'
-    },
-    style: {
-      backgroundAttachment: 'fixed',
-      backgroundRepeat: 'no-repeat',
-      '&:hover': {
-        h4: {
-          color: 'skyblue',
-          letterSpacing: '2px'
-        }
-      },
-      '@media only screen and (max-width: 1366px)': {
-        backgroundAttachment: 'initial'
-      }
-    },
-    title: {
-      position: 'absolute',
-      color: 'cream2',
-      fontSize: 'H',
-      fontWeight: '100',
-      textTransform: 'capitalize',
-      letterSpacing: '0px',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' }
-    },
     ':before': {
       content: '""',
       position: 'absolute',
@@ -73,52 +32,64 @@ const props = {
       left: '0',
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(rgba(30, 40, 49, .45), rgba(30, 40, 49, 1))'
+      background: 'linear-gradient(rgba(15, 49, 61, .45), rgba(15, 49, 61, 1))'
+    },
+    style: {
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat'
+    },
+    '&:hover > h4': {
+      color: 'rgba(189, 216, 246, 1)',
+      letterSpacing: '.5px'
+    },
+    title: {
+      position: 'absolute',
+      color: 'cream2',
+      fontSize: 'H',
+      fontWeight: '100',
+      textTransform: 'capitalize',
+      letterSpacing: '-1px',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' }
     }
   }
 }
 
-export const gridGallery = {
+export const gridGalleries = {
   extend: Grid,
   props,
+
   childExtend: { title: { tag: 'h4' } },
   ...[
     {
       props: {
-        round: 'G1 G1 G E',
+        round: 'G1 G1 G 0',
         backgroundImage: 'url(' + TBILISI_JPG + ')',
         gridColumn: '1 / span 2',
         gridRow: '1 / span 2',
-        title: { text: 'tbilisi' },
-        '@tabletM': {
-          gridColumn: '1',
-          gridRow: '1'
-        }
+        title: { text: 'tbilisi' }
       },
 
       on: {
         click: (event, element, state) => {
-          state.update({ activeGalleryPopUp: true, activeTbilisi: true })
+          state.update({ activePopUpGallery: true, activeTbilisi: true })
         }
       }
     },
 
     {
       props: {
-        round: 'G1 G1 E E',
+        round: 'G1 G1 0 0',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + BORJOMI_JPG + ')',
-        title: { text: 'borjomi' },
-
-        '@tabletM': {
-          gridColumn: '1',
-          gridRow: '2'
-        }
+        title: { text: 'borjomi' }
       },
 
       on: {
         click: (event, element, state) => {
-          state.update({ activeGalleryPopUp: true, activeBorjomi: true })
+          state.update({ activePopUpGallery: true, activeBorjomi: true })
         }
       }
     },
@@ -126,19 +97,14 @@ export const gridGallery = {
     {
       props: {
         gridColumn: '3 / span 4',
-        round: 'E E E F2',
+        round: '0 0 0 G',
         backgroundImage: 'url(' + MTSKETA_JPG + ')',
-        title: { text: 'mtsketa' },
-
-        '@tabletM': {
-          gridColumn: '1',
-          gridRow: '3'
-        }
+        title: { text: 'mtsketa' }
       },
 
       on: {
         click: (event, element, state) => {
-          state.update({ activeGalleryPopUp: true, activeMtsketa: true })
+          state.update({ activePopUpGallery: true, activeMtsketa: true })
         }
       }
     },
@@ -146,102 +112,81 @@ export const gridGallery = {
     {
       props: {
         gridRow: '3',
-        round: 'E G1 G1 E',
+        round: '0 G1 G1 0',
         gridColumn: '1 / span 2',
         backgroundImage: 'url(' + KAKHETI_JPG + ')',
-        title: { text: 'kakheti' },
-        '@tabletM': {
-          gridColumn: '1',
-          gridRow: '4'
-        }
+        title: { text: 'kakheti' }
       },
 
       on: {
         click: (event, element, state) => {
-          state.update({ activeGalleryPopUp: true, activeKakheti: true })
+          state.update({ activePopUpGallery: true, activeKakheti: true })
         }
       }
     },
 
     {
       props: {
-        round: 'G1 E E G1',
+        round: 'G1 0 0 G1',
         gridRow: '3',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + MARTVILI_JPG + ')',
-        title: { text: 'martvili' },
-        '@tabletM': {
-          gridColumn: '1',
-          gridRow: '5'
-        }
+        title: { text: 'martvili' }
       },
 
       on: {
         click: (event, element, state) => {
-          state.update({ activeGalleryPopUp: true, activeMartvili: true })
+          state.update({ activePopUpGallery: true, activeMartvili: true })
         }
       }
     },
 
     {
       props: {
-        round: 'E G1 G1 E',
+        round: '0 G1 G1 0',
         gridRow: '4',
         gridColumn: '1 / span 2',
         backgroundImage: 'url(' + KUTAISI_JPG + ')',
-        title: { text: 'kutaisi' },
-        '@tabletM': {
-          gridColumn: '1',
-          gridRow: '6'
-        }
+        title: { text: 'kutaisi' }
       },
 
       on: {
         click: (event, element, state) => {
-          state.update({ activeGalleryPopUp: true, activeKutaisi: true })
+          state.update({ activePopUpGallery: true, activeKutaisi: true })
         }
       }
     },
 
     {
       props: {
-        round: 'G1 E E G1',
+        round: 'G1 0 0 G1',
         gridRow: '4',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + GORI_JPG + ')',
-        title: { text: 'gori' },
-        '@tabletM': {
-          gridColumn: '1',
-          gridRow: '7'
-        }
+        title: { text: 'gori' }
       },
 
       on: {
         click: (event, element, state) => {
-          state.update({ activeGalleryPopUp: true, activeGori: true })
+          state.update({ activePopUpGallery: true, activeGori: true })
         }
       }
     },
 
     {
       props: {
-        round: 'E E I1 I1',
+        round: '0 0 I1 I1',
         backgroundImage: 'url(' + KAZBEGI_JPG + ')',
         gridColumn: '1 / span 6',
         gridRow: 'span 5',
-        title: { text: 'kazbegi' },
-        '@tabletM': {
-          gridColumn: '1',
-          gridRow: '8'
-        }
+        title: { text: 'kazbegi' }
       },
 
       on: {
         click: (event, element, state) => {
-          state.update({ activeGalleryPopUp: true, activeKazbegi: true })
+          state.update({ activePopUpGallery: true, activeKazbegi: true })
         }
       }
     }
   ]
-
 }

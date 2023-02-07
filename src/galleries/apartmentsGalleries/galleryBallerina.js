@@ -1,6 +1,6 @@
 'use strict'
 
-import { Gallerys } from '../../components'
+import { Gallery } from '../../components'
 
 import LIVINGROOM_JPG from '../../assets/images/residence/rooms/ballerina/livingroom.jpg'
 import LIVINGROOM2_JPG from '../../assets/images/residence/rooms/ballerina/livingroom2.jpg'
@@ -33,7 +33,7 @@ import HOLL_MOBILE_JPG from '../../assets/images/residence/rooms/ballerina/mobil
 import BATHROOM_MOBILE_JPG from '../../assets/images/residence/rooms/ballerina/mobile/bathroom.jpg'
 
 export const galleryBallerina = {
-  extend: Gallerys,
+  extend: Gallery,
 
   ...[
     {

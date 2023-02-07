@@ -1,6 +1,6 @@
 'use strict'
 
-import { Gallerys } from '../../components'
+import { Gallery } from '../../components'
 
 import LIVINGROOM_JPG from '../../assets/images/residence/rooms/greenForest/livingroom.jpg'
 import LIVINGROOM2_JPG from '../../assets/images/residence/rooms/greenForest/livingroom2.jpg'
@@ -36,7 +36,7 @@ import HOLL_MOBILE_JPG from '../../assets/images/residence/rooms/greenForest/mob
 import CROSLEY_MOBILE_JPG from '../../assets/images/residence/rooms/greenForest/mobile/crosley.jpg'
 
 export const galleryGreenForest = {
-  extend: Gallerys,
+  extend: Gallery,
 
   ...[
     {

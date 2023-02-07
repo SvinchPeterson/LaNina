@@ -1,23 +1,21 @@
 'use strict'
 
-import { Flex } from 'smbls'
+import { Flex, Img } from 'smbls'
 
 import { props } from '../Sololaki'
 
-import { Header } from '../../components'
-import { footer } from './footer'
-import { banner, georgia } from '../../sections/travelSections'
+import { Header, Footer } from '../../components'
+import { banner, georgia, gallery } from '../../sections/travelSections'
+import { popUpGallery } from '../../sections/travelSections/gallery/popUpGallery'
+import CLOSES_PNG from '../../assets/icons/reject.png'
 
 import { headerMobile } from './header'
 import { menu } from './menu'
-import { gallery } from './gallery'
 import { aboutUs } from './aboutUs/index'
 import { planTrip } from './planTrip'
 import { tours } from './tours'
 import { feedBacks } from './feedBacks/feedBacks'
 import { contact } from './contact'
-
-import { galleryPopUp } from './tours/placesGallery/galleryPopUp'
 
 const state = {
   activeForm: false,
@@ -70,7 +68,7 @@ const state = {
   activeAdventureArticle: false,
 
   activePopUpContainer: false,
-  activeGalleryPopUp: false,
+  activePopUpGallery: false,
 
   activePlandSend: true,
   activePlanSent: false,
@@ -135,6 +133,55 @@ const header = {
   }
 }
 
+export const footer = {
+  extend: Footer,
+  socialLinks: {
+    ...[{
+      props: { href: `https://www.facebook.com/profile.php?id=100077381466828` }
+    }, {
+      props: { href: `https://www.instagram.com/bb_travelgeorgia/` }
+    }]
+  },
+
+  Book: {
+    extend: Flex,
+    props: {
+      href: '',
+      target: 'none',
+      cursor: 'pointer',
+      span: { text: 'PLAN TRIP' }
+    },
+
+    on: {
+      click: (event, element, state) => {
+        state.activeForm
+          ? state.update({ activeForm: false, activeSent: false, activeSend: true })
+          : state.update({ activeForm: true })
+      }
+    },
+
+    span: {
+      class: {
+        show: (element, state) => state.activeForm
+          ? { display: 'none' }
+          : { display: 'block' }
+      }
+    },
+    close: {
+      extend: Img,
+      props: {
+        src: CLOSES_PNG,
+        boxSize: 'Z2'
+      },
+      class: {
+        show: (element, state) => state.activeForm
+          ? { display: 'block' }
+          : { display: 'none' }
+      }
+    }
+  }
+}
+
 export const Travel = {
   extend: Flex,
 
@@ -150,7 +197,7 @@ export const Travel = {
   banner,
   georgia,
   gallery,
-  galleryPopUp,
+  popUpGallery,
   tours,
   feedBacks,
   aboutUs,

@@ -11,14 +11,11 @@ import { NavHorizontalArrowsCream } from './NavigationArrows'
 const props = {
   position: 'relative',
   flow: 'column',
-  margin: 'D1 - - -',
+  boxSize: 'fit-content fit-content',
   book: {
     border: 'none',
     padding: '0',
     fontSize: 'B',
-    // alignSelf: 'flex-end',
-    // margin: '- C V2 -'
-
     position: 'absolute',
     top: '35%',
     right: '-B',
@@ -32,7 +29,7 @@ const props = {
   navArrows: {
     gap: 'D',
     alignSelf: 'center',
-    margin: 'B2 - - -'
+    margin: 'A1 - - -'
   }
 }
 

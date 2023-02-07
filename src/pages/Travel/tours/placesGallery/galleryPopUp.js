@@ -77,11 +77,11 @@ const props = {
 export const galleryPopUp = {
   extend: Flex,
   props,
-  class: {
-    show: (element, state) => state.activeGalleryPopUp
-      ? { width: '100%', opacity: '1' }
-      : { width: '0', opacity: '0' }
-  },
+  // class: {
+  //   show: (element, state) => state.activeGalleryPopUp
+  //     ? { width: '100%', opacity: '1' }
+  //     : { width: '0', opacity: '0' }
+  // },
 
   content: {
     extend: Flex,

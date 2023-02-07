@@ -5,14 +5,10 @@ import { Paragraph } from '../../components'
 
 const props = {
   alignSelf: 'center',
-  margin: 'F - - -',
-  align: 'center flex-start',
-  maxWidth: 'I1',
-  gap: 'C',
-  p: {
-    textAlign: 'center',
-    fontSize: 'B'
-  }
+  margin: 'F1 - - -',
+  align: 'flex-start flex-start',
+  maxWidth: 'H1',
+  gap: 'A'
 }
 
 export const georgia = {

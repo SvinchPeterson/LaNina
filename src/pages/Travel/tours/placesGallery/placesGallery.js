@@ -6,52 +6,6 @@ import { NavHorizontalArrowsCream } from '../../../../components'
 
 import { opacityTransform } from '../../../../animations'
 
-import OLD_TBILISI_JPG from '../../../../assets/images/travel/oldTbilisi/oldTbilisi2.jpg'
-import ABANOTUBANI_JPG from '../../../../assets/images/travel/oldTbilisi/abanotUbani.jpg'
-import BRIDGE_JPG from '../../../../assets/images/travel/oldTbilisi/bridge2.jpg'
-import BAZAR_JPG from '../../../../assets/images/travel/oldTbilisi/meidanBazar.jpg'
-import BRIDGE2_JPG from '../../../../assets/images/travel/oldTbilisi/oldTbilisi.jpg'
-import METEKHI_JPG from '../../../../assets/images/travel/oldTbilisi/metekhi2.jpg'
-
-import BORJOMI_JPG from '../../../../assets/images/travel/borjomi/Borjomi.jpg'
-import BORJOMI2_JPG from '../../../../assets/images/travel/borjomi/borjomi2.jpg'
-import PARK_JPG from '../../../../assets/images/travel/borjomi/park.jpg'
-import BRIDGES_JPG from '../../../../assets/images/travel/borjomi/bridge.jpg'
-
-import JVARI_JPG from '../../../../assets/images/travel/mtsketa/mtsketa.jpg'
-import MTSKETA_JPG from '../../../../assets/images/travel/mtsketa/mcxeta3.jpg'
-import MTSKETA2_JPG from '../../../../assets/images/travel/mtsketa/street.jpg'
-import MTSKETA3_JPG from '../../../../assets/images/travel/mtsketa/mtsketa2.jpg'
-
-import SIGNAGI_JPG from '../../../../assets/images/travel/kakheti/signagi3.jpg'
-import SIGNAGI2_JPG from '../../../../assets/images/travel/kakheti/signagi2.jpg'
-import KVEVRI_JPG from '../../../../assets/images/travel/kakheti/kvevri.jpg'
-import BODBE_JPG from '../../../../assets/images/travel/kakheti/bodbe.jpg'
-import TELAVI_JPG from '../../../../assets/images/travel/kakheti/telavi.jpg'
-
-import BRILIANT_JPG from '../../../../assets/images/travel/canyon/briliant2.jpg'
-import BRILIANT2_JPG from '../../../../assets/images/travel/canyon/briliant.jpg'
-import CANYON_JPG from '../../../../assets/images/travel/canyon/canyon.jpg'
-import CANYON2_JPG from '../../../../assets/images/travel/canyon/canyon2.jpg'
-
-import KUTAISI_JPG from '../../../../assets/images/travel/kutaisi/kutaisi.jpg'
-import CANYONS_JPG from '../../../../assets/images/travel/kutaisi/canyon.jpg'
-import CANYONS2_JPG from '../../../../assets/images/travel/kutaisi/canyon2.jpg'
-import CAVE_JPG from '../../../../assets/images/travel/kutaisi/cave2.jpg'
-import CAVE2_JPG from '../../../../assets/images/travel/kutaisi/cave.jpg'
-
-import GORI_JPG from '../../../../assets/images/travel/gori/gori.jpg'
-import MUSEUM_JPG from '../../../../assets/images/travel/gori/museum.jpg'
-import MUSEUM2_JPG from '../../../../assets/images/travel/gori/museum2.jpeg'
-import CAVE3_JPG from '../../../../assets/images/travel/gori/cave.jpg'
-import CAVE4_JPG from '../../../../assets/images/travel/gori/cave2.jpg'
-
-import KAZBEGI_JPG from '../../../../assets/images/travel/ananuri-gudauri/gazbegi.jpg'
-import GERGET_JPG from '../../../../assets/images/travel/ananuri-gudauri/gerget.jpg'
-import JINVALI_JPG from '../../../../assets/images/travel/ananuri-gudauri/jinvali.jpg'
-import ANANURI_JPG from '../../../../assets/images/travel/ananuri-gudauri/ananuri.jpg'
-import GUDAURI_JPG from '../../../../assets/images/travel/ananuri-gudauri/gudauri.jpg'
-
 const props = {
   boxSize: 'G2 H2',
   alignSelf: 'center',

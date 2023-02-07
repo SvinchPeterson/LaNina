@@ -9,7 +9,7 @@ import { travelBannerH5, positionOpacity, bannerH1 } from '../../animations'
 const props = {
   backgroundImage: 'url(' + LAKE_JPG + ')',
   style: { animationName: positionOpacity },
-  ':before': { background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6))' },
+  ':before': { background: 'radial-gradient(rgba(15, 49, 61, .5), rgba(15, 49, 61, .9))' },
 
   title: {
     gap: 'A2',
@@ -28,7 +28,7 @@ const props = {
     },
 
     h5: {
-      letterSpacing: `${7.8 / 16}em`,
+      letterSpacing: `7.8px`,
       color: 'cream2 .85',
       margin: '-Z2 -Y2 - -0.5px',
       style: { animationName: travelBannerH5 }

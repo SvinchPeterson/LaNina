@@ -55,6 +55,7 @@ export const props = {
     opacity: '0',
     position: 'absolute',
     pointerEvens: 'none',
+    zIndex: '2',
     style: {
       animationName: deopacity,
       animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
