@@ -4,8 +4,6 @@ import { Img, Flex, Button } from 'smbls'
 
 import CLOSE_PNG from '../../../../assets/icons/reject.png'
 
-import { popUpGallery } from '../../../../animations'
-
 import { tbilisi, borjomi, mtsketa, kakheti, martvili, kutaisi, gori, kazbegi } from './placesGallery'
 
 const close = {

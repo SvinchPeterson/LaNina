@@ -1,16 +1,18 @@
 'use strict'
 
-import { PopUpModal, GalleryContainer } from '../../../components'
+import { Flex } from 'smbls'
 
-const props = {
-  content: {
-    alignSelf: 'center'
-  }
-}
+import { PopUpModal } from '../../../components'
+
+import { galleries } from './galleries'
+import { navBar } from './navBar'
 
 export const popUpGallery = {
   extend: PopUpModal,
-  props,
+  props: {
+    style: { transition: 'height 1s ease-in-out' }
+
+  },
 
   class: {
     show: (element, state) => state.activePopUpGallery
@@ -22,7 +24,16 @@ export const popUpGallery = {
     on: {
       click: (event, element, state) => {
         state.update({
-          activePopUpGallery: false
+          activePopUpGallery: false,
+          activeTbilisi: false,
+          activeBorjomi: false,
+          activeMtsketa: false,
+          activeKakheti: false,
+          activeMartvili: false,
+          activeKutaisi: false,
+          activeGori: false,
+          activeKazbegi: false,
+          activeImage: 0
         })
       }
     },
@@ -35,8 +46,9 @@ export const popUpGallery = {
   },
 
   content: {
-    props: { border: '3px solid red' },
-    extend: GalleryContainer
+    extend: Flex,
+    navBar,
+    galleries: { extend: galleries }
   },
 
   logo: {

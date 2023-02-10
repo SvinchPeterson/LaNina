@@ -14,12 +14,12 @@ const props = {
   flow: 'column',
   overflow: 'hidden',
   align: 'center center',
-  style: { backdropFilter: 'blur(1px)', transition: 'height .5s ease-in-out' },
+  style: { backdropFilter: 'blur(1px)' },
 
   logo: {
     boxSize: 'D ',
     position: 'absolute',
-    left: 'C',
+    left: 'C1',
     bottom: 'C',
     style: { transition: 'opacity .8s ease-in-out, transform .8s ease-in-out' }
   },

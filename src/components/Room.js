@@ -9,6 +9,8 @@ import { GalleryContainer } from './GalleryContainer'
 import { RoomDescription } from './RoomDescription'
 import { Amenities } from './Amenities'
 
+import { HorArrowsCream } from './NavigationArrows'
+
 const props = {
   boxSize: '100% 100%',
   align: 'center center',
@@ -29,7 +31,8 @@ const props = {
   },
 
   galleryContainer: {
-    margin: 'C - - -'
+    margin: 'C - - -',
+    navArrows: {}
   }
 }
 
@@ -69,5 +72,41 @@ export const Room = {
     amenities: { extend: Amenities }
   },
 
-  galleryContainer: { extend: GalleryContainer }
+  galleryContainer: {
+    extend: GalleryContainer,
+    book: {},
+    gallery: {},
+    navArrows: {
+      extend: HorArrowsCream,
+      ...[
+        {
+          on: {
+            click: (event, element, state) => {
+              const { activeImage } = state
+              state.update({
+                activeImage: activeImage - 1
+              })
+              if (activeImage <= 0) {
+                state.update({ activeImage: 8 })
+              }
+            }
+          }
+        },
+
+        {
+          on: {
+            click: (event, element, state) => {
+              const { activeImage } = state
+              state.update({
+                activeImage: activeImage + 1
+              })
+              if (activeImage >= 8) {
+                state.update({ activeImage: 0 })
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
 }

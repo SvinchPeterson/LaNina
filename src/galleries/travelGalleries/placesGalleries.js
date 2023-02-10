@@ -12,7 +12,7 @@ import METEKHI_JPG from '../../assets/images/travel/oldTbilisi/metekhi2.jpg'
 import BORJOMI_JPG from '../../assets/images/travel/borjomi/Borjomi.jpg'
 import BORJOMI2_JPG from '../../assets/images/travel/borjomi/borjomi2.jpg'
 import PARK_JPG from '../../assets/images/travel/borjomi/park.jpg'
-import BRIDGES_JPG from '../../../../assets/images/travel/borjomi/bridge.jpg'
+import BRIDGES_JPG from '../../assets/images/travel/borjomi/bridge.jpg'
 
 import JVARI_JPG from '../../assets/images/travel/mtsketa/mtsketa.jpg'
 import MTSKETA_JPG from '../../assets/images/travel/mtsketa/mcxeta3.jpg'

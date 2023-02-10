@@ -20,6 +20,7 @@ import { contact } from './contact'
 const state = {
   activeForm: false,
   activeTour: false,
+  activeImage: 0,
 
   activeDailyTour: false,
   activeStandardTour: false,

@@ -116,6 +116,35 @@ export const popUpGallery = keyframes`
   }
 `
 
+export const imageWidth = keyframes`
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 608px;
+  }
+`
+
+export const popUpHeight = keyframes`
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+`
+
+export const popUpHeight2 = keyframes`
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+`
+
 // -----------------
 
 export const position = keyframes`

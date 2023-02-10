@@ -1,9 +1,9 @@
 'use strict'
 import { Flex } from 'smbls'
-import { FeedBack, NavHorizontalArrowsBlack } from '../../components'
+import { FeedBack, HorArrowsBlack } from '../../components'
 
 const navArrows = {
-  extend: NavHorizontalArrowsBlack,
+  extend: HorArrowsBlack,
   ...[
     {
       on: {

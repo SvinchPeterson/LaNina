@@ -6,7 +6,7 @@ import { Gallery } from './Gallery'
 
 import { Book } from './Book'
 
-import { NavHorizontalArrowsCream } from './NavigationArrows'
+import { NavArrows } from './NavigationArrows'
 
 const props = {
   position: 'relative',
@@ -27,44 +27,9 @@ const props = {
   },
 
   navArrows: {
-    gap: 'D',
     alignSelf: 'center',
     margin: 'A1 - - -'
   }
-}
-
-const navArrows = {
-  extend: NavHorizontalArrowsCream,
-
-  ...[
-    {
-      on: {
-        click: (event, element, state) => {
-          const { activeImage } = state
-          state.update({
-            activeImage: activeImage + 1
-          })
-          if (activeImage >= 8) {
-            state.update({ activeImage: 0 })
-          }
-        }
-      }
-    },
-
-    {
-      on: {
-        click: (event, element, state) => {
-          const { activeImage } = state
-          state.update({
-            activeImage: activeImage - 1
-          })
-          if (activeImage <= 0) {
-            state.update({ activeImage: 8 })
-          }
-        }
-      }
-    }
-  ]
 }
 
 export const GalleryContainer = {
@@ -73,5 +38,5 @@ export const GalleryContainer = {
 
   book: { extend: Book },
   gallery: { extend: Gallery },
-  navArrows
+  navArrows: { extend: NavArrows }
 }

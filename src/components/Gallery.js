@@ -1,7 +1,8 @@
 'use strict'
 
 const props = {
-  boxSize: 'G2 H2',
+  width: 'H2',
+  height: 'G2',
   position: 'relative',
   round: 'B1',
   overflow: 'hidden',
@@ -14,8 +15,7 @@ const props = {
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     style: {
-      objectFit: 'cover',
-      boxShadow: ' inset 0px 0px 5px 0px rgba(0, 0, 0, .6)',
+      boxShadow: ' inset 0px 0px 5px .2px rgba(0, 0, 0, .55)',
       transition: 'height .7s ease-in-out, opacity .7s ease-in-out, background-position 3s ease-in-out'
     }
   }
