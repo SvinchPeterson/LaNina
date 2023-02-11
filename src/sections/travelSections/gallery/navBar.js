@@ -3,26 +3,32 @@
 import { Navbar } from '../../../components'
 
 const props = {
-  height: '100%',
+  height: 'fit-content',
   flow: 'column',
   color: 'white',
-  gap: 'Z',
+  gap: '0',
   alignSelf: 'center',
   padding: '- B - -',
   align: 'flex-end center',
-  border: 'solid, white .35',
-  borderWidth: '0 .5px 0 0',
+  margin: '-C - - -E',
   zIndex: '30',
-  style: { },
+  position: 'absolute',
+  style: { lineHeight: `${30 / 16}em` },
+
   childProps: {
-    textAlign: 'right',
-    fontWeight: '400',
-    fontSize: `${12 / 16}em`,
-    textTransform: 'uppercase',
+    textAlign: 'left',
+    fontWeight: '100',
+    fontSize: `F`,
+    textTransform: 'capitalize',
     letterSpacing: '2px',
     cursor: 'pointer',
-    opacity: '.85',
-    ':hover': { opacity: '1' }
+    opacity: '.5',
+    transition: 'opacity .3s ease-in-out, transform .8s ease-in-out, padding .8s ease-in-out, letter-spacing .8s ease-in-out',
+    ':hover': {
+      opacity: '.8',
+      transform: 'scale(1.35)',
+      padding: `${20 / 40}em 0`
+    }
   }
 }
 
@@ -39,8 +45,14 @@ export const navBar = {
       text: 'tbilisi',
       class: {
         show: (element, state) => state.activeTbilisi
-          ? { opacity: '.5', pointerEvents: 'none' }
-          : { opacity: '.85' }
+          ? {
+            opacity: '1',
+            pointerEvents: 'none',
+            transform: 'scale(1.55)',
+            padding: `${25 / 40}em 0`,
+            letterSpacing: '0'
+          }
+          : { opacity: '.5' }
       },
       on: {
         click: (event, element, state) => {
@@ -63,8 +75,14 @@ export const navBar = {
       text: 'borjomi',
       class: {
         show: (element, state) => state.activeBorjomi
-          ? { opacity: '.5', pointerEvents: 'none' }
-          : { opacity: '.85' }
+          ? {
+            opacity: '1',
+            pointerEvents: 'none',
+            transform: 'scale(1.55)',
+            padding: `${25 / 40}em 0`,
+            letterSpacing: '0'
+          }
+          : { opacity: '.5' }
       },
       on: {
         click: (event, element, state) => {
@@ -87,8 +105,14 @@ export const navBar = {
       text: 'mtsketa',
       class: {
         show: (element, state) => state.activeMtsketa
-          ? { opacity: '.5', pointerEvents: 'none' }
-          : { opacity: '.85' }
+          ? {
+            opacity: '1',
+            pointerEvents: 'none',
+            transform: 'scale(1.55)',
+            padding: `${25 / 40}em 0`,
+            letterSpacing: '0'
+          }
+          : { opacity: '.5' }
       },
       on: {
         click: (event, element, state) => {
@@ -111,8 +135,14 @@ export const navBar = {
       text: 'kakheti',
       class: {
         show: (element, state) => state.activeKakheti
-          ? { opacity: '.5', pointerEvents: 'none' }
-          : { opacity: '.85' }
+          ? {
+            opacity: '1',
+            pointerEvents: 'none',
+            transform: 'scale(1.55)',
+            padding: `${25 / 40}em 0`,
+            letterSpacing: '0'
+          }
+          : { opacity: '.5' }
       },
       on: {
         click: (event, element, state) => {
@@ -135,8 +165,14 @@ export const navBar = {
       text: 'martvili',
       class: {
         show: (element, state) => state.activeMartvili
-          ? { opacity: '.5', pointerEvents: 'none' }
-          : { opacity: '.85' }
+          ? {
+            opacity: '1',
+            pointerEvents: 'none',
+            transform: 'scale(1.55)',
+            padding: `${25 / 40}em 0`,
+            letterSpacing: '0'
+          }
+          : { opacity: '.5' }
       },
       on: {
         click: (event, element, state) => {
@@ -159,8 +195,14 @@ export const navBar = {
       text: 'kutaisi',
       class: {
         show: (element, state) => state.activeKutaisi
-          ? { opacity: '.5', pointerEvents: 'none' }
-          : { opacity: '.85' }
+          ? {
+            opacity: '1',
+            pointerEvents: 'none',
+            transform: 'scale(1.55)',
+            padding: `${25 / 40}em 0`,
+            letterSpacing: '0'
+          }
+          : { opacity: '.5' }
       },
       on: {
         click: (event, element, state) => {
@@ -183,8 +225,14 @@ export const navBar = {
       text: 'gori',
       class: {
         show: (element, state) => state.activeGori
-          ? { opacity: '.5', pointerEvents: 'none' }
-          : { opacity: '.85' }
+          ? {
+            opacity: '1',
+            pointerEvents: 'none',
+            transform: 'scale(1.55)',
+            padding: `${25 / 40}em 0`,
+            letterSpacing: '0'
+          }
+          : { opacity: '.5' }
       },
       on: {
         click: (event, element, state) => {
@@ -207,8 +255,14 @@ export const navBar = {
       text: 'kazbegi',
       class: {
         show: (element, state) => state.activeKazbegi
-          ? { opacity: '.5', pointerEvents: 'none' }
-          : { opacity: '.85' }
+          ? {
+            opacity: '1',
+            pointerEvents: 'none',
+            transform: 'scale(1.55)',
+            padding: `${25 / 40}em 0`,
+            letterSpacing: '0'
+          }
+          : { opacity: '.5' }
       },
       on: {
         click: (event, element, state) => {

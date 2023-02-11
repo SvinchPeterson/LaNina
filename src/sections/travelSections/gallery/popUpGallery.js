@@ -10,14 +10,19 @@ import { navBar } from './navBar'
 export const popUpGallery = {
   extend: PopUpModal,
   props: {
-    style: { transition: 'height 1s ease-in-out' }
-
+    style: { transition: 'height .85s ease' },
+    content: { position: 'relative' }
   },
-
   class: {
     show: (element, state) => state.activePopUpGallery
-      ? { height: '100%' }
-      : { height: '0', pointerEvents: 'none', zIndex: '-1' }
+      ? {
+        height: '100%'
+      }
+      : {
+        height: '0',
+        pointerEvents: 'none',
+        zIndex: '-1'
+      }
   },
 
   close: {
@@ -37,7 +42,6 @@ export const popUpGallery = {
         })
       }
     },
-
     class: {
       show: (element, state) => state.activePopUpGallery
         ? { opacity: '1', transform: 'rotate(90deg)' }

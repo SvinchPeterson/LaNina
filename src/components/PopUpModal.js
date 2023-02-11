@@ -14,7 +14,6 @@ const props = {
   flow: 'column',
   overflow: 'hidden',
   align: 'center center',
-  style: { backdropFilter: 'blur(1px)' },
 
   logo: {
     boxSize: 'D ',

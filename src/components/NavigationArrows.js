@@ -43,10 +43,10 @@ export const HorArrowsBor = {
     position: 'relative',
     childProps: {
       border: 'solid, white .35',
-      borderWidth: '.5px',
-      boxSize: 'C1 C1',
+      borderWidth: '1px',
+      boxSize: 'C2 C2',
       round: '100%',
-      arrow: { boxSize: ' Y2' }
+      arrow: { boxSize: ' Z' }
     }
   }
 }

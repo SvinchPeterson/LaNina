@@ -23,7 +23,7 @@ const props = {
     left: 'D1',
     gap: 'A1',
     alignItems: 'center',
-    letterSpacing: '16px',
+    letterSpacing: `1em`,
     transform: 'rotate(180deg)',
     '&:before': {
       content: '""',
