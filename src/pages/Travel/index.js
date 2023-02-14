@@ -5,7 +5,7 @@ import { Flex, Img } from 'smbls'
 import { props } from '../Sololaki'
 
 import { Header, Footer } from '../../components'
-import { banner, georgia, gallery } from '../../sections/travelSections'
+import { banner, georgia, gallery, feedBacks } from '../../sections/travelSections'
 import { popUpGallery } from '../../sections/travelSections/gallery/popUpGallery'
 import CLOSES_PNG from '../../assets/icons/reject.png'
 
@@ -14,7 +14,7 @@ import { menu } from './menu'
 import { aboutUs } from './aboutUs/index'
 import { planTrip } from './planTrip'
 import { tours } from './tours'
-import { feedBacks } from './feedBacks/feedBacks'
+// import { feedBacks } from './feedBacks/feedBacks'
 import { contact } from './contact'
 
 const state = {
@@ -199,7 +199,7 @@ export const Travel = {
   georgia,
   gallery,
   popUpGallery,
-  tours,
+  // tours,
   feedBacks,
   aboutUs,
   planTrip,
