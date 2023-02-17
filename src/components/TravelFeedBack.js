@@ -58,7 +58,8 @@ const props = {
     },
     line: {
       boxSize: '1px 85%',
-      background: 'radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5))',
+      round: 'B',
+      background: 'radial-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, 0))',
       zIndex: '3'
     },
     p: {

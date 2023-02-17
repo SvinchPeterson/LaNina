@@ -38,7 +38,7 @@ const props = {
   alignSelf: 'center',
   align: 'center',
   gap: 'Y2',
-  padding: 'F2 - E2 -',
+  padding: 'F3 - E2 -',
   maxWidth: `${350 / 16}em`,
 
   title: {

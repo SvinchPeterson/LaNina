@@ -173,6 +173,15 @@ export const slideHide = keyframes`
     transform: translateX(calc(-300px * 6));
   }
 `
+
+export const slideHideVertical = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-420px * 3));
+  }
+`
 export const flexFlow = keyframes`
   from {
     flex-flow: row;
