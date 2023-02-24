@@ -1,102 +1,127 @@
 'use strict'
 
-import { Flex, Img, Link } from 'smbls'
+import { Button, Flex, Img, Link } from 'smbls'
 
 import { opacity } from '../animations'
 
-import { Navbar } from './Navbar'
-import { MenuButton } from './MenuButton'
 import { LogoWhite } from './Logo'
 
 import BACK_PNG from '../assets/icons/arrowBack-white.png'
+import CLOSE_PNG from '../assets/icons/close.png'
 
-const logoMenuButton = {
-  extend: Flex,
-
-  logoLink: {
-    extend: Link,
-    attr: { href: '#banner' },
-    logo: { extend: LogoWhite }
+const back = {
+  extend: Link,
+  props: {
+    href: '../#landing',
+    cursor: 'pointer'
   },
-
-  menuButton: { extend: MenuButton }
+  icon: {
+    extend: Img,
+    props: { src: BACK_PNG }
+  }
 }
 
-const navigation = {
-  extend: Flex,
+const logo = {
+  extend: Link,
+  attr: { href: '#banner' },
+  image: { extend: LogoWhite }
+}
 
-  back: {
-    extend: Link,
-    props: {
-      href: '../#landing',
-      cursor: 'pointer'
-    },
-    icon: {
-      extend: Img,
-      props: { src: BACK_PNG }
+const menu = {
+  extend: Button,
+  menu: {
+    text: 'menu',
+    on: { click: (event, element, state) => { state.update({ activeMenu: true }) } },
+    class: {
+      show: (element, state) => state.activeMenu
+        ? { top: `${-30 / 12}em`, transform: 'scale(.9)' }
+        : { top: '0', transform: 'scale(1)' }
     }
   },
 
-  nav: { extend: Navbar }
+  close: {
+    extend: Flex,
+    text: 'close',
+    icon: {
+      extend: Img,
+      props: { src: CLOSE_PNG }
+    },
+    on: { click: (event, element, state) => { state.update({ activeMenu: false }) } },
+    class: {
+      show: (element, state) => state.activeMenu
+        ? { bottom: `${3 / 12}em`, transform: 'scale(1)' }
+        : { bottom: `${-30 / 12}em`, transform: 'scale(.9)' }
+    }
+  }
 }
 
 const props = {
   position: 'fixed',
-  width: '85%',
-  align: 'flex-start space-between',
-  flow: 'column',
-  gap: 'Y1',
+  minWidth: '90%',
+  height: 'D',
+  align: 'flex-end space-between',
+  gap: '0',
   alignSelf: 'center',
   zIndex: '50',
-  margin: 'B - - -',
+  border: 'solid, white .75',
+  borderWidth: '0 0 .5px 0',
+  padding: '- V2',
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
     animationDuration: '3s',
     animationTimingFunction: 'ease-in-out'
   },
-  '@mobileL': { minWidth: '90%' },
 
-  logoMenuButton: {
-    minWidth: '100%',
-    align: 'flex-end space-between',
-
-    logoLink: {
-      opacity: '.85',
-      padding: '- - - Y',
-      ':hover': { opacity: '1' },
-      logo: { boxSize: 'B ' }
-    },
-    menuButton: {
-      display: 'none',
-      '@mobileL': { display: 'block' }
-    }
-  },
-
-  navigation: {
-    align: 'flex-start space-between',
-    minWidth: '100%',
-    border: 'solid, white .75',
-    borderWidth: '.7px 0 0 0',
-    padding: 'Y Y - Y',
+  childProps: {
+    flex: '1',
+    flow: 'column',
 
     back: {
       opacity: '.75',
       transition: 'opacity .15s ease-in-out',
+      boxSizing: 'border-box',
+      margin: '- - Y1 -',
       ':hover': { opacity: '1' },
       icon: { boxSize: ' A2' }
     },
-    nav: {
-      gap: 'B',
-      '@mobileL': { display: 'none' },
+
+    logo: {
+      align: 'center center',
+      opacity: '.85',
+      alignSelf: 'center',
+      margin: '- - Y2 -',
+      ':hover': { opacity: '1' },
+      image: { boxSize: `${30 / 16}em ` }
+    },
+
+    menu: {
+      width: 'D1',
+      background: 'transparent',
+      color: 'white',
+      opacity: '.85',
+      margin: '- - X -',
+      border: 'none',
+      textTransform: 'uppercase',
+      fontWeight: '400',
+      fontSize: `${12 / 16}em`,
+      letterSpacing: `${1 / 12}em`,
+      position: 'relative',
+      transition: 'opacity .15s ease-in-out',
+      overflow: 'hidden',
+      round: '0',
+      alignSelf: 'flex-end',
+      ':hover': { opacity: '1' },
       childProps: {
-        textTransform: 'uppercase',
-        fontSize: `${13 / 16}em`,
-        letterSpacing: '.5px',
-        opacity: '.8',
-        transition: 'opacity .15s ease-in-out',
-        color: 'white 1',
-        ':hover': { opacity: '1' }
+        position: 'absolute',
+        right: '0'
+      },
+      menu: { transition: 'top .5s ease-in-out, transform .5s ease-in-out' },
+      close: {
+        transition: 'bottom .5s ease-in-out, transform .5s ease-in-out',
+        align: 'center center',
+        gap: 'Y',
+        icon: { boxSize: 'Z1 ' }
       }
     }
   }
@@ -105,8 +130,12 @@ const props = {
 export const Header = {
   tag: 'header',
   extend: Flex,
-  props: props,
+  props,
 
-  logoMenuButton,
-  navigation
+  childExtend: Flex,
+  ...[
+    { back },
+    { logo },
+    { menu }
+  ]
 }

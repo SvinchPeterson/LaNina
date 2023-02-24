@@ -30,7 +30,8 @@ const props = {
       },
       style: {
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        boxShadow: 'inset 0px 0px 10px 2px black'
       }
     },
 

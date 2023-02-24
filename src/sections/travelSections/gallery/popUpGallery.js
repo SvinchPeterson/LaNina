@@ -10,7 +10,7 @@ import { navBar } from './navBar'
 export const popUpGallery = {
   extend: PopUpModal,
   props: {
-    style: { transition: 'height .85s ease' },
+    background: 'naviBlue',
     content: { position: 'relative' }
   },
   class: {
@@ -29,6 +29,7 @@ export const popUpGallery = {
     on: {
       click: (event, element, state) => {
         state.update({
+          activeClose: false,
           activePopUpGallery: false,
           activeTbilisi: false,
           activeBorjomi: false,

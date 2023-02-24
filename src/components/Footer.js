@@ -10,14 +10,13 @@ import INSTAGRAM_PNG from '../assets/icons/instagram-white.png'
 import { Book } from './Book'
 
 const props = {
-  width: '85%',
+  width: '90%',
   position: 'fixed',
   bottom: 'A2',
   flexAlign: 'center space-between',
   alignSelf: 'center',
   zIndex: '50',
-  margin: '- - - -',
-  padding: '- A',
+  // padding: '- B1',
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
@@ -38,7 +37,7 @@ const props = {
   }
 }
 
-const socialLinks = {
+export const socialLinks = {
   childExtend: { extend: Link, icon: { extend: Img } },
   ...[
     {

@@ -25,6 +25,8 @@ const props = {
     backgroundSize: 'cover',
     overflow: 'hidden',
     cursor: 'pointer',
+    border: '1px solid transparent',
+    style: { backgroundAttachment: 'fixed' },
     ':before': {
       content: '""',
       position: 'absolute',
@@ -34,14 +36,11 @@ const props = {
       height: '100%',
       background: 'linear-gradient(rgba(15, 49, 61, .45), rgba(15, 49, 61, 1))'
     },
-    style: {
-      backgroundAttachment: 'fixed',
-      backgroundRepeat: 'no-repeat'
-    },
     '&:hover > h4': {
       color: 'rgba(189, 216, 246, 1)',
       letterSpacing: '.5px'
     },
+
     title: {
       position: 'absolute',
       color: 'cream2',
@@ -74,7 +73,7 @@ export const gridGalleries = {
 
       on: {
         click: (event, element, state) => {
-          state.update({ activePopUpGallery: true, activeTbilisi: true })
+          state.update({ activePopUpModal: true, activeTbilisi: true, activePopUpGallery: true })
         }
       }
     },
@@ -89,7 +88,7 @@ export const gridGalleries = {
 
       on: {
         click: (event, element, state) => {
-          state.update({ activePopUpGallery: true, activeBorjomi: true })
+          state.update({ activePopUpModal: true, activeBorjomi: true, activePopUpGallery: true })
         }
       }
     },
@@ -104,7 +103,7 @@ export const gridGalleries = {
 
       on: {
         click: (event, element, state) => {
-          state.update({ activePopUpGallery: true, activeMtsketa: true })
+          state.update({ activePopUpModal: true, activeMtsketa: true, activePopUpGallery: true })
         }
       }
     },
@@ -120,7 +119,7 @@ export const gridGalleries = {
 
       on: {
         click: (event, element, state) => {
-          state.update({ activePopUpGallery: true, activeKakheti: true })
+          state.update({ activePopUpModal: true, activeKakheti: true, activePopUpGallery: true })
         }
       }
     },
@@ -136,7 +135,7 @@ export const gridGalleries = {
 
       on: {
         click: (event, element, state) => {
-          state.update({ activePopUpGallery: true, activeMartvili: true })
+          state.update({ activePopUpModal: true, activeMartvili: true, activePopUpGallery: true })
         }
       }
     },
@@ -152,7 +151,7 @@ export const gridGalleries = {
 
       on: {
         click: (event, element, state) => {
-          state.update({ activePopUpGallery: true, activeKutaisi: true })
+          state.update({ activePopUpModal: true, activeKutaisi: true, activePopUpGallery: true })
         }
       }
     },
@@ -168,7 +167,7 @@ export const gridGalleries = {
 
       on: {
         click: (event, element, state) => {
-          state.update({ activePopUpGallery: true, activeGori: true })
+          state.update({ activePopUpModal: true, activeGori: true, activePopUpGallery: true })
         }
       }
     },
@@ -184,7 +183,7 @@ export const gridGalleries = {
 
       on: {
         click: (event, element, state) => {
-          state.update({ activePopUpGallery: true, activeKazbegi: true })
+          state.update({ activePopUpModal: true, activeKazbegi: true, activePopUpGallery: true })
         }
       }
     }

@@ -18,19 +18,18 @@ const state = {
   tabs: 0
 }
 
-const header = {
-  extend: Header,
-  logoMenuButton: { logoLink: {} },
-  navigation: {
-    back: {},
-    nav: {
-      ...[
-        { props: { text: 'residence', href: '#residence' } },
-        { props: { text: 'servises & facilities', href: '#service&facilities' } },
-        { props: { text: 'apartments', href: '#apartments' } },
-        { props: { text: 'location', href: '#location' } }
-      ]
-    }
+const menu = {
+  extend: Menu,
+  navBar: {
+    childExtend: {
+      on: { click: (event, element, state) => { state.update({ activeMenu: false }) } }
+    },
+    ...[
+      { props: { text: 'residence', href: '#residence' } },
+      { props: { text: 'services & facilities', href: '#service&facilities' } },
+      { props: { text: 'apartments', href: '#apartments' } },
+      { props: { text: 'location', href: '#location' } }
+    ]
   }
 }
 
@@ -70,8 +69,8 @@ export const Sololaki = {
   props,
 
   banner,
-  header,
-  Menu,
+  Header,
+  menu,
   residence,
   servicesFacilities,
   mission,

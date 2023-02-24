@@ -3,6 +3,8 @@
 import { aboutText } from '../../../texts'
 import { Paragraph } from '../../../components'
 
+import { contact } from '../contact'
+
 const props = {
   align: 'flex-start flex-start',
   minWidth: 'G1',
@@ -17,6 +19,10 @@ const props = {
     style: {
       span: { fontWeight: '700' }
     }
+  },
+
+  contact: {
+    margin: 'D - - A'
   }
 }
 
@@ -25,5 +31,9 @@ export const paragraph = {
   props,
 
   title: { text: 'about us' },
-  p: { extend: aboutText }
+  p: { extend: aboutText },
+
+  contact: {
+    extend: contact
+  }
 }

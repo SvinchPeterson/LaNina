@@ -23,8 +23,7 @@ const navbar = {
   extend: Navbar,
   ...[
     { props: { text: 'residence', href: '/Sololaki' } },
-    { props: { text: 'travel', href: '/Travel' } },
-    { props: { text: 'rental' } }
+    { props: { text: 'travel', href: '/Travel' } }
   ]
 }
 
@@ -85,7 +84,7 @@ const props = {
     navbar: {
       flow: 'column',
       lineHeight: `${38 / 16}em`,
-      margin: 'Z1 - - -',
+      margin: 'A - - -',
       overflow: 'hidden',
       '@mobileL': {
         gap: 'Y',
@@ -101,22 +100,15 @@ const props = {
         letterSpacing: '.5px',
         textTransform: 'capitalize',
         textAlign: 'right',
-        ':nth-child(1), :nth-child(2)': {
-          style: {
-            animationName: navBarItemTransform,
-            animationDuration: '1.5s',
-            animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)',
-            '@media only screen and (max-width: 768px)': { animation: 'none' }
-          }
-        },
-        ':not(:last-child)': {
-          opacity: '.75',
-          transition: 'opacity .3s ease-in-out',
-          ':hover': { opacity: '1' }
-        },
-        ':last-child': {
-          opacity: '.45',
-          pointerEvents: 'none'
+        opacity: '.75',
+        transition: 'opacity .3s ease-in-out',
+        ':hover': { opacity: '1' },
+
+        style: {
+          animationName: navBarItemTransform,
+          animationDuration: '1.5s',
+          animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)',
+          '@media only screen and (max-width: 768px)': { animation: 'none' }
         },
         '@mobileL': {
           fontSize: 'Z',

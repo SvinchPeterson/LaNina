@@ -116,6 +116,24 @@ export const popUpGallery = keyframes`
   }
 `
 
+export const slideHideVertical = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-420px * 3));
+  }
+`
+
+export const slideHideTour = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-574px * 6));
+  }
+`
+
 // -----------------
 
 export const position = keyframes`
@@ -171,15 +189,6 @@ export const slideHide = keyframes`
   }
   100% {
     transform: translateX(calc(-300px * 6));
-  }
-`
-
-export const slideHideVertical = keyframes`
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(calc(-420px * 3));
   }
 `
 export const flexFlow = keyframes`

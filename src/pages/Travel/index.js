@@ -4,17 +4,12 @@ import { Flex, Img } from 'smbls'
 
 import { props } from '../Sololaki'
 
-import { Header, Footer } from '../../components'
-import { banner, georgia, gallery, feedBacks, aboutUs } from '../../sections/travelSections'
+import { Header, Footer, Menu } from '../../components'
+import { banner, georgia, gallery, tours, feedBacks, aboutUs } from '../../sections/travelSections'
 import { popUpGallery } from '../../sections/travelSections/gallery/popUpGallery'
 import CLOSES_PNG from '../../assets/icons/reject.png'
 
-import { headerMobile } from './header'
-import { menu } from './menu'
 import { planTrip } from './planTrip'
-import { tours } from './tours'
-// import { feedBacks } from './feedBacks/feedBacks'
-import { contact } from './contact'
 
 const state = {
   activeForm: false,
@@ -69,6 +64,7 @@ const state = {
 
   activePopUpContainer: false,
   activePopUpGallery: false,
+  activePopUpTour: false,
 
   activePlandSend: true,
   activePlanSent: false,
@@ -117,30 +113,26 @@ const state = {
 
 }
 
-const header = {
-  extend: Header,
-  logoMenuButton: { logoLink: {} },
-  navigation: {
-    back: {},
-    nav: {
-      ...[
-        { props: { text: 'gallery', href: '#gallery' } },
-        { props: { text: 'tours', href: '#tours' } },
-        { props: { text: 'about us', href: '#about' } },
-        { props: { text: 'contact', href: '#contact' } }
-      ]
-    }
+const menu = {
+  extend: Menu,
+  navBar: {
+    childExtend: {
+      on: { click: (event, element, state) => { state.update({ activeMenu: false }) } }
+    },
+    ...[
+      { props: { text: 'gallery', href: '#gallery' } },
+      { props: { text: 'tours', href: '#tours' } },
+      { props: { text: 'about us', href: '#about' } },
+      { props: { text: 'contact', href: '#contact' } }
+    ]
   }
 }
 
 export const footer = {
   extend: Footer,
   socialLinks: {
-    ...[{
-      props: { href: `https://www.facebook.com/profile.php?id=100077381466828` }
-    }, {
-      props: { href: `https://www.instagram.com/bb_travelgeorgia/` }
-    }]
+    ...[{ props: { href: `https://www.facebook.com/profile.php?id=100077381466828` } },
+      { props: { href: `https://www.instagram.com/bb_travelgeorgia/` } }]
   },
 
   Book: {
@@ -191,17 +183,15 @@ export const Travel = {
   },
   state,
 
-  header,
-  headerMobile,
+  Header,
   menu,
   banner,
   georgia,
   gallery,
   popUpGallery,
-  // tours,
+  tours,
   feedBacks,
   aboutUs,
   planTrip,
-  contact,
   footer
 }
