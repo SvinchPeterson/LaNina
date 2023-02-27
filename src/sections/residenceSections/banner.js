@@ -2,21 +2,28 @@
 
 import { Banner } from '../../components'
 
-import { bannerTitle, bannerH5, bannerBackground } from '../../animations'
+import { bannerTitle, bannerBackground, bannerh1 } from '../../animations'
 
 import SOLOLAKI_JPG from '../../assets/images/residence/sololaki/residencee.jpg'
 
 const props = {
   backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
+  ':before': { background: 'radial-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .9))' },
   style: { animationName: bannerBackground },
-  ':before': { background: 'radial-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .85))' },
+
   title: {
+    transform: 'translateY(-30px) scale(1)',
     style: {
       animationName: bannerTitle,
       animationDuration: '3s',
-      animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+      AnimationTimingFunction: 'ease-in-out'
     },
-    h5: { style: { animationName: bannerH5 } }
+    h1: {
+      animationDuration: '2s',
+      AnimationTimingFunction: 'ease-in-out',
+      style: { animationName: bannerh1 }
+    },
+    h5: { fontSize: 'Z', letterSpacing: `${10 / 13}em` }
   }
 }
 

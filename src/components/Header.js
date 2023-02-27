@@ -63,13 +63,13 @@ const props = {
   gap: '0',
   alignSelf: 'center',
   zIndex: '50',
-  border: 'solid, white .75',
-  borderWidth: '0 0 .5px 0',
-  padding: '- V2',
+  border: 'solid, white .55',
+  borderWidth: '0 0 .3px 0',
+  padding: '- V',
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
-    animationDuration: '3s',
+    animationDuration: '2s',
     animationTimingFunction: 'ease-in-out'
   },
 
@@ -96,7 +96,7 @@ const props = {
     },
 
     menu: {
-      width: 'D1',
+      width: 'E2',
       background: 'transparent',
       color: 'white',
       opacity: '.85',
@@ -105,7 +105,7 @@ const props = {
       textTransform: 'uppercase',
       fontWeight: '400',
       fontSize: `${12 / 16}em`,
-      letterSpacing: `${1 / 12}em`,
+      letterSpacing: `${3 / 12}em`,
       position: 'relative',
       transition: 'opacity .15s ease-in-out',
       overflow: 'hidden',

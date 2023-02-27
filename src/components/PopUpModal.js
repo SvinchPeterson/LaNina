@@ -7,13 +7,13 @@ import LOGO_PNG from '../assets/icons/logoBig.png'
 
 const props = {
   position: 'fixed',
-  boxSize: '100% 100%',
+  width: '100%',
   zIndex: '200',
   display: 'flex',
   flow: 'column',
   overflow: 'hidden',
   align: 'center center',
-  style: { transition: 'height .85s ease' },
+  transition: 'height .85s ease',
 
   logo: {
     boxSize: 'D ',
@@ -21,7 +21,7 @@ const props = {
     left: 'C1',
     bottom: 'C',
     zIndex: '2',
-    style: { transition: 'opacity .8s ease-in-out, transform .8s ease-in-out' }
+    transition: 'opacity .8s ease-in-out, transform .8s ease-in-out'
   },
 
   close: {
@@ -30,7 +30,7 @@ const props = {
     right: 'B',
     top: 'B',
     zIndex: '2',
-    style: { transition: 'opacity .5s ease-in-out, transform .5s ease-in-out' },
+    transition: 'opacity .5s ease-in-out, transform .5s ease-in-out',
     icon: { boxSize: 'A2 ' }
   }
 }
@@ -46,9 +46,7 @@ export const PopUpModal = {
       props: { src: CLOSE_PNG }
     }
   },
-
   content: {},
-
   logo: {
     extend: Img,
     props: { src: LOGO_PNG }

@@ -2,14 +2,12 @@
 
 import { Flex, Img } from 'smbls'
 
-import { props } from '../Sololaki'
+import { properties } from './props'
 
-import { Header, Footer, Menu } from '../../components'
-import { banner, georgia, gallery, tours, feedBacks, aboutUs } from '../../sections/travelSections'
-import { popUpGallery } from '../../sections/travelSections/gallery/popUpGallery'
-import CLOSES_PNG from '../../assets/icons/reject.png'
-
-import { planTrip } from './planTrip'
+import { Header, Footer, Menu } from '../components'
+import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip } from '../sections/travelSections'
+import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
+import CLOSES_PNG from '../assets/icons/reject.png'
 
 const state = {
   activeForm: false,
@@ -116,6 +114,11 @@ const state = {
 const menu = {
   extend: Menu,
   navBar: {
+    class: {
+      show: (element, state) => state.activeMenu
+        ? { width: `${400 / 16}em` } : { width: '0' }
+    },
+
     childExtend: {
       on: { click: (event, element, state) => { state.update({ activeMenu: false }) } }
     },
@@ -176,11 +179,7 @@ export const footer = {
 
 export const Travel = {
   extend: Flex,
-
-  props: {
-    ...props,
-    background: 'rgba(229, 249, 252, 1)'
-  },
+  props: properties,
   state,
 
   Header,

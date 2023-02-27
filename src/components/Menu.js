@@ -10,22 +10,26 @@ const props = {
   position: 'fixed',
   top: `${68 / 16}em`,
   alignSelf: 'center',
-  transition: 'height .8s ease',
+  transition: 'height 1s ease',
   overflow: 'hidden',
-  align: 'center center',
-  round: '0 0 G G',
+  align: 'flex-start flex-end',
   style: { mixBlendMode: 'difference' },
 
   navBar: {
+    overflow: 'hidden',
     gap: 'B',
-    transition: 'opacity .5s ease',
+    padding: 'Z2 - - -',
+    transition: 'width .5s ease',
+    align: 'center flex-end',
     childProps: {
       textAlign: 'center',
       color: 'white',
-      fontSize: `${12 / 16}em`,
+      fontSize: `${11.5 / 16}em`,
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: `${2 / 12}em`
+      letterSpacing: `${2 / 12}em`,
+      whiteSpace: 'nowrap',
+      transition: 'opacity .8s ease'
     }
   }
 }
@@ -35,14 +39,17 @@ export const Menu = {
   props,
   class: {
     show: (element, state) => state.activeMenu
-      ? { height: `${50 / 16}em` } : { height: '0' }
+      ? { height: `${30 / 16}em` } : { height: '0' }
   },
 
   navBar: {
     extend: Navbar,
-    class: {
-      show: (element, state) => state.activeMenu
-        ? { opacity: '1' } : { opacity: '0' }
+
+    childExtend: {
+      class: {
+        show: (element, state) => state.activeMenu
+          ? { opacity: '1' } : { opacity: '0' }
+      }
     }
   }
 }

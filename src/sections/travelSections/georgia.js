@@ -5,10 +5,15 @@ import { Paragraph } from '../../components'
 
 const props = {
   alignSelf: 'center',
-  margin: 'F1 - - -',
+  margin: 'G - - -',
   align: 'flex-start flex-start',
   maxWidth: 'H1',
-  gap: 'A'
+  gap: 'A',
+  title: { color: 'naviBlue' },
+  p: {
+    color: 'naviBlue .85',
+    span: { border: '1px solid red' }
+  }
 }
 
 export const georgia = {
@@ -16,6 +21,6 @@ export const georgia = {
   extend: Paragraph,
   props,
 
-  title: { text: 'georgia' },
+  // title: { text: 'georgia' },
   p: { extend: countryText }
 }

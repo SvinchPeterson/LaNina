@@ -11,25 +11,19 @@ export const popUpGallery = {
   extend: PopUpModal,
   props: {
     background: 'naviBlue',
+    height: '0',
     content: { position: 'relative' }
   },
   class: {
     show: (element, state) => state.activePopUpGallery
-      ? {
-        height: '100%'
-      }
-      : {
-        height: '0',
-        pointerEvents: 'none',
-        zIndex: '-1'
-      }
+      ? { height: '100%' }
+      : { height: '0', pointerEvents: 'none' }
   },
 
   close: {
     on: {
       click: (event, element, state) => {
         state.update({
-          activeClose: false,
           activePopUpGallery: false,
           activeTbilisi: false,
           activeBorjomi: false,

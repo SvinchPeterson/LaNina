@@ -60,7 +60,7 @@ export const bannerBackground = keyframes`
 `
 export const bannerTitle = keyframes`
   from {
-    transform: translateY(0px) scale(.95);
+    transform: translateY(0px) scale(.9);
     opacity: 0;
   }
   to {
@@ -68,9 +68,10 @@ export const bannerTitle = keyframes`
     opacity: 1;
   }
 `
-export const bannerH5 = keyframes`
-  from { letter-spacing: 9px; }
-  to { letter-spacing: 10px; }
+
+export const bannerh1 = keyframes`
+  from { letter-spacing: 0; }
+  to { letter-spacing: -4px; }
 `
 
 export const roomOpacityTransform = keyframes`
@@ -89,20 +90,22 @@ export const bannerH1 = keyframes`
   from {
     height: 0;
     opacity: 0;
+    letter-spacing: -10px;
   }
   to {
-    height: 145px;
+    height: 72px;
     opacity: 1;
+    letter-spacing: -4px;
   }
 `
 export const travelBannerH5 = keyframes`
   from {
     opacity: 0;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
   }
   to {
     opacity: 1;
-    letter-spacing: 7.8px;
+    letter-spacing: 10px;
   }
 `
 export const popUpGallery = keyframes`

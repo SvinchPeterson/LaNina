@@ -9,14 +9,12 @@ const props = {
   padding: '0 0 0 0',
   top: '0',
   align: 'center center',
-  alignSelf: 'center',
   overflow: 'hidden',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   ':before': {
     content: '""',
     boxSize: '100% 100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .85))',
     position: 'absolute',
     zIndex: '1',
     bottom: '0',
@@ -30,34 +28,18 @@ const props = {
   },
 
   title: {
+    color: 'cream2',
+    zIndex: '5',
     flow: 'column',
-    gap: 'A',
-    zIndex: '3',
-    transform: 'translateY(-30px) scale(1)',
+    align: 'center flex-start',
     h1: {
-      text: 'BB Residence',
-      fontSize: 'H',
-      padding: '0',
-      margin: '0',
-      minHeight: 'fit-content',
-      fontWeight: '700',
-      color: 'cream2',
-      letterSpacing: `${-2.5 / 57}em`
+      fontSize: 'G',
+      textTransform: 'capitalize',
+      letterSpacing: `-4px`
     },
-
     h5: {
-      text: 'sololaki',
-      color: 'cream2 .85',
-      fontSize: 'A',
-      textTransform: 'uppercase',
-      letterSpacing: `${10 / 16}em`,
-      margin: '-Z2 -Y2 - -',
-      alignSelf: 'center',
       fontWeight: '400',
-      style: {
-        animationDuration: '2s',
-        animationTimingFunction: 'ease-in-out'
-      }
+      textTransform: 'uppercase'
     }
   }
 }

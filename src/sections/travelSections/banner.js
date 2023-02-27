@@ -8,32 +8,27 @@ import { travelBannerH5, positionOpacity, bannerH1 } from '../../animations'
 
 const props = {
   backgroundImage: 'url(' + LAKE_JPG + ')',
+  background: 'radial-gradient(rgba(15, 49, 61, 1), rgba(15, 49, 61, 1))',
   style: { animationName: positionOpacity },
-  ':before': { background: 'radial-gradient(rgba(15, 49, 61, .5), rgba(15, 49, 61, .9))' },
+  ':before': { background: 'radial-gradient(rgba(15, 49, 61, .5), rgba(15, 49, 61, 1))' },
 
   title: {
-    gap: 'A2',
     h1: {
-      textTransform: 'capitalize',
-      fontWeight: '100',
-      letterSpacing: '0px',
-      fontSize: `${130 / 16}em`,
-      height: `${145 / 130}em`,
       overflow: 'hidden',
-      style: {
-        animationName: bannerH1,
-        animationDuration: '2s',
-        animationTimingFunction: 'ease-in-out'
-      }
+      height: `${72 / 48}em`,
+      style: { animationName: bannerH1 },
+      animationDuration: '2.5s',
+      AnimationTimingFunction: 'ease'
     },
-
     h5: {
-      letterSpacing: `7.8px`,
-      color: 'cream2 .85',
-      margin: '-Z2 -Y2 - -0.5px',
-      style: { animationName: travelBannerH5 }
+      fontSize: `${12 / 16}em`,
+      letterSpacing: `${10 / 12}em`,
+      style: { animationName: travelBannerH5 },
+      animationDuration: '2s',
+      AnimationTimingFunction: 'ease'
     }
   }
+
 }
 
 export const banner = {
