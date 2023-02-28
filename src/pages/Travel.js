@@ -6,6 +6,7 @@ import { properties } from './props'
 
 import { Header, Footer, Menu } from '../components'
 import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip } from '../sections/travelSections'
+import { toursContainer } from '../sections/travelSections/tours/toursContainer./index.js'
 import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
 import CLOSES_PNG from '../assets/icons/reject.png'
 
@@ -13,12 +14,21 @@ const state = {
   activeForm: false,
   activeTour: false,
   activeImage: 0,
+  activeToursContainer: false,
 
-  activeDailyTour: false,
-  activeStandardTour: false,
-  activeArmeniaTour: false,
-  activeExclusiveTour: false,
-  activeAdventureTour: false,
+  // activeDailyTour: false,
+  // activeStandardTour: false,
+  // activeArmeniaTour: false,
+  // activeExclusiveTour: false,
+  // activeAdventureTour: false,
+
+  activeDaily: false,
+  activeStandard: false,
+  activeCaucasus: false,
+  activeExclusive: false,
+  activeAdventure: false,
+  activeWineGastronomy: false,
+
   activeArrow: false,
 
   activeTbilisiGalleryImage: 0,
@@ -184,13 +194,14 @@ export const Travel = {
 
   Header,
   menu,
-  banner,
-  georgia,
-  gallery,
-  popUpGallery,
+  // banner,
+  // georgia,
+  // gallery,
+  // popUpGallery,
   tours,
-  feedBacks,
-  aboutUs,
-  planTrip,
+  toursContainer,
+  // feedBacks,
+  // aboutUs,
+  // planTrip,
   footer
 }

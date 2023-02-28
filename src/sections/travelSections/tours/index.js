@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { tabs } from './tabs/index'
+import { tabs } from './tabs'
 
 import ORNAMENT_JPG from '../../../assets/images/travel/ornament2.png'
 
@@ -33,5 +33,4 @@ export const tours = {
   props,
   attr: { id: 'tours' },
   tabs
-  // toursContainer
 }

@@ -15,15 +15,6 @@ const props = {
   align: 'center center',
   transition: 'height .85s ease',
 
-  logo: {
-    boxSize: 'C ',
-    position: 'absolute',
-    left: 'C1',
-    bottom: 'C',
-    zIndex: '2',
-    transition: 'opacity .8s ease-in-out, transform .8s ease-in-out'
-  },
-
   close: {
     background: 'transparent',
     position: 'absolute',
@@ -32,7 +23,17 @@ const props = {
     zIndex: '2',
     transition: 'opacity .5s ease-in-out, transform .5s ease-in-out',
     icon: { boxSize: 'A2 ' }
+  },
+
+  logo: {
+    boxSize: 'C ',
+    position: 'absolute',
+    left: 'C1',
+    bottom: 'C',
+    zIndex: '2',
+    transition: 'opacity .8s ease-in-out, transform .8s ease-in-out'
   }
+
 }
 
 export const PopUpModal = {

@@ -38,3 +38,4 @@ export * from './Back'
 export * from './PopUpModal'
 
 export * from './Menu'
+export * from './TourContainer'
