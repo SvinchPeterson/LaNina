@@ -4,7 +4,7 @@ export const countryText = {
   tag: 'p',
   ...[
     {
-      span: { text: 'Georgia', props: { fontWeight: '700', fontSize: 'C' } },
+      span: { text: 'Georgia' },
       text: `, a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea shores.
       `
     },

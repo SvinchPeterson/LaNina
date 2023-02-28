@@ -13,32 +13,34 @@ const props = {
     gap: 'Z2',
     width: 'fit-content',
     position: 'relative',
+    align: 'center flex-start',
 
     image: {
       boxSize: 'G G',
       background: 'purple',
       position: 'relative',
-      round: 'F2 F2 0 F1',
+      // round: 'F2 F2 0 F1',
+      round: '100%',
       ':after': {
         content: '""',
         position: 'absolute',
         boxSize: '100% 100%',
-        round: 'F2 F2 0 F1',
+        // round: 'F2 F2 0 F1',
+        round: '100%',
         top: '0',
         left: '0',
         background: 'radial-gradient(rgba(15, 49, 61, 0), rgba(15, 49, 61, 1))'
       },
       style: {
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        boxShadow: 'inset 0px 0px 10px 2px black'
+        backgroundPosition: 'center'
       }
     },
 
     paragraph: {
       flow: 'column',
       padding: 'V2 Y - -',
-      alignItems: 'flex-end',
+      alignItems: 'center',
       title: {
         text: 'Alex Smith',
         fontWeight: '100',

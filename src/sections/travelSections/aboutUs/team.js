@@ -97,7 +97,7 @@ const props = {
   ':before': {
     content: '""',
     position: 'absolute',
-    boxSize: 'E2 100%',
+    boxSize: 'G 100%',
     top: '0',
     left: '0',
     pointerEvents: 'none',
@@ -107,7 +107,7 @@ const props = {
   ':after': {
     content: '""',
     position: 'absolute',
-    boxSize: 'E2 100%',
+    boxSize: 'G 100%',
     bottom: '0',
     left: '0',
     pointerEvents: 'none',

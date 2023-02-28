@@ -14,7 +14,7 @@ import WINE_JPG from '../../../../assets/images/travel/wine.jpg'
 import ADVENTURE_JPG from '../../../../assets/images/travel/adventure.jpg'
 
 const props = {
-  minWidth: 'calc(300 * 12)',
+  minWidth: 'calc(355 * 12)',
   position: 'relative',
   boxSizing: 'border-box',
   scrollBehavior: 'smooth',
@@ -44,10 +44,12 @@ export const tabsContent = {
     ...[
       {
         props: {
+          content: {
+            title: { text: 'daily' },
+            image: {
+              backgroundImage: 'url(' + TBILISI_JPG + ')'
+            }
 
-          image: {
-            backgroundImage: 'url(' + TBILISI_JPG + ')',
-            title: { text: 'daily' }
           }
 
         },
@@ -61,9 +63,12 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + STANDART_JPG + ')',
-            title: { text: 'standard' }
+          content: {
+            title: { text: 'standard' },
+            image: {
+              backgroundImage: 'url(' + STANDART_JPG + ')'
+
+            }
           }
         },
         on: {
@@ -75,11 +80,12 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + CAUCASUS_JPG + ')',
-            title: { text: 'caucasus' }
+          content: {
+            title: { text: 'caucasus' },
+            image: {
+              backgroundImage: 'url(' + CAUCASUS_JPG + ')'
+            }
           }
-
         },
 
         on: {
@@ -91,9 +97,11 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + EXCLUSIVE_JPG + ')',
-            title: { text: 'exclusive', color: 'orange3' }
+          content: {
+            title: { text: 'exclusive' },
+            image: {
+              backgroundImage: 'url(' + EXCLUSIVE_JPG + ')'
+            }
           },
           ':after': { background: 'blue3 .7' }
         },
@@ -107,10 +115,14 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + WINE_JPG + ')',
-            title: { text: 'wine & gastronomy' }
+          content: {
+            title: { text: 'wine & gastronomy' },
+            image: {
+              backgroundImage: 'url(' + WINE_JPG + ')'
+            }
+
           }
+
         },
 
         on: {
@@ -122,9 +134,11 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + ADVENTURE_JPG + ')',
-            title: { text: 'adventure' }
+          content: {
+            title: { text: 'adventure' },
+            image: {
+              backgroundImage: 'url(' + ADVENTURE_JPG + ')'
+            }
           }
         },
 
@@ -137,10 +151,14 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + TBILISI_JPG + ')',
-            title: { text: 'daily' }
+          content: {
+            title: { text: 'daily' },
+            image: {
+              backgroundImage: 'url(' + TBILISI_JPG + ')'
+            }
+
           }
+
         },
 
         on: {
@@ -152,9 +170,11 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + STANDART_JPG + ')',
-            title: { text: 'standard' }
+          content: {
+            title: { text: 'standard' },
+            image: {
+              backgroundImage: 'url(' + STANDART_JPG + ')'
+            }
           }
         },
         on: {
@@ -166,9 +186,12 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + CAUCASUS_JPG + ')',
-            title: { text: 'caucasus' }
+          content: {
+            title: { text: 'caucasus' },
+            image: {
+              backgroundImage: 'url(' + CAUCASUS_JPG + ')'
+
+            }
           }
         },
 
@@ -181,9 +204,12 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + EXCLUSIVE_JPG + ')',
-            title: { text: 'exclusive', color: 'gold' }
+          content: {
+            title: { text: 'exclusive' },
+            image: {
+              backgroundImage: 'url(' + EXCLUSIVE_JPG + ')'
+
+            }
           },
           ':after': { background: 'blue3 .7' }
         },
@@ -197,9 +223,13 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + WINE_JPG + ')',
-            title: { text: 'wine & gastronomy' }
+          content: {
+            title: { text: 'wine & gastronomy' },
+            image: {
+              backgroundImage: 'url(' + WINE_JPG + ')'
+
+            }
+
           }
 
         },
@@ -213,9 +243,11 @@ export const tabsContent = {
 
       {
         props: {
-          image: {
-            backgroundImage: 'url(' + ADVENTURE_JPG + ')',
-            title: { text: 'adventure' }
+          content: {
+            title: { text: 'adventure' },
+            image: {
+              backgroundImage: 'url(' + ADVENTURE_JPG + ')'
+            }
           }
         },
 
@@ -225,6 +257,7 @@ export const tabsContent = {
           }
         }
       }
+
     ]
   }
 }

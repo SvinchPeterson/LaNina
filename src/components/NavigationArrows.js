@@ -67,6 +67,14 @@ export const HorArrowsWhiteBor = {
   ]
 }
 
+export const HorArrowsCreamBor = {
+  extend: HorArrowsBor,
+  ...[
+    { arrow: { props: { src: LEFT_ARROW_CREAM_PNG } } },
+    { arrow: { props: { src: RIGHT_ARROW_CREAM_PNG } } }
+  ]
+}
+
 export const HorArrows = {
   extend: NavArrows,
   props: {

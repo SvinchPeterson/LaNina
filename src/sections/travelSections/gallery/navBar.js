@@ -23,6 +23,7 @@ const props = {
     letterSpacing: '2px',
     cursor: 'pointer',
     opacity: '.5',
+    color: 'cream2',
     transition: 'opacity .3s ease-in-out, transform .8s ease-in-out, padding .8s ease-in-out, letter-spacing .8s ease-in-out',
     ':hover': {
       opacity: '.8',

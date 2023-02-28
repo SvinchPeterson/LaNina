@@ -1,6 +1,6 @@
 'use strict'
 
-import { GalleryContainer, HorArrowsWhiteBor } from '../../../components'
+import { GalleryContainer, HorArrowsCreamBor } from '../../../components'
 
 import { galleryTbilisi, galleryBorjomi, galleryMtsketa, galleryKakheti, galleryMartvili, galleryKutaisi, galleryGori, galleryKazbegi } from '../../../galleries/travelGalleries/placesGalleries'
 
@@ -46,7 +46,7 @@ const galleryContainer = {
   extend: GalleryContainer,
   book: null,
   gallery: {},
-  navArrows: { extend: HorArrowsWhiteBor }
+  navArrows: { extend: HorArrowsCreamBor }
 }
 
 export const galleries = {
@@ -63,7 +63,7 @@ export const galleries = {
         extend: galleryTbilisi,
         class: {
           show: (element, state) => state.activeTbilisi
-            ? { width: '608px' }
+            ? { width: `${608 / 16}em` }
             : { width: '0', opacity: '0' }
         }
       },
@@ -109,7 +109,7 @@ export const galleries = {
         extend: galleryBorjomi,
         class: {
           show: (element, state) => state.activeBorjomi
-            ? { width: '608px' }
+            ? { width: `${608 / 16}em` }
             : { width: '0', opacity: '0' }
         }
       },
@@ -155,7 +155,7 @@ export const galleries = {
         extend: galleryMtsketa,
         class: {
           show: (element, state) => state.activeMtsketa
-            ? { width: '608px' }
+            ? { width: `${608 / 16}em` }
             : { width: '0', opacity: '0' }
         }
       },
@@ -201,7 +201,7 @@ export const galleries = {
         extend: galleryKakheti,
         class: {
           show: (element, state) => state.activeKakheti
-            ? { width: '608px' }
+            ? { width: `${608 / 16}em` }
             : { width: '0', opacity: '0' }
         }
       },
@@ -247,7 +247,7 @@ export const galleries = {
         extend: galleryMartvili,
         class: {
           show: (element, state) => state.activeMartvili
-            ? { width: '608px' }
+            ? { width: `${608 / 16}em` }
             : { width: '0', opacity: '0' }
         }
       },
@@ -293,7 +293,7 @@ export const galleries = {
         extend: galleryKutaisi,
         class: {
           show: (element, state) => state.activeKutaisi
-            ? { width: '608px' }
+            ? { width: `${608 / 16}em` }
             : { width: '0', opacity: '0' }
         }
       },
@@ -339,7 +339,7 @@ export const galleries = {
         extend: galleryGori,
         class: {
           show: (element, state) => state.activeGori
-            ? { width: '608px' }
+            ? { width: `${608 / 16}em` }
             : { width: '0', opacity: '0' }
         }
       },
@@ -385,7 +385,7 @@ export const galleries = {
         extend: galleryKazbegi,
         class: {
           show: (element, state) => state.activeKazbegi
-            ? { width: '608px' }
+            ? { width: `${608 / 16}em` }
             : { width: '0', opacity: '0' }
         }
       },

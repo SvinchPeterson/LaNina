@@ -11,7 +11,7 @@ const props = {
     fontWeight: '700',
     fontSize: 'E',
     textTransform: 'capitalize',
-    letterSpacing: '-1px',
+    letterSpacing: '-2px',
     margin: '0'
   },
 

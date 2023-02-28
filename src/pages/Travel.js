@@ -179,7 +179,7 @@ export const footer = {
 
 export const Travel = {
   extend: Flex,
-  props: properties,
+  props: { ...properties, background: 'backgroundBlue2' },
   state,
 
   Header,

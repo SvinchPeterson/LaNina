@@ -14,20 +14,20 @@ const props = {
 
   title: {
     text: 'gallery',
-    fontSize: 'A',
-    textTransform: 'uppercase',
+    fontSize: 'E',
+    textTransform: 'capitalize',
     fontWeight: '700',
     display: 'flex',
     position: 'absolute',
-    top: 'H2',
-    left: 'D1',
-    gap: 'A1',
+    top: 'G',
+    left: 'B1',
+    gap: 'Y',
     alignItems: 'center',
-    letterSpacing: `1em`,
+    letterSpacing: `${-1.5 / 33}em`,
     transform: 'rotate(180deg)',
     '&:before': {
       content: '""',
-      boxSize: 'D1 U',
+      boxSize: 'B2 U',
       background: 'black',
       display: 'block',
       round: 'A'

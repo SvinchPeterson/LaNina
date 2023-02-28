@@ -11,8 +11,13 @@ const props = {
   gap: 'A',
   title: { color: 'naviBlue' },
   p: {
-    color: 'naviBlue .85',
-    span: { border: '1px solid red' }
+    childProps: {
+      span: {
+        fontSize: 'C',
+        fontWeight: '700',
+        letterSpacing: '-1px'
+      }
+    }
   }
 }
 

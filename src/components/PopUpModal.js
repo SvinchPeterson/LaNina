@@ -3,7 +3,7 @@
 import { Img, Flex, Button } from 'smbls'
 
 import CLOSE_PNG from '../assets/icons/close.png'
-import LOGO_PNG from '../assets/icons/logoBig.png'
+import LOGO_PNG from '../assets/icons/logoCream.png'
 
 const props = {
   position: 'fixed',
@@ -16,7 +16,7 @@ const props = {
   transition: 'height .85s ease',
 
   logo: {
-    boxSize: 'D ',
+    boxSize: 'C ',
     position: 'absolute',
     left: 'C1',
     bottom: 'C',
