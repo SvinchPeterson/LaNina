@@ -3,19 +3,19 @@
 import { Flex, Button } from 'smbls'
 
 const props = {
-  boxSize: 'D1 100%',
+  boxSize: 'D2 100%',
   align: 'flex-end space-between',
   color: 'cream2',
   border: 'solid, cream2 .5',
   borderWidth: '0 0 .5px 0',
-  padding: '- Z - -',
+  padding: '- V Z -',
   transition: 'opacity .5s ease-in-out',
   titles: {
     position: 'relative',
     childProps: {
       position: 'absolute',
       left: '0',
-      bottom: 'X1',
+      bottom: '0',
       whiteSpace: 'nowrap',
       lineHeight: `${22 / 28}em`,
       fontSize: 'D',
@@ -29,7 +29,6 @@ const props = {
 
   tabs: {
     gap: 'A',
-    padding: '- - Y -',
     childProps: {
       fontSize: `${14 / 16}em`,
       fontWeight: '400',

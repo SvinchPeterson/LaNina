@@ -93,6 +93,8 @@ import ORNAMENT_JPG from '../../../../assets/images/travel/ornament2.png'
 // ----------------------
 
 const props = {
+  // width: '100%',
+  // height: '100%',
   position: 'fixed',
   backgroundImage: 'url(' + ORNAMENT_JPG + ')',
   backgroundSize: 'cover',
@@ -108,18 +110,23 @@ const props = {
     left: '0',
     background: 'radial-gradient(rgba(15, 49, 61, .7), rgba(15, 49, 61, 1), rgba(15, 49, 61, 1))'
   },
+  close: { top: 'A2', right: 'A1' },
 
   content: {
-    boxSize: '100% 80%',
+    boxSize: '100% 100%',
+    maxWidth: '1200px',
     flow: 'column',
     overflow: 'hidden',
     zIndex: '1',
     tours: {
       flex: '1',
       position: 'relative',
-      style: { overflowY: 'auto' }
+      flow: 'column',
+      style: { overflowY: 'auto', '::-webkit-scrollbar': { display: 'none' } }
     }
-  }
+  },
+
+  logo: { bottom: 'A2', left: 'B' }
 }
 
 export const toursContainer = {
@@ -156,6 +163,8 @@ export const toursContainer = {
     extend: Flex,
     header,
     tours: {
+      extend: Flex,
+
       daily,
       standard,
       caucasus,

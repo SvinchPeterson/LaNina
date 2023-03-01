@@ -48,6 +48,11 @@ import JINVALI_JPG from '../../assets/images/travel/ananuri-gudauri/jinvali.jpg'
 import ANANURI_JPG from '../../assets/images/travel/ananuri-gudauri/ananuri.jpg'
 import GUDAURI_JPG from '../../assets/images/travel/ananuri-gudauri/gudauri.jpg'
 
+import RABAT_JPG from '../../assets/images/travel/rabati/rabat.jpeg'
+import RABAT2_JPG from '../../assets/images/travel/rabati/rabati3.jpg'
+import RABAT3_JPG from '../../assets/images/travel/rabati/rabati2.jpg'
+import RABAT4_JPG from '../../assets/images/travel/rabati/rabat4.jpg'
+
 export const galleryTbilisi = {
   extend: Gallery,
   ...[
@@ -131,5 +136,15 @@ export const galleryKazbegi = {
     { props: { backgroundImage: 'url(' + JINVALI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + ANANURI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + GUDAURI_JPG + ')' } }
+  ]
+}
+
+export const galleryRabati = {
+  extend: Gallery,
+  ...[
+    { props: { backgroundImage: 'url(' + RABAT_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + RABAT2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + RABAT3_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + RABAT4_JPG + ')' } }
   ]
 }

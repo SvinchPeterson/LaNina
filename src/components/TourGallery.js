@@ -1,102 +1,72 @@
 'use strict'
 
-import { Img, Flex } from 'smbls'
+import { Button, Flex } from 'smbls'
 
-import { NavHorizontalArrowsBlack } from './NavigationArrows'
-import { Book } from './Book'
+import { Gallery } from './Gallery'
+
+import { HorArrowsCreamBor } from './NavigationArrows'
 
 const props = {
   flow: 'column',
-  gap: 'Z',
-  position: 'relative',
-
   title: {
-    text: 'Tbilisi City Tour',
-    fontWeight: '700',
-    fontSize: 'A',
-    color: 'black',
-    textTransform: 'uppercase',
-    padding: '- - - Z',
-    '@mobileXS': { fontSize: `${15.5 / 16}em` }
+    fontSize: 'Z',
+    fontWeight: '400',
+    color: 'cream2',
+    letterSpacing: `${5 / 13}em`,
+    textTransform: 'uppercase'
   },
 
-  images: {
-    boxSize: 'G1 H1',
-    display: 'block',
-    overflow: 'hidden',
+  gallery: {
+    width: 'H1',
+    height: 'G1',
     position: 'relative',
-    childProps: {
-      position: 'absolute',
-      boxSize: '100% 100%',
-      overflow: 'hidden'
-    },
-    style: { overflow: 'hidden' },
-    ':after': {
+    ':before': {
       content: '""',
       position: 'absolute',
-      boxSize: '100% 100%',
-      background: 'linear-gradient(rgba(30, 52, 71, .25), rgba(30, 52, 71, .45))'
-      // round: '0 F F 0'
+      boxSize: '100% H2',
+      zIndex: '3'
     }
   },
 
   footer: {
-    margin: 'Z - - -',
-    padding: 'Z - - -',
-    width: '70%',
-    borderTop: '1px solid gray',
-    flow: 'row-reverse',
+    border: 'solid, cream2 .5',
+    borderWidth: '.5px 0 0 0',
     align: 'center space-between',
-    navArrow: {
-      ':after': { display: 'none' },
-      gap: 'B',
-      childProps: {
-        boxSize: 'C1 C1',
-        borderRadius: '100%',
-        border: '1px solid gray',
-        padding: '0',
-        // '@mobileM': {
-        //   boxSize: 'C2 C2'
-        // },
-        arrow: { fontSize: '11px' }
-      }
-    },
-
+    width: '65%',
+    margin: 'A - - -',
+    padding: 'Z - - -',
     book: {
-      border: '1px solid gray',
+      fontSize: `${14.5 / 16}em`,
+      height: `${40 / 14.5}em`,
+      padding: '0 B1',
       background: 'transparent',
-      padding: 'Z1 B2',
-      cursor: 'pointer',
-      span: {
-        color: 'black',
-        fontSize: 'B'
+      border: 'solid, cream2 .35',
+      borderWidth: '.75px',
+      color: 'cream2',
+      // height: 'fit-content',
+      textTransform: 'uppercase',
+      fontWeight: '700',
+      opacity: '.85',
+      ':hover': { opacity: '1' }
+    },
+    navArrows: {
+      childProps: {
+        boxSize: '40px 40px'
+        // arrow: { boxSize: ' Y2' }
       }
     }
   }
+
 }
 
 export const TourGallery = {
   extend: Flex,
   props,
-
-  title: { tag: 'label' },
-
-  images: { childExtend: { extend: Img } },
-
+  title: { tag: 'h5' },
+  gallery: { extend: Gallery },
   footer: {
     extend: Flex,
-
-    navArrow: { extend: NavHorizontalArrowsBlack },
-
-    book: {
-      tag: 'button',
-      extend: Book,
-      on: {
-        click: (event, element, state) => {
-          console.log('gela')
-          state.update({ activeTbilisiBooking: true })
-        }
-      }
-    }
+    book: { extend: Button, text: 'book' },
+    navArrows: { extend: HorArrowsCreamBor }
   }
 }

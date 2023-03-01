@@ -33,7 +33,7 @@ const state = {
 
   activeTbilisiGalleryImage: 0,
   activeAnanuriGudauriGalleryImage: 0,
-  activeCanyonGalleryImage: 0,
+  activeDashbashiGalleryImage: 0,
   activeKakhetiGalleryImage: 0,
   activeKutaisiGalleryImage: 0,
   activeGoriGalleryImage: 0,
@@ -194,14 +194,14 @@ export const Travel = {
 
   Header,
   menu,
-  // banner,
-  // georgia,
-  // gallery,
-  // popUpGallery,
+  banner,
+  georgia,
+  gallery,
+  popUpGallery,
   tours,
   toursContainer,
-  // feedBacks,
-  // aboutUs,
-  // planTrip,
+  feedBacks,
+  aboutUs,
+  planTrip,
   footer
 }
