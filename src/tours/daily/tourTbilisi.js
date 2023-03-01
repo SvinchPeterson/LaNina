@@ -2,7 +2,7 @@
 
 import { Tour } from '../../components'
 
-import { galleryTbilisi } from '../../galleries/travelGalleries/placesGalleries'
+import { galleryTbilisi } from '../../galleries/travelGalleries'
 
 import { textTbilisi } from '../../texts/travelTexts'
 

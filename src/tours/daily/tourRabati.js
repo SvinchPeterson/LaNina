@@ -2,7 +2,7 @@
 
 import { Tour } from '../../components'
 
-import { galleryRabati } from '../../galleries/travelGalleries/placesGalleries'
+import { galleryRabati } from '../../galleries/travelGalleries'
 
 import { textRabati } from '../../texts/travelTexts'
 

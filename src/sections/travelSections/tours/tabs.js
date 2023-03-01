@@ -123,6 +123,7 @@ const content = {
       {
         props: {
           content: {
+            background: 'linear-gradient(rgba(220, 187, 140, 0) 30%, rgba(220, 187, 140, .25) 70%)',
             title: { text: 'exclusive' },
             image: {
               backgroundImage: 'url(' + EXCLUSIVE_JPG + ')'
@@ -230,6 +231,7 @@ const content = {
       {
         props: {
           content: {
+            background: 'linear-gradient(rgba(220, 187, 140, 0) 30%, rgba(220, 187, 140, .25) 70%)',
             title: { text: 'exclusive' },
             image: {
               backgroundImage: 'url(' + EXCLUSIVE_JPG + ')'

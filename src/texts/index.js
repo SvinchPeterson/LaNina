@@ -1,6 +1,6 @@
 'use strict'
 
-import { Text, Flex } from 'smbls'
+import { Text } from 'smbls'
 
 export const aboutText = {
   tag: 'p',
@@ -167,23 +167,6 @@ export const abuli = {
     {
       props: {
         text: `The fortress has the shape of the ring. We can distinguish tower and living quarters inside the fort. Now in the area are no water sources. There are also not found cultural layers, although the excavations were not conducted seriously. In the current climatic conditions Abuli cleavage at such a height is not suitable for life, because of too low temperatures, although the Javakheti plateau everywhere are scattered ruins from different epochs, which show once active life in these parts, when the climate was warmer and softer.`
-      }
-    }
-  ]
-}
-
-export const adventure = {
-  ...[
-    {
-      props: {
-        text: `, a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea beaches. Neighbor Countries -Turkey, Russia, Azerbaijan, Armenia. Georgia's Is Famous for UNESCO World Heritage Listed Churches`,
-        span: { text: 'Georgia' }
-      },
-      span: {}
-    },
-    {
-      props: {
-        text: `Beautiful Nature and lots of Caves, most important -'World's oldest wine' found in 8,000-year-old (Qvevri ) Clay Pot in Georgia, The capital, Tbilisi, is known for the diverse architecture and mazelike, cobblestone streets of its old town. Georgia's total territory covers 69,700 square kilometers. Population in Georgia is almost 4 million. Georgian currency is Georgian Lari ( ₾ ) (GEL).`
       }
     }
   ]

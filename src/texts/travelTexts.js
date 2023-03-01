@@ -237,3 +237,20 @@ tourist to the area;
   },
   span: {}
 }
+
+export const textAdventure = {
+  ...[
+    {
+      props: {
+        text: `, a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea beaches. Neighbor Countries -Turkey, Russia, Azerbaijan, Armenia. Georgia's Is Famous for UNESCO World Heritage Listed Churches`,
+        span: { text: 'Georgia' }
+      },
+      span: {}
+    },
+    {
+      props: {
+        text: `Beautiful Nature and lots of Caves, most important -'World's oldest wine' found in 8,000-year-old (Qvevri ) Clay Pot in Georgia, The capital, Tbilisi, is known for the diverse architecture and mazelike, cobblestone streets of its old town. Georgia's total territory covers 69,700 square kilometers. Population in Georgia is almost 4 million. Georgian currency is Georgian Lari ( ₾ ) (GEL).`
+      }
+    }
+  ]
+}

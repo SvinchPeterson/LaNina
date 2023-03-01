@@ -2,7 +2,7 @@
 
 import { Tour } from '../../components'
 
-import { galleryKutaisi } from '../../galleries/travelGalleries/placesGalleries'
+import { galleryKutaisi } from '../../galleries/travelGalleries'
 
 import { textKutaisi } from '../../texts/travelTexts'
 

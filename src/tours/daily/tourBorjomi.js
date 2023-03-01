@@ -2,7 +2,7 @@
 
 import { Tour } from '../../components'
 
-import { galleryBorjomi } from '../../galleries/travelGalleries/placesGalleries'
+import { galleryBorjomi } from '../../galleries/travelGalleries'
 
 import { textBorjomi } from '../../texts/travelTexts'
 

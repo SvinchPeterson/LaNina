@@ -2,7 +2,7 @@
 
 import { Tour } from '../../components'
 
-import { galleryMtsketa } from '../../galleries/travelGalleries/placesGalleries'
+import { galleryMtsketa } from '../../galleries/travelGalleries'
 
 import { textMtsketa } from '../../texts/travelTexts'
 

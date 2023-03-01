@@ -2,7 +2,7 @@
 
 import { Tour } from '../../components'
 
-import { galleryMartvili } from '../../galleries/travelGalleries/placesGalleries'
+import { galleryMartvili } from '../../galleries/travelGalleries'
 
 import { textDashbashi } from '../../texts/travelTexts'
 

@@ -11,7 +11,6 @@ const props = {
   padding: 'C2 - - -',
   flow: 'column',
   gap: 'D1'
-
 }
 
 export const TourContainer = {

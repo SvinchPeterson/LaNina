@@ -93,8 +93,6 @@ import ORNAMENT_JPG from '../../../../assets/images/travel/ornament2.png'
 // ----------------------
 
 const props = {
-  // width: '100%',
-  // height: '100%',
   position: 'fixed',
   backgroundImage: 'url(' + ORNAMENT_JPG + ')',
   backgroundSize: 'cover',

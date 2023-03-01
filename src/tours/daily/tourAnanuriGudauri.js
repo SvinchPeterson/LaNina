@@ -2,7 +2,7 @@
 
 import { Tour } from '../../components'
 
-import { galleryKazbegi } from '../../galleries/travelGalleries/placesGalleries'
+import { galleryKazbegi } from '../../galleries/travelGalleries'
 
 import { textAnanuri, textGudauri, textGergeti } from '../../texts/travelTexts'
 

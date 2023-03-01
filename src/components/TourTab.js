@@ -12,21 +12,22 @@ const props = {
     flow: 'column',
     align: 'center space-between',
     boxSize: '100% 100%',
-    border: 'solid, cream2 .5',
-    borderWidth: `${0.5 / 16}em`,
-    round: '0 0 F F',
+    border: 'solid, cream2 .15',
+    borderWidth: `0 ${0.25 / 16}em ${0.25 / 16}em ${0.25 / 16}em`,
+    round: 'B B F F',
     padding: 'B - C -',
+    background: 'linear-gradient(rgba(248, 241, 227, 0) 30%, rgba(248, 241, 227, .1) 70%)',
     ':hover > div': {
       backgroundPosition: 'top left',
       ':after': { opacity: '.65' }
     },
     ':hover > h5': { color: 'orange3', transform: 'scale(1.05)' },
-    style: { backdropFilter: 'blur(1px)' },
+    style: { backdropFilter: 'blur(.5px)' },
 
     title: {
       textTransform: 'capitalize',
       color: 'cream2',
-      fontSize: 'D',
+      fontSize: `${32 / 16}em`,
       fontWeight: '100',
       transition: 'color 1s ease, transform 1s ease'
     },
@@ -37,7 +38,7 @@ const props = {
       round: '100%',
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
-      transition: 'background-position 1s ease',
+      transition: 'background-position 1s ease-in-out',
       overflow: 'hidden',
       ':after': {
         content: '""',

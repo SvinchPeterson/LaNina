@@ -2,7 +2,7 @@
 
 import { GalleryContainer, HorArrowsCreamBor } from '../../../components'
 
-import { galleryTbilisi, galleryBorjomi, galleryMtsketa, galleryKakheti, galleryMartvili, galleryKutaisi, galleryGori, galleryKazbegi } from '../../../galleries/travelGalleries/placesGalleries'
+import { galleryTbilisi, galleryBorjomi, galleryMtsketa, galleryKakheti, galleryMartvili, galleryKutaisi, galleryGori, galleryKazbegi } from '../../../galleries/travelGalleries'
 
 const props = {
   boxSize: 'H1 H3',

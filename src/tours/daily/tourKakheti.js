@@ -2,7 +2,7 @@
 
 import { Tour } from '../../components'
 
-import { galleryKakheti } from '../../galleries/travelGalleries/placesGalleries'
+import { galleryKakheti } from '../../galleries/travelGalleries'
 
 import { textKakheti } from '../../texts/travelTexts'
 

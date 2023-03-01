@@ -10,6 +10,7 @@ const props = {
   borderWidth: '0 0 .5px 0',
   padding: '- V Z -',
   transition: 'opacity .5s ease-in-out',
+  zIndex: '10',
   titles: {
     position: 'relative',
     childProps: {
