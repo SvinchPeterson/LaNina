@@ -85,6 +85,26 @@ import SVANETI_JPG from '../assets/images/travel/svaneti/svaneti.jpg'
 import MESTIA_JPG from '../assets/images/travel/svaneti/mestia.jpg'
 import ZUGDIDI_JPG from '../assets/images/travel/zugdidi.jpg'
 
+import ATENIS_JPG from '../assets/images/travel/wine&gastronomy/Atenis.jpg'
+import BALDA_JPG from '../assets/images/travel/wine&gastronomy/balda.jpg'
+import CINANDALI_JPG from '../assets/images/travel/wine&gastronomy/cinandali.jpg'
+import GIUNI_JPG from '../assets/images/travel/wine&gastronomy/giuani.jpeg'
+import KHAREBA_JPG from '../assets/images/travel/wine&gastronomy/khareba.jpg'
+import KHAREBA2_JPG from '../assets/images/travel/wine&gastronomy/khareba2.jpg'
+import MANAVI_JPG from '../assets/images/travel/wine&gastronomy/manavi.jpg'
+import YVARELI_JPG from '../assets/images/travel/wine&gastronomy/yvareli.jpg'
+import MARTVILI_JPG from '../assets/images/travel/wine&gastronomy/martvili.jpg'
+import MARTVILI2_JPG from '../assets/images/travel/wine&gastronomy/martvili2.jpg'
+import RACHA_JPG from '../assets/images/travel/wine&gastronomy/racha.jpg'
+import SALKHINO_JPG from '../assets/images/travel/wine&gastronomy/salkhino.jpg'
+import WYALTUBO_JPG from '../assets/images/travel/wine&gastronomy/wyaltubo.jpg'
+import WYALTUBO2_JPG from '../assets/images/travel/wine&gastronomy/wyaltubo2.jpg'
+import WYALTUBO3_JPG from '../assets/images/travel/wine&gastronomy/wyaltubo3.jpg'
+import SIONI_JPG from '../assets/images/travel/wine&gastronomy/sioni.jpg'
+import BATUMI_JPG from '../assets/images/travel/wine&gastronomy/batumi.jpg'
+import BATUMI2_JPG from '../assets/images/travel/wine&gastronomy/batumi2.jpg'
+import BATUMI3_JPG from '../assets/images/travel/wine&gastronomy/batumi3.jpg'
+
 export const galleryTbilisi = {
   extend: Gallery,
   ...[
@@ -314,5 +334,33 @@ export const galleryExclusiveTour = {
     { props: { backgroundImage: 'url(' + GARNI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + SAMSHVILDE_JPG + ')' } },
     { props: { backgroundImage: 'url(' + SHAORI_JPG + ')' } }
+  ]
+}
+
+export const galleryWineGastronomyTour = {
+  extend: Gallery,
+  ...[
+    { props: { backgroundImage: 'url(' + KHAREBA_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + KHAREBA2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + GIUNI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + MANAVI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + CINANDALI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + YVARELI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + SIONI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + ATENIS_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + KUTAISI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + RABAT_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + RABAT2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + RACHA_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + WYALTUBO_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + WYALTUBO2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + WYALTUBO3_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BALDA_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + MARTVILI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + MARTVILI2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + SALKHINO_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BATUMI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BATUMI2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BATUMI3_JPG + ')' } }
   ]
 }
