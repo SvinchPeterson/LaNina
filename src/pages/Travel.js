@@ -193,15 +193,15 @@ export const Travel = {
   state,
 
   Header,
-  menu,
-  banner,
-  georgia,
-  gallery,
-  popUpGallery,
+  // menu,
+  // banner,
+  // georgia,
+  // gallery,
+  // popUpGallery,
   tours,
   toursContainer,
-  feedBacks,
-  aboutUs,
-  planTrip,
+  // feedBacks,
+  // aboutUs,
+  // planTrip,
   footer
 }

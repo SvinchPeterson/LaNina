@@ -4,7 +4,7 @@ import { Tour } from '../../components'
 
 import { galleryBorjomi } from '../../galleries/travelGalleries'
 
-import { textBorjomi } from '../../texts/travelTexts'
+import { descriptionBorjomi } from '../../texts/travelTexts/toursDescriptions'
 
 const props = {
   gallery: {
@@ -29,25 +29,7 @@ const props = {
 export const tourBorjomi = {
   extend: Tour,
   props,
-
-  article: {
-    articleContent: {
-      paragraphs: {
-        textBorjomi
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Borjomi Central Park' },
-            { text: 'Mineral Water tasting' },
-            { text: 'Cable Car' }
-          ]
-        }
-      }
-    }
-  },
-
+  description: { extend: descriptionBorjomi },
   gallery: {
     title: { text: 'BORJOMI' },
     gallery: {

@@ -4,7 +4,7 @@ import { Tour } from '../../components'
 
 import { galleryMtsketa } from '../../galleries/travelGalleries'
 
-import { textMtsketa } from '../../texts/travelTexts'
+import { descriptionMtsketa } from '../../texts/travelTexts/toursDescriptions'
 
 const props = {
   gallery: {
@@ -30,22 +30,7 @@ export const tourMtsketa = {
   extend: Tour,
   props,
 
-  article: {
-    articleContent: {
-      paragraphs: {
-        textMtsketa
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Svetitskhoveli Cathedral 11th' },
-            { text: 'Svetitskhoveli Cathedral 11th' }
-          ]
-        }
-      }
-    }
-  },
+  description: { extend: descriptionMtsketa },
 
   gallery: {
     title: { text: 'MTSKETA' },

@@ -4,7 +4,7 @@ import { Tour } from '../../components'
 
 import { galleryKutaisi } from '../../galleries/travelGalleries'
 
-import { textKutaisi } from '../../texts/travelTexts'
+import { descriptionKutaisi } from '../../texts/travelTexts/toursDescriptions'
 
 const props = {
   gallery: {
@@ -30,22 +30,7 @@ export const tourKutaisi = {
   extend: Tour,
   props,
 
-  article: {
-    articleContent: {
-      paragraphs: {
-        textKutaisi
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Prometheus Cave' },
-            { text: 'Martvili Canyon' }
-          ]
-        }
-      }
-    }
-  },
+  description: { extend: descriptionKutaisi },
 
   gallery: {
     title: { text: 'KUTAISI' },

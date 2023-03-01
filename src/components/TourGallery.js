@@ -56,7 +56,6 @@ const props = {
       }
     }
   }
-
 }
 
 export const TourGallery = {

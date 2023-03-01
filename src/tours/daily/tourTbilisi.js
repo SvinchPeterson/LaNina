@@ -3,8 +3,7 @@
 import { Tour } from '../../components'
 
 import { galleryTbilisi } from '../../galleries/travelGalleries'
-
-import { textTbilisi } from '../../texts/travelTexts'
+import { descriptionTbilisi } from '../../texts/travelTexts/toursDescriptions'
 
 const props = {
   gallery: {
@@ -26,6 +25,7 @@ export const tourTbilisi = {
 
   gallery: {
     title: { text: 'Tbilisi city tour' },
+
     gallery: {
       extend: galleryTbilisi,
       childExtend: {
@@ -35,6 +35,7 @@ export const tourTbilisi = {
         }
       }
     },
+
     footer: {
       book: {},
       navArrows: {
@@ -71,26 +72,6 @@ export const tourTbilisi = {
     }
   },
 
-  article: {
-    articleContent: {
-      paragraphs: {
-        textTbilisi
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Mtatsminda Park by Train' },
-            { text: 'Abanotubani' },
-            { text: 'London bridge' },
-            { text: 'Legvtakhevi Waterfall' },
-            { text: 'I Love Tbilisi Statue' },
-            { text: 'Leselidze souvenires streete' },
-            { text: 'Meidan bazaar' },
-            { text: 'Bridge of Peace' }
-          ]
-        }
-      }
-    }
-  }
+  description: { extend: descriptionTbilisi }
+
 }

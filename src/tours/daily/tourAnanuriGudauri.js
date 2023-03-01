@@ -4,7 +4,7 @@ import { Tour } from '../../components'
 
 import { galleryKazbegi } from '../../galleries/travelGalleries'
 
-import { textAnanuri, textGudauri, textGergeti } from '../../texts/travelTexts'
+import { descriptionAnanuri } from '../../texts/travelTexts/toursDescriptions'
 
 const props = {
   gallery: {
@@ -30,27 +30,7 @@ export const tourAnanuriGudauri = {
   extend: Tour,
   props,
 
-  article: {
-    articleContent: {
-      paragraphs: {
-        textAnanuri,
-        textGudauri,
-        textGergeti
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Zhinvali Water Reservoir' },
-            { text: ' Ananuri Fortress' },
-            { text: 'Gudauri Panorama' },
-            { text: 'Spring Water Mountain' },
-            { text: 'Kazbegi city ( Gergeti church extra charge)' }
-          ]
-        }
-      }
-    }
-  },
+  description: { extend: descriptionAnanuri },
 
   gallery: {
     title: { text: 'ANANURI . GUDAURI . KAZBEGI' },

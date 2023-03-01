@@ -4,7 +4,7 @@ import { Tour } from '../../components'
 
 import { galleryKakheti } from '../../galleries/travelGalleries'
 
-import { textKakheti } from '../../texts/travelTexts'
+import { descriptionKakheti } from '../../texts/travelTexts/toursDescriptions'
 
 const props = {
   gallery: {
@@ -71,22 +71,5 @@ export const tourKakheti = {
     }
   },
 
-  article: {
-    articleContent: {
-      paragraphs: {
-        textKakheti
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Wine Tasting in Traditional Winery' },
-            { text: 'Bodbe Monastery' },
-            { text: 'ST. Nino Waterfall' },
-            { text: 'Signagi City' }
-          ]
-        }
-      }
-    }
-  }
+  description: { extend: descriptionKakheti }
 }

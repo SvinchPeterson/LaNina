@@ -4,7 +4,7 @@ import { Tour } from '../../components'
 
 import { galleryGori } from '../../galleries/travelGalleries'
 
-import { textGori } from '../../texts/travelTexts'
+import { descriptionGori } from '../../texts/travelTexts/toursDescriptions'
 
 const props = {
   gallery: {
@@ -71,20 +71,5 @@ export const tourGori = {
     }
   },
 
-  article: {
-    articleContent: {
-      paragraphs: {
-        textGori
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Stalin Museum' },
-            { text: 'Uplistsikhe Cave City' }
-          ]
-        }
-      }
-    }
-  }
+  descriptionGori: { extend: descriptionGori }
 }

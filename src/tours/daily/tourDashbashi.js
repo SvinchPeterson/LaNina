@@ -4,7 +4,7 @@ import { Tour } from '../../components'
 
 import { galleryMartvili } from '../../galleries/travelGalleries'
 
-import { textDashbashi } from '../../texts/travelTexts'
+import { descriptionDashbashi } from '../../texts/travelTexts/toursDescriptions'
 
 const props = {
   gallery: {
@@ -71,20 +71,5 @@ export const tourDashbashi = {
     }
   },
 
-  article: {
-    articleContent: {
-      paragraphs: {
-        textDashbashi
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Dashabshi Canyon' },
-            { text: 'Brilliant Glass Bridge' }
-          ]
-        }
-      }
-    }
-  }
+  description: { extend: descriptionDashbashi }
 }

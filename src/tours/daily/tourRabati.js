@@ -4,7 +4,7 @@ import { Tour } from '../../components'
 
 import { galleryRabati } from '../../galleries/travelGalleries'
 
-import { textRabati } from '../../texts/travelTexts'
+import { descriptionRabar } from '../../texts/travelTexts/toursDescriptions'
 
 const props = {
   gallery: {
@@ -71,19 +71,7 @@ export const tourRabati = {
     }
   },
 
-  article: {
-    articleContent: {
-      paragraphs: {
-        textRabati
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Rabati Castle walking Tour' }
-          ]
-        }
-      }
-    }
+  description: {
+    extend: descriptionRabar
   }
 }

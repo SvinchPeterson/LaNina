@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { TourGallery } from './TourGallery'
 
-import { TourArticle } from './TourArticle'
+import { TourDescription } from './TourDescription'
 
 const props = {
   align: 'flex-start center',
@@ -17,5 +17,5 @@ export const Tour = {
   props,
 
   gallery: { extend: TourGallery },
-  article: { extend: TourArticle }
+  description: { extend: TourDescription }
 }
