@@ -75,8 +75,8 @@ import DILIJAN_JPG from '../assets/images/travel/armenia/dilijan.jpg'
 import DILIJAN2_JPG from '../assets/images/travel/armenia/dilijan2.jpg'
 import DILIJAN3_JPG from '../assets/images/travel/armenia/dilijan3.jpg'
 import GARNI_JPG from '../assets/images/travel/armenia/garni.jpg'
-import MUSEUM_JPG from '../assets/images/travel/armenia/museum.jpg'
-import MUSEUM2_JPG from '../assets/images/travel/armenia/museum2.jpg'
+import MUSEUM3_JPG from '../assets/images/travel/armenia/museum.jpg'
+import MUSEUM4_JPG from '../assets/images/travel/armenia/museum2.jpg'
 import SEVANE_JPG from '../assets/images/travel/armenia/sevane.jpg'
 import VALLEY_JPG from '../assets/images/travel/armenia/valley.jpg'
 import VIRAP_JPG from '../assets/images/travel/armenia/virap.jpg'
@@ -153,8 +153,8 @@ export const galleryGori = {
   extend: Gallery,
   ...[
     { props: { backgroundImage: 'url(' + GORI_JPG + ')' } },
-    { props: { backgroundImage: 'url(' + MUSEUM_JPG + ')' } },
-    { props: { backgroundImage: 'url(' + MUSEUM2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + MUSEUMG_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + MUSEUM2G_JPG + ')' } },
     { props: { backgroundImage: 'url(' + CAVE3_JPG + ')' } },
     { props: { backgroundImage: 'url(' + CAVE4_JPG + ')' } }
   ]
@@ -213,8 +213,8 @@ export const galleryCulturalTour = {
     { props: { backgroundImage: 'url(' + BODBE_JPG + ')' } },
     { props: { backgroundImage: 'url(' + KVEVRI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + TELAVI_JPG + ')' } },
-    { props: { backgroundImage: 'url(' + MUSEUM_JPG + ')' } },
-    { props: { backgroundImage: 'url(' + MUSEUM2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + MUSEUMG_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + MUSEUM2G_JPG + ')' } },
     { props: { backgroundImage: 'url(' + CAVE3_JPG + ')' } },
     { props: { backgroundImage: 'url(' + CAVE4_JPG + ')' } }
   ]
@@ -254,7 +254,7 @@ export const galleryRoyalTour = {
   ]
 }
 
-export const galleryCaucasusAdventure = {
+export const galleryCaucasusAdventureTour = {
   extend: Gallery,
   ...[
     { props: { backgroundImage: 'url(' + MESTIA_JPG + ')' } },
@@ -266,5 +266,53 @@ export const galleryCaucasusAdventure = {
     { props: { backgroundImage: 'url(' + CAVE_JPG + ')' } },
     { props: { backgroundImage: 'url(' + CAVE2_JPG + ')' } }
   ]
+}
 
+export const galleryCaucasusTour = {
+  extend: Gallery,
+  ...[
+    { props: { backgroundImage: 'url(' + ARMENIA_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + ARMENIA2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + CHURCH_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + DILIJAN_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + DILIJAN2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + DILIJAN3_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + GARNI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + MUSEUM3_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + MUSEUM4_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + SEVANE_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + VALLEY_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + VIRAP_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + OLD_TBILISI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + ABANOTUBANI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BRIDGE_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BAZAR_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BRIDGE2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + METEKHI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + KAZBEGI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + GERGET_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + JINVALI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + ANANURI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + GUDAURI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + SIGNAGI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + SIGNAGI2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + KVEVRI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BODBE_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + TELAVI_JPG + ')' } }
+  ]
+}
+
+export const galleryExclusiveTour = {
+  extend: Gallery,
+  ...[
+    { props: { backgroundImage: 'url(' + PARAVANI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + ABULI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BUGDASHENI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + KHANCHALI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + KUMURDO_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + SAGAMO_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + GARNI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + SAMSHVILDE_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + SHAORI_JPG + ')' } }
+  ]
 }
