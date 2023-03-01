@@ -2,7 +2,7 @@
 
 import { TourContainer, Tour } from '../components'
 
-import { galleryAdventure } from '../galleries/travelGalleries'
+import { galleryAdventureTour } from '../galleries/travelGalleries'
 
 import { textAdventure } from '../texts/travelTexts'
 
@@ -12,7 +12,7 @@ const tourAdventure = {
   gallery: {
     title: { text: '' },
     gallery: {
-      extend: galleryAdventure,
+      extend: galleryAdventureTour,
       childExtend: {
         class: {
           show: (element, state) => state.activeAdventureGalleryImage === parseInt(element.key)
