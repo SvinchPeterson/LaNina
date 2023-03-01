@@ -81,6 +81,10 @@ import SEVANE_JPG from '../assets/images/travel/armenia/sevane.jpg'
 import VALLEY_JPG from '../assets/images/travel/armenia/valley.jpg'
 import VIRAP_JPG from '../assets/images/travel/armenia/virap.jpg'
 
+import SVANETI_JPG from '../assets/images/travel/svaneti/svaneti.jpg'
+import MESTIA_JPG from '../assets/images/travel/svaneti/mestia.jpg'
+import ZUGDIDI_JPG from '../assets/images/travel/zugdidi.jpg'
+
 export const galleryTbilisi = {
   extend: Gallery,
   ...[
@@ -251,5 +255,16 @@ export const galleryRoyalTour = {
 }
 
 export const galleryCaucasusAdventure = {
+  extend: Gallery,
+  ...[
+    { props: { backgroundImage: 'url(' + MESTIA_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + SVANETI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + ZUGDIDI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + KUTAISI_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + CANYONS_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + CANYONS2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + CAVE_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + CAVE2_JPG + ')' } }
+  ]
 
 }
