@@ -7,10 +7,10 @@ import { TourGallery } from './TourGallery'
 import { TourDescription } from './TourDescription'
 
 const props = {
-  align: 'flex-start center',
+  align: 'center space-between',
+  alignSelf: 'center',
   gap: 'D',
-  alignSelf: 'center'
-
+  description: { padding: '- - C2 -' }
 }
 export const Tour = {
   extend: Flex,

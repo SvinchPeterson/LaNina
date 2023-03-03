@@ -4,34 +4,13 @@ import { Tour } from '../../components'
 
 import { galleryBorjomi } from '../../galleries/travelGalleries'
 
-import { descriptionBorjomi } from '../../texts/travelTexts/toursDescriptions'
-
-const props = {
-  gallery: {
-    title: {
-      alignSelf: 'flex-end',
-      margin: '- Y2 Y1 -'
-    },
-    gallery: {
-      round: 'G2 0 0 G2',
-      ':before': {
-        top: '0',
-        left: '0',
-        background: 'linear-gradient(to left, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)'
-      }
-    },
-    footer: {
-      alignSelf: 'flex-end'
-    }
-  }
-}
+import { descriptionBorjomi } from '../../texts/travelText/toursDescriptions'
 
 export const tourBorjomi = {
   extend: Tour,
-  props,
   description: { extend: descriptionBorjomi },
   gallery: {
-    title: { text: 'BORJOMI' },
+    title: { text: 'borjomi' },
     gallery: {
       extend: galleryBorjomi,
       childExtend: {

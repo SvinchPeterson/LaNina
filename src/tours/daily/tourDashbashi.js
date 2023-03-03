@@ -4,28 +4,12 @@ import { Tour } from '../../components'
 
 import { galleryMartvili } from '../../galleries/travelGalleries'
 
-import { descriptionDashbashi } from '../../texts/travelTexts/toursDescriptions'
-
-const props = {
-  gallery: {
-    title: { margin: '- - Y1 Y2' },
-    gallery: {
-      round: '0 G2 G2 0',
-      ':before': {
-        top: '0',
-        left: '0',
-        background: 'linear-gradient(to right, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
-      }
-    }
-  }
-}
+import { descriptionDashbashi } from '../../texts/travelText/toursDescriptions'
 
 export const tourDashbashi = {
   extend: Tour,
-  props,
-
   gallery: {
-    title: { text: 'DASHBASHI CANYON' },
+    title: { text: 'dashbashi canyon' },
     gallery: {
       extend: galleryMartvili,
       childExtend: {

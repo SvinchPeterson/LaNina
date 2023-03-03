@@ -4,28 +4,12 @@ import { Tour } from '../../components'
 
 import { galleryGori } from '../../galleries/travelGalleries'
 
-import { descriptionGori } from '../../texts/travelTexts/toursDescriptions'
-
-const props = {
-  gallery: {
-    title: { margin: '- - Y1 Y2' },
-    gallery: {
-      round: '0 G2 G2 0',
-      ':before': {
-        top: '0',
-        left: '0',
-        background: 'linear-gradient(to right, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
-      }
-    }
-  }
-}
+import { descriptionGori } from '../../texts/travelText/toursDescriptions'
 
 export const tourGori = {
   extend: Tour,
-  props,
-
   gallery: {
-    title: { text: 'GORI CITY . UPLISTSIKHE CAVE' },
+    title: { text: 'gori city . uplistsikhe cave' },
     gallery: {
       extend: galleryGori,
       childExtend: {
@@ -71,5 +55,5 @@ export const tourGori = {
     }
   },
 
-  descriptionGori: { extend: descriptionGori }
+  description: { extend: descriptionGori }
 }

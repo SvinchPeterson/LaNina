@@ -220,6 +220,7 @@ export const galleryCapitalTour = {
     { props: { backgroundImage: 'url(' + OLD_TBILISI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + KAZBEGI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + GERGET_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + GUDAURI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + JINVALI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + ANANURI_JPG + ')' } }
   ]
@@ -261,7 +262,7 @@ export const galleryHistoricalTour = {
 export const galleryRoyalTour = {
   extend: Gallery,
   ...[
-    { props: { backgroundImage: 'url(' + BRIDGE2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + ABANOTUBANI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + METEKHI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + BRIDGE_JPG + ')' } },
     { props: { backgroundImage: 'url(' + KAZBEGI_JPG + ')' } },
@@ -274,7 +275,7 @@ export const galleryRoyalTour = {
   ]
 }
 
-export const galleryCaucasusAdventureTour = {
+export const galleryCaucasusMountainTour = {
   extend: Gallery,
   ...[
     { props: { backgroundImage: 'url(' + MESTIA_JPG + ')' } },

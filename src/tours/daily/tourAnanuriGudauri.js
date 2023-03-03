@@ -4,36 +4,14 @@ import { Tour } from '../../components'
 
 import { galleryKazbegi } from '../../galleries/travelGalleries'
 
-import { descriptionAnanuri } from '../../texts/travelTexts/toursDescriptions'
-
-const props = {
-  gallery: {
-    title: {
-      alignSelf: 'flex-end',
-      margin: '- Y2 Y1 -'
-    },
-    gallery: {
-      round: 'G2 0 0 G2',
-      ':before': {
-        top: '0',
-        left: '0',
-        background: 'linear-gradient(to left, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
-      }
-    },
-    footer: {
-      alignSelf: 'flex-end'
-    }
-  }
-}
+import { descriptionAnanuri } from '../../texts/travelText/toursDescriptions'
 
 export const tourAnanuriGudauri = {
   extend: Tour,
-  props,
 
   description: { extend: descriptionAnanuri },
-
   gallery: {
-    title: { text: 'ANANURI . GUDAURI . KAZBEGI' },
+    title: { text: 'ananuri . gudauri . kazbegi' },
     gallery: {
       extend: galleryKazbegi,
       childExtend: {

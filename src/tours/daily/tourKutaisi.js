@@ -4,36 +4,13 @@ import { Tour } from '../../components'
 
 import { galleryKutaisi } from '../../galleries/travelGalleries'
 
-import { descriptionKutaisi } from '../../texts/travelTexts/toursDescriptions'
-
-const props = {
-  gallery: {
-    title: {
-      alignSelf: 'flex-end',
-      margin: '- Y2 Y1 -'
-    },
-    gallery: {
-      round: 'G2 0 0 G2',
-      ':before': {
-        top: '0',
-        left: '0',
-        background: 'linear-gradient(to left, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
-      }
-    },
-    footer: {
-      alignSelf: 'flex-end'
-    }
-  }
-}
+import { descriptionKutaisi } from '../../texts/travelText/toursDescriptions'
 
 export const tourKutaisi = {
   extend: Tour,
-  props,
-
   description: { extend: descriptionKutaisi },
-
   gallery: {
-    title: { text: 'KUTAISI' },
+    title: { text: 'kutaisi' },
     gallery: {
       extend: galleryKutaisi,
       childExtend: {

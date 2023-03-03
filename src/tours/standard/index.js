@@ -2,12 +2,27 @@
 
 import { TourContainer } from '../../components'
 
+import { tourCapital } from './tourCapital'
+import { tourCultural } from './tourCultural'
+import { tourHistorical } from './tourHistorical'
+import { tourRoyal } from './tourRoyal'
+import { tourCaucasusMountain } from './tourCaucasusMountain'
+
+import { props } from '../daily'
+
 export const standard = {
   extend: TourContainer,
-  text: 'standard',
+  props,
+  attr: { id: 'standard' },
   class: {
     show: (element, state) => state.activeStandard
       ? { opacity: '1' }
       : { opacity: '0', zIndex: '-1' }
-  }
+  },
+
+  tourCapital,
+  tourCultural,
+  tourHistorical,
+  tourRoyal,
+  tourCaucasusMountain
 }

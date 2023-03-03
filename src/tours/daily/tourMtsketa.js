@@ -4,36 +4,13 @@ import { Tour } from '../../components'
 
 import { galleryMtsketa } from '../../galleries/travelGalleries'
 
-import { descriptionMtsketa } from '../../texts/travelTexts/toursDescriptions'
-
-const props = {
-  gallery: {
-    title: {
-      alignSelf: 'flex-end',
-      margin: '- Y2 Y1 -'
-    },
-    gallery: {
-      round: 'G2 0 0 G2',
-      ':before': {
-        top: '0',
-        left: '0',
-        background: 'linear-gradient(to left, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
-      }
-    },
-    footer: {
-      alignSelf: 'flex-end'
-    }
-  }
-}
+import { descriptionMtsketa } from '../../texts/travelText/toursDescriptions'
 
 export const tourMtsketa = {
   extend: Tour,
-  props,
-
   description: { extend: descriptionMtsketa },
-
   gallery: {
-    title: { text: 'MTSKETA' },
+    title: { text: 'mtsketa' },
     gallery: {
       extend: galleryMtsketa,
       childExtend: {

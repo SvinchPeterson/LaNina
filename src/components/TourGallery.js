@@ -9,17 +9,19 @@ import { HorArrowsCreamBor } from './NavigationArrows'
 const props = {
   flow: 'column',
   title: {
-    fontSize: 'Z',
+    fontSize: `Z`,
     fontWeight: '400',
+    textTransform: 'uppercase',
     color: 'cream2',
-    letterSpacing: `${5 / 13}em`,
-    textTransform: 'uppercase'
+    letterSpacing: `${4 / 13}em`,
+    padding: '- A Y2 A'
   },
 
   gallery: {
     width: 'H1',
     height: 'G1',
     position: 'relative',
+    overflow: 'hidden',
     ':before': {
       content: '""',
       position: 'absolute',
@@ -29,31 +31,24 @@ const props = {
   },
 
   footer: {
-    border: 'solid, cream2 .5',
+    border: 'solid, cream2 .25',
     borderWidth: '.5px 0 0 0',
     align: 'center space-between',
     width: '65%',
     margin: 'A - - -',
     padding: 'Z - - -',
     book: {
-      fontSize: `${14.5 / 16}em`,
-      height: `${40 / 14.5}em`,
-      padding: '0 B1',
+      fontSize: 'Z',
+      padding: 'Z2 B2',
       background: 'transparent',
       border: 'solid, cream2 .35',
       borderWidth: '.75px',
       color: 'cream2',
-      // height: 'fit-content',
       textTransform: 'uppercase',
       fontWeight: '700',
       opacity: '.85',
+      transition: 'opacity .25s ease-in-out',
       ':hover': { opacity: '1' }
-    },
-    navArrows: {
-      childProps: {
-        boxSize: '40px 40px'
-        // arrow: { boxSize: ' Y2' }
-      }
     }
   }
 }

@@ -21,7 +21,8 @@ const props = {
   position: 'relative',
   childProps: {
     background: 'transparent',
-    opacity: '.75',
+    opacity: '.85',
+    transition: 'opacity .25s ease-in-out',
     ':hover': { opacity: '1' },
     style: { cursor: 'pointer' },
     arrow: {
@@ -42,9 +43,9 @@ export const HorArrowsBor = {
     gap: 'B',
     position: 'relative',
     childProps: {
-      border: 'solid, white .35',
+      border: 'solid, cream2 .35',
       borderWidth: '1px',
-      boxSize: 'C2 C2',
+      boxSize: 'C1 C1',
       round: '100%',
       arrow: { boxSize: ' Z' }
     }

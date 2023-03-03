@@ -9,89 +9,6 @@ import { header } from './header'
 
 import ORNAMENT_JPG from '../../../../assets/images/travel/ornament2.png'
 
-// import { dailyTour } from './dailyTour'
-// import { standardTour } from './standardTour'
-// import { armeniaTour } from './armeniaTour'
-// import { exclusive } from './exclusiveTour'
-// import { adventure } from './adventureTour'
-
-// import { popUpContainer } from './popUpContainer/popUpContainer'
-
-// import CLOSE_PNG from '../../../assets/icons/closeBlack.png'
-
-// const closeButton = {
-//   extend: Button,
-//   icon: { extend: Img },
-
-//   on: {
-//     click: (event, element, state) => {
-//       state.update({ activeTour: false, activeDailyTour: false, activeStandardTour: false, activeArmeniaTour: false, activeExclusiveTour: false, activeAdventureTour: false })
-//     }
-//   }
-// }
-
-// const props = {
-//   boxSize: '100% 100%',
-//   position: 'fixed',
-//   background: 'rgba(229, 249, 252, 1)',
-//   justifyContent: 'center',
-//   zIndex: '100',
-//   top: '0',
-//   left: '0',
-//   flow: 'column',
-//   alignItems: 'center',
-//   // overflow: 'hidden',
-//   style: { backdropFilter: 'blur(1px)' },
-
-//   ':after': {
-//     content: '""',
-//     boxSize: '100% 100%',
-//     position: 'absolute',
-//     top: '0',
-//     left: '0'
-//   },
-
-//   closeButton: {
-//     boxSize: 'fit-content',
-//     background: 'transparent',
-//     position: 'absolute',
-//     zIndex: '3',
-//     top: '0',
-//     right: '0',
-//     padding: 'B',
-//     '@mobileS': { padding: 'A' },
-//     icon: {
-//       src: CLOSE_PNG,
-//       boxSize: 'A1 '
-//     }
-//   }
-// }
-
-// export const toursContainer = {
-//   extend: Flex,
-//   props,
-//   class: {
-//     show: (element, state) => state.activeTour
-//       ? {
-//         display: 'block'
-//       }
-//       : {
-//         display: 'none !important'
-//       }
-//   },
-
-//   closeButton,
-
-//   dailyTour,
-//   standardTour,
-//   armeniaTour,
-//   exclusive,
-//   adventure,
-//   popUpContainer
-// }
-
-// ----------------------
-
 const props = {
   position: 'fixed',
   backgroundImage: 'url(' + ORNAMENT_JPG + ')',
@@ -99,6 +16,7 @@ const props = {
   backgroundPosition: 'center center',
   backgroundColor: 'rgba(233, 250, 255, 1)',
   style: { backgroundAttachment: 'fixed' },
+  transition: 'height .65s ease-in-out',
   ':before': {
     content: '""',
     width: '100%',
@@ -106,25 +24,45 @@ const props = {
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(15, 49, 61, .7), rgba(15, 49, 61, 1), rgba(15, 49, 61, 1))'
+    background: 'radial-gradient(rgba(15, 49, 61, .8), rgba(15, 49, 61, 1), rgba(15, 49, 61, 1))'
   },
-  close: { top: 'A2', right: 'A1' },
+  ':after': {
+    content: '""',
+    width: '100%',
+    height: 'F',
+    position: 'absolute',
+    bottom: '0',
+    left: '0',
+    pointerEvents: 'none',
+    zIndex: '5',
+    background: 'linear-gradient(to top, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)'
+  },
+  close: {
+    top: 'A',
+    right: 'Y2',
+    opacity: '.65',
+    icon: { boxSize: 'A1 ' },
+    ':hover': { opacity: '.85' }
+  },
 
   content: {
-    boxSize: '100% 100%',
-    maxWidth: '1200px',
+    boxSize: '100% 80%',
     flow: 'column',
     overflow: 'hidden',
     zIndex: '1',
     tours: {
+      width: '100%',
       flex: '1',
       position: 'relative',
-      flow: 'column',
-      style: { overflowY: 'auto', '::-webkit-scrollbar': { display: 'none' } }
+      flow: 'column'
     }
   },
 
-  logo: { bottom: 'A2', left: 'B' }
+  logo: {
+    bottom: 'A2',
+    left: 'C',
+    boxSize: '- C2'
+  }
 }
 
 export const toursContainer = {
@@ -162,7 +100,6 @@ export const toursContainer = {
     header,
     tours: {
       extend: Flex,
-
       daily,
       standard,
       caucasus,
