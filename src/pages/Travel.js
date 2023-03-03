@@ -24,9 +24,9 @@ const state = {
   // activeAdventureTour: false,
 
   activeDaily: false,
-  activeStandard: true,
-  // activeStandard: false,
-  activeCaucasus: false,
+  activeStandard: false,
+  activeCaucasus: true,
+  // activeCaucasus: false,
   activeExclusive: false,
   activeAdventure: false,
   activeWineGastronomy: false,
