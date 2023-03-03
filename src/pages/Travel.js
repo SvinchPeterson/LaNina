@@ -22,7 +22,7 @@ const state = {
   // activeArmeniaTour: false,
   // activeExclusiveTour: false,
   // activeAdventureTour: false,
-
+  activeGocha: true,
   activeDaily: false,
   activeStandard: false,
   activeCaucasus: true,
