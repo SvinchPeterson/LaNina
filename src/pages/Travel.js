@@ -47,9 +47,7 @@ const state = {
   activeHistoricalTourGalleryImage: 0,
   activeRoyalTourGalleryImage: 0,
   activeCaucasusMountainGalleryImage: 0,
-  active7n8dGalleryImage: 0,
-  active9n10dGalleryImage: 0,
-  activeGeoArmGalleryImage: 0,
+  activeCaucasusGalleryImage: 0,
   activeExclusiveGalleryImage: 0,
   activeAdventureGalleryImage: 0,
 

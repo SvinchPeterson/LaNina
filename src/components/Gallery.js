@@ -15,7 +15,6 @@ const props = {
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     style: {
-      // boxShadow: ' inset 0px 0px 5px .2px rgba(0, 0, 0, .55)',
       transition: 'height .7s ease-in-out, opacity .7s ease-in-out, background-position 3s ease-in-out'
     }
   }

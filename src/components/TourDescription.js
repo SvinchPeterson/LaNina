@@ -13,7 +13,7 @@ const props = {
     maxWidth: 'H',
     fontSize: `${15.5 / 16}em`,
     style: {
-      span: { color: 'rgba(248, 241, 227, 1)', fontWeight: '' }
+      span: { color: 'rgba(248, 241, 227, 1)', fontWeight: '700' }
     }
   },
   more: {

@@ -233,7 +233,7 @@ export const descriptionHistoricalTour = {
       {
         ...[
           'Georgia is The christian Orthodox Country. One of our Holy Place is - ',
-          { tag: 'span', text: 'Monastery David Gareja Lavra' },
+          { tag: 'span', text: 'Monastery David Gareja Lavra ' },
           `which is hidden in a sand-stone caves in the middle of abandoned semi-desert area;`
         ]
       }
@@ -297,4 +297,32 @@ export const descriptionCaucasusMountainTour = {
       }
     ]
   }
+}
+
+export const descriptionCaucasusTour = {
+  extend: TourDescription,
+
+  p: {
+    ...[
+      {
+        ...[
+          { tag: 'span', text: 'Georgia, ' },
+          `a country at the intersection of Europe and Asia, is a former Soviet
+          republic that's home to Caucasus Mountain villages and Black Sea beaches.
+          Country is famous for UNESCO World Heritage Listed Churches,`
+        ]
+      },
+
+      {
+        ...[
+          { tag: 'span', text: 'Yerevan' },
+          `, is the capital of the Republic of `,
+          { tag: 'span', text: 'Armenia ' },
+          `, one of the three hubs of the South Caucasus and is home to over a million
+          people - the largest Armenian community in the world.`
+        ]
+      }
+    ]
+  }
+
 }
