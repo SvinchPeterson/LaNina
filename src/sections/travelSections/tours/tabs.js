@@ -328,11 +328,11 @@ const props = {
   title: {
     color: 'cream2',
     zIndex: '5',
-    fontSize: 'F',
+    fontSize: 'B',
     padding: '- - Z B2',
     fontWeight: '700',
-    textTransform: 'capitalize',
-    letterSpacing: `${-3 / 40}em`,
+    textTransform: 'uppercase',
+    letterSpacing: `10px`,
     alignSelf: 'flex-start'
   },
 
@@ -358,16 +358,14 @@ const props = {
 
   navArrows: {
     zIndex: '5',
-    alignSelf: 'flex-end',
-    padding: 'C E2 - -'
+    alignSelf: 'center',
+    padding: 'C - - -'
   }
 }
 
 export const tabs = {
   extend: Flex,
   props,
-
-  title,
   content,
   navArrows
 }

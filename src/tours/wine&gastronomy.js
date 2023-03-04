@@ -12,7 +12,7 @@ const tourWineGastronomy = {
   class: {
     show: (element, state) => state.activeWineGastronomy
       ? { opacity: '1', transition: 'opacity 1.5s ease-in-out' }
-      : { opacity: '0', transition: 'opacity .25s ease-in-out' }
+      : { opacity: '0', transition: 'opacity .35s ease-in-out' }
   },
 
   gallery: {
@@ -72,7 +72,7 @@ const tourWineGastronomy = {
         : {
           opacity: '0',
           transform: 'translateY(50px)',
-          transition: 'opacity .25s ease-in-out, transform .25s ease-in-out'
+          transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
         }
     }
   }
@@ -93,7 +93,7 @@ export const wineGastronomy = {
         opacity: '0',
         pointerEvents: 'none',
         transform: 'translateY(-30px)',
-        transition: 'opacity .25s ease-in-out, transform .25s ease-in-out'
+        transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
       }
   },
 

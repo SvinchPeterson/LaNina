@@ -68,7 +68,7 @@ export const header = {
       {
         class: {
           show: (element, state) => state.activeDaily
-            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tours' },
         span: { text: 'daily ' }
@@ -77,7 +77,7 @@ export const header = {
       {
         class: {
           show: (element, state) => state.activeStandard
-            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tours' },
         span: { text: 'standard ' }
@@ -86,7 +86,7 @@ export const header = {
       {
         class: {
           show: (element, state) => state.activeCaucasus
-            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tour' },
         span: { text: 'caucasus ' }
@@ -95,7 +95,7 @@ export const header = {
       {
         class: {
           show: (element, state) => state.activeExclusive
-            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tour' },
         span: { text: 'exclusive ' }
@@ -104,7 +104,7 @@ export const header = {
       {
         class: {
           show: (element, state) => state.activeWineGastronomy
-            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tour' },
         span: { text: 'wine & gastronomy ' }
@@ -113,7 +113,7 @@ export const header = {
       {
         class: {
           show: (element, state) => state.activeAdventure
-            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tour' },
         span: { text: 'adventure ' }
