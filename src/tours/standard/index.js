@@ -8,11 +8,11 @@ import { tourHistorical } from './tourHistorical'
 import { tourRoyal } from './tourRoyal'
 import { tourCaucasusMountain } from './tourCaucasusMountain'
 
-import { props } from '../daily'
+import { commonToursProps } from '../commonProps'
 
 export const standard = {
   extend: TourContainer,
-  props,
+  props: commonToursProps,
   attr: { id: 'standard' },
   class: {
     show: (element, state) => state.activeStandard

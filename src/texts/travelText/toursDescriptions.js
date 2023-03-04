@@ -306,23 +306,84 @@ export const descriptionCaucasusTour = {
     ...[
       {
         ...[
-          { tag: 'span', text: 'Georgia, ' },
-          `a country at the intersection of Europe and Asia, is a former Soviet
-          republic that's home to Caucasus Mountain villages and Black Sea beaches.
-          Country is famous for UNESCO World Heritage Listed Churches,`
-        ]
-      },
-
-      {
-        ...[
           { tag: 'span', text: 'Yerevan' },
           `, is the capital of the Republic of `,
           { tag: 'span', text: 'Armenia ' },
           `, one of the three hubs of the South Caucasus and is home to over a million
           people - the largest Armenian community in the world.`
         ]
+      },
+      {
+        ...[
+          { tag: 'span', text: 'Georgia, ' },
+          `a country at the intersection of Europe and Asia, is a former Soviet
+          republic that's home to Caucasus Mountain villages and Black Sea beaches.
+          Country is famous for UNESCO World Heritage Listed Churches,`
+        ]
       }
     ]
   }
+}
 
+export const descriptionExclusiveTour = {
+  extend: TourDescription,
+
+  p: {
+    ...[
+      {
+        ...[
+          { tag: 'span', text: 'Mystical Unknown wonders of Georgia. ' },
+          `Mostly in southern part of Georgia, particularly in `,
+          { tag: 'span', text: 'Kvemo Kartli ' },
+          ' and ',
+          { tag: 'span', text: 'Javakheti ' },
+          'provinces.'
+        ]
+      },
+      {
+        ...[
+          `During the tour, we have an opportunity to discover less known ancient megalithic monuments. We will explore`,
+          { tag: 'span', text: ' Lesser Caucasus ' },
+          `fantastic landscapes and visit ancient cult monuments, where megalithic and Christian cultures are interrelated. Wonderful lakes and 360 % view of Javakheti.`
+        ]
+      }
+    ]
+  }
+}
+
+export const descriptionWineGastronomy = {
+  extend: TourDescription,
+  p: {
+    ...[
+      {
+        ...[
+          { tag: 'span', text: `Georgia is a homeland of wine making` },
+          `. It is recorded that Georgia has a total more than 500 Local wine grape varieties planted and grown across the country. `
+        ]
+      },
+
+      {
+        ...[
+          'BB travel provide you an opportunity to learn all about those types that are for commercial viticulture. During this tour you will visit almost any type of wineries that can be now found in Georgia, as well as get a chance to sample traditional Georgian wine made in ',
+          { tag: 'span', text: '"Qvevri"' }
+        ]
+      }
+    ]
+  }
+}
+
+export const descriptionAdventureTure = {
+  extend: TourDescription,
+
+  p: {
+    ...[
+      {
+        ...[
+          `Beautiful Nature and lots of Caves, most important - `,
+          { tag: 'span', text: `World's oldest wine ` },
+          `found in 8,000-year-old (Qvevri ) Clay Pot in Georgia.`
+        ]
+      }
+    ]
+  }
 }

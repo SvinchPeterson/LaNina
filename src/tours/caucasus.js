@@ -6,8 +6,11 @@ import { galleryCaucasusTour } from '../galleries/travelGalleries'
 
 import { descriptionCaucasusTour } from '../texts/travelText/toursDescriptions'
 
+import { commonTourProps } from './commonProps'
+
 const tourCaucasus = {
   extend: Tour,
+  props: commonTourProps,
   gallery: {
     gallery: {
       extend: galleryCaucasusTour,
@@ -57,30 +60,8 @@ const tourCaucasus = {
   description: { extend: descriptionCaucasusTour }
 }
 
-const props = {
-  tourCaucasus: {
-    margin: 'auto',
-    gallery: {
-      gallery: {
-        round: 'G1 G1 0 0',
-        width: 'H2',
-        height: 'H',
-        ':before': {
-          top: '0',
-          left: '0',
-          background: 'linear-gradient(to top, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
-        }
-      },
-
-      footer: { width: '100%' }
-    }
-  }
-
-}
 export const caucasus = {
   extend: TourContainer,
-  props,
-
   class: {
     show: (element, state) => state.activeCaucasus
       ? { opacity: '1' }

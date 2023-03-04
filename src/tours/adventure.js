@@ -4,13 +4,15 @@ import { TourContainer, Tour } from '../components'
 
 import { galleryAdventureTour } from '../galleries/travelGalleries'
 
-import { textAdventure } from '../texts/travelTexts'
+import { descriptionAdventureTure } from '../texts/travelText/toursDescriptions'
+
+import { commonTourProps } from './commonProps'
 
 const tourAdventure = {
   extend: Tour,
+  props: commonTourProps,
 
   gallery: {
-    title: { text: '' },
     gallery: {
       extend: galleryAdventureTour,
       childExtend: {
@@ -56,48 +58,11 @@ const tourAdventure = {
     }
   },
 
-  article: {
-    articleContent: {
-      paragraphs: {
-        textAdventure
-      },
-      tourPlaces: {
-        title: {},
-        list: {
-          ...[
-            { text: 'Birtvisi Fortress' },
-            { text: 'Sheupovari' },
-            { text: 'Devi Canyon' }
-          ]
-        }
-      }
-    }
-  }
-}
-
-const props = {
-  overflow: 'hidden',
-  position: 'fixed',
-  tourAdventure: {
-    align: 'center center',
-    margin: 'auto',
-    gallery: {
-      title: { margin: '- - Y1 Y2' },
-      gallery: {
-        round: 'G2 G2 0 0',
-        height: 'G3',
-        ':before': {
-          background: 'linear-gradient(rgba(15, 49, 61, 0), rgba(15, 49, 61, 1))'
-        }
-      },
-      footer: { width: '100%' }
-    }
-  }
+  description: { extend: descriptionAdventureTure }
 }
 
 export const adventure = {
   extend: TourContainer,
-  props,
 
   class: {
     show: (element, state) => state.activeAdventure

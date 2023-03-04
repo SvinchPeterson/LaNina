@@ -25,9 +25,9 @@ const state = {
   activeGocha: true,
   activeDaily: false,
   activeStandard: false,
-  activeCaucasus: true,
-  // activeCaucasus: false,
-  activeExclusive: false,
+  activeCaucasus: false,
+  activeExclusive: true,
+  // activeExclusive: false,
   activeAdventure: false,
   activeWineGastronomy: false,
 
@@ -50,6 +50,7 @@ const state = {
   activeCaucasusGalleryImage: 0,
   activeExclusiveGalleryImage: 0,
   activeAdventureGalleryImage: 0,
+  activeWineGastronomyGalleryImage: 0,
 
   activeTbilisiArticle: false,
   activeAnanuriArticle: false,
