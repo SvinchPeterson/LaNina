@@ -7,6 +7,8 @@ import { descriptionTbilisi } from '../../texts/travelText/toursDescriptions'
 
 export const tourTbilisi = {
   extend: Tour,
+  props: { padding: 'C2 - - -' },
+  attr: { id: 'daily' },
   gallery: {
     title: { text: 'tbilisi city tour' },
     gallery: {

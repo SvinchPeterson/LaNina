@@ -1,6 +1,7 @@
 'use strict'
 
 export const commonToursProps = {
+  padding: '- - E -',
   style: {
     '> div:nth-child(odd)': {
       '> div > div': {
@@ -29,19 +30,21 @@ export const commonToursProps = {
 }
 
 export const commonTourProps = {
-  margin: 'auto',
-  gallery: {
+  align: 'center center',
+  childProps: {
     gallery: {
-      round: 'G1 G1 0 0',
-      width: 'H1',
-      height: 'H',
-      padding: 'D',
-      ':before': {
-        top: '0',
-        left: '0',
-        background: 'linear-gradient(to top, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
-      }
-    },
-    footer: { width: '95%', margin: 'Z auto - auto' }
+      gallery: {
+        round: '0 G1 G1 0',
+        width: 'H1',
+        height: 'G3',
+        padding: 'D',
+        ':before': {
+          top: '0',
+          left: '0',
+          background: 'linear-gradient(to right, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
+        }
+      },
+      footer: { margin: 'Z2 - - A' }
+    }
   }
 }

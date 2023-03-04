@@ -69,6 +69,7 @@ const content = {
     ...[
       {
         props: {
+          href: '#daily',
           content: {
             title: { text: 'daily' },
             image: {
@@ -88,6 +89,7 @@ const content = {
 
       {
         props: {
+          href: '#standard',
           content: {
             title: { text: 'standard' },
             image: {
@@ -177,6 +179,7 @@ const content = {
 
       {
         props: {
+          href: '#daily',
           content: {
             title: { text: 'daily' },
             image: {
@@ -196,6 +199,7 @@ const content = {
 
       {
         props: {
+          href: '#standard',
           content: {
             title: { text: 'standard' },
             image: {

@@ -19,13 +19,12 @@ const props = {
     childProps: {
       position: 'absolute',
       left: '0',
-      bottom: '0',
       whiteSpace: 'nowrap',
       lineHeight: `${22 / 28}em`,
       fontSize: 'D',
       textTransform: 'uppercase',
       fontWeight: '100',
-      transition: 'bottom .45s ease-in-out, opacity .45s ease-in-out, transform .45s ease-in-out',
+      transition: 'bottom .65s ease-in-out, opacity .65s ease-in-out',
       span: { fontWeight: '700' }
     }
   },
@@ -46,7 +45,6 @@ const props = {
       ':hover': { opacity: '1' }
     }
   }
-
 }
 
 export const header = {
@@ -64,37 +62,60 @@ export const header = {
     extend: Flex,
     childExtend: {
       tag: 'h2',
-      text: ' tour',
       span: {}
     },
     ...[
       {
-        class: { show: (element, state) => state.activeDaily ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' } },
+        class: {
+          show: (element, state) => state.activeDaily
+            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+        },
+        props: { text: 'tours' },
         span: { text: 'daily ' }
       },
 
       {
-        class: { show: (element, state) => state.activeStandard ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' } },
+        class: {
+          show: (element, state) => state.activeStandard
+            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+        },
+        props: { text: 'tours' },
         span: { text: 'standard ' }
       },
 
       {
-        class: { show: (element, state) => state.activeCaucasus ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' } },
+        class: {
+          show: (element, state) => state.activeCaucasus
+            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+        },
+        props: { text: 'tour' },
         span: { text: 'caucasus ' }
       },
 
       {
-        class: { show: (element, state) => state.activeExclusive ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' } },
+        class: {
+          show: (element, state) => state.activeExclusive
+            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+        },
+        props: { text: 'tour' },
         span: { text: 'exclusive ' }
       },
 
       {
-        class: { show: (element, state) => state.activeWineGastronomy ? { opacity: '1', bottom: '0' } : { bottom: '-50px', opacity: '0' } },
+        class: {
+          show: (element, state) => state.activeWineGastronomy
+            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+        },
+        props: { text: 'tour' },
         span: { text: 'wine & gastronomy ' }
       },
 
       {
-        class: { show: (element, state) => state.activeAdventure ? { bottom: '0', opacity: '1' } : { bottom: '-50px' } },
+        class: {
+          show: (element, state) => state.activeAdventure
+            ? { bottom: '0', opacity: '1' } : { bottom: '-50px', opacity: '0' }
+        },
+        props: { text: 'tour' },
         span: { text: 'adventure ' }
       }
     ]
@@ -104,7 +125,6 @@ export const header = {
     extend: Navbar,
     ...[
       {
-        props: { href: '#daily' },
         class: { show: (element, state) => state.activeDaily
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -119,6 +139,7 @@ export const header = {
             })
           }
         },
+        props: { href: '#daily' },
         text: 'daily'
       },
       {
@@ -136,6 +157,7 @@ export const header = {
             })
           }
         },
+        props: { href: '#standard' },
         text: 'standard'
       },
 

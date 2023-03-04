@@ -16,7 +16,7 @@ const props = {
   backgroundPosition: 'center center',
   backgroundColor: 'rgba(233, 250, 255, 1)',
   style: { backgroundAttachment: 'fixed' },
-  transition: 'height .65s ease-in-out',
+  transition: 'height .85s ease-in-out',
   ':before': {
     content: '""',
     width: '100%',
@@ -54,7 +54,10 @@ const props = {
       width: '100%',
       flex: '1',
       position: 'relative',
-      flow: 'column'
+      flow: 'column',
+      overflow: 'hidden',
+      boxSizing: 'border-box'
+
     }
   },
 

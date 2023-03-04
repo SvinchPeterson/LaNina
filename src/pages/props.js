@@ -22,7 +22,7 @@ export const properties = {
     background: 'linear-gradient(rgba(0 , 0, 0, 1), rgba(0, 0, 0, 1))',
     opacity: '0',
     position: 'absolute',
-    pointerEvens: 'none',
+    pointerEvents: 'none',
     zIndex: '2',
     style: {
       animationName: deopacity,

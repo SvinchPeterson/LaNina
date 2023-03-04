@@ -12,6 +12,7 @@ const props = {
     letterSpacing: '.1px',
     maxWidth: 'H',
     fontSize: `${15.5 / 16}em`,
+    transition: 'letter-spacing 10s ease-in-out',
     style: {
       span: { color: 'rgba(248, 241, 227, 1)', fontWeight: '700' }
     }

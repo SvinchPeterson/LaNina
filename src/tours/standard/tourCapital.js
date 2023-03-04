@@ -8,6 +8,8 @@ import { descriptionCapitalTour } from '../../texts/travelText/toursDescriptions
 
 export const tourCapital = {
   extend: Tour,
+  attr: { id: 'standard' },
+  props: { padding: 'C2 - - -' },
 
   gallery: {
     title: { text: 'capital tour' },

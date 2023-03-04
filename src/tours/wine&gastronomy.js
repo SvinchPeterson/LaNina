@@ -9,7 +9,11 @@ import { commonTourProps } from './commonProps'
 
 const tourWineGastronomy = {
   extend: Tour,
-  props: commonTourProps,
+  class: {
+    show: (element, state) => state.activeWineGastronomy
+      ? { opacity: '1', transition: 'opacity 1.5s ease-in-out' }
+      : { opacity: '0', transition: 'opacity .25s ease-in-out' }
+  },
 
   gallery: {
     gallery: {
@@ -56,16 +60,41 @@ const tourWineGastronomy = {
       }
     }
   },
-  description: { extend: descriptionWineGastronomy }
+  description: {
+    extend: descriptionWineGastronomy,
+    class: {
+      show: (element, state) => state.activeWineGastronomy
+        ? {
+          opacity: '1',
+          transform: 'translateY(0)',
+          transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
+        }
+        : {
+          opacity: '0',
+          transform: 'translateY(50px)',
+          transition: 'opacity .25s ease-in-out, transform .25s ease-in-out'
+        }
+    }
+  }
 }
 
 export const wineGastronomy = {
   extend: TourContainer,
+  props: commonTourProps,
 
   class: {
     show: (element, state) => state.activeWineGastronomy
-      ? { opacity: '1' }
-      : { opacity: '0', zIndex: '-1' }
+      ? {
+        opacity: '1',
+        transform: 'translateY(0)',
+        transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
+      }
+      : {
+        opacity: '0',
+        pointerEvents: 'none',
+        transform: 'translateY(-30px)',
+        transition: 'opacity .25s ease-in-out, transform .25s ease-in-out'
+      }
   },
 
   tourWineGastronomy
