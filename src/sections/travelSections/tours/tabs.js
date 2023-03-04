@@ -54,11 +54,6 @@ const navArrows = {
   ]
 }
 
-const title = {
-  tag: 'h4',
-  text: 'tours'
-}
-
 const content = {
   extend: Flex,
   attr: { id: 'tabsContent' },
@@ -323,17 +318,6 @@ const props = {
     zIndex: '2',
     pointerEvents: 'none',
     background: 'linear-gradient(to left, rgba(15, 49, 61, 1) 0%,rgba(15, 49, 61, 0) 100%)'
-  },
-
-  title: {
-    color: 'cream2',
-    zIndex: '5',
-    fontSize: 'B',
-    padding: '- - Z B2',
-    fontWeight: '700',
-    textTransform: 'uppercase',
-    letterSpacing: `10px`,
-    alignSelf: 'flex-start'
   },
 
   content: {

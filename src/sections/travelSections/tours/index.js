@@ -32,7 +32,7 @@ const props = {
     textTransform: 'uppercase',
     top: '-B2',
     left: 'E',
-    fontSize: 'B',
+    fontSize: 'A',
     letterSpacing: `${19 / 16}em`,
     fontWeight: '700'
   }
