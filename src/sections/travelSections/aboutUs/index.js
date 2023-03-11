@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { paragraph } from './paragraph'
+import { article } from './article'
 import { team } from './team'
 
 const props = {
@@ -17,6 +17,6 @@ export const aboutUs = {
   props,
   attr: { id: 'about' },
 
-  paragraph,
+  article,
   team
 }

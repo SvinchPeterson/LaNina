@@ -1,10 +1,10 @@
 'use strict'
 
 import { Tour } from '../../components'
-
 import { galleryKakheti } from '../../galleries/travelGalleries'
+import { $kakheti } from '../../texts/travel'
+import { packageKakheti } from '../../toursPackages'
 
-import { descriptionKakheti } from '../../texts/travelText/toursDescriptions'
 export const tourKakheti = {
   extend: Tour,
   gallery: {
@@ -53,5 +53,8 @@ export const tourKakheti = {
       }
     }
   },
-  description: { extend: descriptionKakheti }
+  article: {
+    description: { extend: $kakheti },
+    package: { extend: packageKakheti }
+  }
 }

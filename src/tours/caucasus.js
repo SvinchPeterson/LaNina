@@ -1,11 +1,9 @@
 'use strict'
 
 import { TourContainer, Tour } from '../components'
-
 import { galleryCaucasusTour } from '../galleries/travelGalleries'
-
-import { descriptionCaucasusTour } from '../texts/travelText/toursDescriptions'
-
+import { $caucasus } from '../texts/travel'
+import { packageCaucasus } from '../toursPackages'
 import { commonTourProps } from './commonProps'
 
 const tourCaucasus = {
@@ -62,21 +60,23 @@ const tourCaucasus = {
       }
     }
   },
-  description: {
-    extend: descriptionCaucasusTour,
-    class: {
-      show: (element, state) => state.activeCaucasus
-        ? {
-          opacity: '1',
-          transform: 'translateY(0)',
-          transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
-        }
-        : {
-          opacity: '0',
-          transform: 'translateY(50px)',
-          transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
-        }
-    }
+
+  article: {
+    description: { extend: $caucasus },
+    package: { extend: packageCaucasus }
+    // class: {
+    //   show: (element, state) => state.activeCaucasus
+    //     ? {
+    //       opacity: '1',
+    //       transform: 'translateY(0)',
+    //       transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
+    //     }
+    //     : {
+    //       opacity: '0',
+    //       transform: 'translateY(50px)',
+    //       transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
+    //     }
+    // },
   }
 }
 

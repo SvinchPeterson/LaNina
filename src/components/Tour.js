@@ -1,21 +1,51 @@
 'use strict'
 
-import { Flex } from 'smbls'
+import { Flex, Link } from 'smbls'
 
 import { TourGallery } from './TourGallery'
+import { TourPackage } from './TourPackage'
 
-import { TourDescription } from './TourDescription'
+import { TravelParagraph } from './TravelParagraph'
 
 const props = {
-  align: 'flex-start space-between',
+  align: 'flex-start center',
   alignSelf: 'center',
-  gap: 'D',
-  description: { padding: 'D2 - - -' }
+  gap: 'C',
+
+  gallery: {
+    // border: '3px solid yellow'
+  },
+  article: {
+    flow: 'column',
+    padding: 'D2 - - -',
+    description: {
+      maxWidth: 'H',
+      fontSize: `${15.5 / 16}em`,
+      letterSpacing: '.1px',
+      color: 'cream2 .65',
+      style: { span: { color: 'rgba(248, 241, 227, 1)' } }
+    },
+    package: { border: '2px solid yellow' }
+    // border: '3px solid red'
+  }
 }
 export const Tour = {
   extend: Flex,
   props,
 
   gallery: { extend: TourGallery },
-  description: { extend: TourDescription }
+
+  article: {
+    extend: Flex,
+    description: {
+      extend: TravelParagraph
+    },
+    package: {
+      extend: TourPackage
+    },
+    moreButton: {
+      extend: Link,
+      text: 'more'
+    }
+  }
 }

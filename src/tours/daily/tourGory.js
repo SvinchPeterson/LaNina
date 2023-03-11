@@ -1,10 +1,9 @@
 'use strict'
 
 import { Tour } from '../../components'
-
 import { galleryGori } from '../../galleries/travelGalleries'
-
-import { descriptionGori } from '../../texts/travelText/toursDescriptions'
+import { $gori } from '../../texts/travel'
+import { packageGori } from '../../toursPackages'
 
 export const tourGori = {
   extend: Tour,
@@ -55,5 +54,8 @@ export const tourGori = {
     }
   },
 
-  description: { extend: descriptionGori }
+  article: {
+    description: { extend: $gori },
+    package: { extend: packageGori }
+  }
 }

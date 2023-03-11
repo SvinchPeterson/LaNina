@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { Paragraph } from '../../components'
 
-import { residenceTextEng } from '../../texts/residenceTexts'
+import { residenceTextEng } from '../../texts/residence'
 
 import BB_JPG from '../../assets/images/residence/sololaki/b.jpg'
 

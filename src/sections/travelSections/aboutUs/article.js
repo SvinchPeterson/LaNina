@@ -1,7 +1,6 @@
 'use strict'
 
-import { aboutText } from '../../../texts'
-import { Paragraph } from '../../../components'
+import { $aboutUs } from '../../../texts/travel'
 
 import { contact } from '../contact'
 
@@ -13,6 +12,13 @@ const props = {
   position: 'relative',
   padding: 'B - - -',
   margin: '- C1 - -',
+  title: {
+    fontSize: 'E',
+    fontWeight: '700',
+    textTransform: 'capitalize',
+    letterSpacing: '-1px',
+    padding: '- - Y -'
+  },
   p: {
     gap: 'Z',
     letterSpacing: `${0.2 / 16}em`,
@@ -26,14 +32,11 @@ const props = {
   }
 }
 
-export const paragraph = {
-  extend: Paragraph,
+export const article = {
+  tag: 'article',
   props,
 
   title: { text: 'about us' },
-  p: { extend: aboutText },
-
-  contact: {
-    extend: contact
-  }
+  p: { extend: $aboutUs },
+  contact: { extend: contact }
 }

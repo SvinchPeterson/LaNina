@@ -1,14 +1,18 @@
 'use strict'
 
 import { Tour } from '../../components'
-
 import { galleryMtsketa } from '../../galleries/travelGalleries'
-
-import { descriptionMtsketa } from '../../texts/travelText/toursDescriptions'
+import { $mtsketa } from '../../texts/travel'
+import { packageMtskheta } from '../../toursPackages'
 
 export const tourMtsketa = {
   extend: Tour,
-  description: { extend: descriptionMtsketa },
+
+  article: {
+    description: { extend: $mtsketa },
+    package: { extend: packageMtskheta }
+  },
+
   gallery: {
     title: { text: 'mtsketa' },
     gallery: {

@@ -2,7 +2,7 @@
 
 import { Paragraph } from '../../components'
 
-import { wineTextEng } from '../../texts/residenceTexts'
+import { wineTextEng } from '../../texts/residence'
 
 import WINE_JPG from '../../assets/images/residence/sololaki/wine.jpg'
 

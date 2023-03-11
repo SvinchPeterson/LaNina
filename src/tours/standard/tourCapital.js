@@ -1,14 +1,13 @@
 'use strict'
 
 import { Tour } from '../../components'
-
 import { galleryCapitalTour } from '../../galleries/travelGalleries'
-
-import { descriptionCapitalTour } from '../../texts/travelText/toursDescriptions'
+import { $capital } from '../../texts/travel'
+import { packageCapital } from '../../toursPackages'
 
 export const tourCapital = {
   extend: Tour,
-  attr: { id: 'standard' },
+  // attr: { id: 'standard' },
   props: { padding: 'C2 - - -' },
 
   gallery: {
@@ -58,7 +57,9 @@ export const tourCapital = {
       }
     }
   },
-  description: {
-    extend: descriptionCapitalTour
+
+  article: {
+    description: { extend: $capital },
+    package: { extend: packageCapital }
   }
 }

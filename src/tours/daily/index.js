@@ -30,6 +30,9 @@ export const daily = {
         transform: 'translateY(-30px)',
         transition: 'opacity .25s ease-in-out, transform .25s ease-in-out'
       }
+    // show2: (element, state) => state.activeDescription
+    //   ? { overflowY: 'hidden' }
+    //   : {}
   },
 
   childExtend: {

@@ -1,10 +1,9 @@
 'use strict'
 
 import { TourContainer, Tour } from '../components'
-
 import { galleryExclusiveTour } from '../galleries/travelGalleries'
-import { descriptionExclusiveTour } from '../texts/travelText/toursDescriptions'
-
+import { $exclusive } from '../texts/travel'
+import { packageExclusive } from '../toursPackages'
 import { commonTourProps } from './commonProps'
 
 const tourExclusive = {
@@ -63,21 +62,24 @@ const tourExclusive = {
     }
   },
 
-  description: {
-    extend: descriptionExclusiveTour,
-    class: {
-      show: (element, state) => state.activeExclusive
-        ? {
-          opacity: '1',
-          transform: 'translateY(0)',
-          transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
-        }
-        : {
-          opacity: '0',
-          transform: 'translateY(50px)',
-          transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
-        }
-    }
+  article: {
+    description: {
+      extend: $exclusive
+    },
+    package: { extend: packageExclusive }
+    // class: {
+    //   show: (element, state) => state.activeExclusive
+    //     ? {
+    //       opacity: '1',
+    //       transform: 'translateY(0)',
+    //       transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
+    //     }
+    //     : {
+    //       opacity: '0',
+    //       transform: 'translateY(50px)',
+    //       transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
+    //     }
+    // },
   }
 }
 

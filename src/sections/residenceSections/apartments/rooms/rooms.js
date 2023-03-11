@@ -4,7 +4,7 @@ import { Room } from '../../../../components'
 
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from '../../../../galleries/apartmentsGalleries'
 
-import { ballerinaTextEng, redBrickTextEng, yellowCouchTextEng, greenForrestTextEng, retroTextEng } from '../../../../texts/residenceTexts'
+import { ballerinaTextEng, redBrickTextEng, yellowCouchTextEng, greenForrestTextEng, retroTextEng } from '../../../../texts/residence'
 
 export const roomBallerina = {
   extend: Room,

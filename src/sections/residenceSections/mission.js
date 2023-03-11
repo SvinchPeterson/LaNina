@@ -2,7 +2,7 @@
 
 import { Paragraph } from '../../components'
 
-import { missionTextEng } from '../../texts/residenceTexts'
+import { missionTextEng } from '../../texts/residence'
 
 import VERANDA_JPG from '../../assets/images/residence/sololaki/veranda.jpg'
 

@@ -1,18 +1,18 @@
 'use strict'
 
 import { Tour } from '../../components'
-
 import { galleryRoyalTour } from '../../galleries/travelGalleries'
-
-import { descriptionRoyalTour } from '../../texts/travelText/toursDescriptions'
+import { $royal } from '../../texts/travel'
+import { packageRoyal } from '../../toursPackages'
 
 export const tourRoyal = {
   extend: Tour,
 
-  description: {
-    extend: descriptionRoyalTour
-
+  article: {
+    description: { extend: $royal },
+    package: { extend: packageRoyal }
   },
+
   gallery: {
     title: { text: 'royal tour' },
     gallery: {
@@ -36,7 +36,7 @@ export const tourRoyal = {
                   activeRoyalTourGalleryImage: activeRoyalTourGalleryImage - 1
                 })
                 if (activeRoyalTourGalleryImage <= 0) {
-                  state.update({ activeRoyalTourGalleryImage: 9 })
+                  state.update({ activeRoyalTourGalleryImage: 13 })
                 }
               }
             }
@@ -49,7 +49,7 @@ export const tourRoyal = {
                 state.update({
                   activeRoyalTourGalleryImage: activeRoyalTourGalleryImage + 1
                 })
-                if (activeRoyalTourGalleryImage >= 9) {
+                if (activeRoyalTourGalleryImage >= 13) {
                   state.update({ activeRoyalTourGalleryImage: 0 })
                 }
               }

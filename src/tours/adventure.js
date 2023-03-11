@@ -1,10 +1,9 @@
 'use strict'
 
 import { TourContainer, Tour } from '../components'
-
 import { galleryAdventureTour } from '../galleries/travelGalleries'
-
-import { descriptionAdventureTure } from '../texts/travelText/toursDescriptions'
+import { $adventure } from '../texts/travel'
+import { packageAdventure } from '../toursPackages'
 
 import { commonTourProps } from './commonProps'
 
@@ -62,22 +61,23 @@ const tourAdventure = {
     }
   },
 
-  description: {
-    extend: descriptionAdventureTure,
-    class: {
-      show: (element, state) => state.activeAdventure
-        ? {
-          opacity: '1',
-          transform: 'translateY(0)',
-          transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
+  article: {
+    description: { extend: $adventure },
+    package: { extend: packageAdventure }
+    // class: {
+    //   show: (element, state) => state.activeAdventure
+    //     ? {
+    //       opacity: '1',
+    //       transform: 'translateY(0)',
+    //       transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
 
-        }
-        : {
-          opacity: '0',
-          transform: 'translateY(50px)',
-          transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
-        }
-    }
+    //     }
+    //     : {
+    //       opacity: '0',
+    //       transform: 'translateY(50px)',
+    //       transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
+    //     }
+    // },
   }
 }
 

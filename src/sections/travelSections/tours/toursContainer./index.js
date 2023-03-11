@@ -6,6 +6,7 @@ import { PopUpModal } from '../../../../components'
 import { daily, standard, caucasus, adventure, exclusive, wineGastronomy } from '../../../../tours'
 
 import { header } from './header'
+import { packages } from './packages'
 
 import ORNAMENT_JPG from '../../../../assets/images/travel/ornament2.png'
 
@@ -46,18 +47,27 @@ const props = {
   },
 
   content: {
+    width: '80%',
     boxSize: '100% 80%',
     flow: 'column',
-    overflow: 'hidden',
+    // overflow: 'hidden',
     zIndex: '1',
     tours: {
       width: '100%',
+      height: '100%',
       flex: '1',
       position: 'relative',
       flow: 'column',
-      overflow: 'hidden',
+      // overflow: 'hidden',
       boxSizing: 'border-box'
-
+    },
+    packages: {
+      position: 'fixed',
+      boxSize: '100% 100%',
+      // zIndex: '10000',
+      top: '0',
+      left: '0',
+      background: 'black'
     }
   },
 
@@ -94,7 +104,11 @@ export const toursContainer = {
     class: {
       show: (element, state) => state.activeToursContainer
         ? { opacity: '1', transform: 'rotate(90deg)' }
-        : { opacity: '0' }
+        : { opacity: '0' },
+
+      show2: (element, state) => state.activePackagesContainer
+        ? { pointerEvents: 'none' }
+        : { }
     }
   },
 
@@ -111,6 +125,8 @@ export const toursContainer = {
       adventure
     }
   },
+
+  packages,
 
   logo: {
     class: {

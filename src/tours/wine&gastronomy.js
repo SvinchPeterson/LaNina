@@ -2,9 +2,8 @@
 
 import { TourContainer, Tour } from '../components'
 import { galleryWineGastronomyTour } from '../galleries/travelGalleries'
-
-import { descriptionWineGastronomy } from '../texts/travelText/toursDescriptions'
-
+import { $wineGastronomy } from '../texts/travel'
+import { packageWineGastronomy } from '../toursPackages'
 import { commonTourProps } from './commonProps'
 
 const tourWineGastronomy = {
@@ -60,21 +59,23 @@ const tourWineGastronomy = {
       }
     }
   },
-  description: {
-    extend: descriptionWineGastronomy,
-    class: {
-      show: (element, state) => state.activeWineGastronomy
-        ? {
-          opacity: '1',
-          transform: 'translateY(0)',
-          transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
-        }
-        : {
-          opacity: '0',
-          transform: 'translateY(50px)',
-          transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
-        }
-    }
+
+  article: {
+    description: { extend: $wineGastronomy },
+    package: { extend: packageWineGastronomy }
+    // class: {
+    //   show: (element, state) => state.activeWineGastronomy
+    //     ? {
+    //       opacity: '1',
+    //       transform: 'translateY(0)',
+    //       transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
+    //     }
+    //     : {
+    //       opacity: '0',
+    //       transform: 'translateY(50px)',
+    //       transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
+    //     }
+    // },
   }
 }
 

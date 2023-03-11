@@ -11,7 +11,7 @@ const props = {
   flow: 'column',
   gap: 'C1',
   boxSizing: 'border-box',
-  style: { overflowY: 'auto', '::-webkit-scrollbar': { display: 'none' } }
+  style: { '::-webkit-scrollbar': { display: 'none' } }
 }
 
 export const TourContainer = {

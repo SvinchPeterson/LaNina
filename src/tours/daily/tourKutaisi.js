@@ -1,14 +1,18 @@
 'use strict'
 
 import { Tour } from '../../components'
-
 import { galleryKutaisi } from '../../galleries/travelGalleries'
-
-import { descriptionKutaisi } from '../../texts/travelText/toursDescriptions'
+import { $kutaisi } from '../../texts/travel'
+import { packageKutaisi } from '../../toursPackages'
 
 export const tourKutaisi = {
   extend: Tour,
-  description: { extend: descriptionKutaisi },
+
+  article: {
+    description: { extend: $kutaisi },
+    package: { extend: packageKutaisi }
+  },
+
   gallery: {
     title: { text: 'kutaisi' },
     gallery: {
