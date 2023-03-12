@@ -1,6 +1,6 @@
 'use strict'
 
-import { TourPackage } from '../../../components'
+import { TourPackage } from '../components'
 
 import { kutaisiDescription, kutaisiPlaces } from './packageKutaisi'
 import { $dadianiPalace, $mestia, $kordula } from '../texts/travel'

@@ -6,7 +6,6 @@ import { PopUpModal } from '../../../../components'
 import { daily, standard, caucasus, adventure, exclusive, wineGastronomy } from '../../../../tours'
 
 import { header } from './header'
-import { packages } from './packages'
 
 import ORNAMENT_JPG from '../../../../assets/images/travel/ornament2.png'
 
@@ -125,8 +124,6 @@ export const toursContainer = {
       adventure
     }
   },
-
-  packages,
 
   logo: {
     class: {

@@ -1,10 +1,10 @@
 'use strict'
 
-import { TourPackage } from '../../../components'
+import { TourPackage } from '../components'
 
 import { mtskhetaDescription, mtskhetaPlaces } from './packageMtskheta'
 import { kakhetiPlaces } from './packageKakheti'
-import { $kakheti, $bakuriani } from '../texts/travel'
+import { $kakheti, $bakuriani, $davitGareji } from '../texts/travel'
 import { borjomiDescription, borjomiPlaces } from './packageBorjomi'
 
 export const packageHistorical = {
@@ -46,23 +46,9 @@ export const packageHistorical = {
         description: {
           ...[
             { extend: $kakheti },
+            { extend: $davitGareji },
             {
               ...[
-                {
-                  ...[
-                    `Kakheti is also rich in history. Here you'll find the incredible monastery complex of `,
-                    { tag: 'span', text: 'Davit Gareji' },
-                    `. David Gareja is a rock-hewn Georgian Orthodox monastery complex located in the Kakheti region of Eastern Georgia. `
-
-                  ]
-                },
-
-                {
-                  ...[
-                    `The complex was founded in the 6th century by David (St. David Garejeli), one of the thirteen Assyrian monks who arrived in the country at the same time. The complex includes hundreds of cells, churches, chapels, refectories and living quarters hollowed out of the rock face.`
-                  ]
-                },
-
                 {
                   ...[
                     `Also you'll find The picturesque hilltop town of `,
@@ -70,7 +56,6 @@ export const packageHistorical = {
                     ', and Many of beautiful Churches, Castles and mansions around the main town ',
                     { tag: 'span', text: 'Telavi' },
                     '.'
-
                   ]
                 }
               ]

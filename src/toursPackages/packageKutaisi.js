@@ -1,15 +1,14 @@
 'use strict'
 
-import { TourPackage } from '../../../components'
+import { TourPackage } from '../components'
 
-import { $kutaisi } from '../texts/travel'
+import { $kutaisi, $prometheusCave } from '../texts/travel'
 
 export const kutaisiDescription = {
   ...[
     { extend: $kutaisi },
     {
       ...[
-
         `The city has
         been inhabited since ancient times. The
         existence of colchian culture is confirmed here
@@ -19,19 +18,7 @@ export const kutaisiDescription = {
         abundance of cultural monuments.`
       ]
     },
-
-    {
-      ...[
-        {
-          ...[
-            { tag: 'span', text: `Prometheus Cave ` },
-            `may regard as the visit card of Georgia. The magic cave is full with stunning curtains of stalactites and stalagmites. It is possible to walk through the length of 1420 meters in the cave's territory visit the halls and enjoy `,
-            { tag: 'span', text: `boat tour ` },
-            `by walking the river.`
-          ]
-        }
-      ]
-    }
+    { extend: $prometheusCave }
   ]
 }
 

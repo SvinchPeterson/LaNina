@@ -1,6 +1,6 @@
 'use strict'
 
-import { TourPackage } from '../../../components'
+import { TourPackage } from '../components'
 import { $borjomi } from '../texts/travel'
 
 export const borjomiDescription = {

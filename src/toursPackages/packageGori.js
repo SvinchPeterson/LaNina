@@ -1,8 +1,8 @@
 'use strict'
 
-import { TourPackage } from '../../../components'
+import { TourPackage } from '../components'
 
-import { $gori } from '../texts/travel'
+import { $gori, $Uplistsikhe } from '../texts/travel'
 
 export const goriPlaces = {
   title: {},
@@ -31,7 +31,6 @@ export const goriDescription = {
             where he was born; his armor plated railway carriage and a statue that was controversially standing in the main square of Gori up until 2010.`
           ]
         },
-
         {
           ...[
             `In addition, many items owned by Stalin, including
@@ -43,23 +42,10 @@ export const goriDescription = {
             newspaper articles.`
           ]
         },
-
-        {
-          ...[
-            {
-              ...[
-                { tag: 'span', text: `Uplistsikhe ` },
-                `in translation Fortress of the Lord, is a cave town fortress situated on a rocky massif on the left bank of the river Mtkvari. Dating back to I-II millennium B.C. Uplistsikhe was an important religious, political and cultural centre in the Hellenistic and the late Antique periods.`
-              ]
-
-            }
-          ]
-
-        }
+        { extend: $Uplistsikhe }
       ]
     }
   ]
-
 }
 
 export const packageGori = {

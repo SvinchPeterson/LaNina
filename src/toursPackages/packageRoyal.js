@@ -1,6 +1,6 @@
 'use strict'
 
-import { TourPackage } from '../../../components'
+import { TourPackage } from '../components'
 
 import { ananuriDescription, ananuriPlaces } from './packageAnanuri'
 import { kakhetiDescription, kakhetiPlaces } from './packageKakheti'

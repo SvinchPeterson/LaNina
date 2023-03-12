@@ -19,12 +19,12 @@ const state = {
 
   activeGocha: true,
   activeDaily: false,
-  // activeStandard: false,
-  activeStandard: true,
+  activeStandard: false,
   activeCaucasus: false,
   activeExclusive: false,
   activeAdventure: false,
-  activeWineGastronomy: false,
+  // activeWineGastronomy: false,
+  activeWineGastronomy: true,
 
   activeArrow: false,
 

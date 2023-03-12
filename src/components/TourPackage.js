@@ -30,7 +30,10 @@ const props = {
 
       title: {},
       description: {
-        flow: 'column'
+        flow: 'column',
+        gap: 'Z',
+        color: 'cream2 .65',
+        style: { span: { color: 'rgba(248, 241, 227, 1)' } }
       },
       places: {
         flow: 'column',

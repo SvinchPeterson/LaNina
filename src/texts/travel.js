@@ -135,6 +135,24 @@ export const $kakheti = {
   ]
 }
 
+export const $davitGareji = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        `Kakheti is also rich in history. Here you'll find the incredible monastery complex of `,
+        { tag: 'span', text: 'Davit Gareji' },
+        `. David Gareja is a rock-hewn Georgian Orthodox monastery complex located in the Kakheti region of Eastern Georgia. `
+      ]
+    },
+    {
+      ...[
+        `The complex was founded in the 6th century by David (St. David Garejeli), one of the thirteen Assyrian monks who arrived in the country at the same time. The complex includes hundreds of cells, churches, chapels, refectories and living quarters hollowed out of the rock face.`
+      ]
+    }
+  ]
+}
+
 export const $kutaisi = {
   extend: TravelParagraph,
   ...[
@@ -149,6 +167,21 @@ export const $kutaisi = {
       ]
     }
   ]
+}
+
+export const $prometheusCave = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: `Prometheus Cave ` },
+        `may regard as the visit card of Georgia. The magic cave is full with stunning curtains of stalactites and stalagmites. It is possible to walk through the length of 1420 meters in the cave's territory visit the halls and enjoy `,
+        { tag: 'span', text: `boat tour ` },
+        `by walking the river.`
+      ]
+    }
+  ]
+
 }
 
 export const $gori = {
@@ -169,6 +202,18 @@ export const $gori = {
   ]
 }
 
+export const $Uplistsikhe = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: `Uplistsikhe ` },
+        `in translation Fortress of the Lord, is a cave town fortress situated on a rocky massif on the left bank of the river Mtkvari. Dating back to I-II millennium B.C. Uplistsikhe was an important religious, political and cultural centre in the Hellenistic and the late Antique periods.`
+      ]
+    }
+  ]
+}
+
 export const $borjomi = {
   extend: TravelParagraph,
   ...[
@@ -184,6 +229,33 @@ export const $borjomi = {
     }
   ]
 }
+export const $borjomi2 = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: 'Borjomi' },
+        ` is a hydrothermal health spa resort in the southern region of
+        Samskhe -Javakheti in Georgia. Borjomi
+        has an international reputation for its
+        geothermal spring mineral water
+        resources.`
+      ]
+    },
+
+    {
+      ...[
+        `Its accessible
+        location in the beautiful Lesser
+        Caucasus Mountains attracts tourists in
+        search of nature, escape and
+        enlightenment tourism opportunities
+        year-round. Borjomi's mineral waters
+        were first mentioned as early as the 15th century.`
+      ]
+    }
+  ]
+}
 
 export const $rabat = {
   extend: TravelParagraph,
@@ -194,6 +266,30 @@ export const $rabat = {
         ` lies in the city of Akhaltsikhe, Samtskhe - Javakheti region in Georgia.
       The city and probably the first castle were founded in the 9th century by Guaram Mampali, In
       2011-2012 the entire complex was rebuilt in order to attract more tourist to the area;`
+      ]
+    }
+  ]
+}
+
+export const $rabat2 = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: 'Rabati Castle' },
+        ` lies in the city of Akhaltsikhe, Samtskhe - Javakheti region in Georgia.
+      The city and probably the first castle were founded in the 9th century by Guaram Mampali, In
+      2011-2012 the entire complex was rebuilt in order to attract more tourist to the area;
+      the mosque and the madrasa were renovated, the castle and the 9th/10th century church were rebuilt as was the Jaqeli Palace.
+      `
+      ]
+    },
+    {
+      ...[
+        `After the restoration a museum, hotel, restaurants and other tourist
+        facilities were installed in the outer bailey. The project was done rather rigorously, a bit too
+        much for my taste because the castle may look original at first glance, but you will find a lot
+        of concrete when you look closer.`
       ]
     }
   ]
@@ -489,7 +585,7 @@ export const $kordula = {
   ]
 }
 
-export const $erevan = {
+export const $yerevan = {
   extend: TravelParagraph,
   ...[
     {
@@ -504,13 +600,13 @@ export const $erevan = {
   ]
 }
 
-export const $khorViper = {
+export const $khorVirap = {
   extend: TravelParagraph,
   ...[
     {
       ...[
         { tag: 'span', text: 'The monastery of Khor Virap' },
-        `embodies the unquenchable longing of the entire Armenian people about their historical homeland and the biblical Mount Ararat. Khor Virap on the background of biblical Ararat has long become a symbol of
+        ` embodies the unquenchable longing of the entire Armenian people about their historical homeland and the biblical Mount Ararat. Khor Virap on the background of biblical Ararat has long become a symbol of
         Armenia and the most famous landmark ever depicted on various postcards and pictures.`
       ]
     }
@@ -523,7 +619,7 @@ export const $noravank = {
     {
       ...[
         { tag: 'span', text: 'Noravank Monastery' },
-        `was built 13 centuries
+        ` was built 13 centuries
         ago! The monastery stands majestically in the
         gorge of the river Arpa, and in the gorge,
         makes the view even more impressive.`
@@ -576,6 +672,25 @@ export const $dilijan = {
   ]
 }
 
+export const $samshvilde = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: 'Samshvilde' },
+        `, dating back to the 3rd millennia B.C., is known as one of the most ancient towns in the Caucasus region. This abandoned medieval town, which includes the ruins of a citadel, the central Sioni Temple along with several minor churches, an ancient cemetery, water reservoir, bridge and numerous caves is situated in the Tetri Tskaro district, approximately 70 km from Tbilisi.`
+      ]
+    },
+
+    {
+      ...[
+        `according to historical sources the first settlements in Samshvilde date back to the 4th millennia B.C. The meaning of the word â€œSamshvildeâ€ is â€œthe place of the bowâ€, which emphasizes its military function. Owing to its strategic location, Samshvilde was an object of attacks and sieges from various states or dynasties.`
+      ]
+    }
+  ]
+
+}
+
 export const $shaori = {
   extend: TravelParagraph,
   ...[
@@ -622,6 +737,151 @@ export const $birtvisi = {
     {
       ...[
         `When exactly the citadel was built, no one knows. In the sources that have come down to us, it has been mentioned since the beginning of the XI century. The fortress was part of the fortifications along with other fortresses: Partskhisi and Orbeti. At that time, most of modern Georgia was dominated by a state entity called the Tbilisi Emirate.`
+      ]
+    }
+  ]
+}
+
+export const $wineTesting = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        `There are plenty of possibilities for wine tastings in `,
+        { tag: 'span', text: 'kakheti' },
+        `. Here, you can enjoy your glass of beautifully crafted `,
+        { tag: 'span', text: 'saperavi' },
+        ` in the breathtaking surroundings of Alazani Valley, vineyards, and historical churches and cathedrals.`
+      ]
+    }
+  ]
+}
+
+export const $chavchavadzeMuseum = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: 'Museum of Prince Alexander Chavchavadze' },
+        `, the founder of the Georgian romanticism turned the estate in the village of `,
+        { tag: 'span', text: ' Tsinandali' },
+        ` The complex in Tsinandali embraces the memorial house, a landscape garden, a historical winery, wine cellar, hotel and a café. The vineyards have been restored and wine production has resumed.`
+      ]
+    },
+    {
+      ...[
+        `We offer you a pleasurable and informative experience: you will look into the background of the noble Chavchavadze family, who played a significant part in the national history.have a look at the winery and sample the “Tsinandali” (first produced by the Chavchavadzes) etc. It was in the Tsinandali winery that the wine was first bottled in Georgia. Al. Chavchavadze's collection of vintage wines consists of over 15 000 bottles, with the oldest dated with 1814`
+      ]
+    }
+  ]
+}
+
+export const $sioni = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: 'Ateni sioni' },
+        ` The domed tetraconch cathedral of the I half of VII century. Located 12 km from Gori, Ateni Gorge, On the left shore of the Tana river.`
+      ]
+    }
+  ]
+}
+
+export const $gelati = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: 'Gelati Monastery' },
+        ` is located in the Imereti region, 11 km from the of Kutaisi. The monastery was founded by `,
+        { tag: 'span', text: 'David the Builder' },
+        ` in 1106. Here the greatest king of Georgia is buried.`
+      ]
+    }
+  ]
+}
+
+export const $racha = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: 'Racha' },
+        `  is the historical-geographic site of Georgia that is situated in the north-east side of west Georgia. It is quite rich with cultural monuments and diverse nature. Racha is well-known with the masterpiece of Georgian architecture, `,
+        { tag: 'span', text: 'Nikortsminda' },
+        ` that is characterized with rich and sophisticated ornaments.`
+      ]
+    },
+    {
+      ...[
+        `In addition to the interesting cultural sites, you can enjoy chilly forests, alpine lakes, beautiful waterfalls and stunning views in Racha.`
+      ]
+    }
+  ]
+}
+
+export const $wyaltubo = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        `The town of `,
+        { tag: 'span', text: 'Tskaltubo' },
+        ` is situated in the central part of Western Georgia. The resort's focus is on `,
+        { tag: 'span', text: 'balneotherapy' },
+        ` for circulatory, nervous, musculo-skeletal, gynaecological and skin diseases, but since the 1970s its repertoire has included `,
+        { tag: 'span', text: `"speleotherapy"` },
+        `, in which the cool dust-free environment of local caves is said to benefit pulmonary diseases.`
+      ]
+    },
+
+    {
+      ...[
+        `Tskaltubo was especially popular in the Soviet era. Bathhouse 9 features a frieze of Stalin, and visitors can see the private pool where he bathed on his visits.`
+      ]
+    }
+  ]
+}
+
+export const $martvili = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: 'Martvili Canyon' },
+        ` is a picturesque landmark of water and rocks, located 50km west of Kutaisi. The most popular activity in the Martvili Canyon is boating. Taking a guided boat tour of the 300-meter long river will treat you to the breathtaking views of the mountain river canyon.`
+      ]
+    },
+
+    {
+      ...[
+        ` It will cover the entire section of `,
+        { tag: 'span', text: 'Abasha' },
+        ` where you can best enjoy the views of the canyon.`,
+        ` Along the way, you will be exploring the `,
+        { tag: 'span', text: 'Dadianis Path' },
+        ',  a mountain river gorge, while passing at limestone bridges overlooking the scenic waterfalls.'
+      ]
+    }
+  ]
+}
+
+export const $batumi = {
+  extend: TravelParagraph,
+  ...[
+    {
+      ...[
+        { tag: 'span', text: 'Batumi' },
+        ` is located in Adjara, western Georgia. It is a wonderful seaside city with glittering beaches and attractive surroundings. The territory of Batumi was even populated in the Bronze Age. There was life during the antiquity period here, and the population had trade links with neighboring and distant countries.`
+      ]
+    },
+
+    {
+      ...[
+        `Ancient history, light and dynamic architecture, sunny seaside, boulevard `,
+        { tag: 'span', text: 'Batumi Botanical Garden' },
+        `, delicious Adjarian cuisine and many entertaining places, cultural or leisure destinations make this city incredible and it attracts many visitors`
       ]
     }
   ]

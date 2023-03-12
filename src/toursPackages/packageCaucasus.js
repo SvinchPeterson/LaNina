@@ -1,8 +1,8 @@
 'use strict'
 
-import { TourPackage } from '../../../components'
+import { TourPackage } from '../components'
 
-import { $tbilisi } from '../texts/travel'
+import { $tbilisi, $yerevan, $khorVirap, $noravank, $savane, $savaneMonastry, $dilijan } from '../texts/travel'
 
 import { placesTbilisi } from './packageTbilisi'
 
@@ -13,8 +13,7 @@ export const packageCaucasus = {
   extend: TourPackage,
 
   title: {
-    span: { text: 'capital tour |' },
-    text: ' 2 night 3 days'
+    span: { text: 'caucasus tour' }
   },
 
   packageSchedule: {
@@ -38,20 +37,74 @@ export const packageCaucasus = {
       },
 
       {
-        title: { text: 'Day 4 - Arrival Armenia / Yerevan City Tour' }
-        // description: { ...[{ extend: descriptionCaucasusTour }] },
-        // places: { extend: kakhetiPlaces }
+        title: { text: 'Day 4 - Arrival Armenia / Yerevan City Tour' },
+        description: { ...[{ extend: $yerevan }] },
+        places: {
+          title: {},
+          places: {
+            ...[
+              { text: 'Garni' },
+              { text: 'Geghard' },
+              { text: 'Symphony of the stone city walking tour around the country' },
+              { text: 'Armenian Historical Museum' }
+            ]
+          }
+        }
+      },
+
+      {
+        title: { text: 'Day 5 - Armenia tour' },
+        description: {
+          ...[{ extend: $khorVirap }, { extend: $noravank }]
+        },
+        places: {
+          title: {},
+          places: {
+            ...[
+              { text: 'Khor Virap' },
+              { text: 'Novaravank' },
+              { text: 'Ararat Valley' }
+            ]
+          }
+        }
+      },
+
+      {
+        title: { text: 'Day 6 - Sevan . Sevanavank' },
+        description: {
+          ...[{ extend: $savane }, { extend: $savaneMonastry }, { extend: $dilijan }]
+        },
+        places: {
+          title: {},
+          places: {
+            ...[
+              { text: 'Dilijan' },
+              { text: 'Sevan lake' },
+              { text: 'Sevanavank' },
+              { text: 'Parz Park' }
+            ]
+          }
+        }
+      },
+
+      {
+        title: { text: 'Day 7 - Departure AM Airport' },
+        description: null,
+        places: null
       }
     ]
   },
+
   packageIclusion: {
     title: { },
     content: {
       ...[
-        { text: '2 Night Hotel Stay city center' },
-        { text: '2 Days Private tour' },
-        { text: 'comfortable car with professional driver' },
-        { text: '2 transfers from to airport' }
+        { text: '3 Night hotel stay with breakfast' },
+        { text: '3 Days Private Tour' },
+        { text: 'Comfortable Car with professional driver' },
+        { text: 'English Speaking Guide' },
+        { text: 'Wine Tasting + excursion included' },
+        { text: '2 Airport Transfer' }
       ]
     }
   }
