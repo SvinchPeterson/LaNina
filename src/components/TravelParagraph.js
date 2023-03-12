@@ -5,6 +5,7 @@ import { Flex } from 'smbls'
 const props = {
   flow: 'column',
   gap: 'Y',
+  letterSpacing: '.3px',
   style: { span: { fontWeight: '700' } }
 }
 

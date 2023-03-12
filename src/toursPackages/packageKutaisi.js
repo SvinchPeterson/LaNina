@@ -34,7 +34,7 @@ export const kutaisiPlaces = {
 
 export const packageKutaisi = {
   extend: TourPackage,
-
+  title: null,
   packageSchedule: {
     ...[
       {
@@ -44,6 +44,5 @@ export const packageKutaisi = {
       }
     ]
   },
-
   packageIclusion: null
 }

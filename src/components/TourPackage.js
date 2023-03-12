@@ -16,19 +16,52 @@ export const tourPlaces = {
 
 const props = {
   color: 'cream2',
-  margin: 'auto',
+  // margin: 'auto',
+  maxWidth: 'H',
   background: 'naviBlue .5',
   flow: 'column',
-  maxHeight: '800px',
-  style: { overflowY: 'auto' },
+  maxHeight: `I`,
+  overflow: 'hidden',
+  // display: 'none',
 
-  title: {},
+  title: {
+    fontSize: 'Z',
+    textTransform: 'uppercase',
+    flow: 'column',
+    color: 'cream2 .75',
+    // align: 'center flex-start',
+    gap: 'V',
+    fontWeight: '400',
+    border: 'solid, cream2 .5',
+    borderWidth: '0 0 .5px 0',
+    padding: 'Z - Z2 -',
+    span: {
+      fontSize: 'D',
+      fontWeight: '700',
+      color: 'cream2',
+      margin: '- - - -V2'
+    }
+  },
+
   packageSchedule: {
     flow: 'column',
     childProps: {
       flow: 'column',
+      gap: '0',
+      ':not(:last-child)': {
+        border: 'solid, cream2 .5',
+        borderWidth: '0 0 .5px 0'
+      },
 
-      title: {},
+      title: {
+        fontSize: 'B',
+        textTransform: 'capitalize',
+        color: 'cream2',
+        letterSpacing: '0.5px',
+        fontWeight: '100',
+        padding: 'Z1 -'
+        // padding: '- - Z -'
+      },
       description: {
         flow: 'column',
         gap: 'Z',
@@ -37,11 +70,25 @@ const props = {
       },
       places: {
         flow: 'column',
-        title: {},
+        // border: 'solid, cream2 .5',
+        // borderWidth: '0 0 .5px 0',
+        padding: 'Z1 - Y2 0',
+        width: 'fit-content',
+        gap: 'Y2',
+        title: {
+          fontSize: 'Z',
+          textTransform: 'uppercase',
+          fontWeight: '400',
+          letterSpacing: `${10 / 13}em`,
+          padding: '- - - Z'
+        },
         places: {
           flow: 'column',
+          gap: 'V',
           childProps: {
             align: 'center flex-start',
+            letterSpacing: '.4px',
+            color: 'cream2 .8',
             gap: 'Y',
             ':before': {
               content: '""',
@@ -57,9 +104,21 @@ const props = {
 
   packageIclusion: {
     flow: 'column',
-    title: { tag: 'h6' },
-    content: { flow: 'column' }
-
+    gap: 'Y1',
+    padding: '- - - -',
+    title: {
+      textTransform: 'uppercase',
+      fontSize: `${12 / 16}em`,
+      fontWeight: '700',
+      letterSpacing: `${0 / 12}em`
+    },
+    content: {
+      flow: 'column',
+      gap: 'V2',
+      fontSize: `${14 / 16}em`,
+      color: 'cream2 .65',
+      letterSpacing: `${0.3 / 14}em`
+    }
   }
 
 }
@@ -68,7 +127,11 @@ export const TourPackage = {
   extend: Flex,
   props,
 
-  title: { tag: 'h2' },
+  title: {
+    tag: 'h2',
+    extend: Flex,
+    span: {}
+  },
 
   packageSchedule: {
     extend: Flex,

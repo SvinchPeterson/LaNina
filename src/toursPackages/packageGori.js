@@ -50,7 +50,7 @@ export const goriDescription = {
 
 export const packageGori = {
   extend: TourPackage,
-
+  title: null,
   packageSchedule: {
     ...[
       {
@@ -60,6 +60,5 @@ export const packageGori = {
       }
     ]
   },
-
   packageIclusion: null
 }

@@ -8,31 +8,15 @@ import { packageTbilisi } from '../../toursPackages'
 export const tourTbilisi = {
   extend: Tour,
   props: { padding: 'C2 - - -' },
-  // attr: { id: 'daily' },
-  // class: {
-  //   show2: (element, state) => state.activeDescription
-  //     ? {
-  //       transition: 'min-width 3s ease-in-out, min-height 3s ease-in-out',
-  //       minWidth: '100%',
-  //       minHeight: '100%'
-  //       // position: 'absolute',
-  //       // background: 'red',
-  //       // clear: 'both'
-  //     }
-  //     : {}
-  // },
-  gallery: {
-    // class: {
-    //   show: (element, state) => state.activeDescription
-    //     ? {
-    //       transform: 'scale(.8) translateX(-50px)',
-    //       transition: 'all 1s ease-in-out'
-    //     }
-    //     : {
 
-    //     }
-    // },
+  gallery: {
+    class: {
+      show: (element, state) => state.activeTbilisiPackage
+        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+    },
+
     title: { text: 'tbilisi city tour' },
+
     gallery: {
       extend: galleryTbilisi,
       childExtend: {
@@ -80,30 +64,62 @@ export const tourTbilisi = {
   },
 
   article: {
-    description: { extend: $tbilisi },
-    package: { extend: packageTbilisi }
-    // class: {
-    //   show: (element, state) => state.activeDescription
-    //     ? {
-    //       // position: 'absolute',
-    //       transition: 'all 1s ease-in-out',
-    //       background: 'rgba(15, 49, 61, .85)',
-    //       backdropFilter: 'blur(2px)',
-    //       zIndex: '100',
-    //       boxShadow: '0 0 2px 0 rgba(0, 0, 0, .4)',
-    //       transform: 'scale(1.1) translate(-100px, 50px)',
-    //       p: {
-    //         transform: 'scale(.85)',
-    //         transition: 'all 1s ease-in-out'
-    //       },
-    //       height: '100%',
-    //       width: '300%',
-    //       '> div': { transform: 'scale(.8)' }
-    //     }
-    //     : {
+    class: {
+      show: (element, state) => state.activeTbilisiPackage
+        ? {
+          boxShadow: '-30px 0 30px -5px rgba(0,0,0, .35)',
+          background: 'rgba(15, 49, 61, .85)',
+          transition: 'transform .7s ease, background 1s ease, box-shadow 1s ease',
+          backdropFilter: 'blur(1px)',
+          transform: 'scale(1.3) translate(-50px, 50px)',
+          '> *': { transform: 'scale(.8)' }
+        }
+        : {
+          transform: 'scale(1) translate(0, 0)',
+          transition: 'transform .7s ease, background 0s ease, box-shadow 0s ease'
+        }
+    },
 
-    //     }
-    // },
+    close: {
+      class: {
+        show: (element, state) => state.activeTbilisiPackage
+          ? { opacity: '1', transition: 'opacity .7s ease' }
+          : { opacity: '0', transition: 'opacity 0s ease' }
+      },
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeTbilisiPackage: false, activePackages: false })
+        }
+      }
+    },
+
+    description: {
+      extend: $tbilisi,
+      class: {
+        show: (element, state) => state.activeTbilisiPackage
+          ? { display: 'none' } : {}
+      }
+    },
+
+    package: {
+      extend: packageTbilisi,
+      class: {
+        show: (element, state) => state.activeTbilisiPackage
+          ? { height: '100%', '> *': { opacity: '1', transform: 'scale(1)' } }
+          : { height: '0', '> *': { opacity: '0', transform: 'scale(.97)' } }
+      }
+    },
+
+    more: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeTbilisiPackage: true, activePackages: true })
+        }
+      },
+      class: {
+        show: (element, state) => state.activeTbilisiPackage
+          ? { display: 'none' } : { display: 'block' }
+      }
+    }
   }
-
 }

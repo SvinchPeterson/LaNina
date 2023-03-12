@@ -10,10 +10,9 @@ import { mtskhetaDescription, mtskhetaPlaces } from './packageMtskheta'
 
 export const packageRoyal = {
   extend: TourPackage,
-
   title: {
-    span: { text: 'royal tour |' },
-    text: ' 7 night 8 days'
+    span: { text: 'royal tour' },
+    text: '7 night _ 8 days'
   },
 
   packageSchedule: {

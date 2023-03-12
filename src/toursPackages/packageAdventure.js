@@ -5,7 +5,7 @@ import { $birtvisi } from '../texts/travel'
 
 export const packageAdventure = {
   extend: TourPackage,
-  title: { text: 'adventure tour' },
+  title: { span: { text: 'adventure tour' } },
   packageSchedule: {
     ...[
       {

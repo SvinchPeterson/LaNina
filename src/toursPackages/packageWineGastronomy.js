@@ -11,7 +11,6 @@ import { placesTbilisi } from './packageTbilisi'
 
 export const packageWineGastronomy = {
   extend: TourPackage,
-
   title: null,
   packageSchedule: {
     ...[

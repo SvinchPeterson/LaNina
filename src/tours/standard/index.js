@@ -25,7 +25,10 @@ export const standard = {
         pointerEvents: 'none',
         transform: 'translateY(-30px)',
         transition: 'opacity .25s ease-in-out, transform .35s ease-in-out'
-      }
+      },
+    show2: (element, state) => state.activePackages
+      ? { overflowY: 'hidden' }
+      : {}
   },
 
   childExtend: {

@@ -8,10 +8,9 @@ import { mtskhetaDescription, mtskhetaPlaces } from './packageMtskheta'
 
 export const packageCaucasusMountain = {
   extend: TourPackage,
-
   title: {
-    span: { text: 'Caucasus mountain adventure tour |' },
-    text: ' 9 night 10 days'
+    span: { text: 'Caucasus mountain adventure tour' },
+    text: '9 night _ 10 days'
   },
 
   packageSchedule: {

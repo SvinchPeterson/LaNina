@@ -39,6 +39,7 @@ export const kakhetiPlaces = {
 
 export const packageKakheti = {
   extend: TourPackage,
+  title: null,
   packageSchedule: {
     ...[
       {

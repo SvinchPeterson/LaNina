@@ -34,7 +34,7 @@ export const rabatiDescription = {
 
 export const packageRabati = {
   extend: TourPackage,
-
+  title: null,
   packageSchedule: {
     ...[
       {
@@ -48,6 +48,5 @@ export const packageRabati = {
       }
     ]
   },
-
   packageIclusion: null
 }

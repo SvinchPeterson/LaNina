@@ -26,7 +26,6 @@ export const ananuriDescription = {
 
 export const packageAnanuri = {
   extend: TourPackage,
-
   title: null,
   packageSchedule: {
     ...[

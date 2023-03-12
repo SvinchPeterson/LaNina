@@ -16,6 +16,11 @@ const tourAdventure = {
   },
 
   gallery: {
+    class: {
+      show: (element, state) => state.activeAdventurePackage
+        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+    },
+
     gallery: {
       extend: galleryAdventureTour,
       childExtend: {
@@ -62,22 +67,63 @@ const tourAdventure = {
   },
 
   article: {
-    description: { extend: $adventure },
-    package: { extend: packageAdventure }
-    // class: {
-    //   show: (element, state) => state.activeAdventure
-    //     ? {
-    //       opacity: '1',
-    //       transform: 'translateY(0)',
-    //       transition: 'opacity .65s ease-in-out, transform .65s ease-in-out'
+    class: {
+      show: (element, state) => state.activeAdventurePackage
+        ? {
+          boxShadow: '-30px 0 30px -5px rgba(0,0,0, .35)',
+          background: 'rgba(15, 49, 61, .85)',
+          transition: 'transform .7s ease, background 1s ease, box-shadow 1s ease',
+          backdropFilter: 'blur(1px)',
+          transform: 'scale(1.3) translate(-50px, 50px)',
+          '> *': { transform: 'scale(.8)' }
+        }
+        : {
+          transform: 'scale(1) translate(0, 0)',
+          transition: 'transform .7s ease, background 0s ease, box-shadow 0s ease'
+        }
+    },
 
-    //     }
-    //     : {
-    //       opacity: '0',
-    //       transform: 'translateY(50px)',
-    //       transition: 'opacity .35s ease-in-out, transform .35s ease-in-out'
-    //     }
-    // },
+    close: {
+      class: {
+        show: (element, state) => state.activeAdventurePackage
+          ? { opacity: '1', transition: 'opacity .7s ease' }
+          : { opacity: '0', transition: 'opacity 0s ease' }
+      },
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeAdventurePackage: false, activePackages: false })
+        }
+      }
+    },
+
+    description: {
+      extend: $adventure,
+      class: {
+        show: (element, state) => state.activeAdventurePackage
+          ? { display: 'none' } : {}
+      }
+    },
+
+    package: {
+      extend: packageAdventure,
+      class: {
+        show: (element, state) => state.activeAdventurePackage
+          ? { height: '100%', '> *': { opacity: '1', transform: 'scale(1)' } }
+          : { height: '0', '> *': { opacity: '0', transform: 'scale(.97)' } }
+      }
+    },
+
+    more: {
+      on: {
+        click: (event, element, state) => {
+          state.update({ activeAdventurePackage: true, activePackages: true })
+        }
+      },
+      class: {
+        show: (element, state) => state.activeAdventurePackage
+          ? { display: 'none' } : { display: 'block' }
+      }
+    }
   }
 }
 

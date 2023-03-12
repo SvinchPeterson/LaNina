@@ -14,17 +14,19 @@ const state = {
   activeForm: false,
   activeTour: false,
   activeImage: 0,
-  activeToursContainer: true,
-  // activeToursContainer: false,
+  // activeToursContainer: true,
+  activeToursContainer: false,
 
-  activeGocha: true,
+  activeDescription: false,
+
+  // activeGocha: true,
   activeDaily: false,
+  // activeDaily: true,
   activeStandard: false,
   activeCaucasus: false,
   activeExclusive: false,
   activeAdventure: false,
-  // activeWineGastronomy: false,
-  activeWineGastronomy: true,
+  activeWineGastronomy: false,
 
   activeArrow: false,
 
@@ -47,10 +49,9 @@ const state = {
   activeAdventureGalleryImage: 0,
   activeWineGastronomyGalleryImage: 0,
 
-  // activePackagesContainer: false,
-  // activeTbilisiPackage: false,
+  activePackages: false,
   activePackagesContainer: false,
-  activeTbilisiPackage: true,
+  activeTbilisiPackage: false,
   activeAnanuriPackage: false,
   activeGoriPackage: false,
   activeKakhetiPackage: false,
@@ -117,9 +118,7 @@ const state = {
   activeKazbegiImage: 0,
 
   activeScroll: false,
-  activeScroll2: false,
-
-  activeDescription: false
+  activeScroll2: false
 }
 
 const menu = {
@@ -194,15 +193,15 @@ export const Travel = {
   state,
 
   Header,
-  // menu,
-  // banner,
-  // georgia,
-  // gallery,
-  // popUpGallery,
+  menu,
+  banner,
+  georgia,
+  gallery,
+  popUpGallery,
   tours,
   toursContainer,
-  // feedBacks,
-  // aboutUs,
-  // planTrip,
+  feedBacks,
+  aboutUs,
+  planTrip,
   footer
 }

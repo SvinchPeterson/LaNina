@@ -14,9 +14,34 @@ import { tourRabati } from './tourRabati'
 
 import { commonToursProps } from '../commonProps'
 
+const props = {
+  ...commonToursProps,
+  childProps: {
+    article: {
+      package: {
+        packageSchedule: {
+          childProps: {
+            gap: 'Z',
+            border: 'none',
+            places: {
+              border: 'solid, cream2 .5',
+              borderWidth: '.5px 0px 0px 0px'
+
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
 export const daily = {
   extend: TourContainer,
-  props: commonToursProps,
+  props,
+  // attr: { id: 'daily' },
+
   class: {
     show: (element, state) => state.activeDaily
       ? {
@@ -29,10 +54,10 @@ export const daily = {
         pointerEvents: 'none',
         transform: 'translateY(-30px)',
         transition: 'opacity .25s ease-in-out, transform .25s ease-in-out'
-      }
-    // show2: (element, state) => state.activeDescription
-    //   ? { overflowY: 'hidden' }
-    //   : {}
+      },
+    show2: (element, state) => state.activePackages
+      ? { overflowY: 'hidden' }
+      : {}
   },
 
   childExtend: {
@@ -42,7 +67,7 @@ export const daily = {
         : { opacity: '0', transition: 'opacity .25s ease-in-out' }
     },
     gallery: {},
-    description: {
+    article: {
       class: {
         show: (element, state) => state.activeDaily
           ? {

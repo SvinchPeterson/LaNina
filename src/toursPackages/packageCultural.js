@@ -10,8 +10,8 @@ export const packageCultural = {
   extend: TourPackage,
 
   title: {
-    span: { text: 'culrural tour |' },
-    text: ' 3 night 4 days'
+    span: { text: 'culrural tour' },
+    text: ' 3 night _ 4 days'
   },
 
   packageSchedule: {

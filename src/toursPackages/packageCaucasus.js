@@ -11,10 +11,7 @@ import { kakhetiDescription, kakhetiPlaces } from './packageKakheti'
 
 export const packageCaucasus = {
   extend: TourPackage,
-
-  title: {
-    span: { text: 'caucasus tour' }
-  },
+  title: { span: { text: 'caucasus tour' } },
 
   packageSchedule: {
     ...[

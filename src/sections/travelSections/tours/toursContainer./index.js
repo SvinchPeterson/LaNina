@@ -46,27 +46,18 @@ const props = {
   },
 
   content: {
-    width: '80%',
     boxSize: '100% 80%',
     flow: 'column',
-    // overflow: 'hidden',
+
+    // border: '5px solid green',
     zIndex: '1',
     tours: {
       width: '100%',
-      height: '100%',
       flex: '1',
       position: 'relative',
       flow: 'column',
-      // overflow: 'hidden',
+      // border: '5px solid yellow',
       boxSizing: 'border-box'
-    },
-    packages: {
-      position: 'fixed',
-      boxSize: '100% 100%',
-      // zIndex: '10000',
-      top: '0',
-      left: '0',
-      background: 'black'
     }
   },
 

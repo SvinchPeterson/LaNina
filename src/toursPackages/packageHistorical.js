@@ -10,8 +10,8 @@ import { borjomiDescription, borjomiPlaces } from './packageBorjomi'
 export const packageHistorical = {
   extend: TourPackage,
   title: {
-    span: { text: 'historical tour |' },
-    text: ' 4 night 5 days'
+    span: { text: 'historical tour' },
+    text: '4 night _ 5 days'
   },
 
   packageSchedule: {

@@ -38,7 +38,7 @@ export const borjomiPlaces = {
 
 export const packageBorjomi = {
   extend: TourPackage,
-
+  title: null,
   packageSchedule: {
     ...[
       {
@@ -48,6 +48,5 @@ export const packageBorjomi = {
       }
     ]
   },
-
   packageIclusion: null
 }

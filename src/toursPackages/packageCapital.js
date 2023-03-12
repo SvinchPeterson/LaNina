@@ -8,16 +8,15 @@ import { ananuriPlaces, ananuriDescription } from './packageAnanuri'
 
 export const packageCapital = {
   extend: TourPackage,
-
   title: {
-    span: { text: 'capital tour |' },
-    text: ' 2 night 3 days'
+    span: { text: 'capital tour' },
+    text: ' 2 night _ 3 days'
   },
 
   packageSchedule: {
     ...[
       {
-        title: { text: 'day 1 - Tbilisi city tour' },
+        title: { text: 'Day 1 - Tbilisi city tour' },
         description: { ...[{ extend: $tbilisi }] },
         places: { extend: placesTbilisi }
       },

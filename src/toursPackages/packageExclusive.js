@@ -5,8 +5,7 @@ import { $samshvilde, $shaori, $abuli } from '../texts/travel'
 
 export const packageExclusive = {
   extend: TourPackage,
-
-  title: { text: 'exclusive tour' },
+  title: { span: { text: 'exclusive tour' } },
   packageSchedule: {
     ...[
       {
