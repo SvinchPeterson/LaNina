@@ -64,7 +64,7 @@ const content = {
     ...[
       {
         props: {
-          href: '#daily',
+          href: '#tbilisi',
           content: {
             title: { text: 'daily' },
             image: {
@@ -84,7 +84,7 @@ const content = {
 
       {
         props: {
-          href: '#standard',
+          href: '#capital',
           content: {
             title: { text: 'standard' },
             image: {
@@ -174,7 +174,7 @@ const content = {
 
       {
         props: {
-          href: '#daily',
+          href: '#tbilisi',
           content: {
             title: { text: 'daily' },
             image: {
@@ -194,7 +194,7 @@ const content = {
 
       {
         props: {
-          href: '#standard',
+          href: '#capital',
           content: {
             title: { text: 'standard' },
             image: {

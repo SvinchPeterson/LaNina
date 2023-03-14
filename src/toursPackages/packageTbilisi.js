@@ -21,15 +21,18 @@ export const placesTbilisi = {
 
 export const packageTbilisi = {
   extend: TourPackage,
-  title: null,
-  packageSchedule: {
-    ...[
-      {
-        title: null,
-        description: { ...[{ extend: $tbilisi }] },
-        places: { extend: placesTbilisi }
-      }
-    ]
-  },
-  packageIclusion: null
+
+  content: {
+    title: null,
+    packageSchedule: {
+      ...[
+        {
+          title: null,
+          description: { ...[{ extend: $tbilisi }] },
+          places: { extend: placesTbilisi }
+        }
+      ]
+    },
+    packageIclusion: null
+  }
 }

@@ -38,15 +38,18 @@ export const borjomiPlaces = {
 
 export const packageBorjomi = {
   extend: TourPackage,
-  title: null,
-  packageSchedule: {
-    ...[
-      {
-        title: null,
-        description: { extend: borjomiDescription },
-        places: { extend: borjomiPlaces }
-      }
-    ]
-  },
-  packageIclusion: null
+
+  content: {
+    title: null,
+    packageSchedule: {
+      ...[
+        {
+          title: null,
+          description: { extend: borjomiDescription },
+          places: { extend: borjomiPlaces }
+        }
+      ]
+    },
+    packageIclusion: null
+  }
 }

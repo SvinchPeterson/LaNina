@@ -7,7 +7,8 @@ import { packageTbilisi } from '../../toursPackages'
 
 export const tourTbilisi = {
   extend: Tour,
-  props: { padding: 'C2 - - -' },
+  // props: { padding: 'C2 - - -' },
+  attr: { id: 'tbilisi' },
 
   gallery: {
     class: {
@@ -72,23 +73,33 @@ export const tourTbilisi = {
           transition: 'transform .7s ease, background 1s ease, box-shadow 1s ease',
           backdropFilter: 'blur(1px)',
           transform: 'scale(1.3) translate(-50px, 50px)',
-          '> *': { transform: 'scale(.8)' }
+          height: `${450 / 16}em`
         }
         : {
           transform: 'scale(1) translate(0, 0)',
-          transition: 'transform .7s ease, background 0s ease, box-shadow 0s ease'
+          transition: 'transform .7s ease, background 0s ease, box-shadow 0s ease',
+          ':before': { opacity: '0' },
+          ':after': { opacity: '0' }
         }
     },
 
     close: {
       class: {
         show: (element, state) => state.activeTbilisiPackage
-          ? { opacity: '1', transition: 'opacity .7s ease' }
-          : { opacity: '0', transition: 'opacity 0s ease' }
+          ? {
+            opacity: '.75',
+            transform: 'rotate(90deg)',
+            transition: 'opacity .35s ease, transform .75s ease'
+          }
+          : {
+            opacity: '0',
+            transform: 'rotate(0deg)',
+            transition: 'opacity 0s ease'
+          }
       },
       on: {
         click: (event, element, state) => {
-          state.update({ activeTbilisiPackage: false, activePackages: false })
+          state.update({ activeTbilisiPackage: false, activeDailyPackages: false })
         }
       }
     },
@@ -111,9 +122,10 @@ export const tourTbilisi = {
     },
 
     more: {
+      props: { href: '#tbilisi' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeTbilisiPackage: true, activePackages: true })
+          state.update({ activeTbilisiPackage: true, activeDailyPackages: true })
         }
       },
       class: {

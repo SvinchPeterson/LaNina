@@ -26,15 +26,18 @@ export const ananuriDescription = {
 
 export const packageAnanuri = {
   extend: TourPackage,
-  title: null,
-  packageSchedule: {
-    ...[
-      {
-        title: null,
-        description: { extend: ananuriDescription },
-        places: { extend: ananuriPlaces }
-      }
-    ]
-  },
-  packageIclusion: null
+
+  content: {
+    title: null,
+    packageSchedule: {
+      ...[
+        {
+          title: null,
+          description: { extend: ananuriDescription },
+          places: { extend: ananuriPlaces }
+        }
+      ]
+    },
+    packageIclusion: null
+  }
 }

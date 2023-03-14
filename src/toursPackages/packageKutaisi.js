@@ -34,15 +34,18 @@ export const kutaisiPlaces = {
 
 export const packageKutaisi = {
   extend: TourPackage,
-  title: null,
-  packageSchedule: {
-    ...[
-      {
-        title: null,
-        description: { extend: kutaisiDescription },
-        places: { extend: kutaisiPlaces }
-      }
-    ]
-  },
-  packageIclusion: null
+
+  content: {
+    title: null,
+    packageSchedule: {
+      ...[
+        {
+          title: null,
+          description: { extend: kutaisiDescription },
+          places: { extend: kutaisiPlaces }
+        }
+      ]
+    },
+    packageIclusion: null
+  }
 }

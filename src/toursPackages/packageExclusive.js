@@ -5,54 +5,56 @@ import { $samshvilde, $shaori, $abuli } from '../texts/travel'
 
 export const packageExclusive = {
   extend: TourPackage,
-  title: { span: { text: 'exclusive tour' } },
-  packageSchedule: {
-    ...[
-      {
-        title: { text: 'Day 1 - Samshvilde . Paravani Lake' },
-        description: { ...[{ extend: $samshvilde }] },
-        places: {
-          title: {},
+  content: {
+    title: { span: { text: 'exclusive tour' } },
+    packageSchedule: {
+      ...[
+        {
+          title: { text: 'Day 1 - Samshvilde . Paravani Lake' },
+          description: { ...[{ extend: $samshvilde }] },
           places: {
-            ...[
-              { text: 'Samshvilde medieval city' },
-              { text: 'Chikiani Menhir' },
-              { text: 'Paravani Lake' }
-            ]
+            title: {},
+            places: {
+              ...[
+                { text: 'Samshvilde medieval city' },
+                { text: 'Chikiani Menhir' },
+                { text: 'Paravani Lake' }
+              ]
+            }
           }
-        }
-      },
+        },
 
-      {
-        title: { text: 'Day 2 - Shaori Megalith Fortress . Bugdasheni Lake . Khanchali Lake . Sagamo Lake' },
-        description: { ...[{ extend: $shaori }] },
-        places: {
-          title: {},
+        {
+          title: { text: 'Day 2 - Shaori Megalith Fortress . Bugdasheni Lake . Khanchali Lake . Sagamo Lake' },
+          description: { ...[{ extend: $shaori }] },
           places: {
-            ...[
-              { text: 'Shaori Megalith' },
-              { text: 'Bugdasheni Lake' },
-              { text: 'Sagamo lake' }
-            ]
+            title: {},
+            places: {
+              ...[
+                { text: 'Shaori Megalith' },
+                { text: 'Bugdasheni Lake' },
+                { text: 'Sagamo lake' }
+              ]
+            }
           }
-        }
-      },
+        },
 
-      {
-        title: { text: 'Day 3 - Abuli Megalith Fortress . Kaurma Bridge . Kumurdo Church ' },
-        description: { ...[{ extend: $abuli }] },
-        places: {
-          title: {},
+        {
+          title: { text: 'Day 3 - Abuli Megalith Fortress . Kaurma Bridge . Kumurdo Church ' },
+          description: { ...[{ extend: $abuli }] },
           places: {
-            ...[
-              { text: 'Abuli megalith fortress' },
-              { text: 'kaurma bridge' },
-              { text: 'kumurdo church' }
-            ]
+            title: {},
+            places: {
+              ...[
+                { text: 'Abuli megalith fortress' },
+                { text: 'kaurma bridge' },
+                { text: 'kumurdo church' }
+              ]
+            }
           }
         }
-      }
-    ]
-  },
-  packageIclusion: null
+      ]
+    },
+    packageIclusion: null
+  }
 }

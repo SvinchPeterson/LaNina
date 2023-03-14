@@ -34,19 +34,22 @@ export const rabatiDescription = {
 
 export const packageRabati = {
   extend: TourPackage,
-  title: null,
-  packageSchedule: {
-    ...[
-      {
-        title: null,
-        description: { extend: rabatiDescription },
-        places: {
-          title: {},
-          places: { ...[{ text: 'Rabati Castle walking Tour' }]
+
+  content: {
+    title: null,
+    packageSchedule: {
+      ...[
+        {
+          title: null,
+          description: { extend: rabatiDescription },
+          places: {
+            title: {},
+            places: { ...[{ text: 'Rabati Castle walking Tour' }]
+            }
           }
         }
-      }
-    ]
-  },
-  packageIclusion: null
+      ]
+    },
+    packageIclusion: null
+  }
 }

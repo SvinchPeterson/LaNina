@@ -40,16 +40,19 @@ export const mtskhetaPlaces = {
 
 export const packageMtskheta = {
   extend: TourPackage,
-  title: null,
-  packageSchedule: {
-    ...[
-      {
-        title: null,
-        description: { extend: mtskhetaDescription },
-        places: { extend: mtskhetaPlaces }
-      }
-    ]
-  },
 
-  packageIclusion: null
+  content: {
+    title: null,
+    packageSchedule: {
+      ...[
+        {
+          title: null,
+          description: { extend: mtskhetaDescription },
+          places: { extend: mtskhetaPlaces }
+        }
+      ]
+    },
+
+    packageIclusion: null
+  }
 }

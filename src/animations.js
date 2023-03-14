@@ -1,4 +1,5 @@
 'use strict'
+
 import { keyframes } from '@emotion/css'
 
 // common animations

@@ -12,7 +12,10 @@ import { commonToursProps } from '../commonProps'
 
 export const standard = {
   extend: TourContainer,
-  props: commonToursProps,
+  props: {
+    ...commonToursProps,
+    childProps: { padding: 'C2 - C1 -' }
+  },
   class: {
     show: (element, state) => state.activeStandard
       ? {
@@ -26,7 +29,7 @@ export const standard = {
         transform: 'translateY(-30px)',
         transition: 'opacity .25s ease-in-out, transform .35s ease-in-out'
       },
-    show2: (element, state) => state.activePackages
+    show2: (element, state) => state.activeStandardPackages
       ? { overflowY: 'hidden' }
       : {}
   },

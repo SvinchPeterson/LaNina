@@ -10,6 +10,7 @@ import { header } from './header'
 import ORNAMENT_JPG from '../../../../assets/images/travel/ornament2.png'
 
 const props = {
+  // border: '1px solid red',
   position: 'fixed',
   backgroundImage: 'url(' + ORNAMENT_JPG + ')',
   backgroundSize: 'cover',
@@ -48,15 +49,16 @@ const props = {
   content: {
     boxSize: '100% 80%',
     flow: 'column',
-
-    // border: '5px solid green',
+    // border: '1px solid yellow',
     zIndex: '1',
+    // header: { border: '1px solid lightblue' },
     tours: {
       width: '100%',
-      flex: '1',
+      height: 'calc(100% - 94px)',
+      // flex: '1',
       position: 'relative',
       flow: 'column',
-      // border: '5px solid yellow',
+      // border: '5px solid lightgreen',
       boxSizing: 'border-box'
     }
   },

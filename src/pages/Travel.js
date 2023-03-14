@@ -14,14 +14,11 @@ const state = {
   activeForm: false,
   activeTour: false,
   activeImage: 0,
-  // activeToursContainer: true,
   activeToursContainer: false,
 
   activeDescription: false,
 
-  // activeGocha: true,
   activeDaily: false,
-  // activeDaily: true,
   activeStandard: false,
   activeCaucasus: false,
   activeExclusive: false,
@@ -49,7 +46,8 @@ const state = {
   activeAdventureGalleryImage: 0,
   activeWineGastronomyGalleryImage: 0,
 
-  activePackages: false,
+  activeDailyPackages: false,
+  activeStandardPackages: false,
   activePackagesContainer: false,
   activeTbilisiPackage: false,
   activeAnanuriPackage: false,
@@ -193,15 +191,15 @@ export const Travel = {
   state,
 
   Header,
-  menu,
-  banner,
-  georgia,
-  gallery,
-  popUpGallery,
+  // menu,
+  // banner,
+  // georgia,
+  // gallery,
+  // popUpGallery,
   tours,
   toursContainer,
-  feedBacks,
-  aboutUs,
-  planTrip,
+  // feedBacks,
+  // aboutUs,
+  // planTrip,
   footer
 }

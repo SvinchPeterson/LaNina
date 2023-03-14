@@ -50,15 +50,18 @@ export const goriDescription = {
 
 export const packageGori = {
   extend: TourPackage,
-  title: null,
-  packageSchedule: {
-    ...[
-      {
-        title: null,
-        description: { extend: goriDescription },
-        places: { extend: goriPlaces }
-      }
-    ]
-  },
-  packageIclusion: null
+
+  content: {
+    title: null,
+    packageSchedule: {
+      ...[
+        {
+          title: null,
+          description: { extend: goriDescription },
+          places: { extend: goriPlaces }
+        }
+      ]
+    },
+    packageIclusion: null
+  }
 }

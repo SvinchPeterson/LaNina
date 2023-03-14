@@ -17,16 +17,18 @@ import { commonToursProps } from '../commonProps'
 const props = {
   ...commonToursProps,
   childProps: {
+    padding: 'C2 - C1 -',
     article: {
       package: {
+        padding: 'B - - -',
         packageSchedule: {
           childProps: {
             gap: 'Z',
             border: 'none',
             places: {
+              padding: 'A1 - - -',
               border: 'solid, cream2 .5',
               borderWidth: '.5px 0px 0px 0px'
-
             }
           }
         }
@@ -40,7 +42,6 @@ const props = {
 export const daily = {
   extend: TourContainer,
   props,
-  // attr: { id: 'daily' },
 
   class: {
     show: (element, state) => state.activeDaily
@@ -55,7 +56,7 @@ export const daily = {
         transform: 'translateY(-30px)',
         transition: 'opacity .25s ease-in-out, transform .25s ease-in-out'
       },
-    show2: (element, state) => state.activePackages
+    show2: (element, state) => state.activeDailyPackages
       ? { overflowY: 'hidden' }
       : {}
   },

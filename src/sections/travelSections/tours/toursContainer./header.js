@@ -125,8 +125,14 @@ export const header = {
     extend: Navbar,
     ...[
       {
-        class: { show: (element, state) => state.activeDaily
-          ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
+        props: { href: '#tbilisi' },
+        text: 'daily',
+
+        class: {
+          show: (element, state) => state.activeDaily
+            ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' }
+        },
+
         on: {
           click: (event, element, state) => {
             state.update({
@@ -135,14 +141,27 @@ export const header = {
               activeCaucasus: false,
               activeExclusive: false,
               activeAdventure: false,
-              activeWineGastronomy: false
+              activeWineGastronomy: false,
+
+              activeStandardPackages: false,
+              activeCapitalPackage: false,
+              activeCulturalPackage: false,
+              activeHistoricalPackage: false,
+              activeRoyalPackage: false,
+              acitveCaucasusMountainPackage: false,
+              activeCaucasusPackage: false,
+              activeExclusivePackage: false,
+              activeWineGastronomyPackage: false,
+              activeAdventurePackage: false
+
             })
           }
-        },
-        props: { href: '#daily' },
-        text: 'daily'
+        }
       },
       {
+        props: { href: '#capital' },
+        text: 'standard',
+
         class: { show: (element, state) => state.activeStandard
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -153,15 +172,30 @@ export const header = {
               activeCaucasus: false,
               activeExclusive: false,
               activeAdventure: false,
-              activeWineGastronomy: false
+              activeWineGastronomy: false,
+
+              activeDailyPackages: false,
+              activeTbilisiPackage: false,
+              activeAnanuriPackage: false,
+              activeGoriPackage: false,
+              activeKakhetiPackage: false,
+              activeKutaisiPackage: false,
+              activeBorjomiPackage: false,
+              activeRabatPackage: false,
+              activeMtsketaPackage: false,
+              activeDashbashPackage: false,
+              activeCaucasusPackage: false,
+              activeExclusivePackage: false,
+              activeWineGastronomyPackage: false,
+              activeAdventurePackage: false
             })
           }
-        },
-        props: { href: '#standard' },
-        text: 'standard'
+        }
       },
 
       {
+        text: 'caucasus',
+
         class: { show: (element, state) => state.activeCaucasus
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -172,14 +206,35 @@ export const header = {
               activeStandard: false,
               activeExclusive: false,
               activeAdventure: false,
-              activeWineGastronomy: false
+              activeWineGastronomy: false,
+
+              activeDailyPackages: false,
+              activeTbilisiPackage: false,
+              activeAnanuriPackage: false,
+              activeGoriPackage: false,
+              activeKakhetiPackage: false,
+              activeKutaisiPackage: false,
+              activeBorjomiPackage: false,
+              activeRabatPackage: false,
+              activeMtsketaPackage: false,
+              activeDashbashPackage: false,
+              activeCaucasusPackage: false,
+              activeExclusivePackage: false,
+              activeWineGastronomyPackage: false,
+              activeAdventurePackage: false,
+              activeStandardPackages: false,
+              activeCapitalPackage: false,
+              activeCulturalPackage: false,
+              activeHistoricalPackage: false,
+              activeRoyalPackage: false,
+              acitveCaucasusMountainPackage: false
             })
           }
-        },
-        text: 'caucasus'
+        }
       },
 
       {
+        text: 'exclusive',
         class: { show: (element, state) => state.activeExclusive
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -190,14 +245,38 @@ export const header = {
               activeStandard: false,
               activeCaucasus: false,
               activeAdventure: false,
-              activeWineGastronomy: false
+              activeWineGastronomy: false,
+
+              activeDailyPackages: false,
+              activeTbilisiPackage: false,
+              activeAnanuriPackage: false,
+              activeGoriPackage: false,
+              activeKakhetiPackage: false,
+              activeKutaisiPackage: false,
+              activeBorjomiPackage: false,
+              activeRabatPackage: false,
+              activeMtsketaPackage: false,
+              activeDashbashPackage: false,
+              activeCaucasusPackage: false,
+              activeExclusivePackage: false,
+              activeWineGastronomyPackage: false,
+              activeAdventurePackage: false,
+
+              activeStandardPackages: false,
+              activeCapitalPackage: false,
+              activeCulturalPackage: false,
+              activeHistoricalPackage: false,
+              activeRoyalPackage: false,
+              acitveCaucasusMountainPackage: false
             })
           }
-        },
-        text: 'exclusive'
+        }
+
       },
 
       {
+        text: 'wine & gastronomy',
+
         class: { show: (element, state) => state.activeWineGastronomy
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -208,14 +287,35 @@ export const header = {
               activeStandard: false,
               activeCaucasus: false,
               activeExclusive: false,
-              activeAdventure: false
+              activeAdventure: false,
+
+              activeDailyPackages: false,
+              activeTbilisiPackage: false,
+              activeAnanuriPackage: false,
+              activeGoriPackage: false,
+              activeKakhetiPackage: false,
+              activeKutaisiPackage: false,
+              activeBorjomiPackage: false,
+              activeRabatPackage: false,
+              activeMtsketaPackage: false,
+              activeDashbashPackage: false,
+              activeCaucasusPackage: false,
+              activeExclusivePackage: false,
+              activeWineGastronomyPackage: false,
+              activeAdventurePackage: false,
+              activeStandardPackages: false,
+              activeCapitalPackage: false,
+              activeCulturalPackage: false,
+              activeHistoricalPackage: false,
+              activeRoyalPackage: false,
+              acitveCaucasusMountainPackage: false
             })
           }
-        },
-        text: 'wine & gastronomy'
+        }
       },
 
       {
+        text: 'adventure',
         class: { show: (element, state) => state.activeAdventure
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -226,11 +326,30 @@ export const header = {
               activeStandard: false,
               activeCaucasus: false,
               activeExclusive: false,
-              activeWineGastronomy: false
+              activeWineGastronomy: false,
+              activeDailyPackages: false,
+              activeTbilisiPackage: false,
+              activeAnanuriPackage: false,
+              activeGoriPackage: false,
+              activeKakhetiPackage: false,
+              activeKutaisiPackage: false,
+              activeBorjomiPackage: false,
+              activeRabatPackage: false,
+              activeMtsketaPackage: false,
+              activeDashbashPackage: false,
+              activeCaucasusPackage: false,
+              activeExclusivePackage: false,
+              activeWineGastronomyPackage: false,
+              activeAdventurePackage: false,
+              activeStandardPackages: false,
+              activeCapitalPackage: false,
+              activeCulturalPackage: false,
+              activeHistoricalPackage: false,
+              activeRoyalPackage: false,
+              acitveCaucasusMountainPackage: false
             })
           }
-        },
-        text: 'adventure'
+        }
       }
     ]
   }

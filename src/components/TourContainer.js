@@ -9,7 +9,7 @@ const props = {
   top: '0',
   left: '0',
   flow: 'column',
-  gap: 'C1',
+  gap: '0',
   boxSizing: 'border-box',
   style: { '::-webkit-scrollbar': { display: 'none' } }
 }

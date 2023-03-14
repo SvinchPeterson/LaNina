@@ -75,19 +75,29 @@ const tourCaucasus = {
           transition: 'transform .7s ease, background 1s ease, box-shadow 1s ease',
           backdropFilter: 'blur(1px)',
           transform: 'scale(1.3) translate(-50px, 50px)',
-          '> *': { transform: 'scale(.8)' }
+          height: `${450 / 16}em`
         }
         : {
           transform: 'scale(1) translate(0, 0)',
-          transition: 'transform .7s ease, background 0s ease, box-shadow 0s ease'
+          transition: 'transform .7s ease, background 0s ease, box-shadow 0s ease',
+          ':before': { opacity: '0' },
+          ':after': { opacity: '0' }
         }
     },
 
     close: {
       class: {
         show: (element, state) => state.activeCaucasusPackage
-          ? { opacity: '1', transition: 'opacity .7s ease' }
-          : { opacity: '0', transition: 'opacity 0s ease' }
+          ? {
+            opacity: '.75',
+            transform: 'rotate(90deg)',
+            transition: 'opacity .35s ease, transform .75s ease'
+          }
+          : {
+            opacity: '0',
+            transform: 'rotate(0deg)',
+            transition: 'opacity 0s ease'
+          }
       },
       on: {
         click: (event, element, state) => {
@@ -107,7 +117,10 @@ const tourCaucasus = {
       extend: packageCaucasus,
       class: {
         show: (element, state) => state.activeCaucasusPackage
-          ? { height: '100%', '> *': { opacity: '1', transform: 'scale(1)' } }
+          ? {
+            height: '100%',
+            '> *': { opacity: '1', transform: 'scale(1)' }
+          }
           : { height: '0', '> *': { opacity: '0', transform: 'scale(.97)' } }
       }
     },

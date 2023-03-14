@@ -39,15 +39,18 @@ export const kakhetiPlaces = {
 
 export const packageKakheti = {
   extend: TourPackage,
-  title: null,
-  packageSchedule: {
-    ...[
-      {
-        title: null,
-        description: { extend: kakhetiDescription },
-        places: { extend: kakhetiPlaces }
-      }
-    ]
-  },
-  packageIclusion: null
+
+  content: {
+    title: null,
+    packageSchedule: {
+      ...[
+        {
+          title: null,
+          description: { extend: kakhetiDescription },
+          places: { extend: kakhetiPlaces }
+        }
+      ]
+    },
+    packageIclusion: null
+  }
 }

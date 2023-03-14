@@ -5,24 +5,27 @@ import { $birtvisi } from '../texts/travel'
 
 export const packageAdventure = {
   extend: TourPackage,
-  title: { span: { text: 'adventure tour' } },
-  packageSchedule: {
-    ...[
-      {
-        title: { text: 'Birtvisi Fortress . Sheuopovari . Devi Canyon' },
-        description: { ...[{ extend: $birtvisi }] },
-        places: {
-          title: {},
+
+  content: {
+    title: { span: { text: 'adventure tour' } },
+    packageSchedule: {
+      ...[
+        {
+          title: { text: 'Birtvisi Fortress . Sheuopovari . Devi Canyon' },
+          description: { ...[{ extend: $birtvisi }] },
           places: {
-            ...[
-              { text: 'Birtvisi Fortress' },
-              { text: 'Sheupovari' },
-              { text: 'Devi Canyon' }
-            ]
+            title: {},
+            places: {
+              ...[
+                { text: 'Birtvisi Fortress' },
+                { text: 'Sheupovari' },
+                { text: 'Devi Canyon' }
+              ]
+            }
           }
         }
-      }
-    ]
-  },
-  packageIclusion: null
+      ]
+    },
+    packageIclusion: null
+  }
 }

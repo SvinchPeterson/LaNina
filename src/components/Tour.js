@@ -10,34 +10,55 @@ import { TravelParagraph } from './TravelParagraph'
 import CLOSE_PNG from '../assets/icons/close.png'
 
 const props = {
-  align: 'flex-start center',
+  align: 'center center',
   alignSelf: 'center',
   gap: 'C',
-  // border: '5px solid purple',
 
   gallery: {
     transition: 'transform .7s ease'
-    // border: '5px solid orange'
   },
 
   article: {
     flow: 'column',
-    padding: 'A - - -',
-
-    // transition: 'transform .7s ease, background 1s ease, box-shadow 1s ease',
-    // border: '5px solid pink',
+    boxSizing: 'border-box',
+    overflow: 'hidden',
+    position: 'relative',
     zIndex: '100',
-    style: {
-      overflowY: 'hidden',
-      '> *': { transition: 'transform .7s ease' }
-    },
+    // ':before': {
+    //   content: '""',
+    //   boxSize: 'E 100%',
+    //   position: 'absolute',
+    //   top: '0',
+    //   left: '0',
+    //   background: 'linear-gradient(to bottom, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)',
+    //   // background: 'linear-gradient(to bottom,rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
+    //   zIndex: '3',
+    //   pointerEvents: 'none'
+    // },
+    // ':after': {
+    //   content: '""',
+    //   boxSize: 'F 100%',
+    //   position: 'absolute',
+    //   bottom: '0',
+    //   left: '0',
+    //   background: 'linear-gradient(to top, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)',
+    //   // background: 'linear-gradient(to top, rgba(248, 241, 227, 1) 0%, rgba(248, 241, 227, 0) 100%)',
+    //   zIndex: '3',
+    //   pointerEvents: 'none'
+    // },
 
     close: {
-      boxSize: 'fit-content',
+      boxSize: 'fit-content fit-content',
       background: 'transparent',
       border: 'none',
-      margin: '- A - -',
       alignSelf: 'flex-end',
+      zIndex: '4',
+      position: 'absolute',
+      top: 'A2',
+      right: 'A2',
+      padding: '0',
+      transform: 'scale(.5)',
+      ':hover': { opacity: '1' },
       icon: { boxSize: 'Z ' }
     },
 
@@ -50,9 +71,10 @@ const props = {
     },
     package: {
       style: {
-        overflowY: 'auto',
+        // overflowY: 'auto',
         '> *': { transition: 'opacity 2s ease, transform .5s ease' }
-      }
+      },
+      content: { style: { overflowY: 'auto'  } }
     },
     more: {
       color: 'cream2 .85',
@@ -74,7 +96,6 @@ export const Tour = {
 
   article: {
     extend: Flex,
-
     close: {
       extend: Button,
       icon: {
