@@ -24,29 +24,6 @@ const props = {
     overflow: 'hidden',
     position: 'relative',
     zIndex: '100',
-    // ':before': {
-    //   content: '""',
-    //   boxSize: 'E 100%',
-    //   position: 'absolute',
-    //   top: '0',
-    //   left: '0',
-    //   background: 'linear-gradient(to bottom, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)',
-    //   // background: 'linear-gradient(to bottom,rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
-    //   zIndex: '3',
-    //   pointerEvents: 'none'
-    // },
-    // ':after': {
-    //   content: '""',
-    //   boxSize: 'F 100%',
-    //   position: 'absolute',
-    //   bottom: '0',
-    //   left: '0',
-    //   background: 'linear-gradient(to top, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)',
-    //   // background: 'linear-gradient(to top, rgba(248, 241, 227, 1) 0%, rgba(248, 241, 227, 0) 100%)',
-    //   zIndex: '3',
-    //   pointerEvents: 'none'
-    // },
-
     close: {
       boxSize: 'fit-content fit-content',
       background: 'transparent',
@@ -71,10 +48,9 @@ const props = {
     },
     package: {
       style: {
-        // overflowY: 'auto',
         '> *': { transition: 'opacity 2s ease, transform .5s ease' }
       },
-      content: { style: { overflowY: 'auto'  } }
+      content: { style: { overflowY: 'auto' } }
     },
     more: {
       color: 'cream2 .85',

@@ -11,7 +11,9 @@ import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
 import CLOSES_PNG from '../assets/icons/reject.png'
 
 const state = {
-  activeForm: false,
+  activePlanTrip: true,
+  // activePlanTrip: false,
+  // activeForm: false,
   activeTour: false,
   activeImage: 0,
   activeToursContainer: false,
@@ -191,15 +193,15 @@ export const Travel = {
   state,
 
   Header,
-  // menu,
-  // banner,
-  // georgia,
-  // gallery,
-  // popUpGallery,
+  menu,
+  banner,
+  georgia,
+  gallery,
+  popUpGallery,
   tours,
   toursContainer,
-  // feedBacks,
-  // aboutUs,
-  // planTrip,
+  feedBacks,
+  aboutUs,
+  planTrip,
   footer
 }

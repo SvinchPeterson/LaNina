@@ -14,7 +14,7 @@ const props = {
   overflow: 'hidden',
   align: 'flex-start flex-end',
   style: { mixBlendMode: 'difference' },
-
+  '@mobileL': { display: 'none' },
   navBar: {
     overflow: 'hidden',
     gap: 'B',
@@ -49,6 +49,68 @@ export const Menu = {
       class: {
         show: (element, state) => state.activeMenu
           ? { opacity: '1' } : { opacity: '0' }
+      }
+    }
+  }
+}
+
+const mobileMenuProps = {
+  background: 'naviGreen .95',
+  position: 'fixed',
+  top: `D`,
+  width: '90%',
+  alignSelf: 'center',
+  zIndex: '100',
+  transition: 'height .75s ease',
+  align: 'center center',
+  style: {
+    backdropFilter: 'blur(1px)',
+    '@media only screen and (min-width: 768px)': { display: 'none' }
+  },
+
+  navBar: {
+    flow: 'column',
+    childProps: {
+      textTransform: 'uppercase',
+      fontWeight: '400',
+      transition: 'height .75s ease',
+      fontSize: `${15 / 16}em`,
+      textAlign: 'center',
+      color: 'cream2',
+      letterSpacing: `${5 / 15}em`,
+      align: 'flex-end flex-start',
+      padding: '- - X -',
+      width: 'fit-content',
+      border: 'solid, cream2 .5',
+      borderWidth: '0 0 .5px 0',
+      '@mobileS': { fontSize: `Z` }
+    }
+  }
+
+}
+
+export const MenuMobile = {
+  extend: Flex,
+  props: mobileMenuProps,
+  class: {
+    show: (element, state) => state.activeMobileMenu
+      ? { height: 'calc(100% - 68px)' } : { height: '0' }
+  },
+
+  navBar: {
+    extend: Navbar,
+    class: {
+      show: (element, state) => state.activeMobileMenu
+        ? { opacity: '1', transition: 'opacity .75s ease' }
+        : { opacity: '0', transition: 'opacity .35s ease' }
+    },
+
+    childExtend: {
+      extend: Flex,
+      class: {
+        show: (element, state) => state.activeMobileMenu
+          ? { height: `${46 / 13}em` }
+          : { height: '0' }
       }
     }
   }

@@ -50,8 +50,8 @@ const sendButton = {
       cursor: 'pointer',
       justifySelf: 'center',
       alignSelf: 'center',
-      borderRadius: '30px',
-      border: '1px solid black'
+      borderRadius: '30px'
+      // border: '1px solid black'
     },
 
     span: {
@@ -100,46 +100,39 @@ const gridForm = {
 }
 
 const props = {
-  padding: 'D E C E',
+  // padding: 'D E C E',
   width: '100%',
   height: '100%',
   flow: 'column',
+  display: 'none',
   gap: 'D1',
-  align: 'center flex-start',
+  align: 'center center',
   position: 'fixed',
-  background: 'radial-gradient(rgba(255, 255, 255, 1), rgba(233, 250, 255, 1), rgba(208, 224, 228, 1))',
+  background: 'rgba(233, 250, 255, 1)',
+  // background: 'radial-gradient(rgba(255, 255, 255, 1), rgba(233, 250, 255, 1), rgba(208, 224, 228, 1))',
   zIndex: '30',
   top: '0',
   left: '0',
   style: {
-    transition: 'opacity .15s ease-in-out, pointer-events .15s ease-in-out, z-index .15s ease-in-out',
-    '@media only screen and (max-height: 700px)': { overflowY: 'auto' }
+    transition: 'opacity .15s ease-in-out, pointer-events .15s ease-in-out, z-index .15s ease-in-out'
   },
-  '@tabletS': {
-    padding: 'D E D1 E',
-    gap: 'C',
-    style: { overflowY: 'auto' }
-  },
-  '@mobileL': { padding: 'D A' },
 
   title: {
-    text: 'planing trip',
-    fontSize: 'D',
+    fontSize: 'F',
     fontWeight: '700',
     alignSelf: 'center',
+    letterSpacing: `${-1 / 40}em`,
     margin: '- B - -',
-    style: { textTransform: 'uppercase' }
+    textTransform: 'capitalize'
+    // style: { textTransform: 'uppercase' }
   },
+
   gridForm: {
     columns: 'repeat(2, 1fr)',
     width: 'fit-content',
     gap: 'D',
     margin: '0 auto',
     style: { justifyItems: 'center' },
-    '@tabletS': {
-      columns: '1fr',
-      gap: 'C'
-    },
     persons: { heading: { text: 'number of persons?' } },
     mailSend: {
       flow: 'column',
@@ -153,11 +146,11 @@ export const planTrip = {
   extend: Flex,
   props,
   class: {
-    show: (element, state) => state.activeForm
+    show: (element, state) => state.activePlanTrip
       ? { opacity: 1, zIndex: '100' }
       : { opacity: 0, pointerEvents: 'none', zIndex: '-1' }
   },
 
-  title: {},
+  title: { text: 'planing trip' },
   gridForm
 }

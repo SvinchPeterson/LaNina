@@ -12,11 +12,9 @@ const props = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   align: 'center center',
-  // margin: 'G auto D2 auto',
-  margin: '- auto - auto',
+  margin: 'G auto D2 auto',
   position: 'relative',
   backgroundImage: 'url(' + ORNAMENT_JPG + ')',
-  // overflow: 'hidden',
   style: { backgroundAttachment: 'fixed' },
   ':before': {
     content: '""',

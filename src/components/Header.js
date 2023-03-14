@@ -31,7 +31,7 @@ const menu = {
   extend: Button,
   menu: {
     text: 'menu',
-    on: { click: (event, element, state) => { state.update({ activeMenu: true }) } },
+    on: { click: (event, element, state) => { state.update({ activeMenu: true, activeMobileMenu: true }) } },
     class: {
       show: (element, state) => state.activeMenu
         ? { top: `${-30 / 12}em`, transform: 'scale(.9)' }
@@ -46,7 +46,7 @@ const menu = {
       extend: Img,
       props: { src: CLOSE_PNG }
     },
-    on: { click: (event, element, state) => { state.update({ activeMenu: false }) } },
+    on: { click: (event, element, state) => { state.update({ activeMenu: false, activeMobileMenu: false }) } },
     class: {
       show: (element, state) => state.activeMenu
         ? { bottom: `${3 / 12}em`, transform: 'scale(1)' }

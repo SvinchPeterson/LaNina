@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { Menu, Header, Footer } from '../components'
+import { Menu, MenuMobile, Header, Footer } from '../components'
 
 import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location } from '../sections/residenceSections'
 
@@ -11,6 +11,7 @@ import { properties } from './props'
 const state = {
   activeMenu: false,
   activeMenuItem: 0,
+  activeMobileMenu: false,
   activeTab: 0,
   activeImage: 0,
   offers: false,
@@ -35,6 +36,20 @@ const menu = {
   }
 }
 
+const menuMobile = {
+  extend: MenuMobile,
+  navBar: {
+    childExtend: { on: { click: (event, element, state) => { state.update({ activeMenu: false, activeMobileMenu: false }) } } },
+    ...[
+      { props: { text: 'residence', href: '#residence' } },
+      { props: { text: 'services & facilities', href: '#service&facilities' } },
+      { props: { text: 'apartments', href: '#apartments' } },
+      { props: { text: 'location', href: '#location' } }
+    ]
+  }
+
+}
+
 export const Sololaki = {
   extend: Flex,
   state,
@@ -43,6 +58,7 @@ export const Sololaki = {
   banner,
   Header,
   menu,
+  menuMobile,
   residence,
   servicesFacilities,
   mission,

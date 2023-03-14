@@ -12,9 +12,10 @@ const fields = {
       minWidth: '48%',
       outline: 'none',
       background: 'transparent',
-      border: 'none',
+      // border: 'none',
       textAlign: 'center',
       padding: '0 B',
+      color: 'white',
       // '@mobileS': { padding: '0 A1' },
       style: {
         boxSizing: 'border-box'
