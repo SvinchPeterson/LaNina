@@ -24,7 +24,10 @@ const props = {
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     animationDuration: '4s',
-    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
+    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+    '@media only screen and (max-width: 1280px)': {
+      backgroundAttachment: 'initial'
+    }
   },
 
   title: {

@@ -2,14 +2,17 @@
 
 import { Banner } from '../../components'
 
-import { bannerTitle, bannerBackground, bannerh1 } from '../../animations'
+import { bannerTitle, bannerBackground, bannerBackground2, bannerh1 } from '../../animations'
 
 import SOLOLAKI_JPG from '../../assets/images/residence/sololaki/residencee.jpg'
 
 const props = {
   backgroundImage: 'url(' + SOLOLAKI_JPG + ')',
   ':before': { background: 'radial-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .9))' },
-  style: { animationName: bannerBackground },
+  style: {
+    animationName: bannerBackground,
+    '@media only screen and (max-width: 1280px)': { animationName: bannerBackground2 }
+  },
 
   title: {
     transform: 'translateY(-30px) scale(1)',

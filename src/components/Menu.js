@@ -60,7 +60,7 @@ const mobileMenuProps = {
   top: `D`,
   width: '90%',
   alignSelf: 'center',
-  zIndex: '100',
+  zIndex: '52',
   transition: 'height .75s ease',
   align: 'center center',
   style: {
@@ -94,7 +94,7 @@ export const MenuMobile = {
   props: mobileMenuProps,
   class: {
     show: (element, state) => state.activeMobileMenu
-      ? { height: 'calc(100% - 68px)' } : { height: '0' }
+      ? { height: 'calc(100% - 68px)' } : { height: '0', pointerEvents: 'none' }
   },
 
   navBar: {

@@ -59,6 +59,10 @@ export const bannerBackground = keyframes`
   from { background-position: top left; }
   to { background-position: center center; }
 `
+export const bannerBackground2 = keyframes`
+  from { transform: scale(1.1); }
+  to { transform: scale(1); }
+`
 export const bannerTitle = keyframes`
   from {
     transform: translateY(0px) scale(.9);
