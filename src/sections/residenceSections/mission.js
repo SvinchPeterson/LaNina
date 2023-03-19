@@ -12,6 +12,13 @@ const props = {
   position: 'relative',
   flexAlign: 'center flex-start',
   gap: 'D',
+  margin: 'F1 - - -',
+  style: {
+    '@media only screen and (min-width: 1281px) and (max-height: 820px)': {
+      marginTop: `${50 / 16}em`
+
+    }
+  },
   image: {
     minWidth: `I1`,
     minHeight: `H`,
@@ -21,7 +28,7 @@ const props = {
     backgroundSize: '100% 100%',
     backgroundPosition: `center center`,
     style: {
-      '@media only screen and (min-width: 1280px)': { backgroundAttachment: 'fixed' },
+      '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },
       backgroundRepeat: 'no-repeat',
       zIndex: '2',
       boxShadow: 'inset 0px 0px 2px .2px rgba(0, 0, 0, .7)'

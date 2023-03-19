@@ -62,18 +62,25 @@ const items = {
 }
 
 const props = {
-  padding: 'F - - -',
+  margin: 'G1 - - -',
+  padding: 'E2 - - -',
   flow: 'column',
   justifyContent: 'center',
   position: 'relative',
   boxSizing: 'content-box',
   style: {
-    clear: 'both',
-    '@media only screen and (max-height: 1024px)': { minHeight: '100%' }
+    '@media only screen and (min-width: 1281px) and (max-height: 820px)': {
+      minHeight: '100%',
+      paddingTop: '0'
+    },
+    '@media only screen and (min-width: 1281px) and (max-height: 680px)': {
+      '> div > div': { padding: `${70 / 16}em 0` }
+
+    }
   },
 
   title: {
-    padding: '- - A1 F',
+    padding: '- - A2 F',
     fontSize: 'Z',
     fontWeight: '400',
     textTransform: 'uppercase',

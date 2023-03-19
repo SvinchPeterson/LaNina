@@ -10,34 +10,29 @@ import ORNAMENT_PNG from '../../../../assets/images/residence/sololaki/ornaments
 
 const props = {
   position: 'relative',
-  padding: 'E F',
-  width: `${1440 / 16}em`,
+  padding: 'E -',
+  width: `100%`,
   flow: 'column',
-  alignItems: 'center',
+  align: 'center center',
   overflow: 'hidden',
   background: 'url(' + ORNAMENT_PNG + ')',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  style: { backgroundAttachment: 'fixed' },
+  style: {
+    backgroundAttachment: 'fixed',
+    '@media only screen and (min-width: 1281px) and (max-height: 820px)': { minHeight: '100%' }
+  },
   imageBackground: {
     boxSize: '100% 100%',
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(1, 57, 57, 0), rgba(1, 57, 57, .8), rgba(1, 57, 57, 1))'
+    background: 'radial-gradient(rgba(1, 57, 57, 0), rgba(1, 57, 57, .8), rgba(1, 57, 57, 1),rgba(1, 57, 57, 1))'
   },
   tabsContainer: {
+    padding: '- F',
+    maxWidth: `${1440 / 16}em`,
     gap: 'Z',
-    '@tabletM': {
-      width: '100%',
-      height: '100%',
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      padding: '- D',
-      gap: 'B',
-      style: { overflowY: 'auto' }
-    },
-
     childProps: {
       image: {
       },
@@ -71,11 +66,11 @@ export const tabs = {
     show: (element, state) => state.activeTab
       ? {
         width: 0,
-        padding: '0',
-        display: 'none'
+        padding: '0'
+        // display: 'none'
       }
       : {
-        display: 'block',
+        // display: 'flex',
         animationName: opacity,
         animationDuration: '.5s',
         animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'

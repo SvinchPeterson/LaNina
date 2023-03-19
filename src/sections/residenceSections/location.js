@@ -19,10 +19,20 @@ const contacts = {
 
 const props = {
   minWidth: '80%',
-  // minHeight: '100%',
+  margin: 'E2 - - -',
+  padding: 'D - E -',
   align: 'center center',
   alignSelf: 'center',
   gap: 'A',
+  style: {
+    '@media only screen and (max-height: 820px)': {
+      minHeight: '100%',
+      '> div': {
+        height: '100%',
+        iframe: { maxHeight: '80%' }
+      }
+    }
+  },
   title: {
     text: 'location',
     fontSize: 'Z',
@@ -40,7 +50,7 @@ const props = {
   content: {
     flexFlow: 'column',
     gap: 'A',
-    boxSize: '80% 80%',
+    boxSize: 'I 80%',
     position: 'relative',
     align: 'flex-end center',
     alignSelf: 'center',

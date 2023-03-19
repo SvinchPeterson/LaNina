@@ -283,7 +283,6 @@ const content = {
           }
         }
       }
-
     ]
   }
 

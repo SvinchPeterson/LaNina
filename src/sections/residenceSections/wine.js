@@ -9,6 +9,7 @@ import WINE_JPG from '../../assets/images/residence/sololaki/wine.jpg'
 const props = {
   position: 'relative',
   flexAlign: 'center center',
+  margin: 'G -',
 
   image: {
     boxSize: `H1 H`,

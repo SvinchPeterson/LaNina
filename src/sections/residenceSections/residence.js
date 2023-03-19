@@ -11,6 +11,7 @@ import BB_JPG from '../../assets/images/residence/sololaki/b.jpg'
 const props = {
   width: '100%',
   padding: 'E2 - - -',
+  margin: 'D1 - - -',
   align: 'center center',
   position: 'relative',
   boxSizing: 'content-box',
@@ -36,7 +37,7 @@ const props = {
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
       style: {
-        '@media only screen and (min-width: 1280px)': { backgroundAttachment: 'fixed' },
+        '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },
         backgroundRepeat: 'no-repeat',
         boxShadow: 'inset 0px 0px 500px 60px rgba(0, 0, 0, .9)'
       }
