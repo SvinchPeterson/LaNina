@@ -7,7 +7,7 @@ import { daily, standard, caucasus, adventure, exclusive, wineGastronomy } from 
 
 import { header } from './header'
 
-import ORNAMENT_JPG from '../../../../assets/images/travel/ornament2.png'
+import ORNAMENT_JPG from '../../../../assets/images/travel/ornaments2.png'
 
 const props = {
   // border: '1px solid red',
@@ -25,7 +25,7 @@ const props = {
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(15, 49, 61, .8), rgba(15, 49, 61, 1), rgba(15, 49, 61, 1))'
+    background: 'radial-gradient(rgba(0, 47, 57, .8), rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))'
   },
   ':after': {
     content: '""',
@@ -36,7 +36,7 @@ const props = {
     left: '0',
     pointerEvents: 'none',
     zIndex: '5',
-    background: 'linear-gradient(to top, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)'
+    background: 'linear-gradient(to top, rgba(0, 47, 57, 1) 0%, rgba(0, 47, 57, 0) 100%)'
   },
   close: {
     top: 'A',

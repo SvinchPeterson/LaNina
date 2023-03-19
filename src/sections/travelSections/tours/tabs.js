@@ -306,7 +306,7 @@ const props = {
     pointerEvents: 'none',
     // background: 'red',
     zIndex: '2',
-    background: 'linear-gradient(to right, rgba(15, 49, 61, 1) 0%,rgba(15, 49, 61, 0) 100%)'
+    background: 'linear-gradient(to right, rgba(0, 47, 57, 1) 0%,rgba(0, 47, 57, 0) 100%)'
   },
 
   ':after': {
@@ -317,7 +317,7 @@ const props = {
     right: '0',
     zIndex: '2',
     pointerEvents: 'none',
-    background: 'linear-gradient(to left, rgba(15, 49, 61, 1) 0%,rgba(15, 49, 61, 0) 100%)'
+    background: 'linear-gradient(to left, rgba(0, 47, 57, 1) 0%, rgba(0, 47, 57, 0) 100%)'
   },
 
   content: {

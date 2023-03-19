@@ -29,7 +29,7 @@ const props = {
         round: '100%',
         top: '0',
         left: '0',
-        background: 'radial-gradient(rgba(15, 49, 61, 0), rgba(15, 49, 61, 1))'
+        background: 'radial-gradient(rgba(0, 47, 57, 0), rgba(0, 47, 57, 1))'
       },
       style: {
         backgroundSize: 'cover',

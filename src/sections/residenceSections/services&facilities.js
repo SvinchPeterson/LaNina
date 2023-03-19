@@ -62,15 +62,20 @@ const items = {
 }
 
 const props = {
-  minHeight: '100%',
+  padding: 'F - - -',
   flow: 'column',
   justifyContent: 'center',
   position: 'relative',
+  boxSizing: 'content-box',
+  style: {
+    clear: 'both',
+    '@media only screen and (max-height: 1024px)': { minHeight: '100%' }
+  },
 
   title: {
     padding: '- - A1 F',
     fontSize: 'Z',
-    fontWeight: '700',
+    fontWeight: '400',
     textTransform: 'uppercase',
     letterSpacing: `${5 / 13}em`,
     alignSelf: 'flex-start'
@@ -82,7 +87,7 @@ const props = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     style: {
-      backgroundAttachment: 'fixed',
+      '@media only screen and (min-width: 1280px)': { backgroundAttachment: 'fixed' },
       backgroundRepeat: 'no-repeat',
       boxShadow: 'inset 0px 0px 2px .2px rgba(0, 0, 0, .7)'
     },
@@ -112,6 +117,7 @@ const props = {
 }
 
 export const servicesFacilities = {
+  tag: 'section',
   extend: Flex,
   props,
   attr: { id: 'service&facilities' },

@@ -65,7 +65,7 @@ const mobileMenuProps = {
   align: 'center center',
   style: {
     backdropFilter: 'blur(1px)',
-    '@media only screen and (min-width: 768px)': { display: 'none' }
+    '@media only screen and (min-width: 769px)': { display: 'none' }
   },
 
   navBar: {

@@ -15,8 +15,8 @@ const props = {
 
   lefts: { src: LEFT_ARROW_PNG },
   title: {
-    text: 'scroll',
-    style: { letterSpacing: '1px' }
+    fontSize: 'A',
+    style: { letterSpacing: '2px' }
   },
   rights: { src: RIGHT_ARROW_PNG }
 
@@ -27,6 +27,6 @@ export const ScrollTitle = {
   props,
 
   lefts: { extend: Img },
-  title: {},
+  title: { text: 'scroll' },
   rights: { extend: Img }
 }

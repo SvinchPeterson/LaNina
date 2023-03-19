@@ -1,5 +1,7 @@
 'use strict'
+
 import { Flex } from 'smbls'
+
 import { FeedBack, HorArrowsBlack } from '../../components'
 
 const navArrows = {
@@ -120,7 +122,7 @@ const props = {
   maxWidth: '1440px',
   flow: 'column',
   gap: 'A2',
-  margin: 'E2 auto D auto',
+  margin: '- auto - auto',
 
   heading: {
     flexAlign: 'center space-between',

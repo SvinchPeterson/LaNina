@@ -13,18 +13,43 @@ export const deopacity = keyframes`
 `
 
 // landing animations
-export const navBarItemTransform = keyframes`
+export const navBarItemTransform3 = keyframes`
 from {
-  transform: translateX(100px) scale(.98);
+  transform: translateY(30px) scale(.98);
   opacity: 0;
-  letter-spacing: 3px;
+  // letter-spacing: 3px;
 }
 to {
-  transform: translateX(0px) scale(1);
+  transform: translateY(0px) scale(1);
   opacity: 0.75;
-  letter-spacing: .5px;
+  // letter-spacing: .5px;
 }
 `
+export const navBarItemTransform = keyframes`
+from {
+  transform: translateY(50px);
+  opacity: 0;
+  // letter-spacing: 3px;
+}
+to {
+  transform: translateY(0px);
+  opacity: 0.75
+}
+`
+
+export const navBarItemTransform2 = keyframes`
+from {
+  transform: translateY(-50px);
+  opacity: 0;
+  // letter-spacing: 3px;
+}
+to {
+  transform: translateY(0px);
+  opacity: 0.75;
+  // letter-spacing: .5px;
+}
+`
+
 export const logoTitleTransform = keyframes`
 from {
   transform: scale(.9);
@@ -53,6 +78,15 @@ export const backgroundPosition = keyframes`
     background-position: top center;
   }
 `
+
+// export const backgroundPosition = keyframes`
+//   from {
+//     transform: scale(1.2);
+//   }
+//   to {
+//     transform: scale(1);
+//   }
+// `
 
 // residence animations
 export const bannerBackground = keyframes`

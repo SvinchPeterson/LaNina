@@ -17,8 +17,8 @@ export const residenceTextEng = {
 
 // mission
 export const missionTextEng = {
-  text: `"Providing remarkable lodging facilities and services to our guests.
-  Emphasizing on customer service and creating an unforgettable in-home experience."`
+  text: `Providing remarkable lodging facilities and services to our guests.
+  Emphasizing on customer service and creating an unforgettable in-home experience.`
 }
 
 // rooms descriptions

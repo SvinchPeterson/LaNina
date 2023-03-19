@@ -88,7 +88,6 @@ export const COLORS = {
   orange3: '#FFCEA8',
   green: 'rgba(42, 81, 61, 1)',
   green2: 'rgba(60,84, 72, 1)',
-  naviGreen: 'rgba(25, 63, 55, 1)',
   black: 'rgba(0, 0, 0, 1)',
   gold: 'rgba(220, 187, 140, 1)',
   white: 'rgba(245, 245, 245, 1)',
@@ -105,7 +104,14 @@ export const COLORS = {
   blue: 'rgba(43, 56, 98, 1)',
   seablue: 'rgba(56, 104, 153, 1)',
   skyblue: 'rgba(189, 216, 246, 1)',
-  naviBlue: 'rgba(15, 49, 61, 1)'
+
+  naviGreen: 'rgba(1, 57, 57, 1)',
+  naviGreenDark: 'rgba(0, 49, 49, 1)',
+  naviGreenLight: 'rgba(0, 70, 70, 1)',
+
+  naviBlue: 'rgba(0, 47, 57, 1)',
+  naviBlueLight: 'rgba(1, 59, 71, 1)',
+  naviBlueLight2: 'rgba(2, 64, 77, 1)'
 }
 
 export const GRADIENTS = {

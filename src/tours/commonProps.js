@@ -12,7 +12,7 @@ export const commonToursProps = {
         ':before': {
           top: '0',
           left: '0',
-          background: 'linear-gradient(to left, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
+          background: 'linear-gradient(to left, rgba(0, 47, 57, 1) 1%, rgba(0, 47, 57, 0) 99%)'
         }
       },
       '> div > footer': { alignSelf: 'flex-end' },
@@ -25,7 +25,7 @@ export const commonToursProps = {
         ':before': {
           top: '0',
           right: '0',
-          background: 'linear-gradient(to right, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
+          background: 'linear-gradient(to right,rgba(0, 47, 57, 1) 1%, rgba(0, 47, 57, 0) 99%)'
         }
       }
     }
@@ -44,7 +44,7 @@ export const commonTourProps = {
         ':before': {
           top: '0',
           left: '0',
-          background: 'linear-gradient(to left, rgba(15, 49, 61, 1) 1%, rgba(15, 49, 61, 0) 100%)'
+          background: 'linear-gradient(to left, rgba(0, 47, 57, 1) 1%, rgba(0, 47, 57, 0) 99%)'
         }
       },
       footer: {

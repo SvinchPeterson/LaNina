@@ -40,11 +40,12 @@ export const props = {
     left: '0',
     round: 'F',
     style: {
-      backgroundAttachment: 'fixed',
+      '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },
       backgroundRepeat: 'no-repeat',
       boxShadow: 'inset 0px 0px .5px 0.5px rgba(0, 0, 0, .5)'
     }
   },
+
   icon: {
     zIndex: '2',
     boxSize: 'B B'
@@ -60,7 +61,7 @@ export const props = {
   },
   title: {
     zIndex: '2',
-    fontSize: 'G',
+    fontSize: 'F',
     textTransform: 'capitalize',
     whiteSpace: 'nowrap',
     opacity: '0',

@@ -53,7 +53,9 @@ const menuMobile = {
 export const Sololaki = {
   extend: Flex,
   state,
-  props: properties,
+  props: {
+    ...properties
+  },
 
   banner,
   Header,

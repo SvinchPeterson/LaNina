@@ -2,12 +2,14 @@
 
 import { Flex, Img } from 'smbls'
 
-import { navBarItemTransform, logoTitleTransform, titleLetterSpacing, backgroundPosition, deopacity } from '../animations'
+import {
+  navBarItemTransform, logoTitleTransform, titleLetterSpacing, backgroundPosition, deopacity, navBarItemTransform2, opacity, navBarItemTransform3
+} from '../animations'
 
 import { Navbar } from '../components'
 
 import LOGO_PNG from '../assets/icons/logoCream.png'
-import ORNAMENTS_PNG from '../assets/images/landing/ornaments.png'
+import ORNAMENTS_PNG from '../assets/images/landing/ornaments3.png'
 
 // COMPONENTS
 const logoTitle = {
@@ -22,8 +24,15 @@ const logoTitle = {
 const navbar = {
   extend: Navbar,
   ...[
-    { props: { text: 'residence', href: '/Sololaki' } },
-    { props: { text: 'travel', href: '/Travel' } }
+    {
+      span: { text: 'residence' },
+      props: { href: '/Sololaki' }
+    },
+
+    {
+      span: { text: 'travel' },
+      props: { href: '/Travel' }
+    }
   ]
 }
 
@@ -34,11 +43,10 @@ const props = {
   backgroundSize: 'cover',
   position: 'relative',
   align: 'center center',
-  background: 'gold .85',
+  background: 'orange3 .8',
   backgroundPosition: 'top center',
   overflow: 'hidden',
   style: {
-    backgroundARepeat: 'no-repeat',
     animationName: backgroundPosition,
     animationDuration: '20s',
     animatonTimingFunction: 'linear',
@@ -46,6 +54,7 @@ const props = {
     '@media only screen and (min-width: 1680px)': { fontSize: `${18 / 16}em` },
     '@media only screen and (min-width: 1920px)': { fontSize: `${20 / 16}em` }
   },
+
   ':before': {
     content: '""',
     position: 'absolute',
@@ -60,70 +69,120 @@ const props = {
       pointerEvents: 'none'
     }
   },
+
   ':after': {
     content: '""',
     position: 'absolute',
     boxSize: '100% 100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, 1))',
+    background: 'radial-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .85), rgba(0, 0, 0, 1))',
     style: { pointerEvents: 'none' }
   },
 
   content: {
-    zIndex: '2',
+    zIndex: '4',
     boxSize: 'fit-content',
     padding: '- - E -',
     gap: 'Z',
     overflow: 'hidden',
-    '@mobileL': {
+    '@mobileM': {
       flow: 'column-reverse',
-      align: 'center space-between',
-      gap: 'D'
+      align: 'center center',
+      gap: 'B'
     },
-    style: { '@media only screen and (max-height: 750px)': { paddingBottom: '0' } },
+    style: {
+      animationName: opacity,
+      animationDuration: '1.5s',
+      animationTimingFunction: 'ease-out',
+      '@media only screen and (max-height: 650px)': { paddingBottom: '0' }
+    },
 
     navbar: {
+      height: `${100 / 16}em`,
       flow: 'column',
-      lineHeight: `${38 / 16}em`,
-      margin: 'A - - -',
+      margin: 'Z - - -',
       overflow: 'hidden',
-      '@mobileL': {
-        gap: 'Y',
-        textAlign: 'center',
-        textTransform: 'uppercase',
-        margin: '0'
+      alignItems: 'flex-end',
+      position: 'relative',
+      ':after': {
+        content: '""',
+        position: 'absolute',
+        boxSize: '.5px 100%',
+        background: 'cream2 .5',
+        zIndex: '10',
+        top: '50%',
+        right: '0',
+        transform: 'translate(0, -50%)',
+        '@mobileM': { display: 'none' },
+        style: {
+          animationName: opacity,
+          animationDuration: '1.5s',
+          animationTimingFunction: 'ease-out'
+        }
+      },
+
+      '@mobileM': {
+        height: `fit-content`,
+        alignItems: 'center',
+        gap: 'Z',
+        overflow: 'visible'
       },
 
       childProps: {
         fontWeight: '100',
         fontSize: 'E',
         color: 'cream2',
-        letterSpacing: '.5px',
+        letterSpacing: `${0.5 / 33}em`,
         textTransform: 'capitalize',
+        position: 'relative',
         textAlign: 'right',
         opacity: '.75',
+        minHeight: `${50 / 33}em`,
         transition: 'opacity .3s ease-in-out',
-        ':hover': { opacity: '1' },
-
-        style: {
-          animationName: navBarItemTransform,
-          animationDuration: '1.5s',
-          animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)',
-          '@media only screen and (max-width: 768px)': { animation: 'none' }
-        },
-        '@mobileL': {
-          fontSize: 'Z',
-          border: 'solid, cream2 .75',
-          borderWidth: 'V',
-          textAlign: 'center',
+        overflow: 'hidden',
+        display: 'flex',
+        '@mobileM': {
+          border: 'solid, cream2 .5',
+          borderWidth: '.5px',
           textTransform: 'uppercase',
+          fontSize: `${14 / 16}em`,
           fontWeight: '700',
-          boxSize: '- G',
-          padding: 'X -',
+          width: 'F2',
+          justifyContent: 'center',
+          textAlign: 'center',
           round: 'C',
-          background: 'cream2 .015',
-
-          style: { animationName: 'none' }
-        }
+          overflow: 'visible',
+          letterSpacing: `${2 / 16}em`,
+          style: {
+            animationName: navBarItemTransform3,
+            animationDuration: '1.5s',
+            animationTimingFunction: 'ease-out'
+          }
+        },
+        span: {
+          display: 'block',
+          lineHeight: `${23 / 33}em`,
+          style: {
+            animationDuration: '1.5s',
+            animationTimingFunction: 'ease-out'
+          }
+        },
+        ':first-child': {
+          alignItems: 'flex-end',
+          padding: '- - Y -',
+          '@mobileM': { padding: 'A2 -' }
+        },
+        ':last-child': {
+          alignItems: 'flex-start',
+          padding: 'Y - - -',
+          '@mobileM': { padding: 'A2 -' }
+        },
+        ':first-child span': {
+          style: { '@media only screen and (min-width: 561px)': { animationName: navBarItemTransform } }
+        },
+        ':last-child span': {
+          style: { '@media only screen and (min-width: 561px)': { animationName: navBarItemTransform2 } }
+        },
+        ':hover': { opacity: '1' }
       }
     },
 
@@ -134,17 +193,19 @@ const props = {
       style: {
         animationName: logoTitleTransform,
         animationDuration: '1.5s',
-        animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
+        animationTimingFunction: 'ease-out'
       },
-      '@mobileL': {
-        gap: 'A',
-        align: 'center ceter'
+      '@mobileM': {
+        align: 'center center',
+        padding: `- - - ${6 / 16}em`,
+        gap: 'A'
+        // border: 'solid, cream2',
+        // borderWidth: '0 0 1px 0',
       },
-
       logo: {
         boxSize: 'F ',
         opacity: '.75',
-        '@mobileL': { boxSize: 'C2 ' }
+        '@mobileM': { boxSize: 'D ' }
       },
 
       title: {
@@ -154,16 +215,13 @@ const props = {
         letterSpacing: `${4.5 / 13}em`,
         opacity: '.75',
         fontWeight: '400',
+        '@mobileM': { fontSize: 'A' },
         style: {
-          animationName: titleLetterSpacing,
-          animationDuration: '1.5s',
-          animationTimingFunction: 'cubic-bezier(0.8, 0.37, 0.53, 0.87)'
-        },
-
-        '@mobileL': {
-          fontSize: 'A',
-          animation: 'none',
-          letterSpacing: `${5 / 16}em`
+          '@media only screen and (min-width: 561px)': {
+            animationName: titleLetterSpacing,
+            animationDuration: '1.5s',
+            animationTimingFunction: 'ease-out'
+          }
         }
       }
     }
@@ -174,6 +232,7 @@ export const Landing = {
   extend: Flex,
   props,
   attr: { id: 'landing' },
+  cover: {},
 
   content: {
     extend: Flex,

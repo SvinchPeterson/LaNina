@@ -30,7 +30,7 @@ const props = {
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'linear-gradient(to bottom, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)',
+    background: 'linear-gradient(to bottom, rgba(0, 47, 57, 1) 0%,rgba(0, 47, 57, 0) 100%)',
     zIndex: '3',
     pointerEvents: 'none'
   },
@@ -40,7 +40,7 @@ const props = {
     position: 'absolute',
     bottom: '0',
     left: '0',
-    background: 'linear-gradient(to top, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)',
+    background: 'linear-gradient(to top, rgba(0, 47, 57, 1) 0%, rgba(0, 47, 57, 0) 100%)',
     zIndex: '3',
     pointerEvents: 'none'
   },

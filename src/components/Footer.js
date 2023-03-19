@@ -16,6 +16,7 @@ const props = {
   flexAlign: 'center space-between',
   alignSelf: 'center',
   zIndex: '50',
+  '@mobileS': { bottom: 'Z1' },
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,

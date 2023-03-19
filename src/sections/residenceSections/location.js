@@ -19,16 +19,14 @@ const contacts = {
 
 const props = {
   minWidth: '80%',
-  minHeight: '100%',
+  // minHeight: '100%',
   align: 'center center',
   alignSelf: 'center',
   gap: 'A',
-  margin: 'D - - -',
-
   title: {
     text: 'location',
     fontSize: 'Z',
-    fontWeight: '700',
+    fontWeight: '400',
     textTransform: 'uppercase',
     letterSpacing: `${10 / 13}em`,
     transform: 'rotate(180deg)',
@@ -70,7 +68,10 @@ const props = {
       zIndex: '2',
       flexAlign: 'center space-between',
       gap: 'C',
-      padding: '- B - -'
+      margin: '- Z - -',
+      padding: 'Y2 - - -'
+      // border: 'solid, black .5'
+      // borderWidth: '.6px 0 0 0'
     }
   }
 }

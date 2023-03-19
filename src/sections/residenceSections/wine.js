@@ -9,8 +9,6 @@ import WINE_JPG from '../../assets/images/residence/sololaki/wine.jpg'
 const props = {
   position: 'relative',
   flexAlign: 'center center',
-  minHeight: '100%',
-  margin: 'F1 0 D 0',
 
   image: {
     boxSize: `H1 H`,
@@ -21,6 +19,7 @@ const props = {
     zIndex: '2',
     style: {
       backgroundRepeat: 'no-repeat',
+      //  '@media only screen and (min-width: 1280px)': { backgroundAttachment: 'fixed' },
       backgroundAttachment: 'fixed',
       backgroundImage: 'radial-gradient(rgba(60,84, 72, .35), rgba(60,84, 72, .5)), url(' + WINE_JPG + ')'
     }

@@ -11,7 +11,7 @@ export const packageCaucasusMountain = {
 
   content: {
     title: {
-      span: { text: 'Caucasus mountain adventure tour' },
+      span: { text: 'Caucasus mountain tour' },
       text: '9 night _ 10 days'
     },
 

@@ -9,20 +9,17 @@ import { residenceTextEng } from '../../texts/residence'
 import BB_JPG from '../../assets/images/residence/sololaki/b.jpg'
 
 const props = {
-  width: '70%',
-  minHeight: '100%',
-  gap: 'B',
+  width: '100%',
+  padding: 'E2 - - -',
+  align: 'center center',
   position: 'relative',
-  maxWidth: '1440px',
-  flow: 'column',
-  margin: 'G auto',
-  round: 'J J 0 0',
-
+  boxSizing: 'content-box',
   imageContainer: {
     alignSelf: 'center',
-    boxSize: '100% 100%',
+    width: 'I',
+    height: 'H2',
     position: 'relative',
-    round: 'J J 0 0',
+    round: 'G2 G2 0 0',
     overflow: 'hidden',
     ':before': {
       content: '""',
@@ -39,7 +36,7 @@ const props = {
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
       style: {
-        backgroundAttachment: 'fixed',
+        '@media only screen and (min-width: 1280px)': { backgroundAttachment: 'fixed' },
         backgroundRepeat: 'no-repeat',
         boxShadow: 'inset 0px 0px 500px 60px rgba(0, 0, 0, .9)'
       }
@@ -48,14 +45,17 @@ const props = {
 
   paragraph: {
     position: 'absolute',
+    margin: '- - -H2 -F2',
     background: 'cream2',
-    padding: 'D2 D1 - B',
-    left: '0',
-    bottom: '-E',
-    alignSelf: 'flex-start',
+    gap: 'Z2',
+    padding: 'C2 E - D',
     zIndex: '5',
     round: '0 F2 0 0',
-    maxWidth: 'H1'
+    boxSizing: 'border-box',
+    style: { float: 'left' },
+    p: {
+      maxWidth: 'H'
+    }
   }
 }
 

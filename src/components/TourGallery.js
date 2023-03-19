@@ -32,7 +32,7 @@ const props = {
 
   footer: {
     border: 'solid, cream2 .25',
-    borderWidth: '.5px 0 0 0',
+    borderWidth: '.6px 0 0 0',
     align: 'center space-between',
     width: '65%',
     margin: 'A - - -',

@@ -66,6 +66,7 @@ const props = {
   border: 'solid, white .55',
   borderWidth: '0 0 .3px 0',
   padding: '- V',
+  '@mobileS': { height: 'C2' },
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,

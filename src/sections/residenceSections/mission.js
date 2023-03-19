@@ -11,32 +11,33 @@ const props = {
   flexFlow: 'column',
   position: 'relative',
   flexAlign: 'center flex-start',
-  gap: 'E',
-  margin: 'F 0 G1 0',
-
+  gap: 'D',
   image: {
     minWidth: `I1`,
     minHeight: `H`,
     position: 'relative',
     round: 'C',
     background: 'url(' + VERANDA_JPG + ')',
-    backgroundSize: 'contain',
+    backgroundSize: '100% 100%',
     backgroundPosition: `center center`,
     style: {
-      backgroundAttachment: 'fixed',
+      '@media only screen and (min-width: 1280px)': { backgroundAttachment: 'fixed' },
       backgroundRepeat: 'no-repeat',
       zIndex: '2',
       boxShadow: 'inset 0px 0px 2px .2px rgba(0, 0, 0, .7)'
-    }
+    },
+    '@tabletM': { minWidth: `H3`, minHeight: `G3` }
   },
 
   paragraph: {
     gap: 'Z',
-    style: { fontStyle: 'italic' },
     maxWidth: 'H3',
+    style: { fontStyle: 'italic' },
+    '@tabletM': { maxWidth: 'H1', textAlign: 'center' },
+
     title: {
-      fontSize: 'C',
-      padding: '- - - Y1'
+      fontSize: 'D',
+      letterSpacing: '-1.5px'
     },
     p: {
       fontSize: 'B',

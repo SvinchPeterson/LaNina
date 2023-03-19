@@ -18,6 +18,12 @@ const props = {
   gap: 'D',
   zIndex: 10,
   alignSelf: 'center',
+  style: {
+    '@media only screen and (max-width: 1366px) and (min-height: 1000px)': {
+      // minHeight: 'fit-content',
+      // padding: `${100 / 16}em 0 0 0`
+    }
+  },
 
   back: {
     position: 'absolute',

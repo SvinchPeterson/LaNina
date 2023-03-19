@@ -20,7 +20,7 @@ const props = {
       content: '""',
       boxSize: '100% 100%',
       position: 'absolute',
-      background: 'linear-gradient(to right, rgba(15, 49, 61, 1) 0%, rgba(15, 49, 61, 0) 100%)',
+      background: 'linear-gradient(to right, rgba(0, 47, 57, 1) 0%, rgba(0, 47, 57, 0) 100%)',
       top: '0',
       left: '0',
       pointerEvents: 'none'

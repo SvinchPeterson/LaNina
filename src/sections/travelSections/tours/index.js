@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { tabs } from './tabs'
 
-import ORNAMENT_JPG from '../../../assets/images/travel/ornament2.png'
+import ORNAMENT_JPG from '../../../assets/images/travel/ornaments2.png'
 
 const props = {
   boxSize: '100% 100%',
@@ -23,7 +23,7 @@ const props = {
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(15, 49, 61, .7), rgba(15, 49, 61, 1), rgba(15, 49, 61, 1))'
+    background: 'radial-gradient(rgba(0, 47, 57, .7),rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))'
   },
   title: {
     color: 'black',

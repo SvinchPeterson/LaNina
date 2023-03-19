@@ -7,6 +7,7 @@ const props = {
   position: 'relative',
   maxWidth: `${1440 / 16}em`,
   margin: 'auto'
+  // border: '10px solid purple'
 }
 
 export const rooms = {

@@ -34,7 +34,7 @@ const props = {
       left: '0',
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(rgba(15, 49, 61, .45), rgba(15, 49, 61, 1))'
+      background: 'linear-gradient(rgba(0, 47, 57, .45), rgba(0, 47, 57, 1))'
     },
     '&:hover > h4': {
       color: 'rgba(189, 216, 246, 1)',
