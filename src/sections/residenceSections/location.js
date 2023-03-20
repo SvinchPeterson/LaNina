@@ -5,6 +5,7 @@ import { Flex } from 'smbls'
 import { ContactItems, Map } from '../../components'
 
 const contacts = {
+  extend: Flex,
   childExtend: ContactItems,
   ...[
     {},
@@ -24,9 +25,18 @@ const props = {
   align: 'center center',
   alignSelf: 'center',
   gap: 'A',
+  '@tabletM': {
+    minWidth: '100%',
+    flow: 'column',
+    round: '0',
+    padding: 'E2 - E -',
+    margin: 'D2 - - -',
+    gap: 'A1'
+  },
   style: {
     '@media only screen and (max-height: 820px)': {
       minHeight: '100%',
+      paddingTop: `${100 / 16}em`,
       '> div': {
         height: '100%',
         iframe: { maxHeight: '80%' }
@@ -36,14 +46,24 @@ const props = {
   title: {
     text: 'location',
     fontSize: 'Z',
-    fontWeight: '400',
+    fontWeight: '700',
     textTransform: 'uppercase',
     letterSpacing: `${10 / 13}em`,
     transform: 'rotate(180deg)',
+    '@tabletM': {
+      fontSize: 'A',
+      alignSelf: 'flex-start',
+      padding: '- - - C'
+    },
     style: {
       alignSelf: 'center',
       writingMode: 'vertical-rl',
-      textOrientation: 'mixed'
+      textOrientation: 'mixed',
+      '@media only screen and (max-width: 1280px)': {
+        writingMode: 'horizontal-tb',
+        textOrientation: 'initial',
+        transform: 'rotate(0deg)'
+      }
     }
   },
 
@@ -58,6 +78,10 @@ const props = {
       backgroundAttachment: 'fixed',
       backgroundRepeat: 'no-repeat'
     },
+    '@tabletM': {
+      boxSize: 'I 100%',
+      align: 'center flex-start'
+    },
 
     map: {
       minWidth: '100%',
@@ -71,17 +95,31 @@ const props = {
         boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .1)',
         backgroundAttachment: 'fixed',
         flex: 1
-      }
+      },
+      '@tabletM': { round: '0' }
     },
 
     contacts: {
       zIndex: '2',
-      flexAlign: 'center space-between',
+      align: 'center space-between',
       gap: 'C',
       margin: '- Z - -',
-      padding: 'Y2 - - -'
-      // border: 'solid, black .5'
-      // borderWidth: '.6px 0 0 0'
+      padding: 'Y2 - - -',
+      border: 'solid, black .65',
+      borderWidth: '.6px 0 0 0',
+      '@tabletM': {
+        padding: 'Z - - -',
+        margin: 'A - - -'
+      },
+      '@tabletS': {
+        flow: 'column',
+        flexAlign: 'center flex-start',
+        gap: 'A'
+      },
+
+      childProps: {
+        '@tabletM': { fontSize: 'B' }
+      }
     }
   }
 }

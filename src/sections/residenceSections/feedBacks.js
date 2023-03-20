@@ -42,29 +42,6 @@ const navArrows = {
         }
       }
     }
-    // {
-    //   on: {
-    //     click: (event, element, state) => {
-    //       const { feedbacks } = element.parent.parent.parent.content
-    //       feedbacks.node.scrollBy({
-    //         top: 0,
-    //         left: -feedbacks.node.clientWidth - 16.5 * 1.618
-    //       })
-    //     }
-    //   }
-    // },
-    // {
-    //   on: {
-    //     click: (event, element, state) => {
-    //       const { feedbacks } = element.parent.parent.parent.content
-    //       feedbacks.node.scrollBy({
-    //         top: 0,
-    //         left: feedbacks.node.clientWidth + 16.5 * 1.618
-
-    //       })
-    //     }
-    //   }
-    // }
   ]
 }
 
@@ -269,9 +246,8 @@ const feedbacks = {
 const props = {
   width: '93%',
   minHeight: `${350 / 16}em`,
-  // maxWidth: `${1440 / 16}em`,
   flow: 'column',
-  gap: 'A2',
+  gap: 'Z1',
   alignSelf: 'center',
   position: 'relative',
   style: { overflowX: 'hidden', '::-webkit-scrollbar': { display: 'none' } },
@@ -283,7 +259,8 @@ const props = {
     left: '0',
     top: '0',
     background: 'linear-gradient(to right, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
-    zIndex: 3
+    zIndex: 3,
+    '@tabletS': { width: `${250 / 16}em` }
   },
   ':after': {
     content: '""',
@@ -293,14 +270,17 @@ const props = {
     right: '0',
     top: '0',
     background: 'linear-gradient(to left, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
-    zIndex: 3
+    zIndex: 3,
+    '@tabletS': { width: `${250 / 16}em` }
   },
 
   heading: {
     flexAlign: 'center space-between',
-    width: '80%',
+    width: '85%',
     margin: '0 auto',
     zIndex: '10',
+    padding: '- - Z -',
+    style: { borderBottom: '.5px solid rgba(0, 0, 0, .5)' },
     title: {
       fontWeight: '700',
       style: {
@@ -312,7 +292,7 @@ const props = {
     },
     navArrows: {
       gap: 'C1',
-      childProps: { arrow: { boxSize: ' Z2' } }
+      childProps: { arrow: { boxSize: ' Z1' } }
     }
   },
 

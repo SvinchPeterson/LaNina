@@ -12,10 +12,7 @@ const props = {
   position: 'relative',
   align: 'center center',
   margin: 'G -',
-  '@tabletM': {
-    width: '100%',
-    minHeight: '100%'
-  },
+  '@tabletM': { width: '100%' },
   image: {
     boxSize: `H1 H`,
     padding: '0',
@@ -27,19 +24,16 @@ const props = {
       backgroundRepeat: 'no-repeat',
       '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },
       backgroundImage: 'radial-gradient(rgba(1, 57, 57, .35), rgba(1, 57, 57, .5)), url(' + WINE_JPG + ')'
-      // '@media only screen and (max-width: 1280px)': {
-      //   backgroundImage: 'url(' + WINE_JPG + ')'
-      // }
     },
 
     '@tabletM': {
-      // border: '4px solid red',
       boxSize: `I H1`,
       round: '0 0 I I',
       backgroundSize: '100% 100%',
       backgroundPosition: `center top`,
       style: { backgroundRepeat: 'no-repeat' }
-    }
+    },
+    '@tabletS': { margin: '- - - -C' }
   },
 
   paragraph: {
@@ -56,7 +50,10 @@ const props = {
       top: '0',
       round: '0 0 0 F',
       padding: 'D E1 E D2',
-      margin: '0 -H -H 0'
+      margin: '-Y -H -H 0'
+    },
+    '@tabletS': {
+      margin: '-Y -G1 -H 0'
     }
   }
 }
