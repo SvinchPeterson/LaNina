@@ -80,7 +80,7 @@ const props = {
   },
 
   title: {
-    padding: '- - A2 F',
+    padding: '- - A2 D2',
     fontSize: 'Z',
     fontWeight: '400',
     textTransform: 'uppercase',
@@ -118,6 +118,10 @@ const props = {
         backgroundAttachment: 'fixed',
         '> div': { zIndex: '2' }
       },
+      '@tabletM': {
+        columns: 'repeat(3, 1fr)'
+      },
+      '@tabletS': { columns: 'repeat(2, 1fr)' },
       childProps: { style: { boxShadow: '0px 0px 2px .2px rgba(0, 0, 0, .7)' } }
     }
   }

@@ -15,7 +15,8 @@ const props = {
 
   lefts: { src: LEFT_ARROW_PNG },
   title: {
-    fontSize: 'A',
+    fontSize: 'B',
+    // fontWeight: '700',
     style: { letterSpacing: '2px' }
   },
   rights: { src: RIGHT_ARROW_PNG }

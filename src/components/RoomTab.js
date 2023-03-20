@@ -23,10 +23,14 @@ export const props = {
     transition: 'opacity .55s ease-in-out'
   },
   ':hover > h2': {
-    opacity: '1',
-    letterSpacing: '-2px',
-    transition: 'opacity .55s ease-in-out, letter-spacing .55s ease-in-out, transform .55s ease-in-out',
-    transform: 'scale(1)'
+    style: {
+      '@media only screen and (min-width: 1281px)': {
+        opacity: '1',
+        letterSpacing: '-2px',
+        transition: 'opacity .55s ease-in-out, letter-spacing .55s ease-in-out, transform .55s ease-in-out',
+        transform: 'scale(1)'
+      }
+    }
   },
 
   image: {

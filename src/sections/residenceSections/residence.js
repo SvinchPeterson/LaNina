@@ -15,6 +15,7 @@ const props = {
   align: 'center center',
   position: 'relative',
   boxSizing: 'content-box',
+
   imageContainer: {
     alignSelf: 'center',
     width: 'I',
@@ -22,6 +23,12 @@ const props = {
     position: 'relative',
     round: 'G2 G2 0 0',
     overflow: 'hidden',
+
+    '@tabletS': {
+      width: 'H1'
+
+    },
+
     ':before': {
       content: '""',
       width: '100%',
@@ -54,8 +61,15 @@ const props = {
     round: '0 F2 0 0',
     boxSizing: 'border-box',
     style: { float: 'left' },
+    '@tabletM': { margin: '- - -I -F2' },
+    '@tabletS': {
+      margin: '- - -I -E3',
+      padding: 'C2 E - D2'
+    },
     p: {
-      maxWidth: 'H'
+      maxWidth: 'H',
+
+      '@tabletS': { width: 'G2' }
     }
   }
 }

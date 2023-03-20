@@ -4,10 +4,11 @@ import { Paragraph } from './Paragraph'
 
 const props = {
   minWidth: `${464 / 16}em`,
-  minHeight: 'G',
+  minHeight: 'G !important',
+  maxHeight: 'G1',
   gap: '0',
   border: 'solid, cream2 0',
-  borderWidth: `${10 / 16}em`,
+  borderWidth: `${12 / 16}em`,
 
   content: {
     boxSize: '100% 100%',
