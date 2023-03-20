@@ -19,28 +19,17 @@ const contacts = {
 }
 
 const props = {
-  minWidth: '80%',
-  margin: 'E2 - - -',
-  padding: 'D - E -',
+  margin: 'E1 - B -',
+  padding: 'E - - -',
   align: 'center center',
   alignSelf: 'center',
   gap: 'A',
-  '@tabletM': {
-    minWidth: '100%',
-    flow: 'column',
-    round: '0',
-    padding: 'E2 - E -',
-    margin: 'D2 - - -',
-    gap: 'A1'
-  },
+  '@tabletM': { minWidth: '85%' },
+  '@tabletS': { flow: 'column' },
   style: {
-    '@media only screen and (max-height: 820px)': {
-      minHeight: '100%',
-      paddingTop: `${100 / 16}em`,
-      '> div': {
-        height: '100%',
-        iframe: { maxHeight: '80%' }
-      }
+    '@media only screen and (min-height: 1000px)': {
+      marginTop: `${50 / 16}em`,
+      marginBottom: `${150 / 16}em`
     }
   },
   title: {
@@ -50,16 +39,15 @@ const props = {
     textTransform: 'uppercase',
     letterSpacing: `${10 / 13}em`,
     transform: 'rotate(180deg)',
-    '@tabletM': {
-      fontSize: 'A',
+    '@tabletS': {
       alignSelf: 'flex-start',
-      padding: '- - - C'
+      padding: '- - - A'
     },
     style: {
       alignSelf: 'center',
       writingMode: 'vertical-rl',
       textOrientation: 'mixed',
-      '@media only screen and (max-width: 1280px)': {
+      '@media only screen and (max-width: 1024px)': {
         writingMode: 'horizontal-tb',
         textOrientation: 'initial',
         transform: 'rotate(0deg)'
@@ -70,22 +58,23 @@ const props = {
   content: {
     flexFlow: 'column',
     gap: 'A',
-    boxSize: 'I 80%',
+    boxSize: 'H3 I1',
     position: 'relative',
-    align: 'flex-end center',
+    align: 'flex-end flex-start',
     alignSelf: 'center',
     style: {
       backgroundAttachment: 'fixed',
       backgroundRepeat: 'no-repeat'
     },
-    '@tabletM': {
-      boxSize: 'I 100%',
-      align: 'center flex-start'
-    },
+    '@tabletM': { boxSize: 'H2 100%' },
+    // '@tabletM': {
+    //   boxSize: 'H3 100%',
+    //   align: 'center flex-start'
+    // },
 
     map: {
       minWidth: '100%',
-      maxHeight: '70%',
+      maxHeight: '75%',
       zIndex: '2',
       position: 'relative',
       overflow: 'hidden',
@@ -95,8 +84,8 @@ const props = {
         boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .1)',
         backgroundAttachment: 'fixed',
         flex: 1
-      },
-      '@tabletM': { round: '0' }
+      }
+      // '@tabletM': { round: '0', maxHeight: '85%' }
     },
 
     contacts: {
@@ -107,18 +96,24 @@ const props = {
       padding: 'Y2 - - -',
       border: 'solid, black .65',
       borderWidth: '.6px 0 0 0',
-      '@tabletM': {
-        padding: 'Z - - -',
-        margin: 'A - - -'
-      },
       '@tabletS': {
         flow: 'column',
-        flexAlign: 'center flex-start',
-        gap: 'A'
+        alignSelf: 'center',
+        gap: 'Z',
+        margin: 'A 0 - -'
       },
+      // '@tabletM': {
+      //   padding: 'Z - - -',
+      //   margin: 'A - - -'
+      // },
+      // '@tabletS': {
+      //   flow: 'column',
+      //   flexAlign: 'center flex-start',
+      //   gap: 'A'
+      // },
 
       childProps: {
-        '@tabletM': { fontSize: 'B' }
+        // '@tabletM': { fontSize: 'B' }
       }
     }
   }

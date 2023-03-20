@@ -250,7 +250,9 @@ const props = {
   gap: 'Z1',
   alignSelf: 'center',
   position: 'relative',
-  style: { overflowX: 'hidden', '::-webkit-scrollbar': { display: 'none' } },
+  style: {
+    overflowX: 'hidden', '::-webkit-scrollbar': { display: 'none' }
+  },
   ':before': {
     content: '""',
     width: `${500 / 16}em`,
@@ -323,9 +325,10 @@ export const feedBacks = {
   extend: Flex,
   props,
 
+  attr: { id: 'feedbacks' },
+
   heading: { extend: heading },
   content: {
-    attr: { id: 'feedbacks' },
     feedbacks
   }
 }
