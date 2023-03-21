@@ -1,26 +1,40 @@
 {
-  "name": "@symbo.ls/lanina",
-  "description": "",
+  "name": "bbhospitality",
+  "version": "2.0.0",
   "private": true,
-  "author": "",
-  "version": "0.0.1",
-  "repository": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "parcel src/index.html --no-cache",
+    "start": "parcel index.html --no-cache --port 1236",
     "build": "parcel build index.html",
-    "reinstall": "rm -rf dist .cache node_modules yarn.lock && yarn",
-    "test": "yarn standard && jest",
+    "reinstall": "rm -rf node_modules dist .cache yarn.lock && yarn",
+    "test": "yarn standard",
     "test-watch": "jest --watch"
   },
   "dependencies": {
+    "@domql/utils": "latest",
+    "@domql/env": "latest",
+    "@symbo.ls/scratch": "latest",
+    "fastclick": "^1.0.6",
+    "smbls": "latest"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
     "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "eslint": "^8.12.0",
-    "parcel-bundler": "^1.12.5",
-    "parcel-plugin-svg-sprite": "^1.4.1",
-    "standard": "^17.0.0"
+    "eslint-plugin-jest": "^22.14.1",
+    "jest": "^26.1.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-inlinesvg": "^0.1.1",
+    "standard": "^16.0.4"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
   },
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
