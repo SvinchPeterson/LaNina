@@ -14,7 +14,6 @@
     "fastclick": "^1.0.6",
     "smbls": "latest"
   },
-  "peerDependencies": {},
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/eslint-parser": "^7.17.0",
