@@ -11,13 +11,9 @@
     "test-watch": "jest --watch"
   },
   "dependencies": {
-    "@domql/utils": "latest",
-    "@domql/env": "latest",
-    "@symbo.ls/scratch": "latest",
     "fastclick": "^1.0.6",
     "smbls": "latest"
   },
-  "peerDependencies": {},
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/eslint-parser": "^7.17.0",
@@ -28,11 +24,6 @@
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-inlinesvg": "^0.1.1",
     "standard": "^16.0.4"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ]
   },
   "standard": {
     "parser": "@babel/eslint-parser"
