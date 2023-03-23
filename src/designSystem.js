@@ -1,7 +1,5 @@
 'use strict'
 
-import { init } from 'smbls'
-
 import HelveticaUltraLightWoff2 from './assets/fonts/HelveticaNeue-UltraLight.woff2'
 import HelveticaNormalWoff2 from './assets/fonts/HelveticaNeue-Normal.woff2'
 import HelveticaMediumWoff2 from './assets/fonts/HelveticaNeue-Medium.woff2'
@@ -137,7 +135,7 @@ export const MEDIA = {
   light: '(prefers-color-scheme: light)'
 }
 
-export default init({
+export default {
   color: COLORS,
   gradient: GRADIENTS,
   font: FONT,
@@ -172,4 +170,4 @@ export default init({
     p: { margin: 0 },
     h6: { margin: 0 }
   }
-})
+}
