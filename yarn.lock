@@ -1705,9 +1705,9 @@
     "@symbo.ls/button" latest
 
 "@symbo.ls/cli@latest":
-  version "2.10.208"
-  resolved "https://registry.yarnpkg.com/@symbo.ls/cli/-/cli-2.10.208.tgz#dbccfb99752ecff74b625c638104df4ce9d34ea7"
-  integrity sha512-g0/x5j8lqoNMtnhjGpEtW4N3zPkMzyfwS/JfQD0s8TE4zuZzmjw2E1VWXRK62pdKD2QiraeOCSEJEzImb9Peaw==
+  version "2.10.209"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/cli/-/cli-2.10.209.tgz#49a76af1f98531efb15a618d7d0b712357c7850d"
+  integrity sha512-tY5LojPw6vPLj1hp+6kWXUQG2cFys+J7/Yeup2UdUfqnbpcnbGF9lvYw5rugB77gqAVG1CNv4sT7ahAr4X9VIw==
   dependencies:
     "@symbo.ls/init" latest
     "@symbo.ls/socket" latest
@@ -1726,9 +1726,9 @@
     "@emotion/css" "^11.10.0"
 
 "@symbo.ls/create@latest":
-  version "2.10.210"
-  resolved "https://registry.yarnpkg.com/@symbo.ls/create/-/create-2.10.210.tgz#32d189e55679e29a0036e01bcdda0a9cbe891939"
-  integrity sha512-vg1EzRGnAPImNjhUWjICCFLWvy7w0an/CsYW8YVTDHDVyuMvfeDgXEMqQe0DXcZhQCZs243PxtpNgWMlH89FTw==
+  version "2.10.211"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/create/-/create-2.10.211.tgz#13b94b91d0d8ad5d583349731145800588e2a077"
+  integrity sha512-vraU3Xvf5bRgiTNDQ9zaEvQaFszHAHk0Wwxbt5+xIdQmyKV7IR6+4TV4j/8El6WDVTpOfx1Hm2SeCUpS/ZtXew==
   dependencies:
     "@domql/cookie" latest
     "@domql/emotion" latest
