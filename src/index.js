@@ -9,7 +9,7 @@ import designSystem from './designSystem'
 import { FastClick } from 'fastclick'
 
 create({
-  state: { isLoaded: false }
+  state: { isLoaded: false },
 }, {
   key: config.key,
   pages,
