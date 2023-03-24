@@ -13,14 +13,14 @@ const props = {
   gap: 'A',
   align: 'center center',
   position: 'relative',
-  padding: 'E - - -',
+  padding: 'E2 - - -',
   margin: 'F - - -',
   overflow: 'visible',
   style: {
     '@media only screen and (min-width: 1281px) and (max-height: 820px)': {
       minHeight: '100%',
       paddingTop: '0',
-      marginTop: `${300 / 16}em`,
+      // marginTop: `${300 / 16}em`,
       header: {
         position: 'absolute',
         top: `${-40 / 13}em`

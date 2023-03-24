@@ -325,10 +325,9 @@ export const feedBacks = {
   extend: Flex,
   props,
 
-  attr: { id: 'feedbacks' },
-
   heading: { extend: heading },
   content: {
+    attr: { id: 'feedbacks' },
     feedbacks
   }
 }

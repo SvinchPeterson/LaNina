@@ -16,7 +16,6 @@ const props = {
   style: {
     '@media only screen and (min-width: 1281px) and (max-height: 820px)': {
       marginTop: `${50 / 16}em`
-
     }
   },
   image: {
@@ -28,12 +27,13 @@ const props = {
     backgroundSize: '100% 100%',
     backgroundPosition: `center center`,
     style: {
-      '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },
+      '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed !important' },
       backgroundRepeat: 'no-repeat',
       zIndex: '2',
       boxShadow: 'inset 0px 0px 2px .2px rgba(0, 0, 0, .7)'
     },
-    '@tabletM': { minWidth: `H3`, minHeight: `G3` }
+    '@tabletM': { minWidth: `I`, minHeight: `G3` },
+    '@tabletS': { minWidth: `H3`, minHeight: `G3` }
   },
 
   paragraph: {

@@ -11,7 +11,7 @@ import BB_JPG from '../../assets/images/residence/sololaki/b.jpg'
 const props = {
   width: '100%',
   padding: 'E2 - - -',
-  margin: 'D1 - - -',
+  margin: 'D2 - B2 -',
   align: 'center center',
   position: 'relative',
   boxSizing: 'content-box',
@@ -65,7 +65,6 @@ const props = {
     position: 'absolute',
     margin: '- - -H2 -F2',
     background: 'cream2',
-    border: '1px solid red',
     gap: 'Z2',
     padding: 'C2 E - D',
     zIndex: '5',
