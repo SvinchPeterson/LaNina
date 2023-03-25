@@ -33,7 +33,7 @@ const props = {
       boxShadow: 'inset 0px 0px 2px .2px rgba(0, 0, 0, .7)'
     },
     '@tabletM': { minWidth: `I`, minHeight: `G3` },
-    '@tabletS': { minWidth: `H3`, minHeight: `G3` }
+    '@tabletS': { minWidth: `H2`, minHeight: `G3` }
   },
 
   paragraph: {
