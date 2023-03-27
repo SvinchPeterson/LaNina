@@ -10,6 +10,7 @@ const props = {
   backgroundImage: 'url(' + LAKE_JPG + ')',
   background: 'radial-gradient(rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))',
   style: { animationName: positionOpacity },
+
   ':before': { background: 'radial-gradient(rgba(0, 47, 57, .5), rgba(0, 47, 57, 1))' },
 
   title: {

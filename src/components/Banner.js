@@ -22,7 +22,7 @@ const props = {
   },
   style: {
     backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
+    backgroundAttachment: 'fixed !important',
     animationDuration: '4s',
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
     '@media only screen and (max-width: 1280px)': {

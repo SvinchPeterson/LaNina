@@ -89,6 +89,13 @@ export const backgroundPosition = keyframes`
 // `
 
 // residence animations
+
+
+export const headerHeight = keyframes`
+  from { height: 0; opacity: 0; }
+  to { height: 68px; opacity: 1; }
+`
+
 export const bannerBackground = keyframes`
   from { background-position: top left; }
   to { background-position: center center; }

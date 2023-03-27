@@ -15,8 +15,8 @@ const props = {
   gap: 'A',
   style: {
     scrollBehavior: 'smooth',
-    overflowX: 'auto',
-    '::-webkit-scrollbar': { display: 'none' }
+    // overflowX: 'auto',
+    // '::-webkit-scrollbar': { display: 'none !important' }
   }
 }
 

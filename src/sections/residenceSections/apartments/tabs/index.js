@@ -19,7 +19,7 @@ const props = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   style: {
-    '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },
+    '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed !important' },
     '@media only screen and (min-width: 1281px) and (max-height: 820px)': { minHeight: '100%' },
     '@media only screen and (max-width: 1280px) and (max-height: 850px)': { minHeight: '100%' }
   },
