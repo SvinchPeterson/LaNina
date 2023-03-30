@@ -78,7 +78,7 @@ const props = {
       animationDuration: '2.5s',
       animationTimingFunction: 'ease',
       '@media only screen and (min-height: 750px)': { paddingBottom: `${150 / 16}em` },
-      '@media only screen and (max-height: 750px)': { paddingBottom: `${70 / 16}em` }
+      '@media only screen and (max-height: 750px)': { paddingBottom: `${90 / 16}em` }
     },
 
     logo: {
@@ -140,13 +140,13 @@ const props = {
     fontSize: 'Z',
     fontWeight: '400',
     textTransform: 'uppercase',
-    letterSpacing: `7px`,
+    letterSpacing: `5px`,
     color: 'cream2',
     zIndex: '4',
     position: 'absolute',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    padding: '- - - 7px',
+    padding: '- - - 5px',
     style: {
       animationName: opacity,
       animationDuration: '1.5s',
