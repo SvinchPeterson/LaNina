@@ -1,10 +1,10 @@
 'use strict'
 
 const props = {
-  width: 'H2',
-  height: 'G2',
+  // width: 'H2',
+  height: 'H',
   position: 'relative',
-  round: 'B1',
+  round: '0 G G 0',
   overflow: 'hidden',
   childProps: {
     display: 'block',

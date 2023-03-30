@@ -17,18 +17,18 @@ const props = {
     padding: '0',
     fontSize: 'B',
     position: 'absolute',
-    top: '35%',
-    right: '-B',
+    top: '-B',
+    left: 'A',
     transoform: 'translate(-50%, -50%)',
-    style: {
-      writingMode: 'vertical-rl',
-      textOrientation: 'upright'
-    }
+    // style: {
+    //   writingMode: 'vertical-rl',
+    //   textOrientation: 'upright'
+    // }
   },
 
   navArrows: {
-    alignSelf: 'center',
-    margin: 'A1 - - -'
+    alignSelf: '',
+    margin: 'A1 - - A'
   }
 }
 

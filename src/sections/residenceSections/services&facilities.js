@@ -69,14 +69,14 @@ const props = {
   position: 'relative',
   boxSizing: 'content-box',
   style: {
-    '@media only screen and (min-width: 1281px) and (max-height: 820px)': {
-      minHeight: '100%',
-      paddingTop: '0'
-    },
-    '@media only screen and (min-width: 1281px) and (max-height: 680px)': {
-      '> div > div': { padding: `${70 / 16}em 0` }
+    // '@media only screen and (min-width: 1281px) and (max-height: 820px)': {
+    //   minHeight: '100%',
+    //   paddingTop: '0'
+    // },
+    // '@media only screen and (min-width: 1281px) and (max-height: 680px)': {
+    //   '> div > div': { padding: `${70 / 16}em 0` }
 
-    }
+    // }
   },
 
   title: {
@@ -94,7 +94,8 @@ const props = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     style: {
-      '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },
+      backgroundAttachment: 'fixed',
+      // '@media only screen and (min-width: 1281px)': {},
       backgroundRepeat: 'no-repeat',
       boxShadow: 'inset 0px 0px 2px .2px rgba(0, 0, 0, .7)'
     },
@@ -118,10 +119,10 @@ const props = {
         backgroundAttachment: 'fixed',
         '> div': { zIndex: '2' }
       },
-      '@tabletM': {
-        columns: 'repeat(3, 1fr)'
-      },
-      '@tabletS': { columns: 'repeat(2, 1fr)' },
+      // '@tabletM': {
+      //   columns: 'repeat(3, 1fr)'
+      // },
+      // '@tabletS': { columns: 'repeat(2, 1fr)' },
       childProps: { style: { boxShadow: '0px 0px 2px .2px rgba(0, 0, 0, .7)' } }
     }
   }

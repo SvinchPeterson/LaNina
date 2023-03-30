@@ -7,12 +7,12 @@ import { daily, standard, caucasus, adventure, exclusive, wineGastronomy } from 
 
 import { header } from './header'
 
-import ORNAMENT_JPG from '../../../../assets/images/travel/ornaments2.png'
+import ORNAMENT_PNG from '../../../../assets/images/travel/ornaments2.png'
 
 const props = {
   // border: '1px solid red',
   position: 'fixed',
-  backgroundImage: 'url(' + ORNAMENT_JPG + ')',
+  backgroundImage: 'url(' + ORNAMENT_PNG + ')',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   backgroundColor: 'rgba(233, 250, 255, 1)',

@@ -24,14 +24,14 @@ const props = {
   align: 'center center',
   alignSelf: 'center',
   gap: 'A',
-  '@tabletM': { minWidth: '85%' },
-  '@tabletS': { flow: 'column' },
-  style: {
-    '@media only screen and (min-height: 1000px)': {
-      marginTop: `${50 / 16}em`,
-      marginBottom: `${150 / 16}em`
-    }
-  },
+  // '@tabletM': { minWidth: '85%' },
+  // '@tabletS': { flow: 'column' },
+  // style: {
+  //   '@media only screen and (min-height: 1000px)': {
+  //     marginTop: `${50 / 16}em`,
+  //     marginBottom: `${150 / 16}em`
+  //   }
+  // },
   title: {
     text: 'location',
     fontSize: 'Z',
@@ -39,19 +39,19 @@ const props = {
     textTransform: 'uppercase',
     letterSpacing: `${10 / 13}em`,
     transform: 'rotate(180deg)',
-    '@tabletS': {
-      alignSelf: 'flex-start',
-      padding: '- - - A'
-    },
+    // '@tabletS': {
+    //   alignSelf: 'flex-start',
+    //   padding: '- - - A'
+    // },
     style: {
       alignSelf: 'center',
       writingMode: 'vertical-rl',
       textOrientation: 'mixed',
-      '@media only screen and (max-width: 1024px)': {
-        writingMode: 'horizontal-tb',
-        textOrientation: 'initial',
-        transform: 'rotate(0deg)'
-      }
+      // '@media only screen and (max-width: 1024px)': {
+      //   writingMode: 'horizontal-tb',
+      //   textOrientation: 'initial',
+      //   transform: 'rotate(0deg)'
+      // }
     }
   },
 
@@ -66,7 +66,7 @@ const props = {
       backgroundAttachment: 'fixed',
       backgroundRepeat: 'no-repeat'
     },
-    '@tabletM': { boxSize: 'H2 100%' },
+    // '@tabletM': { boxSize: 'H2 100%' },
     // '@tabletM': {
     //   boxSize: 'H3 100%',
     //   align: 'center flex-start'
@@ -96,12 +96,12 @@ const props = {
       padding: 'Y2 - - -',
       border: 'solid, black .65',
       borderWidth: '.6px 0 0 0',
-      '@tabletS': {
-        flow: 'column',
-        alignSelf: 'center',
-        gap: 'Z',
-        margin: 'A 0 - -'
-      },
+      // '@tabletS': {
+      //   flow: 'column',
+      //   alignSelf: 'center',
+      //   gap: 'Z',
+      //   margin: 'A 0 - -'
+      // },
       // '@tabletM': {
       //   padding: 'Z - - -',
       //   margin: 'A - - -'

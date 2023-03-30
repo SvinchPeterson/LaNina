@@ -6,6 +6,8 @@ import { Menu, MenuMobile, Header, Footer } from '../components'
 
 import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location } from '../sections/residenceSections'
 
+import { roomsContainer } from '../sections/residenceSections/apartments/roomsContainer'
+
 import { properties } from './props'
 
 const state = {
@@ -16,7 +18,16 @@ const state = {
   activeImage: 0,
   offers: false,
   back: true,
-  tabs: 0
+  tabs: 0,
+  activeRoomsContainer: false,
+
+  activeBallerina: false,
+  activeRedBrick: false,
+  activeYellowCouch: false,
+  activeGreenForest: false,
+  activeRetro: false,
+  activeLagoon: false,
+  activeQvevri: false
 }
 
 const menu = {
@@ -66,6 +77,7 @@ export const Sololaki = {
   servicesFacilities,
   mission,
   apartments,
+  roomsContainer,
   wine,
   feedBacks,
   location,

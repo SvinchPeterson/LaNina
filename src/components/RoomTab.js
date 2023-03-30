@@ -17,7 +17,7 @@ export const props = {
   style: {
     transition: 'flex .6s linear'
   },
-  ':hover': { flex: '5.5' },
+  ':hover': { flex: '7' },
   ':hover > p': {
     opacity: '1',
     transition: 'opacity .55s ease-in-out'

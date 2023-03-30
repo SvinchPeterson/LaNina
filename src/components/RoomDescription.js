@@ -8,12 +8,14 @@ const props = {
   title: {
     fontSize: 'F',
     border: 'solid, cream2 .5',
-    borderWidth: '0 0 1px 0'
+    borderWidth: '0 0 1px 0',
+    display: 'none'
   },
   p: { color: 'cream2 .75' }
 }
 
 export const RoomDescription = {
   props,
-  extend: Paragraph
+  extend: Paragraph,
+  title: null
 }

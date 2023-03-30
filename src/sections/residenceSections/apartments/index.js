@@ -17,32 +17,32 @@ const props = {
   margin: 'F - - -',
   overflow: 'visible',
   style: {
-    '@media only screen and (min-width: 1281px) and (max-height: 820px)': {
-      minHeight: '100%',
-      paddingTop: '0',
-      // marginTop: `${300 / 16}em`,
-      header: {
-        position: 'absolute',
-        top: `${-40 / 13}em`
-      }
-    },
-    '@media only screen and (max-width: 1280px) and (max-height: 850px)': {
-      minHeight: '100%',
-      paddingTop: '0',
-      marginTop: `${300 / 16}em`,
-      header: {
-        position: 'absolute',
-        top: `${-40 / 13}em`
-      }
-    },
+    // '@media only screen and (min-width: 1281px) and (max-height: 820px)': {
+    //   minHeight: '100%',
+    //   paddingTop: '0',
+    //   // marginTop: `${300 / 16}em`,
+    //   header: {
+    //     position: 'absolute',
+    //     top: `${-40 / 13}em`
+    //   }
+    // },
+    // '@media only screen and (max-width: 1280px) and (max-height: 850px)': {
+    //   minHeight: '100%',
+    //   paddingTop: '0',
+    //   marginTop: `${300 / 16}em`,
+    //   header: {
+    //     position: 'absolute',
+    //     top: `${-40 / 13}em`
+    //   }
+    // },
 
-    '@media only screen and (min-width: 1281px) and (min-height: 900px)': {
-      paddingTop: `${140 / 16}em`
-    },
-    '@media only screen and (min-height: 1000px)': {
-      paddingTop: `${180 / 16}em`
+    // '@media only screen and (min-width: 1281px) and (min-height: 900px)': {
+    //   paddingTop: `${140 / 16}em`
+    // },
+    // '@media only screen and (min-height: 1000px)': {
+    //   paddingTop: `${180 / 16}em`
 
-    }
+    // }
   },
 
   header: {
@@ -60,7 +60,7 @@ const props = {
     scroll: {
 
       display: 'none',
-      '@tabletM': { display: 'flex' }
+      // '@tabletM': { display: 'flex' }
     }
   }
 }

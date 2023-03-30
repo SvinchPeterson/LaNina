@@ -262,7 +262,7 @@ const props = {
     top: '0',
     background: 'linear-gradient(to right, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
     zIndex: 3,
-    '@tabletS': { width: `${250 / 16}em` }
+    // '@tabletS': { width: `${250 / 16}em` }
   },
   ':after': {
     content: '""',
@@ -273,7 +273,7 @@ const props = {
     top: '0',
     background: 'linear-gradient(to left, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
     zIndex: 3,
-    '@tabletS': { width: `${250 / 16}em` }
+    // '@tabletS': { width: `${250 / 16}em` }
   },
 
   heading: {

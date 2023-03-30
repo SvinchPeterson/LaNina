@@ -195,7 +195,6 @@ export const header = {
 
       {
         text: 'caucasus',
-
         class: { show: (element, state) => state.activeCaucasus
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {

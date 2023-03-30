@@ -13,6 +13,18 @@ export const deopacity = keyframes`
 `
 
 // landing animations
+
+export const logoScale = keyframes`
+from {
+  transform: scale(.9);
+  opacity: 0;
+}
+to {
+  transform: scale(1);
+  opacity: .75;
+}
+`
+
 export const navBarItemTransform3 = keyframes`
 from {
   transform: translateY(30px) scale(.98);
@@ -33,7 +45,7 @@ from {
 }
 to {
   transform: translateY(0px);
-  opacity: 0.75
+  opacity: 0.8;
 }
 `
 
@@ -50,24 +62,24 @@ to {
 }
 `
 
-export const logoTitleTransform = keyframes`
-from {
-  transform: scale(.9);
-  opacity: 0;
-}
-to {
-  transform: scale(1);
-  opacity: 1;
-}
-`
 export const titleLetterSpacing = keyframes`
 from {
   opacity: 0;
-  transform: translateX(-100px) scale(.98);
+  letter-spacing: 6px;
 }
 to {
-  opacity: 0.75;
-  transform: translateX(0) scale(1);
+  opacity: .8;
+  letter-spacing: 7px;
+`
+
+export const scaleContent = keyframes`
+from {
+  opacity: 0;
+  transform: scale(.9);
+}
+to {
+  opacity: 1;
+  transform: scale(1);
 }
 `
 export const backgroundPosition = keyframes`
