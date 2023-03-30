@@ -49,7 +49,7 @@ const mobileMenuProps = {
   zIndex: '52',
   align: 'center center',
   round: '0 0 G1 G1',
-  '@mobileS': { top: 'C2' },
+  // '@mobileS': { top: 'C2' },
   style: {
     backdropFilter: 'blur(1px)',
     '@media only screen and (min-width: 769px)': { display: 'none' }

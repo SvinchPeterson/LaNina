@@ -3,12 +3,16 @@
 import { Banner } from '../../components'
 
 import LAKE_JPG from '../../assets/images/travel/lake.jpg'
+import LAKE_TABLET_JPG from '../../assets/images/travel/lake-tablet.jpg'
+import LAKE_MOBILE_JPG from '../../assets/images/travel/lake-mobile.jpg'
 
 import { travelBannerH5, positionOpacity, bannerH1, bannerBackground2 } from '../../animations'
 
 const props = {
   backgroundImage: 'url(' + LAKE_JPG + ')',
   background: 'radial-gradient(rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))',
+  '@tabletM': { backgroundImage: 'url(' + LAKE_TABLET_JPG + ')' },
+  '@mobileM': { backgroundImage: 'url(' + LAKE_MOBILE_JPG + ')' },
   style: {
     animationName: positionOpacity,
     '@media only screen and (max-width: 1280px)': { animationName: bannerBackground2 }

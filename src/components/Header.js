@@ -53,7 +53,7 @@ const props = {
   borderWidth: '0 0 .3px 0',
   padding: '- V',
   boxSizing: 'border-box',
-  '@mobileS': { height: 'C2' },
+  // '@mobileS': { height: 'C2' },
   '@mobileXS': {
 
   },
