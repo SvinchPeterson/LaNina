@@ -5,7 +5,7 @@ import { Flex, Img } from 'smbls'
 import { Navbar } from '../components'
 
 import {
-  navBarItemTransform, scaleContent, logoScale, titleLetterSpacing, backgroundPosition, deopacity, navBarItemTransform2, opacity, navBarItemTransform3
+  navBarItemTransform, scaleContent, backgroundPosition, deopacity, navBarItemTransform2, opacity,  navBarTransform
 } from '../animations'
 
 import LOGO_PNG from '../assets/icons/logoCream.png'
@@ -97,7 +97,7 @@ const props = {
 
     navbar: {
       flow: 'column',
-      gap: '0',
+      gap: 'V',
       color: 'cream2',
       textAlign: 'right',
       margin: 'Y2 - - -',
@@ -112,6 +112,7 @@ const props = {
         background: 'orange3',
         transform: 'translate(-50%, -50%)',
         opacity: '1',
+        pointerEvents: 'none',
         '@mobileM': { display: 'none' },
         style: {
           animationDuration: '1.3s',
@@ -124,7 +125,7 @@ const props = {
         textAlign: 'center',
         gap: 'Z',
         style: {
-          animationName: navBarItemTransform3,
+          animationName: navBarTransform ,
           animationDuration: '1.5s',
           animationTimingFunction: 'ease-in-out',
         }

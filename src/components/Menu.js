@@ -37,28 +37,14 @@ const props = {
 export const Menu = {
   extend: Flex,
   props,
-  class: {
-    show: (element, state) => state.activeMenu
-      ? { height: `${30 / 16}em` } : { height: '0' }
-  },
 
-  navBar: {
-    extend: Navbar,
-
-    childExtend: {
-      class: {
-        show: (element, state) => state.activeMenu
-          ? { opacity: '1' } : { opacity: '0' }
-      }
-    }
-  }
+  navBar: { extend: Navbar }
 }
 
 const mobileMenuProps = {
-  background: 'naviGreen .95',
   position: 'fixed',
   top: `D`,
-  width: '90%',
+  width: '80%',
   alignSelf: 'center',
   zIndex: '52',
   align: 'center center',
@@ -70,6 +56,7 @@ const mobileMenuProps = {
   },
 
   navBar: {
+    minWidth: '100%',
     flow: 'column',
     margin: '- - D2 -',
     alignItems: 'center',
@@ -78,9 +65,11 @@ const mobileMenuProps = {
       fontWeight: '400',
       color: 'cream2',
       letterSpacing: `${5 / 15}em`,
-      align: 'flex-end flex-start',
-      padding: '- - X -',
+      minWidth: '80%',
+      align: 'flex-end center',
+      padding: '- - X2 -',
       width: 'fit-content',
+      textAlign: 'center',
       border: 'solid, cream2 .5',
       borderWidth: '0 0 .5px 0',
       '@mobileS': { fontSize: `Z` },
@@ -93,30 +82,9 @@ const mobileMenuProps = {
 export const MenuMobile = {
   extend: Flex,
   props: mobileMenuProps,
-  class: {
-    show: (element, state) => state.activeMobileMenu
-      ? {
-        height: '80%',
-        transition: 'height .75s ease'
-      }
-      : { height: '0', pointerEvents: 'none', transition: 'height .35s ease' }
-  },
 
   navBar: {
     extend: Navbar,
-    class: {
-      show: (element, state) => state.activeMobileMenu
-        ? { opacity: '1', transition: 'opacity .75s ease' }
-        : { opacity: '0', transition: 'opacity .35s ease' }
-    },
-
-    childExtend: {
-      extend: Flex,
-      class: {
-        show: (element, state) => state.activeMobileMenu
-          ? { height: `${46 / 13}em`, opacity: '1', transition: 'height .75s ease, opacity .75s ease' }
-          : { height: '0', opacity: '0', transition: 'height .35s ease, opacity .35s ease' }
-      }
-    }
+    childExtend: { extend: Flex}
   }
 }

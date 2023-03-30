@@ -4,13 +4,16 @@ import { Flex, Img } from 'smbls'
 
 import { properties } from './props'
 
-import { Header, Footer, Menu } from '../components'
+import { Header, Footer, Menu, MenuMobile } from '../components'
 import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip } from '../sections/travelSections'
 import { toursContainer } from '../sections/travelSections/tours/toursContainer./index.js'
 import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
 import CLOSES_PNG from '../assets/icons/reject.png'
 
 const state = {
+  activeTravelMenu: false,
+  activeTravelMobileMenu: false,
+
   activePlanTrip: true,
   // activePlanTrip: false,
   // activeForm: false,
@@ -121,16 +124,27 @@ const state = {
   activeScroll2: false
 }
 
+
+
 const menu = {
   extend: Menu,
+  class: {
+    show: (element, state) => state.activeTravelMenu
+      ? { height: `${30 / 16}em` } : { height: '0' }
+  },
+
   navBar: {
     class: {
-      show: (element, state) => state.activeMenu
+      show: (element, state) => state.activeTravelMenu
         ? { width: `${400 / 16}em` } : { width: '0' }
     },
 
     childExtend: {
-      on: { click: (event, element, state) => { state.update({ activeMenu: false }) } }
+       class: {
+        show: (element, state) => state.activeTravelMenu
+          ? { opacity: '1' } : { opacity: '0' }
+      },
+      on: { click: (event, element, state) => { state.update({ activeTravelMenu: false }) } }
     },
     ...[
       { props: { text: 'gallery', href: '#gallery' } },
@@ -139,6 +153,72 @@ const menu = {
       { props: { text: 'contact', href: '#contact' } }
     ]
   }
+}
+
+
+
+const menuMobile = {
+  extend: MenuMobile,
+  props: {background: 'naviBlue'},
+  class: {
+    show: (element, state) => state.activeTravelMobileMenu
+      ? {
+        height: '80%',
+        transition: 'height .75s ease'
+      }
+      : { height: '0', pointerEvents: 'none', transition: 'height .35s ease' }
+  },
+
+  navBar: {
+    class: {
+      show: (element, state) => state.activeTravelMobileMenu
+        ? { opacity: '1', transition: 'opacity .75s ease' }
+        : { opacity: '0', transition: 'opacity .35s ease' }
+    },
+
+    childExtend: {
+      class: {
+        show: (element, state) => state.activeTravelMobileMenu
+          ? { height: `${46 / 13}em`, opacity: '1', transition: 'height .75s ease, opacity .75s ease' }
+          : { height: '0', opacity: '0', transition: 'height .35s ease, opacity .35s ease' }
+      },
+      on: { click: (event, element, state) => { state.update({ activeTravelMenu: false, activeTravelMobileMenu: false }) } }
+    },
+    ...[
+      { props: { text: 'gallery', href: '#gallery' } },
+      { props: { text: 'tours', href: '#tours' } },
+      { props: { text: 'about us', href: '#about' } },
+      { props: { text: 'contact', href: '#contact' } }
+    ]
+  }
+}
+
+const header = {
+  extend: Header,
+  ...[
+    {},
+    {},
+    {
+      menu: {
+        menu: {
+          on: { click: (event, element, state) => { state.update({ activeTravelMenu: true, activeTravelMobileMenu: true }) } },
+          class: {
+              show: (element, state) => state.activeTravelMenu
+                ? { top: `${-30 / 12}em`, transform: 'scale(.9)' }
+                : { top: '0', transform: 'scale(1)' }
+          }
+        },
+        close: {
+          on: { click: (event, element, state) => { state.update({ activeTravelMenu: false, activeTravelMobileMenu: false }) } },
+          class: {
+            show: (element, state) => state.activeTravelMenu
+              ? { bottom: `${3 / 12}em`, transform: 'scale(1)' }
+              : { bottom: `${-30 / 12}em`, transform: 'scale(.9)' }
+          }
+        }
+      }
+    }
+  ]
 }
 
 export const footer = {
@@ -190,11 +270,11 @@ export const footer = {
 export const Travel = {
   extend: Flex,
   props: { ...properties, background: 'backgroundBlue2' },
-  // props: { ...properties, background: 'white' },
   state,
 
-  Header,
+  header,
   menu,
+  menuMobile,
   banner,
   georgia,
   gallery,

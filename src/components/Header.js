@@ -29,15 +29,7 @@ const logo = {
 
 const menu = {
   extend: Button,
-  menu: {
-    text: 'menu',
-    on: { click: (event, element, state) => { state.update({ activeMenu: true, activeMobileMenu: true }) } },
-    class: {
-      show: (element, state) => state.activeMenu
-        ? { top: `${-30 / 12}em`, transform: 'scale(.9)' }
-        : { top: '0', transform: 'scale(1)' }
-    }
-  },
+  menu: { text: 'menu' },
 
   close: {
     extend: Flex,
@@ -45,12 +37,6 @@ const menu = {
     icon: {
       extend: Img,
       props: { src: CLOSE_PNG }
-    },
-    on: { click: (event, element, state) => { state.update({ activeMenu: false, activeMobileMenu: false }) } },
-    class: {
-      show: (element, state) => state.activeMenu
-        ? { bottom: `${3 / 12}em`, transform: 'scale(1)' }
-        : { bottom: `${-30 / 12}em`, transform: 'scale(.9)' }
     }
   }
 }
@@ -66,7 +52,11 @@ const props = {
   border: 'solid, white .55',
   borderWidth: '0 0 .3px 0',
   padding: '- V',
+  boxSizing: 'border-box',
   '@mobileS': { height: 'C2' },
+  '@mobileXS': {
+
+  },
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,

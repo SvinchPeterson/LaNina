@@ -14,38 +14,27 @@ export const deopacity = keyframes`
 
 // landing animations
 
-export const logoScale = keyframes`
-from {
-  transform: scale(.9);
-  opacity: 0;
-}
-to {
-  transform: scale(1);
-  opacity: .75;
-}
-`
-
-export const navBarItemTransform3 = keyframes`
+export const navBarTransform = keyframes`
 from {
   transform: translateY(30px) scale(.98);
   opacity: 0;
-  // letter-spacing: 3px;
 }
 to {
   transform: translateY(0px) scale(1);
   opacity: 1;
-  // letter-spacing: .5px;
 }
 `
 export const navBarItemTransform = keyframes`
 from {
   transform: translateY(50px);
   opacity: 0;
+  letter-spacing: -1px;
   // letter-spacing: 3px;
 }
 to {
   transform: translateY(0px);
   opacity: 0.8;
+  letter-spacing: 0.5px;
 }
 `
 
@@ -53,23 +42,13 @@ export const navBarItemTransform2 = keyframes`
 from {
   transform: translateY(-50px);
   opacity: 0;
-  // letter-spacing: 3px;
+  letter-spacing: -1px;
 }
 to {
   transform: translateY(0px);
-  opacity: 0.75;
-  // letter-spacing: .5px;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
 }
-`
-
-export const titleLetterSpacing = keyframes`
-from {
-  opacity: 0;
-  letter-spacing: 6px;
-}
-to {
-  opacity: .8;
-  letter-spacing: 7px;
 `
 
 export const scaleContent = keyframes`
