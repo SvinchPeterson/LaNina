@@ -33,7 +33,7 @@ from {
 }
 to {
   transform: translateY(0px) scale(1);
-  opacity: 0.75;
+  opacity: 1;
   // letter-spacing: .5px;
 }
 `
