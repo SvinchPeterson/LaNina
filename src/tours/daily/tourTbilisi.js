@@ -108,7 +108,7 @@ export const tourTbilisi = {
       extend: $tbilisi,
       class: {
         show: (element, state) => state.activeTbilisiPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : {display: 'block'}
       }
     },
 
