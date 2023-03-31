@@ -86,7 +86,7 @@ export const tourCultural = {
   gallery: {
     class: {
       show: (element, state) => state.activeCulturalPackage
-        ? { transform: 'scale(.75) translateX(50px)' } : { transform: 'scale(0) translateX(0)' }
+        ? { transform: 'scale(.75) translateX(50px)' } : { transform: 'scale(1) translateX(0)' }
     },
 
     title: { text: 'cultural tour' },
