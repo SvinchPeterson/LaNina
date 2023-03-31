@@ -20,12 +20,16 @@ const contacts = {
 
 const props = {
   margin: 'E1 - B -',
-  padding: 'E - - -',
+  padding: 'E - E -',
   align: 'center center',
   alignSelf: 'center',
   gap: 'A',
-  // '@tabletM': { minWidth: '85%' },
-  // '@tabletS': { flow: 'column' },
+  '@tabletM': {
+    margin: 'D - B -',
+  },
+  '@tabletS': { flow: 'column' },
+  '@mobileL': {minWidth: '80%'},
+  '@mobileS': {margin: '0 -'},
   // style: {
   //   '@media only screen and (min-height: 1000px)': {
   //     marginTop: `${50 / 16}em`,
@@ -39,19 +43,20 @@ const props = {
     textTransform: 'uppercase',
     letterSpacing: `${10 / 13}em`,
     transform: 'rotate(180deg)',
-    // '@tabletS': {
-    //   alignSelf: 'flex-start',
-    //   padding: '- - - A'
-    // },
+    '@tabletS': {
+      alignSelf: 'flex-start',
+      padding: '- - - A',
+      transform: 'rotate(0)'
+    },
+    '@mobileL': { alignSelf: 'center'},
     style: {
       alignSelf: 'center',
       writingMode: 'vertical-rl',
       textOrientation: 'mixed',
-      // '@media only screen and (max-width: 1024px)': {
-      //   writingMode: 'horizontal-tb',
-      //   textOrientation: 'initial',
-      //   transform: 'rotate(0deg)'
-      // }
+      '@media only screen and (max-width: 1024px)': {
+        writingMode: 'horizontal-tb',
+        textOrientation: 'initial'
+      }
     }
   },
 
@@ -66,12 +71,12 @@ const props = {
       backgroundAttachment: 'fixed',
       backgroundRepeat: 'no-repeat'
     },
-    // '@tabletM': { boxSize: 'H2 100%' },
-    // '@tabletM': {
-    //   boxSize: 'H3 100%',
-    //   align: 'center flex-start'
-    // },
-
+    '@tabletS': { boxSize: 'H1 100%' },
+    '@mobileL': {
+      align: 'center center'
+    },
+    '@mobileL': { boxSize: 'H 100%'},
+    '@mobileS': { boxSize: 'G3 100%'},
     map: {
       minWidth: '100%',
       maxHeight: '75%',
@@ -96,24 +101,19 @@ const props = {
       padding: 'Y2 - - -',
       border: 'solid, black .65',
       borderWidth: '.6px 0 0 0',
-      // '@tabletS': {
-      //   flow: 'column',
-      //   alignSelf: 'center',
-      //   gap: 'Z',
-      //   margin: 'A 0 - -'
-      // },
-      // '@tabletM': {
-      //   padding: 'Z - - -',
-      //   margin: 'A - - -'
-      // },
-      // '@tabletS': {
-      //   flow: 'column',
-      //   flexAlign: 'center flex-start',
-      //   gap: 'A'
-      // },
+      '@mobileL': {
+        flow: 'column',
+        gap: 'Z',
+        alignSelf: 'center'
+      },
+      '@mobileM': {gap: 'A1'},
 
       childProps: {
-        // '@tabletM': { fontSize: 'B' }
+        '@mobileM': {
+          flow: 'column',
+          gap: 'Z',
+        },
+        childProps: { ':after': {'@mobileM': {display: 'none'}}}
       }
     }
   }

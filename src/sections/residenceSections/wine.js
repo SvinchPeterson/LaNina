@@ -12,29 +12,44 @@ const props = {
   position: 'relative',
   align: 'center center',
   margin: 'G -',
+  '@mobileL': {
+    minHeight: '100%',
+    flow: 'column',
+    margin: 'E2 -',
+    overflow: 'hidden'
+  },
   // '@tabletM': { width: '100%' },
   image: {
     boxSize: `H1 H`,
     padding: '0',
     round: '0 0 G G',
     backgroundSize: 'contain',
-    backgroundPosition: `center bottom ${100 / 16}em`,
     zIndex: '2',
+    backgroundPosition: `center center`,
     style: {
       backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed',
-      // '@media only screen and (min-width: 1281px)': { },
+      '@media only screen and (min-width: 1281px)': {
+        backgroundAttachment: 'fixed',
+        backgroundPosition: `center bottom ${100 / 16}em`,
+      },
       backgroundImage: 'radial-gradient(rgba(1, 57, 57, .35), rgba(1, 57, 57, .5)), url(' + WINE_JPG + ')'
     },
 
-    // '@tabletM': {
-    //   boxSize: `I H1`,
-    //   round: '0 0 I I',
-    //   backgroundSize: '100% 100%',
-    //   backgroundPosition: `center top`,
-    //   style: { backgroundRepeat: 'no-repeat' }
-    // },
-    // '@tabletS': { margin: '- - - -C' }
+    '@tabletM': {
+      boxSize: `H3 H`,
+      round: '0 0 I I',
+      backgroundSize: '100% 100%',
+      backgroundPosition: `center top`,
+      style: { backgroundRepeat: 'no-repeat' }
+    },
+    '@tabletS': { margin: '- - - -C2' },
+    '@mobileL': {
+      margin: '0',
+      round: '0',
+      boxSize: '100% 100%',
+      backgroundSize: 'cover',
+
+    }
   },
 
   paragraph: {
@@ -46,16 +61,36 @@ const props = {
     padding: 'A2 E1 E D',
     round: '0 0 0 F',
     align: 'center flex-start',
+    '@tabletM': {
+      top: '0',
+      round: '0 0 0 F',
+      padding: '0 E1 E D2',
+      margin: '-Y -H -H 0'
+    },
+    '@tabletS': { margin: '-Y -G1 -H 0' },
+    '@mobileL': {
+      top: '0',
+      left: '0',
+      padding: '0 D2',
+      round: '0',
+      background: 'naviGreen .35',
+      textAlign: 'center',
+      color: 'cream2',
+      maxWidth: '100%',
+      minHeight: '100%',
+      align: 'center center',
+      style: { backdropFilter: 'blur(1px)' }
+      // alignSelf: 'flex-end',
+    },
+    '@mobileS': {padding: '0 B'},
+
     title: { fontSize: 'D' },
-    // '@tabletM': {
-    //   top: '0',
-    //   round: '0 0 0 F',
-    //   padding: 'D E1 E D2',
-    //   margin: '-Y -H -H 0'
-    // },
-    // '@tabletS': {
-    //   margin: '-Y -G1 -H 0'
-    // }
+
+    p: {
+      '@mobileL': {
+        fontSize: `${14.5 / 16}em`
+      }
+    }
   }
 }
 

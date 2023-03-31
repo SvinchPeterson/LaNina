@@ -28,7 +28,7 @@ const navArrows = {
       on: {
         click: (event, element, state) => {
           const content = document.getElementById('feedbacks')
-          sideScroll(content, 'left', 10, 350, 10)
+          sideScroll(content, 'left', 10, 300, 10)
         }
       }
     },
@@ -38,7 +38,7 @@ const navArrows = {
         click: (event, element, state) => {
           // const { tabs } = element.parent.parent.parent.content
           const content = document.getElementById('feedbacks')
-          sideScroll(content, 'right', 10, 350, 10)
+          sideScroll(content, 'right', 10, 300, 10)
         }
       }
     }
@@ -262,7 +262,8 @@ const props = {
     top: '0',
     background: 'linear-gradient(to right, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
     zIndex: 3,
-    // '@tabletS': { width: `${250 / 16}em` }
+    '@tabletS': { width: `${250 / 16}em` },
+    '@MobileL': { width: `${100 / 16}em` }
   },
   ':after': {
     content: '""',
@@ -273,7 +274,7 @@ const props = {
     top: '0',
     background: 'linear-gradient(to left, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
     zIndex: 3,
-    // '@tabletS': { width: `${250 / 16}em` }
+    '@mobileL': { width: `${100 / 16}em` }
   },
 
   heading: {
@@ -283,6 +284,7 @@ const props = {
     zIndex: '10',
     padding: '- - Z -',
     style: { borderBottom: '.5px solid rgba(0, 0, 0, .5)' },
+    '@mobileL': {width: '95%'},
     title: {
       fontWeight: '700',
       style: {
@@ -308,13 +310,21 @@ const props = {
       style: {
         scrollBehavior: 'smooth',
         animationName: slideHide2,
-        animationDuration: '60s',
+        animationDuration: '100s',
         animationTimingFunction: 'linear',
         animationIterationCount: 'infinite',
-        // overflowX: 'auto',
         minWidth: '100%',
         alignSelf: 'center',
         '&::-webkit-scrollbar': { display: 'none' }
+      },
+
+      childProps: {
+        '@mobileL': {
+          fontSize: `${14 / 16}em`,
+          minHeight: 'F3 !important',
+          maxHeight: 'G1',
+          minWidth: `${350 / 14}em`,
+        }
       }
     }
   }
