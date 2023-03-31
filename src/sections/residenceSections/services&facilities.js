@@ -2,7 +2,7 @@
 
 import { Grid, Flex } from 'smbls'
 
-import { ServiceFacilityItem } from '../../components'
+import { ServiceFacilityItem, ScrollTitle} from '../../components'
 
 import SHELF_JPG from '../../assets/images/residence/sololaki/shelf.jpg'
 
@@ -68,24 +68,25 @@ const props = {
   justifyContent: 'center',
   position: 'relative',
   boxSizing: 'content-box',
-  style: {
-    // '@media only screen and (min-width: 1281px) and (max-height: 820px)': {
-    //   minHeight: '100%',
-    //   paddingTop: '0'
-    // },
-    // '@media only screen and (min-width: 1281px) and (max-height: 680px)': {
-    //   '> div > div': { padding: `${70 / 16}em 0` }
-
-    // }
-  },
+  '@mobileL': { margin: 'D - - -' },
+  '@mobileS': {margin: 'C - - -', padding: 'E1 - - -',},
 
   title: {
-    padding: '- - A2 D2',
-    fontSize: 'Z',
-    fontWeight: '400',
-    textTransform: 'uppercase',
-    letterSpacing: `${5 / 13}em`,
-    alignSelf: 'flex-start'
+    padding: '- - A D2',
+    align: 'center space-between',
+    '@mobileL': { padding: '- B2 A B2' },
+    '@mobileS': { align: 'center center', padding: '0 0 A 0' },
+    h3: {
+      fontSize: 'Z',
+      fontWeight: '400',
+      textTransform: 'uppercase',
+      letterSpacing: `${5 / 13}em`
+    },
+    scroll: {
+      display: 'none',
+      '@mobileL': { display: 'flex'},
+      '@mobileS': {display: 'none'}
+    }
   },
 
   content: {
@@ -94,8 +95,7 @@ const props = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     style: {
-      backgroundAttachment: 'fixed',
-      // '@media only screen and (min-width: 1281px)': {},
+      '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed'},
       backgroundRepeat: 'no-repeat',
       boxShadow: 'inset 0px 0px 2px .2px rgba(0, 0, 0, .7)'
     },
@@ -106,6 +106,7 @@ const props = {
       background: 'black .25',
       zIndex: '2'
     },
+    '@mobileL': {overflow: 'hidden'},
 
     items: {
       width: 'fit-content',
@@ -115,16 +116,32 @@ const props = {
       padding: 'E -',
       position: 'relative',
       margin: 'auto',
+      '@tabletM': { columns: 'repeat(3, 1fr)',},
+      '@tabletS': { columns: 'repeat(2, 1fr)'},
+      '@mobileL': {
+        display: 'flex',
+        maxWidth: '100%',
+        padding: 'E D',
+        style: { overflowY: 'auto' }
+      },
+      '@mobileS': {padding: 'D C1'},
+      '@mobileXS': {padding: 'D B2'},
       style: {
         backgroundAttachment: 'fixed',
         '> div': { zIndex: '2' }
       },
-      // '@tabletM': {
-      //   columns: 'repeat(3, 1fr)'
-      // },
-      // '@tabletS': { columns: 'repeat(2, 1fr)' },
-      childProps: { style: { boxShadow: '0px 0px 2px .2px rgba(0, 0, 0, .7)' } }
+      childProps: {
+       '@mobileL': {minWidth: 'F3'},
+        style: { boxShadow: '0px 0px 2px .2px rgba(0, 0, 0, .7)' }
+      }
     }
+  },
+
+  scroll2: {
+    alignSelf: 'center',
+    padding: 'A - - -',
+    display: 'none',
+    '@mobileS': {display: 'flex'}
   }
 }
 
@@ -134,6 +151,11 @@ export const servicesFacilities = {
   props,
   attr: { id: 'service&facilities' },
 
-  title: { tag: 'h3', text: 'Services & Facilities' },
-  content: { items }
+  title: {
+    extend: Flex,
+    h3: { text: 'Services & Facilities' },
+    scroll: {extend: ScrollTitle}
+  },
+  content: { items },
+  scroll2: {extend: ScrollTitle}
 }

@@ -2,20 +2,20 @@
 
 import { Flex, Img } from 'smbls'
 
-import LEFT_ARROW_PNG from '../assets/icons/leftArrow-black.png'
-import RIGHT_ARROW_PNG from '../assets/icons/rightArrow-black.png'
+import LEFT_ARROW_PNG from '../assets/icons/left-arrows.png'
+import RIGHT_ARROW_PNG from '../assets/icons/right-arrows.png'
 
 const props = {
   align: 'center center',
   width: 'fit-content',
   gap: 'Z',
   style: {
-    '> img': { height: '15px' }
+    '> img': { height: `${16 / 16}em` }
   },
 
   lefts: { src: LEFT_ARROW_PNG },
   title: {
-    fontSize: 'B',
+    fontSize: 'A',
     // fontWeight: '700',
     style: { letterSpacing: '2px' }
   },

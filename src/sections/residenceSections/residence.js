@@ -18,7 +18,7 @@ const props = {
   '@mobileL': {
     minHeight: '100%',
     padding: '0',
-    margin: 'Y2 - B2 -',
+    margin: 'Y2 - 0 -',
   },
 
   imageContainer: {
@@ -100,10 +100,10 @@ const props = {
     style: {
       '@media only screen and (max-width: 768px) and (max-height: 800px)': {
         overflow: 'hidden',
-        maxHeight: '400px'
+        maxHeight: `${400 / 16}em`
       },
       '@media only screen and (max-width: 768px) and (max-height: 600px)': {
-        maxHeight: '300px'
+        maxHeight: `${300 / 16}em`
       }
     },
 
@@ -121,11 +121,11 @@ const props = {
       '@mobileL': { padding: 'A - A2 -' },
       style: {
         '@media only screen and (max-width: 768px) and (max-height: 800px)': {
-          maxHeight: '350px',
+          maxHeight: `${350 / 16}em`,
           overflowY: 'auto'
         },
         '@media only screen and (max-width: 768px) and (max-height: 600px)': {
-          maxHeight: '250px'
+          maxHeight: `${250 / 16}em`,
         }
       }
     }
