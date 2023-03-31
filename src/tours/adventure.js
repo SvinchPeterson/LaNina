@@ -18,7 +18,7 @@ const tourAdventure = {
   gallery: {
     class: {
       show: (element, state) => state.activeAdventurePackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(0) translateX(0)' }
     },
 
     gallery: {
@@ -110,7 +110,7 @@ const tourAdventure = {
       extend: $adventure,
       class: {
         show: (element, state) => state.activeAdventurePackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 

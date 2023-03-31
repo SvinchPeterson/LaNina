@@ -11,7 +11,7 @@ export const tourGori = {
   gallery: {
     class: {
       show: (element, state) => state.activeGoriPackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(0) translateX(0)' }
     },
 
     title: { text: 'gori city . uplistsikhe cave' },
@@ -104,7 +104,7 @@ export const tourGori = {
       extend: $gori,
       class: {
         show: (element, state) => state.activeGoriPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 

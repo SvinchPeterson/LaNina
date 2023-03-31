@@ -12,7 +12,7 @@ export const tourDashbashi = {
   gallery: {
     class: {
       show: (element, state) => state.activeDashbashPackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : {  transform: 'scale(0) translateX(0)' }
     },
 
     title: { text: 'dashbashi canyon' },
@@ -105,7 +105,7 @@ export const tourDashbashi = {
       extend: $dashbashi,
       class: {
         show: (element, state) => state.activeDashbashPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : {display: 'block'}
       }
     },
 

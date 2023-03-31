@@ -53,7 +53,7 @@ export const tourAnanuriGudauri = {
       extend: $ananuri,
       class: {
         show: (element, state) => state.activeAnanuriPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 
@@ -86,7 +86,7 @@ export const tourAnanuriGudauri = {
   gallery: {
     class: {
       show: (element, state) => state.activeAnanuriPackage
-        ? { transform: 'scale(.75) translateX(50px)' } : {}
+        ? { transform: 'scale(.75) translateX(50px)' } : { transform: 'scale(0) translateX(0)'}
     },
 
     title: { text: 'ananuri . gudauri . kazbegi' },

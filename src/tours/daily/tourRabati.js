@@ -12,7 +12,7 @@ export const tourRabati = {
   gallery: {
     class: {
       show: (element, state) => state.activeRabatPackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(0) translateX(0)' }
     },
 
     title: { text: 'rabati castle' },
@@ -105,7 +105,7 @@ export const tourRabati = {
       extend: $rabat,
       class: {
         show: (element, state) => state.activeRabatPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 

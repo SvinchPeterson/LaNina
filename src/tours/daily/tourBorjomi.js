@@ -52,7 +52,7 @@ export const tourBorjomi = {
       extend: $borjomi,
       class: {
         show: (element, state) => state.activeBorjomiPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 
@@ -85,7 +85,7 @@ export const tourBorjomi = {
   gallery: {
     class: {
       show: (element, state) => state.activeBorjomiPackage
-        ? { transform: 'scale(.75) translateX(50px)' } : {}
+        ? { transform: 'scale(.75) translateX(50px)' } : { transform: 'scale(0) translateX(0)' }
     },
 
     title: { text: 'borjomi' },

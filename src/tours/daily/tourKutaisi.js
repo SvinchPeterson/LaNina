@@ -53,7 +53,7 @@ export const tourKutaisi = {
       extend: $kutaisi,
       class: {
         show: (element, state) => state.activeKutaisiPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 
@@ -86,7 +86,7 @@ export const tourKutaisi = {
   gallery: {
     class: {
       show: (element, state) => state.activeKutaisiPackage
-        ? { transform: 'scale(.75) translateX(50px)' } : {}
+        ? { transform: 'scale(.75) translateX(50px)' } : {  transform: 'scale(0) translateX(0)' }
     },
 
     title: { text: 'kutaisi' },

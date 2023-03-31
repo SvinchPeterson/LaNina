@@ -11,7 +11,7 @@ export const tourHistorical = {
   gallery: {
     class: {
       show: (element, state) => state.activeHistoricalPackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(0) translateX(0)'}
     },
 
     title: { text: 'historical tour' },
@@ -105,7 +105,7 @@ export const tourHistorical = {
       extend: $historical,
       class: {
         show: (element, state) => state.activeHistoricalPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 

@@ -17,7 +17,7 @@ const tourCaucasus = {
   gallery: {
     class: {
       show: (element, state) => state.activeCaucasusPackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(0) translateX(0)' }
     },
 
     gallery: {
@@ -110,7 +110,7 @@ const tourCaucasus = {
       extend: $caucasus,
       class: {
         show: (element, state) => state.activeCaucasusPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
     package: {

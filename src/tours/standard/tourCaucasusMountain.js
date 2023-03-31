@@ -12,7 +12,7 @@ export const tourCaucasusMountain = {
   gallery: {
     class: {
       show: (element, state) => state.acitveCaucasusMountainPackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(0) translateX(-0)' }
     },
 
     title: { text: 'caucasus mountain tour' },
@@ -105,7 +105,7 @@ export const tourCaucasusMountain = {
       extend: $caucasusMountain,
       class: {
         show: (element, state) => state.acitveCaucasusMountainPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 

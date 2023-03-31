@@ -13,7 +13,7 @@ export const tourCapital = {
   gallery: {
     class: {
       show: (element, state) => state.activeCapitalPackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(0) translateX(0)' }
     },
 
     title: { text: 'capital tour' },
@@ -107,7 +107,7 @@ export const tourCapital = {
       extend: $capital,
       class: {
         show: (element, state) => state.activeCapitalPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block'}
       }
     },
 

@@ -18,7 +18,7 @@ const tourExclusive = {
   gallery: {
     class: {
       show: (element, state) => state.activeExclusivePackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(0) translateX(0)' }
     },
 
     gallery: {
@@ -111,7 +111,7 @@ const tourExclusive = {
       extend: $exclusive,
       class: {
         show: (element, state) => state.activeExclusivePackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 

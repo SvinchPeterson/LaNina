@@ -53,7 +53,7 @@ export const tourMtsketa = {
       extend: $mtsketa,
       class: {
         show: (element, state) => state.activeMtsketaPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 
@@ -86,7 +86,7 @@ export const tourMtsketa = {
   gallery: {
     class: {
       show: (element, state) => state.activeMtsketaPackage
-        ? { transform: 'scale(.75) translateX(50px)' } : {}
+        ? { transform: 'scale(.75) translateX(50px)' } : { transform: 'scale(0) translateX(0)' }
     },
 
     title: { text: 'mtsketa' },

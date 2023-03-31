@@ -12,7 +12,7 @@ export const tourKakheti = {
   gallery: {
     class: {
       show: (element, state) => state.activeKakhetiPackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(0) translateX(0)' }
     },
 
     title: { text: 'KAkheti' },
@@ -105,7 +105,7 @@ export const tourKakheti = {
       extend: $kakheti,
       class: {
         show: (element, state) => state.activeKakhetiPackage
-          ? { display: 'none' } : {}
+          ? { display: 'none' } : { display: 'block' }
       }
     },
 
