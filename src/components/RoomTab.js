@@ -33,10 +33,9 @@ export const props = {
     }
   },
 
-  image: {
+  imageContainer: {
     boxSize: '100% 100%',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+
     position: 'absolute',
     overflow: 'hidden',
     zIndex: '1',
@@ -44,9 +43,16 @@ export const props = {
     left: '0',
     round: 'F',
     style: {
-      '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },
+
       backgroundRepeat: 'no-repeat',
       boxShadow: 'inset 0px 0px .5px 0.5px rgba(0, 0, 0, .5)'
+    },
+    image: {
+      minWidth: '100%',
+      minHeight: '100%',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      style: { '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },}
     }
   },
 
@@ -84,7 +90,10 @@ export const RoomTab = {
     }
   },
 
-  image: {},
+  imageContainer: {
+    extend: Flex,
+    image: {}
+  },
   icon: { extend: Img },
   p: {},
   title: { tag: 'h2' }
