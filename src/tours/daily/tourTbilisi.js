@@ -13,7 +13,7 @@ export const tourTbilisi = {
   gallery: {
     class: {
       show: (element, state) => state.activeTbilisiPackage
-        ? { transform: 'scale(.75) translateX(-50px)' } : {}
+        ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(0)'}
     },
 
     title: { text: 'tbilisi city tour' },

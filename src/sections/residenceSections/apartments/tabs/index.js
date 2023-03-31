@@ -58,9 +58,6 @@ const props = {
     top: '0',
     left: '0',
     background: 'radial-gradient(rgba(1, 57, 57, 0), rgba(1, 57, 57, .8), rgba(1, 57, 57, 1),rgba(1, 57, 57, 1))',
-    // '@tabletM': {
-    //   background: 'radial-gradient(rgba(1, 57, 57, .4), rgba(1, 57, 57, .8), rgba(1, 57, 57, 1),rgba(1, 57, 57, 1))'
-    // }
   },
   tabsContainer: {
     padding: '- F',
