@@ -74,7 +74,7 @@ export const tabYellowCouch = {
 export const tabGreenForest = {
   extend: RoomTab,
   props: {
-    image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + BLUE_LAGOON_JPG + ')' } },
+    image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + GREENFOREST_JPG + ')' } },
     icon: { src: LEAF_PNG },
     p: { text: 'Timeless and elegant, yet modern and fresh, green is your choice!' },
     title: { text: 'green forest' }
@@ -134,7 +134,7 @@ export const tabQvevri = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeRoomsContainer: true, activeLagoon: true })
+      state.update({ activeRoomsContainer: true, activeQvevri: true })
     }
   },
 }

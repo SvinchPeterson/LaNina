@@ -13,12 +13,12 @@ import BATHROOM_JPG from '../../assets/images/residence/rooms/blueLagoon/bethroo
 export const galleryBlueLagoon = {
   extend: Gallery,
   ...[
-    { backgroundImage: 'url(' + LIVING_ROOM_JPEG + ')' },
-    { backgroundImage: 'url(' + LIVING_ROOM2_JPG + ')' },
-    { backgroundImage: 'url(' + HOLL_JPG + ')' },
-    { backgroundImage: 'url(' + KITCHEN_JPG + ')' },
-    { backgroundImage: 'url(' + BEDROOM_JPG + ')' },
-    { backgroundImage: 'url(' + BEDROOM2_JPG + ')' },
-    { backgroundImage: 'url(' + BATHROOM_JPG + ')' }
+    { props: { backgroundImage: 'url(' + LIVING_ROOM_JPEG + ')' } },
+    { props: { backgroundImage: 'url(' + LIVING_ROOM2_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + HOLL_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + KITCHEN_JPG + ')' } },
+    { props: { backgroundImage: 'url(' + BEDROOM_JPG + ')' } },
+    { props: {backgroundImage: 'url(' + BEDROOM2_JPG + ')'} },
+    { props: {backgroundImage: 'url(' + BATHROOM_JPG + ')'} }
   ]
 }

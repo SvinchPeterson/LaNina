@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro } from './rooms'
+import { roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro, roomBlueLagoon, roomQvevri } from './rooms'
 
 import { toursContainer } from '../../../travelSections/tours/toursContainer.'
 import ORNAMENTS_PNG from '../../../../assets/images/residence/sololaki/ornaments.png'
@@ -85,7 +85,9 @@ export const roomsContainer = {
       roomRedBrick,
       roomYellowCouch,
       roomGreenForest,
-      roomRetro
+      roomRetro,
+      roomBlueLagoon,
+      roomQvevri
     }
 
   },

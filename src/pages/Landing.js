@@ -86,7 +86,7 @@ const props = {
     '@mobileM': {
       flow: 'column-reverse',
       align: 'center center',
-      gap: 'D'
+      // gap: 'D'
     },
 
     logo: {
@@ -122,6 +122,7 @@ const props = {
       },
 
        '@mobileM': {
+        margin: 'D - - -',
         textAlign: 'center',
         gap: 'Z',
         style: {

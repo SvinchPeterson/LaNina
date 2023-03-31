@@ -2,7 +2,7 @@
 
 import { Room } from '../../../../components'
 
-import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro } from '../../../../galleries/apartmentsGalleries'
+import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro, galleryBlueLagoon, galleryQvevri } from '../../../../galleries/apartmentsGalleries'
 
 import { ballerinaTextEng, redBrickTextEng, yellowCouchTextEng, greenForrestTextEng, retroTextEng } from '../../../../texts/residence'
 
@@ -214,3 +214,94 @@ export const roomRetro = {
     navArrows: {}
   }
 }
+
+
+export const roomBlueLagoon = {
+  extend: Room,
+  attr: { id: 'roomRetro' },
+  class: {
+    show: (element, state) => state.activeLagoon
+    ? {
+      opacity: '1',
+      zIndex: '3',
+      transition: 'opacity 1s ease-in-out',
+    }
+    : {
+      opacity: '0',
+      zIndex: '0',
+      transition: 'opacity .3s ease-in-out',
+    }
+  },
+
+  article: {
+    description: {
+      title: { text: 'Retro' },
+      p: { extend: retroTextEng }
+    },
+    amenities: {
+      title: {},
+      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
+    }
+  },
+
+  galleryContainer: {
+    book: {},
+    gallery: {
+      extend: galleryBlueLagoon,
+      class: {
+        show: (element, state) => state.activeLagoon
+          ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
+          : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
+      }
+    },
+    navArrows: {}
+  }
+}
+
+
+
+
+
+export const roomQvevri = {
+  extend: Room,
+  attr: { id: 'roomRetro' },
+  class: {
+    show: (element, state) => state.activeQvevri
+    ? {
+      opacity: '1',
+      zIndex: '3',
+      transition: 'opacity 1s ease-in-out',
+    }
+    : {
+      opacity: '0',
+      zIndex: '0',
+      transition: 'opacity .3s ease-in-out',
+    }
+  },
+
+  article: {
+    description: {
+      title: { text: 'Retro' },
+      p: { extend: retroTextEng }
+    },
+    amenities: {
+      title: {},
+      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
+    }
+  },
+
+  galleryContainer: {
+    book: {},
+    gallery: {
+      extend: galleryQvevri,
+      class: {
+        show: (element, state) => state.activeQvevri
+          ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
+          : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
+      }
+    },
+    navArrows: {}
+  }
+}
+
+

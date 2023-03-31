@@ -91,7 +91,21 @@ export const roomsHeader = {
         props: { text: 'retro' }
       },
 
-      {props: {display: 'none'}}
+      {
+        class: {
+          show: (element, state) => state.activeLagoon
+            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+        },
+        props: { text: 'blue lagoon' }
+      },
+
+      {
+        class: {
+          show: (element, state) => state.activeQvevri
+            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+        },
+        props: { text: 'qvevri' }
+      }
     ]
   },
 
