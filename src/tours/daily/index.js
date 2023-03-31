@@ -58,7 +58,7 @@ export const daily = {
       },
     show2: (element, state) => state.activeDailyPackages
       ? { overflowY: 'hidden' }
-      : {}
+      : { overflowY: 'auto' }
   },
 
   childExtend: {
