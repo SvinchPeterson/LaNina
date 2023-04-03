@@ -35,17 +35,14 @@ const props = {
   boxSize: '100% 100%',
   backgroundImage: 'url(' + ORNAMENTS_PNG + ')',
   backgroundSize: 'cover',
-  backgroundPosition: 'top center',
+  backgroundPosition: 'bottom right',
   position: 'relative',
   align: 'center center',
   background: 'orange3',
   overflow: 'hidden',
   animationDuration: '10s',
   animatonTimingFunction: 'linear',
-  style: {
-    animationName: backgroundPosition,
-    backgroundRepeat: 'no-repeat'
-  },
+  style: { animationName: backgroundPosition },
   '@maxTabletM': { animationDuration: '40s' },
   ':before': {
     content: '""',
@@ -88,6 +85,7 @@ const props = {
     gap: 'Y',
     margin: '- - F -',
     '@maxHeightN': { margin: '- - E -'},
+    '@maxHeightS': { margin: '- - D -'},
 
     logo: {
       boxSize: 'E ',
@@ -150,21 +148,22 @@ const props = {
   },
 
   title: {
-    fontSize: `${12 / 16}em`,
+    fontSize: `Z`,
     fontWeight: '700',
     textTransform: 'uppercase',
-    letterSpacing: '12px',
+    letterSpacing: `${12 / 13}em`,
     color: 'cream2 .7',
     zIndex: '3',
     position: 'absolute',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    padding: 'Z1 - Z1 -',
+    padding: `- - - ${12 / 13}em`,
     width: '100%',
     textAlign: 'center',
-    bottom: 'D1',
-    '@maxMobileM': { letterSpacing: '8px'},
-    '@maxHeightN': { bottom: 'B1' },
+    bottom: 'D',
+    '@maxMobileM': { letterSpacing: `${8 / 13}em`, padding: `- - - ${8 / 13}em`,},
+    '@maxHeightS': { bottom: 'B1' },
+    '@minHeightM': {bottom: 'D1'},
     style: {
       animationName: opacity,
       animationDuration: '1.5s',
@@ -185,5 +184,8 @@ export const Landing = {
     logo
   },
 
-  title: { tag: 'h5', text: 'BB hospitality' }
+  title: {
+    tag: 'h5',
+    text: 'BB hospitality'
+  }
 }

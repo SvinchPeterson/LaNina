@@ -1,20 +1,5 @@
 'use strict'
 
-// import HelveticaUltraLightWoff2 from './assets/fonts/HelveticaNeue-UltraLight.woff2'
-// import HelveticaNormalWoff2 from './assets/fonts/HelveticaNeue-Normal.woff2'
-// import HelveticaMediumWoff2 from './assets/fonts/HelveticaNeue-Medium.woff2'
-// import HelveticaBoldWoff2 from './assets/fonts/HelveticaNeue-Bold.woff2'
-
-// import HelveticaUltraLightTtf from './assets/fonts/HelveticaNeue-UltraLight.ttf'
-// import HelveticaNormalTtf from './assets/fonts/HelveticaNeue-Normal.ttf'
-// import HelveticaMediumTtf from './assets/fonts/HelveticaNeue-Medium.ttf'
-// import HelveticaBoldTtf from './assets/fonts/HelveticaNeue-Bold.ttf'
-
-// import HelveticaUltraLightEot from './assets/fonts/HelveticaNeue-UltraLight.eot'
-// import HelveticaNormalEot from './assets/fonts/HelveticaNeue-normal.eot'
-// import HelveticaMediumEot from './assets/fonts/HelveticaNeue-Medium.eot'
-// import HelveticaBoldEot from './assets/fonts/HelveticaNeue-Bold.eot'
-
 const FONTS_PATH = './assets/fonts'
 
 export const FONT = {
@@ -33,61 +18,6 @@ export const FONT = {
   ]
 }
 
-// export const FONT = {
-//   helveticaNeue: [
-//     {
-//       url: HelveticaUltraLightWoff2,
-//       fontWeight: 100
-//     },
-//     {
-//       url: HelveticaNormalWoff2,
-//       fontWeight: 400
-//     },
-//     {
-//       url: HelveticaMediumWoff2,
-//       fontWeight: 500
-//     },
-//     {
-//       url: HelveticaBoldWoff2,
-//       fontWeight: 700
-//     },
-
-//     {
-//       url: HelveticaUltraLightTtf,
-//       fontWeight: 100
-//     },
-//     {
-//       url: HelveticaNormalTtf,
-//       fontWeight: 400
-//     },
-//     {
-//       url: HelveticaMediumTtf,
-//       fontWeight: 500
-//     },
-//     {
-//       url: HelveticaBoldTtf,
-//       fontWeight: 700
-//     },
-
-//     {
-//       url: HelveticaUltraLightEot,
-//       fontWeight: 100
-//     },
-//     {
-//       url: HelveticaNormalEot,
-//       fontWeight: 400
-//     },
-//     {
-//       url: HelveticaMediumEot,
-//       fontWeight: 500
-//     },
-//     {
-//       url: HelveticaBoldEot,
-//       fontWeight: 700
-//     }
-//   ]
-// }
-
 export const FONT_FAMILY = {
   helveticaNeue: {
     isDefault: true,
@@ -97,30 +27,11 @@ export const FONT_FAMILY = {
 }
 
 export const COLORS = {
-  cream: 'rgba(244, 233, 217, 1)',
-  cream2: 'rgba(248, 241, 227, 1)',
-  orange: 'rgba(168, 98, 63, 1)',
-  orange2: '#EC8551',
-  orange3: '#FFCEA8',
-  green: 'rgba(42, 81, 61, 1)',
-  green2: 'rgba(60,84, 72, 1)',
   black: 'rgba(0, 0, 0, 1)',
-  gold: 'rgba(220, 187, 140, 1)',
   white: 'rgba(245, 245, 245, 1)',
-  blue2: '#3A5A75',
-  blue3: 'rgba(30, 40, 49, 1)',
-  backgroundBlue: 'rgba(208, 224, 228, 1)',
+  cream2: 'rgba(248, 241, 227, 1)',
+  orange3: 'rgba(255, 206, 168, 1)',
   backgroundBlue2: 'rgba(233, 250, 255, 1)',
-  gray: '#454B4E',
-  grey: '#5A5D5E',
-  brown: 'rgba(65, 31, 5, 1)',
-
-  greenNew: '#02A169',
-  blueNew: '#00A294',
-
-  blue: 'rgba(43, 56, 98, 1)',
-  seablue: 'rgba(56, 104, 153, 1)',
-  skyblue: 'rgba(189, 216, 246, 1)',
 
   naviGreen: 'rgba(1, 57, 57, 1)',
   naviGreenDark: 'rgba(0, 49, 49, 1)',
