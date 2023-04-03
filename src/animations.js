@@ -28,13 +28,12 @@ export const navBarItemTransform = keyframes`
 from {
   transform: translateY(50px);
   opacity: 0;
-  letter-spacing: -1px;
-  // letter-spacing: 3px;
+  letter-spacing: 1.5px;
 }
 to {
   transform: translateY(0px);
-  opacity: 0.8;
-  letter-spacing: 0.5px;
+  opacity: 0.7;
+  letter-spacing: 2.5px;
 }
 `
 
@@ -42,33 +41,41 @@ export const navBarItemTransform2 = keyframes`
 from {
   transform: translateY(-50px);
   opacity: 0;
-  letter-spacing: -1px;
+  letter-spacing: 1.5px;
 }
 to {
   transform: translateY(0px);
-  opacity: 0.8;
-  letter-spacing: 0.5px;
+  opacity: 0.7;
+  letter-spacing: 2.5px;
 }
 `
 
-export const scaleContent = keyframes`
+export const scaleLogo = keyframes`
 from {
   opacity: 0;
   transform: scale(.9);
 }
 to {
-  opacity: 1;
+  opacity: .75;
   transform: scale(1);
 }
 `
 export const backgroundPosition = keyframes`
   from {
-    background-position: top 100 left 100px;
+    background-position: top left;
   }
   to {
-    background-position: top center;
+    background-position: bottom right;
   }
 `
+
+
+export const lineWidth = keyframes`
+  from { width: 0; }
+  to { width: 100%; }
+`
+
+
 
 // export const backgroundPosition = keyframes`
 //   from {

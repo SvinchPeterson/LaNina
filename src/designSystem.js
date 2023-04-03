@@ -1,79 +1,97 @@
 'use strict'
 
-import HelveticaUltraLightWoff2 from './assets/fonts/HelveticaNeue-UltraLight.woff2'
-import HelveticaNormalWoff2 from './assets/fonts/HelveticaNeue-Normal.woff2'
-import HelveticaMediumWoff2 from './assets/fonts/HelveticaNeue-Medium.woff2'
-import HelveticaBoldWoff2 from './assets/fonts/HelveticaNeue-Bold.woff2'
+// import HelveticaUltraLightWoff2 from './assets/fonts/HelveticaNeue-UltraLight.woff2'
+// import HelveticaNormalWoff2 from './assets/fonts/HelveticaNeue-Normal.woff2'
+// import HelveticaMediumWoff2 from './assets/fonts/HelveticaNeue-Medium.woff2'
+// import HelveticaBoldWoff2 from './assets/fonts/HelveticaNeue-Bold.woff2'
 
-import HelveticaUltraLightTtf from './assets/fonts/HelveticaNeue-UltraLight.ttf'
-import HelveticaNormalTtf from './assets/fonts/HelveticaNeue-Normal.ttf'
-import HelveticaMediumTtf from './assets/fonts/HelveticaNeue-Medium.ttf'
-import HelveticaBoldTtf from './assets/fonts/HelveticaNeue-Bold.ttf'
+// import HelveticaUltraLightTtf from './assets/fonts/HelveticaNeue-UltraLight.ttf'
+// import HelveticaNormalTtf from './assets/fonts/HelveticaNeue-Normal.ttf'
+// import HelveticaMediumTtf from './assets/fonts/HelveticaNeue-Medium.ttf'
+// import HelveticaBoldTtf from './assets/fonts/HelveticaNeue-Bold.ttf'
 
-import HelveticaUltraLightEot from './assets/fonts/HelveticaNeue-UltraLight.eot'
-import HelveticaNormalEot from './assets/fonts/HelveticaNeue-normal.eot'
-import HelveticaMediumEot from './assets/fonts/HelveticaNeue-Medium.eot'
-import HelveticaBoldEot from './assets/fonts/HelveticaNeue-Bold.eot'
+// import HelveticaUltraLightEot from './assets/fonts/HelveticaNeue-UltraLight.eot'
+// import HelveticaNormalEot from './assets/fonts/HelveticaNeue-normal.eot'
+// import HelveticaMediumEot from './assets/fonts/HelveticaNeue-Medium.eot'
+// import HelveticaBoldEot from './assets/fonts/HelveticaNeue-Bold.eot'
+
+const FONTS_PATH = './assets/fonts'
 
 export const FONT = {
   helveticaNeue: [
-    {
-      url: HelveticaUltraLightWoff2,
-      fontWeight: 100
-    },
-    {
-      url: HelveticaNormalWoff2,
-      fontWeight: 400
-    },
-    {
-      url: HelveticaMediumWoff2,
-      fontWeight: 500
-    },
-    {
-      url: HelveticaBoldWoff2,
-      fontWeight: 700
-    },
+    { url: FONTS_PATH + '/HelveticaNeue-UltraLight.woff2', fontWeight: 100 },
+    { url: FONTS_PATH + '/HelveticaNeue-Normal.woff2', fontWeight: 400},
+    { url: FONTS_PATH + '/HelveticaNeue-Bold.woff2', fontWeight: 700 },
 
-    {
-      url: HelveticaUltraLightTtf,
-      fontWeight: 100
-    },
-    {
-      url: HelveticaNormalTtf,
-      fontWeight: 400
-    },
-    {
-      url: HelveticaMediumTtf,
-      fontWeight: 500
-    },
-    {
-      url: HelveticaBoldTtf,
-      fontWeight: 700
-    },
+    { url: FONTS_PATH + '/HelveticaNeue-UltraLight.ttf', fontWeight: 100 },
+    { url: FONTS_PATH + '/HelveticaNeue-Normal.ttf', fontWeight: 400 },
+    { url: FONTS_PATH + '/HelveticaNeue-Bold.ttf', fontWeight: 700 },
 
-    {
-      url: HelveticaUltraLightEot,
-      fontWeight: 100
-    },
-    {
-      url: HelveticaNormalEot,
-      fontWeight: 400
-    },
-    {
-      url: HelveticaMediumEot,
-      fontWeight: 500
-    },
-    {
-      url: HelveticaBoldEot,
-      fontWeight: 700
-    }
+    { url: FONTS_PATH + '/HelveticaNeue-UltraLight.eot', fontWeight: 100 },
+    { url: FONTS_PATH + '/HelveticaNeue-normal.eot', fontWeight: 400 },
+    { url: FONTS_PATH + '/HelveticaNeue-Bold.eot', fontWeight: 700 }
   ]
 }
+
+// export const FONT = {
+//   helveticaNeue: [
+//     {
+//       url: HelveticaUltraLightWoff2,
+//       fontWeight: 100
+//     },
+//     {
+//       url: HelveticaNormalWoff2,
+//       fontWeight: 400
+//     },
+//     {
+//       url: HelveticaMediumWoff2,
+//       fontWeight: 500
+//     },
+//     {
+//       url: HelveticaBoldWoff2,
+//       fontWeight: 700
+//     },
+
+//     {
+//       url: HelveticaUltraLightTtf,
+//       fontWeight: 100
+//     },
+//     {
+//       url: HelveticaNormalTtf,
+//       fontWeight: 400
+//     },
+//     {
+//       url: HelveticaMediumTtf,
+//       fontWeight: 500
+//     },
+//     {
+//       url: HelveticaBoldTtf,
+//       fontWeight: 700
+//     },
+
+//     {
+//       url: HelveticaUltraLightEot,
+//       fontWeight: 100
+//     },
+//     {
+//       url: HelveticaNormalEot,
+//       fontWeight: 400
+//     },
+//     {
+//       url: HelveticaMediumEot,
+//       fontWeight: 500
+//     },
+//     {
+//       url: HelveticaBoldEot,
+//       fontWeight: 700
+//     }
+//   ]
+// }
 
 export const FONT_FAMILY = {
   helveticaNeue: {
     isDefault: true,
-    value: ['"HelveticaNeue"'],
+    value: ['"Helvetica Neue"'],
     type: 'serif'
   }
 }
@@ -95,6 +113,7 @@ export const COLORS = {
   backgroundBlue2: 'rgba(233, 250, 255, 1)',
   gray: '#454B4E',
   grey: '#5A5D5E',
+  brown: 'rgba(65, 31, 5, 1)',
 
   greenNew: '#02A169',
   blueNew: '#00A294',
@@ -121,16 +140,43 @@ export const GRADIENTS = {
 }
 
 export const MEDIA = {
-  screenL: '(max-width: 1920px)',
-  screenD: '(max-width: 1680px)',
-  screenS: '(max-width: 1440px)',
-  tabletL: '(max-width: 1366px)',
-  tabletM: '(max-width: 1280px)',
-  tabletS: '(max-width: 1024px)',
-  mobileL: '(max-width: 768px)',
-  mobileM: '(max-width: 560px)',
-  mobileS: '(max-width: 480px)',
-  mobileXS: '(max-width: 350px)',
+  // min - max width
+  minScreenL: '(min-width: 1921px)',
+  minScreenD: '(min-width: 1681px)',
+  minScreenS: '(min-width: 1441px)',
+  minTabletL: '(min-width: 1367px)',
+  minTabletM: '(min-width: 1281px)',
+  minTabletS: '(min-width: 1025px)',
+  minMobileL: '(min-width: 769px)',
+  minMobileM: '(min-width: 561px)',
+  minMobileS: '(min-width: 481px)',
+  minMobileXS: '(min-width: 351px)',
+
+  maxScreenL: '(max-width: 1920px)',
+  maxScreenD: '(max-width: 1680px)',
+  maxScreenS: '(max-width: 1440px)',
+  maxTabletL: '(max-width: 1366px)',
+  maxTabletM: '(max-width: 1280px)',
+  maxTabletS: '(max-width: 1024px)',
+  maxMobileL: '(max-width: 768px)',
+  maxMobileM: '(max-width: 560px)',
+  maxMobileS: '(max-width: 480px)',
+  maxMobileXS: '(max-width: 350px)',
+
+
+  // min - max height
+  minHeightL: '(min-height: 1367px)',
+  minHeightM: '(min-height: 1025px)',
+  minHeightN: '(min-height: 769px)',
+  minHeightS: '(min-height: 561px)',
+  minHeightXS: '(min-height: 481px)',
+
+  maxHeightL: '(max-height: 1366px)',
+  maxHeightM: '(max-height: 1024px)',
+  maxHeightN: '(max-height: 768px)',
+  maxHeightS: '(max-height: 560px)',
+  maxHeightXS: '(max-height: 480px)',
+
 
   light: '(prefers-color-scheme: light)'
 }
