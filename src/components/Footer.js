@@ -4,15 +4,15 @@ import { Img, Link, Flex } from 'smbls'
 
 import { opacity } from '../animations'
 
-import FACEBOOK_PNG from '../assets/icons/facebook-white.png'
-import INSTAGRAM_PNG from '../assets/icons/instagram-white.png'
+import FACEBOOK_PNG from '../assets/icons/social-facebook.png'
+import INSTAGRAM_PNG from '../assets/icons/social-instagram.png'
 
 import { Book } from './Book'
 
 const props = {
   width: '90%',
   position: 'fixed',
-  bottom: 'A2',
+  bottom: 'A',
   flexAlign: 'center space-between',
   alignSelf: 'center',
   zIndex: '50',
@@ -32,7 +32,7 @@ const props = {
       target: '_blank',
       opacity: '.85',
       '&:hover': { opacity: '1' },
-      icon: { boxSize: 'B -' }
+      icon: { boxSize: 'A2 -' }
     }
   }
 }

@@ -3,16 +3,14 @@ import { Flex } from 'smbls'
 
 const props = {
   flow: 'column',
-  gap: 'A',
   color: 'black',
   style: { zIndex: '2' },
 
   title: {
     fontWeight: '700',
-    fontSize: 'E',
     textTransform: 'capitalize',
-    letterSpacing: '-2px',
-    margin: '0'
+    margin: '0',
+    letterSpacing: '-1.5px'
   },
 
   p: {

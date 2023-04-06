@@ -4,9 +4,8 @@ import { Button, Flex, Img, Link } from 'smbls'
 
 import { opacity } from '../animations'
 
-import { LogoWhite } from './Logo'
-
-import BACK_PNG from '../assets/icons/arrowBack-white.png'
+import LOGO_PNG from '../assets/icons/logo.png'
+import BACK_PNG from '../assets/icons/arrow-left-dots.png'
 import CLOSE_PNG from '../assets/icons/close.png'
 
 const back = {
@@ -17,14 +16,16 @@ const back = {
   },
   icon: {
     extend: Img,
-    props: { src: BACK_PNG }
+    props: {
+      src: BACK_PNG
+    }
   }
 }
 
 const logo = {
   extend: Link,
   attr: { href: '#banner' },
-  image: { extend: LogoWhite }
+  image: { extend: Img, props: { src: LOGO_PNG } }
 }
 
 const menu = {
@@ -44,19 +45,14 @@ const menu = {
 const props = {
   position: 'fixed',
   minWidth: '90%',
-  height: 'D',
+  height: 'C2',
   align: 'flex-end space-between',
   gap: '0',
   alignSelf: 'center',
   zIndex: '50',
   border: 'solid, white .55',
   borderWidth: '0 0 .3px 0',
-  padding: '- V',
   boxSizing: 'border-box',
-  // '@mobileS': { height: 'C2' },
-  '@mobileXS': {
-
-  },
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
@@ -74,16 +70,17 @@ const props = {
       boxSizing: 'border-box',
       margin: '- - Y1 -',
       ':hover': { opacity: '1' },
-      icon: { boxSize: ' A2' }
+      icon: { boxSize: ' B' }
     },
 
     logo: {
       align: 'center center',
-      opacity: '.85',
+      opacity: '1',
       alignSelf: 'center',
       margin: '- - Y2 -',
+      zIndex: '10',
       ':hover': { opacity: '1' },
-      image: { boxSize: `${30 / 16}em ` }
+      image: { boxSize: `${28 / 16}em ` }
     },
 
     menu: {
@@ -95,8 +92,8 @@ const props = {
       border: 'none',
       textTransform: 'uppercase',
       fontWeight: '400',
-      fontSize: `${12 / 16}em`,
-      letterSpacing: `${3 / 12}em`,
+      fontSize: `${11 / 16}em`,
+      letterSpacing: `${3 / 11}em`,
       position: 'relative',
       transition: 'opacity .15s ease-in-out',
       overflow: 'hidden',

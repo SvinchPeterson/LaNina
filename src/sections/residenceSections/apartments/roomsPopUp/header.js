@@ -2,7 +2,7 @@
 
 import { Img } from 'smbls'
 
-import { header } from "../../../travelSections/tours/toursContainer./header"
+import { header } from "../../../travelSections/tours/toursPopUp/header"
 
 import DRESS_PNG from '../../../../assets/icons/dress.png'
 import BRICKS_PNG from '../../../../assets/icons/bricks.png'

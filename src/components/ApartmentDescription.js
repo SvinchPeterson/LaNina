@@ -16,7 +16,7 @@ const iconCaption = {
       margin: '0 0 0 0'
     },
     caption: {
-      color: 'cream2 .65',
+      color: 'cream .65',
       fontSize: `Z`,
       padding: '0 0 0 0',
       flexFlow: 'column',

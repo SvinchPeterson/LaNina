@@ -62,30 +62,29 @@ const items = {
 }
 
 const props = {
-  margin: 'G1 - - -',
   padding: 'E2 - - -',
   flow: 'column',
   justifyContent: 'center',
   position: 'relative',
   boxSizing: 'content-box',
-  '@mobileL': { margin: 'D - - -' },
-  '@mobileS': {margin: 'C - - -', padding: 'E1 - - -',},
+  // '@mobileL': { margin: 'D - - -' },
+  // '@mobileS': {margin: 'C - - -', padding: 'E1 - - -',},
 
-  title: {
+  header: {
     padding: '- - A D2',
     align: 'center space-between',
-    '@mobileL': { padding: '- B2 A B2' },
-    '@mobileS': { align: 'center center', padding: '0 0 A 0' },
-    h3: {
-      fontSize: 'Z',
+    // '@mobileL': { padding: '- B2 A B2' },
+    // '@mobileS': { align: 'center center', padding: '0 0 A 0' },
+    title: {
+      fontSize: `${12 / 16}em`,
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: `${5 / 13}em`
+      letterSpacing: `${5 / 12}em`
     },
     scroll: {
       display: 'none',
-      '@mobileL': { display: 'flex'},
-      '@mobileS': {display: 'none'}
+      // '@mobileL': { display: 'flex'},
+      // '@mobileS': {display: 'none'}
     }
   },
 
@@ -94,8 +93,8 @@ const props = {
     backgroundImage: 'url(' + SHELF_JPG + ')',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    '@minTabletM': {style: {backgroundAttachment: 'fixed'}},
     style: {
-      '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed'},
       backgroundRepeat: 'no-repeat',
       boxShadow: 'inset 0px 0px 2px .2px rgba(0, 0, 0, .7)'
     },
@@ -103,10 +102,10 @@ const props = {
       content: '""',
       position: 'absolute',
       boxSize: '100% 100%',
-      background: 'black .25',
+      background: 'naviGreenLight .55',
       zIndex: '2'
     },
-    '@mobileL': {overflow: 'hidden'},
+    // '@mobileL': {overflow: 'hidden'},
 
     items: {
       width: 'fit-content',
@@ -116,22 +115,22 @@ const props = {
       padding: 'E -',
       position: 'relative',
       margin: 'auto',
-      '@tabletM': { columns: 'repeat(3, 1fr)',},
-      '@tabletS': { columns: 'repeat(2, 1fr)'},
-      '@mobileL': {
-        display: 'flex',
-        maxWidth: '100%',
-        padding: 'E D',
-        style: { overflowY: 'auto' }
-      },
-      '@mobileS': {padding: 'D C1'},
-      '@mobileXS': {padding: 'D B2'},
+      // '@tabletM': { columns: 'repeat(3, 1fr)',},
+      // '@tabletS': { columns: 'repeat(2, 1fr)'},
+      // '@mobileL': {
+      //   display: 'flex',
+      //   maxWidth: '100%',
+      //   padding: 'E D',
+      //   style: { overflowY: 'auto' }
+      // },
+      // '@mobileS': {padding: 'D C1'},
+      // '@mobileXS': {padding: 'D B2'},
       style: {
         backgroundAttachment: 'fixed',
         '> div': { zIndex: '2' }
       },
       childProps: {
-       '@mobileL': {minWidth: 'F3'},
+      //  '@mobileL': {minWidth: 'F3'},
         style: { boxShadow: '0px 0px 2px .2px rgba(0, 0, 0, .7)' }
       }
     }
@@ -141,7 +140,7 @@ const props = {
     alignSelf: 'center',
     padding: 'A - - -',
     display: 'none',
-    '@mobileS': {display: 'flex'}
+    // '@mobileS': {display: 'flex'}
   }
 }
 
@@ -151,9 +150,9 @@ export const servicesFacilities = {
   props,
   attr: { id: 'service&facilities' },
 
-  title: {
+  header: {
     extend: Flex,
-    h3: { text: 'Services & Facilities' },
+    title: { tag: 'h5', text: 'Services & Facilities' },
     scroll: {extend: ScrollTitle}
   },
   content: { items },

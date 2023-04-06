@@ -2,8 +2,8 @@
 
 import { Flex, Img } from 'smbls'
 
-import LEFT_ARROW_PNG from '../assets/icons/left-arrows.png'
-import RIGHT_ARROW_PNG from '../assets/icons/right-arrows.png'
+import LEFT_ARROW_PNG from '../assets/icons/arrowsDouble-left.png'
+import RIGHT_ARROW_PNG from '../assets/icons/arrowsDouble-right.png'
 
 const props = {
   align: 'center center',

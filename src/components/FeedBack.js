@@ -4,35 +4,40 @@ import { Paragraph } from './Paragraph'
 
 const props = {
   minWidth: `${464 / 16}em`,
-  minHeight: 'G !important',
-  maxHeight: 'G1',
+  minHeight: 'F3',
   gap: '0',
-  border: 'solid, cream2 0',
+  border: 'solid, cream 0',
   borderWidth: `${12 / 16}em`,
 
   content: {
     boxSize: '100% 100%',
     justifyContent: 'flex-start',
-    padding: 'A B',
+    padding: 'Z1 A2',
     border: 'solid, black .5',
     borderWidth: '.7px',
-    round: 'B',
+    round: 'A2',
 
-    title: { fontSize: 'D' },
-    p: {
-      fontSize: `${15.5 / 16}em`,
-      margin: 'A - - Y',
-      letterSpacing: `${0.25 / 15.5}em`,
-      color: 'black .65',
-      lineHeight: `${23 / 15.5}em`
+    title: {
+      fontSize: 'C',
+      letterSpacing: `${-1 / 16}em`
     },
+
+    p: {
+      fontSize: `${14.5 / 16}em`,
+      margin: 'Z - - Y',
+      letterSpacing: `${0.25 / 14.5}em`,
+      color: 'black .65',
+      lineHeight: `${21 / 14.5}em`
+    },
+
     date: {
       margin: 'auto - - -',
       alignSelf: 'flex-end',
-      fontSize: 'Z',
-      fontWeight: 'bold',
+      fontSize: `${11.5 / 16}em`,
+      fontWeight: '700',
       textTransform: 'uppercase',
-      style: { wordSpacing: `${5 / 13}em` }
+      letterSpacing: `${1 / 11.5}em`,
+      opacity: '.85'
     }
   }
 }

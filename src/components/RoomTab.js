@@ -3,7 +3,7 @@
 import { Link, Img, Flex } from 'smbls'
 
 export const props = {
-  height: 'G1',
+  height: 'G',
   position: 'relative',
   overflow: 'hidden',
   flow: 'column',
@@ -13,9 +13,9 @@ export const props = {
   flex: 1,
   cursor: 'pointer',
   boxSizing: 'border-box',
-  color: 'cream2',
+  color: 'cream',
   style: {
-    transition: 'flex .6s linear'
+    transition: 'flex 1s ease'
   },
   ':hover': { flex: '7' },
   ':hover > p': {
@@ -27,7 +27,7 @@ export const props = {
       '@media only screen and (min-width: 1281px)': {
         opacity: '1',
         letterSpacing: '-2px',
-        transition: 'opacity .55s ease-in-out, letter-spacing .55s ease-in-out, transform .55s ease-in-out',
+        transition: 'opacity .8s ease-in-out, letter-spacing .85s ease-in-out, transform .85s ease-in-out',
         transform: 'scale(1)'
       }
     }
@@ -35,7 +35,6 @@ export const props = {
 
   imageContainer: {
     boxSize: '100% 100%',
-
     position: 'absolute',
     overflow: 'hidden',
     zIndex: '1',
@@ -43,7 +42,6 @@ export const props = {
     left: '0',
     round: 'F',
     style: {
-
       backgroundRepeat: 'no-repeat',
       boxShadow: 'inset 0px 0px .5px 0.5px rgba(0, 0, 0, .5)'
     },
@@ -58,20 +56,20 @@ export const props = {
 
   icon: {
     zIndex: '2',
-    boxSize: 'B B'
+    boxSize: 'A2 A2'
   },
   p: {
+    fontSize: `${15 / 16}em`,
     zIndex: '2',
     textAlign: 'center',
     width: 'G',
     fontWeight: '400',
     opacity: '0',
-    fontSize: 'B',
     letterSpacing: '.3px'
   },
   title: {
     zIndex: '2',
-    fontSize: 'F',
+    fontSize: 'E',
     textTransform: 'capitalize',
     whiteSpace: 'nowrap',
     opacity: '0',

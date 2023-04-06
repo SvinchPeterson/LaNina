@@ -4,7 +4,6 @@ import { Flex } from 'smbls'
 
 import { roomOpacityTransform } from '../animations'
 
-import { Back } from './Back'
 import { GalleryContainer } from './GalleryContainer'
 import { RoomDescription } from './RoomDescription'
 import { Amenities } from './Amenities'
@@ -36,7 +35,7 @@ const props = {
     flexFlow: 'column',
     gap: 'B',
     description: {
-      border: 'solid, cream2 .5',
+      border: 'solid, cream .5',
       borderWidth: '0 0 1px 0',
       padding: '- - Z1 -'
     }

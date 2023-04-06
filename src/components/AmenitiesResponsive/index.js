@@ -20,9 +20,9 @@ const header = {
   h5: {
     props: {
       text: 'amenities',
-      color: 'cream2 .75',
+      color: 'cream .75',
       fontSize: 'Z',
-      '@tabletL': { color: 'cream2' }
+      '@tabletL': { color: 'cream' }
     },
     style: {
       letterSpacing: '1px',
@@ -49,7 +49,7 @@ const header = {
     span: {
       props: {
         boxSize: 'V1 B',
-        background: 'cream2',
+        background: 'cream',
         round: 'Z'
       }
     },

@@ -44,7 +44,7 @@ export const popUpGallery = {
     }
   },
 
-  content: {
+  contentContainer: {
     extend: Flex,
     navBar,
     galleries: { extend: galleries }

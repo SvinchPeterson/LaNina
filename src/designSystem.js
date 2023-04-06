@@ -29,7 +29,7 @@ export const FONT_FAMILY = {
 export const COLORS = {
   black: 'rgba(0, 0, 0, 1)',
   white: 'rgba(245, 245, 245, 1)',
-  cream2: 'rgba(248, 241, 227, 1)',
+  cream: 'rgba(255, 249, 237, 1)',
   orange3: 'rgba(255, 206, 168, 1)',
   backgroundBlue2: 'rgba(233, 250, 255, 1)',
 

@@ -27,7 +27,7 @@ const props = {
             border: 'none',
             places: {
               padding: 'A1 - - -',
-              border: 'solid, cream2 .5',
+              border: 'solid, cream .5',
               borderWidth: '.5px 0px 0px 0px'
             }
           }

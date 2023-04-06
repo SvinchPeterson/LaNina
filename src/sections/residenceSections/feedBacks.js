@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { slideHide2 } from '../../animations'
 
-import { FeedBack, HorArrowsBlack } from '../../components'
+import { FeedBack, NavArrowsBlack } from '../../components'
 
 function sideScroll (element, direction, speed, distance, step) {
   var scrollAmount = 0
@@ -22,7 +22,7 @@ function sideScroll (element, direction, speed, distance, step) {
 }
 
 const navArrows = {
-  extend: HorArrowsBlack,
+  extend: NavArrowsBlack,
   ...[
     {
       on: {
@@ -45,14 +45,6 @@ const navArrows = {
   ]
 }
 
-const heading = {
-  title: {
-    tag: 'caption',
-    text: 'Feedbacks'
-  },
-
-  navArrows
-}
 
 const feedbacks = {
   extend: Flex,
@@ -245,11 +237,13 @@ const feedbacks = {
 
 const props = {
   width: '93%',
-  minHeight: `${350 / 16}em`,
+  minHeight: `${300 / 16}em`,
   flow: 'column',
   gap: 'Z1',
   alignSelf: 'center',
   position: 'relative',
+  margin: '- - G -',
+  // margin: '- - D -',
   style: {
     overflowX: 'hidden', '::-webkit-scrollbar': { display: 'none' }
   },
@@ -260,10 +254,10 @@ const props = {
     position: 'absolute',
     left: '0',
     top: '0',
-    background: 'linear-gradient(to right, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
-    zIndex: 3,
-    '@tabletS': { width: `${250 / 16}em` },
-    '@MobileL': { width: `${100 / 16}em` }
+    background: 'linear-gradient(to right, rgba(255, 249, 237, 1) 0%,rgba(255, 249, 237, 0) 100%)',
+    zIndex: 3
+    // '@tabletS': { width: `${250 / 16}em` },
+    // '@MobileL': { width: `${100 / 16}em` }
   },
   ':after': {
     content: '""',
@@ -272,31 +266,29 @@ const props = {
     position: 'absolute',
     right: '0',
     top: '0',
-    background: 'linear-gradient(to left, rgba(248, 241, 227, 1) 0%,rgba(248, 241, 227, 0) 100%)',
+    background: 'linear-gradient(to left, rgba(255, 249, 237, 1) 0%,rgba(255, 249, 237, 0) 100%)',
     zIndex: 3,
-    '@mobileL': { width: `${100 / 16}em` }
+    // '@mobileL': { width: `${100 / 16}em` }
   },
 
-  heading: {
-    flexAlign: 'center space-between',
+  header: {
+    flexAlign: 'flex-end space-between',
     width: '85%',
     margin: '0 auto',
     zIndex: '10',
     padding: '- - Z -',
     style: { borderBottom: '.5px solid rgba(0, 0, 0, .5)' },
-    '@mobileL': {width: '95%'},
+    // '@mobileL': {width: '95%'},
     title: {
-      fontWeight: '700',
-      style: {
-        whiteSpace: 'nowrap',
-        letterSpacing: '5px',
-        zIndex: '100',
-        opacity: '.85'
-      }
+      fontWeight: '400',
+      fontSize: `${14 / 16}em`,
+      whiteSpace: 'nowrap',
+      letterSpacing: `${3.5 / 14}em`,
+      zIndex: '10'
     },
+
     navArrows: {
-      gap: 'C1',
-      childProps: { arrow: { boxSize: ' Z1' } }
+      childProps: {boxSize: 'C C'}
     }
   },
 
@@ -319,12 +311,12 @@ const props = {
       },
 
       childProps: {
-        '@mobileL': {
-          fontSize: `${14 / 16}em`,
-          minHeight: 'F3 !important',
-          maxHeight: 'G1',
-          minWidth: `${350 / 14}em`,
-        }
+        // '@mobileL': {
+        //   fontSize: `${14 / 16}em`,
+        //   minHeight: 'F3 !important',
+        //   maxHeight: 'G1',
+        //   minWidth: `${350 / 14}em`,
+        // }
       }
     }
   }
@@ -335,7 +327,11 @@ export const feedBacks = {
   extend: Flex,
   props,
 
-  heading: { extend: heading },
+  header: {
+    title: { tag: 'h5', text: 'Feedbacks' },
+    navArrows
+  },
+
   content: {
     attr: { id: 'feedbacks' },
     feedbacks

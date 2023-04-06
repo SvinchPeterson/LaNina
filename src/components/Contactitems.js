@@ -8,9 +8,9 @@ const props = {
   gap: 'B',
   position: 'relative',
   childProps: {
-    fontSize: `${13.5 / 16}em`,
+    fontSize: `${12.5 / 16}em`,
     fontWeight: '400',
-    letterSpacing: `${1 / 13.5}em`,
+    letterSpacing: `${1 / 12.5}em`,
     color: 'black',
     ':first-child': {
       position: 'relative',
@@ -25,7 +25,6 @@ const props = {
         background: 'black 1'
       }
     }
-
   }
 }
 

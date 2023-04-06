@@ -2,7 +2,7 @@
 
 import { Flex, Link, Button, Img } from 'smbls'
 
-import { TourGallery } from './TourGallery'
+import { GalleryContainer } from './GalleryContainer'
 import { TourPackage } from './TourPackage'
 
 import { TravelParagraph } from './TravelParagraph'
@@ -43,7 +43,7 @@ const props = {
       maxWidth: 'H',
       fontSize: `${15.5 / 16}em`,
       letterSpacing: '.1px',
-      color: 'cream2 .65',
+      color: 'cream .65',
       style: { span: { color: 'rgba(248, 241, 227, 1)' } }
     },
     package: {
@@ -53,14 +53,14 @@ const props = {
       content: { style: { overflowY: 'auto' } }
     },
     more: {
-      color: 'cream2 .85',
+      color: 'cream .85',
       cursor: 'pointer',
-      border: 'solid, cream2 .5',
+      border: 'solid, cream .5',
       borderWidth: '.5px 0 0 0',
       margin: 'Z - - -',
       padding: 'Y - - -',
       width: '70%',
-      ':hover': { color: 'cream2' }
+      ':hover': { color: 'cream' }
     }
   }
 }
@@ -68,7 +68,7 @@ export const Tour = {
   extend: Flex,
   props,
 
-  gallery: { extend: TourGallery },
+  gallery: { extend: GalleryContainer },
 
   article: {
     extend: Flex,

@@ -8,7 +8,7 @@ const props = {
   width: '90%',
   zIndex: '200',
   position: 'fixed',
-  top: `${68 / 16}em`,
+  top: `C1`,
   alignSelf: 'center',
   transition: 'height 1s ease',
   overflow: 'hidden',
@@ -24,10 +24,10 @@ const props = {
     childProps: {
       textAlign: 'center',
       color: 'white',
-      fontSize: `${11.5 / 16}em`,
+      fontSize: `${11 / 16}em`,
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: `${2 / 12}em`,
+      letterSpacing: `${3 / 12}em`,
       whiteSpace: 'nowrap',
       transition: 'opacity .8s ease'
     }
@@ -43,12 +43,13 @@ export const Menu = {
 
 const mobileMenuProps = {
   position: 'fixed',
-  top: `D`,
+  top: `C2`,
   width: '80%',
   alignSelf: 'center',
   zIndex: '52',
   align: 'center center',
   round: '0 0 G1 G1',
+
   // '@mobileS': { top: 'C2' },
   style: {
     backdropFilter: 'blur(1px)',
@@ -63,17 +64,15 @@ const mobileMenuProps = {
     childProps: {
       textTransform: 'uppercase',
       fontWeight: '400',
-      color: 'cream2',
+      color: 'cream',
       letterSpacing: `${5 / 15}em`,
-      minWidth: '80%',
+      minWidth: '100%',
       align: 'flex-end center',
       padding: '- - X2 -',
       width: 'fit-content',
       textAlign: 'center',
-      border: 'solid, cream2 .5',
-      borderWidth: '0 0 .5px 0',
-      '@mobileS': { fontSize: `Z` },
-      '@mobileXS': { fontSize: `${12.5 / 16}em` }
+      fontSize: 'Z',
+      'maxMobileXS': { fontSize: `${12.5 / 16}em` }
     }
   }
 

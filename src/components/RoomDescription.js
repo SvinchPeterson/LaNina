@@ -4,14 +4,14 @@ import { Paragraph } from './Paragraph'
 
 const props = {
   maxWidth: 'H',
-  color: 'cream2',
+  color: 'cream',
   title: {
     fontSize: 'F',
-    border: 'solid, cream2 .5',
+    border: 'solid, cream .5',
     borderWidth: '0 0 1px 0',
     display: 'none'
   },
-  p: { color: 'cream2 .75' }
+  p: { color: 'cream .75' }
 }
 
 export const RoomDescription = {

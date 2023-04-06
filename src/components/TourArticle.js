@@ -34,13 +34,13 @@ const props = {
     paragraphs: {
       flow: 'column',
       gap: 'A',
-      border: 'solid, cream2 .55',
+      border: 'solid, cream .55',
       borderWidth: '0 0 .75px 0',
       padding: '- - Z -',
       childProps: {
         fontSize: `1em`,
         maxWidth: `${450 / 16}em`,
-        color: 'cream2 .65',
+        color: 'cream .65',
         fontWeight: '400',
         letterSpacing: `${0.38 / 16}em`,
         style: { span: { fontWeight: '700', color: 'rgba(248, 241, 227, 1)' } }
@@ -50,7 +50,7 @@ const props = {
     tourPlaces: {
       flow: 'column',
       gap: 'Y2',
-      color: 'cream2',
+      color: 'cream',
       padding: 'A - - -',
 
       title: {
@@ -67,13 +67,13 @@ const props = {
         childProps: {
           align: 'center flex-start',
           fontSize: `${15 / 16}em`,
-          color: 'cream2 .85',
+          color: 'cream .85',
           letterSpacing: `${0.5 / 16}em`,
           gap: 'Y2',
           ':before': {
             content: '""',
             boxSize: 'V1 V1',
-            background: 'cream2',
+            background: 'cream',
             borderRadius: '100%'
           }
         }

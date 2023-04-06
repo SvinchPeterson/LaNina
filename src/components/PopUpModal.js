@@ -3,7 +3,7 @@
 import { Img, Flex, Button } from 'smbls'
 
 import CLOSE_PNG from '../assets/icons/close.png'
-import LOGO_PNG from '../assets/icons/logoCream.png'
+import LOGO_PNG from '../assets/icons/logo.png'
 
 const props = {
   position: 'fixed',
@@ -47,7 +47,9 @@ export const PopUpModal = {
       props: { src: CLOSE_PNG }
     }
   },
-  content: {},
+
+  contentContainer: {},
+
   logo: {
     extend: Img,
     props: { src: LOGO_PNG }

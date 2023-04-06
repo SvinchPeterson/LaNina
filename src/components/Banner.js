@@ -8,7 +8,6 @@ const props = {
   position: 'relative',
   padding: '0 0 0 0',
   top: '0',
-  align: 'center center',
   overflow: 'hidden',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
@@ -23,21 +22,18 @@ const props = {
   style: {
     backgroundRepeat: 'no-repeat',
     animationDuration: '4s',
-    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
-    '@media only screen and (min-width: 1280px)': {
-      backgroundAttachment: 'fixed !important'
-    }
+    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
   },
+  '@minTabletM': { style:{ backgroundAttachment: 'fixed !important' }},
 
   title: {
-    color: 'cream2',
+    color: 'cream',
     zIndex: '5',
     flow: 'column',
     align: 'center flex-start',
     h1: {
       fontSize: 'G',
-      textTransform: 'capitalize',
-      letterSpacing: `-4px`
+      textTransform: 'capitalize'
     },
     h5: {
       fontWeight: '400',

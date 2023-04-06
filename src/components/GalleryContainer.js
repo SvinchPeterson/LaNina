@@ -6,29 +6,53 @@ import { Gallery } from './Gallery'
 
 import { Book } from './Book'
 
-import { NavArrows } from './NavigationArrows'
+import { NavArrowsCream } from './NavigationArrows'
 
 const props = {
-  position: 'relative',
   flow: 'column',
-  boxSize: 'fit-content fit-content',
-  book: {
-    border: 'none',
-    padding: '0',
-    fontSize: 'B',
-    position: 'absolute',
-    top: '-B',
-    left: 'A',
-    transoform: 'translate(-50%, -50%)',
-    // style: {
-    //   writingMode: 'vertical-rl',
-    //   textOrientation: 'upright'
-    // }
+
+  title: {
+    fontSize: `Z`,
+    fontWeight: '400',
+    textTransform: 'uppercase',
+    color: 'cream',
+    letterSpacing: `${4 / 13}em`,
+    padding: '- A Y2 A'
   },
 
-  navArrows: {
-    alignSelf: '',
-    margin: 'A1 - - A'
+  gallery: {
+    width: 'H1',
+    height: 'G1',
+    position: 'relative',
+    overflow: 'hidden',
+    ':before': {
+      content: '""',
+      position: 'absolute',
+      boxSize: '100% H2',
+      zIndex: '3'
+    }
+  },
+
+  footer: {
+    border: 'solid, cream .25',
+    borderWidth: '.6px 0 0 0',
+    align: 'center space-between',
+    width: '65%',
+    margin: 'A - - -',
+    padding: 'Z - - -',
+    book: {
+      fontSize: 'Z',
+      padding: 'Z2 B2',
+      background: 'transparent',
+      border: 'solid, cream .35',
+      borderWidth: '.75px',
+      color: 'cream',
+      textTransform: 'uppercase',
+      fontWeight: '700',
+      opacity: '.85',
+      transition: 'opacity .25s ease-in-out',
+      ':hover': { opacity: '1' }
+    }
   }
 }
 
@@ -36,7 +60,11 @@ export const GalleryContainer = {
   props,
   extend: Flex,
 
-  book: { extend: Book },
+  title: { tag: 'h5' },
   gallery: { extend: Gallery },
-  navArrows: { extend: NavArrows }
+  footer: {
+    extend: Flex,
+    book: { extend: Book },
+    navArrows: { extend: NavArrowsCream }
+  }
 }

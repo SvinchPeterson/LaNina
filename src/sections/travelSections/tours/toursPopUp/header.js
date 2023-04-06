@@ -6,8 +6,8 @@ import { Navbar } from '../../../../components'
 const props = {
   boxSize: 'D2 100%',
   align: 'flex-end space-between',
-  color: 'cream2',
-  border: 'solid, cream2 .5',
+  color: 'cream',
+  border: 'solid, cream .5',
   borderWidth: '0 0 .5px 0',
   padding: '- V2',
   transition: 'opacity .5s ease-in-out',
@@ -39,7 +39,7 @@ const props = {
       textTransform: 'uppercase',
       padding: '0',
       background: 'transparent',
-      color: 'cream2',
+      color: 'cream',
       letterSpacing: `${2 / 10.5}em`,
       transition: 'opacity .2s ease-in-out',
       ':hover': { opacity: '1' }

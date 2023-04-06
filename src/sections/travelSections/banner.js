@@ -9,6 +9,7 @@ import LAKE_MOBILE_JPG from '../../assets/images/travel/lake-mobile.jpg'
 import { travelBannerH5, positionOpacity, bannerH1, bannerBackground2 } from '../../animations'
 
 const props = {
+  align: 'center center',
   backgroundImage: 'url(' + LAKE_JPG + ')',
   background: 'radial-gradient(rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))',
   '@tabletM': { backgroundImage: 'url(' + LAKE_TABLET_JPG + ')' },

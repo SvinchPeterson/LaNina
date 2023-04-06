@@ -43,7 +43,7 @@ const props = {
 
     title: {
       position: 'absolute',
-      color: 'cream2',
+      color: 'cream',
       fontSize: 'H',
       fontWeight: '100',
       textTransform: 'capitalize',

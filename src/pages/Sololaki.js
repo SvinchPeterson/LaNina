@@ -6,7 +6,7 @@ import { Menu, MenuMobile, Header, Footer } from '../components'
 
 import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location } from '../sections/residenceSections'
 
-import { roomsContainer } from '../sections/residenceSections/apartments/roomsContainer'
+import { roomsPopUp } from '../sections/residenceSections/apartments/roomsPopUp'
 
 import { properties } from './props'
 
@@ -135,7 +135,7 @@ export const Sololaki = {
   servicesFacilities,
   mission,
   apartments,
-  roomsContainer,
+  roomsPopUp,
   wine,
   feedBacks,
   location,

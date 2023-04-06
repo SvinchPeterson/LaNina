@@ -13,39 +13,37 @@ const props = {
   gap: 'A',
   align: 'center center',
   position: 'relative',
-  // padding: 'E2 - - -',
-  margin: 'F - - -',
+  margin: 'D2 - - -',
   overflow: 'visible',
   style: {
     paddingTop: `${150 / 16}em`,
-    '@media only screen and (max-height: 800px)': {
-      minHeight: '100%',
-      paddingTop: `0`,
-    }
+    // '@media only screen and (max-height: 800px)': {
+    //   minHeight: '100%',
+    //   paddingTop: `0`,
+    // }
   },
 
   header: {
     alignSelf: 'center',
-    fontSize: 'Z',
     width: '100%',
-    padding: '- D',
-    '@mobileM': {padding: '- B'},
+    padding: '- D2',
+    // '@mobileM': {padding: '- B'},
     align: 'center space-between',
-    style: {
-      '@media only screen and (max-height: 800px)': {
-        position: 'absolute',
-        top: '-30px'
-      }
-    },
-    h3: {
-      fontSize: 'A',
+    // style: {
+    //   '@media only screen and (max-height: 800px)': {
+    //     position: 'absolute',
+    //     top: '-30px'
+    //   }
+    // },
+    title: {
+      fontSize: `${12 / 16}em`,
+      letterSpacing: `${10 / 12}em`,
       textTransform: 'uppercase',
-      letterSpacing: `${10 / 16}em`,
-      fontWeight: '700'
+      fontWeight: '400'
     },
     scroll: {
       display: 'none',
-      '@tabletM': { display: 'flex' }
+      // '@tabletM': { display: 'flex' }
     }
   }
 }
@@ -63,7 +61,7 @@ export const apartments = {
 
   header: {
     extend: Flex,
-    h3: { text: 'apartments' },
+    title: { tag: 'h5', text: 'apartments' },
     scroll: { extend: ScrollTitle }
   },
   tabs

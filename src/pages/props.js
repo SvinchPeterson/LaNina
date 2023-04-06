@@ -4,7 +4,7 @@ import { deopacity } from '../animations'
 
 export const properties = {
   position: 'relative',
-  background: 'cream2',
+  background: 'cream',
   flow: 'column',
   width: '100%',
   height: '100%',

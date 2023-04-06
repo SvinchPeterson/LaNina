@@ -39,7 +39,7 @@ const props = {
     text: 'amenities',
     fontSize: 'Z',
     fontWeight: '700',
-    color: 'cream2',
+    color: 'cream',
     textAlign: 'flex-start',
     letterSpacing: '5px',
     padding: '- - Y1 Y',
@@ -57,13 +57,13 @@ const props = {
       letterSpacing: '.3px',
       childProps: {
         align: 'center flex-start',
-        color: 'cream2 .75',
+        color: 'cream .75',
         gap: 'Y2',
         ':before': {
           content: '""',
           boxSize: 'X X',
           display: 'block',
-          background: 'cream2 .5',
+          background: 'cream .5',
           round: '100%'
         }
       }

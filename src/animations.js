@@ -14,16 +14,6 @@ export const deopacity = keyframes`
 
 // landing animations
 
-export const navBarTransform = keyframes`
-from {
-  transform: translateY(30px) scale(.98);
-  opacity: 0;
-}
-to {
-  transform: translateY(0px) scale(1);
-  opacity: 1;
-}
-`
 export const navBarItemTransform = keyframes`
 from {
   transform: translateY(50px);
@@ -115,7 +105,7 @@ export const bannerTitle = keyframes`
 
 export const bannerh1 = keyframes`
   from { letter-spacing: 0; }
-  to { letter-spacing: -4px; }
+  to { letter-spacing: -2.5px; }
 `
 
 export const roomOpacityTransform = keyframes`

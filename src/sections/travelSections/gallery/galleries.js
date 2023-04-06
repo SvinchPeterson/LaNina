@@ -1,6 +1,6 @@
 'use strict'
 
-import { GalleryContainer, HorArrowsCreamBor } from '../../../components'
+import { GalleryContainer, NavArrowsCream } from '../../../components'
 
 import { galleryTbilisi, galleryBorjomi, galleryMtsketa, galleryKakheti, galleryMartvili, galleryKutaisi, galleryGori, galleryKazbegi } from '../../../galleries/travelGalleries'
 
@@ -46,7 +46,7 @@ const galleryContainer = {
   extend: GalleryContainer,
   book: null,
   gallery: {},
-  navArrows: { extend: HorArrowsCreamBor }
+  navArrows: { extend: NavArrowsCream }
 }
 
 export const galleries = {

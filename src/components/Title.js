@@ -17,7 +17,7 @@ export const TitleCaption = {
     title: { text: 'BB Residence' },
     caption: {
       text: 'sololaki',
-      color: 'cream2 1',
+      color: 'cream 1',
       fontWeight: '700',
       fontSize: 'A',
       style: {

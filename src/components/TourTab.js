@@ -12,7 +12,7 @@ const props = {
     flow: 'column',
     align: 'center space-between',
     boxSize: '100% 100%',
-    border: 'solid, cream2 .15',
+    border: 'solid, cream .15',
     borderWidth: `0 ${0.25 / 16}em ${0.25 / 16}em ${0.25 / 16}em`,
     round: 'B B F F',
     padding: 'B - C -',
@@ -26,7 +26,7 @@ const props = {
 
     title: {
       textTransform: 'capitalize',
-      color: 'cream2',
+      color: 'cream',
       fontSize: `${32 / 16}em`,
       fontWeight: '100',
       transition: 'color 1s ease, transform 1s ease'

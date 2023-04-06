@@ -15,7 +15,7 @@ export const tourPlaces = {
 }
 
 const props = {
-  color: 'cream2',
+  color: 'cream',
   maxWidth: 'H',
   flow: 'column',
   maxHeight: `I`,
@@ -51,17 +51,17 @@ const props = {
       fontSize: 'Z',
       textTransform: 'capitalize',
       flow: 'column',
-      color: 'cream2 .75',
+      color: 'cream .75',
       letterSpacing: `${0.5 / 13}em`,
       gap: 'V',
       fontWeight: '400',
-      border: 'solid, cream2 .5',
+      border: 'solid, cream .5',
       borderWidth: '0 0 .4px 0',
       padding: '- - Z2 -',
       span: {
         fontSize: 'D',
         fontWeight: '700',
-        color: 'cream2',
+        color: 'cream',
         textTransform: 'uppercase',
         letterSpacing: '-0.5px'
       }
@@ -73,14 +73,14 @@ const props = {
         flow: 'column',
         gap: '0',
         ':not(:last-child)': {
-          border: 'solid, cream2 .5',
+          border: 'solid, cream .5',
           borderWidth: '0 0 .5px 0'
         },
 
         title: {
           fontSize: 'B',
           textTransform: 'capitalize',
-          color: 'cream2',
+          color: 'cream',
           letterSpacing: '2px',
           fontWeight: '100',
           padding: 'A -'
@@ -89,7 +89,7 @@ const props = {
         description: {
           flow: 'column',
           gap: 'Z',
-          color: 'cream2 .65',
+          color: 'cream .65',
           style: { span: { color: 'rgba(248, 241, 227, 1)' } }
         },
 
@@ -111,13 +111,13 @@ const props = {
             childProps: {
               align: 'center flex-start',
               letterSpacing: '.4px',
-              color: 'cream2 .65',
+              color: 'cream .65',
               gap: 'Y',
               ':before': {
                 content: '""',
                 boxSize: 'V2 V2',
                 round: '100%',
-                background: 'cream2 .65'
+                background: 'cream .65'
               }
             }
           }
@@ -138,7 +138,7 @@ const props = {
         flow: 'column',
         gap: 'V2',
         fontSize: `${14 / 16}em`,
-        color: 'cream2 .65',
+        color: 'cream .65',
         letterSpacing: `${0.3 / 14}em`
       }
     }

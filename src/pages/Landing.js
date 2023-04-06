@@ -5,10 +5,10 @@ import { Flex, Img } from 'smbls'
 import { Navbar } from '../components'
 
 import {
-  navBarItemTransform, scaleLogo, backgroundPosition, deopacity, navBarItemTransform2, opacity,  navBarTransform, lineWidth
+  navBarItemTransform, scaleLogo, backgroundPosition, deopacity, navBarItemTransform2, opacity, lineWidth
 } from '../animations'
 
-import LOGO_PNG from '../assets/icons/logoCream.png'
+import LOGO_PNG from '../assets/icons/logo.png'
 import ORNAMENTS_PNG from '../assets/images/landing/ornaments3.png'
 
 const logo = {
@@ -83,7 +83,7 @@ const props = {
   content: {
     zIndex: '6',
     gap: 'Y',
-    margin: '- - F -',
+    margin: '- - E1 -',
     '@maxHeightN': { margin: '- - E -'},
     '@maxHeightS': { margin: '- - D -'},
 
@@ -100,7 +100,7 @@ const props = {
     navbar: {
       flow: 'column',
       gap: 'V',
-      color: 'cream2',
+      color: 'cream',
       textAlign: 'right',
       margin: 'Y1 - - -',
       height: 'fit-content',
@@ -129,7 +129,7 @@ const props = {
         cursor: 'pointer',
         span: {
           textTransform: 'uppercase',
-          letterSpacing: '2.5px',
+          letterSpacing: `${2.5 / 12.5}em`,
           fontSize: `${12.5 / 16}em`,
           display: 'block',
           padding: 'Z -',
@@ -152,7 +152,7 @@ const props = {
     fontWeight: '700',
     textTransform: 'uppercase',
     letterSpacing: `${12 / 13}em`,
-    color: 'cream2 .7',
+    color: 'cream .7',
     zIndex: '3',
     position: 'absolute',
     left: '50%',

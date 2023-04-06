@@ -8,7 +8,6 @@ import { Header, Footer, Menu, MenuMobile } from '../components'
 import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip } from '../sections/travelSections'
 import { toursContainer } from '../sections/travelSections/tours/toursContainer./index.js'
 import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
-import CLOSES_PNG from '../assets/icons/reject.png'
 
 const state = {
   activeTravelMenu: false,
@@ -255,7 +254,6 @@ export const footer = {
     close: {
       extend: Img,
       props: {
-        src: CLOSES_PNG,
         boxSize: 'Z2'
       },
       class: {
