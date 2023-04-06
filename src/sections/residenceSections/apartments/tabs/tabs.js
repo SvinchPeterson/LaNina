@@ -34,7 +34,7 @@ export const tabBallerina = {
   },
   on: {
     click: (event, element, state) => {
-      state.update({ activeRoomsContainer: true, activeBallerina: true })
+      state.update({  activeRoomsPopUp: true, activeBallerina: true })
     }
   },
 }
@@ -52,7 +52,7 @@ export const tabRedBrick = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeRoomsContainer: true, activeRedBrick: true })
+      state.update({ activeRoomsPopUp: true, activeRedBrick: true })
     }
   },
 }
@@ -73,7 +73,7 @@ export const tabYellowCouch = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeRoomsContainer: true, activeYellowCouch: true })
+      state.update({ activeRoomsPopUp: true, activeYellowCouch: true })
     }
   },
 }
@@ -91,7 +91,7 @@ export const tabGreenForest = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeRoomsContainer: true, activeGreenForest: true })
+      state.update({ activeRoomsPopUp: true, activeGreenForest: true })
     }
   },
 }
@@ -109,7 +109,7 @@ export const tabRetro = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeRoomsContainer: true, activeRetro: true })
+      state.update({ activeRoomsPopUp: true, activeRetro: true })
     }
   },
 }
@@ -129,7 +129,7 @@ export const tabBlueLagoon = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeRoomsContainer: true, activeLagoon: true })
+      state.update({ activeRoomsPopUp: true, activeLagoon: true })
     }
   },
 }
@@ -149,7 +149,7 @@ export const tabQvevri = {
 
   on: {
     click: (event, element, state) => {
-      state.update({ activeRoomsContainer: true, activeQvevri: true })
+      state.update({ activeRoomsPopUp: true, activeQvevri: true })
     }
   },
 }

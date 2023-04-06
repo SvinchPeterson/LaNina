@@ -77,7 +77,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeDaily: true })
+            state.update({ activeToursPopUp: true, activeDaily: true })
           }
         }
       },
@@ -95,7 +95,7 @@ const content = {
         },
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeStandard: true })
+            state.update({ activeToursPopUp: true, activeStandard: true })
           }
         }
       },
@@ -112,7 +112,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeCaucasus: true })
+            state.update({ activeToursPopUp: true, activeCaucasus: true })
           }
         }
       },
@@ -131,7 +131,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeExclusive: true })
+            state.update({ activeToursPopUp: true, activeExclusive: true })
           }
         }
       },
@@ -150,7 +150,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeWineGastronomy: true })
+            state.update({ activeToursPopUp: true, activeWineGastronomy: true })
           }
         }
       },
@@ -167,7 +167,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeAdventure: true })
+            state.update({ activeToursPopUp: true, activeAdventure: true })
           }
         }
       },
@@ -187,7 +187,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeDaily: true })
+            state.update({ activeToursPopUp: true, activeDaily: true })
           }
         }
       },
@@ -204,7 +204,7 @@ const content = {
         },
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeStandard: true })
+            state.update({ activeToursPopUp: true, activeStandard: true })
           }
         }
       },
@@ -222,7 +222,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeCaucasus: true })
+            state.update({ activeToursPopUp: true, activeCaucasus: true })
           }
         }
       },
@@ -242,7 +242,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeExclusive: true })
+            state.update({ activeToursPopUp: true, activeExclusive: true })
           }
         }
       },
@@ -262,7 +262,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeWineGastronomy: true })
+            state.update({ activeToursPopUp: true, activeWineGastronomy: true })
           }
         }
       },
@@ -279,7 +279,7 @@ const content = {
 
         on: {
           click: (event, element, state) => {
-            state.update({ activeToursContainer: true, activeAdventure: true })
+            state.update({ activeToursPopUp: true, activeAdventure: true })
           }
         }
       }

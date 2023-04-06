@@ -4,66 +4,26 @@ import { Flex } from 'smbls'
 import { Navbar } from '../../../../components'
 
 const props = {
-  boxSize: 'D2 100%',
-  align: 'flex-end space-between',
-  color: 'cream',
-  border: 'solid, cream .5',
-  borderWidth: '0 0 .5px 0',
-  padding: '- V2',
-  transition: 'opacity .5s ease-in-out',
-  zIndex: '10',
-  overflow: 'hidden',
   titles: {
-    position: 'relative',
-    margin: '- - Z -',
     childProps: {
-      position: 'absolute',
-      left: '0',
-      whiteSpace: 'nowrap',
-      lineHeight: `${22 / 28}em`,
-      fontSize: 'D',
       textTransform: 'uppercase',
-      fontWeight: '100',
-      transition: 'bottom .65s ease-in-out, opacity .65s ease-in-out',
-      span: { fontWeight: '700' }
-    }
-  },
-
-  tabs: {
-    gap: 'A',
-    margin: '- - Y -',
-    childProps: {
-      cursor: 'pointer',
-      fontSize: `${10.5 / 16}em`,
-      fontWeight: '400',
-      textTransform: 'uppercase',
-      padding: '0',
-      background: 'transparent',
-      color: 'cream',
-      letterSpacing: `${2 / 10.5}em`,
-      transition: 'opacity .2s ease-in-out',
-      ':hover': { opacity: '1' }
+      fontWeight: '100'
     }
   }
+
 }
 
-export const header = {
-  tag: 'header',
-  extend: Flex,
+export const toursHeader = {
   props,
 
   class: {
-    show: (element, state) => state.activeToursContainer
+    show: (element, state) => state.activeToursPopUp
       ? { opacity: '1' }
       : { opacity: '0' }
   },
 
   titles: {
     extend: Flex,
-    childExtend: {
-      tag: 'h2',
-      span: {}
-    },
     ...[
       {
         class: {
@@ -122,7 +82,6 @@ export const header = {
   },
 
   tabs: {
-    extend: Navbar,
     ...[
       {
         props: { href: '#tbilisi' },

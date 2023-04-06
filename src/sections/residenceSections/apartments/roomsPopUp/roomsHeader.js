@@ -2,7 +2,7 @@
 
 import { Img } from 'smbls'
 
-import { header } from "../../../travelSections/tours/toursPopUp/header"
+import { header } from "../../../travelSections/tours/toursPopUp/toursHeader"
 
 import DRESS_PNG from '../../../../assets/icons/dress.png'
 import BRICKS_PNG from '../../../../assets/icons/bricks.png'
@@ -16,46 +16,39 @@ import QVEVRI_PNG from '../../../../assets/icons/qvevri.png'
 const props = {
   titles: {
     childProps: {
-      fontWeight: '700',
-      textTransform: 'capitalize',
-      fontSize: 'E',
-      letterSpacing: '-1px',
-      span: {display: 'none'}
+      textTransform: 'capitalize'
     }
   },
-
-  tabs: {
-    gap: 'B2',
-    margin: '- - Z1 -',
-    childProps: {
-      icon: {
-        boxSize: 'B '
-      }
-    }
+  tabs: { childProps: { icon: { boxSize: 'A1 ' } }
   }
 }
 
 export const roomsHeader = {
-  extend: header,
   props,
 
   class: {
-    show: (element, state) => state.activeRoomsContainer
+    show: (element, state) => state.activeRoomsPopUp
       ? { opacity: '1' }
       : { opacity: '0' }
   },
 
   titles: {
-    childExtend: {
-      tag: 'h2',
-      span: null
-    },
     ...[
       {
         class: {
           show: (element, state) => state.activeBallerina
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? {
+              bottom: '0',
+              opacity: '1',
+              // transition: 'all 2s ease-in-out',
+            }
+            : {
+              bottom: `${-50 / 28}em`,
+              opacity: '0',
+              // transition: 'all 2s ease-in-out',
+            }
         },
+
         props: { text: 'ballerina' }
       },
 

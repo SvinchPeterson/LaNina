@@ -31,7 +31,7 @@ export * from './Banner'
 export * from './GalleryContainer'
 export * from './Gallery'
 export * from './PopUpModal'
-export * from './RoomTourPopUp'
+export * from './RoomsToursPopUp'
 
 export * from './Menu'
 export * from './TourContainer'

@@ -6,30 +6,42 @@ import CLOSE_PNG from '../assets/icons/close.png'
 import LOGO_PNG from '../assets/icons/logo.png'
 
 const props = {
-  position: 'fixed',
   width: '100%',
-  zIndex: '200',
-  display: 'flex',
+  position: 'fixed',
   flow: 'column',
-  overflow: 'hidden',
   align: 'center center',
+  zIndex: '200',
+  overflow: 'hidden',
   transition: 'height .85s ease',
+  background: 'cream',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center center',
+  '@minTabletM': { style:{ backgroundAttachment: 'fixed' } },
+  ':before': {
+    content: '""',
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: '0',
+    left: '0'
+  },
 
   close: {
     background: 'transparent',
     position: 'absolute',
+    padding: '0',
+    top: 'A2',
     right: 'B',
-    top: 'B',
     zIndex: '2',
     transition: 'opacity .5s ease-in-out, transform .5s ease-in-out',
-    icon: { boxSize: 'A2 ' }
+    icon: { boxSize: 'A ' }
   },
 
   logo: {
-    boxSize: 'C ',
+    boxSize: 'B2 ',
     position: 'absolute',
-    left: 'C1',
-    bottom: 'C',
+    left: 'B',
+    bottom: 'B',
     zIndex: '2',
     transition: 'opacity .8s ease-in-out, transform .8s ease-in-out'
   }

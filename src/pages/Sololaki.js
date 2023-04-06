@@ -19,7 +19,7 @@ const state = {
   offers: false,
   back: true,
   tabs: 0,
-  activeRoomsContainer: false,
+  activeRoomsPopUp: false,
 
   activeBallerina: false,
   activeRedBrick: false,
@@ -127,17 +127,17 @@ export const Sololaki = {
     ...properties
   },
 
-  banner,
   header,
   menu,
   menuMobile,
-  residence,
-  servicesFacilities,
-  mission,
+  // banner,
+  // residence,
+  // servicesFacilities,
+  // mission,
   apartments,
   roomsPopUp,
-  wine,
-  feedBacks,
-  location,
+  // wine,
+  // feedBacks,
+  // location,
   Footer
 }

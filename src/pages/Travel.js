@@ -6,7 +6,7 @@ import { properties } from './props'
 
 import { Header, Footer, Menu, MenuMobile } from '../components'
 import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip } from '../sections/travelSections'
-import { toursContainer } from '../sections/travelSections/tours/toursContainer./index.js'
+import { toursPopUp } from '../sections/travelSections/tours/toursPopUp'
 import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
 
 const state = {
@@ -18,7 +18,7 @@ const state = {
   // activeForm: false,
   activeTour: false,
   activeImage: 0,
-  activeToursContainer: false,
+  activeToursPopUp: false,
 
   activeDescription: false,
 
@@ -267,7 +267,7 @@ export const footer = {
 
 export const Travel = {
   extend: Flex,
-  props: { ...properties, background: 'backgroundBlue2' },
+  props: { ...properties },
   state,
 
   header,
@@ -278,7 +278,7 @@ export const Travel = {
   gallery,
   popUpGallery,
   tours,
-  toursContainer,
+  toursPopUp,
   feedBacks,
   aboutUs,
   planTrip,

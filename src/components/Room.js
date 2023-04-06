@@ -5,10 +5,11 @@ import { Flex } from 'smbls'
 import { roomOpacityTransform } from '../animations'
 
 import { GalleryContainer } from './GalleryContainer'
+import { Gallery } from './Gallery'
 import { RoomDescription } from './RoomDescription'
 import { Amenities } from './Amenities'
 
-import { HorArrowsCream } from './NavigationArrows'
+import { NavArrowsCream } from './NavigationArrows'
 
 const props = {
   boxSize: '100% 100%',
@@ -94,39 +95,11 @@ export const Room = {
 
   galleryContainer: {
     extend: GalleryContainer,
-    book: {},
+    title: null,
     gallery: {},
-    navArrows: {
-      extend: HorArrowsCream,
-      ...[
-        {
-          on: {
-            click: (event, element, state) => {
-              const { activeImage } = state
-              state.update({
-                activeImage: activeImage - 1
-              })
-              if (activeImage <= 0) {
-                state.update({ activeImage: 8 })
-              }
-            }
-          }
-        },
-
-        {
-          on: {
-            click: (event, element, state) => {
-              const { activeImage } = state
-              state.update({
-                activeImage: activeImage + 1
-              })
-              if (activeImage >= 8) {
-                state.update({ activeImage: 0 })
-              }
-            }
-          }
-        }
-      ]
+    footer: {
+      book: {},
+      navArrows: {}
     }
   }
 }

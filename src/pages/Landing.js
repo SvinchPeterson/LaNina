@@ -9,7 +9,7 @@ import {
 } from '../animations'
 
 import LOGO_PNG from '../assets/icons/logo.png'
-import ORNAMENTS_PNG from '../assets/images/landing/ornaments3.png'
+import ORNAMENTS_PNG from '../assets/images/landing/ornament.png'
 
 const logo = {
   extend: Img,

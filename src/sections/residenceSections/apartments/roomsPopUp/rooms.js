@@ -32,18 +32,51 @@ export const roomBallerina = {
   },
 
   galleryContainer: {
-    book: {},
     gallery: {
       extend: galleryBallerina,
       class: {
         show: (element, state) => state.activeBallerina
         ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
-        : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
+        : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
       }
     },
-    navArrows: {}
+    footer: {
+      book: {},
+      navArrows: {
+        ...[
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage - 1
+                })
+                if (activeImage <= 0) {
+                  state.update({ activeImage: 8 })
+                }
+              }
+            }
+          },
+
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage + 1
+                })
+                if (activeImage >= 8) {
+                  state.update({ activeImage: 0 })
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
+
 
 export const roomRedBrick = {
   extend: Room,
@@ -74,16 +107,48 @@ export const roomRedBrick = {
   },
 
   galleryContainer: {
-    book: {},
     gallery: {
       extend: galleryRedBrick,
       class: {
         show: (element, state) => state.activeRedBrick
         ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
-        : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
+        : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
       }
     },
-    navArrows: {}
+    footer: {
+      book: {},
+      navArrows: {
+        ...[
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage - 1
+                })
+                if (activeImage <= 0) {
+                  state.update({ activeImage: 8 })
+                }
+              }
+            }
+          },
+
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage + 1
+                })
+                if (activeImage >= 8) {
+                  state.update({ activeImage: 0 })
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
 
@@ -116,7 +181,6 @@ export const roomYellowCouch = {
   },
 
   galleryContainer: {
-    book: {},
     gallery: {
       extend: galleryYellowCouch,
       class: {
@@ -125,7 +189,41 @@ export const roomYellowCouch = {
         : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
       }
     },
-    navArrows: {}
+
+    footer: {
+      book: {},
+      navArrows: {
+        ...[
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage - 1
+                })
+                if (activeImage <= 0) {
+                  state.update({ activeImage: 8 })
+                }
+              }
+            }
+          },
+
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage + 1
+                })
+                if (activeImage >= 8) {
+                  state.update({ activeImage: 0 })
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
 
@@ -160,7 +258,6 @@ export const roomGreenForest = {
   },
 
   galleryContainer: {
-    book: {},
     gallery: {
       extend: galleryGreenForest,
       class: {
@@ -169,7 +266,41 @@ export const roomGreenForest = {
         : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
       }
     },
-    navArrows: {}
+
+    footer: {
+      book: {},
+      navArrows: {
+        ...[
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage - 1
+                })
+                if (activeImage <= 0) {
+                  state.update({ activeImage: 9 })
+                }
+              }
+            }
+          },
+
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage + 1
+                })
+                if (activeImage >= 9) {
+                  state.update({ activeImage: 0 })
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
 
@@ -202,7 +333,6 @@ export const roomRetro = {
   },
 
   galleryContainer: {
-    book: {},
     gallery: {
       extend: galleryRetro,
       class: {
@@ -211,7 +341,41 @@ export const roomRetro = {
           : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
       }
     },
-    navArrows: {}
+
+    footer: {
+      book: {},
+      navArrows: {
+        ...[
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage - 1
+                })
+                if (activeImage <= 0) {
+                  state.update({ activeImage: 8 })
+                }
+              }
+            }
+          },
+
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage + 1
+                })
+                if (activeImage >= 8) {
+                  state.update({ activeImage: 0 })
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
 
@@ -245,7 +409,6 @@ export const roomBlueLagoon = {
   },
 
   galleryContainer: {
-    book: {},
     gallery: {
       extend: galleryBlueLagoon,
       class: {
@@ -254,7 +417,41 @@ export const roomBlueLagoon = {
           : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
       }
     },
-    navArrows: {}
+
+    footer: {
+      book: {},
+      navArrows: {
+        ...[
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage - 1
+                })
+                if (activeImage <= 0) {
+                  state.update({ activeImage: 6 })
+                }
+              }
+            }
+          },
+
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage + 1
+                })
+                if (activeImage >= 6) {
+                  state.update({ activeImage: 0 })
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
 
@@ -291,7 +488,6 @@ export const roomQvevri = {
   },
 
   galleryContainer: {
-    book: {},
     gallery: {
       extend: galleryQvevri,
       class: {
@@ -300,7 +496,41 @@ export const roomQvevri = {
           : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
       }
     },
-    navArrows: {}
+
+    footer: {
+      book: {},
+      navArrows: {
+        ...[
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage - 1
+                })
+                if (activeImage <= 0) {
+                  state.update({ activeImage: 6 })
+                }
+              }
+            }
+          },
+
+          {
+            on: {
+              click: (event, element, state) => {
+                const { activeImage } = state
+                state.update({
+                  activeImage: activeImage + 1
+                })
+                if (activeImage >= 6) {
+                  state.update({ activeImage: 0 })
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
 
