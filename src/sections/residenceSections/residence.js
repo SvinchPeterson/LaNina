@@ -17,11 +17,8 @@ const props = {
   align: 'flex-start center',
   position: 'relative',
   boxSizing: 'border-box',
-
   '@maxTabletM': { fontSize: `${15 / 16}em` },
   '@maxMobileM': { margin: 'C - 0 -', padding: 'E - - -', minWidth: '100%'},
-
-  // '@maxMobileS': { fontSize: `${14 / 16}em` },
 
   imageContainer: {
     alignSelf: 'center',
@@ -30,10 +27,7 @@ const props = {
     position: 'relative',
     round: 'G2 G2 0 0',
     overflow: 'hidden',
-    '@maxMobileM': {
-      width: '90%',
-      height: 'H'
-    },
+    '@maxMobileM': { width: '90%', height: 'H' },
 
     ':before': {
       content: '""',
@@ -66,14 +60,13 @@ const props = {
     boxSizing: 'border-box',
     '@maxMobileM': {
       margin: '-E2 - - -',
-      padding: 'C C D C',
+      padding: 'C C D D',
       round: '0 E 0 0',
       width: '100%',
-      style: {boxShadow: '15px -35px 30px rgba(0, 0, 0, .36)'}
+      style: { boxShadow: '15px -35px 30px rgba(0, 0, 0, .36)' }
     },
-    '@maxMobileS': {
-      padding: 'C B D B',
-    },
+    '@maxMobileS': { padding: 'C B2 D C' },
+    '@maxMobileXS': { padding: 'C B D B2' },
 
     title: { fontSize: 'D' },
     p: {
