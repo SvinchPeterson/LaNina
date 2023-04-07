@@ -73,6 +73,7 @@ export const MEDIA = {
   maxMobileL: '(max-width: 768px)',
   maxMobileM: '(max-width: 560px)',
   maxMobileS: '(max-width: 480px)',
+  maxMobileO: '(max-width: 400px)',
   maxMobileXS: '(max-width: 350px)',
 
 

@@ -18,9 +18,10 @@ const props = {
   position: 'relative',
   boxSizing: 'border-box',
 
-  '@maxMobileM': { margin: 'C - B2 -', padding: 'E - - -',},
+  '@maxTabletM': { fontSize: `${15 / 16}em` },
+  '@maxMobileM': { margin: 'C - 0 -', padding: 'E - - -'},
 
-  '@maxMobileS': { fontSize: `${14 / 16}em` },
+  // '@maxMobileS': { fontSize: `${14 / 16}em` },
 
   imageContainer: {
     alignSelf: 'center',
@@ -72,8 +73,7 @@ const props = {
 
     p: {
       maxWidth: 'H',
-      fontSize: `${15 / 16}em`,
-      '@maxMobileM': { maxWidth: 'G3'}
+      fontSize: `${15 / 16}em`
     }
   }
 }

@@ -13,28 +13,16 @@ const props = {
   gap: 'A',
   align: 'center center',
   position: 'relative',
+  padding: 'E2 - - -',
   margin: 'D2 - - -',
   overflow: 'visible',
-  style: {
-    paddingTop: `${150 / 16}em`,
-    // '@media only screen and (max-height: 800px)': {
-    //   minHeight: '100%',
-    //   paddingTop: `0`,
-    // }
-  },
+  '@maxTabletM': { fontSize: `${14.5 / 16}em` },
 
   header: {
     alignSelf: 'center',
     width: '100%',
     padding: '- D2',
-    // '@mobileM': {padding: '- B'},
     align: 'center space-between',
-    // style: {
-    //   '@media only screen and (max-height: 800px)': {
-    //     position: 'absolute',
-    //     top: '-30px'
-    //   }
-    // },
     title: {
       fontSize: `${12 / 16}em`,
       letterSpacing: `${10 / 12}em`,
@@ -43,7 +31,6 @@ const props = {
     },
     scroll: {
       display: 'none',
-      // '@tabletM': { display: 'flex' }
     }
   }
 }
@@ -65,5 +52,4 @@ export const apartments = {
     scroll: { extend: ScrollTitle }
   },
   tabs
-  // rooms
 }
