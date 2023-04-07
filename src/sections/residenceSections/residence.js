@@ -17,6 +17,19 @@ const props = {
   align: 'flex-start center',
   position: 'relative',
   boxSizing: 'border-box',
+  '@maxTabletS': {
+    fontSize: `${15 / 16}em`
+  },
+  '@maxMobileL': {
+    fontSize: `${14 / 16}em`
+  },
+
+  '@maxMobileM': {
+    fontSize: `${12.5 / 16}em`
+  },
+  '@maxMobileS': {
+    fontSize: `${11.5 / 16}em`
+  },
 
   // '@mobileL': {
   //   minHeight: '100%',
@@ -50,6 +63,7 @@ const props = {
       left: 0,
       background: 'naviGreen .35'
     },
+
     image: {
       boxSize: '100% 100%',
       backgroundImage: 'url(' + BB_JPG + ')',
@@ -57,9 +71,8 @@ const props = {
       backgroundPosition: 'center center',
       // boxShadow: 'inset 0px 0px 500px 60px rgba(0, 0, 0, .9)',
       style: { backgroundRepeat: 'no-repeat'},
-      '@minTabletM': {style: { backgroundAttachment: 'fixed' } },
-      '@maxTabletM': {style: { backgroundSize: '100% 100%' } },
-
+      '@minTabletL': {style: { backgroundAttachment: 'fixed' } },
+      '@maxTabletL': {style: { backgroundSize: '100% 100%' } },
     }
   },
 
