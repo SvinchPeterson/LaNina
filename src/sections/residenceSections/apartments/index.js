@@ -16,7 +16,7 @@ const props = {
   padding: 'E2 - - -',
   margin: 'D2 - - -',
   overflow: 'visible',
-  '@maxTabletM': { fontSize: `${14.5 / 16}em` },
+  '@maxTabletM': { fontSize: `${15 / 16}em` },
 
   header: {
     alignSelf: 'center',

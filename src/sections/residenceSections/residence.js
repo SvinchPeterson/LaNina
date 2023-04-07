@@ -31,7 +31,7 @@ const props = {
     round: 'G2 G2 0 0',
     overflow: 'hidden',
     '@maxMobileM': {
-      width: '97%',
+      width: '90%',
       height: 'H'
     },
 
