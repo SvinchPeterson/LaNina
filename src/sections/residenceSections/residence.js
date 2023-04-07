@@ -67,8 +67,9 @@ const props = {
     title: { fontSize: 'D', },
     '@maxMobileM': {
       margin: '-E2 - - -',
-      padding: 'C C D B',
+      padding: 'C C D B2',
       round: '0 E 0 0',
+      style: {boxShadow: '0px -40px 30px 0px rgba(0, 0, 0, .4)'}
     },
 
     p: {
