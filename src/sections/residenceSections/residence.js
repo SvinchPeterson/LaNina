@@ -19,7 +19,7 @@ const props = {
   boxSizing: 'border-box',
 
   '@maxTabletM': { fontSize: `${15 / 16}em` },
-  '@maxMobileM': { margin: 'C - 0 -', padding: 'E - - -'},
+  '@maxMobileM': { margin: 'C - 0 -', padding: 'E - - -', minWidth: '100%'},
 
   // '@maxMobileS': { fontSize: `${14 / 16}em` },
 
@@ -64,14 +64,18 @@ const props = {
     gap: 'Z',
     zIndex: '5',
     boxSizing: 'border-box',
-    title: { fontSize: 'D', },
     '@maxMobileM': {
       margin: '-E2 - - -',
-      padding: 'C C D B2',
+      padding: 'C C D C',
       round: '0 E 0 0',
-      style: {boxShadow: '0px -40px 30px 0px rgba(0, 0, 0, .4)'}
+      width: '100%',
+      style: {boxShadow: '15px -35px 30px rgba(0, 0, 0, .36)'}
+    },
+    '@maxMobileS': {
+      padding: 'C B D B',
     },
 
+    title: { fontSize: 'D' },
     p: {
       maxWidth: 'H',
       fontSize: `${15 / 16}em`
