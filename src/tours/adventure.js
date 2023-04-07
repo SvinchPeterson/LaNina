@@ -15,7 +15,7 @@ const tourAdventure = {
       : { opacity: '0', transition: 'opacity .35s ease-in-out' }
   },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeAdventurePackage
         ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(0)' }

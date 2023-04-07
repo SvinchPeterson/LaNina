@@ -83,7 +83,7 @@ export const tourRoyal = {
     }
   },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeRoyalPackage
         ? { transform: 'scale(.75) translateX(50px)' } : { transform: 'scale(1) translateX(0)'}

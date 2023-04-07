@@ -9,7 +9,7 @@ export const tourDashbashi = {
   extend: Tour,
   attr: { id: 'dashbash' },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeDashbashPackage
         ? { transform: 'scale(.75) translateX(-50px)' } : {  transform: 'scale(1) translateX(0)' }

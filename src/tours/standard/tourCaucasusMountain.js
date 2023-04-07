@@ -9,7 +9,7 @@ export const tourCaucasusMountain = {
   extend: Tour,
   attr: { id: 'caucasusMountain' },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.acitveCaucasusMountainPackage
         ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(-0)' }

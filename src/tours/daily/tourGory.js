@@ -8,7 +8,7 @@ import { packageGori } from '../../toursPackages'
 export const tourGori = {
   extend: Tour,
   attr: { id: 'gori' },
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeGoriPackage
         ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(0)' }

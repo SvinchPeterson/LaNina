@@ -10,7 +10,7 @@ export const tourCapital = {
   attr: { id: 'capital' },
   props: { padding: 'C2 - - -' },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeCapitalPackage
         ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(0)' }

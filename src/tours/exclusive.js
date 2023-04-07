@@ -15,7 +15,7 @@ const tourExclusive = {
       : { opacity: '0', transition: 'opacity .35s ease-in-out' }
   },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeExclusivePackage
         ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(0)' }

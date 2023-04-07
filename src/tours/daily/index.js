@@ -67,7 +67,7 @@ export const daily = {
         ? { opacity: '1', transition: 'opacity 1.5s ease-in-out' }
         : { opacity: '0', transition: 'opacity .25s ease-in-out' }
     },
-    gallery: {},
+    galleryContainer: {},
     article: {
       class: {
         show: (element, state) => state.activeDaily

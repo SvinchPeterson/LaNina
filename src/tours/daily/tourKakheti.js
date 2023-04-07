@@ -9,7 +9,7 @@ export const tourKakheti = {
   extend: Tour,
   attr: { id: 'kakheti' },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeKakhetiPackage
         ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(0)' }

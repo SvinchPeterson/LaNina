@@ -9,7 +9,7 @@ export const tourRabati = {
   extend: Tour,
   attr: { id: 'rabat' },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeRabatPackage
         ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(0)' }

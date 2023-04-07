@@ -74,9 +74,7 @@ export const RoomsToursPopUp = {
       titles: { childExtend: { tag: 'h2' } },
       tabs: { extend: Navbar }
     },
-    content: {
-      extend: Flex
-    }
+    content: { extend: Flex }
   },
 
   logo: {}

@@ -8,7 +8,7 @@ import { packageHistorical } from '../../toursPackages'
 export const tourHistorical = {
   extend: Tour,
   attr: { id: 'historical' },
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeHistoricalPackage
         ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(0)'}

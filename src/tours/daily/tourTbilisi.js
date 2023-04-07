@@ -10,7 +10,7 @@ export const tourTbilisi = {
   // props: { padding: 'C2 - - -' },
   attr: { id: 'tbilisi' },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeTbilisiPackage
         ? { transform: 'scale(.75) translateX(-50px)' } : { transform: 'scale(1) translateX(0)'}

@@ -21,8 +21,8 @@ const props = {
   },
 
   gallery: {
-    width: 'H1',
-    height: 'G1',
+    // width: 'H2',
+    // height: 'G1',
     position: 'relative',
     overflow: 'hidden',
     ':before': {

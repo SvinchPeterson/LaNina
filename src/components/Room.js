@@ -46,14 +46,15 @@ const props = {
     margin: 'C - - -',
     gallery: {
       position: 'relative',
+      // width: 'H1',
+      height: 'H',
       ':after': {
         content: '""',
         position: 'absolute',
         boxSize: '100% 100%',
         background: 'linear-gradient(to right,rgba(1, 57, 57, 1) 0%, rgba(1, 57, 57, 0) 100%)'
       }
-    },
-    navArrows: {}
+    }
   }
 }
 

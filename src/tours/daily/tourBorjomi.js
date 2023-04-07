@@ -82,7 +82,7 @@ export const tourBorjomi = {
     }
   },
 
-  gallery: {
+  galleryContainer: {
     class: {
       show: (element, state) => state.activeBorjomiPackage
         ? { transform: 'scale(.75) translateX(50px)' } : { transform: 'scale(1) translateX(0)' }

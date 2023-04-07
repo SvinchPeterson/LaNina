@@ -14,8 +14,12 @@ const props = {
   alignSelf: 'center',
   gap: 'C',
 
-  gallery: {
-    transition: 'transform .7s ease'
+  galleryContainer: {
+    transition: 'transform .7s ease',
+    gallery: {
+      width: 'H1',
+      height: 'G1',
+    }
   },
 
   article: {
@@ -68,7 +72,7 @@ export const Tour = {
   extend: Flex,
   props,
 
-  gallery: { extend: GalleryContainer },
+  galleryContainer: { extend: GalleryContainer },
 
   article: {
     extend: Flex,

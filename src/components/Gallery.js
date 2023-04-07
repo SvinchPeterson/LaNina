@@ -1,8 +1,8 @@
 'use strict'
 
 const props = {
-  // width: 'H2',
-  height: 'H',
+  // width: 'H1',
+  // height: 'G1',
   position: 'relative',
   round: '0 G G 0',
   overflow: 'hidden',
