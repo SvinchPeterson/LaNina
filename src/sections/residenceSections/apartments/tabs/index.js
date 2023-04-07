@@ -58,7 +58,7 @@ const props = {
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(0, 70, 70, 0), rgba(0, 70, 70, .85), rgba(0, 70, 70, 1))',
+    background: 'radial-gradient(rgba(0, 49, 49, 0),rgba(0, 49, 49, .65), rgba(0, 70, 70, 1))',
   },
   tabsContainer: {
     padding: '- F',

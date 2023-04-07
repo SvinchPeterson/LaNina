@@ -19,7 +19,7 @@ const state = {
   offers: false,
   back: true,
   tabs: 0,
-  activeRoomsPopUp: false,
+  activeRoomsPopUp: true,
 
   activeBallerina: false,
   activeRedBrick: false,

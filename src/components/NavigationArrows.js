@@ -16,13 +16,15 @@ const props = {
     boxSize: 'C1 C1',
     round: '100%',
     background: 'transparent',
-    opacity: '.85',
-    transition: 'opacity .25s ease-in-out',
+    opacity: '.75',
+    transition: 'opacity .25s ease, background .25s ease',
+
     ':hover': { opacity: '1' },
     style: { cursor: 'pointer' },
     arrow: {
       alignSelf: 'center',
-      boxSize: ' A'
+      boxSize: ' A',
+      transition: 'transform .25s ease',
     }
   }
 }
@@ -38,7 +40,10 @@ export const NavArrowsBlack = {
   props: {
     childProps: {
       border: 'solid, black .75',
-      borderWidth: '.55px'
+      borderWidth: '.35px',
+      ':hover': { '@minTabletL': { background: 'black .025' } },
+      ':hover > img': { '@minTabletL': { transform: 'scale(1.1)' } }
+
     }
   },
   ...[
@@ -52,7 +57,9 @@ export const NavArrowsCream = {
   props: {
     childProps: {
       border: 'solid, cream .75',
-      borderWidth: '1px'
+      borderWidth: '.55px',
+      ':hover': { '@minTabletL': { background: 'cream .025' } },
+      ':hover > img': { '@minTabletL': { transform: 'scale(1.1)' } }
     }
   },
   ...[

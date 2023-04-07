@@ -208,9 +208,6 @@ export const AmenitiesResponsive = {
   },
 
   style: {
-    // borderBottomLeftRadius: 0,
-    // borderBottomRightRadius: 0,
-    // transition: 'all .8s ease-in-out',
     zIndex: '70',
     overflow: 'hidden'
   },

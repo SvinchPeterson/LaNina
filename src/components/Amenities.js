@@ -37,13 +37,14 @@ const list = {
 const props = {
   title: {
     text: 'amenities',
-    fontSize: 'Z',
-    fontWeight: '700',
+    fontSize: `${12 / 16}em`,
+    fontWeight: '400',
     color: 'cream',
     textAlign: 'flex-start',
     letterSpacing: '5px',
     padding: '- - Y1 Y',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+
   },
 
   list: {
@@ -51,13 +52,13 @@ const props = {
     padding: 'Z 0 0 X',
     gap: 'C',
     childProps: {
-      fontSize: `${15.5 / 16}em`,
-      lineHeight: `${25 / 15.5}em`,
+      fontSize: `${14 / 16}em`,
+      lineHeight: `${25 / 14}em`,
       flexFlow: 'column',
-      letterSpacing: '.3px',
+      letterSpacing: '1px',
       childProps: {
         align: 'center flex-start',
-        color: 'cream .75',
+        color: 'cream .65',
         gap: 'Y2',
         ':before': {
           content: '""',

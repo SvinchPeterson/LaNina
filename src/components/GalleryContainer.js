@@ -37,21 +37,23 @@ const props = {
     border: 'solid, cream .25',
     borderWidth: '.6px 0 0 0',
     align: 'center space-between',
-    width: '65%',
+    width: '60%',
     margin: 'A - - -',
     padding: 'Z - - -',
     book: {
-      fontSize: 'Z',
-      padding: 'Z2 B2',
+      padding: 'Z B',
+      // padding: 'Z2 B2',
       background: 'transparent',
       border: 'solid, cream .35',
       borderWidth: '.75px',
       color: 'cream',
       textTransform: 'uppercase',
       fontWeight: '700',
-      opacity: '.85',
-      transition: 'opacity .25s ease-in-out',
-      ':hover': { opacity: '1' }
+      opacity: '.75',
+      transition: 'opacity .25s ease-in-out, background .25s ease-in-out',
+      span: { transition: 'transform .25s ease',},
+      ':hover': { opacity: '1', background: 'cream .025' },
+      ':hover > span': { transform: 'scale(1.05)' },
     }
   }
 }

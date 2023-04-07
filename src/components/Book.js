@@ -14,6 +14,7 @@ export const Book = {
     opacity: '.85',
     ':hover': { opacity: '1' },
     span: {
+      display: 'block',
       text: 'BOOK',
       fontWeight: '700',
       fontSize: `${12 / 16}em`

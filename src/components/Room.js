@@ -37,57 +37,38 @@ const props = {
     gap: 'B',
     description: {
       border: 'solid, cream .5',
-      borderWidth: '0 0 1px 0',
+      borderWidth: '0 0 .7px 0',
       padding: '- - Z1 -'
     }
   },
 
   galleryContainer: {
-    margin: 'C - - -',
+    // margin: 'C - - -',
+    // border: '2px solid red',
+    // width: '608px',
     gallery: {
       position: 'relative',
-      // width: 'H1',
+      width: '100%',
       height: 'H',
       ':after': {
         content: '""',
         position: 'absolute',
         boxSize: '100% 100%',
-        background: 'linear-gradient(to right,rgba(1, 57, 57, 1) 0%, rgba(1, 57, 57, 0) 100%)'
+        background: 'linear-gradient(to right,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
       }
+    },
+
+    footer: {
+      margin: 'A - - Y'
     }
+
+
   }
 }
 
 export const Room = {
   extend: Flex,
   props,
-
-  // class: {
-  //   show: (element, state) => state.activeTab === element.key
-  //     ? {
-  //       minWidth: '100%',
-  //       height: '100%',
-  //       animationName: roomOpacityTransform,
-  //       animationDuration: '.5s',
-  //       animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
-  //     }
-
-  //     : {
-  //       height: `0`,
-  //       opacity: 0,
-  //       background: 'black',
-  //       pointerEvents: 'none'
-  //     }
-  // },
-
-  // back: {
-  //   extend: Back,
-  //   on: {
-  //     click: (event, element, state) => {
-  //       state.update({ activeTab: false, activeImage: 0 })
-  //     }
-  //   }
-  // },
 
   article: {
     description: { extend: RoomDescription },

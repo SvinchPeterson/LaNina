@@ -16,10 +16,14 @@ import QVEVRI_PNG from '../../../../assets/icons/qvevri.png'
 const props = {
   titles: {
     childProps: {
-      textTransform: 'capitalize'
+      textTransform: 'capitalize',
+      fontSize: 'D'
     }
   },
-  tabs: { childProps: { icon: { boxSize: 'A1 ' } }
+  tabs: {
+    gap: 'B2',
+    padding: '- - Y -',
+    childProps: { icon: { boxSize: 'A2 ' }}
   }
 }
 
@@ -40,12 +44,10 @@ export const roomsHeader = {
             ? {
               bottom: '0',
               opacity: '1',
-              // transition: 'all 2s ease-in-out',
             }
             : {
               bottom: `${-50 / 28}em`,
-              opacity: '0',
-              // transition: 'all 2s ease-in-out',
+              opacity: '0'
             }
         },
 
@@ -115,7 +117,8 @@ export const roomsHeader = {
               activeGreenForest: false,
               activeRetro: false,
               activeLagoon: false,
-              activeQvevri: false
+              activeQvevri: false,
+              activeImage: 0
             })
           }
         },
@@ -137,7 +140,8 @@ export const roomsHeader = {
               activeGreenForest: false,
               activeRetro: false,
               activeLagoon: false,
-              activeQvevri: false
+              activeQvevri: false,
+              activeImage: 0
             })
           }
         },
@@ -159,7 +163,8 @@ export const roomsHeader = {
               activeGreenForest: false,
               activeRetro: false,
               activeLagoon: false,
-              activeQvevri: false
+              activeQvevri: false,
+              activeImage: 0
             })
           }
         },
@@ -181,7 +186,8 @@ export const roomsHeader = {
               activeBallerina: false,
               activeRetro: false,
               activeLagoon: false,
-              activeQvevri: false
+              activeQvevri: false,
+              activeImage: 0
             })
           }
         },
@@ -203,7 +209,8 @@ export const roomsHeader = {
               activeRedBrick: false,
               activeBallerina: false,
               activeLagoon: false,
-              activeQvevri: false
+              activeQvevri: false,
+              activeImage: 0
             })
           }
         },
@@ -225,7 +232,8 @@ export const roomsHeader = {
               activeYellowCouch: false,
               activeRedBrick: false,
               activeBallerina: false,
-              activeQvevri: false
+              activeQvevri: false,
+              activeImage: 0
             })
           }
         },
@@ -247,7 +255,8 @@ export const roomsHeader = {
               activeGreenForest: false,
               activeYellowCouch: false,
               activeRedBrick: false,
-              activeBallerina: false
+              activeBallerina: false,
+              activeImage: 0
             })
           }
         },

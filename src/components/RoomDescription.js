@@ -11,7 +11,10 @@ const props = {
     borderWidth: '0 0 1px 0',
     display: 'none'
   },
-  p: { color: 'cream .75' }
+  p: {
+    fontSize: `${15 / 16}em`,
+    color: 'cream .75'
+  }
 }
 
 export const RoomDescription = {

@@ -32,13 +32,13 @@ export const roomBallerina = {
   },
 
   galleryContainer: {
+    class: {
+      show: (element, state) => state.activeBallerina
+      ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
+      : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
+    },
     gallery: {
       extend: galleryBallerina,
-      class: {
-        show: (element, state) => state.activeBallerina
-        ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
-        : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
-      }
     },
     footer: {
       book: {},
@@ -107,14 +107,12 @@ export const roomRedBrick = {
   },
 
   galleryContainer: {
-    gallery: {
-      extend: galleryRedBrick,
-      class: {
-        show: (element, state) => state.activeRedBrick
-        ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
-        : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
-      }
+    class: {
+      show: (element, state) => state.activeRedBrick
+      ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
+      : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
+    gallery: { extend: galleryRedBrick },
     footer: {
       book: {},
       navArrows: {
@@ -181,15 +179,13 @@ export const roomYellowCouch = {
   },
 
   galleryContainer: {
-    gallery: {
-      extend: galleryYellowCouch,
-      class: {
-        show: (element, state) => state.activeYellowCouch
-        ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
-        : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
-      }
+    class: {
+      show: (element, state) => state.activeYellowCouch
+      ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
+      : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
 
+    gallery: { extend: galleryYellowCouch },
     footer: {
       book: {},
       navArrows: {
@@ -258,14 +254,12 @@ export const roomGreenForest = {
   },
 
   galleryContainer: {
-    gallery: {
-      extend: galleryGreenForest,
-      class: {
-        show: (element, state) => state.activeGreenForest
-        ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
-        : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
-      }
+    class: {
+      show: (element, state) => state.activeGreenForest
+      ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
+      : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
+    gallery: { extend: galleryGreenForest },
 
     footer: {
       book: {},
@@ -333,15 +327,13 @@ export const roomRetro = {
   },
 
   galleryContainer: {
-    gallery: {
-      extend: galleryRetro,
-      class: {
-        show: (element, state) => state.activeRetro
-          ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
-          : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
-      }
+    class: {
+      show: (element, state) => state.activeRetro
+        ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
+        : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
     },
 
+    gallery: { extend: galleryRetro },
     footer: {
       book: {},
       navArrows: {
@@ -409,15 +401,13 @@ export const roomBlueLagoon = {
   },
 
   galleryContainer: {
-    gallery: {
-      extend: galleryBlueLagoon,
-      class: {
-        show: (element, state) => state.activeLagoon
-          ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
-          : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
-      }
+    class: {
+      show: (element, state) => state.activeLagoon
+        ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
+        : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
     },
 
+    gallery: { extend: galleryBlueLagoon },
     footer: {
       book: {},
       navArrows: {
@@ -488,14 +478,12 @@ export const roomQvevri = {
   },
 
   galleryContainer: {
-    gallery: {
-      extend: galleryQvevri,
-      class: {
-        show: (element, state) => state.activeQvevri
-          ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
-          : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
-      }
+    class: {
+      show: (element, state) => state.activeQvevri
+        ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
+        : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
     },
+    gallery: { extend: galleryQvevri },
 
     footer: {
       book: {},

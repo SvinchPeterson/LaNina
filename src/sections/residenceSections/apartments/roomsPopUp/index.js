@@ -13,7 +13,7 @@ import { roomsHeader } from './roomsHeader'
 
 const props = {
   backgroundImage: 'url(' + ORNAMENTS_PNG + ')',
-  ':before': { background: 'radial-gradient(rgba(0, 70, 70, .5), rgba(0, 70, 70, .9), rgba(0, 70, 70, 1))' },
+  ':before': { background: 'radial-gradient(rgba(0, 49, 49, .5), rgba(0, 49, 49, 1), rgba(0, 49, 49, 1))' },
   contentContainer: {
     content: {
       childProps: {

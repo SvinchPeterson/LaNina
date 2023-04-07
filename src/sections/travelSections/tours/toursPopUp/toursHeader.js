@@ -7,8 +7,12 @@ const props = {
   titles: {
     childProps: {
       textTransform: 'uppercase',
-      fontWeight: '100'
+      fontWeight: '100',
+      fontSize: 'C',
     }
+  },
+  tabs: {
+    gap: 'A'
   }
 
 }

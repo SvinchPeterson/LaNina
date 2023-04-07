@@ -17,6 +17,7 @@ const props = {
       overflow: 'hidden',
       border: 'solid, cream .5',
       borderWidth: '0 0 .6px 0',
+      padding: '- Y',
 
       titles: {
         position: 'relative',
@@ -27,7 +28,6 @@ const props = {
           color: 'cream',
           whiteSpace: 'nowrap',
           lineHeight: `${22 / 28}em`,
-          fontSize: 'D',
           transition: 'bottom .65s ease-in-out, opacity .65s ease-in-out',
           letterSpacing: `${-1 / 28}em`,
           span: { fontWeight: '700' }
@@ -35,7 +35,6 @@ const props = {
       },
 
       tabs: {
-        gap: 'A',
         margin: '- - Y -',
         childProps: {
           cursor: 'pointer',
