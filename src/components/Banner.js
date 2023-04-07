@@ -24,7 +24,7 @@ const props = {
     animationDuration: '4s',
     animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
   },
-  '@minTabletM': { style:{ backgroundAttachment: 'fixed !important' }},
+  '@minTabletL': { style:{ backgroundAttachment: 'fixed !important' }},
 
   title: {
     color: 'cream',

@@ -18,19 +18,7 @@ const props = {
   gap: 'D',
   zIndex: 10,
   alignSelf: 'center',
-  // border: '4px solid red',
-  style: {
-    '@media only screen and (max-width: 1366px) and (min-height: 1000px)': {
-      // minHeight: 'fit-content',
-      // padding: `${100 / 16}em 0 0 0`
-    }
-  },
 
-  // back: {
-  //   position: 'absolute',
-  //   top: 'B2',
-  //   left: 'B1'
-  // },
 
   article: {
     flexFlow: 'column',
@@ -43,9 +31,6 @@ const props = {
   },
 
   galleryContainer: {
-    // margin: 'C - - -',
-    // border: '2px solid red',
-    // width: '608px',
     gallery: {
       position: 'relative',
       width: '100%',
