@@ -18,15 +18,9 @@ const props = {
   position: 'relative',
   boxSizing: 'border-box',
 
+  '@maxMobileM': { margin: 'C - B2 -', padding: 'E - - -',},
 
-  // '@maxMobileM': {
-  //   fontSize: `${14 / 16}em`
-  // },
-  '@maxMobileS': {
-    fontSize: `${14 / 16}em`
-  },
-
-  // '@maxMobileXS': { fontSize: `${9 / 16}em` },
+  '@maxMobileS': { fontSize: `${14 / 16}em` },
 
   imageContainer: {
     alignSelf: 'center',
@@ -39,15 +33,6 @@ const props = {
       width: '97%',
       height: 'H'
     },
-    // '@tabletM': { width: 'H3' },
-    // '@tabletS': { width: 'H2' },
-    // '@mobileL': {
-    //   boxSize: '100% 100%',
-    //   round: '0',
-    //   '&:before': {
-    //     background: 'linear-gradient(rgba(1, 57, 57, .5), rgba(1, 57, 57, .5), rgba(1, 57, 57, .65), rgba(1, 57, 57, .75), rgba(1, 57, 57, 1), rgba(1, 57, 57, 1))'
-    //   }
-    // },
 
     ':before': {
       content: '""',
@@ -64,7 +49,6 @@ const props = {
       backgroundImage: 'url(' + BB_JPG + ')',
       backgroundSize: 'contain',
       backgroundPosition: 'center center',
-      // boxShadow: 'inset 0px 0px 500px 60px rgba(0, 0, 0, .9)',
       style: { backgroundRepeat: 'no-repeat'},
       '@minTabletL': {style: { backgroundAttachment: 'fixed' } },
       '@maxTabletL': {style: { backgroundSize: 'cover' } },
@@ -79,10 +63,7 @@ const props = {
     gap: 'Z',
     zIndex: '5',
     boxSizing: 'border-box',
-    title: {
-      fontSize: 'D',
-      // '@maxMobileS': { fontSize: `${20 / 10}em`}
-    },
+    title: { fontSize: 'D', },
     '@maxMobileM': {
       margin: '-E2 - - -',
       padding: 'C C D B',
@@ -92,8 +73,7 @@ const props = {
     p: {
       maxWidth: 'H',
       fontSize: `${15 / 16}em`,
-      '@maxMobileM': { maxWidth: 'G3'},
-      // '@maxMobileS': { fontSize: `${14 / 10}em`}
+      '@maxMobileM': { maxWidth: 'G3'}
     }
   }
 }
