@@ -4,7 +4,6 @@ const props = {
   // width: 'H1',
   // height: 'G1',
   position: 'relative',
-  round: '0 G G 0',
   overflow: 'hidden',
   childProps: {
     display: 'block',

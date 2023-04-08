@@ -37,7 +37,7 @@ const list = {
 const props = {
   title: {
     text: 'amenities',
-    fontSize: `${12 / 16}em`,
+    fontSize: `${11 / 16}em`,
     fontWeight: '400',
     color: 'cream',
     textAlign: 'flex-start',

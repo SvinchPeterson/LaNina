@@ -14,23 +14,24 @@ export const props = {
   cursor: 'pointer',
   boxSizing: 'border-box',
   color: 'cream',
-  style: {
-    transition: 'flex 1s ease'
+  transition: 'flex 1s ease',
+  '@maxTabletL': {
+    overflow: 'visible',
+    justifyContent: 'space-between',
+    padding: 'C1 - - -'
   },
+  '@minTabletL': {},
   ':hover': { flex: '7' },
   ':hover > p': {
-    opacity: '1',
-    transition: 'opacity .55s ease-in-out'
+      opacity: '1',
+      letterSpacing: '.5px',
+      transition: 'opacity .55s ease-in-out'
   },
   ':hover > h2': {
-    style: {
-      '@media only screen and (min-width: 1281px)': {
-        opacity: '1',
-        letterSpacing: '-2px',
-        transition: 'opacity .8s ease-in-out, letter-spacing .85s ease-in-out, transform .85s ease-in-out',
-        transform: 'scale(1)'
-      }
-    }
+    opacity: '1',
+    letterSpacing: '-2px',
+    transition: 'opacity .8s ease-in-out, letter-spacing .85s ease-in-out, transform .85s ease-in-out',
+    transform: 'scale(1)'
   },
 
   imageContainer: {
@@ -50,6 +51,7 @@ export const props = {
       minHeight: '100%',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      round: 'F',
       style: { '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },}
     }
   },
@@ -65,16 +67,27 @@ export const props = {
     width: 'G',
     fontWeight: '400',
     opacity: '0',
-    letterSpacing: '.3px'
+    letterSpacing: `${0.5 / 15}em`,
+    style: {fontStyle: 'italic'},
+    '@maxTabletL': {display: 'none'}
   },
   title: {
     zIndex: '2',
-    fontSize: 'E',
+    fontSize: 'D',
     textTransform: 'capitalize',
     whiteSpace: 'nowrap',
     opacity: '0',
     transform: 'scale(.9)',
-    margin: '- - -Y1 -'
+    margin: '- - -Y1 -',
+    // opacity: '1'
+    '@maxTabletL': {
+      opacity: '1',
+      margin: '- - -B1 -',
+      fontSize: 'C',
+      letterSpacing: '-1px',
+      transform: 'scale(1)',
+      style: {  }
+    }
   }
 }
 

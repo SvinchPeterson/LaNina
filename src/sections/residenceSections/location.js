@@ -122,14 +122,14 @@ const props = {
   margin: '- - B -',
 
   title: {
-    fontSize: `${12 / 16}em`,
-    letterSpacing: `${8 / 12}em`,
+    fontSize: `${11 / 16}em`,
+    letterSpacing: `${12/ 12}em`,
     fontWeight: '400',
     textTransform: 'uppercase',
     position: 'absolute',
     transform: 'rotate(180deg)',
     padding: '- D - -',
-    left: '-B2',
+    left: '-C',
     style: {
       writingMode: 'vertical-rl',
       textOrientation: 'mixed',

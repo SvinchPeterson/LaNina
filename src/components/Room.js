@@ -15,14 +15,15 @@ const props = {
   boxSize: '100% 100%',
   align: 'center center',
   position: 'relative',
-  gap: 'D',
+  gap: 'B2',
   zIndex: 10,
   alignSelf: 'center',
 
 
   article: {
     flexFlow: 'column',
-    gap: 'B',
+    gap: 'A',
+    margin: '-C2 - - -',
     description: {
       border: 'solid, cream .5',
       borderWidth: '0 0 .7px 0',
@@ -34,12 +35,15 @@ const props = {
     gallery: {
       position: 'relative',
       width: '100%',
-      height: 'H',
+      height: `${430 / 16}em`,
       ':after': {
         content: '""',
         position: 'absolute',
         boxSize: '100% 100%',
-        background: 'linear-gradient(to right,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
+        // background: 'linear-gradient(to right,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
+      },
+      childProps: {
+
       }
     },
 
@@ -55,11 +59,6 @@ export const Room = {
   extend: Flex,
   props,
 
-  article: {
-    description: { extend: RoomDescription },
-    amenities: { extend: Amenities }
-  },
-
   galleryContainer: {
     extend: GalleryContainer,
     title: null,
@@ -68,5 +67,11 @@ export const Room = {
       book: {},
       navArrows: {}
     }
-  }
+  },
+  article: {
+    description: { extend: RoomDescription },
+    amenities: { extend: Amenities }
+  },
+
+
 }

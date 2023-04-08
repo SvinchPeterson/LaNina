@@ -69,6 +69,7 @@ export const MEDIA = {
   maxScreenS: '(max-width: 1440px)',
   maxTabletL: '(max-width: 1366px)',
   maxTabletM: '(max-width: 1280px)',
+  maxTabletO: '(max-width: 1150px)',
   maxTabletS: '(max-width: 1024px)',
   maxMobileL: '(max-width: 768px)',
   maxMobileM: '(max-width: 560px)',

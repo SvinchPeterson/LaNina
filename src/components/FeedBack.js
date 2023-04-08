@@ -19,7 +19,7 @@ const props = {
 
     title: {
       fontSize: 'C',
-      letterSpacing: `${-1 / 16}em`
+      letterSpacing: `${-1 / 23}em`
     },
 
     p: {

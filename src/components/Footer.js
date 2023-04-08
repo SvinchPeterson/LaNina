@@ -10,10 +10,11 @@ import INSTAGRAM_PNG from '../assets/icons/social-instagram.png'
 import { Book } from './Book'
 
 const props = {
-  width: '90%',
+  width: '80%',
   position: 'fixed',
-  bottom: 'A',
-  flexAlign: 'center space-between',
+  bottom: '0',
+  padding: 'A B',
+  flexAlign: 'flex-end space-between',
   alignSelf: 'center',
   zIndex: '50',
   // '@mobileS': { bottom: 'Z1' },

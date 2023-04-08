@@ -10,7 +10,7 @@ const props = {
   childProps: {
     fontSize: `${12.5 / 16}em`,
     fontWeight: '400',
-    letterSpacing: `${1 / 12.5}em`,
+    letterSpacing: `${1.2 / 12.5}em`,
     color: 'black',
     ':first-child': {
       position: 'relative',

@@ -21,13 +21,15 @@ const props = {
   header: {
     alignSelf: 'center',
     width: '100%',
-    padding: '- D2',
-    align: 'center space-between',
+    padding: '- - - -',
+
+    align: 'center center',
     title: {
-      fontSize: `${12 / 16}em`,
-      letterSpacing: `${10 / 12}em`,
+      fontSize: `${11.5 / 16}em`,
+      letterSpacing: `${9 / 11.5}em`,
       textTransform: 'uppercase',
-      fontWeight: '400'
+      fontWeight: '400',
+      margin: '- - - -'
     },
     scroll: {
       display: 'none',

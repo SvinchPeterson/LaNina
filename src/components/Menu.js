@@ -5,10 +5,10 @@ import { Flex } from 'smbls'
 import { Navbar } from './Navbar'
 
 const props = {
-  width: '90%',
+  width: '80%',
   zIndex: '200',
   position: 'fixed',
-  top: `C1`,
+  top: `50px`,
   alignSelf: 'center',
   transition: 'height 1s ease',
   overflow: 'hidden',
@@ -17,19 +17,28 @@ const props = {
   '@mobileL': { display: 'none' },
   navBar: {
     overflow: 'hidden',
-    gap: 'B',
+    gap: 'B1',
     padding: 'Z2 - - -',
     transition: 'width .5s ease',
     align: 'center flex-end',
+
     childProps: {
       textAlign: 'center',
-      color: 'white',
-      fontSize: `${11 / 16}em`,
+      color: 'cream',
+      fontSize: `${10.5 / 16}em`,
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: `${3 / 12}em`,
+      letterSpacing: `${3 / 10.5}em`,
       whiteSpace: 'nowrap',
-      transition: 'opacity .8s ease'
+      opacity: '.8',
+      transition: 'opacity .8s ease, transform .35s ease-in-out',
+      // padding: '- B',
+      // margin: '- B',
+      // style: {fontStyle: 'italic'},
+      ':hover': {
+        transform: 'scale(1.01)',
+        opacity: '1'
+      }
     }
   }
 }
@@ -72,6 +81,7 @@ const mobileMenuProps = {
       width: 'fit-content',
       textAlign: 'center',
       fontSize: 'Z',
+      // transition: 'transform 3s ease-in-out',
       'maxMobileXS': { fontSize: `${12.5 / 16}em` }
     }
   }

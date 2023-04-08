@@ -40,7 +40,8 @@ const menu = {
   navBar: {
     class: {
       show: (element, state) => state.activeResidenceMenu
-        ? { width: `${550 / 16}em` } : { width: '0' }
+        ? { width: `${550 / 16}em`, '> a':{ transform:'scale(1)', transition: 'transform 1s ease', } }
+        : { width: '0', '> a':{ transform:'scale(1.5)', transition: 'transform 1s ease', }}
     },
     childExtend: { on: { click: (event, element, state) => { state.update({ activeResidenceMenu: false }) } } },
     ...[
@@ -98,6 +99,13 @@ const header = {
     {},
     {
       menu: {
+        on: {
+          click: (event, element, state) => {
+            state.activeResidenceMenu
+          ? state.update({ activeResidenceMenu: false })
+          : state.update({ activeResidenceMenu: true })
+          }
+        },
         menu: {
           on: { click: (event, element, state) => { state.update({ activeResidenceMenu: true, activeResidenceMobileMenu: true }) } },
           class: {

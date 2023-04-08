@@ -73,15 +73,15 @@ const props = {
   },
 
   header: {
-    padding: '- - A D2',
-    align: 'center space-between',
-    '@maxTabletS': { padding: '- D Z1 D' },
+    padding: '- - Z1 D',
+    align: 'center flex-start',
+    '@maxTabletS': { padding: '- D Z1 B' },
     '@maxMobileL': { padding: '- B1 Z1 B1'},
     title: {
-      fontSize: `${12 / 16}em`,
+      fontSize: `${11 / 16}em`,
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: `${5 / 12}em`
+      letterSpacing: `${7 / 11}em`
     },
     scroll: {
       display: 'none',
@@ -97,6 +97,8 @@ const props = {
     backgroundImage: 'url(' + SHELF_JPG + ')',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    // border: 'solid, orange3',
+    // borderWidth: '5px 0 0 0',
     '@minTabletM': { style: { backgroundAttachment: 'fixed' } },
     style: {
       backgroundRepeat: 'no-repeat',
@@ -119,11 +121,12 @@ const props = {
       margin: 'auto',
       childProps: {
         style: { boxShadow: '0px 0px 2px .2px rgba(0, 0, 0, .7)' },
-        '@maxTabletS': { minWidth: 'F3'}
+        '@maxTabletO': { maxWidth: 'F3' },
+        '@maxTabletS': { minWidth: 'F3' }
 
       },
 
-      '@maxTabletM': { columns: 'repeat(3, 1fr)' },
+      // '@maxTabletM': { columns: 'repeat(3, 1fr)' },
       '@maxTabletS': {
         display: 'flex',
         maxWidth: '100%',

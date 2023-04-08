@@ -51,7 +51,7 @@ const props = {
       fontWeight: '700',
       opacity: '.75',
       transition: 'opacity .25s ease-in-out, background .25s ease-in-out',
-      span: { transition: 'transform .25s ease',},
+      span: { transition: 'transform .25s ease'},
       ':hover': { opacity: '1', background: 'cream .025' },
       ':hover > span': { transform: 'scale(1.05)' },
     }

@@ -44,12 +44,13 @@ const menu = {
 
 const props = {
   position: 'fixed',
-  minWidth: '90%',
-  height: 'C2',
+  minWidth: '80%',
+  height: 'C1',
   align: 'flex-end space-between',
   gap: '0',
   alignSelf: 'center',
   zIndex: '50',
+  padding: 'Y1 V',
   border: 'solid, white .55',
   borderWidth: '0 0 .3px 0',
   boxSizing: 'border-box',
@@ -63,24 +64,25 @@ const props = {
   childProps: {
     flex: '1',
     flow: 'column',
+    margin: '- - -X2 -',
 
     back: {
       opacity: '.75',
       transition: 'opacity .15s ease-in-out',
       boxSizing: 'border-box',
-      margin: '- - Y1 -',
+      margin: '- - X -',
       ':hover': { opacity: '1' },
-      icon: { boxSize: ' B' }
+      icon: { boxSize: ' A2' }
     },
 
     logo: {
       align: 'center center',
       opacity: '1',
       alignSelf: 'center',
-      margin: '- - Y2 -',
+      margin: '- - V2 -',
       zIndex: '10',
       ':hover': { opacity: '1' },
-      image: { boxSize: `${28 / 16}em ` }
+      image: { boxSize: `${26 / 16}em ` }
     },
 
     menu: {
@@ -88,7 +90,7 @@ const props = {
       background: 'transparent',
       color: 'white',
       opacity: '.85',
-      margin: '- - X -',
+      // margin: 'Z - -',
       border: 'none',
       textTransform: 'uppercase',
       fontWeight: '400',
@@ -99,10 +101,13 @@ const props = {
       overflow: 'hidden',
       round: '0',
       alignSelf: 'flex-end',
+      // padding: '- - Y -',
       ':hover': { opacity: '1' },
+
       childProps: {
         position: 'absolute',
-        right: '0'
+        right: '0',
+        // lineHeight: '50px',
       },
       menu: { transition: 'top .5s ease-in-out, transform .5s ease-in-out' },
       close: {

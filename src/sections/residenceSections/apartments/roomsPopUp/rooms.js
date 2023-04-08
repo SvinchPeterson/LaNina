@@ -24,12 +24,6 @@ export const roomBallerina = {
       }
   },
 
-  article: {
-    description: {
-      title: { text: 'ballerina' },
-      p: { extend: ballerinaTextEng }
-    }
-  },
 
   galleryContainer: {
     class: {
@@ -39,8 +33,10 @@ export const roomBallerina = {
     },
     gallery: {
       extend: galleryBallerina,
+      props: { round: 'G 0 0 G'}
     },
     footer: {
+      props: {alignSelf: 'flex-end'},
       book: {},
       navArrows: {
         ...[
@@ -74,7 +70,14 @@ export const roomBallerina = {
         ]
       }
     }
-  }
+  },
+
+  article: {
+    description: {
+      title: { text: 'ballerina' },
+      p: { extend: ballerinaTextEng }
+    }
+  },
 }
 
 
@@ -112,8 +115,12 @@ export const roomRedBrick = {
       ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
       : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
-    gallery: { extend: galleryRedBrick },
+    gallery: {
+      props: { round: '0 G G 0' },
+      extend: galleryRedBrick
+    },
     footer: {
+      props: {alignSelf: 'flex-start' },
       book: {},
       navArrows: {
         ...[
@@ -167,17 +174,6 @@ export const roomYellowCouch = {
     }
   },
 
-  article: {
-    description: {
-      title: { text: 'Yellow Couch' },
-      p: { extend: yellowCouchTextEng }
-    },
-    amenities: {
-      title: {},
-      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
-    }
-  },
-
   galleryContainer: {
     class: {
       show: (element, state) => state.activeYellowCouch
@@ -185,8 +181,12 @@ export const roomYellowCouch = {
       : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
 
-    gallery: { extend: galleryYellowCouch },
+    gallery: {
+      extend: galleryYellowCouch,
+      props: { round: 'G 0 0 G' }
+    },
     footer: {
+      props: {alignSelf: 'flex-end'},
       book: {},
       navArrows: {
         ...[
@@ -219,6 +219,17 @@ export const roomYellowCouch = {
           }
         ]
       }
+    }
+  },
+
+  article: {
+    description: {
+      title: { text: 'Yellow Couch' },
+      p: { extend: yellowCouchTextEng }
+    },
+    amenities: {
+      title: {},
+      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
     }
   }
 }
@@ -259,9 +270,13 @@ export const roomGreenForest = {
       ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
       : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
-    gallery: { extend: galleryGreenForest },
+    gallery: {
+      extend: galleryGreenForest,
+      props: {round: '0 G G 0'}
+    },
 
     footer: {
+      props: {alignSelf: 'flex-start'},
       book: {},
       navArrows: {
         ...[
@@ -315,16 +330,7 @@ export const roomRetro = {
     }
   },
 
-  article: {
-    description: {
-      title: { text: 'Retro' },
-      p: { extend: retroTextEng }
-    },
-    amenities: {
-      title: {},
-      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
-    }
-  },
+
 
   galleryContainer: {
     class: {
@@ -333,8 +339,12 @@ export const roomRetro = {
         : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
     },
 
-    gallery: { extend: galleryRetro },
+    gallery: {
+      extend: galleryRetro,
+      props: { round: 'G 0 0 G' }
+    },
     footer: {
+      props: { alignSelf: 'flex-end' },
       book: {},
       navArrows: {
         ...[
@@ -367,6 +377,17 @@ export const roomRetro = {
           }
         ]
       }
+    }
+  },
+
+  article: {
+    description: {
+      title: { text: 'Retro' },
+      p: { extend: retroTextEng }
+    },
+    amenities: {
+      title: {},
+      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
     }
   }
 }
@@ -407,8 +428,12 @@ export const roomBlueLagoon = {
         : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
     },
 
-    gallery: { extend: galleryBlueLagoon },
+    gallery: {
+      extend: galleryBlueLagoon,
+      props: {round: '0 G G 0'}
+     },
     footer: {
+      props: {alignSelf: 'flex-start'},
       book: {},
       navArrows: {
         ...[
@@ -466,16 +491,7 @@ export const roomQvevri = {
     }
   },
 
-  article: {
-    description: {
-      title: { text: 'Retro' },
-      p: { extend: retroTextEng }
-    },
-    amenities: {
-      title: {},
-      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
-    }
-  },
+
 
   galleryContainer: {
     class: {
@@ -483,9 +499,13 @@ export const roomQvevri = {
         ? { width: `${608 / 16}em`, transition: 'width .75s ease-in-out' }
         : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
     },
-    gallery: { extend: galleryQvevri },
+    gallery: {
+      extend: galleryQvevri,
+      props: {round: 'G 0 0 G'}
+    },
 
     footer: {
+      props: {alignSelf: 'flex-end'},
       book: {},
       navArrows: {
         ...[
@@ -518,6 +538,17 @@ export const roomQvevri = {
           }
         ]
       }
+    }
+  },
+
+  article: {
+    description: {
+      title: { text: 'Retro' },
+      p: { extend: retroTextEng }
+    },
+    amenities: {
+      title: {},
+      list: { ...[{}, { ...[{}, {}, {}, {}, {}, {}, {}, {}, { props: { display: 'none' } }] }] }
     }
   }
 }
