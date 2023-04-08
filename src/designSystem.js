@@ -22,7 +22,7 @@ export const FONT = {
 export const FONT_FAMILY = {
   helveticaNeue: {
     isDefault: true,
-    value: ['"HelveticaNeue"'],
+    value: ['"Helvetica Neue"'],
     type: 'serif'
   }
 }
