@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { roomOpacityTransform } from '../animations'
+import { roomOpacityTransform, roomDescription } from '../animations'
 
 import { GalleryContainer } from './GalleryContainer'
 import { Gallery } from './Gallery'
@@ -12,43 +12,41 @@ import { Amenities } from './Amenities'
 import { NavArrowsCream } from './NavigationArrows'
 
 const props = {
-  boxSize: '100% 100%',
-  align: 'center center',
+  boxSize: 'fit-content 100%',
+  align: 'flex-start center',
   position: 'relative',
-  gap: 'B2',
+  gap: 'A',
   zIndex: 10,
   alignSelf: 'center',
 
-
   article: {
     flexFlow: 'column',
-    gap: 'A',
-    margin: '-C2 - - -',
-    description: {
-      border: 'solid, cream .5',
-      borderWidth: '0 0 .7px 0',
-      padding: '- - Z1 -'
-    }
+    gap: 'Y2',
+    maxWidth: `${430 / 16}em`
   },
 
   galleryContainer: {
     gallery: {
       position: 'relative',
       width: '100%',
-      height: `${430 / 16}em`,
+      height: `${500 / 16}em`,
       ':after': {
         content: '""',
         position: 'absolute',
         boxSize: '100% 100%',
-        // background: 'linear-gradient(to right,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
+        top: '0'
       },
       childProps: {
+        backgroundSize: 'cover'
 
       }
     },
 
     footer: {
-      margin: 'A - - Y'
+      width: '100%',
+
+      // padding: 'Y2 - - A2'
+      // margin: 'Z B1 - -'
     }
 
 

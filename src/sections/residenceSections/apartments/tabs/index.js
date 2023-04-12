@@ -23,10 +23,8 @@ const props = {
   background: 'url(' + ORNAMENT_PNG + ')',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  '@minTabletL': { style: {backgroundAttachment: 'fixed !important'} },
-  '@maxTabletL': {
-    background: 'none',
-  },
+  '@minTabletL': { style: { backgroundAttachment: 'fixed' } },
+  '@maxHeightS': { padding: 'C -' },
   ':before': {
     content: '""',
     position: 'absolute',
@@ -56,23 +54,33 @@ const props = {
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(0, 49, 49, .65),rgba(0, 49, 49, .75), rgba(0, 70, 70, 1))',
+    background: 'radial-gradient(rgba(0, 49, 49, .65),rgba(0, 49, 49, .75), rgba(0, 70, 70, 1), rgba(0, 70, 70, 1))',
     '@maxTabletL': { background: 'naviGreenLight'},
   },
   tabsContainer: {
     padding: '- F',
     maxWidth: `${1440 / 16}em`,
     gap: 'Z',
-    '@maxTabletL': {
+    overflow: 'hidden',
+    '@maxTabletS': {
       maxWidth: '100%',
-      gap: 'C',
-      style: { overflowX: 'auto' },
-      padding: 'C E',
+      gap: '0',
+      style: { overflowX: 'auto'},
+      padding: '- C',
     },
     childProps: {
+      border: 'solid, naviGreenDark 0',
+      borderWidth: `A`,
       '@maxTabletL': {
-        minWidth: 'F'
-      }
+        minWidth: 'E2',
+        align: 'center flex-start',
+        padding: 'C1 - - -'
+      },
+      '@maxHeightS': {
+        height: 'F3'
+      },
+
+      imageContainer: {image: {border: 'solid, cream .25'}}
     }
   }
 }
@@ -80,21 +88,6 @@ const props = {
 export const tabs = {
   extend: Flex,
   props,
-
-  class: {
-    // show: (element, state) => state.activeTab
-    //   ? {
-    //     width: 0,
-    //     padding: '0'
-    //     // display: 'none'
-    //   }
-    //   : {
-    //     // display: 'flex',
-    //     animationName: opacity,
-    //     animationDuration: '.5s',
-    //     animationTimingFunction: 'cubic-bezier(.17,.67,.99,1)'
-    //   }
-  },
 
   imageBackground: {},
 
@@ -108,9 +101,7 @@ export const tabs = {
       tabGreenForest,
       tabRetro,
       tabBlueLagoon,
-      tabQvevri,
-      // tabGela,
-      // tabGocha
+      tabQvevri
     ]
   }
 }

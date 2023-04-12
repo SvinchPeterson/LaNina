@@ -12,7 +12,6 @@ export const Book = {
     color: 'white',
     letterSpacing: '0px',
     opacity: '.85',
-    style: {backdropFilter: 'blur(10px)'},
     transition: 'opacity .5s ease, background .5s ease',
     ':hover': { opacity: '1', background: 'radial-gradient(rgba(255, 249, 237, 0), rgba(255, 249, 237, .05))' },
     ':hover > span': { transform: 'scale(1.05)' },

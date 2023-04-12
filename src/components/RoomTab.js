@@ -8,19 +8,13 @@ export const props = {
   overflow: 'hidden',
   flow: 'column',
   align: 'center center',
-  gap: 'C2',
+  gap: 'C',
   round: 'F',
   flex: 1,
   cursor: 'pointer',
   boxSizing: 'border-box',
   color: 'cream',
   transition: 'flex 1s ease',
-  '@maxTabletL': {
-    overflow: 'visible',
-    justifyContent: 'space-between',
-    padding: 'C1 - - -'
-  },
-  '@minTabletL': {},
   ':hover': { flex: '7' },
   ':hover > p': {
       opacity: '1',
@@ -52,6 +46,8 @@ export const props = {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       round: 'F',
+      border: 'solid, cream .15',
+      borderWidth: '.15px',
       style: { '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },}
     }
   },
@@ -78,15 +74,8 @@ export const props = {
     whiteSpace: 'nowrap',
     opacity: '0',
     transform: 'scale(.9)',
-    margin: '- - -Y1 -',
-    // opacity: '1'
     '@maxTabletL': {
-      opacity: '1',
-      margin: '- - -B1 -',
-      fontSize: 'C',
-      letterSpacing: '-1px',
-      transform: 'scale(1)',
-      style: {  }
+     display: 'none'
     }
   }
 }

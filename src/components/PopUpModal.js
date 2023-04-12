@@ -30,11 +30,11 @@ const props = {
     background: 'transparent',
     position: 'absolute',
     padding: '0',
-    top: 'A2',
-    right: 'B',
+    top: 'A1',
+    right: 'A2',
     zIndex: '2',
     transition: 'opacity .5s ease-in-out, transform .5s ease-in-out',
-    icon: { boxSize: 'A ' }
+    icon: { boxSize: 'Z2 ' }
   },
 
   logo: {

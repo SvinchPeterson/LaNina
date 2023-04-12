@@ -5,7 +5,6 @@ import { Flex } from 'smbls'
 import { ScrollTitle } from '../../../components'
 
 import { tabs } from './tabs'
-// import { rooms } from './rooms'
 
 const props = {
   width: '100%',
@@ -16,24 +15,31 @@ const props = {
   padding: 'E2 - - -',
   margin: 'D2 - - -',
   overflow: 'visible',
-  '@maxTabletM': { fontSize: `${15 / 16}em` },
+  '@maxTabletM': {
+    fontSize: `${15 / 16}em`,
+    gap: 'Y2'
+  },
+  '@maxHeightS': { padding: 'E - - -' },
 
   header: {
     alignSelf: 'center',
     width: '100%',
-    padding: '- - - -',
-
+    padding: '- - A -',
     align: 'center center',
     title: {
       fontSize: `${11.5 / 16}em`,
-      letterSpacing: `${9 / 11.5}em`,
+      letterSpacing: `${12 / 11.5}em`,
       textTransform: 'uppercase',
       fontWeight: '400',
       margin: '- - - -'
-    },
-    scroll: {
-      display: 'none',
     }
+  },
+
+  scroll: {
+    display: 'none',
+    alignSelf: 'center',
+    padding: 'Z - - -',
+    '@maxTabletS': { display: 'flex' }
   }
 }
 
@@ -50,8 +56,8 @@ export const apartments = {
 
   header: {
     extend: Flex,
-    title: { tag: 'h5', text: 'apartments' },
-    scroll: { extend: ScrollTitle }
+    title: { tag: 'h5', text: 'apartments' }
   },
-  tabs
+  tabs,
+  scroll: { extend: ScrollTitle }
 }

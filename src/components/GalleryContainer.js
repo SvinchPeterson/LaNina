@@ -34,14 +34,13 @@ const props = {
   },
 
   footer: {
-    border: 'solid, cream .25',
-    borderWidth: '.6px 0 0 0',
+    // border: 'solid, cream .25',
+    // borderWidth: '.6px 0 0 0',
     align: 'center space-between',
-    width: '60%',
-    margin: 'A - - -',
-    padding: 'Z - - -',
+    width: '80%',
+    margin: 'Y2 - - -',
     book: {
-      padding: 'Z B',
+      padding: '10px B',
       // padding: 'Z2 B2',
       background: 'transparent',
       border: 'solid, cream .35',

@@ -7,17 +7,17 @@ import { Navbar } from './Navbar'
 
 const props = {
   contentContainer: {
-    boxSize: '100% 80%',
+    boxSize: '100% 85%',
     zIndex: '3',
     flow: 'column',
 
     header: {
-      boxSize: 'D2 100%',
+      boxSize: 'E 100%',
       align: 'flex-end space-between',
       overflow: 'hidden',
-      border: 'solid, cream .5',
-      borderWidth: '0 0 .6px 0',
-      padding: '- Y',
+      border: 'solid, cream .35',
+      borderWidth: '0 0 .55px 0',
+      padding: '- A',
 
       titles: {
         position: 'relative',

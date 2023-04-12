@@ -75,21 +75,19 @@ const props = {
   header: {
     padding: '- - Z1 D',
     align: 'center flex-start',
-    '@maxTabletS': { padding: '- D Z1 B' },
-    '@maxMobileL': { padding: '- B1 Z1 B1'},
+    '@maxTabletL': { align: 'center space-between', padding: '- B2' },
+    '@maxMobileL': { padding: '- 0 - B' },
     title: {
       fontSize: `${11 / 16}em`,
       fontWeight: '400',
       textTransform: 'uppercase',
       letterSpacing: `${7 / 11}em`
     },
-    scroll: {
-      display: 'none',
-      '@maxTabletS': {
-        display: 'flex'
-      },
-      '@maxMobileS': { display: 'none' }
-    }
+    // scroll: {
+    //   display: 'none',
+    //   '@maxTabletS': { display: 'flex' },
+    //   '@maxMobileL': { display: 'none' }
+    // }
   },
 
   content: {
@@ -116,7 +114,7 @@ const props = {
       columns: 'repeat(4, 1fr)',
       justifyItems: 'stretch',
       gap: 'Y1',
-      padding: 'E -',
+      padding: 'D1 -',
       position: 'relative',
       margin: 'auto',
       childProps: {
@@ -139,11 +137,11 @@ const props = {
     }
   },
 
-  scroll2: {
-    alignSelf: 'center',
-    padding: 'A - - -',
+  scroll: {
+    alignSelf: 'flex-end',
+    padding: 'A B - -',
     display: 'none',
-    '@maxMobileS': { display: 'flex' }
+    '@maxTabletS': { display: 'flex' }
   }
 }
 
@@ -155,9 +153,8 @@ export const servicesFacilities = {
 
   header: {
     extend: Flex,
-    title: { tag: 'h5', text: 'Services & Facilities' },
-    scroll: {extend: ScrollTitle}
+    title: { tag: 'h5', text: 'Services & Facilities' }
   },
   content: { items },
-  scroll2: {extend: ScrollTitle}
+  scroll: {extend: ScrollTitle}
 }

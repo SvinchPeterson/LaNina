@@ -44,7 +44,7 @@ const menu = {
 
 const props = {
   position: 'fixed',
-  minWidth: '80%',
+  minWidth: '90%',
   height: 'C1',
   align: 'flex-end space-between',
   gap: '0',

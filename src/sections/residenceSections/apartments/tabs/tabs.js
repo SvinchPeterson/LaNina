@@ -34,7 +34,7 @@ export const tabBallerina = {
   },
   on: {
     click: (event, element, state) => {
-      state.update({  activeRoomsPopUp: true, activeBallerina: true })
+      state.update({ activeRoomsPopUp: true, activeBallerina: true })
     }
   },
 }

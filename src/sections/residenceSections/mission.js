@@ -9,7 +9,7 @@ import VERANDA_JPG from '../../assets/images/residence/sololaki/veranda.jpg'
 const props = {
   flexFlow: 'column',
   position: 'relative',
-  flexAlign: 'flex-start flex-start',
+  flexAlign: 'center flex-start',
   gap: 'A2',
   margin: 'F1 - - -',
   width: 'fit-content',
@@ -52,11 +52,11 @@ const props = {
   paragraph: {
     gap: 'X1',
     maxWidth: `${500 / 16}em`,
-    margin: '- - - Y',
+    textAlign: 'center',
+    style: { fontStyle: 'italic' },
     '@maxMobileL': { maxWidth: `H` },
     '@maxMobileS': { maxWidth: `G2` },
     '@maxMobileO': {padding: '- Z1' },
-    // '@maxMobileXS': { maxWidth: `G` },
     title: {
       fontSize: 'B',
       letterSpacing: `${-1 / 19}em`,

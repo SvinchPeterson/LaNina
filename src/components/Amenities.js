@@ -35,25 +35,33 @@ const list = {
 }
 
 const props = {
+  background: 'naviGreenLight .5',
+  // border: 'solid, cream .15',
+  // borderWidth: '.3px',
+  padding: 'B2 B',
+  round: 'B',
+  boxSizing: 'border-box',
+  backgroundImage: 'linear-gradient(160deg,rgba(0, 70, 70, .13) 0%,rgba(0, 70, 70, .2) 100%)',
+  style: {backdropFilter: 'blur(2px)'},
+
   title: {
     text: 'amenities',
     fontSize: `${11 / 16}em`,
-    fontWeight: '400',
+    fontWeight: '700',
     color: 'cream',
     textAlign: 'flex-start',
     letterSpacing: '5px',
-    padding: '- - Y1 Y',
     textTransform: 'uppercase',
 
   },
 
   list: {
     flexAlign: 'flex-start flex-start',
-    padding: 'Z 0 0 X',
-    gap: 'C',
+    padding: 'Z 0 0 -',
+    gap: 'A',
     childProps: {
-      fontSize: `${14 / 16}em`,
-      lineHeight: `${25 / 14}em`,
+      fontSize: `${13 / 16}em`,
+      lineHeight: `${25 / 13}em`,
       flexFlow: 'column',
       letterSpacing: '1px',
       childProps: {

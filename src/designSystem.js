@@ -82,13 +82,13 @@ export const MEDIA = {
   minHeightL: '(min-height: 1367px)',
   minHeightM: '(min-height: 1025px)',
   minHeightN: '(min-height: 769px)',
-  minHeightS: '(min-height: 561px)',
+  minHeightS: '(min-height: 671px)',
   minHeightXS: '(min-height: 481px)',
 
   maxHeightL: '(max-height: 1366px)',
   maxHeightM: '(max-height: 1024px)',
   maxHeightN: '(max-height: 768px)',
-  maxHeightS: '(max-height: 560px)',
+  maxHeightS: '(max-height: 670px)',
   maxHeightXS: '(max-height: 480px)',
 
 

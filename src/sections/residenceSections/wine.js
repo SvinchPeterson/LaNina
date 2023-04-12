@@ -15,13 +15,8 @@ const props = {
   width: 'fit-content',
   alignSelf: 'center',
   flow: 'column',
-  // '@mobileL': {
-  //   minHeight: '100%',
-  //   flow: 'column',
-  //   margin: 'E2 -',
-  //   overflow: 'hidden'
-  // },
-  // '@tabletM': { width: '100%' },
+  '@maxTabletM': { fontSize: `${15 / 16}em` },
+  '@maxMobileM': { minWidth: '100%' },
   image: {
     boxSize: `H G3`,
     padding: '0',
@@ -29,68 +24,32 @@ const props = {
     backgroundSize: 'contain',
     zIndex: '2',
     backgroundPosition: `center center`,
-    '@minTabletM': { style: { backgroundAttachment: 'fixed'} },
+    '@minTabletL': { style: { backgroundAttachment: 'fixed'} },
+    '@maxTabletL': { backgroundSize: 'cover' },
+    '@maxMobileM': { width: '90%' },
     style: {
       backgroundRepeat: 'no-repeat',
-      // '@media only screen and (min-width: 1281px)': {
-      //   backgroundPosition: `center bottom ${100 / 16}em`,
-      // },
       backgroundImage: 'radial-gradient(rgba(1, 57, 57, .35), rgba(1, 57, 57, .5)), url(' + WINE_JPG + ')'
-    },
-
-    // '@tabletM': {
-    //   boxSize: `H3 H`,
-    //   round: '0 0 I I',
-    //   backgroundSize: '100% 100%',
-    //   backgroundPosition: `center top`,
-    //   style: { backgroundRepeat: 'no-repeat' }
-    // },
-    // '@tabletS': { margin: '- - - -C2' },
-    // '@mobileL': {
-    //   margin: '0',
-    //   round: '0',
-    //   boxSize: '100% 100%',
-    //   backgroundSize: 'cover',
-
-    // }
+    }
   },
 
   paragraph: {
     gap: 'Z',
     maxWidth: 'G1',
-    // position: 'absolute',
     background: 'cream',
     margin: '- - -F1 -Z2',
     padding: 'C A C2 D',
     zIndex: '3',
     boxSizing: 'content-box',
     round: '0 0 0 E2',
-    // margin: '-G -E2 0 0',
-    // padding: 'A2 E1 E D',
-    // round: '0 0 0 F',
-    // align: 'center flex-start',
-    // '@tabletM': {
-    //   top: '0',
-    //   round: '0 0 0 F',
-    //   padding: '0 E1 E D2',
-    //   margin: '-Y -H -H 0'
-    // },
-    // '@tabletS': { margin: '-Y -G1 -H 0' },
-    // '@mobileL': {
-    //   top: '0',
-    //   left: '0',
-    //   padding: '0 D2',
-    //   round: '0',
-    //   background: 'naviGreen .35',
-    //   textAlign: 'center',
-    //   color: 'cream',
-    //   maxWidth: '100%',
-    //   minHeight: '100%',
-    //   align: 'center center',
-    //   style: { backdropFilter: 'blur(1px)' }
-    //   // alignSelf: 'flex-end',
-    // },
-    // '@mobileS': {padding: '0 B'},
+    '@maxMobileM': {
+      minWidth: '100%',
+      boxSizing: 'border-box',
+      padding: 'C C D D',
+      margin: '- - -F1 0',
+      style: { boxShadow: '15px 35px 30px rgba(0, 0, 0, .36)' }
+    },
+    '@maxMobileXS': { padding: 'C B2 C D',},
 
     title: {
       fontSize: 'D',
@@ -99,10 +58,7 @@ const props = {
     },
 
     p: {
-      fontSize: `${15 / 16}em`,
-      // '@mobileL': {
-      //   fontSize: `${14.5 / 16}em`
-      // }
+      fontSize: `${15 / 16}em`
     }
   }
 }

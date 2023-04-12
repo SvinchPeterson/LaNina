@@ -15,7 +15,11 @@ const props = {
   backgroundImage: 'url(' + ORNAMENTS_PNG + ')',
   ':before': { background: 'radial-gradient(rgba(0, 49, 49, .5), rgba(0, 49, 49, 1), rgba(0, 49, 49, 1))' },
   contentContainer: {
+    header: {
+      titles: {childProps: {fontSize: 'D'}}
+    },
     content: {
+      style: { boxShadow: '0px 60px 30px 15px rgba(0, 0, 0, .25)'},
       childProps: {
         position: 'absolute',
         top: '50%',

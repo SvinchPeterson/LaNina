@@ -5,7 +5,7 @@ import { Flex } from 'smbls'
 import { Navbar } from './Navbar'
 
 const props = {
-  width: '80%',
+  width: '90%',
   zIndex: '200',
   position: 'fixed',
   top: `50px`,

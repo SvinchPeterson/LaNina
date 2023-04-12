@@ -119,6 +119,29 @@ export const roomOpacityTransform = keyframes`
   }
 `
 
+export const roomDescription = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+`
+
+
+export const roomAmenities = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+`
+
 // travel animation
 export const bannerH1 = keyframes`
   from {
