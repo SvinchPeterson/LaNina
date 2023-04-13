@@ -2,6 +2,7 @@
 
 const FONTS_PATH = './assets/fonts'
 
+
 export const FONT = {
   helveticaNeue: [
     { url: FONTS_PATH + '/HelveticaNeue-UltraLight.woff2', fontWeight: 100 },

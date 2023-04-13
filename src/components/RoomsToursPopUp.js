@@ -10,7 +10,6 @@ const props = {
     boxSize: '100% 85%',
     zIndex: '3',
     flow: 'column',
-    border: '2px solid red',
     '@maxMobileM': {boxSize: '100% 90%'},
 
     header: {
@@ -20,7 +19,6 @@ const props = {
       border: 'solid, cream .35',
       borderWidth: '0 0 .55px 0',
       padding: '- A',
-      border: '2px solid yellow',
       '@maxMobileL': {
         flow: 'column',
         align: 'flex-start flex-end',
@@ -82,8 +80,7 @@ const props = {
       width: '100%',
       flex: '1',
       position: 'relative',
-      flow: 'column',
-      border: '2px solid yellow'
+      flow: 'column'
     }
   },
 

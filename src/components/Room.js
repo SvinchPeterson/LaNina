@@ -10,13 +10,12 @@ import { Amenities } from './Amenities'
 import { RoomResDesc } from './RoomResDesc'
 
 const props = {
-  boxSize: '100% 100%',
-  align: 'center center',
+  boxSize: 'fit-content 100%',
+  align: 'flex-start center',
   position: 'relative',
-  gap: 'A',
+  gap: 'B',
   zIndex: 10,
   alignSelf: 'center',
-  border: '2px solid red',
   '@maxTabletM': {
     flow: 'column',
     gap: '0'
@@ -49,14 +48,13 @@ const props = {
   },
 
   galleryContainer: {
-    height: '80%',
     '@maxTabletM': { minWidth: '100%' },
     gallery: {
       position: 'relative',
       width: '100%',
-      height: `80%`,
+      height: `${500 / 16}em`,
       '@maxMobileM': { height: `${400 / 16}em` },
-      '@maxMaxS': { height: `${270 / 16}em` },
+      // '@maxHeightS': { height: `${250 / 16}em` },
       childProps: { backgroundSize: 'cover' }
     },
 
