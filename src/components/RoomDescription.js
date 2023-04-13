@@ -3,13 +3,15 @@
 import { Paragraph } from './Paragraph'
 
 const props = {
-  padding: 'B2 B',
+  padding: 'B',
   round: 'B',
   color: 'cream',
   background: 'linear-gradient(160deg, rgba(255, 206, 168, .12) 0%,rgba(255, 206, 168, .2) 100%)',
+  border: 'solid, cream .15',
+  borderWidth: '.3px',
   style: {
     fontStyle: 'italic',
-    backdropFilter: 'blur(2px)',
+    backdropFilter: 'blur(1px)',
   },
   title: {
     fontSize: 'F',

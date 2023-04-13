@@ -18,8 +18,7 @@ const props = {
   alignSelf: 'center',
   '@maxTabletM': {
     flow: 'column',
-    gap: 'Z',
-    style: {padding: '0 0 0 0 !important'}
+    gap: '0'
   },
 
   header: {
@@ -31,10 +30,10 @@ const props = {
 
     childProps: {
       color: 'cream',
-      padding: '0',
+      padding: 'A 0',
       background: 'transparent',
       textTransform: 'uppercase',
-      fontSize: `${11.5 / 16}em`,
+      fontSize: `${11 / 16}em`,
       letterSpacing: `${2 / 11.5}em`,
       fontWeight: '700'
     }
@@ -54,18 +53,14 @@ const props = {
       position: 'relative',
       width: '100%',
       height: `${500 / 16}em`,
-      '@maxTabletM': {
-        style: {borderRadius: '0 !important'}
-      },
-      childProps: {
-        backgroundSize: 'cover'
-
-      }
+      '@maxMobileM': { height: `${400 / 16}em` },
+      '@maxMaxS': { height: `${270 / 16}em` },
+      childProps: { backgroundSize: 'cover' }
     },
 
     footer: {
       width: '100%',
-      padding: 'V2 B - B'
+      padding: 'X B - B'
     }
   }
 }

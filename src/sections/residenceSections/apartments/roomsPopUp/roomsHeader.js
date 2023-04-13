@@ -2,8 +2,6 @@
 
 import { Img } from 'smbls'
 
-import { header } from "../../../travelSections/tours/toursPopUp/toursHeader"
-
 import DRESS_PNG from '../../../../assets/icons/dress.png'
 import BRICKS_PNG from '../../../../assets/icons/bricks.png'
 import SOFA_PNG from '../../../../assets/icons/sofa.png'
@@ -21,9 +19,14 @@ const props = {
     }
   },
   tabs: {
-    gap: 'B2',
-    padding: '- - Y -',
-    childProps: { icon: { boxSize: 'A2 ' }}
+    gap: 'A',
+    '@maxMobileL': {
+      margin: 'X2 - - -'
+    },
+    childProps: {
+      boxSize: 'C2 C2',
+      icon: { boxSize: 'A2 '}
+    }
   }
 }
 
@@ -42,12 +45,14 @@ export const roomsHeader = {
         class: {
           show: (element, state) => state.activeBallerina
             ? {
-              bottom: '0',
+              bottom: `${10 / 28}em`,
               opacity: '1',
+              transform: 'scale(1)'
             }
             : {
               bottom: `${-50 / 28}em`,
-              opacity: '0'
+              opacity: '0',
+              transform: 'scale(.95)'
             }
         },
 
@@ -57,7 +62,8 @@ export const roomsHeader = {
       {
         class: {
           show: (element, state) => state.activeRedBrick
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: `${10 / 28}em`, opacity: '1', transform: 'scale(1)' }
+            : { bottom: `${-50 / 28}em`, opacity: '0', transform: 'scale(.95)' }
         },
         props: { text: 'red brick' }
       },
@@ -65,7 +71,8 @@ export const roomsHeader = {
       {
         class: {
           show: (element, state) => state.activeYellowCouch
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: `${10 / 28}em`, opacity: '1', transform: 'scale(1)' }
+            : { bottom: `${-50 / 28}em`, opacity: '0', transform: 'scale(.95)' }
         },
         props: { text: 'yellow couch' }
       },
@@ -73,7 +80,8 @@ export const roomsHeader = {
       {
         class: {
           show: (element, state) => state.activeGreenForest
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: `${10 / 28}em`, opacity: '1', transform: 'scale(1)' }
+            : { bottom: `${-50 / 28}em`, opacity: '0', transform: 'scale(.95)' }
         },
         props: { text: 'green forest' }
       },
@@ -81,7 +89,8 @@ export const roomsHeader = {
       {
         class: {
           show: (element, state) => state.activeRetro
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: `${10 / 28}em`, opacity: '1', transform: 'scale(1)' }
+            : { bottom: `${-50 / 28}em`, opacity: '0',  transform: 'scale(.95)' }
         },
         props: { text: 'retro' }
       },
@@ -89,7 +98,8 @@ export const roomsHeader = {
       {
         class: {
           show: (element, state) => state.activeLagoon
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: `${10 / 28}em`, opacity: '1', transform: 'scale(1)' }
+            : { bottom: `${-50 / 28}em`, opacity: '0', transform: 'scale(.95)' }
         },
         props: { text: 'blue lagoon' }
       },
@@ -97,7 +107,8 @@ export const roomsHeader = {
       {
         class: {
           show: (element, state) => state.activeQvevri
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: `${10 / 28}em`, opacity: '1', transform: 'scale(1)' }
+            : { bottom: `${-50 / 28}em`, opacity: '0', transform: 'scale(.95)' }
         },
         props: { text: 'qvevri' }
       }

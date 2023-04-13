@@ -1,6 +1,6 @@
 'use strict'
 
-import { Flex } from 'smbls'
+import { Flex, Button } from 'smbls'
 
 import { PopUpModal } from "./PopUpModal"
 import { Navbar } from './Navbar'
@@ -10,6 +10,7 @@ const props = {
     boxSize: '100% 85%',
     zIndex: '3',
     flow: 'column',
+    '@maxMobileM': {boxSize: '100% 90%'},
 
     header: {
       boxSize: 'E 100%',
@@ -18,24 +19,44 @@ const props = {
       border: 'solid, cream .35',
       borderWidth: '0 0 .55px 0',
       padding: '- A',
+      '@maxMobileL': {
+        flow: 'column',
+        align: 'flex-start flex-end',
+        border: 'none',
+        padding: '0',
+        boxSize: 'E1 100%',
+      },
 
       titles: {
         position: 'relative',
-        margin: '- - Z -',
+        minWidth: `${200 / 16}em`,
+        height:`${40 / 16}em`,
+        overflow: 'hidden',
+        '@maxMobileL': {
+          border: 'solid, cream .35',
+          borderWidth: '0 0 .55px 0',
+          minWidth: '100%',
+        },
         childProps: {
           position: 'absolute',
           left: '0',
           color: 'cream',
           whiteSpace: 'nowrap',
           lineHeight: `${22 / 28}em`,
-          transition: 'bottom .65s ease-in-out, opacity .65s ease-in-out',
+          transition: 'bottom .65s ease-in-out, opacity .65s ease-in-out, transform .65s ease-in-out',
           letterSpacing: `${-1 / 28}em`,
-          span: { fontWeight: '700' }
-        }
+          span: { fontWeight: '700' },
+          '@maxMobileL': {left: 'X'}
+        },
       },
 
       tabs: {
-        margin: '- - Y -',
+        // margin: '- - X2 -',
+        '@maxMobileL': {
+          alignSelf: 'flex-end',
+          minWidth: '100%',
+          align: 'center center'
+        },
         childProps: {
           cursor: 'pointer',
           fontSize: `${10.5 / 16}em`,
@@ -57,6 +78,10 @@ const props = {
       position: 'relative',
       flow: 'column'
     }
+  },
+
+  logo: {
+    '@maxMobileM': {display: 'none'}
   }
 }
 
@@ -71,7 +96,10 @@ export const RoomsToursPopUp = {
     header: {
       extend: Flex,
       titles: { childExtend: { tag: 'h2' } },
-      tabs: { extend: Navbar }
+      tabs: {
+        extend: Flex,
+        childExtend: { extend: Button }
+      }
     },
     content: { extend: Flex }
   },

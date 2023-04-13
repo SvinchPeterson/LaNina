@@ -23,12 +23,39 @@ const props = {
       style: {
         boxShadow: '0px 60px 30px 15px rgba(0, 0, 0, .25)',
         '> div:nth-child(odd)': {
-          padding: `0 ${50 / 16}em 0 0`,
-          '> div > div': {borderRadius: `0 ${30 / 16}em ${30 / 16}em 0`},
+          '@media only screen and (min-width: 1281px)': { padding: `0 ${50 / 16}em 0 0` },
+          '> div > div': {
+            '@media only screen and (min-width: 1281px)': {
+              borderRadius: `0 ${30 / 16}em ${30 / 16}em 0`,
+              borderTop: '.3px solid rgba(255, 249, 237, .15)',
+              borderRight: '.3px solid rgba(255, 249, 237, .15)',
+              borderBottom: '.3px solid rgba(255, 249, 237, .15)'
+            },
+            ':before': {
+              background: 'linear-gradient(to right,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)',
+              '@media only screen and (max-width: 1280px)': {
+                background: 'linear-gradient(to top,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
+              }
+            }
+          },
         },
+
         '> div:nth-child(even)': {
-          padding: `0 0 0 ${50 / 16}em`,
-          '> div > div': {borderRadius: `${30 / 16}em 0 0 ${30 / 16}em`},
+          '@media only screen and (min-width: 1281px)': { padding: `0 0 0 ${50 / 16}em` },
+          '> div > div': {
+            '@media only screen and (min-width: 1281px)': {
+              borderRadius: `${30 / 16}em 0 0 ${30 / 16}em`,
+              borderTop: '.3px solid rgba(255, 249, 237, .15)',
+              borderLeft: '.3px solid rgba(255, 249, 237, .15)',
+              borderBottom: '.3px solid rgba(255, 249, 237, .15)'
+            },
+            ':before': {
+              background: 'linear-gradient(to left,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)',
+              '@media only screen and (max-width: 1280px)': {
+                background: 'linear-gradient(to top,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
+              }
+            }
+          },
         },
       },
       childProps: {

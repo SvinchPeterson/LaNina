@@ -9,5 +9,5 @@ const link = {
 export const Navbar = {
   tag: 'nav',
   extend: Flex,
-  childExtend: link
+  childExtend: Link,
 }

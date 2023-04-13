@@ -674,8 +674,10 @@ export const roomQvevri = {
         }
         : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
+    gallery: {
+      extend: galleryQvevri
+    },
 
-    gallery: { extend: galleryQvevri },
     footer: {
       book: {},
       navArrows: {

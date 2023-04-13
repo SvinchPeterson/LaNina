@@ -28,9 +28,10 @@ const props = {
     ':before': {
       content: '""',
       position: 'absolute',
-      boxSize: '101% 100%',
+      boxSize: '100% 100%',
       zIndex: '3',
-      top: '0'
+      top: '0',
+      left: '0'
     }
   },
 

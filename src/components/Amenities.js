@@ -36,13 +36,13 @@ const list = {
 
 const props = {
   background: 'naviGreenLight .5',
-  // border: 'solid, cream .15',
-  // borderWidth: '.3px',
-  padding: 'B2 B',
+  border: 'solid, cream .15',
+  borderWidth: '.3px',
+  padding: 'B',
   round: 'B',
   boxSizing: 'border-box',
   backgroundImage: 'linear-gradient(160deg,rgba(0, 70, 70, .13) 0%,rgba(0, 70, 70, .2) 100%)',
-  style: {backdropFilter: 'blur(2px)'},
+  style: {backdropFilter: 'blur(1px)'},
 
   title: {
     text: 'amenities',
