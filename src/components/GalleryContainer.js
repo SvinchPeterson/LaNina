@@ -21,8 +21,6 @@ const props = {
   },
 
   gallery: {
-    // width: 'H2',
-    // height: 'G1',
     position: 'relative',
     overflow: 'hidden',
     ':before': {
@@ -36,14 +34,11 @@ const props = {
   },
 
   footer: {
-    // border: 'solid, cream .25',
-    // borderWidth: '.6px 0 0 0',
     align: 'center space-between',
     width: '80%',
     margin: 'Y2 - - -',
     book: {
-      padding: '10px B',
-      // padding: 'Z2 B2',
+      padding: 'Z B',
       background: 'transparent',
       border: 'solid, cream .35',
       borderWidth: '.75px',
