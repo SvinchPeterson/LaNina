@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { slideHide2 } from '../../animations'
+import { slideHide2, slideHide3 } from '../../animations'
 
 import { FeedBack, NavArrowsBlack } from '../../components'
 
@@ -243,10 +243,14 @@ const props = {
   alignSelf: 'center',
   position: 'relative',
   margin: '- - G -',
-  // margin: '- - D -',
-  style: {
-    overflowX: 'hidden', '::-webkit-scrollbar': { display: 'none' }
+  '@maxMobileL': {
+    fontSize: `${15 / 16}em`,
+    minHeight: `${400 / 15}em`,
+
+
   },
+  // margin: '- - D -',
+  style: { overflowX: 'hidden', '::-webkit-scrollbar': { display: 'none' }},
   ':before': {
     content: '""',
     width: `${500 / 16}em`,
@@ -255,9 +259,10 @@ const props = {
     left: '0',
     top: '0',
     background: 'linear-gradient(to right, rgba(255, 249, 237, 1) 0%,rgba(255, 249, 237, 0) 100%)',
-    zIndex: 3
-    // '@tabletS': { width: `${250 / 16}em` },
-    // '@MobileL': { width: `${100 / 16}em` }
+    zIndex: 3,
+    '@maxTabletS': {
+      width: `${200 / 16}em`,
+    }
   },
   ':after': {
     content: '""',
@@ -268,7 +273,9 @@ const props = {
     top: '0',
     background: 'linear-gradient(to left, rgba(255, 249, 237, 1) 0%,rgba(255, 249, 237, 0) 100%)',
     zIndex: 3,
-    // '@mobileL': { width: `${100 / 16}em` }
+    '@maxTabletS': {
+      width: `${200 / 16}em`
+    }
   },
 
   header: {
@@ -278,7 +285,6 @@ const props = {
     zIndex: '10',
     padding: '- - Z -',
     style: { borderBottom: '.5px solid rgba(0, 0, 0, .5)' },
-    // '@mobileL': {width: '95%'},
     title: {
       fontWeight: '400',
       fontSize: `${14 / 16}em`,
@@ -296,6 +302,7 @@ const props = {
     position: 'relative',
     width: 'calc(464 * 22)',
     style: { overflowX: 'auto' },
+    '@maxMobileL': { width: 'calc(350 * 22)' },
     feedbacks: {
       gap: '0',
       width: '100%',
@@ -309,14 +316,14 @@ const props = {
         alignSelf: 'center',
         '&::-webkit-scrollbar': { display: 'none' }
       },
+      '@maxMobileL': { style: { animationName: slideHide3 } },
 
       childProps: {
-        // '@mobileL': {
-        //   fontSize: `${14 / 16}em`,
-        //   minHeight: 'F3 !important',
-        //   maxHeight: 'G1',
-        //   minWidth: `${350 / 14}em`,
-        // }
+         '@maxMobileL': {
+          minWidth: `${350 / 16}em`,
+          maxWidth: `${350 / 16}em`,
+          height: 'G'
+        }
       }
     }
   }

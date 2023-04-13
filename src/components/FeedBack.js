@@ -4,10 +4,11 @@ import { Paragraph } from './Paragraph'
 
 const props = {
   minWidth: `${464 / 16}em`,
-  minHeight: 'F3',
+  height: 'F3',
   gap: '0',
   border: 'solid, cream 0',
   borderWidth: `${12 / 16}em`,
+  style: {fontStyle: 'italic'},
 
   content: {
     boxSize: '100% 100%',
@@ -33,10 +34,10 @@ const props = {
     date: {
       margin: 'auto - - -',
       alignSelf: 'flex-end',
-      fontSize: `${11.5 / 16}em`,
+      fontSize: `${11 / 16}em`,
       fontWeight: '700',
       textTransform: 'uppercase',
-      letterSpacing: `${1 / 11.5}em`,
+      letterSpacing: `${1 / 11}em`,
       opacity: '.85'
     }
   }
