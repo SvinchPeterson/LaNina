@@ -22,6 +22,7 @@ const props = {
     gap: '0',
     margin: '-C - - -'
   },
+  '@maxHeightN': {  margin: '0 - - -' },
 
   header: {
     display: 'none',
@@ -45,6 +46,7 @@ const props = {
     flexFlow: 'column',
     gap: 'A',
     width: `${400 / 16}em`,
+    margin: 'A - - -',
     '@maxTabletS': { display: 'none' }
   },
 
