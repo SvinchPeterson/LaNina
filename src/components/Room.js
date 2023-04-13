@@ -19,7 +19,8 @@ const props = {
   alignSelf: 'center',
   '@maxTabletS': {
     flow: 'column',
-    gap: '0'
+    gap: '0',
+    margin: '-C - - -'
   },
 
   header: {
@@ -51,11 +52,9 @@ const props = {
     '@maxTabletS': { minWidth: '100%' },
     gallery: {
       position: 'relative',
-      // width: '100%',
       height: `${500 / 16}em`,
       '@maxMobileM': { height: `${450 / 16}em` },
       '@maxMaxS': { height: `${300 / 16}em` },
-      // '@maxHeightS': { height: `${300 / 16}em` },
       childProps: { backgroundSize: 'cover' }
     },
 
