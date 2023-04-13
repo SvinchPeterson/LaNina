@@ -22,7 +22,8 @@ const props = {
         top: '50%',
         transform: 'translate(50%, -50%)',
         right: `${-13 / 16}em`,
-        background: 'black 1'
+        background: 'black 1',
+        '@maxMobileM': { display: 'none' }
       }
     }
   }

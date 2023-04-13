@@ -246,10 +246,9 @@ const props = {
   '@maxMobileL': {
     fontSize: `${15 / 16}em`,
     minHeight: `${400 / 15}em`,
-
-
   },
-  // margin: '- - D -',
+  '@maxMobileM': {margin: '- - D -'},
+
   style: { overflowX: 'hidden', '::-webkit-scrollbar': { display: 'none' }},
   ':before': {
     content: '""',
