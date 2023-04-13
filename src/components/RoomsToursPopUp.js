@@ -13,7 +13,7 @@ const props = {
     '@maxMobileM': {boxSize: '100% 90%'},
 
     header: {
-      boxSize: 'E 100%',
+      boxSize: 'D2 100%',
       align: 'flex-end space-between',
       overflow: 'hidden',
       border: 'solid, cream .35',
@@ -24,7 +24,7 @@ const props = {
         align: 'flex-start flex-end',
         border: 'none',
         padding: '0',
-        // boxSize: 'E1 100%',
+        boxSize: 'E1 100%',
       },
 
       titles: {

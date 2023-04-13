@@ -294,7 +294,7 @@ const props = {
     },
 
     navArrows: {
-      childProps: { boxSize: 'C C'}
+      childProps: { boxSize: 'B2 B2'}
     }
   },
 

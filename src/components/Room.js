@@ -8,6 +8,7 @@ import { GalleryContainer } from './GalleryContainer'
 import { RoomDescription } from './RoomDescription'
 import { Amenities } from './Amenities'
 import { RoomResDesc } from './RoomResDesc'
+import { AmenitiesResponsive} from './AmenitiesResponsive'
 
 const props = {
   boxSize: 'fit-content 100%',
@@ -16,14 +17,14 @@ const props = {
   gap: 'B',
   zIndex: 10,
   alignSelf: 'center',
-  '@maxTabletM': {
+  '@maxTabletS': {
     flow: 'column',
     gap: '0'
   },
 
   header: {
     display: 'none',
-    '@maxTabletM': { display: 'flex' },
+    '@maxTabletS': { display: 'flex' },
     minWidth: '100%',
     align: 'center space-between',
     padding: '- B',
@@ -42,19 +43,19 @@ const props = {
   article: {
     flexFlow: 'column',
     gap: 'A',
-    maxWidth: `${430 / 16}em`,
-    '@maxTabletL': { maxWidth: `${350 / 16}em` },
-    '@maxTabletM': { display: 'none' }
+    width: `${400 / 16}em`,
+    '@maxTabletS': { display: 'none' }
   },
 
   galleryContainer: {
-    '@maxTabletM': { minWidth: '100%' },
+    '@maxTabletS': { minWidth: '100%' },
     gallery: {
       position: 'relative',
-      width: '100%',
+      // width: '100%',
       height: `${500 / 16}em`,
-      '@maxMobileM': { height: `${400 / 16}em` },
-      // '@maxHeightS': { height: `${250 / 16}em` },
+      '@maxMobileM': { height: `${450 / 16}em` },
+      '@maxMaxS': { height: `${300 / 16}em` },
+      // '@maxHeightS': { height: `${300 / 16}em` },
       childProps: { backgroundSize: 'cover' }
     },
 

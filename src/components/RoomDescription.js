@@ -6,7 +6,7 @@ const props = {
   padding: 'B',
   round: 'B',
   color: 'cream',
-  background: 'linear-gradient(160deg, rgba(255, 206, 168, .12) 0%,rgba(255, 206, 168, .2) 100%)',
+  background: 'naviGreenLight .5',
   border: 'solid, cream .15',
   borderWidth: '.3px',
   style: {

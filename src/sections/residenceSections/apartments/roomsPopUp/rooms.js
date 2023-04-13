@@ -310,12 +310,12 @@ export const roomYellowCouch = {
         ? {
           opacity: '1',
           transform: 'translateY(0) scale(1)',
-          transition: 'opacity .8s ease-in-out, transform 1s ease'
+          transition: 'opacity .8s ease-in-out, transform .7s ease'
         }
         : {
           opacity: '0',
           transform: 'translateY(50px) scale(.97)',
-          transition: 'opacity .5s ease-in-out, transform 1s ease'
+          transition: 'opacity .5s ease-in-out, transform .7s ease'
         }
       },
       title: {},

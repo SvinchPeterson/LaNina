@@ -13,7 +13,9 @@ const props = {
   position: 'relative',
   gap: 'B',
   childProps: {
-    boxSize: 'C1 C1',
+    fontSize: '1em',
+    // fontSize: '16px',
+    boxSize: `${42 / 16}em ${42 / 16}em`,
     round: '100%',
     background: 'transparent',
     opacity: '.75',
@@ -24,7 +26,7 @@ const props = {
     style: { cursor: 'pointer' },
     arrow: {
       alignSelf: 'center',
-      boxSize: ' A',
+      boxSize: ' Z2',
       transition: 'transform .25s ease'
     }
   }

@@ -35,13 +35,13 @@ const list = {
 }
 
 const props = {
-  background: 'naviGreenLight .5',
-  border: 'solid, cream .15',
-  borderWidth: '.3px',
-  padding: 'B',
+  // background: 'naviGreenLight .5',
+  // border: 'solid, cream .15',
+  // borderWidth: '.3px',
+  padding: '- - - B',
   round: 'B',
   boxSizing: 'border-box',
-  backgroundImage: 'linear-gradient(160deg,rgba(0, 70, 70, .13) 0%,rgba(0, 70, 70, .2) 100%)',
+  // backgroundImage: 'linear-gradient(160deg,rgba(0, 70, 70, .13) 0%,rgba(0, 70, 70, .2) 100%)',
   style: {backdropFilter: 'blur(1px)'},
 
   title: {
@@ -58,12 +58,13 @@ const props = {
   list: {
     flexAlign: 'flex-start flex-start',
     padding: 'Z 0 0 -',
-    gap: 'A',
+    gap: 'Z1',
     childProps: {
       fontSize: `${13 / 16}em`,
       lineHeight: `${25 / 13}em`,
       flexFlow: 'column',
       letterSpacing: '1px',
+      whiteSpace: 'nowrap',
       childProps: {
         align: 'center flex-start',
         color: 'cream .65',
