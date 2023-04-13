@@ -18,13 +18,14 @@ const props = {
     background: 'transparent',
     opacity: '.75',
     transition: 'opacity .25s ease, background .25s ease',
+    align: 'center center',
 
     ':hover': { opacity: '1' },
     style: { cursor: 'pointer' },
     arrow: {
       alignSelf: 'center',
       boxSize: ' A',
-      transition: 'transform .25s ease',
+      transition: 'transform .25s ease'
     }
   }
 }
@@ -32,7 +33,11 @@ const props = {
 export const NavArrows = {
   extend: Flex,
   props,
-  childExtend: { tag: 'button', arrow: { extend: Img } }
+  childExtend: {
+    tag: 'button',
+    extend: Flex,
+    arrow: { extend: Img }
+  }
 }
 
 export const NavArrowsBlack = {

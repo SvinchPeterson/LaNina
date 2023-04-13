@@ -309,7 +309,7 @@ const props = {
       style: {
         scrollBehavior: 'smooth',
         animationName: slideHide2,
-        animationDuration: '100s',
+        animationDuration: '80s',
         animationTimingFunction: 'linear',
         animationIterationCount: 'infinite',
         minWidth: '100%',
