@@ -19,7 +19,6 @@ const props = {
   boxSizing: 'border-box',
   '@maxTabletM': { fontSize: `${15 / 16}em` },
   '@maxMobileM': { margin: 'C - 0 -', padding: 'E - - -', minWidth: '100%'},
-
   imageContainer: {
     alignSelf: 'center',
     width: `${520 / 16}em`,
@@ -45,8 +44,9 @@ const props = {
       backgroundSize: 'contain',
       backgroundPosition: 'center center',
       style: { backgroundRepeat: 'no-repeat'},
-      '@minTabletL': {style: { backgroundAttachment: 'fixed' } },
-      '@maxTabletL': {style: { backgroundSize: 'cover' } },
+      '@minTabletL': { style: { backgroundAttachment: 'fixed' } },
+      '@maxTabletL': { backgroundSize: 'cover' },
+      '@minMaxL': { backgroundSize: 'cover' },
     }
   },
 

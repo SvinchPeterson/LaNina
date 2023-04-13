@@ -48,7 +48,7 @@ export const props = {
       round: 'F',
       border: 'solid, cream .15',
       borderWidth: '.15px',
-      style: { '@media only screen and (min-width: 1281px)': { backgroundAttachment: 'fixed' },}
+      '@minTabletL': { style: { backgroundAttachment: 'fixed' } }
     }
   },
 

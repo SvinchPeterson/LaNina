@@ -14,12 +14,23 @@ import { roomsHeader } from './roomsHeader'
 const props = {
   backgroundImage: 'url(' + ORNAMENTS_PNG + ')',
   ':before': { background: 'radial-gradient(rgba(0, 49, 49, .5), rgba(0, 49, 49, 1), rgba(0, 49, 49, 1))' },
+  '@maxTabletL': { fontSize: `${15 / 16}em` },
   contentContainer: {
     header: {
       titles: {childProps: {fontSize: 'D'}}
     },
     content: {
-      style: { boxShadow: '0px 60px 30px 15px rgba(0, 0, 0, .25)'},
+      style: {
+        boxShadow: '0px 60px 30px 15px rgba(0, 0, 0, .25)',
+        '> div:nth-child(odd)': {
+          padding: `0 ${50 / 16}em 0 0`,
+          '> div > div': {borderRadius: `0 ${30 / 16}em ${30 / 16}em 0`},
+        },
+        '> div:nth-child(even)': {
+          padding: `0 0 0 ${50 / 16}em`,
+          '> div > div': {borderRadius: `${30 / 16}em 0 0 ${30 / 16}em`},
+        },
+      },
       childProps: {
         position: 'absolute',
         top: '50%',

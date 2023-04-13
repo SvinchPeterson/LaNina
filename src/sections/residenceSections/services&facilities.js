@@ -97,7 +97,7 @@ const props = {
     backgroundPosition: 'center',
     // border: 'solid, orange3',
     // borderWidth: '5px 0 0 0',
-    '@minTabletM': { style: { backgroundAttachment: 'fixed' } },
+    '@minTabletL': { style: { backgroundAttachment: 'fixed' } },
     style: {
       backgroundRepeat: 'no-repeat',
       boxShadow: 'inset 0px 0px 5px .3px rgba(0, 0, 0, .5)'

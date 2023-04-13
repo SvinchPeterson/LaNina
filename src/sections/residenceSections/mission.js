@@ -10,7 +10,7 @@ const props = {
   flexFlow: 'column',
   position: 'relative',
   flexAlign: 'center flex-start',
-  gap: 'A2',
+  gap: 'B2',
   margin: 'F1 - - -',
   width: 'fit-content',
   alignSelf: 'center',

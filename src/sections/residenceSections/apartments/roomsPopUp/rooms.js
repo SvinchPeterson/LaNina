@@ -26,27 +26,20 @@ export const roomBallerina = {
       }
   },
 
-  props: { padding: '- C2 - -' },
-
+  header: {},
 
   galleryContainer: {
     class: {
       show: (element, state) => state.activeBallerina
-      ? { width: `calc(100% - 430px)`, transition: 'width .75s ease-in-out' }
+      ? {
+        width: `calc(100% - 430px)`,
+        transition: 'width .75s ease-in-out',
+        '@media only screen and (max-width: 1366px)': { width: `calc(100% - 350px)` }
+      }
       : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
-    gallery: {
-      extend: galleryBallerina,
-      props: {
-        round: '0 B2 B2 0',
-       ':before': {
-        left: '0',
-        background: 'linear-gradient(to right,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
-      }
-      }
-    },
+    gallery: { extend: galleryBallerina },
     footer: {
-      props: { padding: 'Y B2 Y2 B'},
       book: {},
       navArrows: {
         ...[
@@ -136,7 +129,9 @@ export const roomRedBrick = {
       transition: 'opacity .3s ease-in-out',
     }
   },
-  props: { padding: '- - - C2' },
+
+  header: {},
+
   article: {
     description: {
       class: {
@@ -177,21 +172,15 @@ export const roomRedBrick = {
   galleryContainer: {
     class: {
       show: (element, state) => state.activeRedBrick
-      ? { width: `calc(100% - 430px)`, transition: 'width .75s ease-in-out' }
+      ? {
+        width: `calc(100% - 430px)`,
+        transition: 'width .75s ease-in-out',
+        '@media only screen and (max-width: 1366px)': { width: `calc(100% - 350px)` }
+      }
       : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
-    gallery: {
-      props: {
-        round: 'B2 0 0 B2',
-        ':before': {
-          right: '0',
-          background: 'linear-gradient(to left,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
-        }
-      },
-      extend: galleryRedBrick
-    },
+    gallery: { extend: galleryRedBrick },
     footer: {
-      props: { padding: 'Y B Y2 B2'},
       book: {},
       navArrows: {
         ...[
@@ -244,27 +233,24 @@ export const roomYellowCouch = {
       transition: 'opacity .3s ease-in-out',
     }
   },
-  props: { padding: '- C2 - -' },
+
+  header: {},
+
   galleryContainer: {
     class: {
       show: (element, state) => state.activeYellowCouch
-      ? { width: `calc(100% - 430px)`, transition: 'width .75s ease-in-out' }
+      ? {
+        width: `calc(100% - 430px)`,
+        transition: 'width .75s ease-in-out',
+        '@media only screen and (max-width: 1366px)': { width: `calc(100% - 350px)` }
+      }
       : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
 
     gallery: {
-      extend: galleryYellowCouch,
-      props: {
-        round: '0 B2 B2 0',
-        ':before': {
-          left: '0',
-          background: 'linear-gradient(to right,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
-        }
-      },
-      // props: { round: 'G B2 B2 G' }
+      extend: galleryYellowCouch
     },
     footer: {
-      props: { padding: 'Y B2 Y2 B'},
       book: {},
       navArrows: {
         ...[
@@ -355,7 +341,7 @@ export const roomGreenForest = {
     }
   },
 
-  props: { padding: '- - - C2' },
+  header: {},
 
   article: {
     description: {
@@ -399,22 +385,16 @@ export const roomGreenForest = {
   galleryContainer: {
     class: {
       show: (element, state) => state.activeGreenForest
-      ? { width: `calc(100% - 430px)`, transition: 'width .75s ease-in-out' }
+      ? {
+        width: `calc(100% - 430px)`,
+        transition: 'width .75s ease-in-out',
+        '@media only screen and (max-width: 1366px)': { width: `calc(100% - 350px)` }
+      }
       : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
-    gallery: {
-      extend: galleryGreenForest,
-      props: {
-        round: 'B2 0 0 B2',
-        ':before': {
-          right: '0',
-          background: 'linear-gradient(to left,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
-        }
-       }
-    },
+    gallery: { extend: galleryGreenForest },
 
     footer: {
-      props: { padding: 'Y B Y2 B2'},
       book: {},
       navArrows: {
         ...[
@@ -468,30 +448,20 @@ export const roomRetro = {
     }
   },
 
-  props: { padding: '- C2 - -' },
-
-
-
+  header: {},
   galleryContainer: {
     class: {
       show: (element, state) => state.activeRetro
-        ? { width: `calc(100% - 430px)
-        `, transition: 'width .75s ease-in-out' }
+        ? {
+          width: `calc(100% - 430px)`,
+          transition: 'width .75s ease-in-out',
+          '@media only screen and (max-width: 1366px)': { width: `calc(100% - 350px)` }
+        }
         : { width: '0', opacity: '0',  transition: 'width .3s ease-in-out' }
     },
 
-    gallery: {
-      extend: galleryRetro,
-      props: {
-        round: '0 B2 B2 0',
-        ':before': {
-          left: '0',
-          background: 'linear-gradient(to right,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
-        }
-      }
-    },
+    gallery: { extend: galleryRetro },
     footer: {
-      props: { padding: 'Y B2 Y2 B'},
       book: {},
       navArrows: {
         ...[
@@ -583,6 +553,8 @@ export const roomBlueLagoon = {
     }
   },
 
+  header: {},
+
   article: {
     description: {
       class: {
@@ -621,27 +593,19 @@ export const roomBlueLagoon = {
     }
   },
 
-  props: { padding: '- - - C2' },
-
   galleryContainer: {
     class: {
       show: (element, state) => state.activeLagoon
-        ? { width: `calc(100% - 430px)`, transition: 'width .75s ease-in-out' }
+        ? {
+          width: `calc(100% - 430px)`,
+          transition: 'width .75s ease-in-out',
+          '@media only screen and (max-width: 1366px)': { width: `calc(100% - 350px)` }
+        }
         : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
 
-    gallery: {
-      extend: galleryBlueLagoon,
-      props: {
-        round: 'B2 0 0 B2',
-        ':before': {
-          right: '0',
-          background: 'linear-gradient(to left,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
-        }
-      }
-     },
+    gallery: { extend: galleryBlueLagoon },
     footer: {
-      props: { padding: 'Y B Y2 B2'},
       book: {},
       navArrows: {
         ...[
@@ -699,28 +663,20 @@ export const roomQvevri = {
     }
   },
 
-  props: { padding: '- C2 - -' },
-
-
+  header: {},
   galleryContainer: {
     class: {
       show: (element, state) => state.activeQvevri
-        ? { width: `calc(100% - 430px)`, transition: 'width .75s ease-in-out' }
+        ? {
+          width: `calc(100% - 430px)`,
+          transition: 'width .75s ease-in-out',
+          '@media only screen and (max-width: 1366px)': { width: `calc(100% - 350px)` }
+        }
         : { width: '0', opacity: '0', transition: 'width .3s ease-in-out' }
     },
-    gallery: {
-      extend: galleryQvevri,
-      props: {
-        round: '0 B2 B2 0',
-        ':before': {
-          left: '0',
-          background: 'linear-gradient(to right,rgba(0, 49, 49, 1) 0%, rgba(0, 49, 49, 0) 100%)'
-        }
-      }
-    },
 
+    gallery: { extend: galleryQvevri },
     footer: {
-      props: { padding: 'Y B2 Y2 B'},
       book: {},
       navArrows: {
         ...[

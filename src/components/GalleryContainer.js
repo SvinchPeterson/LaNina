@@ -28,8 +28,9 @@ const props = {
     ':before': {
       content: '""',
       position: 'absolute',
-      boxSize: '100% H2',
-      zIndex: '3'
+      boxSize: '101% 100%',
+      zIndex: '3',
+      top: '0'
     }
   },
 
