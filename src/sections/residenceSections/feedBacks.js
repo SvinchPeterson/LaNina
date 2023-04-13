@@ -243,6 +243,7 @@ const props = {
   alignSelf: 'center',
   position: 'relative',
   margin: '- - G -',
+  '@maxTabletM': { margin: '- - F -'},
   '@maxMobileL': {
     fontSize: `${15 / 16}em`,
     minHeight: `${400 / 15}em`,

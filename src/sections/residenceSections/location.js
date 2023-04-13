@@ -12,7 +12,7 @@ const props = {
   padding: '- - D1 -',
   position: 'relative',
   margin: '- - B -',
-  '@maxTabletM': { width: '80%' },
+  '@maxTabletM': { width: '70%' },
   '@maxMobileM': { width: '90%', padding: 'D1 - 0 -', margin: '- - C -' },
 
 
