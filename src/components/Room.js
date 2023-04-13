@@ -20,9 +20,9 @@ const props = {
   '@maxTabletS': {
     flow: 'column',
     gap: '0',
-    margin: '-C - - -'
+    margin: '-C2 - - -'
   },
-  '@maxHeightN': {  margin: '0 - - -' },
+  '@maxHeightN': { margin: '0 - - -' },
 
   header: {
     display: 'none',
