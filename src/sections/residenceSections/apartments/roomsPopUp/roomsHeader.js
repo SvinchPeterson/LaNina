@@ -23,6 +23,7 @@ const props = {
     '@maxMobileL': {
       margin: 'X2 - - -'
     },
+    '@maxMobileS': { gap: '0'},
     childProps: {
       boxSize: 'C2 C2',
       icon: { boxSize: 'A2 '}

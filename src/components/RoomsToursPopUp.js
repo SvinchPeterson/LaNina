@@ -24,7 +24,7 @@ const props = {
         align: 'flex-start flex-end',
         border: 'none',
         padding: '0',
-        boxSize: 'E1 100%',
+        // boxSize: 'E1 100%',
       },
 
       titles: {
@@ -51,11 +51,15 @@ const props = {
       },
 
       tabs: {
-        // margin: '- - X2 -',
         '@maxMobileL': {
           alignSelf: 'flex-end',
           minWidth: '100%',
-          align: 'center center'
+          align: 'center flex-end',
+          padding: '- Z - -'
+        },
+        '@maxMobileS': {
+          align: 'center space-between',
+          padding: '- Z'
         },
         childProps: {
           cursor: 'pointer',
