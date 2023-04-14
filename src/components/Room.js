@@ -76,13 +76,7 @@ export const Room = {
       { text: 'description' },
       {
         text: 'amenities',
-        on: {
-          click: (event, element, state) => {
-            state.update({
-              activeAmenitiesPopUp: true
-            })
-          }
-        },
+        on: { click: (event, element, state) => { state.update({ activeAmenitiesPopUp: true }) } },
       }
     ]
   },

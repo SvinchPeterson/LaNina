@@ -28,7 +28,15 @@ export const roomBallerina = {
 
   header: {
     ...[
-      {},
+      {
+        on: {
+          click: (event, element, state) => { state.update({
+            activeDescriptionsPopUp: true,
+            activeBallerinaDescription: true
+          }) }
+        },
+
+      },
       {}
     ]
   },
@@ -135,7 +143,19 @@ export const roomRedBrick = {
     }
   },
 
-  header: {},
+  header: {
+    ...[
+      {
+        on: {
+          click: (event, element, state) => { state.update({
+            activeDescriptionsPopUp: true,
+            activeRedBrickDescription: true
+          }) }
+        },
+      },
+      {}
+    ]
+  },
 
   article: {
     description: {
@@ -239,7 +259,18 @@ export const roomYellowCouch = {
     }
   },
 
-  header: {},
+  header: {
+    ...[
+      {
+        on: {
+          click: (event, element, state) => { state.update({
+            activeDescriptionsPopUp: true,
+            activeYellowCouchDescription: true
+          }) }
+        },
+      }
+    ]
+  },
 
   galleryContainer: {
     class: {
@@ -346,7 +377,18 @@ export const roomGreenForest = {
     }
   },
 
-  header: {},
+  header: {
+    ...[
+      {
+        on: {
+          click: (event, element, state) => { state.update({
+            activeDescriptionsPopUp: true,
+            activeGreenForestDescription: true
+          }) }
+        },
+      }
+    ]
+  },
 
   article: {
     description: {
@@ -453,7 +495,18 @@ export const roomRetro = {
     }
   },
 
-  header: {},
+  header: {
+    ...[
+      {
+        on: {
+          click: (event, element, state) => { state.update({
+            activeDescriptionsPopUp: true,
+            activeRetroDescription: true
+          }) }
+        },
+      }
+    ]
+  },
   galleryContainer: {
     class: {
       show: (element, state) => state.activeRetro
@@ -558,7 +611,18 @@ export const roomBlueLagoon = {
     }
   },
 
-  header: {},
+  header: {
+    ...[
+      {
+        on: {
+          click: (event, element, state) => { state.update({
+            activeDescriptionsPopUp: true,
+            activeBlueLagoonDescription: true
+          }) }
+        },
+      }
+    ]
+  },
 
   article: {
     description: {
@@ -668,7 +732,19 @@ export const roomQvevri = {
     }
   },
 
-  header: {},
+  header: {
+    ...[
+      {
+        on: {
+          click: (event, element, state) => { state.update({
+            activeDescriptionsPopUp: true,
+            activeQvevriDescription: true
+          }) }
+        },
+      }
+    ]
+  },
+
   galleryContainer: {
     class: {
       show: (element, state) => state.activeQvevri

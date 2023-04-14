@@ -30,6 +30,15 @@ const state = {
   activeQvevri: false,
 
   activeAmenitiesPopUp: false,
+  activeDescriptionsPopUp: false,
+
+  activeBallerinaDescription: false,
+  activeRedBrickDescription: false,
+  activeYellowCouchDescription: false,
+  activeGreenForestDescription: false,
+  activeRetroDescription: false,
+  activeBlueLagoonDescription: false,
+  activeQvevriDescription: false
 }
 
 const menu = {

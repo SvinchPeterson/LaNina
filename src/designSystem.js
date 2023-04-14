@@ -91,7 +91,7 @@ export const MEDIA = {
   maxHeightO: '(max-height: 820px)',
   maxHeightN: '(max-height: 768px)',
   maxHeightS: '(max-height: 670px)',
-  maxHeightXS: '(max-height: 480px)',
+  maxHeightXS: '(max-height: 550px)',
 
   minMaxL: '(min-width: 1367px) and (max-height: 820px)',
   maxMaxS: '(max-width: 480px) and (max-height: 650px)',

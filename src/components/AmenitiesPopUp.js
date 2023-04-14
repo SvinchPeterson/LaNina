@@ -1,7 +1,5 @@
 'use strict'
 
-import { Flex } from 'smbls'
-
 import { PopUpModal } from './PopUpModal'
 import { Amenities } from './Amenities'
 
@@ -14,13 +12,13 @@ const props = {
     amenities: {
       padding: 'C',
       fontSize: `${19 / 16}em`,
-      border: 'solid, cream .5',
+      border: 'solid, cream .35',
       borderWidth: '.5px',
       background: 'black .05',
       style: { backdropFilter: 'blur(3px)'},
       '@maxMobileXS': { padding: 'B1'},
-      '@maxHeightS': {
-        maxHeight: `${400 / 19}em`,
+      '@maxHeightXS': {
+        maxHeight: `${450 / 19}em`,
         overflow: 'hidden',
         padding: 'B1',
       },
@@ -32,17 +30,17 @@ const props = {
           textAlign: 'center',
           padding: '- - - Y2'
         },
-        '@maxHeightS': {
+        '@maxHeightXS': {
           boxSizing: 'border-box',
-          padding: '- - B1 -',
-          style: {
-            overflowY: 'auto',
-            maxHeight: `${350 / 19}em`
-          }
+          padding: '- - C -',
+          maxHeight: `${450 / 19}em`,
+          style: { overflowY: 'auto' }
         },
       }
     }
-  }
+  },
+
+  logo: {opacity: '.7'}
 }
 
 export const AmenitiesPopUp = {
@@ -55,5 +53,5 @@ export const AmenitiesPopUp = {
     amenities: {extend: Amenities, title: null }
   },
 
-  logo: null
+  logo: {}
 }

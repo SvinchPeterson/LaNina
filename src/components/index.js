@@ -37,3 +37,4 @@ export * from './TravelParagraph'
 export * from './TourPackage'
 
 export * from './AmenitiesPopUp'
+export * from './RoomDescriptionPopUp'

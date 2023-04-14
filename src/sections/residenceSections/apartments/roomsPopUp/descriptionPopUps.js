@@ -1,36 +1,55 @@
 'use strict'
 
-import { AmenitiesPopUp } from "../../../../components"
+import { RoomDescriptionPopUp } from "../../../../components/RoomDescriptionPopUp"
 
-export const ballerinaAmenitiesPopUp = {
-  extend: AmenitiesPopUp
+import {
+  ballerinaTextEng, redBrickTextEng, yellowCouchTextEng, greenForrestTextEng,
+  retroTextEng, blueLagoonTextEng, qvevriTextEng
+} from "../../../../texts/residence"
+
+export const ballerinaDescriptionPopUp = {
+  extend: RoomDescriptionPopUp,
+  close: {},
+  contentContainer: { description: { p: { extend: ballerinaTextEng } } },
 }
 
-export const redBrickAmenitiesPopUp = {
-  extend: AmenitiesPopUp
-}
-
-
-export const yellowCouchAmenitiesPopUp = {
-  extend: AmenitiesPopUp
-}
-
-
-export const greenForestAmenitiesPopUp = {
-  extend: AmenitiesPopUp
-}
-
-
-export const retroAmenitiesPopUp = {
-  extend: AmenitiesPopUp
+export const redBrickDescriptionPopUp = {
+  extend: RoomDescriptionPopUp,
+  close: {},
+  contentContainer: { description: { p: { extend: redBrickTextEng } } },
 }
 
 
-export const blueLagoonAmenitiesPopUp = {
-  extend: AmenitiesPopUp
+export const yellowCouchDescriptionPopUp = {
+  extend: RoomDescriptionPopUp,
+  close: {},
+  contentContainer: { description: { p: { extend: yellowCouchTextEng } } },
 }
 
 
-export const qvevriAmenitiesPopUp = {
-  extend: AmenitiesPopUp
+export const greenForestDescriptionPopUp = {
+  extend: RoomDescriptionPopUp,
+  close: {},
+  contentContainer: { description: { p: { extend: greenForrestTextEng } } },
+}
+
+
+export const retroDescriptionPopUp = {
+  extend: RoomDescriptionPopUp,
+  close: {},
+  contentContainer: { description: { p: { extend: retroTextEng } } },
+}
+
+
+export const blueLagoonDescriptionPopUp = {
+  extend: RoomDescriptionPopUp,
+  close: {},
+  contentContainer: { description: { p: { extend: blueLagoonTextEng } } },
+}
+
+
+export const qvevriDescriptionPopUp = {
+  extend: RoomDescriptionPopUp,
+  close: {},
+  contentContainer: { description: { p: { extend: qvevriTextEng } } },
 }

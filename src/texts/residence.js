@@ -38,6 +38,14 @@ export const retroTextEng = {
   text: `Cozy and quiet one bedroom apartment of 44 m2 with open terrace, located on high first floor and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
 }
 
+export const blueLagoonTextEng = {
+  text: `Blue Lagoon is a cozy and stylish one-bedroom apartment of 50 m2 with an open terrace, located on the high first floor and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower,  kitchen with a dining area, making the apartment comfortable for 3 people.`
+}
+
+export const qvevriTextEng = {
+  text: `Cozy and quiet one-bedroom apartment of 55 m2 with an open terrace, located on the high first floor and composed of a living room with a comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
+}
+
 // wine
 
 export const wineTextEng = {

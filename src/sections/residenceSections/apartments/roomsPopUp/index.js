@@ -2,12 +2,15 @@
 
 import { Flex } from 'smbls'
 
-import { RoomsToursPopUp, AmenitiesPopUp } from '../../../../components'
+import { RoomsToursPopUp, AmenitiesPopUp, RoomDescriptionPopUp } from '../../../../components'
 
 import { roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro, roomBlueLagoon, roomQvevri } from './rooms'
 
+import {
+  ballerinaTextEng, redBrickTextEng, yellowCouchTextEng, greenForrestTextEng,
+  retroTextEng, blueLagoonTextEng, qvevriTextEng
+} from "../../../../texts/residence"
 
-// import { toursContainer } from '../../../travelSections/tours/toursPopUp'
 import ORNAMENTS_PNG from '../../../../assets/images/residence/sololaki/ornaments.png'
 import { roomsHeader } from './roomsHeader'
 
@@ -125,13 +128,177 @@ export const roomsPopUp = {
       amenities: {
         class: {
           show: (element, state) => state.activeAmenitiesPopUp
-            ? { opacity: '1', transform: 'scale(1)', transition: 'opacity .5s ease, transform .5s ease' }
-            : { opacity: '0', transform: 'scale(.95)' }
+            ? {
+              opacity: '1', transform: 'scale(1) translateY(0)',
+              transition: 'opacity .4s ease, transform .4s ease'
+            }
+            : {
+              opacity: '0',
+              transform: 'scale(.95) translateY(50px)'
+            }
         },
        }
     },
 
+    logo: {
+      class: {
+        show: (element, state) => state.activeAmenitiesPopUp
+          ? { opacity: '.8', transform: 'rotate3d(2, 1, 1, -0.1turn)' }
+          : { opacity: '0', transform: 'rotate3d(0)' }
+      }
+    }
   },
+
+  roomDescriptionsPopUp: {
+    extend: RoomDescriptionPopUp,
+    class: {
+      show: (element, state) => state.activeDescriptionsPopUp
+        ? { zIndex: '30', opacity: '1' } : { zIndex: '-1', pointerEvents: 'none', opacity: '0' }
+    },
+
+    close: {
+       on: {
+        click: (event, element, state) => {
+          state.update({
+            activeDescriptionsPopUp: false,
+            activeBallerinaDescription: false,
+            activeRedBrickDescription: false,
+            activeYellowCouchDescription: false,
+            activeGreenForestDescription: false,
+            activeRetroDescription: false,
+            activeBlueLagoonDescription: false,
+            activeQvevriDescription: false
+          })
+        }
+      },
+    },
+    contentContainer: {
+      ...[
+        {
+          class: {
+            show: (element, state) => state.activeBallerinaDescription
+              ? {
+                opacity: '1',
+                transform: 'scale(1) translate(-50%, -50%)',
+                transition: 'opacity .4s ease, transform .4s ease'
+              }
+              : {
+                opacity: '0',
+                zIndex: '-1',
+                transform: 'scale(.95) translate(-50%, -45%)'
+              }
+          },
+          p: { extend: ballerinaTextEng }
+        },
+
+        {
+          class: {
+            show: (element, state) => state.activeRedBrickDescription
+              ? {
+                opacity: '1',
+                transform: 'scale(1) translate(-50%, -50%)',
+                transition: 'opacity .4s ease, transform .4s ease'
+              }
+              : {
+                opacity: '0',
+                transform: 'scale(.95) translate(-50%, -45%)'
+              }
+          },
+          p: { extend: redBrickTextEng }
+        },
+
+        {
+          class: {
+            show: (element, state) => state.activeYellowCouchDescription
+              ? {
+                opacity: '1',
+                transform: 'scale(1) translate(-50%, -50%)',
+                transition: 'opacity .4s ease, transform .4s ease'
+              }
+              : {
+                opacity: '0',
+                transform: 'scale(.95) translate(-50%, -45%)'
+              }
+          },
+          p: { extend: yellowCouchTextEng }
+        },
+
+        {
+          class: {
+            show: (element, state) => state.activeGreenForestDescription
+              ? {
+                opacity: '1',
+                transform: 'scale(1) translate(-50%, -50%)',
+                transition: 'opacity .4s ease, transform .4s ease'
+              }
+              : {
+                opacity: '0',
+                transform: 'scale(.95) translate(-50%, -45%)'
+              }
+          },
+          p: { extend: greenForrestTextEng }
+        },
+
+        {
+          class: {
+            show: (element, state) => state.activeRetroDescription
+              ? {
+                opacity: '1',
+                transform: 'scale(1) translate(-50%, -50%)',
+                transition: 'opacity .4s ease, transform .4s ease'
+              }
+              : {
+                opacity: '0',
+                transform: 'scale(.95) translate(-50%, -45%)'
+              }
+          },
+          p: { extend: retroTextEng }
+        },
+
+        {
+          class: {
+            show: (element, state) => state.activeBlueLagoonDescription
+              ? {
+                opacity: '1',
+                transform: 'scale(1) translate(-50%, -50%)',
+                transition: 'opacity .4s ease, transform .4s ease'
+              }
+              : {
+                opacity: '0',
+                transform: 'scale(.95) translate(-50%, -45%)'
+              }
+          },
+          p: {extend: blueLagoonTextEng }
+        },
+
+        {
+          class: {
+            show: (element, state) => state.activeQvevriDescription
+              ? {
+                opacity: '1',
+                transform: 'scale(1) translate(-50%, -50%)',
+                transition: 'opacity .4s ease, transform .4s ease'
+              }
+              : {
+                opacity: '0',
+                transform: 'scale(.95) translate(-50%, -45%)'
+              }
+          },
+
+          p: {extend: qvevriTextEng }
+        }
+      ]
+
+    },
+    logo: {
+      class: {
+        show: (element, state) => state.activeDescriptionsPopUp
+          ? { opacity: '.8', transform: 'rotate3d(2, 1, 1, -0.1turn)' }
+          : { opacity: '0', transform: 'rotate3d(0)' }
+      }
+    }
+  },
+
 
 
   logo: {
