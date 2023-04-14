@@ -7,8 +7,6 @@ import { roomOpacityTransform, roomDescription } from '../animations'
 import { GalleryContainer } from './GalleryContainer'
 import { RoomDescription } from './RoomDescription'
 import { Amenities } from './Amenities'
-import { RoomResDesc } from './RoomResDesc'
-import { AmenitiesResponsive} from './AmenitiesResponsive'
 
 const props = {
   boxSize: 'fit-content 100%',
@@ -44,9 +42,9 @@ const props = {
 
   article: {
     flexFlow: 'column',
-    gap: 'A',
+    gap: 'A2',
     width: `${400 / 16}em`,
-    margin: 'A - - -',
+    margin: 'Z2 - - -',
     '@maxTabletS': { display: 'none' }
   },
 
@@ -76,7 +74,16 @@ export const Room = {
     childExtend: Button,
     ...[
       { text: 'description' },
-      { text: 'amenities' }
+      {
+        text: 'amenities',
+        on: {
+          click: (event, element, state) => {
+            state.update({
+              activeAmenitiesPopUp: true
+            })
+          }
+        },
+      }
     ]
   },
 

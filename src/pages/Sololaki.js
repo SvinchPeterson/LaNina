@@ -27,7 +27,9 @@ const state = {
   activeGreenForest: false,
   activeRetro: false,
   activeLagoon: false,
-  activeQvevri: false
+  activeQvevri: false,
+
+  activeAmenitiesPopUp: false,
 }
 
 const menu = {

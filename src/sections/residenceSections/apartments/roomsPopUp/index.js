@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { RoomsToursPopUp } from '../../../../components'
+import { RoomsToursPopUp, AmenitiesPopUp } from '../../../../components'
 
 import { roomBallerina, roomRedBrick, roomYellowCouch, roomGreenForest, roomRetro, roomBlueLagoon, roomQvevri } from './rooms'
 
@@ -112,6 +112,16 @@ export const roomsPopUp = {
       roomQvevri
     }
   },
+
+  ameninitiesPopUps: {
+    extend: AmenitiesPopUp,
+    class: {
+      show: (element, state) => state.activeAmenitiesPopUp
+        ? { display: 'flex', zIndex: '30' } : { display: 'none', zIndex: '0', pointerEvents: 'none' }
+    },
+    close: { on: { click: (event, element, state) => { state.update({ activeAmenitiesPopUp: false }) } } }
+  },
+
 
   logo: {
     class: {

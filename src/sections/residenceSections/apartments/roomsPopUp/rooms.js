@@ -26,7 +26,12 @@ export const roomBallerina = {
       }
   },
 
-  header: {},
+  header: {
+    ...[
+      {},
+      {}
+    ]
+  },
 
   galleryContainer: {
     class: {

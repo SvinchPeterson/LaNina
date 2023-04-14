@@ -3,6 +3,7 @@
 import { Flex } from 'smbls'
 
 const list = {
+  extend: Flex,
   childExtend: { childExtend: Flex },
   ...[
     {
@@ -42,7 +43,6 @@ const props = {
   round: 'B',
   boxSizing: 'border-box',
   // backgroundImage: 'linear-gradient(160deg,rgba(0, 70, 70, .13) 0%,rgba(0, 70, 70, .2) 100%)',
-  style: {backdropFilter: 'blur(1px)'},
 
   title: {
     text: 'amenities',
@@ -50,15 +50,19 @@ const props = {
     fontWeight: '700',
     color: 'cream',
     textAlign: 'flex-start',
-    letterSpacing: '5px',
+    letterSpacing: `${5 / 11}em`,
     textTransform: 'uppercase',
+    border: 'solid, cream .35',
+    borderWidth: '0 0 .6px 0',
+    width: '95%',
+    padding: '- - Y -'
 
   },
 
   list: {
-    flexAlign: 'flex-start flex-start',
+    align: 'flex-start flex-start',
     padding: 'Z 0 0 -',
-    gap: 'Z1',
+    gap: 'Z2',
     childProps: {
       fontSize: `${13 / 16}em`,
       lineHeight: `${25 / 13}em`,
