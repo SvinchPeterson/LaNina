@@ -17,7 +17,7 @@ const props = {
       border: 'solid, cream .5',
       borderWidth: '.5px',
       background: 'black .05',
-      style: { backdropFilter: 'blur(.5px)'},
+      style: { backdropFilter: 'blur(3px)'},
       '@maxMobileXS': { padding: 'B1'},
       '@maxHeightS': {
         maxHeight: `${400 / 19}em`,
