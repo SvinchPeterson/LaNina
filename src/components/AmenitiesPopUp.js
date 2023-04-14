@@ -17,8 +17,8 @@ const props = {
       background: 'black .05',
       style: { backdropFilter: 'blur(3px)'},
       '@maxMobileXS': { padding: 'B1'},
-      '@maxHeightXS': {
-        maxHeight: `${450 / 19}em`,
+      '@maxHeightS': {
+        maxHeight: `${600 / 19}em`,
         overflow: 'hidden',
         padding: 'B1',
       },
@@ -30,11 +30,13 @@ const props = {
           textAlign: 'center',
           padding: '- - - Y2'
         },
-        '@maxHeightXS': {
+        '@maxHeightS': {
           boxSizing: 'border-box',
-          padding: '- - C -',
-          maxHeight: `${450 / 19}em`,
-          style: { overflowY: 'auto' }
+          padding: '- - B1 -',
+          style: {
+            overflowY: 'auto',
+            maxHeight: `${580 / 19}em`
+          }
         },
       }
     }
