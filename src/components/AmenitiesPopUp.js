@@ -24,13 +24,6 @@ const props = {
         overflow: 'hidden',
         padding: 'B1',
       },
-      title: {
-        letterSpacing: '10px',
-        width: '100%',
-        '@maxMobileM': {
-          padding: '- - - Y2'
-        }
-      },
       list: {
         gap: 'B',
         '@maxMobileM': {
@@ -59,7 +52,7 @@ export const AmenitiesPopUp = {
   close: {},
 
   contentContainer: {
-    amenities: {extend: Amenities }
+    amenities: {extend: Amenities, title: null }
   },
 
   logo: null
