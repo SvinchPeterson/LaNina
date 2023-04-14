@@ -17,7 +17,13 @@ const props = {
       border: 'solid, cream .5',
       borderWidth: '.5px',
       background: 'black .05',
+      style: { backdropFilter: 'blur(.5px)'},
       '@maxMobileXS': { padding: 'B1'},
+      '@maxHeightS': {
+        maxHeight: `${400 / 19}em`,
+        overflow: 'hidden',
+        padding: 'B1',
+      },
       title: {
         letterSpacing: '10px',
         width: '100%',
@@ -32,7 +38,15 @@ const props = {
           gap: '0',
           textAlign: 'center',
           padding: '- - - Y2'
-        }
+        },
+        '@maxHeightS': {
+          boxSizing: 'border-box',
+          padding: '- - B1 -',
+          style: {
+            overflowY: 'auto',
+            maxHeight: `${350 / 19}em`
+          }
+        },
       }
     }
   }

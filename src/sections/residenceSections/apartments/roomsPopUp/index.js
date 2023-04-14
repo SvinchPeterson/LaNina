@@ -117,9 +117,20 @@ export const roomsPopUp = {
     extend: AmenitiesPopUp,
     class: {
       show: (element, state) => state.activeAmenitiesPopUp
-        ? { display: 'flex', zIndex: '30' } : { display: 'none', zIndex: '0', pointerEvents: 'none' }
+        ? { zIndex: '30', opacity: '1' } : { zIndex: '-1', pointerEvents: 'none', opacity: '0' }
     },
-    close: { on: { click: (event, element, state) => { state.update({ activeAmenitiesPopUp: false }) } } }
+
+    close: { on: { click: (event, element, state) => { state.update({ activeAmenitiesPopUp: false }) } } },
+    contentContainer: {
+      amenities: {
+        class: {
+          show: (element, state) => state.activeAmenitiesPopUp
+            ? { opacity: '1', transform: 'scale(1)', transition: 'opacity .5s ease, transform .5s ease' }
+            : { opacity: '0', transform: 'scale(.95)' }
+        },
+       }
+    },
+
   },
 
 
