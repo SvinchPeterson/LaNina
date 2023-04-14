@@ -18,9 +18,9 @@ const props = {
       style: { backdropFilter: 'blur(3px)'},
       '@maxMobileXS': { padding: 'B1'},
       '@maxHeightS': {
-        maxHeight: `${600 / 19}em`,
+        maxHeight: `${450 / 19}em`,
         overflow: 'hidden',
-        padding: 'B1',
+        padding: '0 B1',
       },
       list: {
         gap: 'B',
@@ -32,10 +32,10 @@ const props = {
         },
         '@maxHeightS': {
           boxSizing: 'border-box',
-          padding: '- - B1 -',
+          padding: 'B1 - B1 -',
           style: {
             overflowY: 'auto',
-            maxHeight: `${580 / 19}em`
+            maxHeight: `${450 / 19}em`
           }
         },
       }

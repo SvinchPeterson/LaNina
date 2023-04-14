@@ -6,7 +6,10 @@ import { roomDescription } from '../../../../animations'
 
 import { galleryBallerina, galleryRedBrick, galleryYellowCouch, galleryGreenForest, galleryRetro, galleryBlueLagoon, galleryQvevri } from '../../../../galleries/apartmentsGalleries'
 
-import { ballerinaTextEng, redBrickTextEng, yellowCouchTextEng, greenForrestTextEng, retroTextEng } from '../../../../texts/residence'
+import {
+  ballerinaTextEng, redBrickTextEng, yellowCouchTextEng, greenForrestTextEng,
+  retroTextEng, blueLagoonTextEng, qvevriTextEng
+} from '../../../../texts/residence'
 
 export const roomBallerina = {
   extend: Room,
@@ -641,7 +644,7 @@ export const roomBlueLagoon = {
       },
 
       title: { text: 'Retro' },
-      p: { extend: retroTextEng }
+      p: { extend: blueLagoonTextEng }
     },
     amenities: {
       class: {
@@ -811,7 +814,7 @@ export const roomQvevri = {
         }
       },
       title: { text: 'Retro' },
-      p: { extend: retroTextEng }
+      p: { extend: qvevriTextEng }
     },
     amenities: {
       class: {

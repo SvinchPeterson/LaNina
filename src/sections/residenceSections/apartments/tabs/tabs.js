@@ -118,12 +118,11 @@ export const tabRetro = {
 export const tabBlueLagoon = {
   extend: RoomTab,
   props: {
-    href: '#roomRetro',
     imageContainer: {
       image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + BLUE_LAGOON_JPG + ')' } }
     },
     icon: { src: LAGOON_PNG },
-    p: { text: 'Where contemporary design combine with traditional architecture.' },
+    p: { text: 'Gentle blue brings you balance and inner peace.' },
     title: { text: 'blue lagoon' }
   },
 
@@ -154,41 +153,3 @@ export const tabQvevri = {
   },
 }
 
-export const tabGela = {
-  extend: RoomTab,
-  props: {
-    href: '#roomRetro',
-    imageContainer: {
-      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + QVEVRI_JPG + ')' } }
-    },
-    icon: { src: QVEVRI_PNG },
-    p: { text: 'Where contemporary design combine with traditional architecture.' },
-    title: { text: 'qvevri' }
-  },
-
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeRoomsPopUp: true, activeQvevri: true })
-    }
-  },
-}
-
-
-export const tabGocha = {
-  extend: RoomTab,
-  props: {
-    href: '#roomRetro',
-    imageContainer: {
-      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + QVEVRI_JPG + ')' } }
-    },
-    icon: { src: QVEVRI_PNG },
-    p: { text: 'Where contemporary design combine with traditional architecture.' },
-    title: { text: 'qvevri' }
-  },
-
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeRoomsPopUp: true, activeQvevri: true })
-    }
-  },
-}
