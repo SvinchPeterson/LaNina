@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { ContactItems, Map } from '../../components'
+import { ContactItems, Map, SectionTitle } from '../../components'
 
 
 const props = {
@@ -15,16 +15,14 @@ const props = {
   '@maxTabletM': { width: '70%' },
   '@maxMobileM': { width: '90%', padding: 'D1 - 0 -', margin: '- - C -' },
 
-
   title: {
-    fontSize: `${12 / 16}em`,
-    letterSpacing: `${12/ 12}em`,
-    fontWeight: '400',
-    textTransform: 'uppercase',
+    fontSize: `${11 / 16}em`,
+    letterSpacing: `${12/ 11}em`,
     position: 'absolute',
     transform: 'rotate(180deg)',
     padding: '- D - -',
     left: '-C',
+    ':after': {margin: '- - - -8px'},
     style: {
       writingMode: 'vertical-rl',
       textOrientation: 'mixed',
@@ -33,9 +31,6 @@ const props = {
       transform: 'rotate(0)',
       padding: '0 0 Z2 C',
       position: 'initial',
-
-      // left: '0',
-      // top: '-C',
       fontSize: `${11 / 16}em`,
 
 
@@ -82,7 +77,7 @@ export const location = {
   props,
   attr: { id: 'location' },
 
-  title: { tag: 'h5', text: 'location' },
+  title: { extend: SectionTitle, text: 'location' },
 
   map: {extend: Map },
 

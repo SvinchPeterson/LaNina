@@ -24,7 +24,8 @@ const props = {
   title: {
     fontSize: `${11 / 16}em`,
     letterSpacing: `${10 / 11}em`,
-    padding: '- - C -'
+    padding: '- - C -',
+    '@maxTabletL': { padding: '- - A -' }
 
 
   },

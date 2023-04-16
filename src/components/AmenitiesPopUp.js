@@ -12,8 +12,8 @@ const props = {
     amenities: {
       padding: 'C',
       fontSize: `${19 / 16}em`,
-      border: 'solid, cream .35',
-      borderWidth: '.5px',
+      border: 'solid, orange .35',
+      borderWidth: '.3px',
       background: 'black .05',
       style: { backdropFilter: 'blur(3px)'},
       '@maxMobileXS': { padding: 'B1'},
