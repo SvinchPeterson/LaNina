@@ -20,7 +20,7 @@ const props = {
   '@maxTabletL': { fontSize: `${14 / 16}em` },
   contentContainer: {
     header: {
-      titles: {childProps: {fontSize: 'D'}}
+      titles: { childProps: {fontSize: 'D'} }
     },
     content: {
       style: {

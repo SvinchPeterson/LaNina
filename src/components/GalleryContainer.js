@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { Gallery } from './Gallery'
 
-import { Book } from './Book'
+import { BookingLink } from './BookingLink'
 
 import { NavArrowsCream } from './NavigationArrows'
 
@@ -47,6 +47,7 @@ const props = {
       fontWeight: '700',
       opacity: '.75',
       transition: 'opacity .25s ease-in-out, background .25s ease-in-out',
+      cursor: 'pointer',
       span: { transition: 'transform .25s ease'},
       ':hover': { opacity: '1', background: 'cream .025' },
       ':hover > span': { transform: 'scale(1.05)' },
@@ -62,7 +63,7 @@ export const GalleryContainer = {
   gallery: { extend: Gallery },
   footer: {
     extend: Flex,
-    book: { extend: Book },
+    book: { extend: BookingLink },
     navArrows: { extend: NavArrowsCream }
   }
 }

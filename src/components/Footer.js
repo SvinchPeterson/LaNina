@@ -7,17 +7,18 @@ import { opacity } from '../animations'
 import FACEBOOK_PNG from '../assets/icons/social-facebook.png'
 import INSTAGRAM_PNG from '../assets/icons/social-instagram.png'
 
-import { Book } from './Book'
+import { BookingLink } from './BookingLink'
 
 const props = {
-  width: '90%',
+  minWidth: '90%',
+  '@maxMobileM': { minWidth: '95%' },
   position: 'fixed',
   bottom: '0',
-  padding: 'A -',
-  flexAlign: 'flex-end space-between',
-  alignSelf: 'center',
   zIndex: '50',
-  // '@mobileS': { bottom: 'Z1' },
+  padding: '- - Z -',
+  alignSelf: 'center',
+  justifyContent: 'space-between',
+  overflow: 'hidden',
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
@@ -27,33 +28,45 @@ const props = {
 
   socialLinks: {
     flexAlign: 'center center',
-    gap: 'C',
+    gap: 'Z',
     style: { zIndex: '60' },
     childProps: {
       target: '_blank',
-      opacity: '.85',
-      '&:hover': { opacity: '1' },
-      icon: { boxSize: 'A2 -' }
+      padding: 'Y2',
+      '@minTabletL': {
+        opacity: '.85',
+        ':hover': { opacity: '1', transform: 'scale(1.03)' },
+        transition: 'opacity .15s ease-in-out, transform .15s ease-in-out',
+      },
+      icon: { boxSize: 'A1 -' },
     }
+  },
+
+  book: {
+    '@minTabletL': {
+      opacity: '.85',
+      ':hover': { opacity: '1' },
+      transition: 'opacity .15s ease-in-out',
+      ':hover > span': { transform: 'scale(1.03)' },
+    },
+    span: {
+      display: 'block',
+      '@minTabletL': {transition:' transform .15s ease-in-out'}
+    },
+    href: 'https://www.airbnb.com/users/404104381/listings?fbclid=IwAR1M3Rx_GD2eAEA7nzUFqkAo6Ukr4Bkvjb4FKIragquUW54fukDFixV0gHE'
   }
 }
 
 export const socialLinks = {
-  childExtend: { extend: Link, icon: { extend: Img } },
+  extend: Flex,
+  childExtend: {
+    extend: [Link, Flex],
+    icon: { extend: Img }
+  },
   ...[
-    {
-      props: {
-        href: `https://www.facebook.com/BBResidenceTbilisi`,
-        icon: { src: FACEBOOK_PNG }
-      }
-    },
+    { props: { icon: { src: FACEBOOK_PNG } } },
 
-    {
-      props: {
-        href: 'https://www.instagram.com/laninaresidence/',
-        icon: { src: INSTAGRAM_PNG }
-      }
-    }
+    { props: { icon: { src: INSTAGRAM_PNG } } }
   ]
 
 }
@@ -63,5 +76,5 @@ export const Footer = {
   extend: Flex,
 
   socialLinks,
-  Book
+  book: { extend: BookingLink }
 }

@@ -203,16 +203,16 @@ const header = {
           on: { click: (event, element, state) => { state.update({ activeTravelMenu: true, activeTravelMobileMenu: true }) } },
           class: {
               show: (element, state) => state.activeTravelMenu
-                ? { top: `${-30 / 12}em`, transform: 'scale(.9)' }
-                : { top: '0', transform: 'scale(1)' }
+                ? { bottom: `${-30 / 10}em`, transform: 'scale(.9)' }
+                : { bottom: '0', transform: 'scale(1)' }
           }
         },
         close: {
           on: { click: (event, element, state) => { state.update({ activeTravelMenu: false, activeTravelMobileMenu: false }) } },
           class: {
             show: (element, state) => state.activeTravelMenu
-              ? { bottom: `${3 / 12}em`, transform: 'scale(1)' }
-              : { bottom: `${-30 / 12}em`, transform: 'scale(.9)' }
+              ? { bottom: `${0 / 10}em`, transform: 'scale(1)' }
+              : { bottom: `${-30 / 10}em`, transform: 'scale(.9)' }
           }
         }
       }

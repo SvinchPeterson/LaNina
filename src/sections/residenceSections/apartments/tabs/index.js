@@ -78,9 +78,7 @@ const props = {
       },
       '@maxHeightS': {
         height: 'F3'
-      },
-
-      imageContainer: {image: {border: 'solid, cream .25'}}
+      }
     }
   }
 }

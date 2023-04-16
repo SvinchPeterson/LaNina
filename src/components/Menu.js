@@ -6,37 +6,36 @@ import { Navbar } from './Navbar'
 
 const props = {
   width: '90%',
-  zIndex: '200',
   position: 'fixed',
-  top: `50px`,
+  top: `${40 / 16}em`,
+  padding: '- B - -',
+  zIndex: '200',
   alignSelf: 'center',
   transition: 'height 1s ease',
   overflow: 'hidden',
   align: 'flex-start flex-end',
   style: { mixBlendMode: 'difference' },
   '@mobileL': { display: 'none' },
+
   navBar: {
     overflow: 'hidden',
     gap: 'B1',
     padding: 'Z2 - - -',
     transition: 'width .5s ease',
     align: 'center flex-end',
-
     childProps: {
       textAlign: 'center',
       color: 'cream',
-      fontSize: `${10.5 / 16}em`,
+      fontSize: `${10 / 16}em`,
       fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: `${3 / 10.5}em`,
+      letterSpacing: `${3 / 10}em`,
       whiteSpace: 'nowrap',
-      opacity: '.8',
-      transition: 'opacity .8s ease, transform .35s ease-in-out',
-      // padding: '- B',
-      // margin: '- B',
-      // style: {fontStyle: 'italic'},
+      opacity: '.85',
+      transition: 'opacity .3s ease, transform .3s ease-in-out',
+      style: {fontStyle: 'italic'},
       ':hover': {
-        transform: 'scale(1.01)',
+        transform: 'scale(1.03)',
         opacity: '1'
       }
     }

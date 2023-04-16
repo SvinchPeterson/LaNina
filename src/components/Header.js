@@ -43,17 +43,18 @@ const menu = {
 }
 
 const props = {
-  position: 'fixed',
   minWidth: '90%',
-  height: 'C1',
-  align: 'flex-end space-between',
-  gap: '0',
+  '@maxMobileM': { minWidth: '95%' },
+  position: 'fixed',
+  top: '0',
   alignSelf: 'center',
+  alignItems: 'flex-end',
   zIndex: '50',
-  padding: 'Y1 V',
-  border: 'solid, white .55',
-  borderWidth: '0 0 .3px 0',
-  boxSizing: 'border-box',
+  padding: 'Z - - -',
+  border: 'solid, cream .5',
+  borderWidth: '0 0 .5px 0',
+  round: '0 0 A1 A1',
+  overflow: 'hidden',
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
@@ -64,54 +65,44 @@ const props = {
   childProps: {
     flex: '1',
     flow: 'column',
-    margin: '- - -X2 -',
+    childProps: {
+      '@minTabletL': {
+        opacity: '.85',
+        ':hover': { opacity: '1', transform: 'scale(1.03)' },
+        transition: 'opacity .3s ease-in-out, transform .3s ease-in-out'
+      }
+    },
 
     back: {
-      opacity: '.75',
-      transition: 'opacity .15s ease-in-out',
-      boxSizing: 'border-box',
-      margin: '- - X -',
-      ':hover': { opacity: '1' },
-      icon: { boxSize: ' A2' }
+      fontSize: `${10 / 16}em`,
+      alignSelf: 'flex-start',
+      padding: 'Z2 B',
+      icon: { boxSize: ' B1' }
     },
 
     logo: {
-      align: 'center center',
-      opacity: '1',
       alignSelf: 'center',
-      margin: '- - V2 -',
-      zIndex: '10',
-      ':hover': { opacity: '1' },
-      image: { boxSize: `${26 / 16}em ` }
+      padding: 'Y 0',
+      image: { boxSize: `${24 / 16}em ` }
     },
 
     menu: {
-      width: 'E2',
-      background: 'transparent',
-      color: 'white',
-      opacity: '.85',
-      // margin: 'Z - -',
-      border: 'none',
-      textTransform: 'uppercase',
-      fontWeight: '400',
-      fontSize: `${11 / 16}em`,
-      letterSpacing: `${3 / 11}em`,
+      minWidth: 'D',
       position: 'relative',
-      transition: 'opacity .15s ease-in-out',
-      overflow: 'hidden',
-      round: '0',
       alignSelf: 'flex-end',
-      // padding: '- - Y -',
-      ':hover': { opacity: '1' },
-
+      background: 'transparent',
       childProps: {
         position: 'absolute',
         right: '0',
-        // lineHeight: '50px',
+        fontSize: `${10 / 16}em`,
+        letterSpacing: `${3 / 10}em`,
+        fontWeight: '400',
+        textTransform: 'uppercase',
+        color: 'cream',
+        padding: 'Z1 B',
+        transition: 'bottom .5s ease-in-out, transform .5s ease-in-out'
       },
-      menu: { transition: 'top .5s ease-in-out, transform .5s ease-in-out' },
       close: {
-        transition: 'bottom .5s ease-in-out, transform .5s ease-in-out',
         align: 'center center',
         gap: 'Y',
         icon: { boxSize: 'Z1 ' }
@@ -124,6 +115,7 @@ export const Header = {
   tag: 'header',
   extend: Flex,
   props,
+  attr: { id: 'header' },
 
   childExtend: Flex,
   ...[

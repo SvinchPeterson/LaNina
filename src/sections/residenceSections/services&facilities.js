@@ -2,7 +2,7 @@
 
 import { Grid, Flex } from 'smbls'
 
-import { ServiceFacilityItem, ScrollTitle} from '../../components'
+import { ServiceFacilityItem, ScrollTitle, SectionTitle } from '../../components'
 
 import SHELF_JPG from '../../assets/images/residence/sololaki/shelf.jpg'
 
@@ -72,22 +72,9 @@ const props = {
     padding: 'E - - -'
   },
 
-  header: {
-    padding: '- - Z1 D',
-    align: 'center flex-start',
-    '@maxTabletL': { align: 'center space-between', padding: '- B2' },
-    '@maxMobileL': { padding: '- 0 - B' },
-    title: {
-      fontSize: `${11 / 16}em`,
-      fontWeight: '400',
-      textTransform: 'uppercase',
-      letterSpacing: `${7 / 11}em`
-    },
-    // scroll: {
-    //   display: 'none',
-    //   '@maxTabletS': { display: 'flex' },
-    //   '@maxMobileL': { display: 'none' }
-    // }
+  title: {
+    padding: '- - A2 D',
+    '@maxTabletS': {display: 'none'}
   },
 
   content: {
@@ -95,8 +82,7 @@ const props = {
     backgroundImage: 'url(' + SHELF_JPG + ')',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    // border: 'solid, orange3',
-    // borderWidth: '5px 0 0 0',
+    overflow: 'hidden',
     '@minTabletL': { style: { backgroundAttachment: 'fixed' } },
     style: {
       backgroundRepeat: 'no-repeat',
@@ -109,6 +95,32 @@ const props = {
       background: 'naviGreenLight .55',
       zIndex: '2'
     },
+
+    title: {
+      display: 'none',
+      '@maxTabletS': { display: 'flex' },
+      background: 'cream',
+      position: 'absolute',
+      zIndex: '10',
+      top: '0',
+      right: '0',
+      height: '100%',
+      padding: 'D -',
+      ':after': { margin: '0'},
+      '@maxMobileM': {
+        padding: 'B2 -',
+        gap: 'A',
+        // letterSpacing: `${0 / 10}em`,
+      },
+      whiteSpace: 'nowrap',
+      style: {
+        writingMode: 'vertical-rl',
+        textOrientation: 'mixed',
+        letterSpacing: `${5 / 10}em`,
+        boxShadow: '0px 0px 20px 0px black'
+      }
+    },
+
     items: {
       width: 'fit-content',
       columns: 'repeat(4, 1fr)',
@@ -123,23 +135,21 @@ const props = {
         '@maxTabletS': { minWidth: 'F3' }
 
       },
-
-      // '@maxTabletM': { columns: 'repeat(3, 1fr)' },
       '@maxTabletS': {
         display: 'flex',
         maxWidth: '100%',
-        padding: 'E D',
+        padding: 'D2 E2 D2 D',
         gap: 'Z',
         style: { overflowY: 'auto' }
       },
 
-      '@maxMobileL': { padding: 'D2 B1'}
+      '@maxMobileL': { padding: 'E E E B'}
     }
   },
 
   scroll: {
-    alignSelf: 'flex-end',
-    padding: 'A B - -',
+    alignSelf: 'flex-start',
+    padding: 'Z - - A',
     display: 'none',
     '@maxTabletS': { display: 'flex' }
   }
@@ -151,10 +161,10 @@ export const servicesFacilities = {
   props,
   attr: { id: 'service&facilities' },
 
-  header: {
-    extend: Flex,
-    title: { tag: 'h5', text: 'Services & Facilities' }
+  title: { extend: SectionTitle },
+  content: {
+    title: {extend: SectionTitle },
+    items
   },
-  content: { items },
   scroll: {extend: ScrollTitle}
 }

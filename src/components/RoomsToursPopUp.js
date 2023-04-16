@@ -16,8 +16,8 @@ const props = {
       boxSize: 'D2 100%',
       align: 'flex-end space-between',
       overflow: 'hidden',
-      border: 'solid, cream .35',
-      borderWidth: '0 0 .55px 0',
+      border: 'solid, orange .55',
+      borderWidth: '0 0 .6px 0',
       padding: '- A',
       '@maxMobileL': {
         flow: 'column',
@@ -33,7 +33,7 @@ const props = {
         height:`${40 / 16}em`,
         overflow: 'hidden',
         '@maxMobileL': {
-          border: 'solid, cream .35',
+          border: 'solid, orange .55',
           borderWidth: '0 0 .55px 0',
           minWidth: '100%',
         },

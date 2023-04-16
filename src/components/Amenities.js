@@ -36,13 +36,9 @@ const list = {
 }
 
 const props = {
-  // background: 'naviGreenLight .5',
-  // border: 'solid, cream .15',
-  // borderWidth: '.3px',
   padding: '- - - B',
   round: 'B',
   boxSizing: 'border-box',
-  // backgroundImage: 'linear-gradient(160deg,rgba(0, 70, 70, .13) 0%,rgba(0, 70, 70, .2) 100%)',
 
   title: {
     text: 'amenities',
@@ -51,12 +47,7 @@ const props = {
     color: 'cream',
     textAlign: 'flex-start',
     letterSpacing: `${5 / 11}em`,
-    textTransform: 'uppercase',
-    border: 'solid, cream .35',
-    borderWidth: '0 0 .6px 0',
-    width: '95%',
-    padding: '- - Y -'
-
+    textTransform: 'uppercase'
   },
 
   list: {

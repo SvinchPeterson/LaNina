@@ -45,7 +45,7 @@ const props = {
     gap: 'A2',
     width: `${400 / 16}em`,
     margin: 'Z2 - - -',
-    '@maxTabletS': { display: 'none' }
+    '@maxTabletS': { display: 'none !important' }
   },
 
   galleryContainer: {
@@ -60,7 +60,8 @@ const props = {
 
     footer: {
       width: '100%',
-      padding: 'X B - B'
+      padding: 'X B - B',
+      book: { padding: 'Z2 B2'}
     }
   }
 }
@@ -90,6 +91,7 @@ export const Room = {
       navArrows: {}
     }
   },
+
   article: {
     description: { extend: RoomDescription },
     amenities: { extend: Amenities }

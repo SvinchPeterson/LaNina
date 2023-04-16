@@ -2,14 +2,14 @@
 
 import { Flex } from 'smbls'
 
-import { ScrollTitle } from '../../../components'
+import { ScrollTitle, SectionTitle } from '../../../components'
 
 import { tabs } from './tabs'
 
 const props = {
   width: '100%',
   flow: 'column',
-  gap: 'A',
+  gap: '0',
   align: 'center center',
   position: 'relative',
   padding: 'E2 - - -',
@@ -21,18 +21,12 @@ const props = {
   },
   '@maxHeightS': { padding: 'E - - -' },
 
-  header: {
-    alignSelf: 'center',
-    width: '100%',
-    padding: '- - A -',
-    align: 'center center',
-    title: {
-      fontSize: `${11.5 / 16}em`,
-      letterSpacing: `${12 / 11.5}em`,
-      textTransform: 'uppercase',
-      fontWeight: '400',
-      margin: '- - - -'
-    }
+  title: {
+    fontSize: `${11 / 16}em`,
+    letterSpacing: `${10 / 11}em`,
+    padding: '- - C -'
+
+
   },
 
   scroll: {
@@ -53,10 +47,11 @@ export const apartments = {
   },
 
   attr: { id: 'apartments' },
-
-  header: {
-    extend: Flex,
-    title: { tag: 'h5', text: 'apartments' }
+  title: {
+    extend: SectionTitle,
+    ':before': {},
+    text: 'apartments',
+    ':after': {},
   },
   tabs,
   scroll: { extend: ScrollTitle }

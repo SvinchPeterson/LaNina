@@ -36,18 +36,15 @@ export const props = {
     top: '0',
     left: '0',
     round: 'F',
-    style: {
-      backgroundRepeat: 'no-repeat',
-      boxShadow: 'inset 0px 0px .5px 0.5px rgba(0, 0, 0, .5)'
-    },
+    style: { backgroundRepeat: 'no-repeat' },
     image: {
       minWidth: '100%',
       minHeight: '100%',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       round: 'F',
-      border: 'solid, cream .15',
-      borderWidth: '.15px',
+      border: 'solid, orange3 .5',
+      borderWidth: '.5px',
       '@minTabletL': { style: { backgroundAttachment: 'fixed' } }
     }
   },

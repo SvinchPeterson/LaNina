@@ -38,7 +38,9 @@ const state = {
   activeGreenForestDescription: false,
   activeRetroDescription: false,
   activeBlueLagoonDescription: false,
-  activeQvevriDescription: false
+  activeQvevriDescription: false,
+
+  activeHeader: false
 }
 
 const menu = {
@@ -121,8 +123,8 @@ const header = {
           on: { click: (event, element, state) => { state.update({ activeResidenceMenu: true, activeResidenceMobileMenu: true }) } },
           class: {
               show: (element, state) => state.activeResidenceMenu
-                ? { top: `${-30 / 12}em`, transform: 'scale(.9)' }
-                : { top: '0', transform: 'scale(1)' }
+                ? { bottom: `${-30 / 10}em`, transform: 'scale(.9)' }
+                : { bottom: `0`, transform: 'scale(1)' }
           }
         },
 
@@ -130,8 +132,8 @@ const header = {
            on: { click: (event, element, state) => { state.update({ activeResidenceMenu: false, activeResidenceMobileMenu: false }) } },
             class: {
               show: (element, state) => state.activeResidenceMenu
-                ? { bottom: `${3 / 12}em`, transform: 'scale(1)' }
-                : { bottom: `${-30 / 12}em`, transform: 'scale(.9)' }
+                ? { bottom: `${0 / 10}em`, transform: 'scale(1)' }
+                : { bottom: `${-30 / 10}em`, transform: 'scale(.9)' }
             }
         }
       }
@@ -139,12 +141,68 @@ const header = {
   ]
 }
 
+const footer = {
+  extend: Footer,
+  socialLinks: {
+    ...[
+      { props: { href: `https://www.facebook.com/BBResidenceTbilisi` } },
+      { props: { href: `https://www.instagram.com/bbresidence.georgia` } }
+    ]
+  }
+}
+
+
+// function sideScroll (element, direction, speed, distance, step) {
+//   var scrollAmount = 0
+//   var slideTimer = setInterval(function () {
+//     if (direction === 'left') {
+//       element.scrollLeft -= step
+//     } else {
+//       element.scrollLeft += step
+//     }
+//     scrollAmount += step
+//     if (scrollAmount >= distance) {
+//       window.clearInterval(slideTimer)
+//     }
+//   }, speed)
+// }
+
+// on: {
+//   click: (event, element, state) => {
+//     const content = document.getElementById('feedbacks')
+//     sideScroll(content, 'left', 10, 300, 10)
+//   }
+// }
+
+// / window.addEventListener("scroll", function() {
+//   //   var header = document.querySelector("header");
+//   //   header.classList.toggle("scrolled", window.scrollY > 0);
+//   // });
+
 export const Sololaki = {
   extend: Flex,
   state,
   props: {
     ...properties
   },
+
+  on: {
+    // click: (event, element, state) => { state.update({ activeResidenceMenu: false, activeResidenceMobileMenu: false }) }
+    // scroll: (element, state) => {
+    //   state.update({activeHeader: true})
+
+    // }
+  },
+
+  class: {
+    show: (element, state) => state.activeHeader
+    ? {
+     display: 'none'
+    }
+    : {}
+
+  },
+
 
   header,
   menu,
@@ -158,5 +216,5 @@ export const Sololaki = {
   wine,
   feedBacks,
   location,
-  Footer
+  footer
 }
