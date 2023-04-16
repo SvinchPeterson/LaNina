@@ -26,7 +26,10 @@ const props = {
       borderWidth: '.3px',
       background: 'black .05',
       boxSizing: 'content-box',
-      style: { backdropFilter: 'blur(3px)'},
+      style: {
+        backdropFilter: 'blur(3px)',
+        border: '.5px solid rgba(226, 135, 67, .5)'
+      },
 
       '@maxMobileL': { width: 'G1' },
       '@maxMobileM': { width: 'F3' },

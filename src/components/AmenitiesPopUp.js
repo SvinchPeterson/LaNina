@@ -12,10 +12,11 @@ const props = {
     amenities: {
       padding: 'C',
       fontSize: `${19 / 16}em`,
-      border: 'solid, orange .35',
-      borderWidth: '.3px',
       background: 'black .05',
-      style: { backdropFilter: 'blur(3px)'},
+      style: {
+        backdropFilter: 'blur(3px)',
+        border: '.5px solid rgba(226, 135, 67, .5)'
+      },
       '@maxMobileXS': { padding: 'B1'},
       '@maxHeightS': {
         maxHeight: `${450 / 19}em`,
