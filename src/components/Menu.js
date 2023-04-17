@@ -51,8 +51,8 @@ export const Menu = {
 
 const mobileMenuProps = {
   position: 'fixed',
-  top: `C2`,
-  width: '80%',
+  top: `47px`,
+  width: '85%',
   alignSelf: 'center',
   zIndex: '52',
   align: 'center center',
@@ -60,7 +60,7 @@ const mobileMenuProps = {
 
   // '@mobileS': { top: 'C2' },
   style: {
-    backdropFilter: 'blur(1px)',
+    backdropFilter: 'blur(2px)',
     '@media only screen and (min-width: 769px)': { display: 'none' }
   },
 
@@ -80,6 +80,8 @@ const mobileMenuProps = {
       width: 'fit-content',
       textAlign: 'center',
       fontSize: 'Z',
+      border: 'solid, orange .55',
+      borderWidth: '0 0 .6px 0',
       // transition: 'transform 3s ease-in-out',
       'maxMobileXS': { fontSize: `${12.5 / 16}em` }
     }

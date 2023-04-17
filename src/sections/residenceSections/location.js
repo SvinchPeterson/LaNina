@@ -29,9 +29,10 @@ const props = {
     },
     '@maxTabletS': {
       transform: 'rotate(0)',
-      padding: '0 0 Z2 C',
+      padding: '0 0 B 0',
       position: 'initial',
       fontSize: `${11 / 16}em`,
+      alignSelf: 'center',
 
 
       style: {

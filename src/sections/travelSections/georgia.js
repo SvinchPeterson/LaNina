@@ -6,12 +6,19 @@ const props = {
   alignSelf: 'center',
   margin: 'G - - -',
   align: 'flex-start flex-start',
-  maxWidth: 'H1',
-  gap: 'A',
-  title: { color: 'naviBlue' },
+  maxWidth: 'H',
+  '@maxTabletM': { fontSize: `${15 / 16}em` },
+  '@maxMobileL': {
+    margin: 'E2 - - -',
+    padding: '- B1'
+  },
   p: {
     childProps: {
-      childProps: { fontSize: 'C' }
+      fontSize: `${15 / 16}em`,
+      childProps: {
+        fontSize: 'C',
+        letterSpacing: `${-1 / 23}em`
+      }
     }
   }
 }

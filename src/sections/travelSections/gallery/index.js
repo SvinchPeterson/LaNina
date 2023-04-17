@@ -11,24 +11,27 @@ const props = {
   margin: 'C auto',
   flow: 'column',
   position: 'relative',
+  '@maxTabletM': {
+    // padding: 'F1 D2 0 D2'
+  },
 
   title: {
     text: 'gallery',
-    fontSize: 'E',
-    textTransform: 'capitalize',
-    fontWeight: '700',
+    fontSize: `${12 / 16}em`,
+    textTransform: 'uppercase',
+    fontWeight: '400',
     display: 'flex',
     position: 'absolute',
-    top: 'G',
-    left: 'B1',
-    gap: 'Y',
+    top: 'I',
+    left: 'E',
+    gap: 'A',
     alignItems: 'center',
-    letterSpacing: `${-1.5 / 33}em`,
+    letterSpacing: `${20 / 12}em`,
     transform: 'rotate(180deg)',
     '&:before': {
       content: '""',
-      boxSize: 'B2 U',
-      background: 'black',
+      boxSize: 'D2 U',
+      background: 'orange',
       display: 'block',
       round: 'A'
     },

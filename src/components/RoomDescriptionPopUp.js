@@ -28,7 +28,7 @@ const props = {
       boxSizing: 'content-box',
       style: {
         backdropFilter: 'blur(3px)',
-        border: '.5px solid rgba(226, 135, 67, .5)'
+        border: '.6px solid rgba(226, 135, 67, .5)'
       },
 
       '@maxMobileL': { width: 'G1' },

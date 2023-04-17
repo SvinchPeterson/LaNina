@@ -152,7 +152,7 @@ export const bannerH1 = keyframes`
   to {
     height: 72px;
     opacity: 1;
-    letter-spacing: -4px;
+    letter-spacing: -3px;
   }
 `
 export const travelBannerH5 = keyframes`

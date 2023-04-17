@@ -17,7 +17,7 @@ const props = {
       align: 'flex-end space-between',
       overflow: 'hidden',
       border: 'solid, cream .35',
-      borderWidth: '0 0 .6px 0',
+      borderWidth: '0 0 .55px 0',
       padding: '- A',
       '@maxMobileL': {
         flow: 'column',

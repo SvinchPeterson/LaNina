@@ -69,7 +69,7 @@ const menu = {
 
 const menuMobile = {
   extend: MenuMobile,
-  props: {background: 'naviGreen'},
+  props: {background: 'naviGreenLight .75'},
   class: {
     show: (element, state) => state.activeResidenceMobileMenu
       ? {

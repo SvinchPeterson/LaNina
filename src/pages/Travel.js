@@ -158,7 +158,7 @@ const menu = {
 
 const menuMobile = {
   extend: MenuMobile,
-  props: {background: 'naviBlue'},
+  props: {background: 'naviBlueLight .75'},
   class: {
     show: (element, state) => state.activeTravelMobileMenu
       ? {
