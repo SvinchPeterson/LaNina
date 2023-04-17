@@ -26,7 +26,7 @@ const props = {
     overflow: 'hidden',
     cursor: 'pointer',
     border: '1px solid transparent',
-    '@minTabletM': { backgroundAttachment: 'fixed' },
+    '@minTabletM': { style:{ backgroundAttachment: 'fixed' } },
     ':before': {
       content: '""',
       position: 'absolute',

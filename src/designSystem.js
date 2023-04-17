@@ -1,29 +1,101 @@
 'use strict'
 
-const FONTS_PATH = './assets/fonts'
+import HelveticaUltraLightWoff2 from './assets/fonts/HelveticaNeue-UltraLight.woff2'
+import HelveticaNormalWoff2 from './assets/fonts/HelveticaNeue-Normal.woff2'
+import HelveticaMediumWoff2 from './assets/fonts/HelveticaNeue-Medium.woff2'
+import HelveticaBoldWoff2 from './assets/fonts/HelveticaNeue-Bold.woff2'
 
+import HelveticaUltraLightTtf from './assets/fonts/HelveticaNeue-UltraLight.ttf'
+import HelveticaNormalTtf from './assets/fonts/HelveticaNeue-Normal.ttf'
+import HelveticaMediumTtf from './assets/fonts/HelveticaNeue-Medium.ttf'
+import HelveticaBoldTtf from './assets/fonts/HelveticaNeue-Bold.ttf'
+
+import HelveticaUltraLightEot from './assets/fonts/HelveticaNeue-UltraLight.eot'
+import HelveticaNormalEot from './assets/fonts/HelveticaNeue-normal.eot'
+import HelveticaMediumEot from './assets/fonts/HelveticaNeue-Medium.eot'
+import HelveticaBoldEot from './assets/fonts/HelveticaNeue-Bold.eot'
 
 export const FONT = {
   helveticaNeue: [
-    { url: FONTS_PATH + '/HelveticaNeue-UltraLight.woff2', fontWeight: 100 },
-    { url: FONTS_PATH + '/HelveticaNeue-Normal.woff2', fontWeight: 400},
-    { url: FONTS_PATH + '/HelveticaNeue-Bold.woff2', fontWeight: 700 },
+    {
+      url: HelveticaUltraLightWoff2,
+      fontWeight: 100
+    },
+    {
+      url: HelveticaNormalWoff2,
+      fontWeight: 400
+    },
+    {
+      url: HelveticaMediumWoff2,
+      fontWeight: 500
+    },
+    {
+      url: HelveticaBoldWoff2,
+      fontWeight: 700
+    },
 
-    { url: FONTS_PATH + '/HelveticaNeue-UltraLight.ttf', fontWeight: 100 },
-    { url: FONTS_PATH + '/HelveticaNeue-Normal.ttf', fontWeight: 400 },
-    { url: FONTS_PATH + '/HelveticaNeue-Bold.ttf', fontWeight: 700 },
+    {
+      url: HelveticaUltraLightTtf,
+      fontWeight: 100
+    },
+    {
+      url: HelveticaNormalTtf,
+      fontWeight: 400
+    },
+    {
+      url: HelveticaMediumTtf,
+      fontWeight: 500
+    },
+    {
+      url: HelveticaBoldTtf,
+      fontWeight: 700
+    },
 
-    { url: FONTS_PATH + '/HelveticaNeue-UltraLight.eot', fontWeight: 100 },
-    { url: FONTS_PATH + '/HelveticaNeue-normal.eot', fontWeight: 400 },
-    { url: FONTS_PATH + '/HelveticaNeue-Bold.eot', fontWeight: 700 }
+    {
+      url: HelveticaUltraLightEot,
+      fontWeight: 100
+    },
+    {
+      url: HelveticaNormalEot,
+      fontWeight: 400
+    },
+    {
+      url: HelveticaMediumEot,
+      fontWeight: 500
+    },
+    {
+      url: HelveticaBoldEot,
+      fontWeight: 700
+    }
   ]
 }
+
+
+// const FONTS_PATH = './assets/fonts'
+
+
+
+// export const FONT = {
+//   helveticaNeue: [
+//     { url: FONTS_PATH + '/HelveticaNeue-UltraLight.woff2', fontWeight: 100 },
+//     { url: FONTS_PATH + '/HelveticaNeue-Normal.woff2', fontWeight: 400},
+//     { url: FONTS_PATH + '/HelveticaNeue-Bold.woff2', fontWeight: 700 },
+
+//     { url: FONTS_PATH + '/HelveticaNeue-UltraLight.ttf', fontWeight: 100 },
+//     { url: FONTS_PATH + '/HelveticaNeue-Normal.ttf', fontWeight: 400 },
+//     { url: FONTS_PATH + '/HelveticaNeue-Bold.ttf', fontWeight: 700 },
+
+//     { url: FONTS_PATH + '/HelveticaNeue-UltraLight.eot', fontWeight: 100 },
+//     { url: FONTS_PATH + '/HelveticaNeue-normal.eot', fontWeight: 400 },
+//     { url: FONTS_PATH + '/HelveticaNeue-Bold.eot', fontWeight: 700 }
+//   ]
+// }
 
 
 export const FONT_FAMILY = {
   helveticaNeue: {
     isDefault: true,
-    value: ['"HelveticaNeue"'],
+    value: ['"Helvetica Neue"'],
     type: 'serif'
   }
 }
