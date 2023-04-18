@@ -71,27 +71,6 @@ export const FONT = {
 }
 
 
-// const FONTS_PATH = './assets/fonts'
-
-
-
-// export const FONT = {
-//   helveticaNeue: [
-//     { url: FONTS_PATH + '/HelveticaNeue-UltraLight.woff2', fontWeight: 100 },
-//     { url: FONTS_PATH + '/HelveticaNeue-Normal.woff2', fontWeight: 400},
-//     { url: FONTS_PATH + '/HelveticaNeue-Bold.woff2', fontWeight: 700 },
-
-//     { url: FONTS_PATH + '/HelveticaNeue-UltraLight.ttf', fontWeight: 100 },
-//     { url: FONTS_PATH + '/HelveticaNeue-Normal.ttf', fontWeight: 400 },
-//     { url: FONTS_PATH + '/HelveticaNeue-Bold.ttf', fontWeight: 700 },
-
-//     { url: FONTS_PATH + '/HelveticaNeue-UltraLight.eot', fontWeight: 100 },
-//     { url: FONTS_PATH + '/HelveticaNeue-normal.eot', fontWeight: 400 },
-//     { url: FONTS_PATH + '/HelveticaNeue-Bold.eot', fontWeight: 700 }
-//   ]
-// }
-
-
 export const FONT_FAMILY = {
   helveticaNeue: {
     isDefault: true,
@@ -114,7 +93,8 @@ export const COLORS = {
 
   naviBlue: 'rgba(0, 47, 57, 1)',
   naviBlueLight: 'rgba(1, 59, 71, 1)',
-  naviBlueLight2: 'rgba(2, 64, 77, 1)'
+  naviBlueLight2: 'rgba(2, 64, 77, 1)',
+  naviBlueXlight: 'rgba(1, 87, 105, 1)'
 }
 
 export const GRADIENTS = {

@@ -2,7 +2,7 @@
 
 import { Grid, Flex } from 'smbls'
 
-import { ServiceFacilityItem, ScrollTitle, SectionTitle } from '../../components'
+import { ServiceFacilityItem, ScrollTitle, ResidenceSectionTitle } from '../../components'
 
 import SHELF_JPG from '../../assets/images/residence/sololaki/shelf.jpg'
 
@@ -162,10 +162,10 @@ export const servicesFacilities = {
   props,
   attr: { id: 'service&facilities' },
 
-  title: { extend: SectionTitle },
+  title: { extend: ResidenceSectionTitle, text: 'services & facilities' },
   content: {
-    title: {extend: SectionTitle },
+    title: { extend: ResidenceSectionTitle, text: 'services & facilities'  },
     items
   },
-  scroll: {extend: ScrollTitle}
+  scroll: {extend: ScrollTitle }
 }

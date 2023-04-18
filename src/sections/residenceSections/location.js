@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { ContactItems, Map, SectionTitle } from '../../components'
+import { ContactItems, Map, ResidenceSectionTitle } from '../../components'
 
 
 const props = {
@@ -78,7 +78,7 @@ export const location = {
   props,
   attr: { id: 'location' },
 
-  title: { extend: SectionTitle, text: 'location' },
+  title: { extend: ResidenceSectionTitle, text: 'location' },
 
   map: {extend: Map },
 

@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { ScrollTitle, SectionTitle } from '../../../components'
+import { ScrollTitle, ResidenceSectionTitle } from '../../../components'
 
 import { tabs } from './tabs'
 
@@ -49,7 +49,7 @@ export const apartments = {
 
   attr: { id: 'apartments' },
   title: {
-    extend: SectionTitle,
+    extend: ResidenceSectionTitle,
     ':before': {},
     text: 'apartments',
     ':after': {},

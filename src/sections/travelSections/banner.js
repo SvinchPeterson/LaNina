@@ -39,10 +39,10 @@ const props = {
       bottom: 'E2',
       ':after': {
         content: '""',
-        boxSize: '1px E',
+        boxSize: '1px E2',
         background: 'orange',
         position: 'absolute',
-        bottom: '-A2',
+        bottom: '-B',
         left: '50%',
         transform: 'translate(-50%, -50%)'
       },

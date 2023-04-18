@@ -2,6 +2,8 @@
 
 import { Grid } from 'smbls'
 
+import { TravelSectionTitle, ScrollTitle } from '../../../components'
+
 import TBILISI_JPG from '../../../assets/images/travel/tbilisi.jpg'
 import BORJOMI_JPG from '../../../assets/images/travel/borjomi.jpeg'
 import MTSKETA_JPG from '../../../assets/images/travel/mtsketa.jpg'
@@ -12,55 +14,139 @@ import GORI_JPG from '../../../assets/images/travel/gori.jpg'
 import KAZBEGI_JPG from '../../../assets/images/travel/kazbegi.jpg'
 
 const props = {
-  maxWidth: '1440px',
-  columns: 'repeat(4, 1fr)',
-  round: 'C',
-  rows: 'repeat(6, 550px)',
+  maxWidth: `100%`,
   position: 'relative',
-  overflow: 'hidden',
-  gap: 'Y',
+  '@maxTabletS': { overflow: 'hidden' },
 
-  childProps: {
-    position: 'relative',
-    backgroundSize: 'cover',
-    overflow: 'hidden',
-    cursor: 'pointer',
-    border: '1px solid transparent',
-    '@minTabletM': { style:{ backgroundAttachment: 'fixed' } },
-    ':before': {
-      content: '""',
-      position: 'absolute',
-      top: '0',
-      left: '0',
-      width: '100%',
-      height: '100%',
-      background: 'linear-gradient(rgba(0, 47, 57, .45), rgba(0, 47, 57, 1))'
-    },
-    '&:hover > h4': {
-      color: 'rgba(189, 216, 246, 1)',
-      letterSpacing: '.5px'
-    },
+  ':before': {
+    content: '""',
+    boxSize: '100% F',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    zIndex: '10',
+    background: 'linear-gradient(to right, rgba(1, 87, 105, 1) 0%,rgba(1, 87, 105, 0) 100%)',
+    pointerEvents: 'none',
+    '@minTabletS': { display: 'none' }
+  },
 
-    title: {
-      position: 'absolute',
+  title: {
+    position: 'absolute',
+    transform: 'rotate(180deg)',
+    position: 'absolute',
+    top: 'G2',
+    left: '-C2',
+    zIndex: '20',
+    style: {
+      writingMode: 'vertical-rl',
+      textOrientation: 'mixed'
+    },
+    '@maxTabletS': {
       color: 'cream',
-      fontSize: 'H',
-      fontWeight: '100',
-      textTransform: 'capitalize',
-      letterSpacing: '-1px',
+      height: '100%',
       top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-      style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' }
+      left: 'initial',
+      right: '-C2',
+      padding: 'B2 -',
+      transform: 'rotate(0) translate(-50%, -50%)',
+      background: 'naviBlueXlight',
+      style: {
+        boxShadow: '0 0 20px 0 rgba(0, 0, 0, .5)'
+      }
+    },
+    '@maxMobileM': { padding: 'B1 -' },
+
+    ':before': { boxSize: 'C2 V' },
+    ':after': { boxSize: 'C2 V' }
+  },
+
+  content: {
+    columns: 'repeat(4, 1fr)',
+    rows: 'repeat(6, 550px)',
+    position: 'relative',
+    overflow: 'hidden',
+    gap: 'Y',
+    '@maxTabletS': {
+      display: 'flex',
+      maxWidth: '100%',
+      padding: 'D E D C',
+      minHeight: 'E2',
+      gap: 'A',
+      boxSizing: 'content-box',
+      background: 'naviBlueXlight',
+      style: {
+        overflow: 'auto',
+        '::-webkit-scrollbar': { display: 'none' }
+      }
+    },
+    '@maxMobileM': {  padding: 'D E D B' },
+
+    childProps: {
+      position: 'relative',
+      backgroundSize: 'cover',
+      overflow: 'hidden',
+      cursor: 'pointer',
+      border: 'solid, naviBlue',
+      borderWidth: '1px',
+      '@minTabletL': { style:{ backgroundAttachment: 'fixed' } },
+      '@maxTabletS': {
+        minWidth: `${250 / 16}em`,
+        round: 'B !important',
+        border: 'solid, naviBlueXlight',
+        borderWidth: '1px',
+      },
+      ':before': {
+        content: '""',
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+        background: 'linear-gradient(rgba(0, 47, 57, .45), rgba(0, 47, 57, 1))',
+        '@maxTabletS': {
+          background: 'linear-gradient(rgba(0, 47, 57, .25), rgba(0, 47, 57, 1))'
+        }
+      },
+      '&:hover > h4': {
+        color: 'rgba(189, 216, 246, 1)',
+        letterSpacing: '.5px'
+      },
+
+      title: {
+        position: 'absolute',
+        color: 'cream',
+        fontSize: 'H',
+        fontWeight: '100',
+        textTransform: 'capitalize',
+        letterSpacing: '-1px',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' },
+        '@maxTabletS': { fontSize: 'E' }
+      }
     }
+  },
+
+  scroll: {
+    '@minTabletS': { display: 'none' },
+    position: 'absolute',
+    bottom: 'Z2',
+    left: 'C',
+    zIndex: '10',
+    color: 'cream',
+    '@maxMobileM': { left: 'A1' },
   }
 }
 
 export const gridGalleries = {
-  extend: Grid,
   props,
 
-  childExtend: { title: { tag: 'h4' } },
+  title: { extend: TravelSectionTitle, text: 'gallery'},
+
+  content: {
+    extend: Grid,
+    childExtend: { title: { tag: 'h4' } },
   ...[
     {
       props: {
@@ -188,4 +274,8 @@ export const gridGalleries = {
       }
     }
   ]
+  },
+  scroll: {
+    extend: ScrollTitle
+  }
 }
