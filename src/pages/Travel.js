@@ -13,9 +13,6 @@ const state = {
   activeTravelMenu: false,
   activeTravelMobileMenu: false,
 
-  activePlanTrip: true,
-  // activePlanTrip: false,
-  // activeForm: false,
   activeTour: false,
   activeImage: 0,
   activeToursPopUp: false,

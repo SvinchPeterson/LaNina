@@ -43,7 +43,7 @@ export const TravelSectionTitle = {
       content: '""',
       boxSize: 'V C2',
       background: 'orange',
-      margin: '12px'
+      margin: '11px'
     },
 
     ':after': {
