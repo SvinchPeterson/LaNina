@@ -129,7 +129,7 @@ const props = {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' },
-        '@maxTabletS': { fontSize: 'F', letterSpacing: '-.5px', }
+        '@maxTabletS': { fontSize: 'F', letterSpacing: '-.45px', }
       }
     }
   },
