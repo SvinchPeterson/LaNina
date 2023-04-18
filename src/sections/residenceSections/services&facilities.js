@@ -111,7 +111,6 @@ const props = {
         padding: 'B2 -',
         gap: 'A',
         fontSize: `${11 / 16}em`
-        // letterSpacing: `${0 / 10}em`,
       },
       whiteSpace: 'nowrap',
       style: {

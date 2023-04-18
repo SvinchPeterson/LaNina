@@ -13,10 +13,16 @@ import KUTAISI_JPG from '../../../assets/images/travel/kutaisi.jpg'
 import GORI_JPG from '../../../assets/images/travel/gori.jpg'
 import KAZBEGI_JPG from '../../../assets/images/travel/kazbegi.jpg'
 
+import LEFT_ARROW from '../../../assets/icons/arrowsDouble-left-cream.png'
+import RIGHT_ARROW from '../../../assets/icons/arrowsDouble-right-cream.png'
+
 const props = {
   maxWidth: `100%`,
   position: 'relative',
-  '@maxTabletS': { overflow: 'hidden' },
+  '@maxTabletS': {
+    overflow: 'hidden',
+    fontSize: `${15 / 16}em`
+  },
 
   ':before': {
     content: '""',
@@ -25,7 +31,7 @@ const props = {
     top: '0',
     left: '0',
     zIndex: '10',
-    background: 'linear-gradient(to right, rgba(1, 87, 105, 1) 0%,rgba(1, 87, 105, 0) 100%)',
+    background: 'linear-gradient(to right, rgba(0, 47, 57, 1) 0%,rgba(0, 47, 57, 0) 100%)',
     pointerEvents: 'none',
     '@minTabletS': { display: 'none' }
   },
@@ -49,15 +55,15 @@ const props = {
       right: '-C2',
       padding: 'B2 -',
       transform: 'rotate(0) translate(-50%, -50%)',
-      background: 'naviBlueXlight',
+      background: 'naviBlue',
       style: {
         boxShadow: '0 0 20px 0 rgba(0, 0, 0, .5)'
       }
     },
     '@maxMobileM': { padding: 'B1 -' },
 
-    ':before': { boxSize: 'C2 V' },
-    ':after': { boxSize: 'C2 V' }
+    ':before': { boxSize: 'C V' },
+    ':after': { boxSize: 'C V' }
   },
 
   content: {
@@ -69,17 +75,17 @@ const props = {
     '@maxTabletS': {
       display: 'flex',
       maxWidth: '100%',
-      padding: 'D E D C',
+      padding: 'D1 E D1 C',
       minHeight: 'E2',
       gap: 'A',
       boxSizing: 'content-box',
-      background: 'naviBlueXlight',
+      background: 'naviBlue',
       style: {
         overflow: 'auto',
         '::-webkit-scrollbar': { display: 'none' }
       }
     },
-    '@maxMobileM': {  padding: 'D E D B' },
+    '@maxMobileM': { padding: 'D E D B' },
 
     childProps: {
       position: 'relative',
@@ -92,7 +98,7 @@ const props = {
       '@maxTabletS': {
         minWidth: `${250 / 16}em`,
         round: 'B !important',
-        border: 'solid, naviBlueXlight',
+        border: 'solid, naviBlue',
         borderWidth: '1px',
       },
       ':before': {
@@ -123,7 +129,7 @@ const props = {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' },
-        '@maxTabletS': { fontSize: 'E' }
+        '@maxTabletS': { fontSize: 'F', letterSpacing: '-.5px', }
       }
     }
   },
@@ -135,7 +141,11 @@ const props = {
     left: 'C',
     zIndex: '10',
     color: 'cream',
+    opacity: '.75',
     '@maxMobileM': { left: 'A1' },
+
+    lefts: { src: LEFT_ARROW },
+    rights: { src: RIGHT_ARROW }
   }
 }
 

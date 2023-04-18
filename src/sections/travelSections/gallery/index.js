@@ -16,6 +16,9 @@ const props = {
   '@maxTabletS': {
     padding: 'F 0 - 0',
     align: 'center center'
+  },
+  '@maxMobileM': {
+    padding: 'E2 0 - 0'
   }
 }
 
