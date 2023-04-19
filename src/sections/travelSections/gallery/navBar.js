@@ -10,9 +10,27 @@ const props = {
   alignSelf: 'center',
   padding: '- B - -',
   align: 'flex-end center',
-  margin: '-C - - -E',
+  margin: '-C - - -H',
   zIndex: '30',
   position: 'absolute',
+  '@maxMobileL': { display: 'none' },
+  ':before': {
+    content: '""',
+    boxSize: 'D 1px',
+    background: 'orange .7',
+    alignSelf: 'center',
+    margin: '- - A -',
+    '@maxTabletL': { boxSize: 'C1 1px' }
+  },
+  ':after': {
+    content: '""',
+    boxSize: 'D 1px',
+    background: 'orange',
+    alignSelf: 'center',
+    margin: 'A - - -',
+    background: 'orange .7',
+    '@maxTabletL': { boxSize: 'C1 1px' }
+  },
   style: { lineHeight: `${30 / 16}em` },
 
   childProps: {
@@ -25,6 +43,7 @@ const props = {
     opacity: '.5',
     color: 'cream',
     transition: 'opacity .3s ease-in-out, transform .8s ease-in-out, padding .8s ease-in-out, letter-spacing .8s ease-in-out',
+    '@maxTabletS': { fontSize: 'D' },
     ':hover': {
       opacity: '.8',
       transform: 'scale(1.35)',
@@ -43,7 +62,7 @@ export const navBar = {
   },
   ...[
     {
-      text: 'tbilisi',
+      props: { text: 'tbilisi' },
       class: {
         show: (element, state) => state.activeTbilisi
           ? {

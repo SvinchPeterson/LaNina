@@ -42,14 +42,14 @@ export const TravelSectionTitle = {
     ':before': {
       content: '""',
       boxSize: 'V C2',
-      background: 'orange',
-      margin: '11px'
+      background: 'orange .75',
+      margin: '12px'
     },
 
     ':after': {
       content: '""',
       boxSize: 'V C2',
-      background: 'orange'
+      background: 'orange .75'
     }
   }
 }

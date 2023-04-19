@@ -147,6 +147,7 @@ export const MEDIA = {
   maxHeightXS: '(max-height: 550px)',
 
   minMaxL: '(min-width: 1367px) and (max-height: 820px)',
+  maxMaxO: '(max-width: 768px) and (max-height: 700px)',
   maxMaxS: '(max-width: 480px) and (max-height: 650px)',
 
   light: '(prefers-color-scheme: light)'

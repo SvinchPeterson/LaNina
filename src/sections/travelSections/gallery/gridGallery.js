@@ -61,7 +61,6 @@ const props = {
       }
     },
     '@maxMobileM': { padding: 'B1 -' },
-
     ':before': { boxSize: 'C V' },
     ':after': { boxSize: 'C V' }
   },
@@ -108,6 +107,7 @@ const props = {
         left: '0',
         width: '100%',
         height: '100%',
+        zIndex: '3',
         background: 'linear-gradient(rgba(0, 47, 57, .45), rgba(0, 47, 57, 1))',
         '@maxTabletS': {
           background: 'linear-gradient(rgba(0, 47, 57, .25), rgba(0, 47, 57, 1))'
@@ -125,6 +125,7 @@ const props = {
         fontWeight: '100',
         textTransform: 'capitalize',
         letterSpacing: '-1px',
+        zIndex: '10',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
@@ -137,13 +138,12 @@ const props = {
   scroll: {
     '@minTabletS': { display: 'none' },
     position: 'absolute',
-    bottom: 'Z2',
+    bottom: 'Z',
     left: 'C',
     zIndex: '10',
     color: 'cream',
     opacity: '.75',
     '@maxMobileM': { left: 'A1' },
-
     lefts: { src: LEFT_ARROW },
     rights: { src: RIGHT_ARROW }
   }

@@ -66,7 +66,6 @@ const props = {
           fontSize: `${10.5 / 16}em`,
           fontWeight: '400',
           textTransform: 'uppercase',
-          padding: '0',
           background: 'transparent',
           color: 'cream',
           letterSpacing: `${2 / 10.5}em`,
