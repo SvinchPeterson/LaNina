@@ -181,9 +181,20 @@ export const slideHideVertical = keyframes`
     transform: translateY(0);
   }
   100% {
-    transform: translateY(calc(-420px * 3));
+    transform: translateY(-50%);
   }
 `
+
+
+export const slideHideHorizontal = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+`
+
 
 export const slideHideTour = keyframes`
   0% {

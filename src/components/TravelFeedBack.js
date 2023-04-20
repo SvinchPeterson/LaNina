@@ -83,7 +83,7 @@ const props = {
     position: 'absolute',
     bottom: 'A2',
     zIndex: '3',
-    fontSize: 'Z'
+    fontSize: `${12 / 16}em`
   }
 }
 

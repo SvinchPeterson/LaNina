@@ -41,16 +41,30 @@ const props = {
   flow: 'column',
   gap: 'Y2',
   fontWeight: '700',
-  fontSize: `${14.5 / 16}em`,
-  letterSpacing: `${0.3 / 14.5}em`,
+  fontSize: `Z`,
+  letterSpacing: `${0.3 / 13}em`,
   color: 'black .85',
+  width: '55%',
+  alignSelf: 'center',
+  padding: 'E - E2 -',
+  '@maxTabletS': {
+    width: '70%'
+  },
+  '@maxMobileM': {width: '80%'},
 
   mailLocation: { flow: 'column', gap: 'X' },
   numbers: {
     flow: 'column',
     padding: 'Z1 - - -',
     gap: 'Z',
-    borderTop: '.5px solid black',
+    // borderTop: '.5px solid black',
+    alignSelf: 'flex-end',
+    '@maxMobileL': {
+      border: 'solid, black .5',
+      borderWidth: '1px 0 0 0',
+      width: '100%',
+      alignItems: 'flex-end'
+    },
     childProps: {
       gap: 'Y2',
       align: 'center flex-start',

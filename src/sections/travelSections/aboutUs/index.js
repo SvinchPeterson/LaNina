@@ -8,8 +8,13 @@ import { team } from './team'
 const props = {
   align: 'flex-start center',
   gap: 'E',
-  padding: 'E2 A2 F A2',
-  margin: 'D - - -'
+  padding: 'D2 A2 F A2',
+  '@maxTabletL': {fontSize: `${14.5 / 16}em`},
+  '@maxTabletS': {
+    flow: 'column',
+    align: 'center center',
+    gap: 'C',
+  }
 }
 
 export const aboutUs = {

@@ -5,7 +5,7 @@ import { Flex, Img } from 'smbls'
 import { properties } from './props'
 
 import { Header, Footer, Menu, MenuMobile } from '../components'
-import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip } from '../sections/travelSections'
+import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip, contact } from '../sections/travelSections'
 import { toursPopUp } from '../sections/travelSections/tours/toursPopUp'
 import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
 
@@ -262,6 +262,7 @@ export const footer = {
   }
 }
 
+
 export const Travel = {
   extend: Flex,
   props: { ...properties },
@@ -278,6 +279,7 @@ export const Travel = {
   toursPopUp,
   feedBacks,
   aboutUs,
+  contact,
   planTrip,
   footer
 }

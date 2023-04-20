@@ -37,16 +37,10 @@ const props = {
   alignSelf: 'center',
   align: 'center',
   gap: 'Y2',
-  margin: 'F - - -',
-  // padding: 'F3 A E2 A',
+  margin: 'F1 -',
   width: `${350 / 16}em`,
   '@maxMobileXS': { width: `${320/ 16}em` },
-  // style: {
-  //   '@media only screen and (max)'
-  // },
   '@maxTabletL': { fontSize: `${14 / 16}em` },
-  // '@maxTabletS': { fontSize: `${14 / 16}em` },
-  // '@maxMobileXS': { maxWidth: `${300 / 16}em` },
 
   title: {
     fontWeight: '400',
