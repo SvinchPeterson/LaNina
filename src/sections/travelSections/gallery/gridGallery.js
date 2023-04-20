@@ -48,7 +48,7 @@ const props = {
       textOrientation: 'mixed'
     },
     '@maxTabletS': {
-      color: 'cream',
+      color: 'cream .75',
       height: '100%',
       top: '50%',
       left: 'initial',

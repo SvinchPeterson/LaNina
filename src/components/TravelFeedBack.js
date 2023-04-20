@@ -12,7 +12,10 @@ const props = {
   padding: 'A1 Z2 0 Z2',
   round: 'B2',
   position: 'relative',
-  style: { boxShadow: 'inset 0 0 1px .25px rgba(0, 0, 0, .35)' },
+
+  '@maxHeightXS': {
+    maxHeight: `${370 / 16}em`
+  },
 
   person: {
     flow: 'column',
@@ -26,7 +29,7 @@ const props = {
       style: { boxShadow: '0 0 2.5px .2px rgba(0, 0, 0, .15)' }
     },
     name: {
-      fontSize: `${30 / 16}em`,
+      fontSize: `${28 / 16}em`,
       fontWeight: '100',
       color: 'black',
       margin: '0'
@@ -40,19 +43,12 @@ const props = {
     alignSelf: 'flex-start',
     flow: 'column',
     align: 'center flex-start',
-    ':before': {
-      content: '""',
-      position: 'absolute',
-      boxSize: 'C 100%',
-      top: '0',
-      zIndex: '2',
-      background: 'linear-gradient(to bottom, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)'
-    },
+    '@maxMobileXS': { padding: 'Z A - A' },
     ':after': {
       content: '""',
       position: 'absolute',
       boxSize: 'E2 100%',
-      background: 'linear-gradient(to top, rgba(229, 249, 252, 1) 0%,rgba(229, 249, 252, 0) 100%)',
+      background: 'linear-gradient(to top, rgba(255, 249, 237, 1) 0%, rgba(255, 249, 237, 0) 100%)',
       bottom: '0',
       pointerEvents: 'none'
     },

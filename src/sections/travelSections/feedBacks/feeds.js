@@ -11,12 +11,10 @@ import JAYDEE_JPG from '../../../assets/images/travel/clients/jaydee.jpg'
 import LALANG_JPG from '../../../assets/images/travel/clients/lalang.jpg'
 
 const props = {
-  // padding: '- A - A',
-  gap: 'A',
   style: {
     scrollBehavior: 'smooth',
-    // overflowX: 'auto',
-    // '::-webkit-scrollbar': { display: 'none !important' }
+    overflowX: 'auto',
+    '::-webkit-scrollbar': { display: 'none' }
   }
 }
 

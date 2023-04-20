@@ -1,11 +1,11 @@
 'use strict'
 import { Flex } from 'smbls'
-import { HorArrowsBlack } from '../../../components'
+import { NavArrowsBlack } from '../../../components'
 
 import { feeds } from './feeds'
 
 const navArrows = {
-  extend: HorArrowsBlack,
+  extend: NavArrowsBlack,
   ...[
     {
       on: {
@@ -13,7 +13,7 @@ const navArrows = {
           const { feedbacks } = element.parent.parent.content
           feedbacks.node.scrollBy({
             top: 0,
-            left: -feedbacks.node.clientWidth - 16
+            left: -feedbacks.node.clientWidth
           })
         }
       }
@@ -24,7 +24,7 @@ const navArrows = {
           const { feedbacks } = element.parent.parent.content
           feedbacks.node.scrollBy({
             top: 0,
-            left: feedbacks.node.clientWidth + 16
+            left: feedbacks.node.clientWidth
           })
         }
       }
@@ -33,16 +33,23 @@ const navArrows = {
 }
 
 const props = {
-  width: '100%',
   flow: 'column',
   alignSelf: 'center',
   align: 'center',
   gap: 'Y2',
-  padding: 'F3 - E2 -',
-  maxWidth: `${350 / 16}em`,
+  margin: 'F - - -',
+  // padding: 'F3 A E2 A',
+  width: `${350 / 16}em`,
+  '@maxMobileXS': { width: `${320/ 16}em` },
+  // style: {
+  //   '@media only screen and (max)'
+  // },
+  '@maxTabletL': { fontSize: `${14 / 16}em` },
+  // '@maxTabletS': { fontSize: `${14 / 16}em` },
+  // '@maxMobileXS': { maxWidth: `${300 / 16}em` },
 
   title: {
-    fontWeight: '700',
+    fontWeight: '400',
     fontSize: 'A',
     textTransform: 'capitalize',
     whiteSpace: 'nowrap',
@@ -56,14 +63,22 @@ const props = {
     position: 'relative',
     width: '100%',
     maxWidth: `100%`,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    round: 'B2',
+    border: 'solid, black .35',
+    borderWidth: '.3px'
+    // border: '3px solid red'
   },
 
   navArrows: {
-    gap: 'B1',
-    margin: 'A - - -',
+    gap: 'Z',
+    margin: '- - - -',
     ':after': { display: 'none' },
-    childProps: { arrow: { boxSize: ' Z1' }, opacity: '1' }
+    childProps: {
+      opacity: '1',
+      border: 'none',
+      arrow: { boxSize: ' Z2' },
+    }
   }
 }
 

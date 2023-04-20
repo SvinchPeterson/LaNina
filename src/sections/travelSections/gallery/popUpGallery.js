@@ -12,6 +12,13 @@ const props = {
   background: 'naviBlue',
   height: '0',
 
+  close: {
+    '@maxMobileM': {
+      padding: 'A'
+    },
+    icon: { boxSize: 'A ' }
+  },
+
   contentContainer: {
     flow: 'row',
     align: 'center center',
