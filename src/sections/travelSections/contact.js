@@ -48,7 +48,8 @@ const props = {
   alignSelf: 'center',
   padding: 'E - E2 -',
   '@maxTabletS': {
-    width: '70%'
+    width: '70%',
+    padding: 'C2 - E2 -'
   },
   '@maxMobileM': {width: '80%'},
 

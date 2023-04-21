@@ -39,8 +39,12 @@ const props = {
   gap: 'Y2',
   margin: 'F1 -',
   width: `${350 / 16}em`,
+  '@maxTabletL': {
+    fontSize: `${14 / 16}em`,
+    margin: 'E -',
+  },
   '@maxMobileXS': { width: `${320/ 16}em` },
-  '@maxTabletL': { fontSize: `${14 / 16}em` },
+
 
   title: {
     fontWeight: '400',

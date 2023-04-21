@@ -13,7 +13,7 @@ const props = {
   '@maxTabletS': {
     flow: 'column',
     align: 'center center',
-    gap: 'C',
+    gap: 'C'
   }
 }
 

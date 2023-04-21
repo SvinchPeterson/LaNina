@@ -173,6 +173,7 @@ const props = {
     top: '0',
     background: 'linear-gradient(to right, rgba(255, 249, 237, 1) 0%,rgba(255, 249, 237, 0) 100%)',
     zIndex: 3,
+    pointerEvents: 'none',
     '@maxMobileL': { width: `${150 / 16}em` }
   },
   ':after': {
@@ -184,6 +185,7 @@ const props = {
     top: '0',
     background: 'linear-gradient(to left, rgba(255, 249, 237, 1) 0%,rgba(255, 249, 237, 0) 100%)',
     zIndex: 3,
+    pointerEvents: 'none',
     '@maxMobileL': { width: `${150 / 16}em` }
   },
 
