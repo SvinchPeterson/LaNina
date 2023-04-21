@@ -31,18 +31,6 @@ const members = {
       {
         props: {
           content: {
-            image: { backgroundImage: 'url(' + ALEKO_JPG + ')' },
-            paragraph: {
-              title: { text: 'Alexander Giorgidze' },
-              p: { text: 'Operations Director' }
-            }
-          }
-        }
-      },
-
-      {
-        props: {
-          content: {
             image: {
               backgroundImage: 'url(' + SALOME_JPG + ')',
               style: { backgroundRepeat: 'no-repeat' }
@@ -67,17 +55,6 @@ const members = {
         }
       },
 
-      {
-        props: {
-          content: {
-            image: { backgroundImage: 'url(' + ALEKO_JPG + ')' },
-            paragraph: {
-              title: { text: 'Alexander Giorgidze' },
-              p: { text: 'Operations Director' }
-            }
-          }
-        }
-      },
 
       {
         props: {
@@ -144,7 +121,6 @@ const props = {
     flow: 'column',
     content: {
       flow: 'column',
-      // gap: 'C',
       style: {
         animationName: slideHideVertical,
         animationDuration: '15s',
@@ -161,12 +137,7 @@ const props = {
       childProps: {
         align: 'center center',
         minHeight: `${420 / 16}em`,
-        image: {
-          '@maxMobileM': {
-            boxSize: 'F2 F2'
-          }
-
-        }
+        maxHeight: `${420 / 16}em`
       }
     }
   }

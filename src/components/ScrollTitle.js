@@ -5,6 +5,9 @@ import { Flex, Img } from 'smbls'
 import LEFT_ARROW_PNG from '../assets/icons/arrowsDouble-left-orange.png'
 import RIGHT_ARROW_PNG from '../assets/icons/arrowsDouble-right-orange.png'
 
+import LEFT_ARROW_BLACK_PNG from '../assets/icons/arrowsDouble-left.png'
+import RIGHT_ARROW_BLACK_PNG from '../assets/icons/arrowsDouble-right.png'
+
 const props = {
   align: 'center center',
   width: 'fit-content',
@@ -33,4 +36,12 @@ export const ScrollTitle = {
   lefts: { extend: Img },
   title: { text: 'scroll' },
   rights: { extend: Img }
+}
+
+export const ScrollTitle2 = {
+  extend: ScrollTitle,
+  props: {
+    lefts: { src: LEFT_ARROW_BLACK_PNG },
+    rights: { src: RIGHT_ARROW_BLACK_PNG }
+  }
 }

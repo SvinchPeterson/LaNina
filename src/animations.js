@@ -195,7 +195,6 @@ export const slideHideHorizontal = keyframes`
   }
 `
 
-
 export const slideHideTour = keyframes`
   0% {
     transform: translateX(0);

@@ -14,6 +14,8 @@ const state = {
   activeResidenceMenu: false,
   activeResidenceMobileMenu: false,
 
+  activeScroll: false,
+
   activeTab: 0,
   activeImage: 0,
   offers: false,
