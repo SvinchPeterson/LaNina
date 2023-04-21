@@ -52,7 +52,11 @@ const props = {
   },
   '@maxMobileM': {width: '80%'},
 
-  mailLocation: { flow: 'column', gap: 'X' },
+  mailLocation: {
+    flow: 'column',
+    gap: 'X',
+    '@maxMobileL': {textAlign: 'center'}
+  },
   numbers: {
     flow: 'column',
     padding: 'Z1 - - -',
@@ -63,7 +67,7 @@ const props = {
       border: 'solid, black .5',
       borderWidth: '1px 0 0 0',
       width: '100%',
-      alignItems: 'flex-end'
+      alignItems: 'center'
     },
     childProps: {
       gap: 'Y2',
