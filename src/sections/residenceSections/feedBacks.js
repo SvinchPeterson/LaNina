@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { slideHide2, slideHide3 } from '../../animations'
 
-import { FeedBack, NavArrowsBlack, ScrollTitle2} from '../../components'
+import { FeedBack, NavArrowsBlack, ScrollTitle2 } from '../../components'
 
 function sideScroll (element, direction, speed, distance, step) {
   var scrollAmount = 0

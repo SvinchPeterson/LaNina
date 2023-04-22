@@ -2,38 +2,32 @@
 
 import { Flex } from 'smbls'
 
+import { TravelSectionTitle } from '../../../components'
+
 import { tabs } from './tabs'
 
-import ORNAMENT_JPG from '../../../assets/images/travel/ornaments2.png'
+import ORNAMENT_JPG from '../../../assets/images/travel/ornament.png'
 
 const props = {
-  boxSize: '100% 100%',
-  minHeight: '100%',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  align: 'center center',
-  margin: 'G auto D2 auto',
+  width: '100%',
+  flow: 'column',
+  padding: 'E2 -',
+  margin: 'D2 - - -',
   position: 'relative',
-  backgroundImage: 'url(' + ORNAMENT_JPG + ')',
   style: { backgroundAttachment: 'fixed' },
-  ':before': {
-    content: '""',
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    background: 'radial-gradient(rgba(0, 47, 57, .7),rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))'
+  '@maxTabletM': {
+    padding: 'E -',
+    fontSize: `${14 / 16}em`,
   },
   title: {
+    alignSelf: 'flex-start',
+    padding: '- - A D',
     color: 'black',
-    position: 'absolute',
     textTransform: 'uppercase',
-    top: '-B2',
-    left: 'E',
-    fontSize: 'A',
-    letterSpacing: `${19 / 16}em`,
-    fontWeight: '700'
+    '@maxMobileL': {
+      alignSelf: 'center',
+      padding: '- - A 0',
+    }
   }
 }
 
@@ -41,6 +35,6 @@ export const tours = {
   extend: Flex,
   props,
   attr: { id: 'tours' },
-  title: { tag: 'h3', text: 'tours' },
+  title: { extend: TravelSectionTitle, text: 'tours' },
   tabs
 }

@@ -127,13 +127,6 @@ const props = {
         animationTimingFunction: 'linear',
         animationIterationCount: 'infinite',
       },
-      // '@maxTabletS': {
-      //   flow: 'row',
-      //   align: 'center center',
-      //   // maxWidth: 'H1',
-      //   style: { animationName: slideHideHorizontal }
-      // },
-
       childProps: {
         align: 'center center',
         minHeight: `${420 / 16}em`,

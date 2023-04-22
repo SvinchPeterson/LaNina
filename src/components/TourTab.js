@@ -4,10 +4,14 @@ import { Flex, Link } from 'smbls'
 
 const props = {
   minWidth: `G1`,
-  minHeight: 'G3',
+  minHeight: 'G1',
   cursor: 'pointer',
   border: 'solid, naviBlue 0',
-  borderWidth: `${10 / 16}em`,
+  borderWidth: `${20 / 16}em`,
+  '@maxHeightXS': {
+    minWidth: `G`,
+    minHeight: 'G'
+  },
   content: {
     flow: 'column',
     align: 'center space-between',
@@ -25,21 +29,26 @@ const props = {
     style: { backdropFilter: 'blur(.5px)' },
 
     title: {
-      textTransform: 'capitalize',
+      textTransform: 'uppercase',
       color: 'cream',
-      fontSize: `${32 / 16}em`,
+      fontSize: `${17 / 16}em`,
+      letterSpacing: `${3 / 17}em`,
       fontWeight: '100',
       transition: 'color 1s ease, transform 1s ease'
     },
 
     image: {
       position: 'relative',
-      boxSize: 'F3 F3',
+      boxSize: 'F F',
       round: '100%',
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
-      transition: 'background-position 1s ease-in-out',
+      transition: 'background-position 1s ease-in-out, border 1s ease-in-out',
       overflow: 'hidden',
+      style: {  boxShadow: '0 0 30px 0 rgba(0, 0, 0, .35)' },
+      '@maxHeightXS': {
+        boxSize: 'E2 E2',
+      },
       ':after': {
         content: '""',
         position: 'absolute',
