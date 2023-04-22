@@ -16,7 +16,7 @@ const props = {
     childProps: {
       fontSize: `${15 / 16}em`,
       childProps: {
-        fontSize: 'C',
+        fontSize: 'D',
         letterSpacing: `${-1 / 23}em`
       }
     }

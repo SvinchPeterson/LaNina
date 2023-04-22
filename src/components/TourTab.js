@@ -3,11 +3,11 @@
 import { Flex, Link } from 'smbls'
 
 const props = {
-  minWidth: `G1`,
-  minHeight: 'G1',
+  minWidth: `${300 / 16}em`,
+  minHeight: 'G',
   cursor: 'pointer',
   border: 'solid, naviBlue 0',
-  borderWidth: `${20 / 16}em`,
+  borderWidth: `${16 / 16}em`,
   '@maxHeightXS': {
     minWidth: `G`,
     minHeight: 'G'
@@ -19,7 +19,7 @@ const props = {
     border: 'solid, cream .15',
     borderWidth: `0 ${0.25 / 16}em ${0.25 / 16}em ${0.25 / 16}em`,
     round: 'B B F F',
-    padding: 'B - C -',
+    padding: 'A - C -',
     background: 'linear-gradient(rgba(248, 241, 227, 0) 30%, rgba(248, 241, 227, .1) 70%)',
     ':hover > div': {
       backgroundPosition: 'top left',
@@ -39,7 +39,7 @@ const props = {
 
     image: {
       position: 'relative',
-      boxSize: 'F F',
+      boxSize: 'E2 E2',
       round: '100%',
       backgroundSize: 'cover',
       backgroundPosition: 'center center',

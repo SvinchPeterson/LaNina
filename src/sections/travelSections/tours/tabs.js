@@ -181,19 +181,19 @@ const props = {
   flow: 'column',
   align: 'center center',
   gap: '0',
-  padding: 'D - C -',
+  padding: 'D1 - Z -',
   boxSizing: 'border-box',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   overflow: 'hidden',
   backgroundImage: 'url(' + ORNAMENT_JPG + ')',
   '@minTabletL': { style: { backgroundAttachment: 'fixed' } },
-  '@maxTabletM': {
-    padding: 'C1 - C -',
-  },
-  '@maxMobileM': {
-    padding: 'C2 - A -',
-  },
+  // '@maxTabletM': {
+  //   padding: 'C1 - C -',
+  // },
+  // '@maxMobileM': {
+  //   padding: 'C2 - A -',
+  // },
 
   imageBackground: {
     width: '100%',
@@ -215,7 +215,8 @@ const props = {
     // background: 'red',
     zIndex: '2',
     background: 'linear-gradient(to right, rgba(0, 47, 57, 1) 0%,rgba(0, 47, 57, 0) 100%)',
-    '@maxMobileL': { boxSize: '100% D' }
+    '@maxMobileL': { boxSize: '100% D' },
+    '@maxMobileM': { boxSize: '100% C' }
   },
 
   ':after': {
@@ -227,7 +228,8 @@ const props = {
     zIndex: '2',
     pointerEvents: 'none',
     background: 'linear-gradient(to left, rgba(0, 47, 57, 1) 0%, rgba(0, 47, 57, 0) 100%)',
-    '@maxMobileL': { boxSize: '100% D' }
+    '@maxMobileL': { boxSize: '100% D' },
+    '@maxMobileM': { boxSize: '100% C' }
   },
 
   content: {

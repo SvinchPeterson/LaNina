@@ -14,19 +14,21 @@ const props = {
   padding: 'E2 -',
   margin: 'D2 - - -',
   position: 'relative',
+  round: 'G G 0 0',
   style: { backgroundAttachment: 'fixed' },
   '@maxTabletM': {
     padding: 'E -',
     fontSize: `${14 / 16}em`,
   },
+  '@maxMobileL': {
+    margin: '0 - - -'
+  },
   title: {
-    alignSelf: 'flex-start',
-    padding: '- - A D',
-    color: 'black',
+    alignSelf: 'center',
+    padding: '- - B -',
     textTransform: 'uppercase',
     '@maxMobileL': {
-      alignSelf: 'center',
-      padding: '- - A 0',
+      padding: '- - A A'
     }
   }
 }

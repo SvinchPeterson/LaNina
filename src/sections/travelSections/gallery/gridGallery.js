@@ -67,7 +67,7 @@ const props = {
 
   content: {
     columns: 'repeat(4, 1fr)',
-    rows: 'repeat(6, 550px)',
+    rows: 'repeat(6, 400px)',
     position: 'relative',
     overflow: 'hidden',
     gap: 'Y',
@@ -121,7 +121,7 @@ const props = {
       title: {
         position: 'absolute',
         color: 'cream',
-        fontSize: 'H',
+        fontSize: 'G',
         fontWeight: '100',
         textTransform: 'capitalize',
         letterSpacing: '-1px',
@@ -192,7 +192,7 @@ export const gridGalleries = {
     {
       props: {
         gridColumn: '3 / span 4',
-        round: '0 0 0 G',
+        round: '0 0 0 F',
         backgroundImage: 'url(' + MTSKETA_JPG + ')',
         title: { text: 'mtsketa' }
       },
