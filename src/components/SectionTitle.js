@@ -16,17 +16,17 @@ export const ResidenceSectionTitle = {
     color: 'black',
     gap: 'Z',
     style: { wordSpacing: '6px'},
-    // ':before': {
-    //   content: '"|||"',
-    //   color: 'orange',
-    //   letterSpacing: `${3 / 10}em !important`,
-    // },
-    // ':after': {
-    //   content: '"|||"',
-    //   color: 'orange',
-    //   letterSpacing: `${3 / 10}em`,
-    //   margin: '- - - -3px'
-    // }
+    ':before': {
+      content: '"|||"',
+      color: 'orange',
+      letterSpacing: `${3 / 10}em !important`,
+    },
+    ':after': {
+      content: '"|||"',
+      color: 'orange',
+      letterSpacing: `${3 / 10}em`,
+      margin: '- - - -3px'
+    }
   }
 }
 

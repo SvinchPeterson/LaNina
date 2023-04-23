@@ -6,6 +6,7 @@ import { PopUpModal } from "./PopUpModal"
 import { Navbar } from './Navbar'
 
 const props = {
+  style: { backgroundAttachment: 'fixed' },
   contentContainer: {
     boxSize: '100% 85%',
     zIndex: '3',

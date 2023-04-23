@@ -186,6 +186,7 @@ const props = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   overflow: 'hidden',
+  backgroundColor: 'orange',
   backgroundImage: 'url(' + ORNAMENT_JPG + ')',
   '@minTabletL': { style: { backgroundAttachment: 'fixed' } },
   // '@maxTabletM': {

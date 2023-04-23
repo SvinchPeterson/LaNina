@@ -22,7 +22,7 @@ export const tabBallerina = {
   extend: RoomTab,
   props: {
     imageContainer: {
-      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)), url(' + BALLERINA_JPG + ')' } }
+      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .5)), url(' + BALLERINA_JPG + ')' } }
     },
 
     icon: { src: DRESS_PNG },
@@ -43,7 +43,7 @@ export const tabRedBrick = {
   extend: RoomTab,
   props: {
     imageContainer: {
-      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + REDBRICK_JPG + ')' } }
+      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .5)),url(' + REDBRICK_JPG + ')' } }
     },
     icon: { src: BRICKS_PNG },
     p: { text: 'Where traditional Georgian old style meets modernity!' },
@@ -61,7 +61,7 @@ export const tabYellowCouch = {
   extend: RoomTab,
   props: {
     imageContainer: {
-      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + YELLOWCOUCH_JPG + ')' } }
+      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .5)),url(' + YELLOWCOUCH_JPG + ')' } }
     },
     icon: { src: SOFA_PNG },
     p: {
@@ -82,7 +82,7 @@ export const tabGreenForest = {
   extend: RoomTab,
   props: {
     imageContainer: {
-      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + GREENFOREST_JPG + ')' } }
+      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .5)),url(' + GREENFOREST_JPG + ')' } }
     },
     icon: { src: LEAF_PNG },
     p: { text: 'Timeless and elegant, yet modern and fresh, green is your choice!' },
@@ -100,7 +100,7 @@ export const tabRetro = {
   extend: RoomTab,
   props: {
     imageContainer: {
-      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + RETRO_JPG + ')' } },
+      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .5)),url(' + RETRO_JPG + ')' } },
     },
     icon: { src: VINYL_PNG },
     p: { text: 'Where contemporary design combine with traditional architecture.' },
@@ -119,7 +119,7 @@ export const tabBlueLagoon = {
   extend: RoomTab,
   props: {
     imageContainer: {
-      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + BLUE_LAGOON_JPG + ')' } }
+      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .5)),url(' + BLUE_LAGOON_JPG + ')' } }
     },
     icon: { src: LAGOON_PNG },
     p: { text: 'Gentle blue brings you balance and inner peace.' },
@@ -139,7 +139,7 @@ export const tabQvevri = {
   props: {
     href: '#roomRetro',
     imageContainer: {
-      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .7)),url(' + QVEVRI_JPG + ')' } }
+      image: { style: { backgroundImage: 'linear-gradient(rgba(25, 63, 55, .3), rgba(25, 63, 55, .5)),url(' + QVEVRI_JPG + ')' } }
     },
     icon: { src: QVEVRI_PNG },
     p: { text: 'Where contemporary design combine with traditional architecture.' },
