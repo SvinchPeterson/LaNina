@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { ScrollTitle, ResidenceSectionTitle } from '../../../components'
+import { ResidenceSectionTitle, ScrollTitleBlack } from '../../../components'
 
 import { tabs } from './tabs'
 
@@ -55,5 +55,5 @@ export const apartments = {
     ':after': {},
   },
   tabs,
-  scroll: { extend: ScrollTitle }
+  scroll: { extend: ScrollTitleBlack }
 }

@@ -2,7 +2,7 @@
 
 import { Grid, Flex } from 'smbls'
 
-import { ServiceFacilityItem, ScrollTitle, ResidenceSectionTitle } from '../../components'
+import { ServiceFacilityItem, ScrollTitleBlack, ResidenceSectionTitle } from '../../components'
 
 import SHELF_JPG from '../../assets/images/residence/sololaki/shelf.jpg'
 
@@ -166,5 +166,5 @@ export const servicesFacilities = {
     title: { extend: ResidenceSectionTitle, text: 'services & facilities'  },
     items
   },
-  scroll: {extend: ScrollTitle }
+  scroll: {extend: ScrollTitleBlack }
 }

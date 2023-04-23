@@ -43,8 +43,6 @@ export const props = {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       round: 'F',
-      border: 'solid, orange3 .5',
-      borderWidth: '.5px',
       '@minTabletL': { style: { backgroundAttachment: 'fixed' } }
     }
   },

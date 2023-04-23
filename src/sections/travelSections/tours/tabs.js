@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { slideHide } from '../../../animations'
 
-import { TourTab, NavArrowsCream, ScrollTitle3 } from '../../../components'
+import { TourTab, NavArrowsCream, ScrollTitleCream } from '../../../components'
 
 import ORNAMENT_JPG from '../../../assets/images/travel/ornament.png'
 import TBILISI_JPG from '../../../assets/images/travel/tbilisi2.jpg'
@@ -277,5 +277,5 @@ export const tabs = {
   imageBackground: {},
   content,
   navArrows,
-  scroll: { extend: ScrollTitle3 }
+  scroll: { extend: ScrollTitleCream }
 }

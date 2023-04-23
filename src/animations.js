@@ -27,6 +27,20 @@ to {
 }
 `
 
+export const titleLetterSpacing = keyframes`
+from {
+  opacity: 0;
+  letter-spacing: .5px;
+  transform: translate(-50%, -50%), scale(.97);
+}
+to {
+  letter-spacing: -1.3px;
+  opacity: 1;
+  transform: translate(-50%, -50%), scale(1);
+}
+`
+
+
 export const navBarItemTransform2 = keyframes`
 from {
   transform: translateY(-50px);

@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { slideHide2, slideHide3 } from '../../animations'
 
-import { FeedBack, NavArrowsBlack, ScrollTitle2 } from '../../components'
+import { FeedBack, NavArrowsBlack, ScrollTitleBlack } from '../../components'
 
 function sideScroll (element, direction, speed, distance, step) {
   var scrollAmount = 0
@@ -198,10 +198,10 @@ const props = {
     '@maxMobileL': { width: '90%'},
     style: { borderBottom: '.5px solid rgba(0, 0, 0, .5)' },
     title: {
-      fontWeight: '400',
+      fontWeight: '700',
       fontSize: `${14 / 16}em`,
       whiteSpace: 'nowrap',
-      letterSpacing: `${3.5 / 14}em`,
+      letterSpacing: `${.5 / 14}em`,
       zIndex: '10'
     },
 
@@ -252,7 +252,7 @@ export const feedBacks = {
   header: {
     title: { tag: 'h5', text: 'Feedbacks' },
     navArrows,
-    scrollTitle: {extend: ScrollTitle2}
+    scrollTitle: { extend: ScrollTitleBlack }
   },
 
   content: {

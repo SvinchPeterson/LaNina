@@ -5,7 +5,9 @@ import { Flex, Img } from 'smbls'
 import { Navbar } from '../components'
 
 import {
-  navBarItemTransform, scaleLogo, backgroundPosition, deopacity, navBarItemTransform2, opacity, lineWidth
+  navBarItemTransform, scaleLogo, backgroundPosition, deopacity,
+  navBarItemTransform2, opacity, lineWidth, titleLetterSpacing
+
 } from '../animations'
 
 import LOGO_PNG from '../assets/icons/logo.png'
@@ -116,9 +118,9 @@ const props = {
         opacity: '1',
         pointerEvents: 'none',
         style: {
-          animationDuration: '1.5s',
-          animationTimingFunction: 'ease-out',
           animationName: lineWidth,
+          animationDuration: '1.5s',
+          animationTimingFunction: 'ease-out'
         }
       },
 
@@ -148,24 +150,20 @@ const props = {
   },
 
   title: {
-    fontSize: `Z`,
+    fontSize: 'D',
     fontWeight: '700',
-    textTransform: 'uppercase',
-    letterSpacing: `${12 / 13}em`,
+    textTransform: 'capitalize',
+    letterSpacing: `${-1.3 / 28}em`,
     color: 'cream .7',
     zIndex: '3',
     position: 'absolute',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    padding: `- - - ${12 / 13}em`,
     width: '100%',
     textAlign: 'center',
-    bottom: 'D',
-    '@maxMobileM': { letterSpacing: `${8 / 13}em`, padding: `- - - ${8 / 13}em`,},
-    '@maxHeightS': { bottom: 'B1' },
-    '@minHeightM': {bottom: 'D1'},
+    bottom: 'A2',
     style: {
-      animationName: opacity,
+      animationName: titleLetterSpacing,
       animationDuration: '1.5s',
       animationTimingFunction: 'ease-in-out'
     }

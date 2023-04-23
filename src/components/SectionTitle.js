@@ -11,20 +11,22 @@ export const ResidenceSectionTitle = {
     fontSize: `${10 / 16}em`,
     textTransform: 'uppercase',
     fontWeight: '400',
-    letterSpacing: `${7 / 10}em`,
+    letterSpacing: `${5 / 10}em`,
     align: 'center center',
+    color: 'black',
     gap: 'Z',
-    ':before': {
-      content: '"|||"',
-      color: 'orange',
-      letterSpacing: `${3 / 10}em !important`,
-    },
-    ':after': {
-      content: '"|||"',
-      color: 'orange',
-      letterSpacing: `${3 / 10}em`,
-      margin: '- - - -3px'
-    }
+    style: { wordSpacing: '6px'},
+    // ':before': {
+    //   content: '"|||"',
+    //   color: 'orange',
+    //   letterSpacing: `${3 / 10}em !important`,
+    // },
+    // ':after': {
+    //   content: '"|||"',
+    //   color: 'orange',
+    //   letterSpacing: `${3 / 10}em`,
+    //   margin: '- - - -3px'
+    // }
   }
 }
 

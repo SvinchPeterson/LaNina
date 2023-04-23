@@ -89,7 +89,7 @@ export const COLORS = {
 
   naviGreen: 'rgba(1, 57, 57, 1)',
   naviGreenDark: 'rgba(0, 49, 49, 1)',
-  naviGreenLight: 'rgba(0, 70, 70, 1)',
+  naviGreenLight: 'rgba(0, 102, 102, 1)',
 
   naviBlue: 'rgba(0, 47, 57, 1)',
   naviBlueLight: 'rgba(1, 59, 71, 1)',

@@ -2,9 +2,6 @@
 
 import { Flex, Img } from 'smbls'
 
-import LEFT_ARROW_PNG from '../assets/icons/arrowsDouble-left-orange.png'
-import RIGHT_ARROW_PNG from '../assets/icons/arrowsDouble-right-orange.png'
-
 import LEFT_ARROW_BLACK_PNG from '../assets/icons/arrowsDouble-left.png'
 import RIGHT_ARROW_BLACK_PNG from '../assets/icons/arrowsDouble-right.png'
 
@@ -16,23 +13,20 @@ const props = {
   width: 'fit-content',
   gap: 'Y',
   style: {
-    '> img': { height: `${8.5 / 16}em` }
+    '> img': { height: `${10 / 16}em` }
   },
 
-  lefts: { src: LEFT_ARROW_PNG },
   title: {
     fontSize: `${9 / 16}em`,
     textTransform: 'uppercase',
-    margin: '-V2 - - -',
+    margin: '- - - -',
     fontWeight: '700',
     opacity: '.75',
     style: { letterSpacing: '1px' }
   },
-  rights: { src: RIGHT_ARROW_PNG }
-
 }
 
-export const ScrollTitle = {
+const ScrollTitle = {
   extend: Flex,
   props,
 
@@ -41,7 +35,7 @@ export const ScrollTitle = {
   rights: { extend: Img }
 }
 
-export const ScrollTitle2 = {
+export const ScrollTitleBlack = {
   extend: ScrollTitle,
   props: {
     lefts: { src: LEFT_ARROW_BLACK_PNG },
@@ -50,7 +44,7 @@ export const ScrollTitle2 = {
 }
 
 
-export const ScrollTitle3 = {
+export const ScrollTitleCream = {
   extend: ScrollTitle,
   props: {
     lefts: { src: LEFT_ARROW_CREAM_PNG },

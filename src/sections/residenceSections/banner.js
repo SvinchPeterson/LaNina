@@ -36,7 +36,7 @@ const props = {
       letterSpacing: `${16 / 12}em`,
       margin: 'Z2 - - -',
       padding: 'Y2 - - Z2',
-      border: 'solid, orange',
+      border: 'solid, orange3 .7',
       borderWidth: '.55px 0 0 0',
     }
   }

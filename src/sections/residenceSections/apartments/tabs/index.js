@@ -20,7 +20,8 @@ const props = {
   flow: 'column',
   align: 'center center',
   overflow: 'hidden',
-  background: 'url(' + ORNAMENT_PNG + ')',
+  backgroundColor: 'orange',
+  backgroundImage: 'url(' + ORNAMENT_PNG + ')',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   '@minTabletL': { style: { backgroundAttachment: 'fixed' } },
@@ -31,7 +32,7 @@ const props = {
     boxSize: '100% F1',
     top: '0',
     left: '0',
-    background: 'linear-gradient(to right, rgba(0, 70, 70, 1) 0%, rgba(0, 70, 70, 0) 100%)',
+    background: 'linear-gradient(to right,  rgba(1, 57, 57, 1) 0%, rgba(1, 57, 57, 0) 100%)',
     zIndex: '2',
     pointerEvents: 'none',
     '@mobileL': { boxSize: '100% E' }
@@ -43,7 +44,7 @@ const props = {
     boxSize: '100% F1',
     top: '0',
     right: '0',
-    background: 'linear-gradient(to left, rgba(0, 70, 70, 1) 0%, rgba(0, 70, 70, 0) 100%)',
+    background: 'linear-gradient(to left, rgba(1, 57, 57, 1) 0%, rgba(1, 57, 57, 0) 100%)',
     zIndex: '2',
     pointerEvents: 'none',
     '@mobileL': { boxSize: '100% E' }
@@ -54,8 +55,17 @@ const props = {
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(0, 49, 49, .65),rgba(0, 49, 49, .75), rgba(0, 70, 70, 1), rgba(0, 70, 70, 1))',
-    '@maxTabletL': { background: 'naviGreenLight'},
+
+    style: {
+      backgroundColor: 'rgba(1, 57, 57, .75)',
+      backgroundImage: 'linear-gradient(160deg, rgba(1, 57, 57, 1) 0%, rgba(1, 57, 57, 0) 100%)'
+    }
+
+//     background-color: #0093E9;
+// background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+    // background: 'radial-gradient(rgba(0, 49, 49, .65),rgba(0, 49, 49, .75), rgba(0, 70, 70, 1), rgba(0, 70, 70, 1))',
+    // '@maxTabletL': { background: 'naviGreenLight'},
   },
   tabsContainer: {
     padding: '- F',

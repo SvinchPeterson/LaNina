@@ -15,6 +15,7 @@ import ORNAMENTS_PNG from '../../../../assets/images/residence/sololaki/ornament
 import { roomsHeader } from './roomsHeader'
 
 const props = {
+  backgroundColor: 'orange',
   backgroundImage: 'url(' + ORNAMENTS_PNG + ')',
   ':before': { background: 'radial-gradient(rgba(0, 49, 49, .5), rgba(0, 49, 49, 1), rgba(0, 49, 49, 1))' },
   '@maxTabletL': { fontSize: `${14 / 16}em` },

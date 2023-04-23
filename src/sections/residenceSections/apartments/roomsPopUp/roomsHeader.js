@@ -91,7 +91,7 @@ export const roomsHeader = {
         class: {
           show: (element, state) => state.activeRetro
             ? { bottom: `${10 / 28}em`, opacity: '1', transform: 'scale(1)' }
-            : { bottom: `${-50 / 28}em`, opacity: '0',  transform: 'scale(.95)' }
+            : { bottom: `${-50 / 28}em`, opacity: '0', transform: 'scale(.95)' }
         },
         props: { text: 'retro' }
       },
