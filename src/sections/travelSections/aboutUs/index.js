@@ -2,7 +2,9 @@
 
 import { Flex } from 'smbls'
 
-import { paragraph } from './paragraph'
+import { Paragraph } from '../../../components'
+import { $aboutUs } from '../../../texts/travel'
+
 import { team } from './team'
 
 const props = {
@@ -22,6 +24,10 @@ export const aboutUs = {
   props,
   attr: { id: 'about' },
 
-  paragraph,
+  article: {
+    extend: Paragraph,
+    title: { text: 'about us' },
+    p: { extend: $aboutUs }
+  },
   team
 }

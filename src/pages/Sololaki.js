@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { Menu, MenuMobile, Header, Footer } from '../components'
 
-import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location } from '../sections/residenceSections'
+import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location, contact } from '../sections/residenceSections'
 
 import { roomsPopUp } from '../sections/residenceSections/apartments/roomsPopUp'
 
@@ -153,47 +153,11 @@ const footer = {
   }
 }
 
-
-// function sideScroll (element, direction, speed, distance, step) {
-//   var scrollAmount = 0
-//   var slideTimer = setInterval(function () {
-//     if (direction === 'left') {
-//       element.scrollLeft -= step
-//     } else {
-//       element.scrollLeft += step
-//     }
-//     scrollAmount += step
-//     if (scrollAmount >= distance) {
-//       window.clearInterval(slideTimer)
-//     }
-//   }, speed)
-// }
-
-// on: {
-//   click: (event, element, state) => {
-//     const content = document.getElementById('feedbacks')
-//     sideScroll(content, 'left', 10, 300, 10)
-//   }
-// }
-
-// / window.addEventListener("scroll", function() {
-//   //   var header = document.querySelector("header");
-//   //   header.classList.toggle("scrolled", window.scrollY > 0);
-//   // });
-
 export const Sololaki = {
   extend: Flex,
   state,
   props: {
     ...properties
-  },
-
-  on: {
-    // click: (event, element, state) => { state.update({ activeResidenceMenu: false, activeResidenceMobileMenu: false }) }
-    // scroll: (element, state) => {
-    //   state.update({activeHeader: true})
-
-    // }
   },
 
   class: {
@@ -218,5 +182,6 @@ export const Sololaki = {
   wine,
   feedBacks,
   location,
+  contact,
   footer
 }

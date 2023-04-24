@@ -2,8 +2,8 @@
 
 import { Flex, Img } from 'smbls'
 
-import PHONE_PNG from '../../assets/icons/phone.png'
-import MOBILE_PNG from '../../assets/icons/mobile.png'
+import PHONE_PNG from '../assets/icons/phone.png'
+import MOBILE_PNG from '../assets/icons/mobile.png'
 
 const mailLocation = {
   extend: Flex,
@@ -78,7 +78,7 @@ const props = {
 
 }
 
-export const contact = {
+export const Contact = {
   extend: Flex,
   props,
   attr: { id: 'contact' },

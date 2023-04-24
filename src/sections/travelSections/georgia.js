@@ -4,29 +4,26 @@ import { Paragraph } from '../../components'
 import { $georgia } from '../../texts/travel'
 
 const props = {
-  // alignSelf: 'center',
-  // margin: 'G - - -',
-  // align: 'flex-start flex-start',
-  // maxWidth: 'H',
-  // '@maxTabletM': { fontSize: `${15 / 16}em` },
-  // '@maxMobileL': {
-  //   margin: 'E2 - - -',
-  //   padding: '- B1'
-  // },
-  // p: {
-  //   childProps: {
-  //     fontSize: `${15 / 16}em`,
-  //     childProps: {
-  //       fontSize: 'D',
-  //       letterSpacing: `${-1 / 23}em`
-  //     }
-  //   }
-  // }
+  alignSelf: 'center',
+  margin: 'G - - -',
+  '@maxTabletL': {
+    fontSize: `${15 / 16}em`,
+    padding: '- B'
+  },
+  p: {
+    childProps: {
+      childProps: {
+        fontSize: 'H',
+        color: 'orange',
+        letterSpacing: `${-4 / 57}em`
+      }
+    }
+  }
 }
 
 export const georgia = {
   extend: Paragraph,
+  props,
   title: null,
   p: { extend: $georgia }
-  // p: { extend: $georgia }
 }

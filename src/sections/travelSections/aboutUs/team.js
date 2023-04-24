@@ -75,7 +75,6 @@ const props = {
   position: 'relative',
   overflow: 'hidden',
   maxHeight: 'H',
-  // '@maxTabletS': {maxWidth: 'H2'},
   ':before': {
     content: '""',
     position: 'absolute',
@@ -86,16 +85,6 @@ const props = {
     zIndex: '3',
     background: 'linear-gradient(to bottom, rgba(255, 249, 237, 1) 0%, rgba(255, 249, 237, 0) 100%)'
   },
-  // ':after': {
-  //   content: '""',
-  //   position: 'absolute',
-  //   boxSize: 'E2 100%',
-  //   bottom: '0',
-  //   left: '0',
-  //   pointerEvents: 'none',
-  //   zIndex: '3',
-  //   background: 'linear-gradient(to top, rgba(255, 249, 237, 1) 0%, rgba(255, 249, 237, 0) 100%)'
-  // },
 
   title: {
     text: 'TEAM',
