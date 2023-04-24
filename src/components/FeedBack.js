@@ -1,4 +1,5 @@
 'use strict'
+import { Flex } from 'smbls'
 
 import { Paragraph } from './Paragraph'
 
@@ -17,9 +18,10 @@ const props = {
     border: 'solid, black .5',
     borderWidth: '.7px',
     round: 'A2',
+    flow: 'column',
 
     title: {
-      fontSize: 'C',
+      fontSize: 'E',
       letterSpacing: `${-1 / 23}em`
     },
 
@@ -47,8 +49,8 @@ export const FeedBack = {
   props,
 
   content: {
-    extend: Paragraph,
-    title: {},
+    extend: Flex,
+    title: {tag: 'h4'},
     p: {},
     date: { tag: 'h6' }
   }

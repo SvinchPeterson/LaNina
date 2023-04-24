@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { TravelSectionTitle } from '../../../components'
+import { TravelSectionTitle, ScrollTitleBlack } from '../../../components'
 
 import { tabs } from './tabs'
 
@@ -28,8 +28,16 @@ const props = {
     padding: '- - B -',
     textTransform: 'uppercase',
     '@maxMobileL': {
-      padding: '- - A A'
+      padding: '- - A -'
     }
+  },
+
+  scroll: {
+    '@minMobileL': { display: 'none' },
+    zIndex: '5',
+    color: 'cream',
+    padding: 'A A - -',
+    alignSelf: 'flex-end'
   }
 }
 
@@ -38,5 +46,6 @@ export const tours = {
   props,
   attr: { id: 'tours' },
   title: { extend: TravelSectionTitle, text: 'tours' },
-  tabs
+  tabs,
+  scroll: { extend: ScrollTitleBlack }
 }

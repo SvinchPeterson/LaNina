@@ -10,6 +10,7 @@ const props = {
   background: 'cream',
   round: 'Z',
   whiteSpace: 'nowrap',
+  zIndex: '3',
 
   title: {
     fontSize: `${14 / 16}em`,
@@ -27,7 +28,7 @@ const props = {
 }
 
 export const ServiceFacilityItem = {
-  extend: Paragraph,
+  // extend: Paragraph,
   props,
 
   title: { tag: 'h5' },

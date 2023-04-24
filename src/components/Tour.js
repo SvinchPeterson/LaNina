@@ -13,12 +13,24 @@ const props = {
   align: 'center center',
   alignSelf: 'center',
   gap: 'C',
+  '@maxTabletL': { gap: 'B' },
 
   galleryContainer: {
     transition: 'transform .7s ease',
+    '@maxTabletS': {
+      width: '100%'
+    },
     gallery: {
       width: 'H1',
       height: 'G1',
+      '@maxTabletS': {
+        // round: '0'
+      }
+    },
+
+    footer: {
+      width: '70%',
+      book: { padding: 'Z2 B2'}
     }
   },
 

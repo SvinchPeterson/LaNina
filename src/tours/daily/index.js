@@ -20,7 +20,6 @@ const props = {
     padding: 'C2 - C1 -',
     article: {
       package: {
-        padding: 'B - - -',
         packageSchedule: {
           childProps: {
             gap: 'Z',

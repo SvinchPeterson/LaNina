@@ -12,7 +12,7 @@ const props = {
   flow: 'column',
 
   title: {
-    fontSize: `Z`,
+    fontSize: `${12 / 16}em`,
     fontWeight: '400',
     textTransform: 'uppercase',
     color: 'cream',

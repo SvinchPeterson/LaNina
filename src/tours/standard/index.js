@@ -41,8 +41,8 @@ export const standard = {
         : { opacity: '0', transition: 'opacity .35s ease-in-out' }
     },
 
-    gallery: {},
-    description: {
+    galleryContainer: {},
+    article: {
       class: {
         show: (element, state) => state.activeStandard
           ? {

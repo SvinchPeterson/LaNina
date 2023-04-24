@@ -4,6 +4,7 @@ import { Flex } from 'smbls'
 import { Navbar } from '../../../../components'
 
 const props = {
+  padding: '- Y2 - Z2',
   titles: {
     childProps: {
       textTransform: 'uppercase',
@@ -11,8 +12,19 @@ const props = {
       fontSize: 'C',
     }
   },
+
   tabs: {
-    gap: 'A'
+    gap: 'Z',
+    padding: '- - V2 -',
+    childProps: {
+      // border: '1px solid red',
+      childProps: {
+        display: 'block',
+        boxSize: 'Y B',
+        background: 'cream',
+        round: 'C'
+      }
+    }
   }
 
 }
@@ -32,7 +44,7 @@ export const toursHeader = {
       {
         class: {
           show: (element, state) => state.activeDaily
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: '7px', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tours' },
         span: { text: 'daily ' }
@@ -41,7 +53,7 @@ export const toursHeader = {
       {
         class: {
           show: (element, state) => state.activeStandard
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: '7px', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tours' },
         span: { text: 'standard ' }
@@ -50,7 +62,7 @@ export const toursHeader = {
       {
         class: {
           show: (element, state) => state.activeCaucasus
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: '7px', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tour' },
         span: { text: 'caucasus ' }
@@ -59,7 +71,7 @@ export const toursHeader = {
       {
         class: {
           show: (element, state) => state.activeExclusive
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: '7px', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tour' },
         span: { text: 'exclusive ' }
@@ -68,7 +80,7 @@ export const toursHeader = {
       {
         class: {
           show: (element, state) => state.activeWineGastronomy
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: '7px', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tour' },
         span: { text: 'wine & gastronomy ' }
@@ -77,7 +89,7 @@ export const toursHeader = {
       {
         class: {
           show: (element, state) => state.activeAdventure
-            ? { bottom: '0', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
+            ? { bottom: '7px', opacity: '1' } : { bottom: `${-50 / 28}em`, opacity: '0' }
         },
         props: { text: 'tour' },
         span: { text: 'adventure ' }
@@ -86,10 +98,10 @@ export const toursHeader = {
   },
 
   tabs: {
+    childExtend: { span: {} },
     ...[
       {
         props: { href: '#tbilisi' },
-        text: 'daily',
 
         class: {
           show: (element, state) => state.activeDaily
@@ -123,8 +135,6 @@ export const toursHeader = {
       },
       {
         props: { href: '#capital' },
-        text: 'standard',
-
         class: { show: (element, state) => state.activeStandard
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -157,7 +167,6 @@ export const toursHeader = {
       },
 
       {
-        text: 'caucasus',
         class: { show: (element, state) => state.activeCaucasus
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -196,7 +205,6 @@ export const toursHeader = {
       },
 
       {
-        text: 'exclusive',
         class: { show: (element, state) => state.activeExclusive
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -237,8 +245,6 @@ export const toursHeader = {
       },
 
       {
-        text: 'wine & gastronomy',
-
         class: { show: (element, state) => state.activeWineGastronomy
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {
@@ -277,7 +283,6 @@ export const toursHeader = {
       },
 
       {
-        text: 'adventure',
         class: { show: (element, state) => state.activeAdventure
           ? { opacity: '1', pointerEvents: 'none' } : { opacity: '.55' } },
         on: {

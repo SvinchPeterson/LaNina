@@ -51,27 +51,18 @@ const props = {
   },
 
   paragraph: {
+    padding: 'C E D D',
+    margin: '-F1 - - -A2',
     background: 'cream',
-    margin: '-F - - -',
-    padding: 'C D1 D B',
     round: '0 F 0 0',
-    gap: 'Z',
-    zIndex: '5',
-    boxSizing: 'border-box',
-    '@maxMobileM': {
-      margin: '-E2 - - -',
-      padding: 'C C D D',
-      round: '0 E 0 0',
-      width: '100%',
-      style: { boxShadow: '15px -35px 30px rgba(0, 0, 0, .36)' }
+    style: { boxShadow: 'rgba(0, 0, 0, 0.45) 0px -25px 20px -20px'},
+    '@maxTabletL': {
+      margin: '-F1 - - -A2'
     },
-    '@maxMobileS': { padding: 'C B2 D C' },
-    '@maxMobileXS': { padding: 'C B D B2' },
-
-    title: { fontSize: 'D' },
-    p: {
-      maxWidth: 'H',
-      fontSize: `${15 / 16}em`
+    '@maxMobileM': {
+      margin: '-E2 - - 0',
+      padding: 'C C2 C2 C',
+      width: '100%',
     }
   }
 }

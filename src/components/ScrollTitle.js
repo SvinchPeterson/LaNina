@@ -39,6 +39,7 @@ export const ScrollTitleBlack = {
   extend: ScrollTitle,
   props: {
     lefts: { src: LEFT_ARROW_BLACK_PNG },
+    title: { color: 'black' },
     rights: { src: RIGHT_ARROW_BLACK_PNG }
   }
 }
@@ -48,6 +49,7 @@ export const ScrollTitleCream = {
   extend: ScrollTitle,
   props: {
     lefts: { src: LEFT_ARROW_CREAM_PNG },
+    title: { color: 'cream' },
     rights: { src: RIGHT_ARROW_CREAM_PNG }
   }
 }

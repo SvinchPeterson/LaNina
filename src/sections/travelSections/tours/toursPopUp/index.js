@@ -13,6 +13,7 @@ const props = {
   backgroundImage: 'url(' + ORNAMENT_PNG + ')',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
+  '@maxTabletL': { fontSize: `${14 / 16}em` },
   ':before': { background: 'radial-gradient(rgba(0, 47, 57, .5), rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))' },
     ':after': {
     content: '""',
@@ -25,6 +26,16 @@ const props = {
     zIndex: '5',
     background: 'linear-gradient(to top, rgba(0, 47, 57, 1) 0%, rgba(0, 47, 57, 0) 100%)'
   },
+
+  contentContainer: {
+    style: { boxShadow: '0px 60px 30px 15px rgba(0, 0, 0, .25)' },
+    content: {
+      '@maxTabletM': {
+        width: '95%',
+        alignSelf: 'center'
+      }
+    }
+  }
 }
 
 export const toursPopUp = {

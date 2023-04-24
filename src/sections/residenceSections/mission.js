@@ -14,9 +14,7 @@ const props = {
   margin: 'F1 - - -',
   width: 'fit-content',
   alignSelf: 'center',
-  '@maxTabletM': { fontSize: `${15 / 16}em` },
-  '@maxMobileM': { margin: 'E2 - - -', },
-  '@maxMobileO': { minWidth: `100%` },
+  '@maxTabletL': { fontSize: `${15 / 16}em` },
   image: {
     minWidth: `H3`,
     minHeight: `G3`,
@@ -46,25 +44,17 @@ const props = {
       zIndex: '2',
       boxShadow: 'inset 0px 0px 2px .2px rgba(0, 0, 0, .7)'
     },
-
   },
 
   paragraph: {
-    gap: 'X1',
-    maxWidth: `${500 / 16}em`,
+    padding: 'C',
     textAlign: 'center',
+    '@maxMobileS': { padding: 'B' },
     style: { fontStyle: 'italic' },
-    '@maxMobileL': { maxWidth: `H` },
-    '@maxMobileS': { maxWidth: `G2` },
-    '@maxMobileO': {padding: '- Z1' },
     title: {
-      fontSize: 'B',
-      letterSpacing: `${-1 / 19}em`,
+      fontSize: 'F',
+      '@maxMobileM': { fontSize: 'F' }
     },
-    p: {
-      fontSize: `${15 / 16}em`,
-      gap: 'V'
-    }
   }
 }
 

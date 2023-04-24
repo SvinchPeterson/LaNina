@@ -2,6 +2,11 @@
 
 import { Flex } from 'smbls'
 
+import { bannerTitle, bannerSubTitle } from '../animations'
+
+import { BannerHeading } from './BannerHeading'
+
+
 const props = {
   width: '100%',
   minHeight: '100%',
@@ -11,6 +16,9 @@ const props = {
   overflow: 'hidden',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
+  boxSizing: 'border-box',
+  padding: '- - D -',
+  align: 'flex-end center',
   ':before': {
     content: '""',
     boxSize: '100% 100%',
@@ -26,18 +34,16 @@ const props = {
   },
   '@minTabletL': { style:{ backgroundAttachment: 'fixed !important' }},
 
-  title: {
-    color: 'cream',
-    zIndex: '5',
-    flow: 'column',
-    align: 'center flex-start',
-    h1: {
-      fontSize: 'G',
-      textTransform: 'capitalize'
+  heading: {
+    title: {
+      style: { animationName: bannerTitle },
+      animationDuration: '2s',
+      AnimationTimingFunction: 'ease'
     },
-    h5: {
-      fontWeight: '400',
-      textTransform: 'uppercase'
+    subTitle: {
+      style: { animationName: bannerSubTitle },
+      animationDuration: '2s',
+      AnimationTimingFunction: 'ease'
     }
   }
 }
@@ -47,10 +53,5 @@ export const Banner = {
   extend: Flex,
   attr: { id: 'banner' },
   props,
-
-  title: {
-    extend: Flex,
-    h1: {},
-    h5: {}
-  }
+  heading: { extend: BannerHeading }
 }

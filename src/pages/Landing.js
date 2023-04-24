@@ -2,7 +2,7 @@
 
 import { Flex, Img } from 'smbls'
 
-import { Navbar } from '../components'
+import { Navbar, PageTitle } from '../components'
 
 import {
   navBarItemTransform, scaleLogo, backgroundPosition, deopacity,
@@ -150,16 +150,12 @@ const props = {
   },
 
   title: {
-    fontSize: 'D',
-    fontWeight: '700',
-    textTransform: 'capitalize',
-    letterSpacing: `${-1.3 / 28}em`,
-    color: 'cream .7',
+    fontSize: 'E',
+    letterSpacing: `${-2 / 33}em`,
     zIndex: '3',
     position: 'absolute',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '100%',
     textAlign: 'center',
     bottom: 'A2',
     style: {
@@ -183,7 +179,7 @@ export const Landing = {
   },
 
   title: {
-    tag: 'h5',
+    extend: PageTitle,
     text: 'BB hospitality'
   }
 }

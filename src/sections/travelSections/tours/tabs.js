@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { slideHide } from '../../../animations'
 
-import { TourTab, NavArrowsCream, ScrollTitleCream } from '../../../components'
+import { TourTab, NavArrowsCream } from '../../../components'
 
 import ORNAMENT_JPG from '../../../assets/images/travel/ornament.png'
 import TBILISI_JPG from '../../../assets/images/travel/tbilisi2.jpg'
@@ -181,7 +181,7 @@ const props = {
   flow: 'column',
   align: 'center center',
   gap: '0',
-  padding: 'D1 - Z -',
+  padding: 'D1 - Z1 -',
   boxSizing: 'border-box',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
@@ -189,12 +189,11 @@ const props = {
   backgroundColor: 'orange',
   backgroundImage: 'url(' + ORNAMENT_JPG + ')',
   '@minTabletL': { style: { backgroundAttachment: 'fixed' } },
-  // '@maxTabletM': {
-  //   padding: 'C1 - C -',
-  // },
-  // '@maxMobileM': {
-  //   padding: 'C2 - A -',
-  // },
+  '@maxTabletL': {
+    backgroundImage: 'none',
+    backgroundColor: 'naviBlueLight2',
+    padding: 'D1 - A2 -',
+  },
 
   imageBackground: {
     width: '100%',
@@ -202,7 +201,7 @@ const props = {
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'radial-gradient(rgba(0, 47, 57, .7),rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))'
+    background: 'naviBlue .75'
 
   },
 
@@ -261,14 +260,6 @@ const props = {
     childProps: {
       border: 'none'
     }
-  },
-
-  scroll: {
-    '@minMobileL': { display: 'none' },
-    zIndex: '5',
-    color: 'cream',
-    padding: 'B A - -',
-    alignSelf: 'flex-end'
   }
 }
 
@@ -277,6 +268,5 @@ export const tabs = {
   props,
   imageBackground: {},
   content,
-  navArrows,
-  scroll: { extend: ScrollTitleCream }
+  navArrows
 }
