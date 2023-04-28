@@ -4,6 +4,7 @@ import { Link, Img, Flex } from 'smbls'
 
 export const props = {
   height: 'G',
+  width: 'G2',
   position: 'relative',
   overflow: 'hidden',
   flow: 'column',

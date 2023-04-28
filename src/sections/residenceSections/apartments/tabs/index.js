@@ -81,10 +81,16 @@ const props = {
     background: 'naviGreen .75'
   },
   tabsContainer: {
-    padding: '- F',
+    padding: '- G',
     maxWidth: `${1440 / 16}em`,
+    flow: 'column',
     gap: 'Z',
     overflow: 'hidden',
+    style: {
+      '&:nth-child(even)': {
+        border: '3px solid red'
+      }
+    },
     '@maxTabletS': {
       maxWidth: '100%',
       gap: '0',
@@ -92,8 +98,11 @@ const props = {
       padding: '- C',
     },
     childProps: {
+      border: '3px solid red',
       border: 'solid, naviGreenDark 0',
       borderWidth: `A`,
+      padding: 'D',
+      margin: 'C',
       '@maxTabletL': {
         minWidth: 'E2',
         align: 'center flex-start',
