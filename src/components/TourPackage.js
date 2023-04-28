@@ -21,17 +21,16 @@ const props = {
   maxHeight: `I`,
   overflow: 'hidden',
   transform: 'scale(.8)',
-  // padding: 'B - - -',
   position: 'relative',
 
   ':before': {
     content: '""',
-    boxSize: 'D 100%',
+    boxSize: 'D2 100%',
     position: 'absolute',
     top: '0',
     left: '0',
     background: 'linear-gradient(to bottom, rgba(0, 47, 57, 1) 0%,rgba(0, 47, 57, 0) 100%)',
-    zIndex: '3',
+    zIndex: '20',
     pointerEvents: 'none'
   },
   ':after': {
@@ -41,12 +40,13 @@ const props = {
     bottom: '0',
     left: '0',
     background: 'linear-gradient(to top, rgba(0, 47, 57, 1) 0%, rgba(0, 47, 57, 0) 100%)',
-    zIndex: '3',
+    zIndex: '20',
     pointerEvents: 'none'
   },
 
   content: {
-    padding: 'B - C1 -',
+    padding: 'B2 - D -',
+    style: { overflowY: 'auto'},
     title: {
       fontSize: 'Z',
       textTransform: 'capitalize',

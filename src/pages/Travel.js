@@ -7,96 +7,19 @@ import { properties } from './props'
 import { Header, Footer, Menu, MenuMobile } from '../components'
 import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip, contact } from '../sections/travelSections'
 import { toursPopUp } from '../sections/travelSections/tours/toursPopUp'
+import { tourPopUp } from '../sections/travelSections/tours/tourPopUp/tourPopUp'
 import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
 
 const state = {
   activeTravelMenu: false,
   activeTravelMobileMenu: false,
-
-  activeTour: false,
   activeImage: 0,
-  activeToursPopUp: false,
+  activeTourPopUp: true,
 
-  activeDescription: false,
-
-  activeDaily: false,
-  activeStandard: false,
-  activeCaucasus: false,
-  activeExclusive: false,
-  activeAdventure: false,
-  activeWineGastronomy: false,
-
-  activeArrow: false,
-
-  activeTbilisiGalleryImage: 0,
-  activeAnanuriGudauriGalleryImage: 0,
-  activeDashbashiGalleryImage: 0,
-  activeKakhetiGalleryImage: 0,
-  activeKutaisiGalleryImage: 0,
-  activeGoriGalleryImage: 0,
-  activeBorjomiGalleryImage: 0,
-  activeRabatiGalleryImage: 0,
-  activeMtsketaGalleryImage: 0,
-  activeCulturalTourGalleryImage: 0,
-  activeCapitalTourdGalleryImage: 0,
-  activeHistoricalTourGalleryImage: 0,
-  activeRoyalTourGalleryImage: 0,
-  activeCaucasusMountainGalleryImage: 0,
-  activeCaucasusGalleryImage: 0,
-  activeExclusiveGalleryImage: 0,
-  activeAdventureGalleryImage: 0,
-  activeWineGastronomyGalleryImage: 0,
-
-  activeDailyPackages: false,
-  activeStandardPackages: false,
-  activePackagesContainer: false,
-  activeTbilisiPackage: false,
-  activeAnanuriPackage: false,
-  activeGoriPackage: false,
-  activeKakhetiPackage: false,
-  activeCanyonPackage: false,
-  activeKutaisiPackage: false,
-  activeBorjomiPackage: false,
-  activeRabatPackage: false,
-  activeMtsketaPackage: false,
-  activeCapitalPackage: false,
-  activeCulturalPackage: false,
-  activeHistoricalPackage: false,
-  activeDashbashPackage: false,
-  activeRoyalPackage: false,
-  acitveCaucasusMountainPackage: false,
-  activeCaucasusPackage: false,
-  activeExclusivePackage: false,
-  activeWineGastronomyPackage: false,
-  activeAdventurePackage: false,
-
-  activePopUpContainer: false,
-  activePopUpGallery: false,
-  activePopUpTour: false,
-
-  activePlandSend: true,
-  activePlanSent: false,
-
-  activeTbilisi: false,
-  activeBorjomi: false,
-  activeMtsketa: false,
-  activeKakheti: false,
-  activeMartvili: false,
-  activeKutaisi: false,
-  activeGori: false,
-  activeKazbegi: false,
-
-  activeTbilisiImage: 0,
-  activeBorjomiImage: 0,
-  activeMtsketaImage: 0,
-  activeKakhetiImage: 0,
-  activeMartviliImage: 0,
-  activeKutaisiImage: 0,
-  activeGoriImage: 0,
-  activeKazbegiImage: 0,
-
-  activeScroll: false,
-  activeScroll2: false
+  activePopUp: true,
+  activePopUpContent: 0,
+  activePackage: false,
+  activeTour: false
 }
 
 
@@ -255,7 +178,8 @@ export const Travel = {
   gallery,
   popUpGallery,
   tours,
-  toursPopUp,
+  tourPopUp,
+  // toursPopUp,
   feedBacks,
   aboutUs,
   contact,

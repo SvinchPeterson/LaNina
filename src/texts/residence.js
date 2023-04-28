@@ -1,5 +1,7 @@
 'use strict'
 
+import { Description } from "../components"
+
 // residence
 export const residenceTextEng = {
   ...[
@@ -22,28 +24,136 @@ export const missionTextEng = {
 }
 
 // rooms descriptions
-export const ballerinaTextEng = {
-  text: 'The two-bedroom apartment of 72m2 on high first floor with open terrace, composed of living room with comfortable sofa bed for 1 person and 2 bedrooms with King size bed and 2 single beds, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 5 people.'
+export const textBallerinaEng = {
+  extend: Description,
+  ...[
+    {
+      ...[
+        `The two-bedroom apartment of `,
+        { tag: 'span', text: '72m2' },
+        ` on high first floor with open terrace, composed of living room with comfortable sofa bed
+        for 1 person and `,
+        { tag: 'span', text: '2 bedrooms' },
+        ` with King size bed and 2 single beds, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for `,
+        { tag: 'span', text: '5 people' },
+        ` .`
+      ]
+    }
+  ]
 }
-export const redBrickTextEng = {
-  text: `Studio apartment of 55m2 located on the ground floor, just few steps downstairs, composed of living area with comfortable sofa bed for 1 person and sleeping area with 1 Queen bed, private bathroom with shower, kitchen dining table, making the apartment comfortable for 3 people.`
-}
-export const yellowCouchTextEng = {
-  text: `Cozy and quiet one bedroom apartment of 50 m2 with open terrace, located on high first floor and  composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
-}
-export const greenForrestTextEng = {
-  text: `One bedroom apartment of 51 m2 with open terrace, located on high first floor and  composed of living room and bedroom with 1 King bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 2 people.`
-}
-export const retroTextEng = {
-  text: `Cozy and quiet one bedroom apartment of 44 m2 with open terrace, located on high first floor and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
+export const textRedBrickEng = {
+  extend: Description,
+  ...[
+    {
+      ...[
+        `Studio apartment of `,
+        { tag: 'span', text: '55m2' },
+        ` located on the ground floor, just few steps downstairs, composed of living area with comfortable `,
+        { tag: 'span', text: 'sofa bed' },
+        ` for 1 person and sleeping area with `,
+        { tag: 'span', text: '1 Queen bed' },
+        `, private bathroom with shower, kitchen dining table, making the apartment comfortable for `,
+        { tag: 'span', text: '3 people' },
+        '.'
+
+      ]
+    }
+  ]
 }
 
-export const blueLagoonTextEng = {
-  text: `Blue Lagoon is a cozy and stylish one-bedroom apartment of 50 m2 with an open terrace, located on the high first floor and composed of living room with comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower,  kitchen with a dining area, making the apartment comfortable for 3 people.`
+export const textYellowCouchEng = {
+  extend: Description,
+  ...[
+    {
+      ...[
+        `Cozy and quiet one bedroom apartment of `,
+        { tag: 'span', text: '50m2' },
+        ` with open terrace, located on high first floor and  composed of living room with comfortable `,
+        { tag: 'span', text: 'sofa bed' },
+        ` for 1 person and bedroom with `,
+        { tag: 'span', text: '1 Queen bed' },
+        ` private bathroom with shower, kitchen with a dining area, making the apartment comfortable for `,
+        { tag: 'span', text: '3 people' },
+        '.'
+      ]
+    }
+  ]
 }
 
-export const qvevriTextEng = {
-  text: `Cozy and quiet one-bedroom apartment of 55 m2 with an open terrace, located on the high first floor and composed of a living room with a comfortable sofa bed for 1 person and bedroom with 1 Queen bed, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for 3 people.`
+export const textGreenForrestEng = {
+  extend: Description,
+  ...[
+    {
+      ...[
+        `One bedroom apartment of `,
+        { tag: 'span', text: '51m2' },
+        ` with open terrace, located on high first floor and composed of living room and bedroom with `,
+        { tag: 'span', text: '1 King bed' },
+        `, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for `,
+        { tag: 'span', text: '2 people' },
+        '.'
+
+      ]
+    }
+  ]
+}
+
+export const textRetroEng = {
+  extend: Description,
+  ...[
+    {
+      ...[
+        `Cozy and quiet one bedroom apartment of `,
+        { tag: 'span', text: '44m2' },
+        ` with open terrace, located on high first floor and composed of living room with comfortable `,
+        { tag: 'span', text: 'sofa bed' },
+        ` for 1 person and bedroom with `,
+        { tag: 'span', text: '1 Queen bed' },
+        ' private bathroom with shower, kitchen with a dining area, making the apartment comfortable for ',
+        { tag: 'span', text: '3 people' },
+        '.'
+      ]
+    }
+  ]
+}
+
+export const textBlueLagoonEng = {
+  extend: Description,
+  ...[
+    {
+      ...[
+        `Blue Lagoon is a cozy and stylish one-bedroom apartment of `,
+        { tag: 'span', text: '50m2' },
+        ` with an open terrace, located on the high first floor and composed of living room with comfortable `,
+        { tag: 'span', text: 'sofa bed' },
+        ` for 1 person and bedroom with `,
+        { tag: 'span', text: '1 Queen bed' },
+        `, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for `,
+        { tag: 'span', text: '3 people' },
+        '.'
+      ]
+    }
+  ]
+}
+
+export const textQvevriEng = {
+  extend: Description,
+  ...[
+    {
+      ...[
+        `Cozy and quiet one-bedroom apartment of `,
+        { tag: 'span', text: '55m2' },
+        ` with an open terrace, located on the high first floor and composed of a living room with a comfortable `,
+        { tag: 'span', text: 'sofa bed' },
+        ` for 1 person and bedroom with `,
+        { tag: 'span', text: '1 Queen bed' },
+        `, private bathroom with shower, kitchen with a dining area, making the apartment comfortable for `,
+        { tag: 'span', text: '3 people' },
+        '.'
+
+      ]
+    }
+  ]
 }
 
 // wine

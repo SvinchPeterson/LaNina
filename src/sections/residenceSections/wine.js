@@ -35,7 +35,7 @@ const props = {
 
   paragraph: {
     padding: 'C A D D',
-    margin: '- -E1 -F1 -B',
+    margin: '- -E -F1 -B',
     zIndex: '3',
     background: 'cream',
     round: '0 0 0 E2',

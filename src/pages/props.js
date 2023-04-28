@@ -15,6 +15,16 @@ export const properties = {
     scrollBehavior: 'smooth',
     '::-webkit-scrollbar': { display: 'none' }
   },
+  // ':before': {
+  //   content: '""',
+  //   position: 'fixed',
+  //   boxSize: 'D 90%',
+  //   // background: 'red',
+  //   top: '0',
+  //   zIndex: '10',
+  //   alignSelf: 'center',
+  //   style: { backdropFilter: 'blur(10px)'}
+  // },
 
   ':after': {
     content: '""',

@@ -59,7 +59,17 @@ const content = {
 
   content: {
     extend: Flex,
-    childExtend: TourTab,
+    childExtend: {
+      extend: TourTab,
+      on: {
+        click: (event, element, state) => {
+          state.update({
+            activePopUp: true,
+            activePopUpContent: parseInt(element.key)
+          })
+        }
+      }
+    },
     ...[
       {
         props: {
@@ -69,16 +79,9 @@ const content = {
             image: {
               backgroundImage: 'url(' + TBILISI_JPG + ')'
             }
-
           }
 
         },
-
-        on: {
-          click: (event, element, state) => {
-            state.update({ activeToursPopUp: true, activeDaily: true })
-          }
-        }
       },
 
       {
@@ -92,11 +95,6 @@ const content = {
             }
           }
         },
-        on: {
-          click: (event, element, state) => {
-            state.update({ activeToursPopUp: true, activeStandard: true })
-          }
-        }
       },
 
       {
@@ -108,12 +106,6 @@ const content = {
             }
           }
         },
-
-        on: {
-          click: (event, element, state) => {
-            state.update({ activeToursPopUp: true, activeCaucasus: true })
-          }
-        }
       },
 
       {
@@ -127,12 +119,6 @@ const content = {
           },
           ':after': { background: 'blue3 .7' }
         },
-
-        on: {
-          click: (event, element, state) => {
-            state.update({ activeToursPopUp: true, activeExclusive: true })
-          }
-        }
       },
 
       {
@@ -146,12 +132,6 @@ const content = {
           }
 
         },
-
-        on: {
-          click: (event, element, state) => {
-            state.update({ activeToursPopUp: true, activeWineGastronomy: true })
-          }
-        }
       },
 
       {
@@ -161,12 +141,6 @@ const content = {
             image: {
               backgroundImage: 'url(' + ADVENTURE_JPG + ')'
             }
-          }
-        },
-
-        on: {
-          click: (event, element, state) => {
-            state.update({ activeToursPopUp: true, activeAdventure: true })
           }
         }
       }

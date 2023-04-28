@@ -32,11 +32,19 @@ const props = {
     padding: '0',
     top: '0',
     right: '0',
-    zIndex: '10',
+    zIndex: '20',
     transition: 'opacity .5s ease-in-out, transform .5s ease-in-out',
     padding: 'A1',
     icon: { boxSize: 'Z2 ' }
   },
+
+  contentContainer: {
+    zIndex: '10',
+     style: {boxShadow: '0px 60px 30px 15px rgba(0, 0, 0, .25)'},
+    // style: {
+    // //  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'
+    // }
+    },
 
   logo: {
     boxSize: 'B2 ',
@@ -44,9 +52,10 @@ const props = {
     left: 'B',
     bottom: 'B',
     zIndex: '2',
-    transition: 'opacity .8s ease-in-out, transform .8s ease-in-out'
+    zIndex: '20',
+    transition: 'opacity .8s ease-in-out, transform .8s ease-in-out',
+    '@maxMobileM': {  boxSize: 'B ' }
   }
-
 }
 
 export const PopUpModal = {

@@ -214,9 +214,9 @@ export const galleryAdventureTour = {
 export const galleryCapitalTour = {
   extend: Gallery,
   ...[
+    { props: { backgroundImage: 'url(' + METEKHI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + BRIDGE_JPG + ')' } },
     { props: { backgroundImage: 'url(' + BAZAR_JPG + ')' } },
-    { props: { backgroundImage: 'url(' + METEKHI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + OLD_TBILISI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + KAZBEGI_JPG + ')' } },
     { props: { backgroundImage: 'url(' + GERGET_JPG + ')' } },

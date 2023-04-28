@@ -13,7 +13,7 @@ const props = {
   flow: 'column',
   padding: 'E2 - - -',
   alignSelf: 'center',
-  margin: 'D2 - B2 -',
+  margin: 'E - C1 -',
   align: 'flex-start center',
   position: 'relative',
   boxSizing: 'border-box',
@@ -55,6 +55,7 @@ const props = {
     margin: '-F1 - - -A2',
     background: 'cream',
     round: '0 F 0 0',
+    title: { fontSize: 'I' },
     style: { boxShadow: 'rgba(0, 0, 0, 0.45) 0px -25px 20px -20px'},
     '@maxTabletL': {
       margin: '-F1 - - -A2'

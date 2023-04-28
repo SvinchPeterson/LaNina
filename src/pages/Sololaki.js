@@ -6,43 +6,18 @@ import { Menu, MenuMobile, Header, Footer } from '../components'
 
 import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location, contact } from '../sections/residenceSections'
 
-import { roomsPopUp } from '../sections/residenceSections/apartments/roomsPopUp'
+import { roomPopUp } from '../sections/residenceSections/apartments/roomPopUp/roomPopUp'
+
+// import { roomsPopUp } from '../sections/residenceSections/apartments/roomsPopUp'
 
 import { properties } from './props'
 
 const state = {
-  activeResidenceMenu: false,
-  activeResidenceMobileMenu: false,
-
-  activeScroll: false,
-
-  activeTab: 0,
   activeImage: 0,
-  offers: false,
-  back: true,
-  tabs: 0,
-  activeRoomsPopUp: false,
-
-  activeBallerina: false,
-  activeRedBrick: false,
-  activeYellowCouch: false,
-  activeGreenForest: false,
-  activeRetro: false,
-  activeLagoon: false,
-  activeQvevri: false,
-
-  activeAmenitiesPopUp: false,
-  activeDescriptionsPopUp: false,
-
-  activeBallerinaDescription: false,
-  activeRedBrickDescription: false,
-  activeYellowCouchDescription: false,
-  activeGreenForestDescription: false,
-  activeRetroDescription: false,
-  activeBlueLagoonDescription: false,
-  activeQvevriDescription: false,
-
-  activeHeader: false
+  activeHeader: false,
+  activePopUp: false,
+  activePopUpContent: 0,
+  activeRoomTour: 0
 }
 
 const menu = {
@@ -178,7 +153,8 @@ export const Sololaki = {
   servicesFacilities,
   mission,
   apartments,
-  roomsPopUp,
+  // roomsPopUp,
+  roomPopUp,
   wine,
   feedBacks,
   location,

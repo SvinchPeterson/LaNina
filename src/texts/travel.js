@@ -1,6 +1,6 @@
 'use strict'
 
-import { TravelParagraph } from '../components'
+import { Description, TravelParagraph } from '../components'
 
 export const $aboutUs = {
   extend: TravelParagraph,
@@ -47,7 +47,7 @@ export const $georgia = {
 }
 
 export const $tbilisi = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -59,7 +59,7 @@ export const $tbilisi = {
 }
 
 export const $ananuri = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -74,7 +74,7 @@ export const $ananuri = {
 }
 
 export const $gudauri = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -86,7 +86,7 @@ export const $gudauri = {
 }
 
 export const $gergeti = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -98,7 +98,7 @@ export const $gergeti = {
 }
 
 export const $dashbashi = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -111,7 +111,7 @@ export const $dashbashi = {
 }
 
 export const $mtsketa = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -124,7 +124,7 @@ export const $mtsketa = {
 }
 
 export const $kakheti = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -136,7 +136,7 @@ export const $kakheti = {
 }
 
 export const $davitGareji = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -154,7 +154,7 @@ export const $davitGareji = {
 }
 
 export const $kutaisi = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -170,7 +170,7 @@ export const $kutaisi = {
 }
 
 export const $prometheusCave = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -185,7 +185,7 @@ export const $prometheusCave = {
 }
 
 export const $gori = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -203,7 +203,7 @@ export const $gori = {
 }
 
 export const $Uplistsikhe = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -215,7 +215,7 @@ export const $Uplistsikhe = {
 }
 
 export const $borjomi = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -230,7 +230,7 @@ export const $borjomi = {
   ]
 }
 export const $borjomi2 = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -258,7 +258,7 @@ export const $borjomi2 = {
 }
 
 export const $rabat = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -272,7 +272,7 @@ export const $rabat = {
 }
 
 export const $rabat2 = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -296,7 +296,7 @@ export const $rabat2 = {
 }
 
 export const $capital = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -322,7 +322,7 @@ export const $capital = {
 }
 
 export const $cultural = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -351,7 +351,7 @@ export const $cultural = {
 }
 
 export const $historical = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -378,7 +378,7 @@ export const $historical = {
 }
 
 export const $royal = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -406,7 +406,7 @@ export const $royal = {
 }
 
 export const $caucasusMountain = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -429,7 +429,7 @@ export const $caucasusMountain = {
 }
 
 export const $caucasus = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -452,7 +452,7 @@ export const $caucasus = {
 }
 
 export const $exclusive = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -475,7 +475,7 @@ export const $exclusive = {
 }
 
 export const $wineGastronomy = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -494,7 +494,7 @@ export const $wineGastronomy = {
 }
 
 export const $adventure = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -529,7 +529,7 @@ export const $bakuriani = {
 }
 
 export const $dadianiPalace = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -549,7 +549,7 @@ export const $dadianiPalace = {
 }
 
 export const $mestia = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -569,7 +569,7 @@ export const $mestia = {
 }
 
 export const $kordula = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -586,7 +586,7 @@ export const $kordula = {
 }
 
 export const $yerevan = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -601,7 +601,7 @@ export const $yerevan = {
 }
 
 export const $khorVirap = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -614,7 +614,7 @@ export const $khorVirap = {
 }
 
 export const $noravank = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -629,7 +629,7 @@ export const $noravank = {
 }
 
 export const $savane = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -643,7 +643,7 @@ export const $savane = {
 }
 
 export const $savaneMonastry = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -656,7 +656,7 @@ export const $savaneMonastry = {
 }
 
 export const $dilijan = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -673,7 +673,7 @@ export const $dilijan = {
 }
 
 export const $samshvilde = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -692,7 +692,7 @@ export const $samshvilde = {
 }
 
 export const $shaori = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -709,7 +709,7 @@ export const $shaori = {
 }
 
 export const $abuli = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -726,7 +726,7 @@ export const $abuli = {
 }
 
 export const $birtvisi = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -743,7 +743,7 @@ export const $birtvisi = {
 }
 
 export const $wineTesting = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -758,7 +758,7 @@ export const $wineTesting = {
 }
 
 export const $chavchavadzeMuseum = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -777,7 +777,7 @@ export const $chavchavadzeMuseum = {
 }
 
 export const $sioni = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -789,7 +789,7 @@ export const $sioni = {
 }
 
 export const $gelati = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -803,7 +803,7 @@ export const $gelati = {
 }
 
 export const $racha = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -822,7 +822,7 @@ export const $racha = {
 }
 
 export const $wyaltubo = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -845,7 +845,7 @@ export const $wyaltubo = {
 }
 
 export const $martvili = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[
@@ -868,7 +868,7 @@ export const $martvili = {
 }
 
 export const $batumi = {
-  extend: TravelParagraph,
+  extend: Description,
   ...[
     {
       ...[

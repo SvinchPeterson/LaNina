@@ -59,7 +59,9 @@ const props = {
     mixBlendMode: 'difference',
     animationName: opacity,
     animationDuration: '2s',
-    animationTimingFunction: 'ease-in-out'
+    animationTimingFunction: 'ease-in-out',
+    // backdropFilter: 'blur(10px)'
+    // backdropFilter: 'opacity(1)'
   },
 
   childProps: {

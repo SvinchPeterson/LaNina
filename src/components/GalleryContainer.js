@@ -10,6 +10,7 @@ import { NavArrowsCream } from './NavigationArrows'
 
 const props = {
   flow: 'column',
+  height: 'fit-content',
 
   title: {
     fontSize: `${12 / 16}em`,
@@ -35,16 +36,18 @@ const props = {
 
   footer: {
     align: 'center space-between',
-    width: '80%',
-    margin: 'Y2 - - -',
+    width: '70%',
+    '@maxTabletO': { minWidth: '100%' },
     book: {
-      padding: 'Z B',
+      padding: 'Z2 B2',
+      round: 'D',
       background: 'transparent',
       border: 'solid, cream .35',
       borderWidth: '.75px',
       color: 'cream',
       textTransform: 'uppercase',
       fontWeight: '700',
+      pointerEvents: 'none',
       opacity: '.75',
       transition: 'opacity .25s ease-in-out, background .25s ease-in-out',
       cursor: 'pointer',
@@ -64,6 +67,8 @@ export const GalleryContainer = {
   footer: {
     extend: Flex,
     book: { extend: BookingLink },
-    navArrows: { extend: NavArrowsCream }
+    navArrows: {
+      extend: NavArrowsCream
+    }
   }
 }

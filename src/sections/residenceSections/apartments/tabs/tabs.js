@@ -31,12 +31,7 @@ export const tabBallerina = {
       maxWidth: 'F2'
     },
     title: { text: 'ballerina' }
-  },
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeRoomsPopUp: true, activeBallerina: true })
-    }
-  },
+  }
 }
 
 export const tabRedBrick = {
@@ -48,13 +43,7 @@ export const tabRedBrick = {
     icon: { src: BRICKS_PNG },
     p: { text: 'Where traditional Georgian old style meets modernity!' },
     title: { text: 'red brick' }
-  },
-
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeRoomsPopUp: true, activeRedBrick: true })
-    }
-  },
+  }
 }
 
 export const tabYellowCouch = {
@@ -69,13 +58,7 @@ export const tabYellowCouch = {
       text: 'Make yourself comfortable on yellow couch'
     },
     title: { text: 'yellow couch' }
-  },
-
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeRoomsPopUp: true, activeYellowCouch: true })
-    }
-  },
+  }
 }
 
 export const tabGreenForest = {
@@ -87,13 +70,7 @@ export const tabGreenForest = {
     icon: { src: LEAF_PNG },
     p: { text: 'Timeless and elegant, yet modern and fresh, green is your choice!' },
     title: { text: 'green forest' }
-  },
-
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeRoomsPopUp: true, activeGreenForest: true })
-    }
-  },
+  }
 }
 
 export const tabRetro = {
@@ -105,13 +82,7 @@ export const tabRetro = {
     icon: { src: VINYL_PNG },
     p: { text: 'Where contemporary design combine with traditional architecture.' },
     title: { text: 'retro' }
-  },
-
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeRoomsPopUp: true, activeRetro: true })
-    }
-  },
+  }
 }
 
 
@@ -124,13 +95,7 @@ export const tabBlueLagoon = {
     icon: { src: LAGOON_PNG },
     p: { text: 'Gentle blue brings you balance and inner peace.' },
     title: { text: 'blue lagoon' }
-  },
-
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeRoomsPopUp: true, activeLagoon: true })
-    }
-  },
+  }
 }
 
 
@@ -144,12 +109,6 @@ export const tabQvevri = {
     icon: { src: QVEVRI_PNG },
     p: { text: 'Where contemporary design combine with traditional architecture.' },
     title: { text: 'qvevri' }
-  },
-
-  on: {
-    click: (event, element, state) => {
-      state.update({ activeRoomsPopUp: true, activeQvevri: true })
-    }
-  },
+  }
 }
 
