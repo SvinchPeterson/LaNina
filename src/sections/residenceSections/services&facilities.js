@@ -2,7 +2,7 @@
 
 import { Grid, Flex } from 'smbls'
 
-import { ServiceFacilityItem, ScrollTitleBlack, ResidenceSectionTitle } from '../../components'
+import { ServiceFacilityItem, ScrollTitleBlack } from '../../components'
 
 import SHELF_JPG from '../../assets/images/residence/sololaki/shelf.jpg'
 
@@ -61,8 +61,26 @@ const items = {
   ]
 }
 
+const title = {
+  tag: 'h3',
+  extend: Flex,
+  text: 'services & facilities',
+  props: {
+    fontSize: `${11 / 16}em`,
+    textTransform: 'uppercase',
+    alignSelf: 'center',
+    letterSpacing: `${7 / 11}em`,
+    fontWeight: '400',
+    padding: '- - B -',
+    whiteSpace: 'nowrap',
+    style: { wordSpacing: `${10 / 11}em` }
+  }
+}
+
+
 const props = {
   padding: 'E2 - - -',
+  margin: 'D2 - - -',
   flow: 'column',
   justifyContent: 'center',
   position: 'relative',
@@ -72,10 +90,7 @@ const props = {
     padding: 'E - - -'
   },
 
-  title: {
-    padding: '- - A2 D',
-    '@maxTabletS': {display: 'none'}
-  },
+  title: { '@maxTabletS': { display: 'none' } },
 
   content: {
     position: 'relative',
@@ -98,27 +113,25 @@ const props = {
 
     title: {
       display: 'none',
-      '@maxTabletS': { display: 'flex' },
-      background: 'cream',
-      position: 'absolute',
-      zIndex: '10',
-      top: '0',
-      right: '0',
-      height: '100%',
-      padding: 'D -',
-      ':after': { margin: '0'},
-      '@maxMobileM': {
-        padding: 'B2 -',
-        gap: 'A',
-        fontSize: `${11 / 16}em`
-      },
-      whiteSpace: 'nowrap',
-      style: {
+      '@maxTabletS': {
+        height: '100%',
+        background: 'cream',
+        display: 'flex',
+        position: 'absolute',
+        top: '0',
+        right: '0',
+        align: 'center center',
+        zIndex: '10',
+        padding: 'C 0',
+        letterSpacing: `${3 / 11}em`,
+        fontWeight: '700',
+        style: {
         writingMode: 'vertical-rl',
         textOrientation: 'mixed',
-        letterSpacing: `${5 / 10}em`,
-        boxShadow: '0px 0px 20px 0px black'
-      }
+        boxShadow: 'rgba(0, 0, 0, 0.45) -20px 0px 30px 5px'
+        }
+      },
+      '@maxMobileM': {  padding: 'B2 0' }
     },
 
     items: {
@@ -161,10 +174,10 @@ export const servicesFacilities = {
   props,
   attr: { id: 'service&facilities' },
 
-  title: { extend: ResidenceSectionTitle, text: 'services & facilities' },
+  title: { extend: title },
   content: {
-    title: { extend: ResidenceSectionTitle, text: 'services & facilities'  },
-    items
+    items,
+    title: { extend: title }
   },
   scroll: {extend: ScrollTitleBlack }
 }

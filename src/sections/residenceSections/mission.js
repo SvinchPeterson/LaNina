@@ -11,14 +11,17 @@ const props = {
   position: 'relative',
   flexAlign: 'center flex-start',
   gap: 'B2',
-  margin: 'F1 - - -',
+  margin: 'G -',
   width: 'fit-content',
   alignSelf: 'center',
+  // border: '2px solid red',
   '@maxTabletL': { fontSize: `${15 / 16}em` },
+  '@maxMobileL': { width: '100%' },
   image: {
-    minWidth: `H3`,
-    minHeight: `G3`,
+    minWidth: `H2`,
+    minHeight: `H1`,
     position: 'relative',
+    // border: '2px solid red',
     round: 'G2 G2 0 0',
     background: 'url(' + VERANDA_JPG + ')',
     backgroundSize: '100% 100%',
@@ -31,14 +34,13 @@ const props = {
       background: 'naviGreen .35'
 
     },
-    '@minTabletL': { style: {backgroundAttachment: 'fixed' }},
-    '@maxMobileL': { minWidth: `H` },
-    '@maxMobileS': { minWidth: `G3` },
-    '@maxMobileO': {
+    '@minTabletL': { style: { backgroundAttachment: 'fixed' }},
+    '@maxMobileL': {
       minWidth: `100%`,
-      minHeight: 'G',
+      minHeight: 'H',
       round: '0'
     },
+    '@maxMobileS': { minHeight: 'G' },
     style: {
       backgroundRepeat: 'no-repeat',
       zIndex: '2',
@@ -47,14 +49,46 @@ const props = {
   },
 
   paragraph: {
-    padding: 'C',
+    minWidth: `H3`,
+    padding: 'C2 C C C',
     textAlign: 'center',
-    '@maxMobileS': { padding: 'B' },
-    style: { fontStyle: 'italic' },
+    margin: '-E1 - - -',
+    background: 'cream',
+    round: 'A A 0 0',
+    align: 'center center',
+    gap: 'Z',
+    '@maxMobileL': {
+      minWidth: '80%',
+      maxWidth: '80%'
+    },
+    '@maxMobileS': {
+      minWidth: '90%',
+      maxWidth: '90%',
+      padding: 'C2 B1 C B1',
+      margin: '-D1 - - -',
+    },
+    zIndex: '30',
+    position: 'relative',
+    ':after': {
+      content: '""',
+      position: 'absolute',
+      boxSize: 'C 100%',
+      background: 'cream',
+      bottom: '-B',
+    },
+
+    style: {
+      fontStyle: 'italic',
+      boxShadow: 'rgba(0, 0, 0, 0.2) 0px -20px 30px'
+    },
     title: {
       fontSize: 'F',
       '@maxMobileM': { fontSize: 'F' }
     },
+    p: {
+      maxWidth: 'H',
+      '@maxMobileL': { maxWidth: 'G3' }
+    }
   }
 }
 

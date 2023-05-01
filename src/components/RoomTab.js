@@ -3,30 +3,42 @@
 import { Link, Img, Flex } from 'smbls'
 
 export const props = {
-  height: 'G',
-  width: 'G2',
+  height: '',
+  width: 'G',
   position: 'relative',
   overflow: 'hidden',
   flow: 'column',
   align: 'center center',
-  gap: 'C',
+  padding: 'E -',
+  gap: 'B1',
   round: 'F',
   flex: 1,
   cursor: 'pointer',
   boxSizing: 'border-box',
   color: 'cream',
-  transition: 'flex 1s ease',
-  ':hover': { flex: '7' },
-  ':hover > p': {
+  '@minTabletL': {
+    transition: 'flex 1s ease',
+    ':hover': { flex: '3'},
+    ':hover > p': {
+        opacity: '1',
+        letterSpacing: '.5px',
+        transition: 'opacity .55s ease-in-out'
+    },
+    ':hover > h2': {
       opacity: '1',
-      letterSpacing: '.5px',
-      transition: 'opacity .55s ease-in-out'
+      letterSpacing: '-2px',
+      transition: 'opacity .8s ease-in-out, letter-spacing .85s ease-in-out, transform .85s ease-in-out',
+      transform: 'scale(1)'
+    },
   },
-  ':hover > h2': {
-    opacity: '1',
-    letterSpacing: '-2px',
-    transition: 'opacity .8s ease-in-out, letter-spacing .85s ease-in-out, transform .85s ease-in-out',
-    transform: 'scale(1)'
+  '@maxTabletL': {
+    minHeight: 'H',
+    padding: 'D -',
+    align: 'center space-between'
+  },
+  '@maxMobileL': {
+    minHeight: 'fit-content',
+    width: '90%'
   },
 
   imageContainer: {
@@ -36,7 +48,6 @@ export const props = {
     zIndex: '1',
     top: '0',
     left: '0',
-    round: 'F',
     style: { backgroundRepeat: 'no-repeat' },
     image: {
       minWidth: '100%',
@@ -56,7 +67,7 @@ export const props = {
     fontSize: `${15 / 16}em`,
     zIndex: '2',
     textAlign: 'center',
-    width: 'G',
+    width: 'F1',
     fontWeight: '400',
     opacity: '0',
     letterSpacing: `${0.5 / 15}em`,
@@ -71,7 +82,10 @@ export const props = {
     opacity: '0',
     transform: 'scale(.9)',
     '@maxTabletL': {
-     display: 'none'
+      opacity: '1',
+      letterSpacing: '-2px',
+      fontSize: 'E'
+    //  display: 'none'
     }
   }
 }

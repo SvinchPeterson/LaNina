@@ -2,7 +2,9 @@
 
 import { Flex } from 'smbls'
 
-import { ResidenceSectionTitle, ScrollTitleBlack } from '../../../components'
+import { ScrollTitleBlack } from '../../../components'
+
+// import { tabs } from './tabs'
 
 import { tabs } from './tabs'
 
@@ -12,29 +14,50 @@ const props = {
   gap: '0',
   align: 'center center',
   position: 'relative',
-  padding: 'E2 - - -',
-  margin: 'D2 - - -',
   overflow: 'visible',
   '@maxTabletM': {
     fontSize: `${15 / 16}em`,
     gap: 'Y2'
   },
-  '@maxHeightS': { padding: 'E - - -' },
 
   title: {
-    fontSize: `${11 / 16}em`,
-    letterSpacing: `${10 / 11}em`,
-    padding: '- - C -',
-    '@maxTabletL': { padding: '- - A -' }
+    fontSize: `${18 / 16}em`,
+    fontWeight: '400',
+    color: 'orange3 .75',
+    textTransform: 'uppercase',
+    position: 'absolute',
+    top: 'F2',
+    right: 'F',
+    alignSelf: 'flex-start',
+    padding: 'A C',
+    round: 'C',
+    zIndex: '35',
+    letterSpacing: `${12 / 18}em`,
+    '@maxTabletM': {
+      right: 'E'
+    },
+    '@maxTabletS': { right: 'C2' },
+    // '@maxTabletL': {
+    //   right: 'E',
+    //   letterSpacing: `${7 / 12}em`,
+    //   style: {
+    //     writingMode: 'vertical-rl',
+    //     textOrientation: 'mixed'
+    //   }
+    // },
 
-
-  },
-
-  scroll: {
-    display: 'none',
-    alignSelf: 'center',
-    padding: 'Z - - -',
-    '@maxTabletS': { display: 'flex' }
+    '@maxMobileL': {
+      fontSize: `${16 / 16}em`,
+      // right: '50%',
+      // transform: 'translate(50%, -50%)',
+      letterSpacing: `${12 / 16}em`,
+      top: 'E',
+      right: '-C',
+      style: {
+        writingMode: 'initial',
+        textOrientation: 'initial'
+      }
+    }
   }
 }
 
@@ -47,13 +70,9 @@ export const apartments = {
       ? { zIndex: '70' } : { zIndex: 1 }
   },
 
-  attr: { id: 'apartments' },
-  title: {
-    extend: ResidenceSectionTitle,
-    ':before': {},
-    text: 'apartments',
-    ':after': {},
-  },
-  tabs,
-  scroll: { extend: ScrollTitleBlack }
+  // attr: { id: 'apartments' },
+  // title: {
+  //   text: 'apartments'
+  // },
+  tabs
 }

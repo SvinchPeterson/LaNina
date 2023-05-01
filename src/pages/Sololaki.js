@@ -4,7 +4,7 @@ import { Flex } from 'smbls'
 
 import { Menu, MenuMobile, Header, Footer } from '../components'
 
-import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location, contact } from '../sections/residenceSections'
+import { banner, residence, servicesFacilities, mission, apartments, wine, feedBacks, location } from '../sections/residenceSections'
 
 import { roomPopUp } from '../sections/residenceSections/apartments/roomPopUp/roomPopUp'
 
@@ -158,6 +158,5 @@ export const Sololaki = {
   wine,
   feedBacks,
   location,
-  contact,
   footer
 }

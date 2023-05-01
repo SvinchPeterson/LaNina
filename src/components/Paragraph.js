@@ -13,6 +13,7 @@ const props = {
     textTransform: 'capitalize',
     letterSpacing: `${-4 / 83}em`,
     color: 'orange',
+    // color: '#FF5C4D',
     '@maxMobileM': { fontSize: 'H' }
   },
 
@@ -20,8 +21,7 @@ const props = {
     fontSize: `${15 / 16}em`,
     flow: 'column',
     gap: 'Z',
-    letterSpacing: `${0.5 / 15}em`,
-    maxWidth: 'H'
+    letterSpacing: `${0.5 / 15}em`
   }
 }
 

@@ -151,10 +151,10 @@ const props = {
   width: '80%',
   minHeight: `${300 / 16}em`,
   flow: 'column',
-  gap: 'Z1',
+  align: 'centet center',
+  gap: '0',
   alignSelf: 'center',
   position: 'relative',
-  margin: '- - G -',
   '@maxTabletM': { margin: '- - F -'},
   '@maxMobileL': {
     fontSize: `${15 / 16}em`,
@@ -174,7 +174,8 @@ const props = {
     background: 'linear-gradient(to right, rgba(255, 249, 237, 1) 0%,rgba(255, 249, 237, 0) 100%)',
     zIndex: 3,
     pointerEvents: 'none',
-    '@maxMobileL': { width: `${150 / 16}em` }
+    '@maxMobileL': { width: `${150 / 16}em` },
+    '@maxMobileS': { width: `${100 / 16}em` }
   },
   ':after': {
     content: '""',
@@ -186,36 +187,31 @@ const props = {
     background: 'linear-gradient(to left, rgba(255, 249, 237, 1) 0%,rgba(255, 249, 237, 0) 100%)',
     zIndex: 3,
     pointerEvents: 'none',
-    '@maxMobileL': { width: `${150 / 16}em` }
+    '@maxMobileL': { width: `${150 / 16}em` },
+    '@maxMobileS': { width: `${100 / 16}em` }
   },
-
-  header: {
-    flexAlign: 'flex-end space-between',
-    width: '85%',
-    margin: '0 auto',
+  title: {
+    fontSize: `${16 / 16}em`,
+    fontWeight: '700',
+    transform: 'rotate(180deg)',
+    position: 'absolute',
+    textTransform: 'capitalize',
     zIndex: '10',
-    padding: '- - Z -',
-    '@maxMobileL': { width: '90%'},
-    style: { borderBottom: '.5px solid rgba(0, 0, 0, .5)' },
-    title: {
-      fontWeight: '700',
-      fontSize: `${14 / 16}em`,
-      whiteSpace: 'nowrap',
-      letterSpacing: `${.5 / 14}em`,
-      zIndex: '10'
-    },
-
-    navArrows: {
-      childProps: { boxSize: 'B2 B2'},
-      '@maxMobileL': { display: 'none' }
-    },
-    scrollTitle: {
-      '@minMobileL': { display: 'none' }
+    height: '100%',
+    align: 'center center',
+    padding: 'Y2 - Y2 C',
+    boxSizing: 'border-box',
+    letterSpacing: '1px',
+    style: {
+      writingMode: 'vertical-rl',
+      textOrientation: 'mixed'
     }
+
   },
 
   content: {
     position: 'relative',
+    padding: '- B - B1',
     style: { overflowX: 'auto' },
     feedbacks: {
       gap: '0',
@@ -231,15 +227,39 @@ const props = {
         alignSelf: 'center',
         '&::-webkit-scrollbar': { display: 'none' }
       },
-      // '@maxMobileL': { style: { animationName: slideHide3 } },
 
       childProps: {
+        content: {
+          title: { '@maxMobileS': { fontSize: 'D' }}
+        },
          '@maxMobileL': {
           minWidth: `${350 / 16}em`,
           maxWidth: `${350 / 16}em`,
           height: 'G'
         }
       }
+    }
+  },
+
+  footer: {
+    align: 'flex-end space-between',
+    width: '100%',
+    margin: '0 auto',
+    zIndex: '10',
+    '@maxMobileL': {
+      width: '95%',
+      align: 'flex-end flex-end',
+      padding: 'Y1 Z2 - -',
+    },
+
+    navArrows: {
+      margin: '- - - auto',
+      gap: 'Z',
+      childProps: { boxSize: 'B2 B2', border: 'none' },
+      '@maxMobileL': { display: 'none' }
+    },
+    scrollTitle: {
+      '@minMobileL': { display: 'none' }
     }
   }
 }
@@ -249,14 +269,20 @@ export const feedBacks = {
   extend: Flex,
   props,
 
-  header: {
-    title: { tag: 'h5', text: 'Feedbacks' },
-    navArrows,
-    scrollTitle: { extend: ScrollTitleBlack }
+  title: {
+    tag: 'h5',
+    extend: Flex,
+    text: 'feedbacks'
   },
 
   content: {
     attr: { id: 'feedbacks' },
     feedbacks
-  }
+  },
+  footer: {
+    extend: Flex,
+    // title: { tag: 'h5', text: 'Feedbacks' },
+    navArrows,
+    scrollTitle: { extend: ScrollTitleBlack }
+  },
 }

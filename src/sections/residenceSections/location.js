@@ -2,44 +2,24 @@
 
 import { Flex } from 'smbls'
 
-import { Map, ResidenceSectionTitle } from '../../components'
+import { Map, Contact} from '../../components'
 
 
 const props = {
   flow: 'column',
   width: 'fit-content',
   alignSelf: 'center',
-  padding: '- - D1 -',
+  margin: 'E - E1 -',
+  padding: 'E - - -',
   position: 'relative',
-  margin: '- - B -',
   '@maxTabletM': { width: '70%' },
-  '@maxMobileM': { width: '90%', padding: 'D1 - 0 -', margin: '- - C -' },
+  '@maxMobileM': { width: '90%' },
 
   title: {
     fontSize: `${11 / 16}em`,
-    letterSpacing: `${12/ 11}em`,
-    position: 'absolute',
-    transform: 'rotate(180deg)',
-    padding: '- D - -',
-    left: '-C',
-    ':after': {margin: '- - - -8px'},
-    style: {
-      writingMode: 'vertical-rl',
-      textOrientation: 'mixed',
-    },
-    '@maxTabletS': {
-      transform: 'rotate(0)',
-      padding: '0 0 B 0',
-      position: 'initial',
-      fontSize: `${11 / 16}em`,
-      alignSelf: 'center',
-
-
-      style: {
-        writingMode: 'initial',
-        textOrientation: 'initial'
-      }
-    }
+    textTransform: 'uppercase',
+    padding: '- - Z A2',
+    letterSpacing: `${10 / 11}em`
   },
 
   map: {
@@ -48,9 +28,29 @@ const props = {
     display: 'block',
     round: 'A2',
     border: 'none',
-    style: {boxShadow: '0px 0px 10px .3px rgba(0, 0,0, .1)'},
+    style: {
+      boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px',
+    },
     '@maxTabletM': { minWidth: `100%` },
     '@maxHeightN': { minHeight: 'G'}
+  },
+
+  contact: {
+    border: 'solid, black .75',
+    borderWidth: '.65px 0 0 0',
+    width: '95%',
+    align: 'flex-start space-between',
+    margin: 'A2 - - -',
+    padding: 'Z - - -',
+    alignSelf: 'center',
+    '@maxMobileL': {
+      flow: 'column',
+      align: 'center flex-start',
+      gap: 'A'
+    },
+    mailLocation: {
+      '@maxMobileL': { textAlign: 'center' }
+    }
   }
 }
 
@@ -59,6 +59,7 @@ export const location = {
   extend: Flex,
   props,
   attr: { id: 'location' },
-  title: { extend: ResidenceSectionTitle, text: 'location' },
-  map: {extend: Map }
+  title: { text: 'location' },
+  map: {extend: Map },
+  contact: { extend: Contact }
 }

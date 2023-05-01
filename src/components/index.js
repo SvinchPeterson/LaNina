@@ -45,3 +45,5 @@ export * from './List'
 export * from './Package'
 export * from './PopUpRoomTour'
 export * from './Amenities'
+
+export * from './RoomTourTab'

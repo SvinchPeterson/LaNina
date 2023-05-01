@@ -11,14 +11,14 @@ import BB_JPG from '../../assets/images/residence/sololaki/b.jpg'
 const props = {
   width: 'fit-content',
   flow: 'column',
-  padding: 'E2 - - -',
+  margin: 'E1 - - -',
+  padding: 'E1 - - -',
   alignSelf: 'center',
-  margin: 'E - C1 -',
   align: 'flex-start center',
   position: 'relative',
   boxSizing: 'border-box',
   '@maxTabletM': { fontSize: `${15 / 16}em` },
-  '@maxMobileM': { margin: 'C - 0 -', padding: 'E - - -', minWidth: '100%'},
+  '@maxMobileM': { minWidth: '100%'},
   imageContainer: {
     alignSelf: 'center',
     width: `${520 / 16}em`,
@@ -51,19 +51,26 @@ const props = {
   },
 
   paragraph: {
-    padding: 'C E D D',
+    padding: 'C E D D1',
     margin: '-F1 - - -A2',
     background: 'cream',
     round: '0 F 0 0',
     title: { fontSize: 'I' },
-    style: { boxShadow: 'rgba(0, 0, 0, 0.45) 0px -25px 20px -20px'},
+    style: {
+      boxShadow:' rgba(0, 0, 0, 0.45) 0px -25px 20px -20px'
+    },
     '@maxTabletL': {
-      margin: '-F1 - - -A2'
+      margin: '-F - - -A2',
     },
     '@maxMobileM': {
-      margin: '-E2 - - 0',
-      padding: 'C C2 C2 C',
+      margin: '-E1 - - 0',
+      padding: 'C C D C',
       width: '100%',
+      round: '0 E1 0 0'
+    },
+
+    p: {
+      maxWidth: 'H'
     }
   }
 }

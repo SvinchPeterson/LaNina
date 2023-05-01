@@ -26,14 +26,14 @@ const props = {
     childProps: {
       textAlign: 'center',
       color: 'cream',
-      fontSize: `${10 / 16}em`,
-      fontWeight: '400',
+      fontSize: `${9 / 16}em`,
+      fontWeight: '700',
       textTransform: 'uppercase',
-      letterSpacing: `${3 / 10}em`,
+      letterSpacing: `${2 / 10}em`,
       whiteSpace: 'nowrap',
       opacity: '.85',
       transition: 'opacity .3s ease, transform .3s ease-in-out',
-      style: {fontStyle: 'italic'},
+      // style: {fontStyle: 'italic'},
       ':hover': {
         transform: 'scale(1.03)',
         opacity: '1'

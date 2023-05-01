@@ -34,49 +34,26 @@ const numbers = {
       }
     }
   ]
-
 }
 
 const props = {
-  flow: 'column',
-  gap: 'Y2',
-  fontWeight: '700',
-  fontSize: `Z`,
-  letterSpacing: `${0.3 / 13}em`,
-  color: 'black .85',
-  width: '55%',
-  alignSelf: 'center',
-  padding: 'E - E2 -',
-  '@maxTabletS': {
-    width: '70%',
-    padding: 'C2 - E2 -'
-  },
-  '@maxMobileM': {width: '80%'},
-
-  mailLocation: {
+  align: 'center center',
+  childProps: {
+    fontSize: `${12 / 16}em`,
+    fontWeight: '700',
     flow: 'column',
-    gap: 'X',
-    '@maxMobileL': {textAlign: 'center'}
+    gap: 'Y',
+    childProps: { letterSpacing: `${.5 / 12}em`}
   },
   numbers: {
-    flow: 'column',
-    padding: 'Z1 - - -',
-    gap: 'Z',
-    alignSelf: 'flex-end',
-    '@maxMobileL': {
-      border: 'solid, black .5',
-      borderWidth: '1px 0 0 0',
-      width: '100%',
-      alignItems: 'center'
-    },
     childProps: {
-      gap: 'Y2',
-      align: 'center flex-start',
-      icon: { boxSize: 'A ' }
+      align: 'center center',
+      gap: 'Y',
+      icon: { boxSize: 'A '}
     }
   }
-
 }
+
 
 export const Contact = {
   extend: Flex,

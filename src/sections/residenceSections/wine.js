@@ -11,7 +11,7 @@ import WINE_JPG from '../../assets/images/residence/sololaki/wine.jpg'
 const props = {
   position: 'relative',
   align: 'center center',
-  margin: 'F -',
+  margin: 'G -',
   width: 'fit-content',
   alignSelf: 'center',
   flow: 'column',
@@ -34,19 +34,21 @@ const props = {
   },
 
   paragraph: {
-    padding: 'C A D D',
+    padding: 'C C1 D D2',
     margin: '- -E -F1 -B',
     zIndex: '3',
     background: 'cream',
     round: '0 0 0 E2',
+    p: { maxWidth: 'G3'},
     style: { boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px', zIndex: '10' },
     '@maxMobileM': {
       minWidth: '100%',
       boxSizing: 'border-box',
-      padding: 'C C D C2',
+      padding: 'C C1 D C1',
       margin: '- 0 -F1 0',
+      round: '0 0 0 E',
       style: { boxShadow: '15px 35px 30px rgba(0, 0, 0, .36)' }
-    },
+    }
   }
 }
 

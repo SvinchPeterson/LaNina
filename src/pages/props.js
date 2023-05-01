@@ -15,16 +15,16 @@ export const properties = {
     scrollBehavior: 'smooth',
     '::-webkit-scrollbar': { display: 'none' }
   },
-  // ':before': {
-  //   content: '""',
-  //   position: 'fixed',
-  //   boxSize: 'D 90%',
-  //   // background: 'red',
-  //   top: '0',
-  //   zIndex: '10',
-  //   alignSelf: 'center',
-  //   style: { backdropFilter: 'blur(10px)'}
-  // },
+  ':before': {
+    content: '""',
+    position: 'fixed',
+    boxSize: '46.41px 90%',
+    top: '0',
+    zIndex: '40',
+    alignSelf: 'center',
+    round: '0 0 A1 A1',
+    style: { backdropFilter: 'blur(5px)'}
+  },
 
   ':after': {
     content: '""',

@@ -33,7 +33,7 @@ import ORNAMENT_PNG from '../../../../assets/images/residence/sololaki/ornaments
 
 const props = {
   position: 'relative',
-  padding: 'D -',
+  padding: 'E3 -',
   width: `100%`,
   flow: 'column',
   align: 'center center',
@@ -46,70 +46,59 @@ const props = {
   '@maxTabletL': {
     backgroundImage: 'none',
     backgroundColor: 'naviGreenLight',
+    fontSize: `${15 / 16}em`
 
   },
   '@maxHeightS': { padding: 'C -' },
-  ':before': {
-    content: '""',
-    position: 'absolute',
-    boxSize: '100% F1',
-    top: '0',
-    left: '0',
-    background: 'linear-gradient(to right, rgba(1, 57, 57, .75) 0%, rgba(1, 57, 57, 0) 100%)',
-    zIndex: '2',
-    pointerEvents: 'none',
-    '@mobileL': { boxSize: '100% E' }
-  },
-
-  ':after': {
-    content: '""',
-    position: 'absolute',
-    boxSize: '100% F1',
-    top: '0',
-    right: '0',
-    background: 'linear-gradient(to left, rgba(1, 57, 57, .75) 0%, rgba(1, 57, 57, 0) 100%)',
-    zIndex: '2',
-    pointerEvents: 'none',
-    '@mobileL': { boxSize: '100% E' }
-  },
 
   imageBackground: {
     boxSize: '100% 100%',
     position: 'absolute',
     top: '0',
     left: '0',
-    background: 'naviGreen .75'
+    background: 'radial-gradient(rgba(1, 57, 57, .35), rgba(1, 57, 57, .95), rgba(1, 57, 57, 1))',
+    '@maxTabletL': {
+      background: 'radial-gradient(rgba(1, 57, 57, .5), rgba(1, 57, 57, 1))'
+    }
   },
   tabsContainer: {
-    padding: '- G',
+    padding: 'E -',
+    minWidth: `${700 / 16}em`,
     maxWidth: `${1440 / 16}em`,
     flow: 'column',
     gap: 'Z',
     overflow: 'hidden',
-    style: {
-      '&:nth-child(even)': {
-        border: '3px solid red'
-      }
-    },
+    align: 'space-between center',
     '@maxTabletS': {
       maxWidth: '100%',
       gap: '0',
       style: { overflowX: 'auto'},
       padding: '- C',
     },
+    '@maxMobileL': {
+      minWidth: `100%`,
+      padding: 'E2 0',
+      gap: 'E',
+    },
+    style: {
+      '> a:nth-child(odd)': {
+        '@media only screen and (max-width: 768px)': {
+          borderRadius: '0 200px 200px 0'
+
+        }
+      },
+      '> a:nth-child(even)': {
+        alignSelf: 'flex-end',
+        '@media only screen and (max-width: 768px)': {
+          borderRadius: '200px 0 0 200px'
+        }
+      },
+    },
     childProps: {
-      border: '3px solid red',
       border: 'solid, naviGreenDark 0',
       borderWidth: `A`,
-      padding: 'D',
-      margin: 'C',
-      '@maxTabletL': {
-        minWidth: 'E2',
-        align: 'center flex-start',
-        padding: 'C1 - - -'
-      },
-      '@maxHeightS': {
-        height: 'F3'
+      style: {
+        boxShadow: 'rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px',
       }
     }
   }

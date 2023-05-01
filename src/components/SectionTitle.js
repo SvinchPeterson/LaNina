@@ -7,26 +7,7 @@ export const ResidenceSectionTitle = {
   tag: 'h5',
   extend: Flex,
   props: {
-    width: 'fit-content',
-    fontSize: `${12 / 16}em`,
-    textTransform: 'uppercase',
-    fontWeight: '700',
-    letterSpacing: '2px',
-    align: 'center center',
-    color: 'black',
-    gap: 'Z',
-    style: { wordSpacing: '6px'},
-    // ':before': {
-    //   content: '"|||"',
-    //   color: 'orange',
-    //   letterSpacing: `${3 / 10}em !important`,
-    // },
-    // ':after': {
-    //   content: '"|||"',
-    //   color: 'orange',
-    //   letterSpacing: `${3 / 10}em`,
-    //   margin: '- - - -3px'
-    // }
+
   }
 }
 
