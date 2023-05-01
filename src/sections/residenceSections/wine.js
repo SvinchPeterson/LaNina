@@ -16,7 +16,10 @@ const props = {
   alignSelf: 'center',
   flow: 'column',
   '@maxTabletL': { fontSize: `${15 / 16}em` },
-  '@maxMobileM': { minWidth: '100%' },
+  '@maxMobileM': {
+    minWidth: '100%',
+     margin: 'F -',
+  },
   image: {
     boxSize: `H G3`,
     padding: '0',

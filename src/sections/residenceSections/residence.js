@@ -18,6 +18,9 @@ const props = {
   position: 'relative',
   boxSizing: 'border-box',
   '@maxTabletM': { fontSize: `${15 / 16}em` },
+  '@maxMobileL': {
+    margin: 'D2 - - -',
+  },
   '@maxMobileM': { minWidth: '100%'},
   imageContainer: {
     alignSelf: 'center',
