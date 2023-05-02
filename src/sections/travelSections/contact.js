@@ -2,8 +2,24 @@
 
 import { Contact } from '../../components'
 
+const props = {
+  alignSelf: 'center',
+  padding: 'E -',
+  flow: 'column',
+  gap: 'A',
+  mailLocation: {
+    textAlign: 'center',
+    border: 'solid, black',
+    borderWidth: '0 0 1px 0',
+    padding: '- - A -'
+  }
+
+}
+
 export const contact = {
   extend: Contact,
+  props,
+
   mailLocation: {
     ...[
       { props: { text: 'info@bbhospitality.ge' } },

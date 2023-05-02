@@ -2,7 +2,7 @@
 
 import { Grid } from 'smbls'
 
-import { TravelSectionTitle, ScrollTitle } from '../../../components'
+import { ScrollTitle } from '../../../components'
 
 import TBILISI_JPG from '../../../assets/images/travel/tbilisi.jpg'
 import BORJOMI_JPG from '../../../assets/images/travel/borjomi.jpeg'
@@ -40,8 +40,10 @@ const props = {
     position: 'absolute',
     transform: 'rotate(180deg)',
     position: 'absolute',
-    top: 'G2',
-    left: '-C2',
+    textTransform: 'capitalize',
+    fontSize: 'F',
+    top: 'E',
+    left: '-B1',
     zIndex: '20',
     style: {
       writingMode: 'vertical-rl',
@@ -152,11 +154,18 @@ const props = {
 export const gridGalleries = {
   props,
 
-  title: { extend: TravelSectionTitle, text: 'gallery'},
+  title: { tag: 'h3', text: 'gallery' },
 
   content: {
     extend: Grid,
-    childExtend: { title: { tag: 'h4' } },
+    childExtend: {
+      title: { tag: 'h4' },
+      on: {
+        click: (event, element, state) => {
+          state.update({ activePopUpModal: true, activeGallery: parseInt(element.key), activePopUpGallery: true })
+        }
+      }
+    },
   ...[
     {
       props: {
@@ -165,12 +174,6 @@ export const gridGalleries = {
         gridColumn: '1 / span 2',
         gridRow: '1 / span 2',
         title: { text: 'tbilisi' }
-      },
-
-      on: {
-        click: (event, element, state) => {
-          state.update({ activePopUpModal: true, activeTbilisi: true, activePopUpGallery: true })
-        }
       }
     },
 
@@ -180,12 +183,6 @@ export const gridGalleries = {
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + BORJOMI_JPG + ')',
         title: { text: 'borjomi' }
-      },
-
-      on: {
-        click: (event, element, state) => {
-          state.update({ activePopUpModal: true, activeBorjomi: true, activePopUpGallery: true })
-        }
       }
     },
 
@@ -195,12 +192,6 @@ export const gridGalleries = {
         round: '0 0 0 F',
         backgroundImage: 'url(' + MTSKETA_JPG + ')',
         title: { text: 'mtsketa' }
-      },
-
-      on: {
-        click: (event, element, state) => {
-          state.update({ activePopUpModal: true, activeMtsketa: true, activePopUpGallery: true })
-        }
       }
     },
 
@@ -211,12 +202,6 @@ export const gridGalleries = {
         gridColumn: '1 / span 2',
         backgroundImage: 'url(' + KAKHETI_JPG + ')',
         title: { text: 'kakheti' }
-      },
-
-      on: {
-        click: (event, element, state) => {
-          state.update({ activePopUpModal: true, activeKakheti: true, activePopUpGallery: true })
-        }
       }
     },
 
@@ -227,12 +212,6 @@ export const gridGalleries = {
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + MARTVILI_JPG + ')',
         title: { text: 'martvili' }
-      },
-
-      on: {
-        click: (event, element, state) => {
-          state.update({ activePopUpModal: true, activeMartvili: true, activePopUpGallery: true })
-        }
       }
     },
 
@@ -243,12 +222,6 @@ export const gridGalleries = {
         gridColumn: '1 / span 2',
         backgroundImage: 'url(' + KUTAISI_JPG + ')',
         title: { text: 'kutaisi' }
-      },
-
-      on: {
-        click: (event, element, state) => {
-          state.update({ activePopUpModal: true, activeKutaisi: true, activePopUpGallery: true })
-        }
       }
     },
 
@@ -259,12 +232,6 @@ export const gridGalleries = {
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + GORI_JPG + ')',
         title: { text: 'gori' }
-      },
-
-      on: {
-        click: (event, element, state) => {
-          state.update({ activePopUpModal: true, activeGori: true, activePopUpGallery: true })
-        }
       }
     },
 
@@ -275,12 +242,6 @@ export const gridGalleries = {
         gridColumn: '1 / span 6',
         gridRow: 'span 5',
         title: { text: 'kazbegi' }
-      },
-
-      on: {
-        click: (event, element, state) => {
-          state.update({ activePopUpModal: true, activeKazbegi: true, activePopUpGallery: true })
-        }
       }
     }
   ]

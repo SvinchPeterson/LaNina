@@ -16,6 +16,10 @@ const props = {
     flow: 'column',
     align: 'center center',
     gap: 'C'
+  },
+
+  article: {
+    maxWidth: 'H'
   }
 }
 

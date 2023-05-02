@@ -18,7 +18,9 @@ const state = {
   activePopUp: false,
   activePopUpContent: 0,
   activePackage: false,
-  activeTour: false
+  activeTour: false,
+
+  activeGallery: 0
 }
 
 

@@ -4,7 +4,6 @@ import { Flex } from 'smbls'
 const props = {
   flow: 'column',
   color: 'black',
-  // background: 'cream',
   style: { zIndex: '2' },
 
   title: {
@@ -13,7 +12,6 @@ const props = {
     textTransform: 'capitalize',
     letterSpacing: `${-4 / 83}em`,
     color: 'orange',
-    // color: '#FF5C4D',
     '@maxMobileM': { fontSize: 'H' }
   },
 

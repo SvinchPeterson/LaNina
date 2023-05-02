@@ -60,245 +60,35 @@ export const navBar = {
       ? { opacity: '1', transition: 'opacity 1s ease-in-out' }
       : { opacity: '0', transition: 'opacity .5s ease-in-out' }
   },
+
+  childExtend: {
+    class: {
+      show: (element, state) => state.activeGallery === parseInt(element.key)
+        ? {
+          opacity: '1 !important',
+          pointerEvents: 'none',
+          transform: 'scale(1.55)',
+          padding: `${25 / 40}em 0`,
+          letterSpacing: '0',
+          color: 'white'
+        }
+        : { opacity: '.5' }
+    },
+
+    on: {
+      click: (event, element, state) => {
+        state.update({ activeGallery: parseInt(element.key)})
+      }
+    },
+  },
   ...[
-    {
-      props: { text: 'tbilisi' },
-      class: {
-        show: (element, state) => state.activeTbilisi
-          ? {
-            opacity: '1',
-            pointerEvents: 'none',
-            transform: 'scale(1.55)',
-            padding: `${25 / 40}em 0`,
-            letterSpacing: '0'
-          }
-          : { opacity: '.5' }
-      },
-      on: {
-        click: (event, element, state) => {
-          state.update({
-            activeTbilisi: true,
-            activeBorjomi: false,
-            activeMtsketa: false,
-            activeKakheti: false,
-            activeMartvili: false,
-            activeKutaisi: false,
-            activeGori: false,
-            activeKazbegi: false,
-            activeImage: 0
-          })
-        }
-      }
-    },
-
-    {
-      text: 'borjomi',
-      class: {
-        show: (element, state) => state.activeBorjomi
-          ? {
-            opacity: '1',
-            pointerEvents: 'none',
-            transform: 'scale(1.55)',
-            padding: `${25 / 40}em 0`,
-            letterSpacing: '0'
-          }
-          : { opacity: '.5' }
-      },
-      on: {
-        click: (event, element, state) => {
-          state.update({
-            activeBorjomi: true,
-            activeTbilisi: false,
-            activeMtsketa: false,
-            activeKakheti: false,
-            activeMartvili: false,
-            activeKutaisi: false,
-            activeGori: false,
-            activeKazbegi: false,
-            activeImage: 0
-          })
-        }
-      }
-    },
-
-    {
-      text: 'mtsketa',
-      class: {
-        show: (element, state) => state.activeMtsketa
-          ? {
-            opacity: '1',
-            pointerEvents: 'none',
-            transform: 'scale(1.55)',
-            padding: `${25 / 40}em 0`,
-            letterSpacing: '0'
-          }
-          : { opacity: '.5' }
-      },
-      on: {
-        click: (event, element, state) => {
-          state.update({
-            activeMtsketa: true,
-            activeTbilisi: false,
-            activeBorjomi: false,
-            activeKakheti: false,
-            activeMartvili: false,
-            activeKutaisi: false,
-            activeGori: false,
-            activeKazbegi: false,
-            activeImage: 0
-          })
-        }
-      }
-    },
-
-    {
-      text: 'kakheti',
-      class: {
-        show: (element, state) => state.activeKakheti
-          ? {
-            opacity: '1',
-            pointerEvents: 'none',
-            transform: 'scale(1.55)',
-            padding: `${25 / 40}em 0`,
-            letterSpacing: '0'
-          }
-          : { opacity: '.5' }
-      },
-      on: {
-        click: (event, element, state) => {
-          state.update({
-            activeKakheti: true,
-            activeMtsketa: false,
-            activeTbilisi: false,
-            activeBorjomi: false,
-            activeMartvili: false,
-            activeKutaisi: false,
-            activeGori: false,
-            activeKazbegi: false,
-            activeImage: 0
-          })
-        }
-      }
-    },
-
-    {
-      text: 'martvili',
-      class: {
-        show: (element, state) => state.activeMartvili
-          ? {
-            opacity: '1',
-            pointerEvents: 'none',
-            transform: 'scale(1.55)',
-            padding: `${25 / 40}em 0`,
-            letterSpacing: '0'
-          }
-          : { opacity: '.5' }
-      },
-      on: {
-        click: (event, element, state) => {
-          state.update({
-            activeMartvili: true,
-            activeKakheti: false,
-            activeMtsketa: false,
-            activeTbilisi: false,
-            activeBorjomi: false,
-            activeKutaisi: false,
-            activeGori: false,
-            activeKazbegi: false,
-            activeImage: 0
-          })
-        }
-      }
-    },
-
-    {
-      text: 'kutaisi',
-      class: {
-        show: (element, state) => state.activeKutaisi
-          ? {
-            opacity: '1',
-            pointerEvents: 'none',
-            transform: 'scale(1.55)',
-            padding: `${25 / 40}em 0`,
-            letterSpacing: '0'
-          }
-          : { opacity: '.5' }
-      },
-      on: {
-        click: (event, element, state) => {
-          state.update({
-            activeKutaisi: true,
-            activeMartvili: false,
-            activeKakheti: false,
-            activeMtsketa: false,
-            activeTbilisi: false,
-            activeBorjomi: false,
-            activeGori: false,
-            activeKazbegi: false,
-            activeImage: 0
-          })
-        }
-      }
-    },
-
-    {
-      text: 'gori',
-      class: {
-        show: (element, state) => state.activeGori
-          ? {
-            opacity: '1',
-            pointerEvents: 'none',
-            transform: 'scale(1.55)',
-            padding: `${25 / 40}em 0`,
-            letterSpacing: '0'
-          }
-          : { opacity: '.5' }
-      },
-      on: {
-        click: (event, element, state) => {
-          state.update({
-            activeGori: true,
-            activeKutaisi: false,
-            activeMartvili: false,
-            activeKakheti: false,
-            activeMtsketa: false,
-            activeTbilisi: false,
-            activeBorjomi: false,
-            activeKazbegi: false,
-            activeImage: 0
-          })
-        }
-      }
-    },
-
-    {
-      text: 'kazbegi',
-      class: {
-        show: (element, state) => state.activeKazbegi
-          ? {
-            opacity: '1',
-            pointerEvents: 'none',
-            transform: 'scale(1.55)',
-            padding: `${25 / 40}em 0`,
-            letterSpacing: '0'
-          }
-          : { opacity: '.5' }
-      },
-      on: {
-        click: (event, element, state) => {
-          state.update({
-            activeKazbegi: true,
-            activeGori: false,
-            activeKutaisi: false,
-            activeMartvili: false,
-            activeKakheti: false,
-            activeMtsketa: false,
-            activeTbilisi: false,
-            activeBorjomi: false,
-            activeImage: 0
-          })
-        }
-      }
-    }
+    { text: 'tbilisi' },
+    { text: 'borjomi' },
+    { text: 'mtsketa' },
+    { text: 'kakheti' },
+    { text: 'martvili' },
+    { text: 'kutaisi' },
+    { text: 'gori' },
+    { text: 'kazbegi' }
   ]
 }

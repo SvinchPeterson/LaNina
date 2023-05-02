@@ -146,7 +146,6 @@ export const PopUpRoomTour = {
         state.update({
           activePopUp: false,
           activePopUpContent: false
-
         })
       }
     },

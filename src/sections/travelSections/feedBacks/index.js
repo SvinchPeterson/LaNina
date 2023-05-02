@@ -47,14 +47,13 @@ const props = {
 
 
   title: {
-    fontWeight: '400',
+    fontWeight: '700',
     fontSize: 'A',
     textTransform: 'capitalize',
     whiteSpace: 'nowrap',
-    letterSpacing: '10px',
     zIndex: '100',
     opacity: '.85',
-    padding: '- - V Z'
+    padding: '- - V -'
   },
 
   content: {

@@ -9,8 +9,7 @@ import ORNAMENT_JPG from '../../../assets/images/travel/ornament.png'
 const props = {
   width: '100%',
   flow: 'column',
-  padding: 'E2 -',
-  margin: 'D2 - - -',
+  margin: 'G1 - - -',
   position: 'relative',
   round: 'G G 0 0',
   style: { backgroundAttachment: 'fixed' },

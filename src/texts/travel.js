@@ -30,7 +30,7 @@ export const $georgia = {
     {
       ...[
         { tag: 'span', text: 'Georgia' },
-        `, a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea shores.`
+        ` , a country at the intersection of Europe and Asia, is a former Soviet republic that's home to Caucasus Mountain villages and Black Sea shores.`
       ]
     },
     {

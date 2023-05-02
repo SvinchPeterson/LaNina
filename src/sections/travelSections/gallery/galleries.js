@@ -36,7 +36,7 @@ const props = {
 
     gallery: {
       round: '0 G2 G2 0',
-      // height: `${500 / 16}em`,
+      height: `${500 / 16}em`,
       border: 'solid, white .15',
       borderWidth: '.15px .15px .15px 0px',
       '@maxMobileL': { round: '0' },
@@ -85,25 +85,27 @@ const galleryContainer = {
 
 export const galleries = {
   props,
-  childExtend: galleryContainer,
+  childExtend: {
+    extend: galleryContainer,
+    class: {
+      show: (element, state) => state.activeGallery === parseInt(element.key)
+        ? { opacity: '1' }
+        : { opacity: '0' }
+    },
+    gallery: {
+      class: {
+        show: (element, state) => state.activeGallery === parseInt(element.parent.key)
+          ? {
+            width: `${608 / 16}em`,
+            '@media only screen and (max-width: 768px)': { width: '100% !important' }
+          }
+          : { width: '0', opacity: '0' }
+      }
+    }
+  },
   ...[
     {
-      class: {
-        show: (element, state) => state.activeTbilisi
-          ? { opacity: '1' }
-          : { opacity: '0' }
-      },
-      gallery: {
-        extend: galleryTbilisi,
-        class: {
-          show: (element, state) => state.activeTbilisi
-            ? {
-              width: `${608 / 16}em`,
-              '@media only screen and (max-width: 768px)': { width: '100%' }
-            }
-            : { width: '0', opacity: '0' }
-        }
-      },
+      gallery: { extend: galleryTbilisi },
 
       footer: {
         navArrows: {
@@ -140,22 +142,7 @@ export const galleries = {
     },
 
     {
-      class: {
-        show: (element, state) => state.activeBorjomi
-          ? { opacity: '1' }
-          : { opacity: '0' }
-      },
-      gallery: {
-        extend: galleryBorjomi,
-        class: {
-          show: (element, state) => state.activeBorjomi
-            ? {
-              width: `${608 / 16}em`,
-              '@media only screen and (max-width: 768px)': { width: '100%' }
-            }
-            : { width: '0', opacity: '0' }
-        }
-      },
+      gallery: { extend: galleryBorjomi },
       footer: {
         navArrows: {
           ...[
@@ -191,22 +178,7 @@ export const galleries = {
     },
 
     {
-      class: {
-        show: (element, state) => state.activeMtsketa
-          ? { opacity: '1' }
-          : { opacity: '0' }
-      },
-      gallery: {
-        extend: galleryMtsketa,
-        class: {
-          show: (element, state) => state.activeMtsketa
-            ? {
-              width: `${608 / 16}em`,
-              '@media only screen and (max-width: 768px)': { width: '100%' }
-            }
-            : { width: '0', opacity: '0' }
-        }
-      },
+      gallery: { extend: galleryMtsketa },
 
       footer: {
         navArrows: {
@@ -243,22 +215,7 @@ export const galleries = {
     },
 
     {
-      class: {
-        show: (element, state) => state.activeKakheti
-          ? { opacity: '1' }
-          : { opacity: '0' }
-      },
-      gallery: {
-        extend: galleryKakheti,
-        class: {
-          show: (element, state) => state.activeKakheti
-            ? {
-              width: `${608 / 16}em`,
-              '@media only screen and (max-width: 768px)': { width: '100%' }
-            }
-            : { width: '0', opacity: '0' }
-        }
-      },
+      gallery: { extend: galleryKakheti },
       footer: {
         navArrows: {
           ...[
@@ -294,22 +251,7 @@ export const galleries = {
     },
 
     {
-      class: {
-        show: (element, state) => state.activeMartvili
-          ? { opacity: '1' }
-          : { opacity: '0' }
-      },
-      gallery: {
-        extend: galleryMartvili,
-        class: {
-          show: (element, state) => state.activeMartvili
-            ? {
-              width: `${608 / 16}em`,
-              '@media only screen and (max-width: 768px)': { width: '100%' }
-            }
-            : { width: '0', opacity: '0' }
-        }
-      },
+      gallery: { extend: galleryMartvili },
 
       footer: {
         navArrows: {
@@ -346,22 +288,7 @@ export const galleries = {
     },
 
     {
-      class: {
-        show: (element, state) => state.activeKutaisi
-          ? { opacity: '1' }
-          : { opacity: '0' }
-      },
-      gallery: {
-        extend: galleryKutaisi,
-        class: {
-          show: (element, state) => state.activeKutaisi
-            ? {
-              width: `${608 / 16}em`,
-              '@media only screen and (max-width: 768px)': { width: '100%' }
-            }
-            : { width: '0', opacity: '0' }
-        }
-      },
+      gallery: { extend: galleryKutaisi },
 
       footer: {
         navArrows: {
@@ -398,22 +325,7 @@ export const galleries = {
     },
 
     {
-      class: {
-        show: (element, state) => state.activeGori
-          ? { opacity: '1' }
-          : { opacity: '0' }
-      },
-      gallery: {
-        extend: galleryGori,
-        class: {
-          show: (element, state) => state.activeGori
-            ? {
-              width: `${608 / 16}em`,
-              '@media only screen and (max-width: 768px)': { width: '100%' }
-            }
-            : { width: '0', opacity: '0' }
-        }
-      },
+      gallery: { extend: galleryGori },
       footer: {
         navArrows: {
           ...[
@@ -449,22 +361,7 @@ export const galleries = {
     },
 
     {
-      class: {
-        show: (element, state) => state.activeKazbegi
-          ? { opacity: '1' }
-          : { opacity: '0' }
-      },
-      gallery: {
-        extend: galleryKazbegi,
-        class: {
-          show: (element, state) => state.activeKazbegi
-            ? {
-              width: `${608 / 16}em`,
-              '@media only screen and (max-width: 768px)': { width: '100%' }
-            }
-            : { width: '0', opacity: '0' }
-        }
-      },
+      gallery: { extend: galleryKazbegi },
       footer: {
         navArrows: {
           ...[
