@@ -240,7 +240,7 @@ export const tourPopUp = {
             description: {
               class: {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
-                ? { display: 'none' }
+                ? { display: 'none !important' }
                 : { display: 'flex' }
               },
             },
