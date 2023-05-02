@@ -8,8 +8,6 @@ import { banner, residence, servicesFacilities, mission, apartments, wine, feedB
 
 import { roomPopUp } from '../sections/residenceSections/apartments/roomPopUp/roomPopUp'
 
-// import { roomsPopUp } from '../sections/residenceSections/apartments/roomsPopUp'
-
 import { properties } from './props'
 
 const state = {
@@ -153,7 +151,6 @@ export const Sololaki = {
   servicesFacilities,
   mission,
   apartments,
-  // roomsPopUp,
   roomPopUp,
   wine,
   feedBacks,

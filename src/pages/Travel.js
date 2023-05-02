@@ -6,7 +6,6 @@ import { properties } from './props'
 
 import { Header, Footer, Menu, MenuMobile } from '../components'
 import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip, contact } from '../sections/travelSections'
-// import { toursPopUp } from '../sections/travelSections/tours/toursPopUp'
 import { tourPopUp } from '../sections/travelSections/tours/tourPopUp/tourPopUp'
 import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
 
@@ -16,7 +15,7 @@ const state = {
   activeImage: 0,
   activeTourPopUp: true,
 
-  activePopUp: true,
+  activePopUp: false,
   activePopUpContent: 0,
   activePackage: false,
   activeTour: false
