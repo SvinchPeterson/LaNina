@@ -14,6 +14,6 @@ const props = {
 
 export const Description = {
   tag: 'P',
-  extend: Flex,
+  // extend: Flex,
   props
 }

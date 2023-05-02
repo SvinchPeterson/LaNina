@@ -240,7 +240,7 @@ export const tourPopUp = {
             description: {
               class: {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
-                ? { display: 'none !important' }
+                ? { display: 'none' }
                 : { display: 'flex' }
               },
             },
@@ -249,7 +249,7 @@ export const tourPopUp = {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
                 ? {
                   '@media only screen and (min-width: 1181px)': {
-                    display: 'none !important'
+                    display: 'none'
                   }
                 }
                 : {
