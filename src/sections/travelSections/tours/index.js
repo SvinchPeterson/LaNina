@@ -14,7 +14,7 @@ const props = {
   round: 'G G 0 0',
   style: { backgroundAttachment: 'fixed' },
   '@maxTabletM': {
-    padding: 'E -',
+    // padding: 'E -',
     fontSize: `${14 / 16}em`,
   },
   '@maxMobileL': {

@@ -16,13 +16,13 @@ export const tourPlaces = {
 
 const props = {
   color: 'cream',
-  maxWidth: 'H',
+  // maxWidth: 'H',
   flow: 'column',
-  maxHeight: `I`,
+  maxHeight: `H2`,
   overflow: 'hidden',
-  transform: 'scale(.8)',
+  // transform: 'scale(.9)',
   position: 'relative',
-
+  boxSizing: 'border-box',
   ':before': {
     content: '""',
     boxSize: 'D2 100%',
@@ -45,7 +45,7 @@ const props = {
   },
 
   content: {
-    padding: 'B2 - D -',
+    padding: 'C1 - E1 -',
     style: { overflowY: 'auto'},
     title: {
       fontSize: 'Z',

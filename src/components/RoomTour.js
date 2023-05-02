@@ -25,8 +25,6 @@ const props = {
 
     close: {
       position: 'absolute',
-      // top: '0',
-      // right: '0',
       background: 'transparent',
       boxSize: 'B2 B2',
       align: 'center center',
@@ -48,7 +46,9 @@ const props = {
       minWidth: '100%',
       more: {
         color: 'cream2',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        opacity: '.75',
+        ':hover': { opacity: '1' }
       }
     }
   }

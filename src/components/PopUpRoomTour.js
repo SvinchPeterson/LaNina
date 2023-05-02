@@ -91,7 +91,7 @@ const props = {
       overflow: 'hidden',
       childProps: {
         flex: '1',
-        minHeight: '100%',
+        height: '100%',
         flow: 'column',
         // style: { overflowY: 'auto' },
         childProps: {
@@ -123,7 +123,7 @@ const props = {
           },
 
           article: {
-            '@maxTabletO': { display: 'none' }
+            // '@maxTabletO': { display: 'none' }
           }
         }
       }
@@ -183,7 +183,9 @@ export const PopUpRoomTour = {
           on: {
             click: (event, element, state) => {
               state.update({
-                activePopUpContent: parseInt(element.key)
+                activePopUpContent: parseInt(element.key),
+                activeTour: false,
+                activeScroll: true
               })
             }
           },
@@ -212,7 +214,9 @@ export const PopUpRoomTour = {
         class: {
           show: (element, state) => state.activePopUpContent === parseInt(element.key)
             ? {
-              display: 'flex'
+              display: 'flex',
+              // border: '2px solid red',
+              // minHeight: '100%'
             }
             : {
               display: 'none'

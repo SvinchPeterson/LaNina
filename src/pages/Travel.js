@@ -21,7 +21,11 @@ const state = {
   activeTour: false,
 
   activeGallery: 0,
-  activeScroll: true
+  activeScroll: true,
+
+  activeImage: 0,
+  activeTbilisiImage: 0,
+  activeAnanuriImage: 0
 }
 
 
@@ -181,7 +185,6 @@ export const Travel = {
   popUpGallery,
   tours,
   tourPopUp,
-  // toursPopUp,
   feedBacks,
   aboutUs,
   contact,

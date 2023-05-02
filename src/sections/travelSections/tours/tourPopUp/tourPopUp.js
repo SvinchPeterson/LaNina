@@ -55,8 +55,8 @@ const props = {
         style: {
           '> div:nth-child(odd)': {
             '> article > button': {
-              top: `${30 / 16}em`,
-              right: `${30 / 16}em`
+              top: `0`,
+              right: `0`
             },
 
             '> div > h5': {
@@ -76,8 +76,8 @@ const props = {
           '> div:nth-child(even)': {
             flexFlow: 'row-reverse',
             '> article > button': {
-              top: `${30 / 16}em`,
-              left: `${30 / 16}em`
+              top: `0`,
+              left: `0`
             },
             '@media only screen and (max-width: 1180px)': { flexFlow: 'column'},
             '> div > h5': {
@@ -97,7 +97,23 @@ const props = {
           },
         },
         childProps: {
-          padding: 'C -'
+          padding: 'C -',
+          header: { zindex: '100'},
+          galleryContainer: {
+            '@minTabletO': { transition: 'transform 1s ease' }
+          },
+          article: {
+            '@minTabletO': {
+              transition: 'transform 1s ease'
+            },
+            description: {
+              display: 'none',
+              '@minTabletO': { display: 'flex'}
+            },
+            moreButton: {
+              '@maxTabletO': { display: 'none' }
+            }
+          }
         },
 
         ':not(:nth-child(1),:nth-child(2))': {
@@ -123,28 +139,83 @@ export const tourPopUp = {
     content: {
       extend: toursContainers,
       childExtend: {
-
         childExtend: {
-          header: {
-            ...[{ tag: 'h5', props: {pointerEvents: 'none' }}, { text: 'more' }]
+          class: {
+            show: (element, state) => state.activeTour === parseInt(element.key)
+            ? {
+              ':nth-child(odd) > article': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'translateX(-50px)',
+                  background: 'rgba(0, 47, 57, .85)',
+                  boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px'
+                },
+              },
+              ':nth-child(even) > article': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'translateX(50px)',
+                  background: 'rgba(0, 47, 57, .85)',
+                  boxShadow:' rgba(0, 0, 0, 0.45) 30px 0px 20px -20px'
+                }
+              },
+
+              ':nth-child(odd) > div': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'scale(.75) translateX(-30px)'
+                }
+
+              },
+              ':nth-child(even) > div': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'scale(.75) translateX(30px)'
+                }
+
+              }
+            }
+            : {
+              ':nth-child(odd) > article': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'scale(1)'
+                }
+              },
+              ':nth-child(even) > article': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'scale(1)'
+                }
+              },
+
+              ':nth-child(odd) > div': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'scale(1)'
+                }
+              },
+              ':nth-child(even) > div': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'scale(1)'
+                }
+              }
+            }
           },
+          header: {
+            ...[
+              { tag: 'h5', props: {pointerEvents: 'none' }},
+
+              {
+                text: 'more',
+                on: {
+                  click: (event, element, state) => {
+                    state.update({
+                      activeTour: parseInt(element.parent.parent.key),
+                      activeScroll: false
+                    })
+                  }
+                },
+              }
+            ]
+          },
+
           galleryContainer: {
           },
           article: {
-            // class: {
-            //   show: (element, state) => state.activeTour === parseInt(element.parent.key)
-            //   ? {
-            //     maxHeight: '400px',
-            //     borderRadius: '300px 0 0 300px',
-            //     // boxShadow: '-30px 0 30px -5px rgba(0,0,0, .55)',
-            //     transform: 'scale(1.2) translateX(-50px)',
-            //     background: 'rgba(0, 47, 57, .85)',
-            //     boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px'
-            //   }
-            //   : {
-            //     transform: 'scale(1)',
-            //   }
-            // },
             close: {
               on: {
                 click: (event, element, state) => {
@@ -157,8 +228,12 @@ export const tourPopUp = {
 
               class: {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
-                ? { opacity: '1' }
-                : { opacity: '0' }
+                ? {
+                  opacity: '1',
+                  transform: 'rotate(90deg)',
+                  transition: 'opacity .5s ease-in-out, transform .5s ease-in-out'
+                }
+                : { opacity: '0', transform: 'rotate(0)' }
               },
             },
             amenities: null,
@@ -172,8 +247,16 @@ export const tourPopUp = {
             moreButton: {
               class: {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
-                ? { display: 'none' }
-                : { display: 'flex' }
+                ? {
+                  '@media only screen and (min-width: 1181px)': {
+                    display: 'none'
+                  }
+                }
+                : {
+                  '@media only screen and (min-width: 1181px)': {
+                    display: 'flex'
+                  }
+                }
               },
               more: {
                 on: {
@@ -191,10 +274,26 @@ export const tourPopUp = {
               class: {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
                 ? {
-                  height: '100%'
+                  '@media only screen and (min-width: 1181px)': {
+                    height: '100%',
+                    opacity: '1',
+                    transform: 'scale(1)',
+                    transition: 'opacity .7s ease, transform .7s ease'
+                  },
+                  '@media only screen and (max-width: 1180px)': {
+
+
+                  }
                 }
                 : {
-                 height: '0'
+                  '@media only screen and (min-width: 1181px)': {
+                    height: '0',
+                    opacity: '0',
+                    transform: 'scale(.98)'
+                  },
+                  '@media only screen and (max-width: 1180px)': {
+
+                  }
                 }
               },
             }
