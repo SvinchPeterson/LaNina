@@ -81,6 +81,7 @@ const props = {
     fontSize: 'E',
     opacity: '0',
     letterSpacing: '0',
+    textAlign: 'center',
     '@maxTabletL': {
       opacity: '1',
       letterSpacing: `${-2 / 33}em`

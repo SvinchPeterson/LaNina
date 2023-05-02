@@ -1,12 +1,15 @@
 'use strict'
 
-import { Flex } from 'smbls'
+import { RoomTourTabs } from "../../../composites"
 
-import { slideHide } from '../../../animations'
+import DIAMOND_PNG from '../../../assets/icons/diamond.png'
+import TREE_PNG from '../../../assets/icons/tree.png'
+import MOUNTAIN_PNG from '../../../assets/icons/mountain.png'
+import HIKING_PNG from '../../../assets/icons/hiking.png'
+import CUP_PNG from '../../../assets/icons/cup.png'
+import PIN_PNG from '../../../assets/icons/pin.png'
 
-import { TourTab, NavArrowsCream } from '../../../components'
 
-import ORNAMENT_JPG from '../../../assets/images/travel/ornament.png'
 import TBILISI_JPG from '../../../assets/images/travel/tbilisi2.jpg'
 import STANDART_JPG from '../../../assets/images/travel/standart.jpg'
 import CAUCASUS_JPG from '../../../assets/images/travel/caucasus.jpg'
@@ -14,233 +17,109 @@ import EXCLUSIVE_JPG from '../../../assets/images/travel/exclusive.jpg'
 import WINE_JPG from '../../../assets/images/travel/wine.jpg'
 import ADVENTURE_JPG from '../../../assets/images/travel/adventure.jpg'
 
-function sideScroll (element, direction, speed, distance, step) {
-  var scrollAmount = 0
-  var slideTimer = setInterval(function () {
-    if (direction === 'left') {
-      element.scrollLeft -= step
-    } else {
-      element.scrollLeft += step
-    }
-    scrollAmount += step
-    if (scrollAmount >= distance) {
-      window.clearInterval(slideTimer)
-    }
-  }, speed)
-}
+import ORNAMENT_JPG from '../../../assets/images/travel/ornament.png'
 
-const navArrows = {
-  extend: NavArrowsCream,
-  ...[
-    {
-      on: {
-        click: (event, element, state) => {
-          const content = document.getElementById('tabsContent')
-          sideScroll(content, 'left', 10, 350, 10)
-        }
-      }
-    },
+// function sideScroll (element, direction, speed, distance, step) {
+//   var scrollAmount = 0
+//   var slideTimer = setInterval(function () {
+//     if (direction === 'left') {
+//       element.scrollLeft -= step
+//     } else {
+//       element.scrollLeft += step
+//     }
+//     scrollAmount += step
+//     if (scrollAmount >= distance) {
+//       window.clearInterval(slideTimer)
+//     }
+//   }, speed)
+// }
 
-    {
-      on: {
-        click: (event, element, state) => {
-          // const { tabs } = element.parent.parent.parent.content
-          const content = document.getElementById('tabsContent')
-          sideScroll(content, 'right', 10, 350, 10)
-        }
-      }
-    }
-  ]
-}
+// const navArrows = {
+//   extend: NavArrowsCream,
+//   ...[
+//     {
+//       on: {
+//         click: (event, element, state) => {
+//           const content = document.getElementById('tabsContent')
+//           sideScroll(content, 'left', 10, 350, 10)
+//         }
+//       }
+//     },
 
-const content = {
-  extend: Flex,
-  attr: { id: 'tabsContent' },
+//     {
+//       on: {
+//         click: (event, element, state) => {
+//           // const { tabs } = element.parent.parent.parent.content
+//           const content = document.getElementById('tabsContent')
+//           sideScroll(content, 'right', 10, 350, 10)
+//         }
+//       }
+//     }
+//   ]
+// }
 
-  content: {
-    extend: Flex,
-    childExtend: {
-      extend: TourTab,
-      on: {
-        click: (event, element, state) => {
-          state.update({
-            activePopUp: true,
-            activePopUpContent: parseInt(element.key)
-          })
-        }
-      }
-    },
-    ...[
-      {
-        props: {
-          href: '#tbilisi',
-          content: {
-            title: { text: 'daily' },
-            image: {
-              backgroundImage: 'url(' + TBILISI_JPG + ')'
-            }
-          }
-
-        },
-      },
-
-      {
-        props: {
-          href: '#capital',
-          content: {
-            title: { text: 'standard' },
-            image: {
-              backgroundImage: 'url(' + STANDART_JPG + ')'
-
-            }
-          }
-        },
-      },
-
-      {
-        props: {
-          content: {
-            title: { text: 'caucasus' },
-            image: {
-              backgroundImage: 'url(' + CAUCASUS_JPG + ')'
-            }
-          }
-        },
-      },
-
-      {
-        props: {
-          content: {
-            background: 'linear-gradient(rgba(220, 187, 140, 0) 30%, rgba(220, 187, 140, .25) 70%)',
-            title: { text: 'exclusive' },
-            image: {
-              backgroundImage: 'url(' + EXCLUSIVE_JPG + ')'
-            }
-          },
-          ':after': { background: 'blue3 .7' }
-        },
-      },
-
-      {
-        props: {
-          content: {
-            title: { text: 'wine & gastronomy' },
-            image: {
-              backgroundImage: 'url(' + WINE_JPG + ')'
-            }
-
-          }
-
-        },
-      },
-
-      {
-        props: {
-          content: {
-            title: { text: 'adventure' },
-            image: {
-              backgroundImage: 'url(' + ADVENTURE_JPG + ')'
-            }
-          }
-        }
-      }
-    ]
-  }
-
-}
 
 const props = {
-  position: 'relative',
-  height: 'fit-content',
-  flow: 'column',
-  align: 'center center',
-  gap: '0',
-  padding: 'D1 - Z1 -',
-  boxSizing: 'border-box',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  overflow: 'hidden',
-  backgroundColor: 'orange',
   backgroundImage: 'url(' + ORNAMENT_JPG + ')',
-  '@minTabletL': { style: { backgroundAttachment: 'fixed' } },
-  '@maxTabletL': {
-    backgroundImage: 'none',
-    backgroundColor: 'naviBlueLight2',
-    padding: 'D1 - A2 -',
-  },
-
-  imageBackground: {
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    background: 'naviBlue .75'
-
-  },
-
-  ':before': {
-    content: '""',
-    position: 'absolute',
-    boxSize: '100% G',
-    top: '0',
-    left: '0',
-    pointerEvents: 'none',
-    // background: 'red',
-    zIndex: '2',
-    background: 'linear-gradient(to right, rgba(0, 47, 57, 1) 0%,rgba(0, 47, 57, 0) 100%)',
-    '@maxMobileL': { boxSize: '100% D' },
-    '@maxMobileM': { boxSize: '100% C' }
-  },
-
   ':after': {
-    content: '""',
-    position: 'absolute',
-    boxSize: '100% G',
-    top: '0',
-    right: '0',
-    zIndex: '2',
-    pointerEvents: 'none',
-    background: 'linear-gradient(to left, rgba(0, 47, 57, 1) 0%, rgba(0, 47, 57, 0) 100%)',
-    '@maxMobileL': { boxSize: '100% D' },
-    '@maxMobileM': { boxSize: '100% C' }
-  },
-
-  content: {
-    maxWidth: '100%',
-    position: 'relative',
-    boxSizing: 'border-box',
-    scrollBehavior: 'smooth',
-    // border: '10px solid red',
-    style: { overflowX: 'auto', '::-webkit-scrollbar': { display: 'none' } },
-
-    content: {
-      padding: '- D2',
-      '@maxTabletS': { padding: '- C' },
-      '@maxMobileM': { padding: '- A' },
-      style: {
-        // animationName: slideHide,
-        animationDuration: '30s',
-        animationTimingFunction: 'linear',
-        animationIterationCount: 'infinite'
-      }
+    background: 'radial-gradient(rgba(0, 47, 57, .45), rgba(0, 47, 57, .8), rgba(0, 47, 57, .97), rgba(0, 47, 57, 1))',
+    '@maxTabletL': {
+      background: 'radial-gradient(rgba(0, 47, 57, .5), rgba(0, 47, 57, 1))'
     }
   },
 
-  navArrows: {
-    '@maxMobileL': { display: 'none' },
-    zIndex: '5',
-    alignSelf: 'center',
+  content: {
     childProps: {
-      border: 'none'
+      padding: 'F -',
+      image: {
+        backgroundSize: '100% 100%',
+        '@maxTabletL': { backgroundSize: 'cover'}
+      },
+      icon: { boxSize: ' B'}
     }
   }
 }
 
 export const tabs = {
-  extend: Flex,
+  extend: RoomTourTabs,
   props,
-  imageBackground: {},
-  content,
-  navArrows
+
+  title: { props: { text: 'tours' }},
+  content: {
+    childExtend: { p: null },
+    ...[
+      {
+        image: { props: { backgroundImage: 'url(' + TBILISI_JPG + ')' }},
+        icon: { props: { src: PIN_PNG }},
+        title: { props: { text: 'daily' }}
+      },
+      {
+        image: { props: { backgroundImage: 'url(' + STANDART_JPG + ')' }},
+        icon: { props:{ src: TREE_PNG }},
+        title: { props: { text: 'standart' }}
+      },
+      {
+        image: { props: { backgroundImage: 'url(' + CAUCASUS_JPG + ')' }},
+        icon: { props: { src: MOUNTAIN_PNG }},
+        title: { props: { text: 'caucasus' } }
+      },
+      {
+        image: { props: { backgroundImage: 'url(' + EXCLUSIVE_JPG + ')' }},
+        icon: { props: { src: DIAMOND_PNG }},
+        title: { props: { text: 'exclusive' }}
+      },
+      {
+        image: { props: { backgroundImage: 'url(' + WINE_JPG + ')' }},
+        icon: { props: { src: CUP_PNG }},
+        title: { props: { text: 'wine & gastronomy' }}
+      },
+      {
+        image: { props: { backgroundImage: 'url(' + ADVENTURE_JPG + ')' }},
+        icon: { props: { src: HIKING_PNG }},
+        title: { props: { text: 'adventure' }}
+      }
+    ]
+
+  }
+
 }

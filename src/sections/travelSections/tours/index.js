@@ -2,8 +2,6 @@
 
 import { Flex } from 'smbls'
 
-import { TravelSectionTitle, ScrollTitleBlack } from '../../../components'
-
 import { tabs } from './tabs'
 
 import ORNAMENT_JPG from '../../../assets/images/travel/ornament.png'
@@ -45,7 +43,5 @@ export const tours = {
   extend: Flex,
   props,
   attr: { id: 'tours' },
-  title: { extend: TravelSectionTitle, text: 'tours' },
-  tabs,
-  scroll: { extend: ScrollTitleBlack }
+  tabs
 }
