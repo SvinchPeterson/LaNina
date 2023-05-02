@@ -240,7 +240,7 @@ export const tourPopUp = {
             description: {
               class: {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
-                ? { display: 'none' }
+                ? { display: 'none !important' }
                 : { display: 'flex' }
               },
             },
@@ -249,7 +249,7 @@ export const tourPopUp = {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
                 ? {
                   '@media only screen and (min-width: 1181px)': {
-                    display: 'none'
+                    display: 'none !important'
                   }
                 }
                 : {
@@ -279,10 +279,6 @@ export const tourPopUp = {
                     opacity: '1',
                     transform: 'scale(1)',
                     transition: 'opacity .7s ease, transform .7s ease'
-                  },
-                  '@media only screen and (max-width: 1180px)': {
-
-
                   }
                 }
                 : {
@@ -290,9 +286,6 @@ export const tourPopUp = {
                     height: '0',
                     opacity: '0',
                     transform: 'scale(.98)'
-                  },
-                  '@media only screen and (max-width: 1180px)': {
-
                   }
                 }
               },
