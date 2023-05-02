@@ -69,8 +69,7 @@ export const navBar = {
           pointerEvents: 'none',
           transform: 'scale(1.55)',
           padding: `${25 / 40}em 0`,
-          letterSpacing: '0',
-          color: 'white'
+          letterSpacing: '0'
         }
         : { opacity: '.5' }
     },

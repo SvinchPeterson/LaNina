@@ -93,7 +93,7 @@ const props = {
         flex: '1',
         minHeight: '100%',
         flow: 'column',
-        style: { overflowY: 'auto' },
+        // style: { overflowY: 'auto' },
         childProps: {
           '@maxTabletO': {
             flow: 'column'
@@ -121,6 +121,7 @@ const props = {
               '@maxMaxO': { height: `${300 / 16}em` },
             }
           },
+
           article: {
             '@maxTabletO': { display: 'none' }
           }
@@ -215,7 +216,11 @@ export const PopUpRoomTour = {
             }
             : {
               display: 'none'
-            }
+            },
+          show2: (element, state) => state.activeScroll
+            ? { overflowY: 'auto' }
+            : { overflowY: 'hidden' }
+
         },
         childExtend: {
           extend: RoomTour

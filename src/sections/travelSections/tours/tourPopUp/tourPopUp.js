@@ -43,8 +43,8 @@ const props = {
         pointerEvents: 'none'
       },
       childProps: {
-        padding: 'D2 -',
-        gap: 'D1',
+        padding: 'D -',
+        gap: '0',
         '@maxTabletO': {
           padding: 'D - D2 -',
           gap: 'C',
@@ -96,6 +96,9 @@ const props = {
             }
           },
         },
+        childProps: {
+          padding: 'C -'
+        },
 
         ':not(:nth-child(1),:nth-child(2))': {
           justifyContent: 'center'
@@ -120,11 +123,6 @@ export const tourPopUp = {
     content: {
       extend: toursContainers,
       childExtend: {
-        // class: {
-        //   show: (element, state) => state.activeTour === parseInt(element.childExtend.key)
-        //   ? { }
-        //   : { }
-        // },
 
         childExtend: {
           header: {
@@ -151,7 +149,8 @@ export const tourPopUp = {
               on: {
                 click: (event, element, state) => {
                   state.update({
-                    activeTour: false
+                    activeTour: false,
+                    activeScroll: true
                   })
                 }
               },
@@ -181,7 +180,8 @@ export const tourPopUp = {
                   click: (event, element, state) => {
                     state.update({
                       activeTour: parseInt(element.parent.parent.parent.key),
-                      activePackage: true
+                      activePackage: true,
+                      activeScroll: false
                     })
                   }
                 }

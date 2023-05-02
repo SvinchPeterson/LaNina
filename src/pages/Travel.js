@@ -20,7 +20,8 @@ const state = {
   activePackage: false,
   activeTour: false,
 
-  activeGallery: 0
+  activeGallery: 0,
+  activeScroll: true
 }
 
 

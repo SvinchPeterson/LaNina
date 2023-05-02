@@ -1,5 +1,7 @@
 'use strict'
 
+import { Link } from 'smbls'
+
 import {
   galleryTbilisi, galleryAdventureTour, galleryBorjomi, galleryCapitalTour, galleryCaucasusMountainTour,
   galleryCaucasusTour, galleryCulturalTour, galleryExclusiveTour, galleryGori, galleryHistoricalTour,
@@ -22,6 +24,7 @@ export const toursContainers = {
     {
       ...[
         {
+          attr: { id: 'tbilisi' },
           header: {...[{ text: 'TBILISI CITY TOUR'}]},
 
           galleryContainer: {
@@ -40,12 +43,11 @@ export const toursContainers = {
             class: {
               show: (element, state) => state.activeTour === parseInt(element.parent.key)
               ? {
-                maxHeight: `${400 / 16}em`,
                 borderRadius: `${300 / 16}em 0 0 ${300 / 16}em `,
                 transform: 'scale(1.2) translateX(-50px)',
                 background: 'rgba(0, 47, 57, .85)',
                 boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
-                padding: '0'
+                maxHeight: `${450 / 16}em`
               }
               : {
                 transform: 'scale(1)',
@@ -53,12 +55,15 @@ export const toursContainers = {
             },
             close: {},
             description: { extend: $tbilisi },
-            moreButton: {},
+            moreButton: {
+              more: { props: {href: '#tbilisi'}}
+            },
             package: { extend: packageTbilisi }
           }
         },
 
         {
+          attr: { id: 'ananuri' },
           header: { ...[{ text: 'ANANURI . GUDAURI'}]},
 
           galleryContainer: {
@@ -75,12 +80,11 @@ export const toursContainers = {
             class: {
               show: (element, state) => state.activeTour === parseInt(element.parent.key)
               ? {
-                maxHeight: `${400 / 16}em`,
                 borderRadius: `0 ${300 / 16}em ${300 / 16}em 0`,
                 transform: 'scale(1.2) translateX(50px)',
                 background: 'rgba(0, 47, 57, .85)',
                 boxShadow:' rgba(0, 0, 0, 0.45) 30px 0px 20px -20px',
-                padding: '0'
+                maxHeight: `${450 / 16}em`
               }
               : {
                 transform: 'scale(1)',
@@ -88,12 +92,13 @@ export const toursContainers = {
             },
             close: {},
             description: { extend: $ananuri },
-            moreButton: {},
+            moreButton: { more: {props: {href: '#ananuri'}}},
             package: { extend: packageAnanuri }
           }
         },
 
         {
+          attr: { id: 'dashbashi' },
           header: { ...[{ text: 'DASHBASHI CANYON' }]},
 
           galleryContainer: {
@@ -110,12 +115,11 @@ export const toursContainers = {
             class: {
               show: (element, state) => state.activeTour === parseInt(element.parent.key)
               ? {
-                maxHeight: `${400 / 16}em`,
                 borderRadius: `${300 / 16}em 0 0 ${300 / 16}em`,
                 transform: 'scale(1.2) translateX(-50px)',
                 background: 'rgba(0, 47, 57, .85)',
                 boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
-                padding: '0'
+                maxHeight: `${450 / 16}em`
               }
               : {
                 transform: 'scale(1)',
@@ -123,12 +127,13 @@ export const toursContainers = {
             },
             close: {},
             description: { extend: $dashbashi },
-            moreButton: {},
+            moreButton: { more: {props: {href: '#dashbashi'}}},
             package: { extend: packageDashbashi }
           }
         },
 
         {
+          attr: { id: 'mtsketa'},
           header: {...[{ text: 'MTSKETA' }]},
           galleryContainer: {
             class: {
@@ -143,12 +148,11 @@ export const toursContainers = {
             class: {
               show: (element, state) => state.activeTour === parseInt(element.parent.key)
               ? {
-                maxHeight: `${400 / 16}em`,
                 borderRadius: `0 ${300 / 16}em ${300 / 16}em 0`,
                 transform: 'scale(1.2) translateX(50px)',
                 background: 'rgba(0, 47, 57, .85)',
                 boxShadow:' rgba(0, 0, 0, 0.45) 30px 0px 20px -20px',
-                padding: '0'
+                maxHeight: `${450 / 16}em`
               }
               : {
                 transform: 'scale(1)',
@@ -157,12 +161,13 @@ export const toursContainers = {
 
             close: {},
             description: { extend: $mtsketa },
-            moreButton: {},
+            moreButton: { more: { props: { href: '#mtsketa'}}},
             package: { extend: packageMtskheta }
           }
         },
 
         {
+          attr: { id: 'kakheti'},
           header: {...[{text: 'KAKHETI'}]},
           galleryContainer: {
             class: {
@@ -178,12 +183,11 @@ export const toursContainers = {
             class: {
               show: (element, state) => state.activeTour === parseInt(element.parent.key)
               ? {
-                maxHeight: `${400 / 16}em`,
                 borderRadius: `${300 / 16}em 0 0 ${300 / 16}em`,
                 transform: 'scale(1.2) translateX(-50px)',
                 background: 'rgba(0, 47, 57, .85)',
                 boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
-                padding: '0'
+                maxHeight: `${450 / 16}em`
               }
               : {
                 transform: 'scale(1)',
@@ -192,12 +196,13 @@ export const toursContainers = {
 
             close: {},
             description: { extend: $kakheti },
-            moreButton: {},
+            moreButton: { more: {props: {href: '#kakheti'}}},
             package: { extend: packageKakheti }
           }
         },
 
         {
+          attr: { id: 'kutaisi' },
           header: {...[{text: 'KUTAISI'}]},
           galleryContainer: {
             class: {
@@ -212,12 +217,11 @@ export const toursContainers = {
             class: {
               show: (element, state) => state.activeTour === parseInt(element.parent.key)
               ? {
-                maxHeight: `${400 / 16}em`,
                 borderRadius: `0 ${400 / 16}em ${400 / 16}em 0`,
                 transform: 'scale(1.2) translateX(50px)',
                 background: 'rgba(0, 47, 57, .85)',
                 boxShadow:' rgba(0, 0, 0, 0.45) 30px 0px 20px -20px',
-                padding: '0'
+                maxHeight: `${450 / 16}em`
               }
               : {
                 transform: 'scale(1)',
@@ -226,12 +230,13 @@ export const toursContainers = {
 
             close: {},
             description: { extend: $kutaisi },
-            moreButton: {},
+            moreButton: { more: { props: {href: '#kutaisi'}}},
             package: { extend: packageKutaisi }
           }
         },
 
         {
+          attr: { id: 'gori'},
           header: {...[{text: 'GORI CITY'}]},
           galleryContainer: {
             class: {
@@ -246,12 +251,11 @@ export const toursContainers = {
             class: {
               show: (element, state) => state.activeTour === parseInt(element.parent.key)
               ? {
-                maxHeight: `${400 / 16}em`,
                 borderRadius: `${300 / 16}em 0 0 ${300 / 16}em`,
                 transform: 'scale(1.2) translateX(-50px)',
                 background: 'rgba(0, 47, 57, .85)',
                 boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
-                padding: '0'
+                maxHeight: `${450 / 16}em`
               }
               : {
                 transform: 'scale(1)',
@@ -260,12 +264,13 @@ export const toursContainers = {
 
             close: {},
             description: { extend: $gori },
-            moreButton: {},
+            moreButton: { more: {props: {href: '#gori'}}},
             package: { extend: packageGori}
           }
         },
 
         {
+          attr: { id: 'borjomi'},
           header: {...[{ text: 'BORJOMI' }]},
           galleryContainer: {
             class: {
@@ -280,12 +285,11 @@ export const toursContainers = {
             class: {
               show: (element, state) => state.activeTour === parseInt(element.parent.key)
               ? {
-                maxHeight: `${400 / 16}em`,
                 borderRadius: `0 ${300 / 16}em ${300 / 16}em 0`,
                 transform: 'scale(1.2) translateX(50px)',
                 background: 'rgba(0, 47, 57, .85)',
                 boxShadow:' rgba(0, 0, 0, 0.45) 30px 0px 20px -20px',
-                padding: '0'
+                maxHeight: `${450 / 16}em`
               }
               : {
                 transform: 'scale(1)',
@@ -294,12 +298,13 @@ export const toursContainers = {
 
             close: {},
             description: { extend: $borjomi },
-            moreButton: {},
+            moreButton: { more: {props: {href: '#borjomi'}}},
             package: { extend: packageBorjomi }
           }
         },
 
         {
+          attr: { id: 'rabati' },
           header: {...[{ text: 'RABATI CASTLE' }]},
           galleryContainer: {
             class: {
@@ -314,12 +319,11 @@ export const toursContainers = {
             class: {
               show: (element, state) => state.activeTour === parseInt(element.parent.key)
               ? {
-                maxHeight: `${400 / 16}em`,
                 borderRadius: `${300 / 16}em 0 0 ${300 / 16}em`,
                 transform: 'scale(1.2) translateX(-50px)',
                 background: 'rgba(0, 47, 57, .85)',
                 boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
-                padding: '0'
+                maxHeight: `${450 / 16}em`
               }
               : {
                 transform: 'scale(1)',
@@ -328,7 +332,7 @@ export const toursContainers = {
 
             close: {},
             description: { extend: $rabat },
-            moreButton: {},
+            moreButton: { more: { props: {href: '#rabati'}}},
             package: { extend: packageRabati }
           }
         }
@@ -338,71 +342,172 @@ export const toursContainers = {
     {
       ...[
         {
+          attr: { id: 'capital'},
           header: {...[{ text: 'CAPITAL TOUR' }]},
           galleryContainer: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {transform: 'scale(.9) translateX(-30px)' }
+              : { transform: 'scale(1)'}
+            },
             title: { text: 'CAPITAL TOUR' },
             gallery: { extend: galleryCapitalTour }
           },
           article: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `${350 / 16}em 0 0 ${350 / 16}em `,
+                transform: 'scale(1.2) translateX(-50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
+                padding: '0',
+                overflow: 'hidden',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
             close: {},
             description: { extend: $capital },
-            moreButton: {},
+            moreButton: { more: { props: { href: '#capital'}}},
             package: { extend: packageCapital }
           }
         },
 
         {
+          attr: { id: 'cultural'},
           header: {...[{ text: 'CULTURAL TOUR' }]},
           galleryContainer: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {transform: 'scale(.9) translateX(-30px)' }
+              : { transform: 'scale(1)'}
+            },
             title: { text: 'CULTURAL TOUR' },
             gallery: { extend: galleryCulturalTour }
           },
           article: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `0 ${300 / 16}em ${300 / 16}em 0`,
+                transform: 'scale(1.2) translateX(50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) 30px 0px 20px -20px',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
             close: {},
             description: { extend: $cultural },
-            moreButton: {},
+            moreButton: { more: {props: {href: '#cultural'}}},
             package: { extend: packageCultural }
           }
         },
 
         {
+          attr: { id: 'historical' },
           header: {...[{ text: 'HISTORICAL TOUR' }]},
           galleryContainer: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {transform: 'scale(.9) translateX(-30px)' }
+              : { transform: 'scale(1)'}
+            },
             title: { text: 'HISTORICAL TOUR' },
             gallery: { extend: galleryHistoricalTour }
           },
           article: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `${350 / 16}em 0 0 ${350 / 16}em `,
+                transform: 'scale(1.2) translateX(-50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
+                padding: '0',
+                overflow: 'hidden',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
             close: {},
             description: { extend: $historical },
-            moreButton: {},
+            moreButton: { more: { props: {href: '#historical'}}},
             package: { extend: packageHistorical }
           }
         },
 
         {
+          attr: { id: 'royal'},
           header: {...[{ text: 'ROYAL TOUR' }]},
           galleryContainer: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {transform: 'scale(.9) translateX(-30px)' }
+              : { transform: 'scale(1)'}
+            },
             title: { text: 'ROYAL TOUR' },
             gallery: { extend: galleryRoyalTour }
           },
           article: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `0 ${300 / 16}em ${300 / 16}em 0`,
+                transform: 'scale(1.2) translateX(50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) 30px 0px 20px -20px',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
             close: {},
             description: { extend: $royal },
-            moreButton: {},
+            moreButton: { more: { props: {href: '#royal'}}},
             package: { extend: packageRoyal }
           }
         },
 
         {
+          attr: { id: 'mountain' },
           header: {...[{ text: 'CAUCASUS MOUNTAIN TOUR' }]},
           galleryContainer: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {transform: 'scale(.9) translateX(-30px)' }
+              : { transform: 'scale(1)'}
+            },
             title: { text: 'CAUCASUS MOUNTAIN TOUR' },
             gallery: { extend: galleryCaucasusMountainTour }
           },
           article: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `${350 / 16}em 0 0 ${350 / 16}em `,
+                transform: 'scale(1.2) translateX(-50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
+                padding: '0',
+                overflow: 'hidden',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
             close: {},
             description: { extend: $caucasusMountain },
-            moreButton: {},
+            moreButton: { more: {props: { href: '#mountain'}}},
             package: { extend: packageCaucasusMountain }
           }
         }
@@ -412,15 +517,35 @@ export const toursContainers = {
     {
       ...[
         {
+          attr: { id: 'caucasus'},
           header: {},
           galleryContainer: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {transform: 'scale(.9) translateX(-30px)' }
+              : { transform: 'scale(1)'}
+            },
             title: null,
             gallery: { extend: galleryCaucasusTour }
           },
           article: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `${300 / 16}em 0 0 ${300 / 16}em `,
+                transform: 'scale(1.2) translateX(-50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
+
             close: {},
             description: { extend: $caucasus },
-            moreButton: {},
+            moreButton: { more: { props: { href: '#caucasus'}}},
             package: { extend: packageCaucasus }
           }
         }
@@ -430,15 +555,49 @@ export const toursContainers = {
     {
       ...[
         {
+          attr: { id: 'exclusive'},
           header: {},
           galleryContainer: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {transform: 'scale(.9) translateX(-30px)' }
+              : { transform: 'scale(1)'}
+            },
             title: null,
             gallery: { extend: galleryExclusiveTour }
           },
           article: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `${300 / 16}em 0 0 ${300 / 16}em `,
+                transform: 'scale(1.2) translateX(-50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `${350 / 16}em 0 0 ${350 / 16}em `,
+                transform: 'scale(1.2) translateX(-50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
+                padding: '0',
+                overflow: 'hidden',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
             close: {},
             description: { extend: $exclusive },
-            moreButton: {},
+            moreButton: { more: {props: {href: '#exclusive'}}},
             package: { extend: packageExclusive }
           }
         }
@@ -448,15 +607,34 @@ export const toursContainers = {
     {
       ...[
         {
+          attr: { id: 'wine'},
           header: {},
           galleryContainer: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {transform: 'scale(.9) translateX(-30px)' }
+              : { transform: 'scale(1)'}
+            },
             title: null,
             gallery: { extend: galleryWineGastronomyTour }
           },
           article: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `${300 / 16}em 0 0 ${300 / 16}em `,
+                transform: 'scale(1.2) translateX(-50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
             close: {},
             description: { extend: $wineGastronomy },
-            moreButton: {},
+            moreButton: { more: { props: {href: '#wine'}}},
             package: { extend: packageWineGastronomy }
           }
         }
@@ -466,15 +644,34 @@ export const toursContainers = {
     {
       ...[
         {
+          attr: { id: 'adventure' },
           header: {},
           galleryContainer: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {transform: 'scale(.9) translateX(-30px)' }
+              : { transform: 'scale(1)'}
+            },
             title: null,
             gallery: { extend: galleryAdventureTour }
           },
           article: {
+            class: {
+              show: (element, state) => state.activeTour === parseInt(element.parent.key)
+              ? {
+                borderRadius: `${300 / 16}em 0 0 ${300 / 16}em `,
+                transform: 'scale(1.2) translateX(-50px)',
+                background: 'rgba(0, 47, 57, .85)',
+                boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px',
+                maxHeight: `${450 / 16}em`
+              }
+              : {
+                transform: 'scale(1)',
+              }
+            },
             close: {},
             description: { extend: $adventure },
-            moreButton: {},
+            moreButton: { more: { props: { href: '#adventure'}}},
             package: { extend: packageAdventure }
           }
         }

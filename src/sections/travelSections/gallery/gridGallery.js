@@ -1,6 +1,6 @@
 'use strict'
 
-import { Grid } from 'smbls'
+import { Grid, Flex } from 'smbls'
 
 import { ScrollTitle } from '../../../components'
 
@@ -50,19 +50,21 @@ const props = {
       textOrientation: 'mixed'
     },
     '@maxTabletS': {
+      fontSize: 'E',
       color: 'cream .75',
       height: '100%',
-      top: '50%',
       left: 'initial',
-      right: '-C2',
-      padding: 'B2 -',
-      transform: 'rotate(0) translate(-50%, -50%)',
+      top: '0',
+      right: '0',
+      padding: 'Z -',
+      transform: 'rotate(0)',
       background: 'naviBlue',
+      align: 'center center',
       style: {
-        boxShadow: '0 0 20px 0 rgba(0, 0, 0, .5)'
+        boxShadow: 'rgba(0, 0, 0, 0.45) -20px 0px 30px 5px'
       }
     },
-    '@maxMobileM': { padding: 'B1 -' },
+    // '@maxMobileM': { padding: 'B1 -' },
     ':before': { boxSize: 'C V' },
     ':after': { boxSize: 'C V' }
   },
@@ -76,7 +78,7 @@ const props = {
     '@maxTabletS': {
       display: 'flex',
       maxWidth: '100%',
-      padding: 'D1 E D1 C',
+      padding: 'D1 E2 D1 C',
       minHeight: 'E2',
       gap: 'A',
       boxSizing: 'content-box',
@@ -138,9 +140,10 @@ const props = {
   },
 
   scroll: {
+    border: '3px solid red',
     '@minTabletS': { display: 'none' },
     position: 'absolute',
-    bottom: 'Z',
+    bottom: '0',
     left: 'C',
     zIndex: '10',
     color: 'cream',
@@ -154,7 +157,11 @@ const props = {
 export const gridGalleries = {
   props,
 
-  title: { tag: 'h3', text: 'gallery' },
+  title: {
+    tag: 'h3',
+    extend: Flex,
+    text: 'gallery'
+  },
 
   content: {
     extend: Grid,
@@ -246,7 +253,7 @@ export const gridGalleries = {
     }
   ]
   },
-  scroll: {
-    extend: ScrollTitle
-  }
+  // scroll: {
+  //   extend: ScrollTitle
+  // }
 }

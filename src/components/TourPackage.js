@@ -20,7 +20,7 @@ const props = {
   flow: 'column',
   maxHeight: `I`,
   overflow: 'hidden',
-  transform: 'scale(.95)',
+  transform: 'scale(.8)',
   position: 'relative',
 
   ':before': {

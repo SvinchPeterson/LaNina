@@ -6,11 +6,11 @@ const props = {
   titles: {
     childProps: {
       fontSize: `${32 / 16}em`,
-      fontWeight: '100',
+      fontWeight: '700',
       textTransform: 'capitalize',
       padding: '- - - X1',
       '@maxMobileL': {
-        letterSpacing: '2px'
+        letterSpacing: '-2px'
       }
     }
   },
