@@ -15,7 +15,15 @@ const state = {
   activeHeader: false,
   activePopUp: false,
   activePopUpContent: 0,
-  activeRoomTour: 0
+  activeRoomTour: 0,
+
+  activeBallerinaImage: 0,
+  activeRedBrickImage: 0,
+  activeYellowCouchImage: 0,
+  activeGreenForestImage: 0,
+  activeRetroImage: 0,
+  activeBlueLagoonImage: 0,
+  activeQvevriImage: 0
 }
 
 const menu = {

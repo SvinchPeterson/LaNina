@@ -23,9 +23,24 @@ const state = {
   activeGallery: 0,
   activeScroll: true,
 
-  activeImage: 0,
   activeTbilisiImage: 0,
-  activeAnanuriImage: 0
+  activeAnanuriImage: 0,
+  activeDashbashiImage: 0,
+  activeMtsketaImage: 0,
+  activeKakhetiImage: 0,
+  activeQutaisiImage: 0,
+  activeGoriImage: 0,
+  activeBorjobiImage: 0,
+  activeRabatiImage: 0,
+  activeCapitalImage: 0,
+  activeCulturalImage: 0,
+  activeHistoricalImage: 0,
+  activeRoyalImage: 0,
+  activeMountainImage: 0,
+  activeCaucasusImage: 0,
+  activeExclusiveImage: 0,
+  activeWineImage: 0,
+  activeAdventureImage: 0
 }
 
 
