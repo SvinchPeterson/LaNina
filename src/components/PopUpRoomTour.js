@@ -214,9 +214,7 @@ export const PopUpRoomTour = {
         class: {
           show: (element, state) => state.activePopUpContent === parseInt(element.key)
             ? {
-              display: 'flex',
-              // border: '2px solid red',
-              // minHeight: '100%'
+              display: 'flex'
             }
             : {
               display: 'none'

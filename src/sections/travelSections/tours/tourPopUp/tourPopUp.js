@@ -107,8 +107,7 @@ const props = {
               transition: 'transform 1s ease'
             },
             description: {
-              display: 'none',
-              '@minTabletO': { display: 'flex'}
+              '@maxTabletO': { display: 'none'}
             },
             moreButton: {
               '@maxTabletO': { display: 'none' }
@@ -213,8 +212,7 @@ export const tourPopUp = {
             ]
           },
 
-          galleryContainer: {
-          },
+          galleryContainer: {},
           article: {
             close: {
               on: {
@@ -240,7 +238,7 @@ export const tourPopUp = {
             description: {
               class: {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
-                ? { display: 'none !important' }
+                ? { display: 'none' }
                 : { display: 'flex' }
               },
             },
