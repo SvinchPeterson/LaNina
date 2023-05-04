@@ -32,7 +32,7 @@ const props = {
     padding: '0',
     top: '0',
     right: '0',
-    zIndex: '10',
+    zIndex: '15',
     transition: 'opacity .5s ease-in-out, transform .5s ease-in-out',
     padding: 'A1',
     icon: { boxSize: 'Z2 ' }
