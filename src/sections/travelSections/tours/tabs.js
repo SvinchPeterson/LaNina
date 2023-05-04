@@ -96,7 +96,7 @@ export const tabs = {
       {
         image: { props: { backgroundImage: 'url(' + STANDART_JPG + ')' }},
         icon: { props:{ src: TREE_PNG }},
-        title: { props: { text: 'standart' }}
+        title: { props: { text: 'standard' }}
       },
       {
         image: { props: { backgroundImage: 'url(' + CAUCASUS_JPG + ')' }},
