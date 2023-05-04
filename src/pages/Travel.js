@@ -15,7 +15,8 @@ const state = {
   activeImage: 0,
   activeTourPopUp: true,
 
-  activePopUp: false,
+  activePopUp: true,
+  // activePopUp: false,
   activePopUpContent: 0,
   activePackage: false,
   activeTour: false,

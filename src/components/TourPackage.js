@@ -23,6 +23,12 @@ const props = {
   // transform: 'scale(.9)',
   position: 'relative',
   boxSizing: 'border-box',
+  '@maxTabletO': {
+    // boxSizing: 'content-box',
+    maxWidth: 'H',
+    // padding: 'D - - -',
+    maxHeight: '100%'
+  },
   ':before': {
     content: '""',
     boxSize: 'D2 100%',
@@ -31,7 +37,12 @@ const props = {
     left: '0',
     background: 'linear-gradient(to bottom, rgba(0, 47, 57, 1) 0%,rgba(0, 47, 57, 0) 100%)',
     zIndex: '20',
-    pointerEvents: 'none'
+    pointerEvents: 'none',
+    '@maxTabletO': {
+      // background: 'linear-gradient(to bottom, rgba(0, 47, 57, .3) 0%,rgba(0, 47, 57, 0) 100%)',
+      // background: 'linear-gradient(to bottom, rgba(0, 0, 0, .6) 0%,rgba(0, 0, 0, 0) 100%)',
+      background: 'transparent'
+    }
   },
   ':after': {
     content: '""',
@@ -41,12 +52,20 @@ const props = {
     left: '0',
     background: 'linear-gradient(to top, rgba(0, 47, 57, 1) 0%, rgba(0, 47, 57, 0) 100%)',
     zIndex: '20',
-    pointerEvents: 'none'
+    pointerEvents: 'none',
+    '@maxTabletO': {
+      // background: 'linear-gradient(to top, rgba(0, 47, 57, .3) 0%,rgba(0, 47, 57, 0) 100%)',
+      // background: 'linear-gradient(to top, rgba(0, 0, 0, .6) 0%,rgba(0, 0, 0, 0) 100%)',
+      background: 'transparent'
+    }
   },
 
   content: {
     padding: 'C1 - E1 -',
     style: { overflowY: 'auto'},
+    '@maxTabletO': {
+      padding: 'D1 - - -'
+    },
     title: {
       fontSize: 'Z',
       textTransform: 'capitalize',

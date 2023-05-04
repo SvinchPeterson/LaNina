@@ -19,7 +19,7 @@ const props = {
   list: {
     align: 'flex-start flex-start',
     padding: 'Z 0 0 -',
-    gap: 'Z2',
+    gap: 'C',
     childProps: {
       fontSize: `${13 / 16}em`,
       lineHeight: `${25 / 13}em`,

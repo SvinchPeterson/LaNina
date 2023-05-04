@@ -23,7 +23,9 @@ const state = {
   activeGreenForestImage: 0,
   activeRetroImage: 0,
   activeBlueLagoonImage: 0,
-  activeQvevriImage: 0
+  activeQvevriImage: 0,
+  activeRoomDescription: false,
+  activeRoomAmenities: false
 }
 
 const menu = {

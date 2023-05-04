@@ -25,7 +25,6 @@ const props = {
 
     content: {
       position: 'relative',
-      // flow: 'column',
       ':after': {
         content: '""',
         position: 'absolute',
@@ -54,9 +53,11 @@ const props = {
         },
         style: {
           '> div:nth-child(odd)': {
-            '> article > button': {
-              top: `0`,
-              right: `0`
+            '@media only screen and (min-width: 1181px)': {
+              '> article > button': {
+                top: `0`,
+                right: `0`
+              }
             },
 
             '> div > h5': {
@@ -75,11 +76,13 @@ const props = {
 
           '> div:nth-child(even)': {
             flexFlow: 'row-reverse',
-            '> article > button': {
-              top: `0`,
-              left: `0`
-            },
             '@media only screen and (max-width: 1180px)': { flexFlow: 'column'},
+            '@media only screen and (min-width: 1181px)': {
+              '> article > button': {
+                top: `0`,
+                left: `0`
+              }
+            },
             '> div > h5': {
               alignSelf: 'flex-end',
               padding: `0 ${20 / 12}em ${10 / 12 }em 0`
@@ -103,15 +106,9 @@ const props = {
             '@minTabletO': { transition: 'transform 1s ease' }
           },
           article: {
-            '@minTabletO': {
-              transition: 'transform 1s ease'
-            },
-            description: {
-              '@maxTabletO': { display: 'none'}
-            },
-            moreButton: {
-              '@maxTabletO': { display: 'none' }
-            }
+            '@minTabletO': { transition: 'transform 1s ease' },
+            description: { '@maxTabletO': { display: 'none'} },
+            moreButton: { '@maxTabletO': { display: 'none' } }
           }
         },
 
@@ -149,6 +146,16 @@ export const tourPopUp = {
                   boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px'
                 },
               },
+              ':nth-child(odd) > div': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'scale(.75) translateX(-30px)'
+                }
+              },
+              ':nth-child(even) > div': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'scale(.75) translateX(30px)'
+                }
+              },
               ':nth-child(even) > article': {
                 '@media only screen and (min-width: 1181px)': {
                   transform: 'translateX(50px)',
@@ -157,19 +164,13 @@ export const tourPopUp = {
                 }
               },
 
-              ':nth-child(odd) > div': {
-                '@media only screen and (min-width: 1181px)': {
-                  transform: 'scale(.75) translateX(-30px)'
+              '@media only screen and (max-width: 1180px)': {
+                '> article': {
+                  display: 'flex'
                 }
-
-              },
-              ':nth-child(even) > div': {
-                '@media only screen and (min-width: 1181px)': {
-                  transform: 'scale(.75) translateX(30px)'
-                }
-
               }
             }
+
             : {
               ':nth-child(odd) > article': {
                 '@media only screen and (min-width: 1181px)': {
@@ -190,6 +191,12 @@ export const tourPopUp = {
               ':nth-child(even) > div': {
                 '@media only screen and (min-width: 1181px)': {
                   transform: 'scale(1)'
+                }
+              },
+
+              '@media only screen and (max-width: 1180px)': {
+                '> article': {
+                  display: 'none'
                 }
               }
             }
@@ -277,7 +284,7 @@ export const tourPopUp = {
                     opacity: '1',
                     transform: 'scale(1)',
                     transition: 'opacity .7s ease, transform .7s ease'
-                  }
+                  },
                 }
                 : {
                   '@media only screen and (min-width: 1181px)': {

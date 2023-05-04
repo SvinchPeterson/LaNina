@@ -32,7 +32,7 @@ const props = {
     padding: '0',
     top: '0',
     right: '0',
-    zIndex: '20',
+    zIndex: '10',
     transition: 'opacity .5s ease-in-out, transform .5s ease-in-out',
     padding: 'A1',
     icon: { boxSize: 'Z2 ' }
@@ -44,7 +44,7 @@ const props = {
     // style: {
     // //  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'
     // }
-    },
+  },
 
   logo: {
     boxSize: 'B2 ',

@@ -26,10 +26,14 @@ const props = {
     close: {
       position: 'absolute',
       background: 'transparent',
-      boxSize: 'B2 B2',
+      padding: 'A1',
       align: 'center center',
       cursor: 'pointer',
-      icon: { boxSize: 'Y2 Y2'}
+      '@maxTabletO': { top: '0', right: '0'},
+      icon: {
+        boxSize: 'Z ',
+        '@maxTabletO': { boxSize: 'Z2 '}
+      }
     },
 
     description: {},

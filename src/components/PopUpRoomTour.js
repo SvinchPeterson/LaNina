@@ -123,7 +123,16 @@ const props = {
           },
 
           article: {
-            // '@maxTabletO': { display: 'none' }
+            '@maxTabletO': {
+              position: 'fixed',
+              zIndex: '200',
+              width: '100%',
+              height: '100%',
+              top: '0',
+              background: 'black .7',
+              zIndex: '50',
+              style: { backdropFilter: 'blur(2.5px)' }
+            }
           }
         }
       }

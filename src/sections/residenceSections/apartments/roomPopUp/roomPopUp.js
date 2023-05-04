@@ -58,7 +58,33 @@ const props = {
       childProps: {
         justifyContent: 'center',
         childProps: {
-          '@maxMaxO': { margin: '-C - - -'}
+          '@maxMaxO': { margin: '-C - - -'},
+          article: {
+            close: {'@minTabletO': { display: 'none'} },
+            description: {
+              '@maxTabletO': {
+                maxWidth: 'H',
+                textAlign: 'center'
+              }
+            },
+            amenities: {
+              '@maxTabletO': {
+                width: 'fit-content',
+                border: 'none',
+                style: { overflowY: 'auto' }
+                // border: 'solid, orange3 .5',
+                // borderWidth: '.5px',
+                // round: 'B'
+              },
+              list: {
+                '@maxTabletO': {
+                  flow: 'column',
+                  align: 'flex-start flex-start',
+                  gap: '0'
+                },
+              }
+            }
+          }
         }
       }
     }
@@ -89,10 +115,89 @@ export const roomPopUp = {
       childExtend: {
         childExtend: {
           header: {
-            ...[ { text: 'description' }, { text: 'amenities' } ]
+            ...[
+              {
+                text: 'description',
+                on: {
+                  click: (event, element, state) => {
+                    state.update({
+                      activeRoomAmenities: true
+                    })
+                  }
+                },
+              },
+              {
+                text: 'amenities',
+                on: {
+                  click: (event, element, state) => {
+                    state.update({
+                      activeRoomDescription: true
+                    })
+                  }
+                },
+              }
+            ]
           },
           galleryContainer: { title: null },
-          article: { package: null, moreButton: null, close: null }
+          article: {
+            package: null,
+            moreButton: null,
+            class: {
+              show: (element, state) => state.activePopUpContent === parseInt(element.parent.parent.key)
+              && state.activeRoomDescription || state.activeRoomAmenities
+              ? {
+                '@media only screen and (max-width: 1180px)': {
+                  display: 'flex'
+                }
+              }
+              : {
+                '@media only screen and (max-width: 1180px)': {
+                  display: 'none'
+                }
+              }
+            },
+            close: {
+              on: {
+                click: (event, element, state) => {
+                  state.update({
+                    activeRoomDescription: false,
+                    activeRoomAmenities: false
+                  })
+                }
+              },
+            },
+
+            description: {
+              class: {
+                show: (element, state) => state.activeRoomDescription
+                ? {
+                  '@media only screen and (max-width: 1180px)': {
+                    display: 'flex'
+                  }
+                }
+                : {
+                  '@media only screen and (max-width: 1180px)': {
+                    display: 'none'
+                  }
+                }
+              },
+            },
+            amenities: {
+              class: {
+                show: (element, state) => state.activeRoomAmenities
+                ? {
+                  '@media only screen and (max-width: 1180px)': {
+                    display: 'flex'
+                  }
+                }
+                : {
+                  '@media only screen and (max-width: 1180px)': {
+                    display: 'none'
+                  }
+                }
+              },
+            }
+          }
         }
       }
     }
