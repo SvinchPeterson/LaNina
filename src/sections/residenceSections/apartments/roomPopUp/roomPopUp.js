@@ -114,7 +114,7 @@ export const roomPopUp = {
           header: {
             ...[
               {
-                text: 'description',
+                text: 'amenities',
                 on: {
                   click: (event, element, state) => {
                     state.update({
@@ -125,7 +125,7 @@ export const roomPopUp = {
                 },
               },
               {
-                text: 'amenities',
+                text: 'description',
                 on: {
                   click: (event, element, state) => {
                     state.update({

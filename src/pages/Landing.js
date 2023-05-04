@@ -46,8 +46,13 @@ const props = {
   animatonTimingFunction: 'linear',
   style: { animationName: backgroundPosition },
   '@maxTabletM': { animationDuration: '40s' },
-  ':before': {
+  ':after': {
     content: '""',
+    position: 'absolute',
+    boxSize: '100% 100%',
+    background:`radial-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .6), rgba(0, 0, 0, .65), rgba(0, 0, 0, .7),rgba(0, 0, 0, .75), rgba(0, 0, 0, .8), rgba(0, 0, 0, .85), rgba(0, 0, 0, .9), rgba(0, 0, 0, .95), rgba(0, 0, 0, 1))`
+  },
+  deopacity: {
     position: 'absolute',
     boxSize: '100% 100%',
     background: 'black',
@@ -59,13 +64,6 @@ const props = {
       zIndex: '4',
       pointerEvents: 'none'
     }
-  },
-  ':after': {
-    content: '""',
-    position: 'absolute',
-    boxSize: '100% 100%',
-    background: 'radial-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .85), rgba(0, 0, 0, 1))',
-    style: { pointerEvents: 'none' }
   },
 
   shadow: {
@@ -82,6 +80,7 @@ const props = {
       pointerEvents: 'none'
     }
   },
+
   content: {
     zIndex: '6',
     gap: 'Y',
@@ -170,6 +169,7 @@ export const Landing = {
   extend: Flex,
   props,
   attr: { id: 'landing' },
+  deopacity: {},
   shadow: {},
 
   content: {
