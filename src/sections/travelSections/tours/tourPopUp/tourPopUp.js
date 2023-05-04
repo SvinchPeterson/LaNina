@@ -106,6 +106,7 @@ const props = {
             '@minTabletO': { transition: 'transform 1s ease' }
           },
           article: {
+            zIndex: '700',
             '@minTabletO': { transition: 'transform 1s ease' },
             description: { '@maxTabletO': { display: 'none'} },
             moreButton: { '@maxTabletO': { display: 'none' } }
@@ -211,7 +212,8 @@ export const tourPopUp = {
                   click: (event, element, state) => {
                     state.update({
                       activeTour: parseInt(element.parent.parent.key),
-                      activeScroll: false
+                      activeScroll: false,
+                      activeButton: true
                     })
                   }
                 },
@@ -226,7 +228,8 @@ export const tourPopUp = {
                 click: (event, element, state) => {
                   state.update({
                     activeTour: false,
-                    activeScroll: true
+                    activeScroll: true,
+                    activeButton: false
                   })
                 }
               },

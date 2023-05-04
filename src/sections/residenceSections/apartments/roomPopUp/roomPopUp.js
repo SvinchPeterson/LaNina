@@ -72,9 +72,6 @@ const props = {
                 width: 'fit-content',
                 border: 'none',
                 style: { overflowY: 'auto' }
-                // border: 'solid, orange3 .5',
-                // borderWidth: '.5px',
-                // round: 'B'
               },
               list: {
                 '@maxTabletO': {
@@ -121,7 +118,8 @@ export const roomPopUp = {
                 on: {
                   click: (event, element, state) => {
                     state.update({
-                      activeRoomAmenities: true
+                      activeRoomAmenities: true,
+                      activeButton: true
                     })
                   }
                 },
@@ -131,7 +129,8 @@ export const roomPopUp = {
                 on: {
                   click: (event, element, state) => {
                     state.update({
-                      activeRoomDescription: true
+                      activeRoomDescription: true,
+                      activeButton: true
                     })
                   }
                 },
@@ -161,7 +160,8 @@ export const roomPopUp = {
                 click: (event, element, state) => {
                   state.update({
                     activeRoomDescription: false,
-                    activeRoomAmenities: false
+                    activeRoomAmenities: false,
+                    activeButton: false
                   })
                 }
               },

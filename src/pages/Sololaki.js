@@ -25,7 +25,8 @@ const state = {
   activeBlueLagoonImage: 0,
   activeQvevriImage: 0,
   activeRoomDescription: false,
-  activeRoomAmenities: false
+  activeRoomAmenities: false,
+  activeButton: false
 }
 
 const menu = {

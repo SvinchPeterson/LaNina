@@ -41,7 +41,9 @@ const state = {
   activeCaucasusImage: 0,
   activeExclusiveImage: 0,
   activeWineImage: 0,
-  activeAdventureImage: 0
+  activeAdventureImage: 0,
+
+  activeButton: false
 }
 
 

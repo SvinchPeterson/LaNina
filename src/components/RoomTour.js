@@ -29,6 +29,7 @@ const props = {
       padding: 'A1',
       align: 'center center',
       cursor: 'pointer',
+      zIndex: '40',
       '@maxTabletO': { top: '0', right: '0'},
       icon: {
         boxSize: 'Z ',

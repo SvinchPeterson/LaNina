@@ -159,6 +159,19 @@ export const PopUpRoomTour = {
         })
       }
     },
+    class: {
+      show: (element, state) => state.activeButton
+      ? {
+        '@media only screen and (max-width: 1180px)': {
+          display: 'none'
+        }
+      }
+      : {
+        '@media only screen and (max-width: 1180px)': {
+          display: 'block'
+        }
+      }
+    }
   },
 
   contentContainer: {
