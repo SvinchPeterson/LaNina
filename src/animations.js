@@ -2,6 +2,11 @@
 
 import { keyframes } from '@emotion/css'
 
+export const opacityWidth = keyframes`
+  from { width: 0; opacity: 0; }
+  to { width: 100%; opacity: 1; }
+`
+
 // common animations
 export const opacity = keyframes`
   from { opacity: 0; }

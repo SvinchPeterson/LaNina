@@ -5,7 +5,12 @@ import { Flex } from 'smbls'
 import { tabs } from './tabs'
 
 const props = {
-  width: '100%'
+  width: '100%',
+  padding: 'F - - -',
+  '@maxTabletL': {
+    padding: '0',
+    margin: 'F - - -'
+  }
 }
 
 export const apartments = {

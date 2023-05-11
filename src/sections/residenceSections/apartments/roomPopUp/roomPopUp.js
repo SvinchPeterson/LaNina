@@ -59,6 +59,9 @@ const props = {
         justifyContent: 'center',
         childProps: {
           '@maxMaxO': { margin: '-C - - -'},
+          galleryContainer: {
+            gallery: {}
+          },
           article: {
             close: {'@minTabletO': { display: 'none'} },
             description: {
@@ -137,7 +140,21 @@ export const roomPopUp = {
               }
             ]
           },
-          galleryContainer: { title: null },
+          galleryContainer: {
+            title: null,
+            gallery: {
+              class: {
+                show: (element, state) => state.activePopUpContent === parseInt(element.parent.parent.parent.key)
+                ? {
+                  width: '100%'
+                }
+                : {
+                  width: '0'
+                }
+              },
+
+            }
+          },
           article: {
             package: null,
             moreButton: null,

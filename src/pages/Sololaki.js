@@ -26,7 +26,9 @@ const state = {
   activeQvevriImage: 0,
   activeRoomDescription: false,
   activeRoomAmenities: false,
-  activeButton: false
+  activeButton: false,
+
+  activeGallery: false
 }
 
 const menu = {

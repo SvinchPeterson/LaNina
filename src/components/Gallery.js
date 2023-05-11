@@ -1,7 +1,7 @@
 'use strict'
 
 const props = {
-  width: 'H1',
+  // width: 'H1',
   height: 'G2',
   position: 'relative',
   overflow: 'hidden',

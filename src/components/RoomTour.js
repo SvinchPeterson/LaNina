@@ -13,6 +13,13 @@ const props = {
   alignItems: 'center',
   gap: '',
   header: { '@minTabletO': { display: 'none' } },
+  galleryContainer: {
+    gallery: {
+      transition: 'width 3s ease-in-out'
+    }
+    // transition: 'all 1s ease-in-out !important'
+    // width: 'H1'
+  },
   article: {
     position: 'relative',
     flex: '1',
@@ -67,7 +74,9 @@ export const RoomTour = {
     childExtend: Button,
     ...[{}, {}]
   },
-  galleryContainer: { extend: GalleryContainer },
+  galleryContainer: {
+    extend: GalleryContainer
+  },
   article: {
     extend: Flex,
     close: {

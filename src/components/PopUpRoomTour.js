@@ -4,7 +4,7 @@ import { Flex, Button, Img } from 'smbls'
 
 import { PopUpModal } from "./PopUpModal"
 import { RoomTour } from './RoomTour'
-
+import { opacityWidth } from '../animations'
 const props = {
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
@@ -111,6 +111,8 @@ const props = {
             }
           },
           galleryContainer: {
+            flex: '1.5',
+
             '@maxTabletO': {
               minWidth: '100%'
             },
@@ -119,10 +121,13 @@ const props = {
               '@maxTabletO': { width: '100%' },
               '@maxMobileM': { height: `${450 / 16}em` },
               '@maxMaxO': { height: `${300 / 16}em` },
+              style: {
+              }
             }
           },
 
           article: {
+            flex: '1',
             '@maxTabletO': {
               position: 'fixed',
               zIndex: '200',

@@ -9,7 +9,6 @@ const props = {
   position: 'relative',
   overflow: 'hidden',
   margin: '- -F - -',
-  style: { transition: 'width 1.3s ease-in-out' },
   '@maxTabletL': { fontSize: `${14 / 16}em` },
   '@maxMobileL': {
     boxSize: 'H1 100%',
@@ -17,6 +16,7 @@ const props = {
   },
 
   childProps: {
+    width: '100%',
     position: 'absolute',
     top: '0',
     left: '0',
@@ -40,7 +40,6 @@ const props = {
       border: 'solid, white .15',
       borderWidth: '.15px .15px .15px 0px',
       '@maxMobileL': { round: '0' },
-      // '@maxMaxO': { height: `${400 / 16}em`,},
       style: {
         transition: 'width .8s ease, opacity .5s ease',
          height: `${500 / 16}em`,
@@ -58,7 +57,6 @@ const props = {
 
     footer: {
       padding: 'Z - - A2',
-      // border: '2px solid red',
       '@maxMobileL': {
         alignSelf: 'flex-end',
         justifyContent: 'flex-end',
@@ -89,16 +87,13 @@ export const galleries = {
     extend: galleryContainer,
     class: {
       show: (element, state) => state.activeGallery === parseInt(element.key)
-        ? { opacity: '1' }
-        : { opacity: '0' }
+        ? { opacity: '1', width: '100%' }
+        : { opacity: '0', with: '0' }
     },
     gallery: {
       class: {
         show: (element, state) => state.activeGallery === parseInt(element.parent.key)
-          ? {
-            width: `${608 / 16}em`,
-            '@media only screen and (max-width: 768px)': { width: '100% !important' }
-          }
+          ? { width: `100%`, opacity: '1' }
           : { width: '0', opacity: '0' }
       }
     }

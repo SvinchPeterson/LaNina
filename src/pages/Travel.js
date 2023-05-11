@@ -17,11 +17,11 @@ const state = {
 
   // activePopUp: true,
   activePopUp: false,
-  activePopUpContent: 0,
+  activePopUpContent: false,
   activePackage: false,
   activeTour: false,
 
-  activeGallery: 0,
+  activeGallery: false,
   activeScroll: true,
 
   activeTbilisiImage: 0,

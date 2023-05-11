@@ -103,7 +103,7 @@ const props = {
           padding: 'C -',
           header: { zindex: '100'},
           galleryContainer: {
-            '@minTabletO': { transition: 'transform 1s ease' }
+            // '@minTabletO': { transition: 'transform 1s ease' }
           },
           article: {
             zIndex: '700',
@@ -152,11 +152,6 @@ export const tourPopUp = {
                   transform: 'scale(.75) translateX(-30px)'
                 }
               },
-              ':nth-child(even) > div': {
-                '@media only screen and (min-width: 1181px)': {
-                  transform: 'scale(.75) translateX(30px)'
-                }
-              },
               ':nth-child(even) > article': {
                 '@media only screen and (min-width: 1181px)': {
                   transform: 'translateX(50px)',
@@ -164,7 +159,11 @@ export const tourPopUp = {
                   boxShadow:' rgba(0, 0, 0, 0.45) 30px 0px 20px -20px'
                 }
               },
-
+              ':nth-child(even) > div': {
+                '@media only screen and (min-width: 1181px)': {
+                  transform: 'scale(.75) translateX(30px)'
+                }
+              },
               '@media only screen and (max-width: 1180px)': {
                 '> article': {
                   display: 'flex'

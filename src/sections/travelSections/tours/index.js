@@ -8,33 +8,9 @@ import ORNAMENT_JPG from '../../../assets/images/travel/ornament.png'
 
 const props = {
   width: '100%',
-  flow: 'column',
-  margin: 'G1 - - -',
-  position: 'relative',
-  round: 'G G 0 0',
-  style: { backgroundAttachment: 'fixed' },
-  '@maxTabletM': {
-    // padding: 'E -',
-    fontSize: `${14 / 16}em`,
-  },
-  '@maxMobileL': {
-    margin: '0 - - -'
-  },
-  title: {
-    alignSelf: 'center',
-    padding: '- - B -',
-    textTransform: 'uppercase',
-    '@maxMobileL': {
-      padding: '- - A -'
-    }
-  },
-
-  scroll: {
-    '@minMobileL': { display: 'none' },
-    zIndex: '5',
-    color: 'cream',
-    padding: 'A A - -',
-    alignSelf: 'flex-end'
+  margin: 'G - F -',
+  '@maxTabletL': {
+    // minHeight: '100%'
   }
 }
 

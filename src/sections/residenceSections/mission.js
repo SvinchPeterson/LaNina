@@ -11,7 +11,7 @@ const props = {
   position: 'relative',
   flexAlign: 'center flex-start',
   gap: 'B2',
-  margin: 'G -',
+  margin: 'G - E -',
   width: 'fit-content',
   alignSelf: 'center',
   '@maxTabletL': { fontSize: `${14 / 16}em` },
