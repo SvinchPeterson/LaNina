@@ -112,6 +112,7 @@ const props = {
           },
           galleryContainer: {
             flex: '1.5',
+            transition: 'transform .7s ease',
 
             '@maxTabletO': {
               minWidth: '100%'
