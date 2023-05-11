@@ -31,7 +31,7 @@ export const roomsContainers = {
             },
             footer: {
               book: {
-                props: { src: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1682382416_Tsu%2B2D3NxWv2TZ8E' }
+                props: { href: 'https://www.airbnb.com/rooms/52732503?source_impression_id=p3_1682382416_Tsu%2B2D3NxWv2TZ8E' }
               },
               navArrows: {
                 ...[
@@ -89,7 +89,7 @@ export const roomsContainers = {
             },
             footer: {
               book: {
-                props: { src: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1682382585_3pV8q9n5WAaAHCJi' }
+                props: { href: 'https://www.airbnb.com/rooms/52610522?source_impression_id=p3_1682382585_3pV8q9n5WAaAHCJi' }
               },
               navArrows: {
                 ...[
@@ -147,7 +147,7 @@ export const roomsContainers = {
             },
             footer: {
               book: {
-                props: { src: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1682382619_PL2VTjn6mACnlC1v' }
+                props: { href: 'https://www.airbnb.com/rooms/52611151?source_impression_id=p3_1682382619_PL2VTjn6mACnlC1v' }
               },
               navArrows: {
                 ...[
@@ -205,7 +205,7 @@ export const roomsContainers = {
             },
             footer: {
               book: {
-                props: { src: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1682382673_15yD2Owr%2BdDz4SnZ' }
+                props: { href: 'https://www.airbnb.com/rooms/578777975140256943?source_impression_id=p3_1682382673_15yD2Owr%2BdDz4SnZ' }
               },
               navArrows: {
                 ...[
@@ -263,7 +263,7 @@ export const roomsContainers = {
             },
             footer: {
               book: {
-                props: { src: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1682382747_XDUohdD4%2B7e7OJmJ' }
+                props: { href: 'https://www.airbnb.com/rooms/579012726681765152?source_impression_id=p3_1682382747_XDUohdD4%2B7e7OJmJ' }
               },
               navArrows: {
                 ...[
@@ -321,7 +321,7 @@ export const roomsContainers = {
             },
             footer: {
               book: {
-                props: { src: 'https://www.airbnb.com/rooms/835973069072112512?source_impression_id=p3_1682382791_FHvIiMLES1aueGfY' }
+                props: { href: 'https://www.airbnb.com/rooms/835973069072112512?source_impression_id=p3_1682382791_FHvIiMLES1aueGfY' }
               },
               navArrows: {
                 ...[
@@ -379,7 +379,7 @@ export const roomsContainers = {
             },
             footer: {
               book: {
-                props: { src: 'https://www.airbnb.com/rooms/836638635181727976?source_impression_id=p3_1682382829_EYIf93LXdF9pRBSM' }
+                props: { href: 'https://www.airbnb.com/rooms/836638635181727976?source_impression_id=p3_1682382829_EYIf93LXdF9pRBSM' }
               },
               navArrows: {
                 ...[

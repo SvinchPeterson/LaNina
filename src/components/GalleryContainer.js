@@ -47,7 +47,7 @@ const props = {
       color: 'cream',
       textTransform: 'uppercase',
       fontWeight: '700',
-      pointerEvents: 'none',
+      // pointerEvents: 'none',
       opacity: '.75',
       transition: 'opacity .25s ease-in-out, background .25s ease-in-out',
       cursor: 'pointer',
