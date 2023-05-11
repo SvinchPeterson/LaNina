@@ -88,8 +88,6 @@ const props = {
         },
         ':after': { background: 'naviGreen .5'},
         backImage: {
-          // border: 'solid, orange',
-          // borderWidth: '1px',
           round: 'F2'
         },
         title: { whiteSpace: 'nowrap' },

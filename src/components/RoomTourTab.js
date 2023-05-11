@@ -45,7 +45,7 @@ const props = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     border: 'solid, orange',
-    borderWidth: '1px',
+    borderWidth: '.5px',
     '@minTabletL': { style: { backgroundAttachment: 'fixed' } }
   },
 

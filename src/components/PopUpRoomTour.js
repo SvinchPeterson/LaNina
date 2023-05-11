@@ -175,6 +175,17 @@ export const PopUpRoomTour = {
         '@media only screen and (max-width: 1180px)': {
           display: 'block'
         }
+      },
+
+      show2: (element, state) => state.activePopUp
+      ? {
+        opacity: '1',
+        transform: 'rotate(90deg)'
+
+      }
+      : {
+        opacity: '0'
+
       }
     }
   },

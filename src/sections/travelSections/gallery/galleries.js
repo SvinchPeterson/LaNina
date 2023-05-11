@@ -1,6 +1,6 @@
 'use strict'
 
-import { GalleryContainer, NavArrowsCream } from '../../../components'
+import { GalleryContainer } from '../../../components'
 
 import { galleryTbilisi, galleryBorjomi, galleryMtsketa, galleryKakheti, galleryMartvili, galleryKutaisi, galleryGori, galleryKazbegi } from '../../../galleries/travelGalleries'
 

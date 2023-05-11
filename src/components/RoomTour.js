@@ -17,8 +17,6 @@ const props = {
     gallery: {
       transition: 'width 3s ease-in-out'
     }
-    // transition: 'all 1s ease-in-out !important'
-    // width: 'H1'
   },
   article: {
     position: 'relative',
