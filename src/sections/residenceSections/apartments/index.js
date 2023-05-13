@@ -7,9 +7,11 @@ import { tabs } from './tabs'
 const props = {
   width: '100%',
   padding: 'F - - -',
-  '@maxTabletL': {
-    padding: '0',
-    margin: 'F - - -'
+  '@maxMobileM': {
+    padding: 'E - - -'
+  },
+  '@maxHeightS': {
+    padding: 'E - - -'
   }
 }
 

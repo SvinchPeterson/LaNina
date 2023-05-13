@@ -3,6 +3,8 @@
 import { Link, Img, Flex } from 'smbls'
 
 const props = {
+  width: 'E',
+  height: 'G',
   flow: 'column',
   position: 'relative',
   round: 'F2',
@@ -14,6 +16,7 @@ const props = {
   gap: 'C',
   border: 'solid, transparent',
   borderWidth: `B`,
+  padding: 'B - B -',
   childProps: { ':not(:nth-child(1))': { zIndex: '5' } },
    ':after': {
     content: '""',
@@ -22,9 +25,14 @@ const props = {
     zIndex: '4',
     top: '0',
     left: '0',
-    round: 'F2'
+    round: 'F2',
+    background: 'naviGreen .5'
   },
+  ':last-child > p': { color: 'orange' },
   '@minTabletL': {
+    transition: 'flex 1s ease',
+    ':hover': { flex: '12' },
+    ':hover:last-child > h3': { opacity: '.6' },
     ':hover > p': {
        opacity: '1',
        transition: 'opacity 1s ease-in-out'
@@ -33,9 +41,17 @@ const props = {
       opacity: '1',
       letterSpacing: `${-2 / 33}em`,
       transition: 'opacity 1s ease-in-out, letter-spacing 1s ease-in-out',
+    },
+  },
+  '@maxTabletL': {
+    minWidth: 'F',
+    justifyContent: 'center',
+    ':last-child > p': {
+      display: 'block',
+      opacity: '1',
+      // width: 'C'
     }
   },
-  '@maxTabletL': { overflow: 'visible'},
   backImage: {
     boxSize: '100% 100%',
     position: 'absolute',
@@ -50,15 +66,14 @@ const props = {
   },
 
   icon: {
-    // boxSize: 'A2 '
+    boxSize: 'A1 '
   },
   p: {
     fontSize: `${14.5 / 16}em`,
     fontWeight: '400',
     textAlign: 'center',
-    width: 'F2',
+    width: `${240 / 14.5}em`,
     margin: '0',
-    // height: '0',
     opacity: '0',
     color: 'cream .75',
     style: { fontStyle: 'italic'},
@@ -70,21 +85,13 @@ const props = {
     letterSpacing: '0',
     textAlign: 'center',
     color: 'cream',
-    lineHeight: `${35 / 33}em`
-  },
-
-  // '@maxTabletL': {
-  //   padding: 'D1 -',
-  //   // gap: 'F'
-  // },
-
-  // '@maxMobileL': {
-  //   width: '85%',
-  //   gap: 'B2 !important'
-  // }
+    lineHeight: `${35 / 33}em`,
+    whiteSpace: 'nowrap',
+    fontWeight: '700'
+  }
 }
 
-export const RoomTourTab = {
+export const RoomTab = {
   extend: [Link, Flex],
   props,
 

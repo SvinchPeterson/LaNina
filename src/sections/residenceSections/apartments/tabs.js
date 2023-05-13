@@ -1,7 +1,8 @@
 'use strict'
 import { Flex } from 'smbls'
 
-import { RoomTourTabs } from '../../../compositions'
+import { RoomTab } from '../../../components'
+import { backgroundPosition } from '../../../animations'
 
 
 import BALLERINA_JPG from '../../../assets/images/residence/rooms/ballerina/ballerinaTab.jpg'
@@ -19,96 +20,127 @@ import LEAF_PNG from '../../../assets/icons/leaf.png'
 import VINYL_PNG from '../../../assets/icons/vinyl.png'
 import LAGOON_PNG from '../../../assets/icons/lagoon.png'
 import QVEVRI_PNG from '../../../assets/icons/qvevri.png'
+import MOON_PNG from '../../../assets/icons/moon.png'
 
 import ORNAMENT_PNG from '../../../assets/images/residence/sololaki/ornaments.png'
 
 const props = {
+  width: '100%',
+  backgroundColor: 'orange',
   backgroundImage: 'url(' + ORNAMENT_PNG + ')',
-  ':after': {
-    background: 'radial-gradient(rgba(1, 57, 57, .45), rgba(1, 57, 57, .8), rgba(1, 57, 57, 1))',
-    '@maxTabletL': {
-      background: 'radial-gradient(rgba(0, 102, 102, .45), rgba(0, 102, 102, .8), rgba(0, 102, 102, .97), rgba(0, 102, 102, 1))',
+  position: 'relative',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  overflow: 'hidden',
+  '@minTabletL': { style: {backgroundAttachment: 'fixed'} },
+  '@maxTabletL': {
+    style: {
+      animationName: backgroundPosition,
+      animatonTimingFunction: 'linear',
+      animationDuration: '15s',
+      animationDirection: 'alternate',
+      animationIterationCount: 'infinite'
+    },
+  },
+  ':before': {
+    content: '""',
+    boxSize: '100% F',
+    position: 'absolute',
+    top: '0',
+    right: '0',
+    background: 'linear-gradient(to left, rgba(1, 57, 57, 1) 0%, rgba(1, 57, 57, 0) 100%)',
+    zIndex: '20',
+    pointerEvents: 'none',
+    '@maxMobileL': {
+      boxSize: '100% D'
     }
   },
+  ':after': {
+    content: '""',
+    boxSize: '100% F',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    background: 'linear-gradient(to right, rgba(1, 57, 57, 1) 0%, rgba(1, 57, 57, 0) 100%)',
+    zIndex: '20',
+    pointerEvents: 'none',
+    '@maxMobileL': {
+      boxSize: '100% D'
+    }
+
+  },
   boxSizing: 'border-box',
-  '@maxTabletL': {flow: 'column'},
+  backColor: {
+    boxSize: '100% 100%',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    background: 'radial-gradient(rgba(1, 57, 57, .45), rgba(1, 57, 57, .8), rgba(1, 57, 57, 1))'
+  },
   title: {
     position: 'initial',
     text: 'apartments',
-    zIndex: '10',
     align: 'center center',
-    border: 'solid, transparent',
-    borderWidth: '0 0 5px 0',
-    padding: 'E2 - E2 -',
-    textTransform: 'uppercase',
-    fontSize: `${12 / 16}em`,
-    letterSpacing: '8px',
+    padding: 'B1 -',
+    textTransform: 'capitalize',
+    fontSize: `D`,
+    fontWeight: '700',
+    // letterSpacing: '8px',
     color: 'cream',
+    zIndex: '30',
     style: {
       writingMode: 'vertical-rl',
       textOrientation: 'mixed',
       transform: 'rotate(180deg)'
     },
     '@maxTabletL': {
-      padding: '0',
       position: 'absolute',
-      fontSize: 'F',
-      top: 'D1',
-      right: 'D',
-      letterSpacing: '.5px',
-      color: 'cream .6',
-      textTransform: 'capitalize',
-      style: {
-        writingMode: 'initial',
-        textOrientation: 'initial',
-        transform: 'rotate(0)'
-      }
-    }
-  },
-  contentContainer: {
-    width: 'calc(100% - 120px)',
-    padding: '- F3 - D',
-    boxSizing: 'border-box',
-    flex: '1',
-    '@maxTabletL': {
-      padding: 'E1 0',
-      width: '100%'
+      top: '0',
+      left: '0',
+      height: '100%',
+      style: { '::-webkit-scrollbar': { display: 'none' } }
     },
-    content: {
-      padding: 'C2 -',
-      width: '100%',
-      childProps: {
-        maxHeight: 'G1',
-        flex: '1',
-        width: 'E2',
-        padding: 'B1 - A2 -',
-        '@minTabletL': {
-          transition: 'flex 1s ease',
-          ':hover': { flex: '12' }
-        },
-        ':after': { background: 'naviGreen .5'},
-        backImage: {
-          round: 'F2'
-        },
-        title: { whiteSpace: 'nowrap' },
-        icon: {
-          boxSize: 'A1 ',
-          '@maxTabletL': {
-            boxSize: 'B '
-          }
-        }
-      }
-    }
+    '@maxMobileL': { padding: 'A -'}
+  },
+  content: {
+    padding: 'C2 E',
+    zIndex: '10',
+    align: 'center center',
+    flex: '1',
+    '@minScreenD': { padding: 'C F' },
+    '@minScreenL': { padding: 'C F2' },
+    '@maxTabletL': {
+      padding: 'C2 E C2 F',
+      align: 'center flex-start',
+      style: { overflowX: 'auto' }
+    },
+    '@maxMobileL': { padding: 'C E C E'},
+    '@maxMobileS': { padding: 'C E C D1'}
   }
 }
 
 export const tabs = {
-  extend: RoomTourTabs,
+  extend: Flex,
   props,
 
+  backColor: {
+
+  },
+
   title: { extend: Flex },
-  contentContainer: {
     content: {
+      extend: Flex,
+      childExtend: {
+        extend: RoomTab,
+        on: {
+          click: (event, element, state) => {
+            state.update({
+              activePopUp: true,
+              activePopUpContent: parseInt(element.key)
+            })
+          }
+        }
+      },
       ...[
         {
           backImage: { props: { backgroundImage: 'url(' + BALLERINA_JPG + ')' }},
@@ -151,8 +183,15 @@ export const tabs = {
           icon: { props: { src: QVEVRI_PNG }},
           p: { props: { text: 'Where contemporary design combine with traditional architecture.' }},
           title: { props: { text: 'qvevri' }}
+        },
+        {
+          on: { click: (event, element, state) => { element.style({ pointerEvents: 'none'}) } },
+          props: { '@minTabletL':{':hover > p': { opacity: '.6'}}},
+          backImage: { },
+          icon: { props: { src: MOON_PNG, opacity: '.6'}},
+          p: { props: { text: 'coming soon' }},
+          title: { props: { text: 'night sky' }}
         }
       ]
     }
-  }
 }

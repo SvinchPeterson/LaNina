@@ -34,6 +34,7 @@ export const properties = {
     position: 'absolute',
     pointerEvents: 'none',
     zIndex: '2',
+    display: 'none',
     style: {
       animationName: deopacity,
       animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',

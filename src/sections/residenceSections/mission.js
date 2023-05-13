@@ -17,7 +17,7 @@ const props = {
   '@maxTabletL': { fontSize: `${14 / 16}em` },
   '@maxMobileL': {
     width: '100%',
-    margin: 'F2 - F -',
+    margin: 'F2 - E1 -',
   },
   image: {
     minWidth: `H2`,
