@@ -70,7 +70,7 @@ const props = {
   style: {
     animationName: backgroundPosition2,
     animatonTimingFunction: 'linear',
-    animationDuration: '20s',
+    animationDuration: '40s',
     animationDirection: 'alternate',
     animationIterationCount: 'infinite'
   },
