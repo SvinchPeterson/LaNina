@@ -35,55 +35,49 @@ const menu = {
   extend: Menu,
   class: {
     show: (element, state) => state.activeResidenceMenu
-      ? { height: `${30 / 16}em` } : { height: '0' }
+      ? { height: `90%`}
+      : { height: '48px' }
   },
 
   navBar: {
     class: {
       show: (element, state) => state.activeResidenceMenu
-        ? { width: `${550 / 16}em`, '> a':{ transform:'scale(1)', transition: 'transform 1s ease', } }
-        : { width: '0', '> a':{ transform:'scale(1.5)', transition: 'transform 1s ease', }}
+        ? {
+          '@media only screen and (min-width: 1025px)': {
+            width: `${700 / 16}em`, '> a':{ transform:'scale(1)', transition: 'transform 1s ease' }
+          },
+          '@media only screend and (max-width: 1024px)': {
+            opacity: '1', transition: 'opacity .75s ease'
+          }
+        }
+        : {
+          '@media only screen and (min-width: 1025px)': {
+            width: '0', '> a':{ transform:'scale(1.5)', transition: 'transform 1s ease' }
+          },
+          '@media only screend and (max-width: 1024px)': {
+            opacity: '0', transition: 'opacity .75s ease'
+          }
+        }
     },
-    childExtend: { on: { click: (event, element, state) => { state.update({ activeResidenceMenu: false }) } } },
-    ...[
-      { props: { text: 'residence', href: '#residence' } },
-      { props: { text: 'services & facilities', href: '#service&facilities' } },
-      { props: { text: 'apartments', href: '#apartments' } },
-      { props: { text: 'location', href: '#location' } }
-    ]
-  }
-}
-
-
-const menuMobile = {
-  extend: MenuMobile,
-  props: {background: 'naviGreenLight .75'},
-  class: {
-    show: (element, state) => state.activeResidenceMobileMenu
-      ? {
-        height: '80%',
-        transition: 'height .75s ease'
-      }
-      : { height: '0', pointerEvents: 'none', transition: 'height .35s ease' }
-  },
-
-  navBar: {
-    class: {
-      show: (element, state) => state.activeResidenceMobileMenu
-        ? { opacity: '1', transition: 'opacity .75s ease' }
-        : { opacity: '0', transition: 'opacity .35s ease' }
-    },
-
     childExtend: {
+       on: { click: (event, element, state) => { state.update({ activeResidenceMenu: false }) } },
        class: {
-        show: (element, state) => state.activeResidenceMobileMenu
-          ? { height: `${46 / 13}em`, opacity: '1', transition: 'height .75s ease, opacity .75s ease' }
-          : { height: '0', opacity: '0', transition: 'height .35s ease, opacity .35s ease' }
+        show: (element, state) => state.activeResidenceMenu
+          ? {
+            '@media only screen and (max-width: 1024px)': {
+              height: `${46 / 13}em`, opacity: '1',
+              transition: 'height .75s ease, opacity .75s ease'
+            }
+
+          }
+          : {
+            '@media only screen and (max-width: 1024px)': {
+              height: '0', opacity: '0',
+              transition: 'height .75s ease, opacity .75s ease'
+            }
+          }
       },
-      on: {
-        click: (event, element, state) => { state.update({ activeResidenceMenu: false, activeResidenceMobileMenu: false }) }
-      }
-    },
+      },
     ...[
       { props: { text: 'residence', href: '#residence' } },
       { props: { text: 'services & facilities', href: '#service&facilities' } },
@@ -92,6 +86,7 @@ const menuMobile = {
     ]
   }
 }
+
 
 const header = {
   extend: Header,
@@ -155,10 +150,15 @@ export const Sololaki = {
 
   },
 
-
+  menuBackground: {
+    class: {
+      show: (element, state) => state.activeResidenceMenu
+        ? { height: '90%', background: 'rgba(1, 57, 57, .95)' }
+        : { height: '46px', background: 'rgba(1, 57, 57, 0)' }
+    }
+  },
   header,
   menu,
-  menuMobile,
   banner,
   residence,
   servicesFacilities,

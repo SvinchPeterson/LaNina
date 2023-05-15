@@ -15,16 +15,16 @@ export const properties = {
     scrollBehavior: 'smooth',
     '::-webkit-scrollbar': { display: 'none' }
   },
-  ':before': {
-    content: '""',
-    position: 'fixed',
-    boxSize: '46.41px 90%',
-    top: '0',
-    zIndex: '40',
-    alignSelf: 'center',
-    round: '0 0 A1 A1',
-    style: { backdropFilter: 'blur(5px)'}
-  },
+  // ':before': {
+  //   content: '""',
+  //   position: 'fixed',
+  //   boxSize: '46.41px 90%',
+  //   top: '0',
+  //   zIndex: '40',
+  //   alignSelf: 'center',
+  //   round: '0 0 A1 A1',
+  //   style: { backdropFilter: 'blur(5px)'}
+  // },
 
   ':after': {
     content: '""',
@@ -39,5 +39,18 @@ export const properties = {
       animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
       animationDuration: '5s'
     }
+  },
+
+  menuBackground: {
+    content: '""',
+    position: 'fixed',
+    boxSize: '48px 90%',
+    top: '0',
+    zIndex: '30',
+    alignSelf: 'center',
+    round: '0 0 B B',
+    transition: 'height .75s ease, background .75s ease',
+    // background: 'rgba(0, 0, 0, 0)',
+    style: { backdropFilter: 'blur(3px)'}
   }
 }

@@ -52,19 +52,45 @@ const menu = {
   extend: Menu,
   class: {
     show: (element, state) => state.activeTravelMenu
-      ? { height: `${30 / 16}em` } : { height: '0' }
+      ? { height: `90%` } : { height: '48px' }
   },
 
   navBar: {
     class: {
       show: (element, state) => state.activeTravelMenu
-        ? { width: `${400 / 16}em` } : { width: '0' }
+        ? {
+          '@media only screen and (min-width: 1025px)': {
+            width: `${400 / 16}em`
+          },
+          '@media only screend and (max-width: 1024px)': {
+            opacity: '1', transition: 'opacity .75s ease'
+          }
+        }
+        : {
+          '@media only screen and (min-width: 1025px)': {
+            width: '0'
+          },
+          '@media only screend and (max-width: 1024px)': {
+            opacity: '0', transition: 'opacity .75s ease'
+          }
+        }
     },
 
     childExtend: {
        class: {
         show: (element, state) => state.activeTravelMenu
-          ? { opacity: '1' } : { opacity: '0' }
+          ? {
+            '@media only screen and (max-width: 1024px)': {
+              height: `${46 / 13}em`, opacity: '1',
+              transition: 'height .75s ease, opacity .75s ease'
+            }
+          }
+          : {
+            '@media only screen and (max-width: 1024px)': {
+              height: '0', opacity: '0',
+              transition: 'height .75s ease, opacity .75s ease'
+            }
+          }
       },
       on: { click: (event, element, state) => { state.update({ activeTravelMenu: false }) } }
     },
@@ -79,41 +105,6 @@ const menu = {
 
 
 
-const menuMobile = {
-  extend: MenuMobile,
-  props: {background: 'naviBlueLight .75'},
-  class: {
-    show: (element, state) => state.activeTravelMobileMenu
-      ? {
-        height: '80%',
-        transition: 'height .75s ease'
-      }
-      : { height: '0', pointerEvents: 'none', transition: 'height .35s ease' }
-  },
-
-  navBar: {
-    class: {
-      show: (element, state) => state.activeTravelMobileMenu
-        ? { opacity: '1', transition: 'opacity .75s ease' }
-        : { opacity: '0', transition: 'opacity .35s ease' }
-    },
-
-    childExtend: {
-      class: {
-        show: (element, state) => state.activeTravelMobileMenu
-          ? { height: `${46 / 13}em`, opacity: '1', transition: 'height .75s ease, opacity .75s ease' }
-          : { height: '0', opacity: '0', transition: 'height .35s ease, opacity .35s ease' }
-      },
-      on: { click: (event, element, state) => { state.update({ activeTravelMenu: false, activeTravelMobileMenu: false }) } }
-    },
-    ...[
-      { props: { text: 'gallery', href: '#gallery' } },
-      { props: { text: 'tours', href: '#tours' } },
-      { props: { text: 'about us', href: '#about' } },
-      { props: { text: 'contact', href: '#contact' } }
-    ]
-  }
-}
 
 const header = {
   extend: Header,
@@ -191,12 +182,20 @@ export const footer = {
 
 export const Travel = {
   extend: Flex,
-  props: { ...properties },
+  props: {
+    ...properties
+  },
   state,
 
+  menuBackground: {
+    class: {
+      show: (element, state) => state.activeTravelMenu
+        ? { height: '90%', background: 'rgba(0, 47, 57, .95)' }
+        : { height: '46px', background: 'rgba(0, 47, 57, 0)' }
+    }
+  },
   header,
   menu,
-  menuMobile,
   banner,
   georgia,
   gallery,

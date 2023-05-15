@@ -6,37 +6,48 @@ import { Navbar } from './Navbar'
 
 const props = {
   width: '90%',
+  height: '48px',
   position: 'fixed',
-  top: `${40 / 16}em`,
-  padding: '- B - -',
-  zIndex: '200',
+  top: `0`,
+  border: 'solid, cream .5',
+  borderWidth: '0 0 .5px 0',
+  round: '0 0 B B',
+  // background: 'naviGreen',
+  padding: '- - - -',
+  zIndex: '30',
   alignSelf: 'center',
-  transition: 'height 1s ease',
+  transition: 'height .75s ease',
   overflow: 'hidden',
-  align: 'flex-start flex-end',
+  align: 'center center',
   style: { mixBlendMode: 'difference' },
-  '@mobileL': { display: 'none' },
+  // '@mobileL': { display: 'none' },
 
   navBar: {
     overflow: 'hidden',
-    gap: 'B1',
+    gap: 'C',
     padding: 'Z2 - - -',
     transition: 'width .5s ease',
-    align: 'center flex-end',
+    align: 'center center',
+    '@maxTabletS': {
+      flow: 'column',
+      gap: '0',
+    },
     childProps: {
       textAlign: 'center',
       color: 'cream',
-      fontSize: `${9 / 16}em`,
-      fontWeight: '700',
+      fontSize: 'Z',
+      fontWeight: '400',
       textTransform: 'uppercase',
-      letterSpacing: `${2 / 10}em`,
       whiteSpace: 'nowrap',
-      opacity: '.85',
+      letterSpacing: '3px',
       transition: 'opacity .3s ease, transform .3s ease-in-out',
-      // style: {fontStyle: 'italic'},
-      ':hover': {
-        transform: 'scale(1.03)',
-        opacity: '1'
+      overflow: 'hidden',
+      '@minTabletS': {
+        opacity: '.7',
+        ':hover': {
+          transform: 'scale(1.03)',
+          opacity: '1'
+        }
       }
     }
   }

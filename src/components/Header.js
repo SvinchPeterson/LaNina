@@ -44,16 +44,16 @@ const menu = {
 
 const props = {
   minWidth: '90%',
-  '@maxMobileM': { minWidth: '95%' },
+  // '@maxMobileM': { minWidth: '95%' },
   position: 'fixed',
   top: '0',
   alignSelf: 'center',
   alignItems: 'flex-end',
   zIndex: '50',
-  padding: 'Z - - -',
-  border: 'solid, cream .5',
-  borderWidth: '0 0 .5px 0',
-  round: '0 0 A1 A1',
+  padding: 'Z Y - Y',
+  // border: 'solid, cream .5',
+  // borderWidth: '0 0 .5px 0',
+  // round: '0 0 A1 A1',
   overflow: 'hidden',
   style: {
     mixBlendMode: 'difference',
@@ -102,7 +102,7 @@ const props = {
         textTransform: 'uppercase',
         color: 'cream',
         padding: 'Z1 B',
-        transition: 'bottom .5s ease-in-out, transform .5s ease-in-out'
+        transition: 'bottom .75s ease-in-out, transform .75s ease-in-out'
       },
       close: {
         align: 'center center',
