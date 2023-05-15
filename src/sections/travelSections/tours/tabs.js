@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { TourTab, NavArrowsCream } from '../../../components'
+import { TourTab, NavArrowsCream, ScrollTitleCream } from '../../../components'
 import { backgroundPosition2 } from '../../../animations'
 
 
@@ -143,7 +143,6 @@ const props = {
     padding: 'D2 F2 D2 G',
     '@maxHeightN': {
       padding: '0 - 0 -',
-      // padding: '0 E',
       align: 'center flex-start'
     },
     '@maxTabletM': { padding: '- F2 - E1'},
@@ -164,7 +163,18 @@ const props = {
       right: 'initial',
       left: '50%',
       transform: 'translate(-50%, -50%)'
-      // transform: 'trans'
+    },
+    '@maxTabletL': { display: 'none'}
+  },
+
+  scrollTitle: {
+    display: 'none',
+    '@maxTabletL': {
+      display: 'flex',
+      position: 'absolute',
+      bottom: 'B2',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
     }
   }
 }
@@ -235,5 +245,6 @@ export const tabs = {
     },
     navButtons: {
       extend: navArrows
-    }
+    },
+    scrollTitle: { extend: ScrollTitleCream }
 }
