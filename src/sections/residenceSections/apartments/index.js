@@ -7,12 +7,8 @@ import { tabs } from './tabs'
 const props = {
   width: '100%',
   padding: 'F - - -',
-  '@maxMobileM': {
-    padding: 'E - - -'
-  },
-  '@maxHeightS': {
-    padding: 'E - - -'
-  }
+  '@maxMobileM': { padding: 'E - - -' },
+  '@maxHeightS': { padding: 'E - - -' }
 }
 
 export const apartments = {

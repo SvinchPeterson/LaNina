@@ -78,6 +78,15 @@ export const backgroundPosition = keyframes`
   }
 `
 
+export const backgroundPosition2 = keyframes`
+  from {
+    background-position: top -100px left;
+  }
+  to {
+    background-position: bottom 300px right;
+  }
+`
+
 
 export const lineWidth = keyframes`
   from { width: 0; }

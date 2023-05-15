@@ -4,14 +4,14 @@ import { Flex } from 'smbls'
 
 import { tabs } from './tabs'
 
-import ORNAMENT_JPG from '../../../assets/images/travel/ornament.png'
 
 const props = {
   width: '100%',
-  margin: 'G - F -',
-  '@maxMobileL': {
-    margin: 'F - F -'
-  }
+  margin: 'E - E -',
+  padding: 'F - - -',
+
+  '@maxHeightO': { padding: 'E1 -'},
+  '@maxHeightN': { padding: '0', minHeight: '100%'}
 }
 
 export const tours = {

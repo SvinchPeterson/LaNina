@@ -67,7 +67,6 @@ const props = {
     '@maxMobileL': {
       boxSize: '100% D'
     }
-
   },
   boxSizing: 'border-box',
   backColor: {
@@ -86,7 +85,7 @@ const props = {
     fontSize: `D`,
     fontWeight: '700',
     // letterSpacing: '8px',
-    color: 'cream',
+    color: 'cream .7',
     zIndex: '30',
     style: {
       writingMode: 'vertical-rl',
