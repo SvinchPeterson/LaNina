@@ -124,7 +124,7 @@ const props = {
     zIndex: '35',
     padding: 'B2 -',
     color: 'cream',
-    fontWeight: '100',
+    fontWeight: '700',
     background: 'transparent',
     letterSpacing: '2px',
     '@maxTabletM': { padding: 'B -' },

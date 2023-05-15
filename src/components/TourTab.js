@@ -38,13 +38,13 @@ const props = {
     },
     title: {
       textAlign: 'center',
-      fontSize: 'Z',
+      fontSize: 'C',
       whiteSpace: 'nowrap',
       textTransform: 'uppercase',
       color: 'cream',
       opacity: '.75',
       letterSpacing: '0px',
-      fontWeight: '700',
+      fontWeight: '100',
       padding: '- - - -',
       '@minTabletL': { transition: 'opacity .6s ease-in-out, transform .6s ease-in-out' }
     },
