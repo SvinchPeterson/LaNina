@@ -6,10 +6,15 @@ import { PopUpModal } from "./PopUpModal"
 import { RoomTour } from './RoomTour'
 import { opacityWidth } from '../animations'
 const props = {
-  backgroundSize: 'cover',
-  backgroundPosition: 'center center',
-  backgroundColor: 'orange',
-  style: { backgroundAttachment: 'fixed' },
+  // backgroundSize: 'cover',
+  // backgroundPosition: 'center center',
+  // backgroundColor: 'orange',
+  style: {
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    backgroundColor: 'rgba(226, 135, 67, 1)',
+  },
   contentContainer: {
     boxSize: '100% 80%',
     flow: 'column',

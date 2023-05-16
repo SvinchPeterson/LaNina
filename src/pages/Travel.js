@@ -9,6 +9,8 @@ import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip, contact 
 import { tourPopUp } from '../sections/travelSections/tours/tourPopUp/tourPopUp'
 import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
 
+import ORNAMENT_PNG from '../assets/images/travel/ornament.png'
+
 const state = {
   activeTravelMenu: false,
   activeTravelMobileMenu: false,
@@ -52,7 +54,7 @@ const menu = {
   extend: Menu,
   class: {
     show: (element, state) => state.activeTravelMenu
-      ? { height: `90%` } : { height: '48px' }
+      ? { height: `90%` } : { height: '46px' }
   },
 
   navBar: {
@@ -60,38 +62,43 @@ const menu = {
       show: (element, state) => state.activeTravelMenu
         ? {
           '@media only screen and (min-width: 1025px)': {
-            width: `${400 / 16}em`
+            width: `${700 / 16}em`,
+            transition: 'width .35s ease',
+            '> a': {
+              transform: 'scale(1)',
+              opacity: '.7',
+              transition: 'transform .75s ease, opacity .75s ease'
+            }
           },
-          '@media only screend and (max-width: 1024px)': {
-            opacity: '1', transition: 'opacity .75s ease'
+          '@media only screen and (max-width: 1024px)': {
+            '> a': {
+              height: `${46 / 13}em`,
+              opacity: '1',
+              transition: 'height .75s ease, opacity .75s ease'
+            }
           }
         }
         : {
           '@media only screen and (min-width: 1025px)': {
-            width: '0'
+            width: `0`,
+            transition: 'width .35s ease',
+            '> a': {
+              transform: 'scale(1.3)',
+              opacity: '0',
+              transition: 'transform .75s ease, opacity .75s ease'
+            }
           },
-          '@media only screend and (max-width: 1024px)': {
-            opacity: '0', transition: 'opacity .75s ease'
+          '@media only screen and (max-width: 1024px)': {
+            '> a': {
+              height: `0`,
+              opacity: '0',
+              transition: 'height .35s ease, opacity .35s ease'
+            }
           }
         }
     },
 
     childExtend: {
-       class: {
-        show: (element, state) => state.activeTravelMenu
-          ? {
-            '@media only screen and (max-width: 1024px)': {
-              height: `${46 / 13}em`, opacity: '1',
-              transition: 'height .75s ease, opacity .75s ease'
-            }
-          }
-          : {
-            '@media only screen and (max-width: 1024px)': {
-              height: '0', opacity: '0',
-              transition: 'height .75s ease, opacity .75s ease'
-            }
-          }
-      },
       on: { click: (event, element, state) => { state.update({ activeTravelMenu: false }) } }
     },
     ...[
@@ -185,15 +192,46 @@ export const Travel = {
   props: {
     ...properties
   },
-  state,
 
   menuBackground: {
     class: {
       show: (element, state) => state.activeTravelMenu
-        ? { height: '90%', background: 'rgba(0, 47, 57, .95)' }
-        : { height: '46px', background: 'rgba(0, 47, 57, 0)' }
+      ? {
+        height: '90%',
+        transition: 'height .75s ease'
+      }
+      : {
+        height: '46px',
+        backdropFilter: 'blur(3px)',
+        transition: 'height .55s ease, backdrop-filter 1s ease'
+      }
     }
   },
+
+  menuBackImage: {
+    props: {
+      backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      style: { backgroundAttachment: 'fixed'},
+      ':after': { background: 'naviBlue .9',}
+    },
+    class: {
+      show: (element, state) => state.activeTravelMenu
+      ? {
+        height: '90%',
+        opacity: '1',
+        transition: 'height .75s ease, opacity .75s ease',
+      }
+      : {
+        height: '46px',
+        opacity: '0',
+        transition: 'height .55s ease, opacity .55s ease',
+      }
+    }
+  },
+
+  state,
   header,
   menu,
   banner,

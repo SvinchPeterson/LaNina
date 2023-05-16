@@ -5,18 +5,18 @@ import { $georgia } from '../../texts/travel'
 
 const props = {
   alignSelf: 'center',
-  margin: 'G - E -',
-  maxWidth: 'H1',
+  margin: 'G - 0 -',
+  maxWidth: 'H2',
   padding: '- D1 E2 D1',
   round: '0 0 G G',
   '@maxMobileL': {
     margin: 'F - 0 -',
   },
   '@maxMobileS': {
-    padding: '- C F C',
+    padding: '- C D C',
   },
   style: {
-    boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px'
+    // boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px'
   },
   '@maxTabletL': {
     fontSize: `${15 / 16}em`

@@ -81,7 +81,7 @@ const props = {
     top: '0',
     right: '0',
     background: 'linear-gradient(to left,  rgba(0, 47, 57, 1) 5%, rgba(0, 47, 57, 0) 95%)',
-    zIndex: '30',
+    zIndex: '15',
     pointerEvents: 'none',
     '@maxTabletM': { boxSize: '- E'},
     '@maxMobileL': {
@@ -96,7 +96,7 @@ const props = {
     left: '0',
     background: 'red',
     background: 'linear-gradient(to right, rgba(0, 47, 57, 1) 5%, rgba(0, 47, 57, 0) 95%)',
-    zIndex: '30',
+    zIndex: '15',
     pointerEvents: 'none',
     '@maxTabletM': { boxSize: '- E'},
     '@maxMobileL': {
@@ -121,7 +121,7 @@ const props = {
     height: '100%',
     // textTransform: 'capitalize',
     fontSize: 'D',
-    zIndex: '35',
+    zIndex: '20',
     padding: 'B2 -',
     color: 'cream',
     fontWeight: '700',
@@ -155,7 +155,7 @@ const props = {
     position: 'absolute',
     bottom: 'A1',
     right: 'C',
-    zIndex: '30',
+    zIndex: '20',
     gap: 'Z',
     childProps: { border: 'none'},
     '@maxHeightN': {

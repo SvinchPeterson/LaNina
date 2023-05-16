@@ -28,7 +28,7 @@ const props = {
     round: 'F2',
     background: 'naviGreen .5'
   },
-  ':last-child > p': { color: 'orange' },
+  // ':last-child > p': { color: 'orange' },
   '@minTabletL': {
     transition: 'flex 1s ease',
     ':hover': { flex: '12' },

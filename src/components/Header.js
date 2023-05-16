@@ -50,10 +50,11 @@ const props = {
   alignSelf: 'center',
   alignItems: 'flex-end',
   zIndex: '50',
-  padding: 'Z Y - Y',
+  padding: 'Z - - -',
+  // borderBottom: '1px solid red',
   // border: 'solid, cream .5',
   // borderWidth: '0 0 .5px 0',
-  // round: '0 0 A1 A1',
+  round: '0 0 A2 A2',
   overflow: 'hidden',
   style: {
     mixBlendMode: 'difference',
@@ -102,7 +103,7 @@ const props = {
         textTransform: 'uppercase',
         color: 'cream',
         padding: 'Z1 B',
-        transition: 'bottom .75s ease-in-out, transform .75s ease-in-out'
+        transition: 'bottom .75s ease, transform .75s ease'
       },
       close: {
         align: 'center center',

@@ -9,7 +9,7 @@ import { toursContainers } from "./toursContainers"
 import ORNAMENT_PNG from '../../../../assets/images/travel/ornament.png'
 
 const props = {
-  backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+  style: { backgroundImage: 'url(' + ORNAMENT_PNG + ')' },
   ':before': { background: 'radial-gradient(rgba(0, 47, 57, .5), rgba(0, 47, 57, .98), rgba(0, 47, 57, 1))' },
   contentContainer: {
     header: {
@@ -102,9 +102,6 @@ const props = {
         childProps: {
           padding: 'C -',
           header: { zindex: '100'},
-          galleryContainer: {
-            // '@minTabletO': { transition: 'transform 1s ease' }
-          },
           article: {
             zIndex: '700',
             '@minTabletO': { transition: 'transform 1s ease' },

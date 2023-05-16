@@ -16,7 +16,9 @@ const props = {
     style: { animationName: bannerBackground2 }
   },
 
-  ':before': { background: 'radial-gradient(rgba(0, 47, 57, .5), rgba(0, 47, 57, .85))' },
+  ':before': {
+    background: 'radial-gradient(rgba(0, 47, 57, .5), rgba(0, 47, 57, .85))',
+  },
 }
 
 export const banner = {

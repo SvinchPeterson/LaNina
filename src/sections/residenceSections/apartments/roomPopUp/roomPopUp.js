@@ -8,7 +8,9 @@ import { roomsContainers } from "./roomsContainers"
 import ORNAMENT_PNG from '../../../../assets/images/residence/sololaki/ornaments.png'
 
 const props = {
-  backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+  style: {
+    backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+  },
   ':before': { background: 'radial-gradient(rgba(1, 57, 57, .5), rgba(1, 57, 57, .98), rgba(1, 57, 57, 1))' },
   contentContainer: {
     header: {
@@ -94,12 +96,6 @@ const props = {
 export const roomPopUp = {
   extend: PopUpRoomTour,
   props,
-
-  // class: {
-  //   show: (element, state) => state.activeRoomsPopUp
-  //     ? { height: '100%' }
-  //     : { height: '0', pointerEvents: 'none' }
-  // },
 
   close: {},
 

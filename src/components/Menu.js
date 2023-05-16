@@ -4,33 +4,35 @@ import { Flex } from 'smbls'
 
 import { Navbar } from './Navbar'
 
+import { opacity } from '../animations'
+
 const props = {
   width: '90%',
-  height: '48px',
+  height: '46px',
   position: 'fixed',
+  // border: '2px solid red',
   top: `0`,
-  border: 'solid, cream .5',
-  borderWidth: '0 0 .5px 0',
-  round: '0 0 B B',
-  // background: 'naviGreen',
+  round: '0 0 A2 A2',
   padding: '- - - -',
-  zIndex: '30',
+  zIndex: '40',
   alignSelf: 'center',
   transition: 'height .75s ease',
   overflow: 'hidden',
   align: 'center center',
-  style: { mixBlendMode: 'difference' },
+  style: {
+    mixBlendMode: 'difference'
+  },
   // '@mobileL': { display: 'none' },
 
   navBar: {
+    // display: 'none',
     overflow: 'hidden',
     gap: 'C',
     padding: 'Z2 - - -',
-    transition: 'width .5s ease',
     align: 'center center',
     '@maxTabletS': {
       flow: 'column',
-      gap: '0',
+      gap: '0'
     },
     childProps: {
       textAlign: 'center',
@@ -40,10 +42,9 @@ const props = {
       textTransform: 'uppercase',
       whiteSpace: 'nowrap',
       letterSpacing: '3px',
-      transition: 'opacity .3s ease, transform .3s ease-in-out',
       overflow: 'hidden',
       '@minTabletS': {
-        opacity: '.7',
+        // opacity: '.7',
         ':hover': {
           transform: 'scale(1.03)',
           opacity: '1'

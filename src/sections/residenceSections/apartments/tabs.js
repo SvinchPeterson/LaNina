@@ -188,7 +188,7 @@ export const tabs = {
           props: { '@minTabletL':{':hover > p': { opacity: '.6'}}},
           backImage: { },
           icon: { props: { src: MOON_PNG, opacity: '.6'}},
-          p: { props: { text: 'coming soon' }},
+          p: { props: { text: 'Redefining urban living, count the stars!' }},
           title: { props: { text: 'night sky' }}
         }
       ]
