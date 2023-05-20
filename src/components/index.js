@@ -2,7 +2,6 @@
 
 export * from './Title'
 export * from './Navbar'
-export * from './Link'
 export * from './Header'
 export * from './Footer'
 export * from './BookingLink'

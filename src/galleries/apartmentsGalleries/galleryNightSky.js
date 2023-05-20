@@ -107,8 +107,8 @@ export const galleryNightSky = {
         '@mobileM': { backgroundImage: 'url(' + BADROOM2_MOBILE_JPG + ')' }
       }
     },
-
     {
+
       props: {
         backgroundImage: 'url(' + BATHROOM_JPG + ')',
         '@tabletM': { backgroundImage: 'url(' + BATHROOM_TABLET_JPG + ')' },

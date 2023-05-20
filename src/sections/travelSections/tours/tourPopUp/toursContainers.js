@@ -1,7 +1,5 @@
 'use strict'
 
-import { Link } from 'smbls'
-
 import {
   galleryTbilisi, galleryAdventureTour, galleryBorjomi, galleryCapitalTour, galleryCaucasusMountainTour,
   galleryCaucasusTour, galleryCulturalTour, galleryExclusiveTour, galleryGori, galleryHistoricalTour,
