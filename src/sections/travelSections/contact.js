@@ -9,7 +9,8 @@ const props = {
   gap: 'A',
   mailLocation: {
     textAlign: 'center',
-    border: 'solid, black',
+    borderStyle: 'solid',
+    borderWidth: 'black',
     borderWidth: '0 0 1px 0',
     padding: '- - A -'
   }

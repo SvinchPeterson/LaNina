@@ -1,4 +1,5 @@
 'use strict'
+
 import { Link, Flex } from 'smbls'
 
 const link = {
@@ -9,5 +10,7 @@ const link = {
 export const Navbar = {
   tag: 'nav',
   extend: Flex,
-  childExtend: Link,
+  childExtend: {
+    extend: Link
+  },
 }

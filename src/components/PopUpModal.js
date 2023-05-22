@@ -64,9 +64,9 @@ export const PopUpModal = {
 
   close: {
     extend: Button,
-    icon: {
+    icon2: {
       extend: Img,
-      props: { src: CLOSE_PNG }
+      props: { width: '1em', src: CLOSE_PNG }
     }
   },
 
