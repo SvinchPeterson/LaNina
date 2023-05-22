@@ -1,6 +1,6 @@
 'use strict'
 
-import { Flex } from 'smbls'
+import { Flex, Link } from 'smbls'
 
 import { Menu, MenuMobile, Header, Footer } from '../components'
 
@@ -82,7 +82,12 @@ const menu = {
         }
     },
     childExtend: {
-       on: { click: (event, element, state) => { state.update({ activeResidenceMenu: false }) } },
+       on: {
+        click: (event, element, state, ctx) => {
+          state.update({ activeResidenceMenu: false })
+          Link.on.click(event, element, state, ctx)
+        }
+      },
       },
     ...[
       { props: { text: 'residence', href: '#residence' } },

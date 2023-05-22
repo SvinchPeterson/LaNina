@@ -24,7 +24,7 @@ const back = {
 
 const logo = {
   extend: Link,
-  attr: { href: '#banner' },
+  props: { href: '#banner' },
   image: { extend: Img, props: { src: LOGO_PNG } }
 }
 

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html --no-cache --port 1236",
     "build": "parcel build index.html",
-    "reinstall": "rm -rf node_modules dist .cache yarn.lock && yarn",
+    "reinstall": "rm -rf node_modules dist .cache yarn.lock; yarn",
     "test": "yarn standard",
     "test-watch": "jest --watch"
   },
@@ -17,10 +17,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/eslint-parser": "^7.17.0",
-    "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "eslint": "^8.12.0",
-    "eslint-plugin-jest": "^22.14.1",
-    "jest": "^26.1.0",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-inlinesvg": "^0.1.1",
     "standard": "^16.0.4"

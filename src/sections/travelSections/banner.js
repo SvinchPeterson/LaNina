@@ -8,6 +8,7 @@ import LAKE_TABLET_JPG from '../../assets/images/travel/lake-tablet.jpg'
 import { positionOpacity, bannerBackground2 } from '../../animations'
 
 const props = {
+  height: '100vh',
   backgroundImage: 'url(' + LAKE_JPG + ')',
   background: 'radial-gradient(rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))',
   style: { animationName: positionOpacity },
