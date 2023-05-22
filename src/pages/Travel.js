@@ -1,6 +1,6 @@
 'use strict'
 
-import { Flex, Img } from 'smbls'
+import { Flex, Img, Link } from 'smbls'
 
 import { properties } from './props'
 
@@ -99,7 +99,12 @@ const menu = {
     },
 
     childExtend: {
-      on: { click: (event, element, state) => { state.update({ activeTravelMenu: false }) } }
+      on: { 
+        click: (event, element, state, ctx) => {
+          state.update({ activeTravelMenu: false }) 
+          Link.on.click(event, element, state, ctx)
+        } 
+      }
     },
     ...[
       { props: { text: 'gallery', href: '#gallery' } },

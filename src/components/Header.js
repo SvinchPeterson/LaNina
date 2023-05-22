@@ -11,7 +11,7 @@ import CLOSE_PNG from '../assets/icons/close.png'
 const back = {
   extend: Link,
   props: {
-    href: '../#landing',
+    href: '/#landing',
     cursor: 'pointer'
   },
   icon: {

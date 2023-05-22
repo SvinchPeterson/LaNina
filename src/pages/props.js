@@ -6,15 +6,6 @@ export const properties = {
   position: 'relative',
   background: 'cream',
   flow: 'column',
-  width: '100%',
-  height: '100%',
-  style: {
-    flex: 1,
-    overflowX: 'hidden',
-    overflowY: 'auto',
-    scrollBehavior: 'smooth',
-    '::-webkit-scrollbar': { display: 'none' }
-  },
   // ':before': {
   //   content: '""',
   //   position: 'fixed',

@@ -101,13 +101,6 @@ const header = {
     {},
     {
       menu: {
-        on: {
-          click: (event, element, state) => {
-            state.activeResidenceMenu
-          ? state.update({ activeResidenceMenu: false })
-          : state.update({ activeResidenceMenu: true })
-          }
-        },
         menu: {
           on: { click: (event, element, state) => { state.update({ activeResidenceMenu: true, activeResidenceMobileMenu: true }) } },
           class: {
