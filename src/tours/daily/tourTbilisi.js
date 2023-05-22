@@ -1,14 +1,14 @@
 'use strict'
 
-import { Tour } from '../../components'
+import { RoomTour } from '../../components'
 import { galleryTbilisi } from '../../galleries/travelGalleries'
 import { $tbilisi } from '../../texts/travel'
 import { packageTbilisi } from '../../toursPackages'
 
 export const tourTbilisi = {
-  extend: Tour,
+  extend: RoomTour,
   // props: { padding: 'C2 - - -' },
-  attr: { id: 'tbilisi' },
+  props: { id: 'tbilisi' },
 
   galleryContainer: {
     class: {
@@ -121,16 +121,25 @@ export const tourTbilisi = {
       }
     },
 
-    more: {
-      props: { href: '#tbilisi' },
+    moreButton: {
       on: {
         click: (event, element, state) => {
-          state.update({ activeTbilisiPackage: true, activeDailyPackages: true })
+          state.update({ activeTbilisiPackage: true, activeDailyPackages: true }),
+          Link.on.click(event, element, state, ctx)
         }
       },
-      class: {
-        show: (element, state) => state.activeTbilisiPackage
-          ? { display: 'none' } : { display: 'block' }
+      more: {
+        on: {
+          click: (event, element, state) => {
+            state.update({ activeTbilisiPackage: true, activeDailyPackages: true }),
+            // Link.on.click(event, element, state, ctx)
+          }
+        },
+        // props: { href: '#tbilisi'},
+        class: {
+          show: (element, state) => state.activeTbilisiPackage
+            ? { display: 'none' } : { display: 'block' }
+        }
       }
     }
   }

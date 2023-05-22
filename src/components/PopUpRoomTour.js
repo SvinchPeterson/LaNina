@@ -86,7 +86,7 @@ const props = {
             round: 'C',
             '@maxMobileS': {  boxSize: 'X A2'}
           },
-          icon: { boxSize: 'Z2 Z2' }
+          icon2: { boxSize: 'Z2 Z2' }
         }
       }
     },
@@ -246,7 +246,7 @@ export const PopUpRoomTour = {
           },
 
           span: {},
-          icon: { extend: Img }
+          icon2: { extend: Img }
         }
       }
     },

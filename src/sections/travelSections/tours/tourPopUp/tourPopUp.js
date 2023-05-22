@@ -128,7 +128,7 @@ export const tourPopUp = {
     header: {
       extend: toursHeader,
       titles: {},
-      tabs: { childExtend: { icon: null } }
+      tabs: { childExtend: { icon2: null } }
     },
     content: {
       extend: toursContainers,
@@ -249,6 +249,7 @@ export const tourPopUp = {
               },
             },
             moreButton: {
+              props: { border: '2px solid red'},
               class: {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
                 ? {
@@ -270,6 +271,7 @@ export const tourPopUp = {
                       activePackage: true,
                       activeScroll: false
                     })
+                    // Link.on.click(event, element, state, ctx)
                   }
                 }
               }

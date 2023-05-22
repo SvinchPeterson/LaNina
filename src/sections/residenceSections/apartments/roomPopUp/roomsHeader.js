@@ -25,13 +25,13 @@ export const roomsHeader = {
 
   tabs: {
     ...[
-      { props: { icon: { src: DRESS_PNG } } },
-      { props: { icon: { src: BRICKS_PNG } } },
-      { props: { icon: { src: SOFA_PNG } } },
-      { props: { icon: { src: LEAF_PNG } } },
-      { props: { icon: { src: VINYL_PNG } } },
-      { props: { icon: { src: LAGOON_PNG } } },
-      { props: { icon: { src: QVEVRI_PNG } } }
+      { props: { icon2: { src: DRESS_PNG } } },
+      { props: { icon2: { src: BRICKS_PNG } } },
+      { props: { icon2: { src: SOFA_PNG } } },
+      { props: { icon2: { src: LEAF_PNG } } },
+      { props: { icon2: { src: VINYL_PNG } } },
+      { props: { icon2: { src: LAGOON_PNG } } },
+      { props: { icon2: { src: QVEVRI_PNG } } }
     ]
   }
 }

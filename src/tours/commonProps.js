@@ -2,6 +2,7 @@
 
 export const commonToursProps = {
   padding: '- - E -',
+  border: '10px solid red',
   style: {
     scrollBehavior: 'smooth',
     overflowY: 'auto',

@@ -12,6 +12,7 @@ create({
   props: {
     width: '100%',
     height: '100%',
+    background: 'cream',
     style: {
       flex: 1,
       overflowX: 'hidden',

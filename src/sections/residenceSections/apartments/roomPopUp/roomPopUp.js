@@ -136,6 +136,7 @@ export const roomPopUp = {
               }
             ]
           },
+
           galleryContainer: {
             title: null,
             gallery: {
@@ -151,6 +152,7 @@ export const roomPopUp = {
 
             }
           },
+
           article: {
             package: null,
             moreButton: null,

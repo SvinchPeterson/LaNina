@@ -70,10 +70,12 @@ export const tourAnanuriGudauri = {
     },
 
     more: {
+      tag: 'div',
       props: { href: '#ananuri' },
       on: {
         click: (event, element, state) => {
-          state.update({ activeAnanuriPackage: true, activeDailyPackages: true })
+          state.update({ activeAnanuriPackage: true, activeDailyPackages: true }),
+          Link.on.click(event, element, state, ctx)
         }
       },
       class: {

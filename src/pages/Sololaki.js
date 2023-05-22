@@ -88,7 +88,7 @@ const menu = {
           Link.on.click(event, element, state, ctx)
         }
       },
-      },
+    },
     ...[
       { props: { text: 'residence', href: '#residence' } },
       { props: { text: 'services & facilities', href: '#service&facilities' } },

@@ -6,6 +6,7 @@ export const properties = {
   position: 'relative',
   background: 'cream',
   flow: 'column',
+  height: '100%',
   // ':before': {
   //   content: '""',
   //   position: 'fixed',

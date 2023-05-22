@@ -36,7 +36,7 @@ const props = {
       cursor: 'pointer',
       zIndex: '40',
       '@maxTabletO': { top: '0', right: '0'},
-      icon: {
+      icon2: {
         boxSize: 'Z ',
         '@maxTabletO': { boxSize: 'Z2 '}
       }
@@ -79,7 +79,7 @@ export const RoomTour = {
     extend: Flex,
     close: {
       extend: [Button, Flex],
-      icon: { extend: Img, props: { src: CLOSE_PNG }}
+      icon2: { extend: Img, props: { src: CLOSE_PNG }}
     },
     description: { extend: Description },
     amenities: { extend: List },

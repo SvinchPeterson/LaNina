@@ -76,7 +76,7 @@ export const toursContainers = {
             close: {},
             description: { extend: $tbilisi },
             moreButton: {
-              more: { props: {href: '#tbilisi'}}
+              more: { props: { href: '#tbilisi'} }
             },
             package: { extend: packageTbilisi }
           }
@@ -191,7 +191,7 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $dashbashi },
-            moreButton: { more: {props: {href: '#dashbashi'}}},
+            moreButton: { more: { props: { href: '#dashbashi'}} },
             package: { extend: packageDashbashi }
           }
         },
