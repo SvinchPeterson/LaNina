@@ -112,7 +112,7 @@ const props = {
         width: '100%',
         height: '100%',
         zIndex: '3',
-        background: 'linear-gradient(rgba(0, 47, 57, .45), rgba(0, 47, 57, 1))',
+        background: 'linear-gradient(rgba(0, 47, 57, 0), rgba(0, 47, 57, 1))',
         '@maxTabletS': {
           background: 'linear-gradient(rgba(0, 47, 57, .25), rgba(0, 47, 57, 1))'
         }

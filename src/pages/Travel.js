@@ -22,8 +22,9 @@ const state = {
   activePopUpContent: false,
   activePackage: false,
   activeTour: false,
+  activePopUpGallery: false,
+  activeGallery: false,
 
-  activeGallery: -1,
   activeScroll: true,
 
   activeTbilisiImage: 0,
