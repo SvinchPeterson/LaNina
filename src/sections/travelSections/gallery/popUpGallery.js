@@ -49,7 +49,7 @@ export const popUpGallery = {
   class: {
     show: (element, state) => state.activePopUpGallery
       ? { height: '100%' }
-      : { height: '0', pointerEvents: 'none' }
+      : { height: '100%', pointerEvents: 'none' }
   },
   close: {
     on: {
@@ -68,11 +68,11 @@ export const popUpGallery = {
   },
 
   contentContainer: {
-    header: { extend: galleryHeader},
-    content: { extend: galleries },
+    // header: { extend: galleryHeader},
+    // content: { extend: galleries },
 
-    nav: { extend: navBar },
-    galleries: {extend: galleries}
+    // nav: { extend: navBar },
+    // galleries: {extend: galleries}
   },
 
     logo: {
