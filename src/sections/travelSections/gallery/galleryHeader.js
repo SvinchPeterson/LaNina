@@ -50,6 +50,7 @@ export const galleryHeader = {
 
   titles: {
     childExtend: {
+      tag: 'h2',
       class: {
         show: (element, state) => state.activeGallery === parseInt(element.key)
         ? {
@@ -77,6 +78,7 @@ export const galleryHeader = {
   },
 
   tabs: {
+    extend: Flex,
     childExtend: {
       extend: Button,
       span: {},

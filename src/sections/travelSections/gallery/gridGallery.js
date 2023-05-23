@@ -164,13 +164,16 @@ export const gridGalleries = {
   content: {
     extend: Grid,
     childExtend: {
-      extend: Link,
+      extend: Button,
       title: { tag: 'h4' },
       on: {
         click: (event, element, state) => {
-          state.update({activeGallery: parseInt(element.key), activePopUpGallery: true })
+          state.update({
+            activeGalleryPopUp: true
+          })
         }
       }
+
     },
   ...[
     {

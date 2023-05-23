@@ -1,5 +1,7 @@
 'use strict'
 
+import { Flex } from 'smbls'
+
 import { GalleryContainer } from '../../../components'
 
 import { galleryTbilisi, galleryBorjomi, galleryMtsketa, galleryKakheti, galleryMartvili, galleryKutaisi, galleryGori, galleryKazbegi } from '../../../galleries/travelGalleries'
@@ -84,6 +86,7 @@ const galleryContainer = {
 }
 
 export const galleries = {
+  extend: Flex,
   props,
   childExtend: {
     extend: galleryContainer,

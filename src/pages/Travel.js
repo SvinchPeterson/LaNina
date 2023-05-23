@@ -17,15 +17,13 @@ const state = {
   activeImage: 0,
   activeTourPopUp: true,
 
-  // activePopUp: true,
   activePopUp: false,
   activePopUpContent: false,
   activePackage: false,
   activeTour: false,
-  activePopUpGallery: false,
-  activeGallery: false,
-
   activeScroll: true,
+  activeGalleryPopUp: false,
+  activeGallery: false,
 
   activeTbilisiImage: 0,
   activeAnanuriImage: 0,
