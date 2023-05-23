@@ -63,8 +63,7 @@ export const NavArrowsCream = {
   extend: NavArrows,
   props: {
     childProps: {
-      border: 'solid, cream .75',
-      borderWidth: '.55px',
+      style: {border: '.5px solid rgba(255, 249, 237, .5)' },
       ':hover': { '@minTabletL': { background: 'cream .025' } },
       ':hover > img': { '@minTabletL': { transform: 'scale(1.1)' } }
     }

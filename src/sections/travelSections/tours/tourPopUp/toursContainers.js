@@ -39,6 +39,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -100,6 +101,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -159,6 +161,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -217,6 +220,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -274,6 +278,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -332,6 +337,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -389,6 +395,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -446,6 +453,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -503,6 +511,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -564,6 +573,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -621,6 +631,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -678,6 +689,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -735,6 +747,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -792,6 +805,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -853,6 +867,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -914,6 +929,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -975,6 +991,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {
@@ -1036,6 +1053,7 @@ export const toursContainers = {
               }
             },
             footer: {
+              book: {},
               navArrows: {
                 ...[
                   {

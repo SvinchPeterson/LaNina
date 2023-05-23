@@ -7,7 +7,7 @@ import { GalleryContainer } from '../../../components'
 import { galleryTbilisi, galleryBorjomi, galleryMtsketa, galleryKakheti, galleryMartvili, galleryKutaisi, galleryGori, galleryKazbegi } from '../../../galleries/travelGalleries'
 
 const props = {
-  boxSize: 'H1 H3',
+  boxSize: 'H1 H2',
   position: 'relative',
   overflow: 'hidden',
   margin: '- -F - -',

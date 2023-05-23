@@ -5,11 +5,10 @@ const props = {
   color: 'cream',
   textTransform: 'uppercase',
   target: '_blank',
-  border: 'solid, cream .5',
-  borderWidth: '.5px',
   round: 'B',
   padding: 'Z B1',
   height: 'fit-content',
+  style: { border: '.5px solid rgba(255, 249, 237, .5)'}
 }
 
 export const BookingLink = {
