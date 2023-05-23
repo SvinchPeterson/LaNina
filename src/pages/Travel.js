@@ -7,7 +7,7 @@ import { properties } from './props'
 import { Header, Footer, Menu, MenuMobile } from '../components'
 import { banner, georgia, gallery, tours, feedBacks, aboutUs, planTrip, contact } from '../sections/travelSections'
 import { tourPopUp } from '../sections/travelSections/tours/tourPopUp/tourPopUp'
-import { popUpGallery } from '../sections/travelSections/gallery/popUpGallery'
+import { galleryPopUp } from '../sections/travelSections/gallery/galleryPopUp'
 
 import ORNAMENT_PNG from '../assets/images/travel/ornament.png'
 
@@ -242,7 +242,7 @@ export const Travel = {
   banner,
   georgia,
   gallery,
-  popUpGallery,
+  galleryPopUp,
   tours,
   tourPopUp,
   feedBacks,

@@ -96,7 +96,8 @@ const props = {
       backgroundSize: 'cover',
       overflow: 'hidden',
       cursor: 'pointer',
-      style: { border: '2px solid rgba(226, 135, 67, 1)'},
+      border: 'solid, orange 1',
+      borderWidth: '.5px',
       '@minTabletL': { style:{ backgroundAttachment: 'fixed' } },
       '@maxTabletS': {
         minWidth: `${250 / 16}em`,
@@ -169,7 +170,7 @@ export const gridGalleries = {
       on: {
         click: (event, element, state) => {
           state.update({
-            activePopUp: true
+            activePopUpGallery: true
           })
         }
       }

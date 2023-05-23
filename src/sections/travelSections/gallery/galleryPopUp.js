@@ -13,7 +13,7 @@ import ORNAMENT_PNG from '../../../assets/images/travel/ornament.png'
 const props = {
   style: { backgroundAttachment: 'fixed' },
   ':before': { background: 'radial-gradient(rgba(0, 47, 57, .35), rgba(0, 47, 57, .96), rgba(0, 47, 57, 1))' },
-  height: '0',
+  // height: '0',
   backgroundColor: 'orange',
   style: { backgroundImage: 'url(' + ORNAMENT_PNG + ')', backgroundAttachment: 'fixed' },
   backgroundSize: 'cover',
@@ -116,14 +116,15 @@ const props = {
   }
 }
 
-export const popUpGallery = {
+export const galleryPopUp = {
   extend: PopUpModal,
   props,
-  // class: {
-  //   show: (element, state) => state.activePopUp
-  //     ? { height: '100%' }
-  //     : { height: '0', pointerEvents: 'none' }
-  // },
+
+  class: {
+    show: (element, state) => state.activePopUpGallery
+      ? { height: '100%' }
+      : { height: '0' }
+  },
 
   close: {
     on: {
