@@ -8,9 +8,15 @@ import { galleries } from './galleries'
 import { navBar } from './navBar'
 import { galleryHeader } from './galleryHeader'
 
+import ORNAMENT_PNG from '../../../assets/images/travel/ornament.png'
+
 const props = {
-  background: 'naviBlue',
+  ':before': { background: 'radial-gradient(rgba(0, 47, 57, .35), rgba(0, 47, 57, .96), rgba(0, 47, 57, 1))' },
   height: '0',
+  backgroundColor: 'orange',
+  style: { backgroundImage: 'url(' + ORNAMENT_PNG + ')', backgroundAttachment: 'fixed' },
+  backgroundSize: 'cover',
+  backgroundPosition: 'center center',
 
   close: {
     '@maxMobileM': {
