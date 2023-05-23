@@ -10,7 +10,7 @@ const props = {
   width: 'fit-content',
   alignSelf: 'center',
   margin: 'E - E1 -',
-  padding: 'E - - -',
+  padding: 'E - E -',
   position: 'relative',
   '@maxTabletL': { margin: 'C - E1 -'},
   '@maxTabletM': { width: '70%' },
