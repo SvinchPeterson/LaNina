@@ -156,6 +156,27 @@ export const textQvevriEng = {
   ]
 }
 
+
+export const textNightSkyEng = {
+  extend: Description,
+  ...[
+    {
+      ...[
+        `Cozy and quiet one-bedroom apartment of `,
+        { tag: 'span', text: '50m2' },
+        ` with an open terrace, located on the high first floor and composed of a living room with a comfortable `,
+        { tag: 'span', text: 'sofa bed' },
+        ` for 1 person and bedroom with `,
+        { tag: 'span', text: '1 Full size bed' },
+        `, private bathroom with shower, kitchen with a dining area, making the apartment comfortable `,
+        { tag: 'span', text: '3 people' },
+        '.'
+
+      ]
+    }
+  ]
+}
+
 // wine
 
 export const wineTextEng = {

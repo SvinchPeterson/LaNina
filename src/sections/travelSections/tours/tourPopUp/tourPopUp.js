@@ -133,14 +133,18 @@ export const tourPopUp = {
     content: {
       extend: toursContainers,
       childExtend: {
+        props: { position: 'relative' },
         childExtend: {
           class: {
             show: (element, state) => state.activeTour === parseInt(element.key)
             ? {
+              minHeight: '100%',
+              height: '100%',
+              '~ div': { display: 'none'},
               ':nth-child(odd) > article': {
                 '@media only screen and (min-width: 1181px)': {
                   transform: 'translateX(-50px)',
-                  background: 'rgba(0, 47, 57, .85)',
+                  // background: 'rgba(0, 47, 57, .85)',
                   boxShadow:' rgba(0, 0, 0, 0.45) -30px 0px 20px -20px'
                 },
               },
@@ -152,7 +156,7 @@ export const tourPopUp = {
               ':nth-child(even) > article': {
                 '@media only screen and (min-width: 1181px)': {
                   transform: 'translateX(50px)',
-                  background: 'rgba(0, 47, 57, .85)',
+                  // background: 'rgba(0, 47, 57, .85)',
                   boxShadow:' rgba(0, 0, 0, 0.45) 30px 0px 20px -20px'
                 }
               },
@@ -196,7 +200,12 @@ export const tourPopUp = {
                   display: 'none'
                 }
               }
-            }
+            },
+            // show2: (element, state) => state.activeTour === element.nextElement(key)
+            // ? { display: 'none'} : {}
+
+            show2: (element, state) => state.deActiveTour === parseInt(element.key)
+            ? { display: 'none' } : {}
           },
           header: {
             ...[
@@ -225,7 +234,8 @@ export const tourPopUp = {
                   state.update({
                     activeTour: false,
                     activeScroll: true,
-                    activeButton: false
+                    activeButton: false,
+                    deActiveTour: false
                   })
                 }
               },
@@ -249,7 +259,15 @@ export const tourPopUp = {
               },
             },
             moreButton: {
-              props: { border: '2px solid red'},
+              on: {
+                click: (event, element, state, ctx) => {
+                  state.update({
+                    activeTour: parseInt(element.parent.parent.key),
+                    activePackage: true,
+                    activeScroll: false,
+                  })
+                }
+              },
               class: {
                 show: (element, state) => state.activeTour === parseInt(element.parent.parent.key)
                 ? {
@@ -263,18 +281,30 @@ export const tourPopUp = {
                   }
                 }
               },
-              more: {
-                on: {
-                  click: (event, element, state) => {
-                    state.update({
-                      activeTour: parseInt(element.parent.parent.parent.key),
-                      activePackage: true,
-                      activeScroll: false
-                    })
-                    // Link.on.click(event, element, state, ctx)
-                  }
-                }
-              }
+              // ...[{
+              //   on: {
+              //     click: (event, element, state, ctx) => {
+              //       state.update({
+              //         activeTour: parseInt(element.parent.parent.key),
+              //         activePackage: true,
+              //         activeScroll: false
+              //       }),
+              //       Link.on.click(event, element, state, ctx)
+              //     }
+              //   }
+              // }]
+              // more: {
+              //   on: {
+              //     click: (event, element, state) => {
+              //       state.update({
+              //         activeTour: parseInt(element.parent.parent.parent.key),
+              //         activePackage: true,
+              //         activeScroll: false
+              //       })
+              //       // Link.on.click(event, element, state, ctx)
+              //     }
+              //   }
+              // }
             },
             package: {
               class: {

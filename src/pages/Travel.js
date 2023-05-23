@@ -45,7 +45,8 @@ const state = {
   activeWineImage: 0,
   activeAdventureImage: 0,
 
-  activeButton: false
+  activeButton: false,
+  deActiveTour: false
 }
 
 
@@ -99,11 +100,11 @@ const menu = {
     },
 
     childExtend: {
-      on: { 
+      on: {
         click: (event, element, state, ctx) => {
-          state.update({ activeTravelMenu: false }) 
+          state.update({ activeTravelMenu: false })
           Link.on.click(event, element, state, ctx)
-        } 
+        }
       }
     },
     ...[

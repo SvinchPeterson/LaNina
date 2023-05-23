@@ -12,6 +12,7 @@ import GREENFOREST_JPG from '../../../assets/images/residence/rooms/greenForest/
 import RETRO_JPG from '../../../assets/images/residence/rooms/retro/retroTab.jpg'
 import BLUE_LAGOON_JPG from '../../../assets/images/residence/rooms/blueLagoon/blueLagoonTab.jpeg'
 import QVEVRI_TAB_JPG from '../../../assets/images/residence/rooms/qvevri/qvevriTab.jpeg'
+import NIGHTSKY_TAB_JPG from '../../../assets/images/residence/rooms/nightSky/tab.jpg'
 
 import DRESS_PNG from '../../../assets/icons/dress.png'
 import BRICKS_PNG from '../../../assets/icons/bricks.png'
@@ -184,10 +185,8 @@ export const tabs = {
           title: { props: { text: 'qvevri' }}
         },
         {
-          on: { click: (event, element, state) => { element.style({ pointerEvents: 'none'}) } },
-          props: { '@minTabletL':{':hover > p': { opacity: '.6'}}},
-          backImage: { },
-          icon: { props: { src: MOON_PNG, opacity: '.6'}},
+          backImage: { props: { backgroundImage: 'url(' + NIGHTSKY_TAB_JPG + ')'} },
+          icon: { props: { src: MOON_PNG}},
           p: { props: { text: 'Redefining urban living, count the stars!' }},
           title: { props: { text: 'night sky' }}
         }

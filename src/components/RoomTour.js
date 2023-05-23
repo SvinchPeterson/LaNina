@@ -53,9 +53,10 @@ const props = {
     moreButton: {
       border: 'solid, cream .5',
       borderWidth: '.5px 0 0 0',
-      minWidth: '100%',
+      width: '100%',
+      background: 'transparent',
+      color: 'cream',
       more: {
-        color: 'cream2',
         cursor: 'pointer',
         opacity: '.75',
         ':hover': { opacity: '1' }
@@ -83,7 +84,10 @@ export const RoomTour = {
     },
     description: { extend: Description },
     amenities: { extend: List },
-    moreButton: { more: { extend: Link, text: 'more' } },
+    moreButton: {
+      tag: 'button',
+      more: { text: 'more'}
+    },
     package: { extend: TourPackage },
   }
 }

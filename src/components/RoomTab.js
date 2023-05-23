@@ -32,7 +32,6 @@ const props = {
   '@minTabletL': {
     transition: 'flex 1s ease',
     ':hover': { flex: '12' },
-    ':hover:last-child > h3': { opacity: '.6' },
     ':hover > p': {
        opacity: '1',
        transition: 'opacity 1s ease-in-out'
@@ -45,12 +44,7 @@ const props = {
   },
   '@maxTabletL': {
     minWidth: 'F',
-    justifyContent: 'center',
-    ':last-child > p': {
-      display: 'block',
-      opacity: '1',
-      // width: 'C'
-    }
+    justifyContent: 'center'
   },
   backImage: {
     boxSize: '100% 100%',

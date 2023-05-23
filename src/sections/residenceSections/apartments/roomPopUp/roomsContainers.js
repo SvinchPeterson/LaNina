@@ -4,12 +4,12 @@ import { Amenities } from "../../../../components"
 
 import {
   galleryBallerina, galleryRedBrick, galleryYellowCouch,
-  galleryGreenForest, galleryRetro, galleryBlueLagoon, galleryQvevri
+  galleryGreenForest, galleryRetro, galleryBlueLagoon, galleryQvevri, galleryNightSky
  } from "../../../../galleries/apartmentsGalleries"
 
 import {
   textBallerinaEng, textRedBrickEng, textYellowCouchEng,
-  textGreenForrestEng, textRetroEng, textBlueLagoonEng, textQvevriEng
+  textGreenForrestEng, textRetroEng, textBlueLagoonEng, textQvevriEng, textNightSkyEng
  } from "../../../../texts/residence"
 
 
@@ -415,6 +415,63 @@ export const roomsContainers = {
           },
           article: {
             description: { extend: textQvevriEng },
+            amenities: { extend: Amenities }
+          }
+        }
+      ]
+    },
+    {
+      ...[
+        {
+          header: {},
+          galleryContainer: {
+            gallery: {
+              extend: galleryNightSky,
+              childExtend: {
+                class: {
+                  show: (element, state) => state.activeNightSkyImage === parseInt(element.key)
+                    ? { opacity: 1 } : { opacity: 0 }
+                }
+              }
+            },
+            footer: {
+              book: {
+                props: { href: 'https://www.airbnb.com/rooms/836638635181727976?source_impression_id=p3_1682382829_EYIf93LXdF9pRBSM' }
+              },
+              navArrows: {
+                ...[
+                  {
+                    on: {
+                      click: (event, element, state) => {
+                        const {activeNightSkyImage} = state
+                        state.update({
+                          activeNightSkyImage: activeNightSkyImage - 1
+                        })
+                        if (activeNightSkyImage <= 0) {
+                          state.update({ activeNightSkyImage: 9 })
+                        }
+                      }
+                    }
+                  },
+                  {
+                    on: {
+                      click: (event, element, state) => {
+                        const {activeNightSkyImage} = state
+                        state.update({
+                          activeNightSkyImage: activeNightSkyImage + 1
+                        })
+                        if (activeNightSkyImage >= 9) {
+                          state.update({ activeNightSkyImage: 0 })
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          article: {
+            description: { extend: textNightSkyEng },
             amenities: { extend: Amenities }
           }
         }

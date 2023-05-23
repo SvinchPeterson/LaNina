@@ -26,6 +26,7 @@ const state = {
   activeRetroImage: 0,
   activeBlueLagoonImage: 0,
   activeQvevriImage: 0,
+  activeNightSkyImage: 0,
   activeRoomDescription: false,
   activeRoomAmenities: false,
   activeButton: false,

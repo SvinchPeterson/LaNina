@@ -76,7 +76,9 @@ export const toursContainers = {
             close: {},
             description: { extend: $tbilisi },
             moreButton: {
-              more: { props: { href: '#tbilisi'} }
+              props: { href: '#tbilisi'}
+              // ...[{ props: { href: '#tbilisi'}}]
+              // // more: { props: { href: '#tbilisi'} }
             },
             package: { extend: packageTbilisi }
           }
@@ -134,7 +136,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $ananuri },
-            moreButton: { more: {props: {href: '#ananuri'}}},
+            moreButton: {
+              props: {href: '#ananuri'}
+            },
             package: { extend: packageAnanuri }
           }
         },
@@ -191,7 +195,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $dashbashi },
-            moreButton: { more: { props: { href: '#dashbashi'}} },
+            moreButton: {
+            props: { href: '#dashbashi'}
+            },
             package: { extend: packageDashbashi }
           }
         },
@@ -246,7 +252,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $mtsketa },
-            moreButton: { more: { props: { href: '#mtsketa'}}},
+            moreButton: {
+              props: { href: '#mtsketa'}
+            },
             package: { extend: packageMtskheta }
           }
         },
@@ -302,7 +310,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $kakheti },
-            moreButton: { more: {props: {href: '#kakheti'}}},
+            moreButton: {
+              props: {href: '#kakheti'}
+            },
             package: { extend: packageKakheti }
           }
         },
@@ -357,7 +367,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $kutaisi },
-            moreButton: { more: { props: {href: '#kutaisi'}}},
+            moreButton: {
+              props: {href: '#kutaisi'}
+            },
             package: { extend: packageKutaisi }
           }
         },
@@ -412,7 +424,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $gori },
-            moreButton: { more: {props: {href: '#gori'}}},
+            moreButton: {
+              props: {href: '#gori'}
+            },
             package: { extend: packageGori}
           }
         },
@@ -467,7 +481,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $borjomi },
-            moreButton: { more: {props: {href: '#borjomi'}}},
+            moreButton: {
+              props: {href: '#borjomi'}
+            },
             package: { extend: packageBorjomi }
           }
         },
@@ -522,7 +538,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $rabat },
-            moreButton: { more: { props: {href: '#rabati'}}},
+            moreButton: {
+              props: {href: '#rabati'}
+            },
             package: { extend: packageRabati }
           }
         }
@@ -581,7 +599,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $capital },
-            moreButton: { more: { props: { href: '#capital'}}},
+            moreButton: {
+              props: { href: '#capital'}
+            },
             package: { extend: packageCapital }
           }
         },
@@ -636,7 +656,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $cultural },
-            moreButton: { more: {props: {href: '#cultural'}}},
+            moreButton: {
+              props: {href: '#cultural'}
+            },
             package: { extend: packageCultural }
           }
         },
@@ -691,7 +713,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $historical },
-            moreButton: { more: { props: {href: '#historical'}}},
+            moreButton: {
+               props: {href: '#historical'}
+            },
             package: { extend: packageHistorical }
           }
         },
@@ -746,7 +770,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $royal },
-            moreButton: { more: { props: {href: '#royal'}}},
+            moreButton: {
+              props: {href: '#royal'}
+            },
             package: { extend: packageRoyal }
           }
         },
@@ -801,7 +827,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $caucasusMountain },
-            moreButton: { more: {props: { href: '#mountain'}}},
+            moreButton: {
+              props: { href: '#mountain'}
+            },
             package: { extend: packageCaucasusMountain }
           }
         }
@@ -860,7 +888,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $caucasus },
-            moreButton: { more: { props: { href: '#caucasus'}}},
+            moreButton: {
+              props: { href: '#caucasus'}
+            },
             package: { extend: packageCaucasus }
           }
         }
@@ -919,7 +949,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $exclusive },
-            moreButton: { more: {props: {href: '#exclusive'}}},
+            moreButton: {
+              props: {href: '#exclusive'}
+            },
             package: { extend: packageExclusive }
           }
         }
@@ -978,7 +1010,9 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $wineGastronomy },
-            moreButton: { more: { props: {href: '#wine'}}},
+            moreButton: {
+              props: {href: '#wine'}
+            },
             package: { extend: packageWineGastronomy }
           }
         }
@@ -1037,7 +1071,10 @@ export const toursContainers = {
           article: {
             close: {},
             description: { extend: $adventure },
-            moreButton: { more: { props: { href: '#adventure'}}},
+            moreButton: {
+              style: { href: '#adventure'}
+              // props: { href: '#adventure' }
+            },
             package: { extend: packageAdventure }
           }
         }
