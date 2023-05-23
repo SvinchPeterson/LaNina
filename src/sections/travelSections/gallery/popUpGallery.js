@@ -119,11 +119,11 @@ const props = {
 export const popUpGallery = {
   extend: PopUpModal,
   props,
-  class: {
-    show: (element, state) => state.activeGalleryPopUp
-      ? { height: '100%' }
-      : { height: '0', pointerEvents: 'none' }
-  },
+  // class: {
+  //   show: (element, state) => state.activePopUp
+  //     ? { height: '100%' }
+  //     : { height: '0', pointerEvents: 'none' }
+  // },
 
   close: {
     on: {

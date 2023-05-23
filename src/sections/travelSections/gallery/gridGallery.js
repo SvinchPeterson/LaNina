@@ -41,10 +41,11 @@ const props = {
     transform: 'rotate(180deg)',
     position: 'absolute',
     textTransform: 'capitalize',
-    fontSize: 'F',
-    top: 'E',
+    fontSize: 'E',
+    top: 'E2',
     left: '-B1',
     zIndex: '20',
+    letterSpacing: '-1px',
     style: {
       writingMode: 'vertical-rl',
       textOrientation: 'mixed'
@@ -95,8 +96,7 @@ const props = {
       backgroundSize: 'cover',
       overflow: 'hidden',
       cursor: 'pointer',
-      border: 'solid, naviBlue',
-      borderWidth: '1px',
+      style: { border: '2px solid rgba(226, 135, 67, 1)'},
       '@minTabletL': { style:{ backgroundAttachment: 'fixed' } },
       '@maxTabletS': {
         minWidth: `${250 / 16}em`,
@@ -169,7 +169,7 @@ export const gridGalleries = {
       on: {
         click: (event, element, state) => {
           state.update({
-            activeGalleryPopUp: true
+            activePopUp: true
           })
         }
       }
