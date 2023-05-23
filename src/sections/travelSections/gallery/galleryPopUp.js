@@ -32,13 +32,14 @@ const props = {
     boxSize: '100% 85%',
     zIndex: '3',
     flow: 'column',
+    padding: 'B - - -',
     style: { boxShadow: '0px 60px 30px 15px rgba(0, 0, 0, .25)' },
     '@maxMobileL': { flow: 'column', gap: 'C' },
     '@maxMobileM': {boxSize: '100% 90%'},
 
     header: {
       '@minMobileL': { display: 'none'},
-      boxSize: 'D2 100%',
+      boxSize: 'D 100%',
       align: 'flex-end space-between',
       overflow: 'hidden',
       border: 'solid, cream .35',

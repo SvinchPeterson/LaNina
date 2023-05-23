@@ -170,7 +170,8 @@ export const gridGalleries = {
       on: {
         click: (event, element, state) => {
           state.update({
-            activePopUpGallery: true
+            activePopUpGallery: true,
+            activeGallery: parseInt(element.key)
           })
         }
       }

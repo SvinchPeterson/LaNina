@@ -3,6 +3,7 @@
 import { Flex, Button } from 'smbls'
 
 const props = {
+  opacity: '1',
   titles: {
     childProps: {
       fontSize: `${32 / 16}em`,
@@ -10,7 +11,7 @@ const props = {
       textTransform: 'capitalize',
       padding: '- - - X1',
       '@maxMobileL': {
-        letterSpacing: '-2px'
+        letterSpacing: '-1px'
       }
     }
   },
@@ -43,7 +44,7 @@ export const galleryHeader = {
   props,
 
   class: {
-    show: (element, state) => state.activePopUpGallery
+    show: (element, state) => state.activeGalleryPopUp
       ? { opacity: '1' }
       : { opacity: '0' }
   },
