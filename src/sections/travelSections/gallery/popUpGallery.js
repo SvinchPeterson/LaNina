@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { RoomsToursPopUp } from '../../../components'
+import { PopUpRoomTour } from '../../../components'
 
 import { galleries } from './galleries'
 import { navBar } from './navBar'
@@ -22,7 +22,7 @@ const props = {
     '@maxMobileM': {
       padding: 'A'
     },
-    icon: { boxSize: 'A ' }
+    icon2: { boxSize: 'A ' }
   },
 
   contentContainer: {
@@ -44,7 +44,7 @@ const props = {
 }
 
 export const popUpGallery = {
-  extend: RoomsToursPopUp,
+  extend: PopUpRoomTour,
   props,
   class: {
     show: (element, state) => state.activePopUpGallery

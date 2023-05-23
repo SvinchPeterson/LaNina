@@ -64,7 +64,9 @@ const props = {
 
       },
       navArrows: {
-        zIndex: '5'
+        zIndex: '5',
+        gap: 'Y',
+        childProps: {border: 'none'}
       }
     }
   }
