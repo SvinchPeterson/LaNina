@@ -125,13 +125,11 @@ const props = {
       title: {
         position: 'absolute',
         color: 'cream',
-        fontSize: 'F',
+        fontSize: 'E',
         fontWeight: '100',
         textTransform: 'capitalize',
-        letterSpacing: '-.5px',
+        // letterSpacing: '-.5px',
         zIndex: '10',
-        bottom: 'B',
-        right: 'B',
         // transform: 'translate(-50%, -50%)',
         style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' },
         '@maxTabletS': { fontSize: 'F', letterSpacing: '-.45px', }
@@ -181,7 +179,11 @@ export const gridGalleries = {
         backgroundImage: 'url(' + TBILISI_JPG + ')',
         gridColumn: '1 / span 2',
         gridRow: '1 / span 2',
-        title: { text: 'tbilisi' }
+        title: {
+          text: 'tbilisi',
+          bottom: 'A',
+          left: 'A1',
+        }
       }
     },
 
@@ -190,7 +192,11 @@ export const gridGalleries = {
         round: 'G1 G1 0 0',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + BORJOMI_JPG + ')',
-        title: { text: 'borjomi' }
+        title: {
+          text: 'borjomi',
+          bottom: 'A',
+          right: 'A1',
+        }
       }
     },
 
@@ -199,7 +205,11 @@ export const gridGalleries = {
         gridColumn: '3 / span 4',
         round: '0 0 0 F',
         backgroundImage: 'url(' + MTSKETA_JPG + ')',
-        title: { text: 'mtsketa' }
+        title: {
+          text: 'mtsketa',
+          bottom: 'A',
+          right: 'A1',
+        }
       }
     },
 
@@ -209,7 +219,11 @@ export const gridGalleries = {
         round: '0 G1 G1 0',
         gridColumn: '1 / span 2',
         backgroundImage: 'url(' + KAKHETI_JPG + ')',
-        title: { text: 'kakheti' }
+        title: {
+          text: 'kakheti',
+          bottom: 'A',
+          left: 'A1',
+        }
       }
     },
 
@@ -219,7 +233,11 @@ export const gridGalleries = {
         gridRow: '3',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + MARTVILI_JPG + ')',
-        title: { text: 'martvili' }
+        title: {
+          text: 'martvili',
+          bottom: 'A',
+          right: 'A1'
+        }
       }
     },
 
@@ -229,7 +247,11 @@ export const gridGalleries = {
         gridRow: '4',
         gridColumn: '1 / span 2',
         backgroundImage: 'url(' + KUTAISI_JPG + ')',
-        title: { text: 'kutaisi' }
+        title: {
+          text: 'kutaisi',
+          bottom: 'A',
+          left: 'A1'
+        }
       }
     },
 
@@ -239,7 +261,11 @@ export const gridGalleries = {
         gridRow: '4',
         gridColumn: '3 / span 4',
         backgroundImage: 'url(' + GORI_JPG + ')',
-        title: { text: 'gori' }
+        title: {
+          text: 'gori',
+          bottom: 'A',
+          right: 'A1'
+        }
       }
     },
 
@@ -249,7 +275,12 @@ export const gridGalleries = {
         backgroundImage: 'url(' + KAZBEGI_JPG + ')',
         gridColumn: '1 / span 6',
         gridRow: 'span 5',
-        title: { text: 'kazbegi' }
+        title: {
+          text: 'kazbegi',
+          bottom: 'C',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
+        }
       }
     }
   ]
