@@ -1,6 +1,6 @@
 'use strict'
 
-import { Grid, Flex } from 'smbls'
+import { Grid, Flex, Button } from 'smbls'
 
 import { ScrollTitle } from '../../../components'
 
@@ -166,10 +166,11 @@ export const gridGalleries = {
   content: {
     extend: Grid,
     childExtend: {
+      extend: Button,
       title: { tag: 'h4' },
       on: {
         click: (event, element, state) => {
-          state.update({ activePopUpModal: true, activeGallery: parseInt(element.key), activePopUpGallery: true })
+          state.update({activeGallery: parseInt(element.key), activePopUpGallery: true })
         }
       }
     },
