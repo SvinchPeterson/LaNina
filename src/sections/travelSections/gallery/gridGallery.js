@@ -1,6 +1,6 @@
 'use strict'
 
-import { Grid, Flex, Button } from 'smbls'
+import { Grid, Flex, Button, Link } from 'smbls'
 
 import { ScrollTitle } from '../../../components'
 
@@ -125,14 +125,14 @@ const props = {
       title: {
         position: 'absolute',
         color: 'cream',
-        fontSize: 'G',
+        fontSize: 'F',
         fontWeight: '100',
         textTransform: 'capitalize',
-        letterSpacing: '-1px',
+        letterSpacing: '-.5px',
         zIndex: '10',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
+        bottom: 'B',
+        right: 'B',
+        // transform: 'translate(-50%, -50%)',
         style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' },
         '@maxTabletS': { fontSize: 'F', letterSpacing: '-.45px', }
       }
@@ -166,7 +166,7 @@ export const gridGalleries = {
   content: {
     extend: Grid,
     childExtend: {
-      extend: Button,
+      extend: Link,
       title: { tag: 'h4' },
       on: {
         click: (event, element, state) => {

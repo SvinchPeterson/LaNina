@@ -2,7 +2,7 @@
 
 import { Flex } from 'smbls'
 
-import { PopUpRoomTour } from '../../../components'
+import { PopUpRoomTour, RoomsToursPopUp } from '../../../components'
 
 import { galleries } from './galleries'
 import { navBar } from './navBar'
@@ -44,7 +44,7 @@ const props = {
 }
 
 export const popUpGallery = {
-  extend: PopUpRoomTour,
+  extend: RoomsToursPopUp,
   props,
   class: {
     show: (element, state) => state.activePopUpGallery
