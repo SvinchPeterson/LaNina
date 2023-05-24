@@ -13,7 +13,8 @@ const props = {
     borderWidth: 'black',
     borderWidth: '0 0 1px 0',
     padding: '- - A -'
-  }
+  },
+  '@maxMobileL': { padding: '0 - E -' }
 
 }
 
