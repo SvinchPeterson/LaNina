@@ -49,7 +49,7 @@ const props = {
         align: 'flex-start flex-end',
         border: 'none',
         padding: '0',
-        boxSize: 'E1 100%',
+        boxSize: 'D 100%',
       },
 
       titles: {

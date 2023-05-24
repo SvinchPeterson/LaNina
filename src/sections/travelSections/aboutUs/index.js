@@ -19,7 +19,10 @@ const props = {
   },
 
   article: {
-    maxWidth: 'H'
+    maxWidth: 'H',
+    '@maxMobileS': {
+      padding: '- Z1'
+    }
   }
 }
 

@@ -62,13 +62,14 @@ const props = {
       '@maxMobileL': {
         alignSelf: 'flex-end',
         justifyContent: 'flex-end',
-        padding: 'Z A1 - -',
+        padding: 'A A1 - -',
 
       },
       navArrows: {
         zIndex: '5',
         gap: 'Y',
-        childProps: {border: 'none'}
+        '@maxMobileL': { gap: 'B' },
+        childProps: { style: { '@media only screen and (min-width: 769px)': {border: 'none'}}}
       }
     }
   }

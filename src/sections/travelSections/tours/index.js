@@ -11,7 +11,7 @@ const props = {
   padding: 'F - - -',
 
   '@maxHeightO': { padding: 'E1 -'},
-  '@maxHeightN': { padding: '0', minHeight: '100%'}
+  '@maxHeightN': { padding: '0', minHeight: '100%', margin: 'F - E -',}
 }
 
 export const tours = {

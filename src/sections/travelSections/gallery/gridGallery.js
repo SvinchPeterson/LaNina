@@ -19,22 +19,30 @@ import RIGHT_ARROW from '../../../assets/icons/arrowsDouble-right-cream.png'
 const props = {
   maxWidth: `100%`,
   position: 'relative',
-  '@maxTabletS': {
+  '@maxMobileL': {
+    height: '60%',
+    width: '100%',
     overflow: 'hidden',
-    fontSize: `${15 / 16}em`
+    // border: '3px solid black',
+    // minHeight: '100%',
+    // flex: '1'
   },
+  // '@maxTabletS': {
+  //   overflow: 'hidden',
+  //   fontSize: `${15 / 16}em`
+  // },
 
-  ':before': {
-    content: '""',
-    boxSize: '100% F',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    zIndex: '10',
-    background: 'linear-gradient(to right, rgba(0, 47, 57, 1) 0%,rgba(0, 47, 57, 0) 100%)',
-    pointerEvents: 'none',
-    '@minTabletS': { display: 'none' }
-  },
+  // ':before': {
+  //   content: '""',
+  //   boxSize: '100% D',
+  //   position: 'absolute',
+  //   top: '0',
+  //   left: '0',
+  //   zIndex: '10',
+  //   background: 'linear-gradient(to right, rgba(255, 249, 237, 1) 30%, rgba(255, 249, 237, 0) 70%)',
+  //   pointerEvents: 'none',
+  //   '@minTabletS': { display: 'none' }
+  // },
 
   title: {
     position: 'absolute',
@@ -50,21 +58,34 @@ const props = {
       writingMode: 'vertical-rl',
       textOrientation: 'mixed'
     },
-    '@maxTabletS': {
-      fontSize: 'E',
-      color: 'cream .75',
+    '@maxMobileL': {
       height: '100%',
       left: 'initial',
       top: '0',
       right: '0',
       padding: 'Z -',
+      fontSize: 'D',
       transform: 'rotate(0)',
-      background: 'naviBlue',
+      letterSpacing: '0px',
+      background: 'cream',
       align: 'center center',
-      style: {
-        boxShadow: 'rgba(0, 0, 0, 0.45) -20px 0px 30px 5px'
-      }
+      style: { boxShadow: 'rgba(0, 0, 0, 0.55) -20px 0px 20px 5px' }
     },
+    // '@maxTabletS': {
+    //   fontSize: 'E',
+    //   color: 'cream .75',
+    //   height: '100%',
+    //   left: 'initial',
+    //   top: '0',
+    //   right: '0',
+    //   padding: 'Z -',
+    //   transform: 'rotate(0)',
+    //   background: 'naviBlue',
+    //   align: 'center center',
+    //   style: {
+    //     boxShadow: 'rgba(0, 0, 0, 0.45) -20px 0px 30px 5px'
+    //   }
+    // },
     // '@maxMobileM': { padding: 'B1 -' },
     ':before': { boxSize: 'C V' },
     ':after': { boxSize: 'C V' }
@@ -76,20 +97,28 @@ const props = {
     position: 'relative',
     overflow: 'hidden',
     gap: 'Y',
-    '@maxTabletS': {
+    '@maxMobileL': {
       display: 'flex',
-      maxWidth: '100%',
-      padding: 'D1 E2 D1 C',
-      minHeight: 'E2',
+      // border: '3px solid red',
+      height: '100%',
       gap: 'A',
-      boxSizing: 'content-box',
-      background: 'naviBlue',
-      style: {
-        overflow: 'auto',
-        '::-webkit-scrollbar': { display: 'none' }
-      }
+      padding: '- D - -',
+      style: {overflowX: 'auto', '::-webkit-scrollbar': { display: 'none' }}
     },
-    '@maxMobileM': { padding: 'D E D B' },
+    // '@maxTabletS': {
+    //   display: 'flex',
+    //   maxWidth: '100%',
+    //   padding: 'D1 E2 D1 C',
+    //   minHeight: 'E2',
+    //   gap: 'A',
+    //   boxSizing: 'content-box',
+    //   background: 'naviBlue',
+    //   style: {
+    //     overflow: 'auto',
+    //     '::-webkit-scrollbar': { display: 'none' }
+    //   }
+    // },
+    // '@maxMobileM': { padding: 'D E D B' },
 
     childProps: {
       position: 'relative',
@@ -99,12 +128,21 @@ const props = {
       border: 'solid, orange 1',
       borderWidth: '.5px',
       '@minTabletL': { style:{ backgroundAttachment: 'fixed' } },
-      '@maxTabletS': {
-        minWidth: `${250 / 16}em`,
-        round: 'B !important',
-        border: 'solid, naviBlue',
-        borderWidth: '1px',
+      '@maxMobileL': {
+        minWidth: 'calc(100% - 68px)',
+        round: '0 !important',
+        border: 'none'
+        // minHeight: 'I',
+        // style: { borderRadius: '0 !important'}
       },
+      // '@maxMobileM': { minWidth: 'G1'},
+      // '@maxMobileS': { minWidth: 'G'},
+      // '@maxTabletS': {
+      //   minWidth: `${250 / 16}em`,
+      //   round: 'B !important',
+      //   border: 'solid, naviBlue',
+      //   borderWidth: '1px',
+      // },
       ':before': {
         content: '""',
         position: 'absolute',
@@ -113,10 +151,7 @@ const props = {
         width: '100%',
         height: '100%',
         zIndex: '3',
-        background: 'linear-gradient(rgba(0, 47, 57, 0), rgba(0, 47, 57, 1))',
-        '@maxTabletS': {
-          background: 'linear-gradient(rgba(0, 47, 57, .25), rgba(0, 47, 57, 1))'
-        }
+        background: 'linear-gradient(rgba(0, 47, 57, 0), rgba(0, 47, 57, .85))',
       },
       '&:hover > h4': {
         color: 'rgba(189, 216, 246, 1)',
@@ -129,25 +164,22 @@ const props = {
         fontSize: 'E',
         fontWeight: '100',
         textTransform: 'capitalize',
-        // letterSpacing: '-.5px',
         zIndex: '10',
-        // transform: 'translate(-50%, -50%)',
-        style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' },
-        '@maxTabletS': { fontSize: 'F', letterSpacing: '-.45px', }
+        style: { transition: 'color .5s ease-in-out, letter-spacing .5s ease-in-out' }
       }
     }
   },
 
   scroll: {
     border: '3px solid red',
-    '@minTabletS': { display: 'none' },
+    // '@minTabletS': { display: 'none' },
     position: 'absolute',
     bottom: '0',
     left: 'C',
     zIndex: '10',
     color: 'cream',
     opacity: '.75',
-    '@maxMobileM': { left: 'A1' },
+    // '@maxMobileM': { left: 'A1' },
     lefts: { src: LEFT_ARROW },
     rights: { src: RIGHT_ARROW }
   }
@@ -188,6 +220,7 @@ export const gridGalleries = {
           text: 'tbilisi',
           bottom: 'A',
           left: 'A1',
+          '@maxMobileL': { bottom: 'A', left: 'A' }
         }
       }
     },
@@ -201,6 +234,7 @@ export const gridGalleries = {
           text: 'borjomi',
           bottom: 'A',
           right: 'A1',
+          '@maxMobileL': { bottom: 'A', left: 'A', right: 'initial' }
         }
       }
     },
@@ -214,6 +248,7 @@ export const gridGalleries = {
           text: 'mtsketa',
           bottom: 'A',
           right: 'A1',
+          '@maxMobileL': { bottom: 'A', left: 'A', right: 'initial' }
         }
       }
     },
@@ -228,6 +263,7 @@ export const gridGalleries = {
           text: 'kakheti',
           bottom: 'A',
           left: 'A1',
+          '@maxMobileL': { bottom: 'A', left: 'A' }
         }
       }
     },
@@ -241,7 +277,8 @@ export const gridGalleries = {
         title: {
           text: 'martvili',
           bottom: 'A',
-          right: 'A1'
+          right: 'A1',
+          '@maxMobileL': { bottom: 'A', left: 'A', right: 'initial' }
         }
       }
     },
@@ -255,7 +292,8 @@ export const gridGalleries = {
         title: {
           text: 'kutaisi',
           bottom: 'A',
-          left: 'A1'
+          left: 'A1',
+          '@maxMobileL': { bottom: 'A', left: 'A' }
         }
       }
     },
@@ -269,7 +307,8 @@ export const gridGalleries = {
         title: {
           text: 'gori',
           bottom: 'A',
-          right: 'A1'
+          right: 'A1',
+          '@maxMobileL': { bottom: 'A', left: 'A', right: 'initial' }
         }
       }
     },
@@ -284,7 +323,12 @@ export const gridGalleries = {
           text: 'kazbegi',
           bottom: 'C',
           left: '50%',
-          transform: 'translate(-50%, -50%)'
+          transform: 'translate(-50%, -50%)',
+          '@maxMobileL': {
+            bottom: 'A',
+            left: 'A',
+            transform: 'translate(0, 0)',
+          }
         }
       }
     }

@@ -40,7 +40,7 @@ const props = {
       textAlign: 'center',
       fontSize: 'C',
       whiteSpace: 'nowrap',
-      textTransform: 'uppercase',
+      textTransform: 'capitalize',
       color: 'cream',
       opacity: '.75',
       letterSpacing: '0px',

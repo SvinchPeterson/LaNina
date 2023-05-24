@@ -157,7 +157,7 @@ const props = {
     right: 'C',
     zIndex: '20',
     gap: 'Z',
-    childProps: { border: 'none'},
+    childProps: { style: {border: 'none'}},
     '@maxHeightN': {
       bottom: 'B2',
       right: 'initial',
@@ -172,9 +172,10 @@ const props = {
     '@maxTabletL': {
       display: 'flex',
       position: 'absolute',
-      bottom: 'B2',
-      left: '50%',
-      transform: 'translate(-50%, -50%)'
+      bottom: 'A',
+      right: 'B',
+      zIndex: '20',
+      opacity: '.7'
     }
   }
 }
