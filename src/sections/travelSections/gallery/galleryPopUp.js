@@ -39,7 +39,6 @@ const props = {
     '@maxMobileM': {boxSize: '100% 90%'},
     '@maxMobileS': {boxSize: '100% 95%'},
     '@maxHeightN': {
-      border: '3px solid red',
       gap: 'A'
     },
     content: {
