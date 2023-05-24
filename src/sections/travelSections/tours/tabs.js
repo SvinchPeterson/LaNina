@@ -167,17 +167,17 @@ const props = {
     '@maxTabletL': { display: 'none'}
   },
 
-  scrollTitle: {
-    display: 'none',
-    '@maxTabletL': {
-      display: 'flex',
-      position: 'absolute',
-      bottom: 'A',
-      right: 'B',
-      zIndex: '20',
-      opacity: '.7'
-    }
-  }
+  // scrollTitle: {
+  //   display: 'none',
+  //   '@maxTabletL': {
+  //     display: 'flex',
+  //     position: 'absolute',
+  //     bottom: 'A',
+  //     right: 'B',
+  //     zIndex: '20',
+  //     opacity: '.7'
+  //   }
+  // }
 }
 
 export const tabs = {
@@ -247,5 +247,5 @@ export const tabs = {
     navButtons: {
       extend: navArrows
     },
-    scrollTitle: { extend: ScrollTitleCream }
+    // scrollTitle: { extend: ScrollTitleCream }
 }

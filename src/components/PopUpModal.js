@@ -54,7 +54,7 @@ const props = {
     zIndex: '2',
     zIndex: '20',
     transition: 'opacity .8s ease-in-out, transform .8s ease-in-out',
-    '@maxMobileM': {  boxSize: 'B ' }
+    '@maxMobileM': { boxSize: 'B ' }
   }
 }
 

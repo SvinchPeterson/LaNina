@@ -3,44 +3,72 @@
 import { Flex, Button } from 'smbls'
 
 const props = {
+  '@minTabletS': { display: 'none'},
+  flow: 'column',
   opacity: '1',
+  boxSize: '- 100%',
+  align: 'flex-end center',
+  overflow: 'hidden',
+  minHeight: 'E1',
+  padding: 'C - - -',
+  '@maxHeightN': {
+    minHeight: 'E',
+    padding: 'A1 - - -'
+  },
+
   titles: {
+    position: 'relative',
+    alignSelf: 'flex-start',
+    height:`${40 / 16}em`,
+    overflow: 'hidden',
+    minWidth: '100%',
+    border: 'solid, cream .35',
+    borderWidth: '0 0 .55px 0',
+    padding: '- - - A',
+    '@maxMobileM': {  padding: '- - - Y1' },
+
     childProps: {
       fontSize: `${32 / 16}em`,
       fontWeight: '700',
       textTransform: 'capitalize',
-      padding: '- - - X1',
-      '@maxMobileL': {
-        letterSpacing: '-1px'
-      }
+      position: 'absolute',
+      // left: 'X',
+      color: 'cream',
+      whiteSpace: 'nowrap',
+      lineHeight: `${22 / 32}em`,
+      transition: 'bottom .65s ease-in-out, opacity .65s ease-in-out, transform .65s ease-in-out',
+      letterSpacing: `${-1 / 32}em`,
+      span: { fontWeight: '700' }
     }
   },
+
   tabs: {
     padding: 'A Z - -',
-    gap: '',
-    '@maxMobileS': {
-      gap: '0',
-      padding: 'A A 0 A'
+    minWidth: '100%',
+    align: 'center flex-end',
+    '@maxMobileL': {
+      align: 'center space-between',
+      padding: 'A 0 - -',
     },
-    '@maxMobileXS': { padding: 'A 0 0 0' },
     childProps: {
-      padding: 'Z1 A1',
-      style: { padding: ''},
-      '@maxMobileS': {
-        padding: 'Z1 Z2',
-      },
-
+      background: 'transparent',
+      padding: 'Z1 A',
+      '@maxMobileL': { padding: 'Z1 Z1' },
+      '@maxMobileS': { padding: 'Z Y2' },
       childProps: {
         display: 'block',
         boxSize: 'Y B',
         background: 'cream',
-        round: 'C'
+        round: 'C',
+        '@maxMobileL': { boxSize: 'X1 B1' },
+        '@maxMobileS': { boxSize: 'X A1' }
       }
     }
   }
 }
 
 export const galleryHeader = {
+  extend: Flex,
   props,
 
   class: {

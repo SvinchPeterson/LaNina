@@ -12,7 +12,7 @@ const props = {
   overflow: 'hidden',
   margin: '- -F - -',
   '@maxTabletL': { fontSize: `${14 / 16}em` },
-  '@maxMobileL': {
+  '@maxTabletS': {
     boxSize: 'H1 100%',
     margin: '0'
   },
@@ -22,8 +22,8 @@ const props = {
     position: 'absolute',
     top: '0',
     left: '0',
-    style: { transition: 'opacity 1s ease-in-out' },
-    '@maxMobileL': {
+    style: { transition: 'opacity .8s ease-in-out' },
+    '@maxTabletS': {
       width: '100%'
     },
     ':after': {
@@ -41,17 +41,17 @@ const props = {
       height: `${500 / 16}em`,
       border: 'solid, white .15',
       borderWidth: '.15px .15px .15px 0px',
-      '@maxMobileL': { round: '0' },
+      '@maxTabletS': { round: '0' },
       style: {
         transition: 'width .8s ease, opacity .5s ease',
          height: `${500 / 16}em`,
-        '@media only screen and (max-width: 768px) and (max-height: 700px)': {
-          height: `${400 / 16}em !important`
+        '@media only screen and (max-width: 1024px) and (max-height: 700px)': {
+          height: `${450 / 16}em !important`
         },
-        '@media only screen and (max-width: 768px) and (max-height: 600px)': {
-          height: `${300 / 16}em !important`
+        '@media only screen and (max-width: 1024px) and (max-height: 600px)': {
+          height: `${350 / 16}em !important`
         },
-        '@media only screen and (max-width: 768px) and (max-height: 500px)': {
+        '@media only screen and (max-width: 1024px) and (max-height: 450px)': {
           height: `${250 / 16}em !important`
         }
       }
@@ -59,7 +59,7 @@ const props = {
 
     footer: {
       padding: 'Z - - A2',
-      '@maxMobileL': {
+      '@maxTabletS': {
         alignSelf: 'flex-end',
         justifyContent: 'flex-end',
         padding: 'A A1 - -',
@@ -68,8 +68,8 @@ const props = {
       navArrows: {
         zIndex: '5',
         gap: 'Y',
-        '@maxMobileL': { gap: 'B' },
-        childProps: { style: { '@media only screen and (min-width: 769px)': {border: 'none'}}}
+        '@maxTabletS': { gap: 'B' },
+        childProps: { style: { '@media only screen and (min-width: 1024px)': {border: 'none'}}}
       }
     }
   }

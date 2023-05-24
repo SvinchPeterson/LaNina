@@ -38,7 +38,7 @@ const props = {
     },
     title: {
       textAlign: 'center',
-      fontSize: 'C',
+      fontSize: 'D',
       whiteSpace: 'nowrap',
       textTransform: 'capitalize',
       color: 'cream',
