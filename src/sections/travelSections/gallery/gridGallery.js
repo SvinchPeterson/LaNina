@@ -22,27 +22,8 @@ const props = {
   '@maxMobileL': {
     height: '60%',
     width: '100%',
-    overflow: 'hidden',
-    // border: '3px solid black',
-    // minHeight: '100%',
-    // flex: '1'
+    overflow: 'hidden'
   },
-  // '@maxTabletS': {
-  //   overflow: 'hidden',
-  //   fontSize: `${15 / 16}em`
-  // },
-
-  // ':before': {
-  //   content: '""',
-  //   boxSize: '100% D',
-  //   position: 'absolute',
-  //   top: '0',
-  //   left: '0',
-  //   zIndex: '10',
-  //   background: 'linear-gradient(to right, rgba(255, 249, 237, 1) 30%, rgba(255, 249, 237, 0) 70%)',
-  //   pointerEvents: 'none',
-  //   '@minTabletS': { display: 'none' }
-  // },
 
   title: {
     position: 'absolute',
@@ -71,22 +52,6 @@ const props = {
       align: 'center center',
       style: { boxShadow: 'rgba(0, 0, 0, 0.55) -20px 0px 20px 5px' }
     },
-    // '@maxTabletS': {
-    //   fontSize: 'E',
-    //   color: 'cream .75',
-    //   height: '100%',
-    //   left: 'initial',
-    //   top: '0',
-    //   right: '0',
-    //   padding: 'Z -',
-    //   transform: 'rotate(0)',
-    //   background: 'naviBlue',
-    //   align: 'center center',
-    //   style: {
-    //     boxShadow: 'rgba(0, 0, 0, 0.45) -20px 0px 30px 5px'
-    //   }
-    // },
-    // '@maxMobileM': { padding: 'B1 -' },
     ':before': { boxSize: 'C V' },
     ':after': { boxSize: 'C V' }
   },
@@ -99,27 +64,11 @@ const props = {
     gap: 'Y',
     '@maxMobileL': {
       display: 'flex',
-      // border: '3px solid red',
       height: '100%',
       gap: 'A',
       padding: '- D - -',
       style: {overflowX: 'auto', '::-webkit-scrollbar': { display: 'none' }}
     },
-    // '@maxTabletS': {
-    //   display: 'flex',
-    //   maxWidth: '100%',
-    //   padding: 'D1 E2 D1 C',
-    //   minHeight: 'E2',
-    //   gap: 'A',
-    //   boxSizing: 'content-box',
-    //   background: 'naviBlue',
-    //   style: {
-    //     overflow: 'auto',
-    //     '::-webkit-scrollbar': { display: 'none' }
-    //   }
-    // },
-    // '@maxMobileM': { padding: 'D E D B' },
-
     childProps: {
       position: 'relative',
       backgroundSize: 'cover',
@@ -132,17 +81,7 @@ const props = {
         minWidth: 'calc(100% - 68px)',
         round: '0 !important',
         border: 'none'
-        // minHeight: 'I',
-        // style: { borderRadius: '0 !important'}
       },
-      // '@maxMobileM': { minWidth: 'G1'},
-      // '@maxMobileS': { minWidth: 'G'},
-      // '@maxTabletS': {
-      //   minWidth: `${250 / 16}em`,
-      //   round: 'B !important',
-      //   border: 'solid, naviBlue',
-      //   borderWidth: '1px',
-      // },
       ':before': {
         content: '""',
         position: 'absolute',
@@ -172,14 +111,12 @@ const props = {
 
   scroll: {
     border: '3px solid red',
-    // '@minTabletS': { display: 'none' },
     position: 'absolute',
     bottom: '0',
     left: 'C',
     zIndex: '10',
     color: 'cream',
     opacity: '.75',
-    // '@maxMobileM': { left: 'A1' },
     lefts: { src: LEFT_ARROW },
     rights: { src: RIGHT_ARROW }
   }
@@ -333,8 +270,5 @@ export const gridGalleries = {
       }
     }
   ]
-  },
-  // scroll: {
-  //   extend: ScrollTitle
-  // }
+  }
 }

@@ -43,7 +43,7 @@ const menu = {
 }
 
 const props = {
-  minWidth: '90%',
+  minWidth: '95%',
   // '@maxMobileM': { minWidth: '95%' },
   position: 'fixed',
   top: '0',
@@ -54,7 +54,7 @@ const props = {
   // borderBottom: '1px solid red',
   // border: 'solid, cream .5',
   // borderWidth: '0 0 .5px 0',
-  round: '0 0 A2 A2',
+  // round: '0 0 A2 A2',
   overflow: 'hidden',
   style: {
     mixBlendMode: 'difference',

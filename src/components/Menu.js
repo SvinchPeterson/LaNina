@@ -41,7 +41,7 @@ const props = {
       fontWeight: '400',
       textTransform: 'uppercase',
       whiteSpace: 'nowrap',
-      letterSpacing: '3px',
+      letterSpacing: '2.5px',
       overflow: 'hidden',
       '@minTabletS': {
         // opacity: '.7',

@@ -35,7 +35,7 @@ export const properties = {
 
   menuBackground: {
     position: 'fixed',
-    width: '90%',
+    width: '95%',
     minHeight: '48px',
     top: '0',
     zIndex: '35',
@@ -43,7 +43,7 @@ export const properties = {
     background: 'transparent',
     round: '0 0 A2 A2',
     border: 'solid, orange',
-    borderWidth: '0 0 1px 0',
+    borderWidth: '0 0 .5px 0',
     style: {
       animationName: opacity,
       animationDuration: '2s',
@@ -54,7 +54,7 @@ export const properties = {
   menuBackImage: {
     backgroundColor: 'orange',
     position: 'fixed',
-    boxSize: '48px 90%',
+    boxSize: '48px 95%',
     top: '0',
     zIndex: '30',
     alignSelf: 'center',

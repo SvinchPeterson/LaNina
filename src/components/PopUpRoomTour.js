@@ -275,5 +275,11 @@ export const PopUpRoomTour = {
     }
   },
 
-  logo: {}
+  logo: {
+    class: {
+      show: (element, state) => state.activePopUp
+        ? { opacity: '.8', transform: 'rotate3d(2, 1, 1, -0.1turn)' }
+        : { opacity: '0', transform: 'rotate3d(0)' }
+    }
+  }
 }

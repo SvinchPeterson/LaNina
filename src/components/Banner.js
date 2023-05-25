@@ -19,6 +19,12 @@ const props = {
   boxSizing: 'border-box',
   padding: '- - D -',
   align: 'flex-end center',
+  style: {
+    backgroundRepeat: 'no-repeat',
+    animationDuration: '4s',
+    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)',
+
+  },
   ':before': {
     content: '""',
     boxSize: '100% 100%',
@@ -26,11 +32,6 @@ const props = {
     zIndex: '1',
     bottom: '0',
     pointerEvents: 'none'
-  },
-  style: {
-    backgroundRepeat: 'no-repeat',
-    animationDuration: '4s',
-    animatonTimingFunction: 'cubic-bezier(.17,.67,.65,.6)'
   },
   '@minTabletL': { style:{ backgroundAttachment: 'fixed !important' }},
 

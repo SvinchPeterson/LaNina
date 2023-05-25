@@ -9,7 +9,6 @@ import { positionOpacity, bannerBackground2 } from '../../animations'
 
 const props = {
   backgroundImage: 'url(' + LAKE_JPG + ')',
-  background: 'radial-gradient(rgba(0, 47, 57, 1), rgba(0, 47, 57, 1))',
   style: { animationName: positionOpacity },
   '@maxTabletM': {
     backgroundImage: 'url(' + LAKE_TABLET_JPG + ')',

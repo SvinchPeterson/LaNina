@@ -10,7 +10,7 @@ import INSTAGRAM_PNG from '../assets/icons/social-instagram.png'
 import { BookingLink } from './BookingLink'
 
 const props = {
-  minWidth: '90%',
+  minWidth: '95%',
   '@maxMobileM': { minWidth: '95%' },
   position: 'fixed',
   bottom: '0',

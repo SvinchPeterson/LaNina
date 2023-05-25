@@ -120,6 +120,19 @@ const menu = {
 
 const header = {
   extend: Header,
+  class: {
+    show: (element, state) => state.activeTravelMenu
+    ? {
+      paddingLeft: `${10 / 16}em`,
+      paddingRight: `${10 / 16}em`,
+      transition: 'padding-left 1s ease, padding-right .75s ease'
+    }
+    : {
+      paddingLeft: `0`,
+      paddingRight: `0`,
+      transition: 'padding-left 1s ease, padding-right .55s ease'
+    }
+  },
   ...[
     {},
     {},
@@ -203,7 +216,9 @@ export const Travel = {
       show: (element, state) => state.activeTravelMenu
       ? {
         height: '90%',
-        transition: 'height .75s ease'
+        transition: 'height .75s ease',
+        backdropFilter: 'blur(30px)',
+        background: 'rgba(0, 0, 0, .15)'
       }
       : {
         height: '46px',
@@ -213,28 +228,29 @@ export const Travel = {
     }
   },
 
-  menuBackImage: {
-    props: {
-      backgroundImage: 'url(' + ORNAMENT_PNG + ')',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      style: { backgroundAttachment: 'fixed'},
-      ':after': { background: 'naviBlue .9',}
-    },
-    class: {
-      show: (element, state) => state.activeTravelMenu
-      ? {
-        height: '90%',
-        opacity: '1',
-        transition: 'height .75s ease, opacity .75s ease',
-      }
-      : {
-        height: '46px',
-        opacity: '0',
-        transition: 'height .55s ease, opacity .55s ease',
-      }
-    }
-  },
+  // menuBackImage: {
+  //   props: {
+  //     // backgroundImage: 'url(' + ORNAMENT_PNG + ')',
+  //     // backgroundSize: 'cover',
+  //     // backgroundPosition: 'center',
+  //     style: { backgroundAttachment: 'fixed'},
+  //     ':after': { background: 'naviBlue .9',}
+  //   },
+  //   class: {
+  //     show: (element, state) => state.activeTravelMenu
+  //     ? {
+  //       height: '90%',
+  //       opacity: '1',
+  //       backdropFilter: 'blur(10px)',
+  //       transition: 'height .75s ease, opacity .75s ease',
+  //     }
+  //     : {
+  //       height: '46px',
+  //       opacity: '0',
+  //       transition: 'height .55s ease, opacity .55s ease',
+  //     }
+  //   }
+  // },
 
   state,
   header,
