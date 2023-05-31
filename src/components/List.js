@@ -5,6 +5,7 @@ import { Flex } from 'smbls'
 const props = {
   boxSizing: 'border-box',
   flow: 'column',
+  '@maxTabletO': { gap: 'Y1' },
 
   title: {
     text: 'amenities',
@@ -13,7 +14,10 @@ const props = {
     color: 'cream',
     textAlign: 'flex-start',
     letterSpacing: `${5 / 11}em`,
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    '@maxTabletO': {
+      fontSize: 'Z'
+    }
   },
 
   list: {
@@ -30,6 +34,7 @@ const props = {
         align: 'center flex-start',
         color: 'cream .75',
         gap: 'Y2',
+        '@maxTabletO': { fontSize: `${14 / 13}em` },
         ':before': {
           content: '""',
           boxSize: 'X X',

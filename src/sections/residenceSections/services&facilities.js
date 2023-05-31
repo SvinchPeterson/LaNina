@@ -87,7 +87,8 @@ const props = {
   boxSizing: 'content-box',
   '@maxTabletM': { fontSize: `${15 / 16}em` },
   '@maxMobileM': {
-    padding: 'E - - -'
+    padding: 'E - - -',
+    margin: 'D2 - C -',
   },
 
   title: { '@maxTabletS': { display: 'none' } },

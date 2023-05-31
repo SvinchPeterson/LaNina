@@ -30,7 +30,15 @@ const logo = {
 
 const menu = {
   extend: Button,
-  menu: { text: 'menu' },
+  menu: {
+    text: 'menu',
+    on: { click: (event, element, state) => { state.update({ activeMenu: true }) } },
+    class: {
+      show: (element, state) => state.activeMenu
+      ? { bottom: `${-40 / 10}em`, transform: 'scale(.9)' }
+      : { bottom: `3.5px`, transform: 'scale(1)' }
+    }
+  },
 
   close: {
     extend: Flex,
@@ -38,35 +46,34 @@ const menu = {
     icon: {
       extend: Img,
       props: { src: CLOSE_PNG }
+    },
+
+    on: { click: (event, element, state) => { state.update({ activeMenu: false })}},
+    class: {
+      show: (element, state) => state.activeMenu
+      ? { bottom: `${3.5 / 10}em`, transform: 'scale(1)' }
+      : { bottom: `${-40 / 10}em`, transform: 'scale(.9)' }
     }
   }
 }
 
 const props = {
   minWidth: '95%',
-  // '@maxMobileM': { minWidth: '95%' },
+  align: 'flex-end space-between',
+  height: '50px',
   position: 'fixed',
   top: '0',
   alignSelf: 'center',
-  alignItems: 'flex-end',
   zIndex: '50',
-  padding: 'Z - - -',
-  // borderBottom: '1px solid red',
-  // border: 'solid, cream .5',
-  // borderWidth: '0 0 .5px 0',
-  // round: '0 0 A2 A2',
   overflow: 'hidden',
   style: {
     mixBlendMode: 'difference',
     animationName: opacity,
     animationDuration: '2s',
-    animationTimingFunction: 'ease-in-out',
-    // backdropFilter: 'blur(10px)'
-    // backdropFilter: 'opacity(1)'
+    animationTimingFunction: 'ease-in-out'
   },
 
   childProps: {
-    flex: '1',
     flow: 'column',
     childProps: {
       '@minTabletL': {
@@ -79,18 +86,19 @@ const props = {
     back: {
       fontSize: `${10 / 16}em`,
       alignSelf: 'flex-start',
-      padding: 'Z2 B',
+      padding: 'A2 B',
       icon: { boxSize: ' B1' }
     },
 
     logo: {
       alignSelf: 'center',
-      padding: 'Y 0',
+      padding: '0',
+      margin: '- - Z -',
       image: { boxSize: `${24 / 16}em ` }
     },
 
     menu: {
-      minWidth: 'D',
+      minWidth: '',
       position: 'relative',
       alignSelf: 'flex-end',
       background: 'transparent',

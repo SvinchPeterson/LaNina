@@ -28,7 +28,6 @@ export * from './TourContainer'
 export * from './TravelParagraph'
 export * from './TourPackage'
 
-export * from './AmenitiesPopUp'
 export * from './RoomDescriptionPopUp'
 export * from './SectionTitle'
 

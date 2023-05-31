@@ -39,11 +39,11 @@ const props = {
     width: '70%',
     '@maxTabletO': { minWidth: '100%' },
     book: {
-      padding: 'Z2 B2',
+      padding: 'Z B',
       round: 'D',
       background: 'transparent',
       border: 'solid, cream .35',
-      borderWidth: '.75px',
+      borderWidth: '.55px',
       color: 'cream',
       textTransform: 'uppercase',
       fontWeight: '700',

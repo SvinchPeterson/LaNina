@@ -42,8 +42,9 @@ const props = {
       border: 'solid, white .15',
       borderWidth: '.15px .15px .15px 0px',
       '@maxTabletS': { round: '0' },
+      transition: 'width .8s ease, opacity .5s ease',
       style: {
-        transition: 'width .8s ease, opacity .5s ease',
+        // transition: 'width .8s ease, opacity .5s ease',
          height: `${500 / 16}em`,
         '@media only screen and (max-width: 1024px) and (max-height: 700px)': {
           height: `${450 / 16}em !important`

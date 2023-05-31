@@ -11,13 +11,10 @@ import CLOSE_PNG from '../assets/icons/close.png'
 
 const props = {
   alignItems: 'center',
-  gap: '',
-  header: { '@minTabletO': { display: 'none' } },
-  galleryContainer: {
-    gallery: {
-      transition: 'width 3s ease-in-out'
-    }
+  header: {
+    '@minTabletO': { display: 'none' }
   },
+
   article: {
     position: 'relative',
     flex: '1',
@@ -47,7 +44,10 @@ const props = {
       width: '100%',
       border: 'solid, cream .5',
       borderWidth: '.5px 0 0 0',
-      padding: 'Z - - -'
+      padding: 'Z - - -',
+      '@maxTabletO': {
+        border: 'none'
+      }
     },
 
     moreButton: {

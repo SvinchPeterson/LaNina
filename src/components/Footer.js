@@ -13,11 +13,12 @@ const props = {
   minWidth: '95%',
   '@maxMobileM': { minWidth: '95%' },
   position: 'fixed',
-  bottom: '0',
+  bottom: 'Z',
+  padding: '- Z',
   zIndex: '50',
-  padding: '- - Z -',
+  height: 'C',
   alignSelf: 'center',
-  justifyContent: 'space-between',
+  align: 'center space-between',
   overflow: 'hidden',
   style: {
     mixBlendMode: 'difference',
@@ -27,12 +28,16 @@ const props = {
   },
 
   socialLinks: {
+    width: 'fit-content',
     flexAlign: 'center center',
-    gap: 'Z',
+    gap: 'A',
     style: { zIndex: '60' },
     childProps: {
       target: '_blank',
-      padding: 'Y2',
+      boxSize: 'B2 B2',
+      boxSizing: 'content-box',
+      align: 'center center',
+      round: '100%',
       '@minTabletL': {
         opacity: '.85',
         ':hover': { opacity: '1', transform: 'scale(1.03)' },
@@ -43,6 +48,7 @@ const props = {
   },
 
   book: {
+    zIndex: '4',
     '@minTabletL': {
       opacity: '.85',
       ':hover': { opacity: '1' },
@@ -51,6 +57,7 @@ const props = {
     },
     span: {
       display: 'block',
+      // opacity: '0',
       '@minTabletL': {transition:' transform .15s ease-in-out'}
     },
     href: 'https://www.airbnb.com/users/404104381/listings?fbclid=IwAR1M3Rx_GD2eAEA7nzUFqkAo6Ukr4Bkvjb4FKIragquUW54fukDFixV0gHE'

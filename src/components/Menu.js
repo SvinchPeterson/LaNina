@@ -1,6 +1,6 @@
 'use strict'
 
-import { Flex } from 'smbls'
+import { Flex, Link } from 'smbls'
 
 import { Navbar } from './Navbar'
 
@@ -10,7 +10,6 @@ const props = {
   width: '90%',
   height: '46px',
   position: 'fixed',
-  // border: '2px solid red',
   top: `0`,
   round: '0 0 A2 A2',
   padding: '- - - -',
@@ -22,10 +21,8 @@ const props = {
   style: {
     mixBlendMode: 'difference'
   },
-  // '@mobileL': { display: 'none' },
 
   navBar: {
-    // display: 'none',
     overflow: 'hidden',
     gap: 'C',
     padding: 'Z2 - - -',
@@ -57,8 +54,63 @@ const props = {
 export const Menu = {
   extend: Flex,
   props,
+  class: {
+    show: (element, state) => state.activeMenu
+      ? { height: `90%`}
+      : { height: '46px' }
+  },
 
-  navBar: { extend: Navbar }
+  navBar: {
+    extend: Navbar,
+     class: {
+      show: (element, state) => state.activeMenu
+        ? {
+          '@media only screen and (min-width: 1025px)': {
+            width: `${700 / 16}em`,
+            transition: 'width .35s ease',
+            '> a': {
+              transform: 'scale(1)',
+              opacity: '.7',
+              transition: 'transform .75s ease, opacity .75s ease'
+            }
+          },
+          '@media only screen and (max-width: 1024px)': {
+            '> a': {
+              height: `${46 / 13}em`,
+              opacity: '1',
+              transition: 'height .75s ease, opacity .75s ease'
+            }
+          }
+        }
+        : {
+          '@media only screen and (min-width: 1025px)': {
+            width: `0`,
+            transition: 'width .35s ease',
+            '> a': {
+              transform: 'scale(1.3)',
+              opacity: '0',
+              transition: 'transform .75s ease, opacity .75s ease'
+            }
+          },
+          '@media only screen and (max-width: 1024px)': {
+            '> a': {
+              height: `0`,
+              opacity: '0',
+              transition: 'height .35s ease, opacity .35s ease'
+            }
+          }
+        }
+    },
+
+    childExtend: {
+      on: {
+        click: (event, element, state, ctx) => {
+          state.update({ activeMenu: false })
+          Link.on.click(event, element, state, ctx)
+        }
+      }
+    }
+  }
 }
 
 const mobileMenuProps = {
@@ -70,7 +122,6 @@ const mobileMenuProps = {
   align: 'center center',
   round: '0 0 G1 G1',
 
-  // '@mobileS': { top: 'C2' },
   style: {
     backdropFilter: 'blur(2px)',
     '@media only screen and (min-width: 769px)': { display: 'none' }

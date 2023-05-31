@@ -4,11 +4,8 @@ import { Flex, Button, Img } from 'smbls'
 
 import { PopUpModal } from "./PopUpModal"
 import { RoomTour } from './RoomTour'
-import { opacityWidth } from '../animations'
+
 const props = {
-  // backgroundSize: 'cover',
-  // backgroundPosition: 'center center',
-  // backgroundColor: 'orange',
   style: {
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
@@ -84,7 +81,7 @@ const props = {
             boxSize: 'V2 B1',
             background: 'cream',
             round: 'C',
-            '@maxMobileS': {  boxSize: 'X A2'}
+            '@maxMobileS': { boxSize: 'X A2'}
           },
           icon2: { boxSize: 'Z2 Z2' }
         }
@@ -95,41 +92,39 @@ const props = {
       flex: '1',
       overflow: 'hidden',
       childProps: {
-        flex: '1',
         height: '100%',
         flow: 'column',
-        // style: { overflowY: 'auto' },
         childProps: {
+          transition: 'opacity 2s ease',
           '@maxTabletO': {
             flow: 'column'
           },
           header: {
             boxSize: 'C 100%',
             align: 'flex-end space-between',
+            padding: '- Z Y1 Z',
             childProps: {
               background: 'transparent',
               color: 'cream',
               textTransform: 'uppercase',
               fontWeight: '700',
-              fontSize: `${12 / 16}em`,
-              letterSpacing: '2px'
+              opacity: '.75'
             }
           },
           galleryContainer: {
+            transition: 'opacity .8s ease',
             flex: '1.5',
-            transition: 'transform .7s ease',
-
             '@maxTabletO': {
               minWidth: '100%'
             },
             title: { '@maxTabletO':{ display: 'none'}},
             gallery: {
-              '@maxTabletO': { width: '100%' },
+              width: '100%',
+              transition: 'transform .8s ease, opacity 1.2s ease',
               '@maxMobileM': { height: `${450 / 16}em` },
-              '@maxMaxO': { height: `${300 / 16}em` },
-              style: {
-              }
-            }
+              '@maxMaxO': { height: `${300 / 16}em` }
+            },
+            footer: { transition: 'opacity 2s ease' }
           },
 
           article: {
@@ -140,8 +135,9 @@ const props = {
               width: '100%',
               height: '100%',
               top: '0',
-              background: 'black .7',
+              left: '0',
               zIndex: '50',
+              background: 'black .5',
               style: { backdropFilter: 'blur(2.5px)' }
             }
           }
@@ -157,42 +153,20 @@ export const PopUpRoomTour = {
 
   class: {
     show: (element, state) => state.activePopUp
-      ? { height: '100%' }
-      : { height: '0', pointerEvents: 'none' }
+    ? { height: '100%' } : { height: '0', pointerEvents: 'none' }
   },
 
   close: {
     on: {
-      click: (event, element, state) => {
-        state.update({
-          activePopUp: false,
-          activePopUpContent: false
-        })
-      }
+      click: (event, element, state) => {state.update({ activePopUp: false, activePopUpContent: false })}
     },
     class: {
       show: (element, state) => state.activeButton
-      ? {
-        '@media only screen and (max-width: 1180px)': {
-          display: 'none'
-        }
-      }
-      : {
-        '@media only screen and (max-width: 1180px)': {
-          display: 'block'
-        }
-      },
-
+      ? {'@media only screen and (max-width: 1180px)': { display: 'none' }}
+      : {'@media only screen and (max-width: 1180px)': { display: 'block'}},
       show2: (element, state) => state.activePopUp
-      ? {
-        opacity: '1',
-        transform: 'rotate(90deg)'
-
-      }
-      : {
-        opacity: '0'
-
-      }
+      ? {opacity: '1',transform: 'rotate(90deg)'}
+      : { opacity: '0'}
     }
   },
 
@@ -240,9 +214,7 @@ export const PopUpRoomTour = {
               pointerEvents: 'none',
               '> span': { background: 'rgba(226, 135, 67, 1)' }
             }
-            : {
-              opacity: '.65'
-            }
+            : { opacity: '.65'}
           },
 
           span: {},
@@ -255,22 +227,7 @@ export const PopUpRoomTour = {
       extend: Flex,
       childExtend: {
         extend: Flex,
-        class: {
-          show: (element, state) => state.activePopUpContent === parseInt(element.key)
-            ? {
-              display: 'flex'
-            }
-            : {
-              display: 'none'
-            },
-          show2: (element, state) => state.activeScroll
-            ? { overflowY: 'auto' }
-            : { overflowY: 'hidden' }
-
-        },
-        childExtend: {
-          extend: RoomTour
-        }
+        childExtend: { extend: RoomTour }
       }
     }
   },

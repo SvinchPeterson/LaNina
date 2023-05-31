@@ -9,7 +9,7 @@ const props = {
   gap: 'Y',
   letterSpacing: '.3px',
   color: 'cream .75',
-  style: { span: { fontWeight: '700', color: 'rgba(255, 249, 237, 1)' } }
+  style: { span: { color: 'rgba(255, 249, 237, 1)', fontWeight: '700' } }
 }
 
 export const Description = {

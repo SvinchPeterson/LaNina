@@ -16,7 +16,7 @@ const props = {
   },
 
   ':before': {
-    background: 'radial-gradient(rgba(0, 47, 57, .5), rgba(0, 47, 57, .85))',
+    background: 'radial-gradient(rgba(0, 47, 57, 0.65), rgba(0, 47, 57, 0.85))'
   },
 }
 

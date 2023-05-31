@@ -12,8 +12,6 @@ import { galleryPopUp } from '../sections/travelSections/gallery/galleryPopUp'
 import ORNAMENT_PNG from '../assets/images/travel/ornament.png'
 
 const state = {
-  activeTravelMenu: false,
-  activeTravelMobileMenu: false,
   activeImage: 0,
   activeTourPopUp: true,
 
@@ -52,60 +50,7 @@ const state = {
 
 const menu = {
   extend: Menu,
-  class: {
-    show: (element, state) => state.activeTravelMenu
-      ? { height: `90%` } : { height: '46px' }
-  },
-
   navBar: {
-    class: {
-      show: (element, state) => state.activeTravelMenu
-        ? {
-          '@media only screen and (min-width: 1025px)': {
-            width: `${700 / 16}em`,
-            transition: 'width .35s ease',
-            '> a': {
-              transform: 'scale(1)',
-              opacity: '.7',
-              transition: 'transform .75s ease, opacity .75s ease'
-            }
-          },
-          '@media only screen and (max-width: 1024px)': {
-            '> a': {
-              height: `${46 / 13}em`,
-              opacity: '1',
-              transition: 'height .75s ease, opacity .75s ease'
-            }
-          }
-        }
-        : {
-          '@media only screen and (min-width: 1025px)': {
-            width: `0`,
-            transition: 'width .35s ease',
-            '> a': {
-              transform: 'scale(1.3)',
-              opacity: '0',
-              transition: 'transform .75s ease, opacity .75s ease'
-            }
-          },
-          '@media only screen and (max-width: 1024px)': {
-            '> a': {
-              height: `0`,
-              opacity: '0',
-              transition: 'height .35s ease, opacity .35s ease'
-            }
-          }
-        }
-    },
-
-    childExtend: {
-      on: {
-        click: (event, element, state, ctx) => {
-          state.update({ activeTravelMenu: false })
-          Link.on.click(event, element, state, ctx)
-        }
-      }
-    },
     ...[
       { props: { text: 'gallery', href: '#gallery' } },
       { props: { text: 'tours', href: '#tours' } },
@@ -117,47 +62,6 @@ const menu = {
 
 
 
-
-const header = {
-  extend: Header,
-  class: {
-    show: (element, state) => state.activeTravelMenu
-    ? {
-      paddingLeft: `${10 / 16}em`,
-      paddingRight: `${10 / 16}em`,
-      transition: 'padding-left 1s ease, padding-right .75s ease'
-    }
-    : {
-      paddingLeft: `0`,
-      paddingRight: `0`,
-      transition: 'padding-left 1s ease, padding-right .55s ease'
-    }
-  },
-  ...[
-    {},
-    {},
-    {
-      menu: {
-        menu: {
-          on: { click: (event, element, state) => { state.update({ activeTravelMenu: true, activeTravelMobileMenu: true }) } },
-          class: {
-              show: (element, state) => state.activeTravelMenu
-                ? { bottom: `${-30 / 10}em`, transform: 'scale(.9)' }
-                : { bottom: '0', transform: 'scale(1)' }
-          }
-        },
-        close: {
-          on: { click: (event, element, state) => { state.update({ activeTravelMenu: false, activeTravelMobileMenu: false }) } },
-          class: {
-            show: (element, state) => state.activeTravelMenu
-              ? { bottom: `${0 / 10}em`, transform: 'scale(1)' }
-              : { bottom: `${-30 / 10}em`, transform: 'scale(.9)' }
-          }
-        }
-      }
-    }
-  ]
-}
 
 export const footer = {
   extend: Footer,
@@ -213,47 +117,14 @@ export const Travel = {
 
   menuBackground: {
     class: {
-      show: (element, state) => state.activeTravelMenu
-      ? {
-        height: '90%',
-        transition: 'height .75s ease',
-        backdropFilter: 'blur(30px)',
-        background: 'rgba(0, 0, 0, .15)'
-      }
-      : {
-        height: '46px',
-        backdropFilter: 'blur(3px)',
-        transition: 'height .55s ease, backdrop-filter 1s ease'
-      }
+      show: (element, state) => state.activeMenu
+      ? { height: '90%', transition: 'height .75s ease' }
+      : { height: '46px', transition: 'height .55s ease' }
     }
   },
 
-  // menuBackImage: {
-  //   props: {
-  //     // backgroundImage: 'url(' + ORNAMENT_PNG + ')',
-  //     // backgroundSize: 'cover',
-  //     // backgroundPosition: 'center',
-  //     style: { backgroundAttachment: 'fixed'},
-  //     ':after': { background: 'naviBlue .9',}
-  //   },
-  //   class: {
-  //     show: (element, state) => state.activeTravelMenu
-  //     ? {
-  //       height: '90%',
-  //       opacity: '1',
-  //       backdropFilter: 'blur(10px)',
-  //       transition: 'height .75s ease, opacity .75s ease',
-  //     }
-  //     : {
-  //       height: '46px',
-  //       opacity: '0',
-  //       transition: 'height .55s ease, opacity .55s ease',
-  //     }
-  //   }
-  // },
-
   state,
-  header,
+  Header,
   menu,
   banner,
   georgia,

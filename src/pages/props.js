@@ -36,45 +36,79 @@ export const properties = {
   menuBackground: {
     position: 'fixed',
     width: '95%',
-    minHeight: '48px',
+    minHeight: '50px',
     top: '0',
     zIndex: '35',
     alignSelf: 'center',
     background: 'transparent',
     round: '0 0 A2 A2',
     border: 'solid, orange',
-    borderWidth: '0 0 .5px 0',
+    borderWidth: '0 0px .5px 0px',
+    overflow: 'hidden',
+    background: 'orange .01',
     style: {
       animationName: opacity,
       animationDuration: '2s',
       animationTimingFunction: 'ease-in-out',
+      boxShadow: 'rgba(0, 0, 0, .5) 0px 10px 20px -10px',
+      backdropFilter: 'blur(10px)'
+
     }
   },
 
-  menuBackImage: {
-    backgroundColor: 'orange',
-    position: 'fixed',
-    boxSize: '48px 95%',
-    top: '0',
-    zIndex: '30',
+  footerBackground: {
+    minWidth: '95%',
+    bottom: 'A',
+    zIndex: '40',
+    // opacity: '0',
     alignSelf: 'center',
-    round: '0 0 A2 A2',
-    border: 'solid, orange',
-    borderWidth: '0 1px 0 1px',
-    ':after': {
-      content: '""',
-      position: 'absolute',
-      top: '0',
-      left: '0',
-      boxSize: '100% 100%',
-      round: '0 0 A2 A2'
+    justifyContent: 'space-between',
+    overflow: 'hidden',
+    position: 'fixed',
+    height: 'C',
+    padding: '- A',
+    // background: 'red',
+    socialLinksBack: {
+      // border: '2px solid black',
+      width: 'fit-content',
+      align: 'center center',
+      gap: 'A',
+      childProps: {
+        boxSize: 'B2 B2',
+        boxSizing: 'content-box',
+        align: 'center center',
+        background: 'orange .015',
+        round: '100%',
+        style: {
+          backdropFilter: 'blur(20px)',
+          boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
+        }
+      }
     },
-    // background: 'rgba(0, 0, 0, 0)',
-    style: {
-      // backdropFilter: 'blur(1px)',
-      // animationName: opacity,
-      // animationDuration: '2s',
-      // animationTimingFunction: 'ease-in-out',
+
+    bookBack: {
+      round: 'B',
+      // boxSize: 'B2 D2',
+      // boxSize: '32.27px 81.27px',
+      // height: 'fit-content',
+      // border: 'solid, orange',
+      // borderWidth: '.3px',
+      zIndex: '2',
+      boxSize: 'B2 D2',
+      style: {
+        backdropFilter: 'blur(20px)',
+        boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'
+      },
     }
+    // round: 'B',
+    // boxSize: '32.27px 81.27px',
+    // height: 'fit-content',
+    // position: 'absolute',
+    // right: 'A',
+    // background: 'orange',
+    // zIndex: '2',
+    // style: { backdropFilter: 'blur(20px)'},
+    // bottom: '',
+    // right: 'D'
   }
 }

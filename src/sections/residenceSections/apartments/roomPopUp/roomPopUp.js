@@ -2,6 +2,8 @@
 
 import { PopUpRoomTour } from "../../../../components"
 
+import { opacityWidth } from "../../../../animations"
+
 import { roomsHeader } from "./roomsHeader"
 import { roomsContainers } from "./roomsContainers"
 
@@ -15,12 +17,7 @@ const props = {
   contentContainer: {
     header: {
       textTransform: 'capitalize',
-      titles: {
-        childProps: {
-          fontSize: 'E'
-
-        }
-      }
+      titles: { childProps: {fontSize: 'E'}}
     },
     content: {
       style: {
@@ -46,6 +43,7 @@ const props = {
           '> div > div': {
            '> div': {
             borderRadius: `${200 / 16}em 0 0 ${200 / 16}em`,
+            marginLeft: 'auto',
             '@media only screen and (max-width: 1180px)': { borderRadius: '0' },
             '&:before': { background: 'linear-gradient(to left, rgba(1, 57, 57, 1) 0%, rgba(1, 57, 57, 0) 100%)'}
           },
@@ -60,10 +58,22 @@ const props = {
       childProps: {
         justifyContent: 'center',
         childProps: {
-          '@maxMaxO': { margin: '-C - - -'},
-          galleryContainer: {
-            gallery: {}
+          '@maxMaxO': { margin: '-C - - -' },
+
+          header: {
+            childProps: {
+              fontSize: `${10 / 16}em`,
+              border: 'solid, cream .35',
+              borderWidth: '.75px',
+              padding: 'A1 B',
+              letterSpacing: '1px',
+            }
           },
+
+          galleryContainer: {
+            gallery: { '@maxTabletO': { height: 'H' }}
+          },
+
           article: {
             close: {'@minTabletO': { display: 'none'} },
             description: {
@@ -75,8 +85,7 @@ const props = {
             amenities: {
               '@maxTabletO': {
                 width: 'fit-content',
-                border: 'none',
-                style: { overflowY: 'auto' }
+                style: { overflowY: 'auto'}
               },
               list: {
                 '@maxTabletO': {
@@ -109,6 +118,53 @@ export const roomPopUp = {
     content: {
       extend: roomsContainers,
       childExtend: {
+         class: {
+          show: (element, state) => state.activePopUpContent === parseInt(element.key)
+            ? {
+              height: '100%',
+              width: '100%',
+              opacity: '1',
+              '> div': { opacity: '1' },
+
+              '&:nth-child(odd)': {
+                '> div > div > div': {
+                  transform: 'translateX(0)',
+                  opacity: '1'
+                }
+              },
+
+              '&:nth-child(even)': {
+                '> div > div > div': {
+                  transform: 'translateX(0)',
+                  opacity: '1'
+                }
+              }
+            }
+            : {
+              height: '0',
+              width: '0',
+              opacity: '0',
+              '> div': { opacity: '0' },
+
+              '&:nth-child(odd)': {
+                '> div > div > div': {
+                  transform: 'translateX(-200px)',
+                  opacity: '0'
+                }
+              },
+
+              '&:nth-child(even)': {
+                '> div > div > div': {
+                  transform: 'translateX(200px)',
+                  opacity: '0'
+                }
+              }
+            },
+
+          show2: (element, state) => state.activeScroll
+            ? { overflowY: 'auto' }
+            : { overflowY: 'hidden' }
+        },
         childExtend: {
           header: {
             ...[
@@ -116,10 +172,7 @@ export const roomPopUp = {
                 text: 'amenities',
                 on: {
                   click: (event, element, state) => {
-                    state.update({
-                      activeRoomAmenities: true,
-                      activeButton: true
-                    })
+                    state.update({ activeRoomAmenity: true, activeButton: true})
                   }
                 },
               },
@@ -137,45 +190,24 @@ export const roomPopUp = {
             ]
           },
 
-          galleryContainer: {
-            title: null,
-            gallery: {
-              class: {
-                show: (element, state) => state.activePopUpContent === parseInt(element.parent.parent.parent.key)
-                ? {
-                  width: '100%'
-                }
-                : {
-                  width: '0'
-                }
-              },
-
-            }
-          },
+          galleryContainer: { title: null},
 
           article: {
             package: null,
             moreButton: null,
             class: {
               show: (element, state) => state.activePopUpContent === parseInt(element.parent.parent.key)
-              && state.activeRoomDescription || state.activeRoomAmenities
-              ? {
-                '@media only screen and (max-width: 1180px)': {
-                  display: 'flex'
-                }
-              }
-              : {
-                '@media only screen and (max-width: 1180px)': {
-                  display: 'none'
-                }
-              }
+              && state.activeRoomDescription || state.activeRoomAmenity
+              ? {'@media only screen and (max-width: 1180px)': {display: 'flex'}}
+              : {'@media only screen and (max-width: 1180px)': {display: 'none'}}
             },
+
             close: {
               on: {
                 click: (event, element, state) => {
                   state.update({
                     activeRoomDescription: false,
-                    activeRoomAmenities: false,
+                    activeRoomAmenity: false,
                     activeButton: false
                   })
                 }
@@ -185,29 +217,43 @@ export const roomPopUp = {
             description: {
               class: {
                 show: (element, state) => state.activeRoomDescription
+                ? { '@media only screen and (max-width: 1180px)': { display: 'flex' }}
+                : { '@media only screen and (max-width: 1180px)': { display: 'none' }},
+                show2: (element, state) => state.activePopUpContent === parseInt(element.parent.parent.parent.key)
                 ? {
-                  '@media only screen and (max-width: 1180px)': {
-                    display: 'flex'
+                  '@media only screen and (min-width: 1181px)': {
+                    opacity: '1',
+                    transform: 'translateY(0)',
+                    transition: 'opacity .8s ease, transform .8s ease'
                   }
                 }
                 : {
-                  '@media only screen and (max-width: 1180px)': {
-                    display: 'none'
+                  '@media only screen and (min-width: 1181px)': {
+                    opacity: '0',
+                    transform: 'translateY(-30px)',
+                    transition: 'opacity .8s ease, transform .8s ease'
                   }
                 }
               },
             },
             amenities: {
               class: {
-                show: (element, state) => state.activeRoomAmenities
+                show: (element, state) => state.activeRoomAmenity
+                ? { '@media only screen and (max-width: 1180px)': { display: 'flex' }}
+                : { '@media only screen and (max-width: 1180px)': { display: 'none' }},
+                show2: (element, state) => state.activePopUpContent === parseInt(element.parent.parent.parent.key)
                 ? {
-                  '@media only screen and (max-width: 1180px)': {
-                    display: 'flex'
+                  '@media only screen and (min-width: 1181px)': {
+                    opacity: '1',
+                    transform: 'translateY(0)',
+                    transition: 'opacity .8s ease, transform .8s ease'
                   }
                 }
                 : {
-                  '@media only screen and (max-width: 1180px)': {
-                    display: 'none'
+                  '@media only screen and (min-width: 1181px)': {
+                    opacity: '0',
+                    transform: 'translateY(30px)',
+                    transition: 'opacity .8s ease, transform .8s ease'
                   }
                 }
               },
